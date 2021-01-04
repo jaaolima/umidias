@@ -44,20 +44,20 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
 				<!--begin::Aside-->
 				<div class="login-aside flex-row-auto bgi-size-cover bgi-no-repeat max-w-lg-950px " >
-					<div class="login-texto h-lg-100" style="margin-left: -4px;">
-						<h3 style="margin-bottom: -7px; font-size: 1200%; margin-top: -15px;"> 
+					<div class="login-texto h-lg-100" >
+						<h3 class="m-lg-2"style="margin-bottom: -7px; font-size: 1200%; margin-top: -15px;"> 
 							A
 						</h3>
-						<h3 style="margin-bottom: -7px;font-size: 1200%; margin-top: -15px;">
+						<h3 class="m-lg-2" style="margin-bottom: -7px;font-size: 1200%; margin-top: -15px;">
 							digita-
 						</h3>
-						<h3 style="margin-bottom: -7px;font-size: 1200%; margin-top: -15px;">
+						<h3 class="m-lg-2" style="margin-bottom: -7px;font-size: 1200%; margin-top: -15px;">
 							lização
 						</h3>
-						<h3 style="margin-bottom: -7px;font-size: 1200%; margin-top: -15px;">
+						<h3  class="m-lg-2" style="margin-bottom: -7px;font-size: 1200%; margin-top: -15px;">
 							da mídia
 						</h3>
-						<h3 style="margin-bottom: -3px;font-size: 1200%; margin-top: -15px;">
+						<h3 class="m-lg-2" style="margin-bottom: -3px;font-size: 1200%; margin-top: -15px;">
 							offline.
 						</h3>
 					</div>
