@@ -44,7 +44,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
 				<!--begin::Aside-->
 				<div class="login-aside flex-row-auto bgi-size-cover bgi-no-repeat max-w-lg-950px " >
-					<div class="login-texto h-lg-100 " style="margin-left: -9px;">
+					<div class="login-texto h-lg-100" style="margin-left: -4px;">
 						<h3 style="margin-bottom: -7px; font-size: 1200%; margin-top: -15px;"> 
 							A
 						</h3>
@@ -222,4 +222,4 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->
-</html>
+</html> 
