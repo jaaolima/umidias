@@ -1,0 +1,206 @@
+<?php
+	require_once("../Classes/Conecta.php");
+    class Parceiro{
+        public function gravarParceiro(array $dados)
+		{
+
+			$ds_nomeempresa	    = $dados['ds_nomeempresa'];
+			$nu_cnpj 	        = $dados['nu_cnpj'];
+            $ds_logradouro    	= $dados['ds_logradouro'];
+			$nu_numerolog		= $dados['nu_numerolog'];
+			$nu_cep             = $dados['nu_cep'];
+            $id_estado         	= $dados['id_estado'];
+            $id_cidade       	= $dados['id_cidade'];
+            $ds_bairro          = $dados['ds_bairro'];
+            $ds_responsavel     = $dados['ds_responsavel'];
+            $ds_email          	= $dados['ds_email'];
+            $nu_telefone        = $dados['nu_telefone'];
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone)
+							VALUES (:ds_nomeempresa, :nu_cnpj, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone)";
+				
+				$stmt = $con->prepare($insert);
+				
+				$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
+								':nu_cnpj' => $nu_cnpj,
+								':ds_logradouro' => $ds_logradouro,
+								':nu_numerolog' => $nu_numerolog,
+								':nu_cep' =>$nu_cep,
+                                ':id_estado' => $id_estado,
+                                ':id_cidade' => $id_cidade,
+                                ':ds_bairro' => $ds_bairro,
+                                ':ds_responsavel' => $ds_responsavel,
+                                ':ds_email' => $ds_email,
+                                ':nu_telefone' => $nu_telefone);
+                                
+				$stmt->execute($params);
+				
+				echo "Dados gravados com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+		}
+		public function listarParceiro(array $dados)
+		{
+			try{ 
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT id_parceiro, ds_nomeempresa, nu_cnpj, ds_logradouro, nu_cep, e.ds_uf, c.ds_nome, ds_bairro, ds_responsavel, ds_email, nu_telefone
+							FROM tb_parceiro p
+							INNER JOIN estados e ON p.id_estado = e.id_estado
+							INNER JOIN cidades c ON p.id_cidade = c.id_cidade";
+				
+				$stmt = $con->prepare($select); 
+				
+				
+				$stmt->execute();
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
+		function buscarDadosParceiro($id_parceiro)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				
+				$select = "SELECT 
+							id_parceiro, ds_nomeempresa, nu_cnpj, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone
+						FROM tb_parceiro  
+						WHERE id_parceiro = :id_parceiro";
+
+				$stmt = $con->prepare($select);
+			   	$params = array(':id_parceiro' => $id_parceiro);
+			   
+			    $stmt->execute($params);
+
+			    return  $stmt->fetch();
+				
+			}	
+			catch(Exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();	
+			}	
+		}
+		public function gravarAlterarParceiro(array $dados)
+		{
+			$id_parceiro	    = $dados['id_parceiro'];
+			$ds_nomeempresa	    = $dados['ds_nomeempresa'];
+			$nu_cnpj 	        = $dados['nu_cnpj'];
+            $ds_logradouro    	= $dados['ds_logradouro'];
+			$nu_numerolog		= $dados['nu_numerolog'];
+			$nu_cep             = $dados['nu_cep'];
+            $id_estado          = $dados['id_estado'];
+            $id_cidade       	= $dados['id_cidade'];
+            $ds_bairro          = $dados['ds_bairro'];
+            $ds_responsavel     = $dados['ds_responsavel'];
+            $ds_email          	= $dados['ds_email'];
+            $nu_telefone        = $dados['nu_telefone'];
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa, nu_cnpj = :nu_cnpj, ds_logradouro = :ds_logradouro, nu_numerolog= :nu_numerolog, nu_cep = :nu_cep, id_estado = :id_estado, id_cidade = :id_cidade, ds_bairro = :ds_bairro, ds_responsavel = :ds_responsavel, ds_email = :ds_email, nu_telefone = :nu_telefone
+							WHERE id_parceiro = :id_parceiro";
+				
+				$stmt = $con->prepare($insert);
+				
+				$params = array(':id_parceiro' => $id_parceiro, 
+								':ds_nomeempresa' => $ds_nomeempresa, 
+								':nu_cnpj' => $nu_cnpj,
+								':ds_logradouro' => $ds_logradouro,
+								':nu_numerolog' => $nu_numerolog,
+								':nu_cep' =>$nu_cep,
+                                ':id_estado' => $id_estado,
+                                ':id_cidade' => $id_cidade,
+                                ':ds_bairro' => $ds_bairro,
+                                ':ds_responsavel' => $ds_responsavel,
+                                ':ds_email' => $ds_email,
+                                ':nu_telefone' => $nu_telefone);
+                                
+				$stmt->execute($params);
+				
+				echo "Dados alterados com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+		}
+		
+		public function listarOptionsUF()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				$select = "SELECT distinct e.id_estado, ds_uf
+							FROM estados e 
+							INNER JOIN cidades c on e.id_estado=c.id_cidade
+							ORDER BY ds_uf";
+				$stmt = $con->prepare($select);
+				$stmt->execute();
+
+				$options = "";
+
+				while($dados = $stmt->fetch())
+				{
+						
+					$options.= "<option value='".$dados['id_estado']."'>".$dados['ds_uf']."</option>";
+
+				}
+				return $options;
+
+			}
+			catch(exception $e)
+			{
+			header('HTTP/1.1 500 Internal Server Error');
+			print $e->getMessage();
+			}
+		}
+		public function listarOptionsCidade($id_estado)
+	{
+		try{
+			$con = Conecta::criarConexao();
+			$select = "SELECT id_cidade, ds_nome FROM cidades WHERE id_estado = :id_estado";
+			$stmt = $con->prepare($select);
+			$params = array(':id_estado' => $id_estado);
+			$stmt->execute($params);
+
+			$options = "";
+
+			while($dados = $stmt->fetch())
+			{
+				
+				$options.= "<option value='".$dados['id_cidade']."'>".$dados['ds_nome']."</option>";
+
+				
+			}
+			return $options;
+
+		}
+		catch(exception $e)
+		{
+			header('HTTP/1.1 500 Internal Server Error');
+			print $e->getMessage();
+		}
+		
+	}
+
+    }
+
+
+?>
