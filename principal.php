@@ -4,10 +4,10 @@
 	error_reporting(E_ALL);
 	session_start();
 
-	/*if ( $_SESSION['autenticado'] !=='validado') {
+	if ( $_SESSION['autenticado'] !=='validado') {
 		header("location: index.php");
 		 exit();
-   }*/
+   }
 ?>
 <!DOCTYPE html>
 <!--
