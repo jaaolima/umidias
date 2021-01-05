@@ -1851,9 +1851,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												</div>
 											<?php endif; ?>
 											<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 ) :  ?>	
-												<div class="col-xl-4">
+												<div class="col-xl-6">
 													<!--begin::Stats Widget 21-->
-													<div class="card card-custom bg-primary card-stretch gutter-b">
+													<div class="card card-custom bg-black card-stretch gutter-b">
 														<!--begin::ody-->
 														<div class="card-body my-4">
 															<a href="#" class="card-title font-weight-bolder text-info font-size-h6 mb-4 text-hover-state-dark d-block">Customer</a>
