@@ -2284,22 +2284,20 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									<?php endif; ?>
 									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 ) :  ?>	
-										<div class="col-xl-6">
-											<!--begin::Stats Widget 21-->
-											<div class="card card-custom bg-white card-stretch gutter-b"  >
-												<!--begin::ody-->
-												<div class="card-body my-4">
-													<a href="#" class="card-title font-weight-bolder text-info font-size-h6 mb-4 text-hover-state-dark d-block">Customer</a>
-													<div class="font-weight-bold text-muted font-size-sm">
-													<span class="text-dark-75 font-weight-bolder font-size-h2 mr-2">52,450</span>48k to goal</div>
-													<div class="progress progress-xs mt-7 bg-info-o-60">
-														<div class="progress-bar bg-info" role="progressbar" style="width: 52%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-													</div>
-												</div>
-												<!--end::Body-->
+										<div class="col-xl-3">
+										<!--begin::Stats Widget 27-->
+										<div class="card card-custom bg-light-info card-stretch gutter-b">
+											<!--begin::Body-->
+											<div class="card-body">
+												
+												<span class="card-title font-weight-bolder text-dark-75 font-size-h2 mb-0 mt-6 d-block">$50,000</span>
+												<span class="font-weight-bold text-muted font-size-sm">Investido</span>
+												<input class="btn btn-secondary" type="button" value="Ver"/>
 											</div>
-											<!--end::Stats Widget 21-->
+											<!--end::Body-->
 										</div>
+										<!--end::Stats Widget 27-->
+									</div>
 									<?php endif; ?>
 								</div>
 								<div class="row">	
