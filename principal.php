@@ -2284,7 +2284,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									<?php endif; ?>
 									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 ) :  ?>	
-										<div class="col-xl-6">
+										<div class="col-xl-4">
 										<!--begin::Stats Widget 27-->
 										<div class="card card-custom bg-white card-stretch gutter-b">
 											<!--begin::Body-->
