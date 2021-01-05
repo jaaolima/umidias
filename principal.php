@@ -2284,14 +2284,14 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									<?php endif; ?>
 									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 ) :  ?>	
-										<div class="col-xl-3">
+										<div class="col-xl-6">
 										<!--begin::Stats Widget 27-->
-										<div class="card card-custom bg-light-info card-stretch gutter-b">
+										<div class="card card-custom bg-white card-stretch gutter-b">
 											<!--begin::Body-->
 											<div class="card-body">
 												
 												<span class="card-title font-weight-bolder text-dark-75 font-size-h2 mb-0 mt-6 d-block">$50,000</span>
-												<span class="font-weight-bold text-muted font-size-sm">Investido</span>
+												<span class="font-weight-bold text-muted font-size-sm d-block">Investido</span>
 												<input class="btn btn-secondary" type="button" value="Ver"/>
 											</div>
 											<!--end::Body-->
