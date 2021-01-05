@@ -1850,24 +1850,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<!--end::Tiles Widget 25-->
 												</div>
 											<?php endif; ?>
-											<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 ) :  ?>	
-												<div class="col-xl-6">
-													<!--begin::Stats Widget 21-->
-													<div class="card card-custom bg-white card-stretch gutter-b" style="height: 300px; ">
-														<!--begin::ody-->
-														<div class="card-body my-4">
-															<a href="#" class="card-title font-weight-bolder text-info font-size-h6 mb-4 text-hover-state-dark d-block">Customer</a>
-															<div class="font-weight-bold text-muted font-size-sm">
-															<span class="text-dark-75 font-weight-bolder font-size-h2 mr-2">52,450</span>48k to goal</div>
-															<div class="progress progress-xs mt-7 bg-info-o-60">
-																<div class="progress-bar bg-info" role="progressbar" style="width: 52%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-															</div>
-														</div>
-														<!--end::Body-->
-													</div>
-													<!--end::Stats Widget 21-->
-												</div>
-											<?php endif; ?>
+											
 											<?php /* if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 ) :  ?>	
 												<div class="col-xl-6">
 													<!--begin::Tiles Widget 25-->
@@ -2298,6 +2281,24 @@ License: You must have a valid license purchased only from themeforest(the above
 												<!--end::Body-->
 											</div>
 											<!--end::List Widget 7-->
+										</div>
+									<?php endif; ?>
+									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 ) :  ?>	
+										<div class="col-xl-6">
+											<!--begin::Stats Widget 21-->
+											<div class="card card-custom bg-white card-stretch gutter-b"  >
+												<!--begin::ody-->
+												<div class="card-body my-4">
+													<a href="#" class="card-title font-weight-bolder text-info font-size-h6 mb-4 text-hover-state-dark d-block">Customer</a>
+													<div class="font-weight-bold text-muted font-size-sm">
+													<span class="text-dark-75 font-weight-bolder font-size-h2 mr-2">52,450</span>48k to goal</div>
+													<div class="progress progress-xs mt-7 bg-info-o-60">
+														<div class="progress-bar bg-info" role="progressbar" style="width: 52%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+													</div>
+												</div>
+												<!--end::Body-->
+											</div>
+											<!--end::Stats Widget 21-->
 										</div>
 									<?php endif; ?>
 								</div>
