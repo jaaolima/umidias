@@ -49,6 +49,7 @@ $dados = $usuario->buscarDadosUsuario($id_usuario);
                         <option value="3" <?php if ($dados['id_perfil'] == '3') echo "selected" ?>>Administrador</option>
                         <option value="1" <?php if ($dados['id_perfil'] == '1') echo "selected" ?>>Cliente</option>
                         <option value="2" <?php if ($dados['id_perfil'] == '2') echo "selected" ?>>Parceiro</option>
+                        <option value="2" <?php if ($dados['id_perfil'] == '4') echo "selected" ?>>Agência</option>
                     </select>
                 </div>             
             </div>
