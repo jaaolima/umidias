@@ -1850,7 +1850,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<!--end::Tiles Widget 25-->
 												</div>
 											<?php endif; ?>
-											<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 ) :  ?>	
+											<?php /* if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 ) :  ?>	
 												<div class="col-xl-6">
 													<!--begin::Tiles Widget 25-->
 													<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white" style="height: 300px;">
@@ -1890,7 +1890,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 													<!--end::Tiles Widget 25-->
 												</div>
-											<?php endif; ?>	
+											<?php endif; */?>	
 												
 										</div>
 										<?php /*?><div class="row">
