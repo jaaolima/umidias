@@ -18,7 +18,7 @@ class Conecta {
 		try
 		{
 			//self::$db = new PDO('pgsql:host=ibrafisiodb.postgresql.dbaas.com.br;dbname=ibrafisiodb;user=ibrafisiodb;password=Senha@123');
-			self::$db = new PDO('mysql:host=178.128.120.88;dbname=unimidias;charset=utf8', 'root', 'Pif98171$');
+			self::$db = new PDO('mysql:host=64.225.61.37;dbname=unimidias;charset=utf8', 'root', 'Pif98171$');
 			
 	        self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             self::$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
