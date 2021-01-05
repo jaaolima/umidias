@@ -1217,21 +1217,42 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 										</li>
 									<?php endif; ?>
-									<?php if($_SESSION['id_perfil'] == 1 ) :  ?>
+									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 4) :  ?>
 										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
 											<a href="principal.php" class="menu-link menu-toggle">
 												<span class="menu-text">Escolha sua mídia</span>
 											</a>	
 										</li>
 									<?php endif; ?>
-									<?php if($_SESSION['id_perfil'] == 1 ) :  ?>
+									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 4 ) :  ?>
 										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
 											<a href="principal.php" class="menu-link menu-toggle">
 												<span class="menu-text">Minhas Mídias</span>
 											</a>	
 										</li>
 									<?php endif; ?>
-									<?php if($_SESSION['id_perfil'] == 1 ) :  ?>
+									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 4) :  ?>
+										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
+											<a href="principal.php" class="menu-link menu-toggle">
+												<span class="menu-text">Financeiro</span>
+											</a>	
+										</li>
+									<?php endif; ?>
+									<?php if($_SESSION['id_perfil'] == 2 ) :  ?>
+										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
+											<a href="principal.php" class="menu-link menu-toggle">
+												<span class="menu-text">Cadastrar Mídia</span>
+											</a>	
+										</li>
+									<?php endif; ?>
+									<?php if($_SESSION['id_perfil'] == 2 ) :  ?>
+										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
+											<a href="principal.php" class="menu-link menu-toggle">
+												<span class="menu-text">Minhas Mídias</span>
+											</a>	
+										</li>
+									<?php endif; ?>
+									<?php if($_SESSION['id_perfil'] == 2 ) :  ?>
 										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
 											<a href="principal.php" class="menu-link menu-toggle">
 												<span class="menu-text">Financeiro</span>

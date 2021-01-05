@@ -38,6 +38,7 @@
                         <option value="3">Administrador</option>
                         <option value="1">Cliente</option>
                         <option value="2">Parceiro</option>
+                        <option value="4">Agência</option>
                     </select>
                 </div>
             </div>
