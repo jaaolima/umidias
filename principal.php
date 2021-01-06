@@ -98,7 +98,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<!--end::Left-->
 							<!--begin::Topbar-->
-							<?php  /*?><div class="topbar topbar-minimize">
+							<div class="topbar topbar-minimize">
 								<!--begin::Search-->
 								<div class="topbar-item mr-3 w-100 w-lg-auto justify-content-start">
 									<div class="quick-search quick-search-inline w-auto w-lg-200px" id="kt_quick_search_inline">
@@ -983,7 +983,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!--end::Dropdown-->
 								</div>
 								<!--end::User-->
-							</div><?php */?>
+							</div>
 							<!--end::Topbar-->
 						</div>
 						<!--end::Container-->
