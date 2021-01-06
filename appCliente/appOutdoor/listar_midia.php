@@ -304,7 +304,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<!--end::User-->
 												<!--begin::Name-->
 												<div class="my-4">
-													<a href="midias/appOutdoor/ver_midia.php" class="text-dark font-weight-bold text-hover-primary font-size-h4">Nexa - Next generation SAAS</a>
+													<a href="appCliente/appOutdoor/ver_midia.php" class="text-dark font-weight-bold text-hover-primary font-size-h4">Nexa - Next generation SAAS</a>
 												</div>
 												<!--end::Name-->
 												<!--begin::Label-->
