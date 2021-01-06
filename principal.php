@@ -1240,7 +1240,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php endif; ?>
 									<?php if($_SESSION['id_perfil'] == 2 ) :  ?>
 										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
-											<a href="principal.php" class="menu-link menu-toggle">
+											<a href="appParceiro/listar_tipo.php" class="menu-link menu-toggle">
 												<span class="menu-text">Cadastrar Mídia</span>
 											</a>	
 										</li>
