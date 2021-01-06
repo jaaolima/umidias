@@ -2140,8 +2140,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								
 								<div class="row">
 									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 || $_SESSION['id_perfil'] == 4 ) :  ?>
-										<div class="col-xl-6">
-											<!--begin::List Widget 12-->
+										<div class="col-xl-12">
+											<!--begin::List Widget 13-->
 											<div class="card card-custom card-stretch gutter-b">
 												<!--begin::Header-->
 												<div class="card-header border-0">
@@ -2151,51 +2151,53 @@ License: You must have a valid license purchased only from themeforest(the above
 															<a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 																<i class="ki ki-bold-more-ver"></i>
 															</a>
-															<div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+															<div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
 																<!--begin::Navigation-->
 																<ul class="navi navi-hover">
-																	<li class="navi-header pb-1">
-																		<span class="text-primary text-uppercase font-weight-bold font-size-sm">Add new:</span>
+																	<li class="navi-header font-weight-bold py-4">
+																		<span class="font-size-lg">Choose Label:</span>
+																		<i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
 																	</li>
+																	<li class="navi-separator mb-3 opacity-70"></li>
 																	<li class="navi-item">
 																		<a href="#" class="navi-link">
-																			<span class="navi-icon">
-																				<i class="flaticon2-shopping-cart-1"></i>
+																			<span class="navi-text">
+																				<span class="label label-xl label-inline label-light-success">Customer</span>
 																			</span>
-																			<span class="navi-text">Order</span>
 																		</a>
 																	</li>
 																	<li class="navi-item">
 																		<a href="#" class="navi-link">
-																			<span class="navi-icon">
-																				<i class="flaticon2-calendar-8"></i>
+																			<span class="navi-text">
+																				<span class="label label-xl label-inline label-light-danger">Partner</span>
 																			</span>
-																			<span class="navi-text">Event</span>
 																		</a>
 																	</li>
 																	<li class="navi-item">
 																		<a href="#" class="navi-link">
-																			<span class="navi-icon">
-																				<i class="flaticon2-graph-1"></i>
+																			<span class="navi-text">
+																				<span class="label label-xl label-inline label-light-warning">Suplier</span>
 																			</span>
-																			<span class="navi-text">Report</span>
 																		</a>
 																	</li>
 																	<li class="navi-item">
 																		<a href="#" class="navi-link">
-																			<span class="navi-icon">
-																				<i class="flaticon2-rocket-1"></i>
+																			<span class="navi-text">
+																				<span class="label label-xl label-inline label-light-primary">Member</span>
 																			</span>
-																			<span class="navi-text">Post</span>
 																		</a>
 																	</li>
 																	<li class="navi-item">
 																		<a href="#" class="navi-link">
-																			<span class="navi-icon">
-																				<i class="flaticon2-writing"></i>
+																			<span class="navi-text">
+																				<span class="label label-xl label-inline label-light-dark">Staff</span>
 																			</span>
-																			<span class="navi-text">File</span>
 																		</a>
+																	</li>
+																	<li class="navi-separator mt-3 opacity-70"></li>
+																	<li class="navi-footer py-4">
+																		<a class="btn btn-clean font-weight-bold btn-sm" href="#">
+																		<i class="ki ki-plus icon-sm"></i>Add new</a>
 																	</li>
 																</ul>
 																<!--end::Navigation-->
@@ -2209,79 +2211,176 @@ License: You must have a valid license purchased only from themeforest(the above
 													<!--begin::Item-->
 													<div class="d-flex flex-wrap align-items-center mb-10">
 														<!--begin::Symbol-->
-														<div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-															<div class="symbol-label" style="background-image: url('assets/media/stock-600x400/img-20.jpg')"></div>
+														<div class="symbol symbol-60 symbol-2by3 flex-shrink-0 mr-4">
+															<div class="symbol-label" style="background-image: url('assets/media/stock-600x400/img-17.jpg')"></div>
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
-														<div class="d-flex flex-column ml-4 flex-grow-1 mr-2">
+														<div class="d-flex flex-column flex-grow-1 my-lg-0 my-2 mr-2">
 															<a href="#" class="text-dark-75 font-weight-bold text-hover-primary font-size-lg mb-1">Cup &amp; Green</a>
-															<span class="text-muted font-weight-bold">Size: 87KB</span>
+															<span class="text-muted font-weight-bold">Visually stunning</span>
 														</div>
 														<!--end::Title-->
-														<!--begin::btn-->
-														<span class="label label-lg label-light-primary label-inline mt-lg-0 mb-lg-0 my-2 font-weight-bold py-4">Approved</span>
-														<!--end::Btn-->
+														<!--begin::Section-->
+														<div class="d-flex align-items-center mt-lg-0 mt-3">
+															<!--begin::Label-->
+															<div class="mr-6">
+																<i class="fa fa-star-half-alt mr-1 text-warning font-size-lg"></i>
+																<span class="text-dark-75 font-weight-bolder">4.2</span>
+															</div>
+															<!--end::Label-->
+															<!--begin::Btn-->
+															<a href="#" class="btn btn-icon btn-light btn-sm">
+																<span class="svg-icon svg-icon-success">
+																	<span class="svg-icon svg-icon-md">
+																		<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																				<polygon points="0 0 24 0 24 24 0 24" />
+																				<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																				<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																			</g>
+																		</svg>
+																		<!--end::Svg Icon-->
+																	</span>
+																</span>
+															</a>
+															<!--end::Btn-->
+														</div>
+														<!--end::Section-->
 													</div>
 													<!--end::Item-->
 													<!--begin::Item-->
 													<div class="d-flex flex-wrap align-items-center mb-10">
 														<!--begin::Symbol-->
-														<div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-															<div class="symbol-label" style="background-image: url('assets/media/stock-600x400/img-19.jpg')"></div>
+														<div class="symbol symbol-60 symbol-2by3 flex-shrink-0 mr-4">
+															<div class="symbol-label" style="background-image: url('assets/media/stock-600x400/img-10.jpg')"></div>
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
-														<div class="d-flex flex-column ml-4 flex-grow-1 mr-2">
-															<a href="#" class="text-dark-75 font-weight-bold text-hover-primary font-size-lg mb-1">Yellow Background</a>
-															<span class="text-muted font-weight-bold">Size: 1.2MB</span>
+														<div class="d-flex flex-column flex-grow-1 my-lg-0 my-2 mr-2">
+															<a href="#" class="text-dark-75 font-weight-bold text-hover-primary font-size-lg mb-1">Pink Patterns</a>
+															<span class="text-muted font-weight-bold">Feminine all around</span>
 														</div>
 														<!--end::Title-->
-														<!--begin::btn-->
-														<span class="label label-lg label-light-warning label-inline mt-lg-0 mb-lg-0 my-2 font-weight-bold py-4">In Progress</span>
-														<!--end::Btn-->
+														<!--begin::Section-->
+														<div class="d-flex align-items-center mt-lg-0 mt-3">
+															<!--begin::Label-->
+															<div class="mr-6">
+																<i class="fa fa-star mr-1 text-warning font-size-lg"></i>
+																<span class="text-dark-75 font-weight-bolder">5.0</span>
+															</div>
+															<!--end::Label-->
+															<!--begin::Btn-->
+															<a href="#" class="btn btn-icon btn-light btn-sm">
+																<span class="svg-icon svg-icon-success">
+																	<span class="svg-icon svg-icon-md">
+																		<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																				<polygon points="0 0 24 0 24 24 0 24" />
+																				<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																				<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																			</g>
+																		</svg>
+																		<!--end::Svg Icon-->
+																	</span>
+																</span>
+															</a>
+															<!--end::Btn-->
+														</div>
+														<!--end::Section-->
 													</div>
 													<!--end::Item-->
 													<!--begin::Item-->
 													<div class="d-flex flex-wrap align-items-center mb-10">
 														<!--begin::Symbol-->
-														<div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-															<div class="symbol-label" style="background-image: url('assets/media/stock-600x400/img-25.jpg')"></div>
+														<div class="symbol symbol-60 symbol-2by3 flex-shrink-0 mr-4">
+															<div class="symbol-label" style="background-image: url('assets/media/stock-600x400/img-1.jpg')"></div>
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
-														<div class="d-flex flex-column ml-4 flex-grow-1 mr-2">
-															<a href="#" class="text-dark-75 font-weight-bold text-hover-primary font-size-lg mb-1">Nike &amp; Blue</a>
-															<span class="text-muted font-weight-bold">Size: 87KB</span>
+														<div class="d-flex flex-column flex-grow-1 my-lg-0 my-2 mr-2">
+															<a href="#" class="text-dark-75 font-weight-bold text-hover-primary font-size-lg mb-1">Abstract Art</a>
+															<span class="text-muted font-weight-bold">The will to capture readers</span>
 														</div>
 														<!--end::Title-->
-														<!--begin::btn-->
-														<span class="label label-lg label-light-success label-inline mt-lg-0 mb-lg-0 my-2 font-weight-bold py-4">Success</span>
-														<!--end::btn-->
+														<!--begin::Section-->
+														<div class="d-flex align-items-center mt-lg-0 mt-3">
+															<!--begin::Label-->
+															<div class="mr-6">
+																<i class="fa fa-star-half-alt mr-1 text-warning font-size-lg"></i>
+																<span class="text-dark-75 font-weight-bolder">5.7</span>
+															</div>
+															<!--end::Label-->
+															<!--begin::Btn-->
+															<a href="#" class="btn btn-icon btn-light btn-sm">
+																<span class="svg-icon svg-icon-success">
+																	<span class="svg-icon svg-icon-md">
+																		<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																				<polygon points="0 0 24 0 24 24 0 24" />
+																				<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																				<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																			</g>
+																		</svg>
+																		<!--end::Svg Icon-->
+																	</span>
+																</span>
+															</a>
+															<!--end::Btn-->
+														</div>
+														<!--end::Section-->
 													</div>
 													<!--end::Item-->
-													<!--begin::Item-->
-													<div class="d-flex flex-wrap align-items-center">
+													<!--begin: Item-->
+													<div class="d-flex flex-wrap align-items-center mb-1">
 														<!--begin::Symbol-->
-														<div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-															<div class="symbol-label" style="background-image: url('assets/media/stock-600x400/img-24.jpg')"></div>
+														<div class="symbol symbol-60 symbol-2by3 flex-shrink-0 mr-4">
+															<div class="symbol-label" style="background-image: url('assets/media/stock-600x400/img-9.jpg')"></div>
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
-														<div class="d-flex flex-column ml-4 flex-grow-1 mr-2">
-															<a href="#" class="text-dark-75 font-weight-bold font-size-lg text-hover-primary mb-1">Red Boots</a>
-															<span class="text-muted font-weight-bold">Size: 345KB</span>
+														<div class="d-flex flex-column flex-grow-1 my-lg-0 my-2 mr-2">
+															<a href="#" class="text-dark-75 font-weight-bold text-hover-primary font-size-lg mb-1">Desserts platter</a>
+															<span class="text-muted font-weight-bold">Food trends &amp; inspirations</span>
 														</div>
 														<!--end::Title-->
-														<!--begin::btn-->
-														<span class="label label-lg label-light-danger label-inline mt-lg-0 mb-lg-0 my-2 font-weight-bold py-4">Rejected</span>
-														<!--end::btn-->
+														<!--begin::Section-->
+														<div class="d-flex align-items-center mt-lg-0 mt-3">
+															<!--begin::Label-->
+															<div class="mr-6">
+																<i class="fa fa-star mr-1 text-warning font-size-lg"></i>
+																<span class="text-dark-75 font-weight-bolder">3.7</span>
+															</div>
+															<!--end::Label-->
+															<!--begin::Btn-->
+															<a href="#" class="btn btn-icon btn-light btn-sm">
+																<span class="svg-icon svg-icon-success">
+																	<span class="svg-icon svg-icon-md">
+																		<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																				<polygon points="0 0 24 0 24 24 0 24" />
+																				<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																				<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																			</g>
+																		</svg>
+																		<!--end::Svg Icon-->
+																	</span>
+																</span>
+															</a>
+															<!--end::Btn-->
+														</div>
+														<!--end::Section-->
 													</div>
 													<!--end::Item-->
+													<!--end::Items-->
 												</div>
 												<!--end::Body-->
 											</div>
-											<!--end::List Widget 12-->
+											<!--end::List Widget 13-->
 										</div>
 									<?php endif; ?>
 									
