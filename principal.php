@@ -1230,7 +1230,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php endif; */?>
 									<?php if($_SESSION['id_perfil'] == 3 ) :  ?>
 										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
-											<a href="listar_tipo.php" class="menu-link menu-toggle">
+											<a href="appMidia/listar_midia.php" class="menu-link menu-toggle">
 												<span class="menu-text">Mídias Cadastradas</span>
 											</a>	
 										</li>
