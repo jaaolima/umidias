@@ -16,8 +16,8 @@ $optionscategoria = $Categoria->listaroptionscategoria();
     ></script>-->
     <style>
         #map {
-            width: 300px;
-        	height: 300px;
+            width: 100%;
+        	height: 500px;
         }
         
     </style>
@@ -48,7 +48,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                 </div>
             </div>
 			<div class="form-group row"> 
-				<div class="form-group col-md-4">
+				<div class="form-group col-md-12">
 					<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
 					<div id="map"></div>
 				</div>
