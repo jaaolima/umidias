@@ -1474,7 +1474,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--end::Row-->
 								<!--begin::Row-->
 								<div class="row">
-									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 || $_SESSION['id_perfil'] == 4 ) :  ?>
+									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 4 ) :  ?>
 										<div class="col-xl-12">
 											<!--begin::List Widget 13-->
 											<div class="card card-custom card-stretch gutter-b">
@@ -1721,7 +1721,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									
 								</div>
 								<div class="row">	
-									<?php if($_SESSION['id_perfil'] == 2 || $_SESSION['id_perfil'] == 3 ) :  ?>
+									<?php if($_SESSION['id_perfil'] == 2  ) :  ?>
 										<div class="col-xl-12">
 											<!--begin::List Widget 7-->
 											<div class="card card-custom gutter-b card-stretch">
