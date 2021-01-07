@@ -48,7 +48,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                 </div>
             </div>
 			<div class="form-group row"> 
-				<div class="form-group col-md-12">
+				<div class="form-group col-md-8">
 					<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
 					<div id="map"></div>
 				</div>
