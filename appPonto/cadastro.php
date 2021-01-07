@@ -16,8 +16,8 @@ $optionscategoria = $Categoria->listaroptionscategoria();
     ></script>-->
     <style>
         #map {
-            width: 500px;
-        	height: 500px;
+            width: 300px;
+        	height: 300px;
         }
         
     </style>
@@ -49,12 +49,11 @@ $optionscategoria = $Categoria->listaroptionscategoria();
             </div>
 			<div class="form-group row"> 
 				<div class="form-group col-md-4">
-					<p>Selecione no mapa a localização exata do ponto</p>
+					<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
 					<div id="map"></div>
 				</div>
 			</div>
             <div class="form-group row"> 
-				
                 <div class="form-group col-md-4">
                     <label >Latitude<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" readonly/>
