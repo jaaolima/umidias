@@ -39,6 +39,12 @@ License: You must have a valid license purchased only from themeforest(the above
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Page-->
 			<div class="d-flex flex-row flex-column-fluid page">
+				<div class="form-group row"> 
+					<div class="form-group col-md-8">
+						<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
+						<div id="map"></div>
+					</div>
+				</div>
 				<!--begin::Wrapper-->
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 
@@ -46,12 +52,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
 							<div class="content flex-column-fluid" id="kt_content">
-								<div class="form-group row"> 
-									<div class="form-group col-md-8">
-										<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
-										<div id="map"></div>
-									</div>
-								</div>
+								
 								<!--begin::Row-->
 								<div class="row">
 									<!--begin::Column-->
