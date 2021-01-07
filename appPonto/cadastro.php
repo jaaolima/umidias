@@ -47,8 +47,13 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                     <input type="file" class="form-control" id="ds_foto" name="ds_foto"/>
                 </div>
             </div>
+			<div class="form-group row"> 
+				<div class="form-group col-md-4">
+					<div id="map"></div>
+				</div>
+			</div>
             <div class="form-group row"> 
-				<div id="map"></div>
+				
                 <div class="form-group col-md-4">
                     <label >Latitude<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_latitude" name="ds_latitude"/>
@@ -220,16 +225,16 @@ function setMarkers(map) {
 }
 function placeMarker(location, map) {
 	
-  var marker = new google.maps.Marker({
-      position: location, 
-      map: map,
-      title: 'Aqui está localizado o seu ponto :'+location.lat()+' '+location.lng()
-  });
+	var marker = new google.maps.Marker({
+		position: location, 
+		map: map,
+		title: 'Aqui está localizado o seu ponto :'+location.lat()+' '+location.lng()
+	});
 	marker.setMap(map);
-  map.setCenter(location);
-  $("#ds_latitude").val(location.lat());
-  $("#ds_longitude").val(location.lng());
-  console.log('Latitude: '+location.lat()+' Longitude: '+location.lng());
+  	map.setCenter(location);
+	$("#ds_latitude").val(location.lat());
+	$("#ds_longitude").val(location.lng());
+	console.log('Latitude: '+location.lat()+' Longitude: '+location.lng());
 }
 
 
