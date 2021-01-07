@@ -106,7 +106,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
 
-let markers = [];
+//let markers = [];
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
