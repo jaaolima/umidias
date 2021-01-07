@@ -138,6 +138,8 @@ var demo3 = function() {
 		}
 	});
 	map.setZoom(5);
+
+	console.log(map);
 }
 
 
