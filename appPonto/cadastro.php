@@ -150,7 +150,7 @@ var demo3 = function() {
 
 
 
-//let markers = [];
+let marcas = [];
 function initMap() {
   
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -167,8 +167,8 @@ function initMap() {
 }
 
 function setMapOnAll(map) {
-  for (let i = 0; i < markers.length; i++) {
-    markers[i].setMap(map);
+  for (let i = 0; i < marcas.length; i++) {
+    marcas[i].setMap(map);
   }
 }
 
