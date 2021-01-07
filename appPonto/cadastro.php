@@ -46,7 +46,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                     <label >Foto <span class="text-danger">*</span></label>
                     <input type="file" class="form-control" id="ds_foto" name="ds_foto"/>
                 </div>
-            </div>
+            </div> 
 			<div class="form-group row"> 
 				<div class="form-group col-md-8">
 					<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
