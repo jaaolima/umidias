@@ -5346,6 +5346,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/widgets.js"></script>
 		<script src="assets/js/custom.js"></script>
+		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM&callback=initialize"></script>
+		<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
 		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->

@@ -10,13 +10,14 @@ $Categoria = new Categoria();
 $optionscategoria = $Categoria->listaroptionscategoria();
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script
+<!--<script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9HytuCsyClhgU7vNNo8QHYsGtWiVPBuw&callback=initMap&libraries=&v=weekly"
       defer
-    ></script>
+    ></script>-->
     <style>
         #map {
-            height: 100%;
+            width: 100%;
+        	height: 500px;
         }
         
     </style>
@@ -33,6 +34,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
         </div>
     </div>
     <!--begin::Form-->
+    
     <form id="form_usuario">
         <div class="card-body">
             <div class="form-group row">
@@ -45,15 +47,20 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                     <input type="file" class="form-control" id="ds_foto" name="ds_foto"/>
                 </div>
             </div>
+			<div class="form-group row"> 
+				<div class="form-group col-md-8">
+					<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
+					<div id="map"></div>
+				</div>
+			</div>
             <div class="form-group row"> 
-                <div id="map"></div>
                 <div class="form-group col-md-4">
                     <label >Latitude<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_latitude" name="ds_latitude"/>
+                    <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" readonly/>
                 </div> 
                 <div class="form-group col-md-4">
                     <label >Longitude<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_longitude" name="ds_longitude"/>
+                    <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" readonly/>
                 </div> 
             </div> 
             <div class="form-group row">    
@@ -105,9 +112,76 @@ $optionscategoria = $Categoria->listaroptionscategoria();
     // The following example creates complex markers to indicate beaches near
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
+jQuery(document).ready(function() {
+	demo3();
+});
 
-let markers = [];
+var demo3 = function() {
+	var map = new GMaps({
+		div: '#map',
+		lat: -15.849511,
+		lng: -48.022440,
+		dblclick: function(e) {
+			map.removeMarkers();
+			map.addMarker({
+				lat: e.latLng.lat(),
+				lng: e.latLng.lng(),
+				title: 'Seu ponto',
+				infoWindow: {
+					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
+				}
+			});	
+			map.setZoom(5);
+			$("#ds_latitude").val(e.latLng.lat());
+			$("#ds_longitude").val(e.latLng.lng());
+		},
+	});
+
+	/*google.maps.event.addListener(map, 'dblclick', function(event) {
+		map.addMarker({
+			lat: event.latLng.lat(),
+			lng: event.latLng.lng(),
+			title: 'Seu ponto',
+			infoWindow: {
+				content: '<span style="color:#000">Aqui está o seu ponto</span>'
+			}
+		});	
+		map.setZoom(5);
+ 	});*/
+
+
+	/*
+	map.addMarker({
+		lat: -51.38739,
+		lng: -6.187181,
+		title: 'Lima',
+		details: {
+			database_id: 42,
+			author: 'HPNeo'
+		},
+		click: function(e) {
+			if (console.log) console.log(e);
+			alert('You clicked in this marker');
+		}
+	});
+	map.addMarker({
+		lat: -12.042,
+		lng: -77.028333,
+		title: 'Marker with InfoWindow',
+		infoWindow: {
+			content: '<span style="color:#000">HTML Content!</span>'
+		}
+	});
+	map.setZoom(5);
+
+	console.log(map);*/
+}
+
+
+
+//let marcas = [];
 function initMap() {
+  
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
     center: { lat: -15.849511, lng: -48.022440 },
@@ -115,14 +189,16 @@ function initMap() {
   
   google.maps.event.addListener(map, 'dblclick', function(event) {
     clearMarkers();
-    placeMarker(event.latLng, map);
+	//placeMarker(event.latLng, map);
+	addMarker(event.latLng);
  });
-  setMarkers(map);
+  //setMarkers(map);
+  console.log(map);
 }
 
 function setMapOnAll(map) {
-  for (let i = 0; i < markers.length; i++) {
-    markers[i].setMap(map);
+  for (let i = 0; i < marcas.length; i++) {
+    marcas[i].setMap(map);
   }
 }
 
@@ -133,13 +209,13 @@ function clearMarkers() {
 
 // Data for the markers consisting of a name, a LatLng and a zIndex for the
 // order in which these markers should display on top of each other.
-const beaches = [
+/*const beaches = [
   ["Bondi Beach", -33.890542, 151.274856, 4],
   ["Coogee Beach", -33.923036, 151.259052, 5],
   ["Cronulla Beach", -34.028249, 151.157507, 3],
   ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
   ["Maroubra Beach", -33.950198, 151.259302, 1],
-];
+];*/
 
 function setMarkers(map) {
   // Adds markers to the map.
@@ -165,7 +241,7 @@ function setMarkers(map) {
     type: "poly",
   };
 
-  for (let i = 0; i < beaches.length; i++) {
+  /*for (let i = 0; i < beaches.length; i++) {
     const beach = beaches[i];
     new google.maps.Marker({
       position: { lat: beach[1], lng: beach[2] },
@@ -175,18 +251,28 @@ function setMarkers(map) {
       title: beach[0],
       zIndex: beach[3],
     });
-  }
+  }*/
+}
+
+function addMarker(location) {
+  const marker = new google.maps.Marker({
+    position: location,
+    map: map,
+  });
+  marcas.push(marker);
 }
 function placeMarker(location, map) {
 	
-  var marker = new google.maps.Marker({
-      position: location, 
-      map: map,
-      title: 'Aqui está localizado o seu ponto :'+location.lat()+' '+location.lng()
-  });
+	var marker = new google.maps.Marker({
+		position: location, 
+		map: map,
+		title: 'Aqui está localizado o seu ponto :'+location.lat()+' '+location.lng()
+	});
 	marker.setMap(map);
-  map.setCenter(location);
-  console.log('Latitude: '+location.lat()+' Longitude: '+location.lng());
+  	map.setCenter(location);
+	$("#ds_latitude").val(location.lat());
+	$("#ds_longitude").val(location.lng());
+	console.log('Latitude: '+location.lat()+' Longitude: '+location.lng());
 }
 
 
