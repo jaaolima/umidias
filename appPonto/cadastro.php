@@ -122,7 +122,7 @@ var demo3 = function() {
 		lat: -15.849511,
 		lng: -48.022440,
 		dblclick: function(e) {
-			alert('click');
+			console.log(e);
 		},
 	});
 
