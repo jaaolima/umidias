@@ -1455,7 +1455,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 || $_SESSION['id_perfil'] == 2 || $_SESSION['id_perfil'] == 4) :  ?>	
 												<div class="col-xl-6">
 													<!--begin::Stats Widget 27-->
-													<div class="card card-custom bg-white card-stretch gutter-b">
+													<div class="card card-custom bg-white card-stretch gutter-b h-300px">
 														<!--begin::Body-->
 														<div class="card-body">	
 															<span class="card-title font-weight-bolder text-dark-75 font-size-h2 mb-0 mt-6 d-block">$50,000</span>
