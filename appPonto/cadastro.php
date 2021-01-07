@@ -108,7 +108,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 
 //let markers = [];
 function initMap() {
-  alert('iniciou');
+  
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
     center: { lat: -15.849511, lng: -48.022440 },
@@ -118,7 +118,8 @@ function initMap() {
     clearMarkers();
     placeMarker(event.latLng, map);
  });
-  setMarkers(map);
+  //setMarkers(map);
+  console.log(map);
 }
 
 function setMapOnAll(map) {
