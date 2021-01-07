@@ -16,7 +16,8 @@ $optionscategoria = $Categoria->listaroptionscategoria();
     ></script>-->
     <style>
         #map {
-            height: 100%;
+            width: 500px;
+        	height: 500px;
         }
         
     </style>
