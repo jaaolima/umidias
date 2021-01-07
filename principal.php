@@ -1467,7 +1467,49 @@ License: You must have a valid license purchased only from themeforest(the above
 													<!--end::Stats Widget 27-->
 												</div>
 											<?php endif; ?>
-		
+											
+											<?php /* if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 ) :  ?>	
+												<div class="col-xl-6">
+													<!--begin::Tiles Widget 25-->
+													<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white" style="height: 300px;">
+														<div class="card-body d-flex">
+															<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+																<div class="flex-grow-1 " style="display: inherit;">
+																	<span class="svg-icon svg-icon-gray svg-icon-2x font-weight-bolder font-size-h3" style=" margin-top: -5px;"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-11-19-154210/theme/html/demo8/dist/../src/media/svg/icons/General/Fire.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																			<rect x="0" y="0" width="24" height="24"/>
+																			<path d="M14,7 C13.6666667,10.3333333 12.6666667,12.1167764 11,12.3503292 C11,12.3503292 12.5,6.5 10.5,3.5 C10.5,3.5 10.287918,6.71444735 8.14498739,10.5717225 C7.14049032,12.3798172 6,13.5986793 6,16 C6,19.428689 9.51143904,21.2006583 12.0057195,21.2006583 C14.5,21.2006583 18,20.0006172 18,15.8004732 C18,14.0733981 16.6666667,11.1399071 14,7 Z" fill="#000000"/>
+																		</g>
+																	</svg><!--end::Svg Icon--></span>
+																	<h3 class="text-gray font-weight-bolder font-size-h3">Pontos quentes</h3>
+																	
+																</div>
+																<div class="col-lg-8">
+																	<div class="card-body">
+																		<!--begin::Chart-->
+																		<div id="kt_charts_widget_1_chart"></div>
+																		<!--end::Chart-->
+																	</div>
+																</div>
+																	
+																<!--<span class="svg-icon svg-icon-lg svg-icon-white">
+																	
+																	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																			<polygon points="0 0 24 0 24 24 0 24" />
+																			<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																			<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																		</g>
+																	</svg>
+																	
+																</span></a>-->
+															</div>
+														</div>
+													</div>
+													<!--end::Tiles Widget 25-->
+												</div>
+											<?php endif; */?>	
+												
 										</div>
 										<?php /*?><div class="row">
 											<div class="col-xl-8">
