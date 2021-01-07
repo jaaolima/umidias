@@ -10,10 +10,10 @@ $Categoria = new Categoria();
 $optionscategoria = $Categoria->listaroptionscategoria();
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script
+<!--<script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9HytuCsyClhgU7vNNo8QHYsGtWiVPBuw&callback=initMap&libraries=&v=weekly"
       defer
-    ></script>
+    ></script>-->
     <style>
         #map {
             height: 100%;
