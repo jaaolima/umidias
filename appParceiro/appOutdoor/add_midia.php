@@ -187,25 +187,25 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Tamanho</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text"  />
+																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Tamanho" />
 																		</div>
 																	</div>
 																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Latitude</label>
+																		<label class="col-xl-3 col-lg-3 col-form-label">Tamanho</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text"  />
+																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Tamanho" />
 																		</div>
 																	</div>
 																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Longitude</label>
+																		<label class="col-xl-3 col-lg-3 col-form-label">Tamanho</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text"  />
+																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Tamanho" />
 																		</div>
 																	</div>
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Posição</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text"  />
+																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Posição" />
 																		</div>
 																	</div>
 																</div>
@@ -571,8 +571,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																<button type="button" class="btn btn-light-primary font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-prev">Previous</button>
 															</div>
 															<div>
-																<button type="button" class="btn btn-success font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-submit">Enviar</button>
-																<button type="button" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-next">Proximo</button>
+																<button type="button" class="btn btn-success font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-submit">Submit</button>
+																<button type="button" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-next">Next Step</button>
 															</div>
 														</div>
 														<!--end::Actions-->
