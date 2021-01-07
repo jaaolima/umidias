@@ -1461,9 +1461,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															<span class="card-title font-weight-bolder text-dark-75 font-size-h2 mb-0 mt-6 d-block">$50,000</span>
 															<span class="font-wight-bold text-muted font-size-sm d-block">Investido</span>
 														</div>
-														<div class="d-flex flex-center "> 
-															<input class="btn btn-primary btn-lg" type="button" value="Acompanhar"/>
-														</div>
+														<input class="btn btn-primary btn-lg flex-center" type="button" value="Acompanhar"/>
 														<!--end::Body-->
 													</div>
 													<!--end::Stats Widget 27-->
