@@ -31,6 +31,14 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		<style>
+			#map {
+				width: 100%;
+				height: 500px;
+			}
+			
+		</style>
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -45,7 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="form-group row"> 
 						<div class="form-group col-md-8">
 							<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
-							<div id="map"></div>
+							<div id="map" ></div>
 						</div>
 					</div>
 					<div class="d-flex flex-row flex-column-fluid container">
