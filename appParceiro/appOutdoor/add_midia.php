@@ -34,6 +34,13 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		<style>
+			#map {
+				width: 100%;
+				height: 500px;
+			}
+		</style>
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -184,24 +191,31 @@ License: You must have a valid license purchased only from themeforest(the above
 																			<h3 class="mb-10 font-weight-bold text-dark">Especificações</h3>
 																		</div>
 																	</div>
+																	<div class="form-group row"> 
+																		<div class="form-group col-lg-9 col-xl-9">
+																			<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
+																			<div id="map"></div>
+																		</div>
+																	</div>
+																	<div class="form-group row">
+																		<label class="col-xl-3 col-lg-3 col-form-label">Latitude</label>
+																		<div class="col-lg-9 col-xl-9">
+																			<input class="form-control form-control-lg form-control-solid" name="latitude" type="text" value="Latitude" />
+																		</div>
+																	</div>
+																	<div class="form-group row">
+																		<label class="col-xl-3 col-lg-3 col-form-label">Longitude</label>
+																		<div class="col-lg-9 col-xl-9">
+																			<input class="form-control form-control-lg form-control-solid" name="longitude" type="text" value="Longitude" />
+																		</div>
+																	</div>
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Tamanho</label>
 																		<div class="col-lg-9 col-xl-9">
 																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Tamanho" />
 																		</div>
 																	</div>
-																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Latitude</label>
-																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Latitude" />
-																		</div>
-																	</div>
-																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Longitude</label>
-																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Longitude" />
-																		</div>
-																	</div>
+																	
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Posição</label>
 																		<div class="col-lg-9 col-xl-9">
@@ -1300,6 +1314,175 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/custom/projects/add-project.js"></script>
 		<!--end::Page Scripts-->
+		<script>
+			// The following example creates complex markers to indicate beaches near
+		// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
+		// to the base of the flagpole.
+		jQuery(document).ready(function() {
+			demo3();
+		});
+
+		var demo3 = function() {
+			var map = new GMaps({
+				div: '#map',
+				lat: -15.849511,
+				lng: -48.022440,
+				dblclick: function(e) {
+					map.removeMarkers();
+					map.addMarker({
+						lat: e.latLng.lat(),
+						lng: e.latLng.lng(),
+						title: 'Seu ponto',
+						infoWindow: {
+							content: '<span style="color:#000">Aqui está o seu ponto!</span>'
+						}
+					});	
+					map.setZoom(5);
+					$("#ds_latitude").val(e.latLng.lat());
+					$("#ds_longitude").val(e.latLng.lng());
+				},
+			});
+
+			/*google.maps.event.addListener(map, 'dblclick', function(event) {
+				map.addMarker({
+					lat: event.latLng.lat(),
+					lng: event.latLng.lng(),
+					title: 'Seu ponto',
+					infoWindow: {
+						content: '<span style="color:#000">Aqui está o seu ponto</span>'
+					}
+				});	
+				map.setZoom(5);
+			});*/
+
+
+			/*
+			map.addMarker({
+				lat: -51.38739,
+				lng: -6.187181,
+				title: 'Lima',
+				details: {
+					database_id: 42,
+					author: 'HPNeo'
+				},
+				click: function(e) {
+					if (console.log) console.log(e);
+					alert('You clicked in this marker');
+				}
+			});
+			map.addMarker({
+				lat: -12.042,
+				lng: -77.028333,
+				title: 'Marker with InfoWindow',
+				infoWindow: {
+					content: '<span style="color:#000">HTML Content!</span>'
+				}
+			});
+			map.setZoom(5);
+
+			console.log(map);*/
+		}
+
+
+
+		//let marcas = [];
+		function initMap() {
+		
+		const map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 15,
+			center: { lat: -15.849511, lng: -48.022440 },
+		});
+		
+		google.maps.event.addListener(map, 'dblclick', function(event) {
+			clearMarkers();
+			//placeMarker(event.latLng, map);
+			addMarker(event.latLng);
+		});
+		//setMarkers(map);
+		console.log(map);
+		}
+
+		function setMapOnAll(map) {
+		for (let i = 0; i < marcas.length; i++) {
+			marcas[i].setMap(map);
+		}
+		}
+
+		// Removes the markers from the map, but keeps them in the array.
+		function clearMarkers() {
+		setMapOnAll(null);
+		}
+
+		// Data for the markers consisting of a name, a LatLng and a zIndex for the
+		// order in which these markers should display on top of each other.
+		/*const beaches = [
+		["Bondi Beach", -33.890542, 151.274856, 4],
+		["Coogee Beach", -33.923036, 151.259052, 5],
+		["Cronulla Beach", -34.028249, 151.157507, 3],
+		["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
+		["Maroubra Beach", -33.950198, 151.259302, 1],
+		];*/
+
+		function setMarkers(map) {
+		// Adds markers to the map.
+		// Marker sizes are expressed as a Size of X,Y where the origin of the image
+		// (0,0) is located in the top left of the image.
+		// Origins, anchor positions and coordinates of the marker increase in the X
+		// direction to the right and in the Y direction down.
+		const image = {
+			url:
+			"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+			// This marker is 20 pixels wide by 32 pixels high.
+			size: new google.maps.Size(20, 32),
+			// The origin for this image is (0, 0).
+			origin: new google.maps.Point(0, 0),
+			// The anchor for this image is the base of the flagpole at (0, 32).
+			anchor: new google.maps.Point(0, 32),
+		};
+		// Shapes define the clickable region of the icon. The type defines an HTML
+		// <area> element 'poly' which traces out a polygon as a series of X,Y points.
+		// The final coordinate closes the poly by connecting to the first coordinate.
+		const shape = {
+			coords: [1, 1, 1, 20, 18, 20, 18, 1],
+			type: "poly",
+		};
+
+		/*for (let i = 0; i < beaches.length; i++) {
+			const beach = beaches[i];
+			new google.maps.Marker({
+			position: { lat: beach[1], lng: beach[2] },
+			map,
+			icon: image,
+			shape: shape,
+			title: beach[0],
+			zIndex: beach[3],
+			});
+		}*/
+		}
+
+		function addMarker(location) {
+		const marker = new google.maps.Marker({
+			position: location,
+			map: map,
+		});
+		marcas.push(marker);
+		}
+		function placeMarker(location, map) {
+			
+			var marker = new google.maps.Marker({
+				position: location, 
+				map: map,
+				title: 'Aqui está localizado o seu ponto :'+location.lat()+' '+location.lng()
+			});
+			marker.setMap(map);
+			map.setCenter(location);
+			$("#ds_latitude").val(location.lat());
+			$("#ds_longitude").val(location.lng());
+			console.log('Latitude: '+location.lat()+' Longitude: '+location.lng());
+		}
+
+
+		</script>
 	</body>
 	<!--end::Body-->
 </html>
