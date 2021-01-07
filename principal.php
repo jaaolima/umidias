@@ -1068,7 +1068,15 @@ License: You must have a valid license purchased only from themeforest(the above
 															<span class="fas fa-address-book">
 																
 															</span>&nbsp;
-															<span class="menu-text">Cadastro de Usuários</span>
+															<span class="menu-text">Controle de Usuários</span>
+														</a>
+													</li>
+													<li class="menu-item" aria-haspopup="true">
+														<a href="appMidia/listar_midia.php" class="menu-link">
+															<span class="fas fa-address-book">
+																
+															</span>&nbsp;
+															<span class="menu-text">Controle de Mídias</span>
 														</a>
 													</li>
 													<li class="menu-item" aria-haspopup="true">
@@ -1087,22 +1095,8 @@ License: You must have a valid license purchased only from themeforest(the above
 															<span class="menu-text">Permissões</span>
 														</a>
 													</li>
-													<li class="menu-item" aria-haspopup="true">
-														<a href="appUsuario/listar_usuario.php" class="menu-link">
-															<span class="fas fa-address-book">
-																
-															</span>&nbsp;
-															<span class="menu-text">Controle de Usuários</span>
-														</a>
-													</li>
-													<li class="menu-item" aria-haspopup="true">
-														<a href="appUsuario/listar_usuario.php" class="menu-link">
-															<span class="fas fa-address-book">
-																
-															</span>&nbsp;
-															<span class="menu-text">Controle de Mídias</span>
-														</a>
-													</li>
+												
+													
 													
 												</ul>
 											</div>
