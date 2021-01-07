@@ -119,9 +119,24 @@ jQuery(document).ready(function() {
 var demo3 = function() {
 	var map = new GMaps({
 		div: '#map',
-		lat: -51.38739,
-		lng: -6.187181,
+		lat: -15.849511,
+		lng: -48.022440,
 	});
+
+	google.maps.event.addListener(map, 'dblclick', function(event) {
+		map.addMarker({
+			lat: event.latLng.lat(),
+			lng: event.latLng.lng(),
+			title: 'Seu ponto',
+			infoWindow: {
+				content: '<span style="color:#000">Aqui está o seu ponto</span>'
+			}
+		});	
+		map.setZoom(5);
+ 	});
+
+
+	/*
 	map.addMarker({
 		lat: -51.38739,
 		lng: -6.187181,
@@ -145,7 +160,7 @@ var demo3 = function() {
 	});
 	map.setZoom(5);
 
-	console.log(map);
+	console.log(map);*/
 }
 
 
