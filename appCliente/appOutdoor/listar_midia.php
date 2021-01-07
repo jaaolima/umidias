@@ -35,7 +35,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<style>
 			#map {
 				width: 100%;
-				height: 500px;
+				height: 300px;
 			}
 			
 		</style>
@@ -51,7 +51,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--begin::Wrapper-->
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 					<div class="form-group row"> 
-						<div class="form-group col-md-8">
+						<div class="form-group col-md-12">
 							<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
 							<div id="map" ></div>
 						</div>
