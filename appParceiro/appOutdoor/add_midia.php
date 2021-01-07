@@ -192,7 +192,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</div>
 																	</div>
 																	<div class="form-group row"> 
-																		<div class="form-group col-lg-9 col-xl-9">
+																		<div class="form-group col-md-8">
 																			<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
 																			<div id="map"></div>
 																		</div>
