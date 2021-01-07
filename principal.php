@@ -1001,7 +1001,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<span class="menu-text">Painel de Controle</span>
 										</a>	
 									</li>
-									<?php/* if($_SESSION['id_perfil'] == 3 ) :  ?>
+									<?php /* if($_SESSION['id_perfil'] == 3 ) :  ?>
 										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="menu-link menu-toggle">
 												<span class="menu-text">Cadastros</span>
@@ -1054,7 +1054,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 										</li>
 									<?php endif; */?>	
-									<?php/* if($_SESSION['id_perfil'] == 3 ) :  ?>
+									<?php /* if($_SESSION['id_perfil'] == 3 ) :  ?>
 										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="menu-link menu-toggle">
 												<span class="menu-text">Administração</span>
@@ -1235,7 +1235,13 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>	
 										</li>
 									<?php endif; ?>
-									
+									<?php if($_SESSION['id_perfil'] == 3 ) :  ?>
+										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
+											<a href="listar_tipo.php" class="menu-link menu-toggle">
+												<span class="menu-text">Mídias alugadas</span>
+											</a>	
+										</li>
+									<?php endif; ?>
 									<?php if($_SESSION['id_perfil'] == 3 ) :  ?>
 										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
 											<a href="listar_tipo.php" class="menu-link menu-toggle">
@@ -1246,7 +1252,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php if($_SESSION['id_perfil'] == 3 ) :  ?>
 										<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
 											<a href="listar_tipo.php" class="menu-link menu-toggle">
-												<span class="menu-text">Financeiro</span>
+												<span class="menu-text">Controle de Usuário</span>
 											</a>	
 										</li>
 									<?php endif; ?>
