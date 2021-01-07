@@ -206,7 +206,7 @@ function setMarkers(map) {
     type: "poly",
   };
 
-  for (let i = 0; i < beaches.length; i++) {
+  /*for (let i = 0; i < beaches.length; i++) {
     const beach = beaches[i];
     new google.maps.Marker({
       position: { lat: beach[1], lng: beach[2] },
@@ -216,7 +216,7 @@ function setMarkers(map) {
       title: beach[0],
       zIndex: beach[3],
     });
-  }
+  }*/
 }
 function placeMarker(location, map) {
 	
@@ -227,6 +227,8 @@ function placeMarker(location, map) {
   });
 	marker.setMap(map);
   map.setCenter(location);
+  $("#ds_latitude").val(location.lat());
+  $("#ds_longitude").val(location.lng());
   console.log('Latitude: '+location.lat()+' Longitude: '+location.lng());
 }
 
