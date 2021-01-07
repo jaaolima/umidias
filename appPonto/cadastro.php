@@ -107,7 +107,37 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
 
-initMap();
+var demo3 = function() {
+        var map = new GMaps({
+            div: '#map',
+            lat: -51.38739,
+            lng: -6.187181,
+        });
+        map.addMarker({
+            lat: -51.38739,
+            lng: -6.187181,
+            title: 'Lima',
+            details: {
+                database_id: 42,
+                author: 'HPNeo'
+            },
+            click: function(e) {
+                if (console.log) console.log(e);
+                alert('You clicked in this marker');
+            }
+        });
+        map.addMarker({
+            lat: -12.042,
+            lng: -77.028333,
+            title: 'Marker with InfoWindow',
+            infoWindow: {
+                content: '<span style="color:#000">HTML Content!</span>'
+            }
+        });
+        map.setZoom(5);
+    }
+
+demo3();
 
 //let markers = [];
 function initMap() {
