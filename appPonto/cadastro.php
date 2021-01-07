@@ -145,7 +145,7 @@ var demo3 = function() {
 
 
 
-//let markers = [];
+let markers = [];
 function initMap() {
   
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -157,7 +157,7 @@ function initMap() {
     clearMarkers();
     placeMarker(event.latLng, map);
  });
-  //setMarkers(map);
+  setMarkers(map);
   console.log(map);
 }
 
