@@ -52,7 +52,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 					<div class="form-group row"> 
 						<div class="form-group col-md-12">
-							<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
 							<div id="map" class="rounded"></div>
 						</div>
 					</div>
