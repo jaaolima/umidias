@@ -53,7 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="form-group row"> 
 						<div class="form-group col-md-12">
 							<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
-							<div id="map" ></div>
+							<div id="map" class="rounded"></div>
 						</div>
 					</div>
 					<div class="d-flex flex-row flex-column-fluid container">
