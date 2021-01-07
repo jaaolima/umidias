@@ -160,7 +160,8 @@ function initMap() {
   
   google.maps.event.addListener(map, 'dblclick', function(event) {
     clearMarkers();
-    placeMarker(event.latLng, map);
+	//placeMarker(event.latLng, map);
+	addMarker(event.latLng);
  });
   //setMarkers(map);
   console.log(map);
@@ -222,6 +223,14 @@ function setMarkers(map) {
       zIndex: beach[3],
     });
   }*/
+}
+
+function addMarker(location) {
+  const marker = new google.maps.Marker({
+    position: location,
+    map: map,
+  });
+  marcas.push(marker);
 }
 function placeMarker(location, map) {
 	
