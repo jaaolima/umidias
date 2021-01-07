@@ -34,7 +34,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
         </div>
     </div>
     <!--begin::Form-->
-    <div id="map"></div>
+    
     <form id="form_usuario">
         <div class="card-body">
             <div class="form-group row">
@@ -48,7 +48,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                 </div>
             </div>
             <div class="form-group row"> 
-                
+				<div id="map"></div>
                 <div class="form-group col-md-4">
                     <label >Latitude<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_latitude" name="ds_latitude"/>
@@ -108,7 +108,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
 jQuery(document).ready(function() {
-	demo3();
+	initMap();
 });
 
 var demo3 = function() {
