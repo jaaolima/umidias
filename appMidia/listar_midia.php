@@ -79,7 +79,10 @@
 			<thead>
 				<tr>
 					<th>Id</th>
-					<th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Localização</th>
+                    <th>Tamanho</th>
+                    <th>Posição</th>
 					<th>Ações</th>
 				</tr>
 			</thead>
@@ -88,8 +91,11 @@
 					while ($dados = $retorno->fetch())
 					{
 						echo "<tr>
-								<td>".$dados['id_midia']."</td>
-								<td>".$dados['ds_descricao']."</td>
+                                <td>".$dados['id_midia']."</td>
+                                <td>".$dados['nu_valor']."</td>
+                                <td>".$dados['ds_localizacao']."</td>
+                                <td>".$dados['ds_tamanho']."</td>
+                                <td>".$dados['ds_posicao']."</td>
 								<td nowrap></td>
 							</tr>";
 					}
