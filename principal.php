@@ -1457,14 +1457,12 @@ License: You must have a valid license purchased only from themeforest(the above
 													<!--begin::Stats Widget 27-->
 													<div class="card card-custom bg-white card-stretch gutter-b">
 														<!--begin::Body-->
-														<div class="card-body">
-															
+														<div class="card-body">	
 															<span class="card-title font-weight-bolder text-dark-75 font-size-h2 mb-0 mt-6 d-block">$50,000</span>
 															<span class="font-wight-bold text-muted font-size-sm d-block">Investido</span>
-															<div class="d-flex justify-content-between"> 
-																<input class="btn btn-secondary" type="button" value="Acompanhar"/>
-															</div>
-															
+														</div>
+														<div class="d-flex justify-content-between"> 
+															<input class="btn btn-secondary" type="button" value="Acompanhar"/>
 														</div>
 														<!--end::Body-->
 													</div>
