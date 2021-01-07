@@ -1332,8 +1332,111 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--end::Subheader-->
 							<div class="content flex-column-fluid" id="conteudo">
 								<!--begin::Dashboard-->
-								<!--begin::Row-->		
+								<!--begin::Row-->
+								
 								<div class="row">
+									<?php /* if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 ) : ?>
+										<div class="col-xl-4">
+											<!--begin::Mixed Widget 4-->
+											<div class="card card-custom bg-radial-gradient-danger gutter-b card-stretch">
+												<!--begin::Header-->
+												
+												<div class="card-header border-0 py-5">
+													<span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-11-19-154210/theme/html/demo8/dist/../src/media/svg/icons/General/Fire.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<rect x="0" y="0" width="24" height="24"/>
+															<path d="M14,7 C13.6666667,10.3333333 12.6666667,12.1167764 11,12.3503292 C11,12.3503292 12.5,6.5 10.5,3.5 C10.5,3.5 10.287918,6.71444735 8.14498739,10.5717225 C7.14049032,12.3798172 6,13.5986793 6,16 C6,19.428689 9.51143904,21.2006583 12.0057195,21.2006583 C14.5,21.2006583 18,20.0006172 18,15.8004732 C18,14.0733981 16.6666667,11.1399071 14,7 Z" fill="#000000"/>
+														</g>
+													</svg><!--end::Svg Icon--></span>
+													<h3 class="card-title font-weight-bolder text-white">Pontos quentes</h3>
+													<div class="card-toolbar">
+														<div class="dropdown dropdown-inline">
+															<a href="#" class="btn btn-text-white btn-hover-white btn-sm btn-icon border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																<i class="ki ki-bold-more-hor"></i>
+															</a>
+															<div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+																<!--begin::Navigation-->
+																<ul class="navi navi-hover">
+																	<li class="navi-header pb-1">
+																		<span class="text-primary text-uppercase font-weight-bold font-size-sm">Add new:</span>
+																	</li>
+																	<li class="navi-item">
+																		<a href="#" class="navi-link">
+																			<span class="navi-icon">
+																				<i class="flaticon2-shopping-cart-1"></i>
+																			</span>
+																			<span class="navi-text">Order</span>
+																		</a>
+																	</li>
+																	<li class="navi-item">
+																		<a href="#" class="navi-link">
+																			<span class="navi-icon">
+																				<i class="flaticon2-calendar-8"></i>
+																			</span>
+																			<span class="navi-text">Event</span>
+																		</a>
+																	</li>
+																	<li class="navi-item">
+																		<a href="#" class="navi-link">
+																			<span class="navi-icon">
+																				<i class="flaticon2-graph-1"></i>
+																			</span>
+																			<span class="navi-text">Report</span>
+																		</a>
+																	</li>
+																	<li class="navi-item">
+																		<a href="#" class="navi-link">
+																			<span class="navi-icon">
+																				<i class="flaticon2-rocket-1"></i>
+																			</span>
+																			<span class="navi-text">Post</span>
+																		</a>
+																	</li>
+																	<li class="navi-item">
+																		<a href="#" class="navi-link">
+																			<span class="navi-icon">
+																				<i class="flaticon2-writing"></i>
+																			</span>
+																			<span class="navi-text">File</span>
+																		</a>
+																	</li>
+																</ul>
+																<!--end::Navigation-->
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												<!--end::Header-->
+												<!--begin::Body-->
+												<div class="card-body d-flex flex-column p-0">
+													<!--begin::Chart-->
+													<div id="kt_mixed_widget_6_chart" style="height: 200px"></div>
+													<!--end::Chart-->
+													<!--begin::Stats-->
+													<div class="card-spacer bg-white card-rounded flex-grow-1">
+														<!--begin::Row-->
+														<div class="row m-0">
+															<div class="col px-8 py-6 mr-8">
+																<div class="font-size-sm text-muted font-weight-bold">Pontos locados</div>
+																<div class="font-size-h4 font-weight-bolder">$650</div>
+															</div>
+															<div class="col px-8 py-6">
+																<div class="font-size-sm text-muted font-weight-bold">Pontos disponiveis</div>
+																<div class="font-size-h4 font-weight-bolder">$233,600</div>
+															</div>
+														</div>
+														<!--end::Row-->
+														
+													</div>
+													<!--end::Stats-->
+												</div>
+												<!--end::Body-->
+											</div>
+											<!--end::Mixed Widget 4-->
+										</div>
+									<?php endif; */?>	
+									
 									<div class="col-xl-12">
 										<div class="row">
 											<?php /* if($_SESSION['id_perfil'] == 2 || $_SESSION['id_perfil'] == 3 ) :  ?>
