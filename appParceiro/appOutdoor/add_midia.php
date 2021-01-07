@@ -154,19 +154,19 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Foto</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="projectname" type="file" value="Foto" />
+																			<input class="form-control form-control-lg form-control-solid" name="projectname" type="file"  />
 																		</div>
 																	</div>
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Localização</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="projectowner" type="text" value="Localizaçãoo" />
+																			<input class="form-control form-control-lg form-control-solid" name="projectowner" type="text"  />
 																		</div>
 																	</div>
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Valor</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Valor" />
+																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text"  />
 																			<span class="form-text text-muted">O valor médio é 50R$</span>
 																		</div>
 																	</div>
@@ -187,22 +187,25 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Tamanho</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Tamanho" />
+																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text"  />
 																		</div>
 																	</div>
 																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Localização</label>
-																		<div class="col-lg-4 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Latitude" />
+																		<label class="col-xl-3 col-lg-3 col-form-label">Latitude</label>
+																		<div class="col-lg-9 col-xl-9">
+																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text"  />
 																		</div>
-																		<div class="col-lg-4 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Longitude" />
+																	</div>
+																	<div class="form-group row">
+																		<label class="col-xl-3 col-lg-3 col-form-label">Longitude</label>
+																		<div class="col-lg-9 col-xl-9">
+																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text"  />
 																		</div>
 																	</div>
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Posição</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Posição" />
+																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text"  />
 																		</div>
 																	</div>
 																</div>
@@ -565,11 +568,11 @@ License: You must have a valid license purchased only from themeforest(the above
 														<!--begin::Actions-->
 														<div class="d-flex justify-content-between border-top mt-5 pt-10">
 															<div class="mr-2">
-																<button type="button" class="btn btn-light-primary font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-prev">Previous</button>
+																<button type="button" class="btn btn-light-primary font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-prev">Anterior</button>
 															</div>
 															<div>
-																<button type="button" class="btn btn-success font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-submit">Submit</button>
-																<button type="button" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-next">Next Step</button>
+																<button type="button" class="btn btn-success font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-submit">Adicionar</button>
+																<button type="button" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-next">Proximo</button>
 															</div>
 														</div>
 														<!--end::Actions-->
