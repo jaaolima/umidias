@@ -49,6 +49,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
             </div>
 			<div class="form-group row"> 
 				<div class="form-group col-md-4">
+					<p>Selecione no mapa a localização exata do ponto</p>
 					<div id="map"></div>
 				</div>
 			</div>
@@ -56,11 +57,11 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 				
                 <div class="form-group col-md-4">
                     <label >Latitude<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_latitude" name="ds_latitude"/>
+                    <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" readonly/>
                 </div> 
                 <div class="form-group col-md-4">
                     <label >Longitude<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_longitude" name="ds_longitude"/>
+                    <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" readonly/>
                 </div> 
             </div> 
             <div class="form-group row">    
