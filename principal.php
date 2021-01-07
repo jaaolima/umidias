@@ -1462,7 +1462,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															<span class="font-wight-bold text-muted font-size-sm d-block">Investido</span>
 														</div>
 														<div class="d-flex flex-center"> 
-															<input class="btn btn-secondary" type="button" value="Acompanhar"/>
+															<input class="btn btn-primary btn-lg" type="button" value="Acompanhar"/>
 														</div>
 														<!--end::Body-->
 													</div>
