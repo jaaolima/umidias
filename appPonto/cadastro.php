@@ -122,7 +122,15 @@ var demo3 = function() {
 		lat: -15.849511,
 		lng: -48.022440,
 		dblclick: function(e) {
-			console.log(e);
+			map.addMarker({
+				lat: e.latLng.lat(),
+				lng: e.latLng.lng(),
+				title: 'Seu ponto',
+				infoWindow: {
+					content: '<span style="color:#000">Aqui está o seu ponto</span>'
+				}
+			});	
+			map.setZoom(5);
 		},
 	});
 
