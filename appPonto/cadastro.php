@@ -150,7 +150,7 @@ var demo3 = function() {
 
 
 
-let marcas = [];
+//let marcas = [];
 function initMap() {
   
   const map = new google.maps.Map(document.getElementById("map"), {
