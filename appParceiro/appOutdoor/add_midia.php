@@ -154,19 +154,19 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Foto</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="projectname" type="file"  />
+																			<input class="form-control form-control-lg form-control-solid" name="projectname" type="file" value="text" />
 																		</div>
 																	</div>
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Localização</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="projectowner" type="text"  />
+																			<input class="form-control form-control-lg form-control-solid" name="projectowner" type="text" value="text" />
 																		</div>
 																	</div>
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Valor</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text"  />
+																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="text" />
 																			<span class="form-text text-muted">O valor médio é 50R$</span>
 																		</div>
 																	</div>
