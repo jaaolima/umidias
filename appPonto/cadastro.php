@@ -127,10 +127,12 @@ var demo3 = function() {
 				lng: e.latLng.lng(),
 				title: 'Seu ponto',
 				infoWindow: {
-					content: '<span style="color:#000">Aqui está o seu ponto</span>'
+					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
 				}
 			});	
 			map.setZoom(5);
+			$("#ds_latitude").val(e.latLng.lat());
+			$("#ds_longitude").val(e.latLng.lng());
 		},
 	});
 
