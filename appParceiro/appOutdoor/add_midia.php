@@ -148,66 +148,29 @@ License: You must have a valid license purchased only from themeforest(the above
 													<form class="form" id="kt_projects_add_form">
 														<!--begin::Step 1-->
 														<div class="pb-5" data-wizard-type="step-content" data-wizard-state="current">
-															<h3 class="mb-10 font-weight-bold text-dark">Project Details:</h3>
+															<h3 class="mb-10 font-weight-bold text-dark">Detalhes da Mídia</h3>
 															<div class="row">
 																<div class="col-xl-12">
 																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Project Name</label>
+																		<label class="col-xl-3 col-lg-3 col-form-label">Foto</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="projectname" type="text" value="Loop CRM" />
+																			<input class="form-control form-control-lg form-control-solid" name="projectname" type="file" value="Foto" />
 																		</div>
 																	</div>
 																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Project Owner</label>
+																		<label class="col-xl-3 col-lg-3 col-form-label">Localização</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="projectowner" type="text" value="Krox" />
+																			<input class="form-control form-control-lg form-control-solid" name="projectowner" type="text" value="Localizaçãoo" />
 																		</div>
 																	</div>
 																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Customer Name</label>
+																		<label class="col-xl-3 col-lg-3 col-form-label">Valor</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Loop Inc." />
-																			<span class="form-text text-muted">If you want your invoices addressed to a company. Leave blank to use your full name.</span>
+																			<input class="form-control form-control-lg form-control-solid" name="customername" type="text" value="Valor" />
+																			<span class="form-text text-muted">O valor médio é 50R$</span>
 																		</div>
 																	</div>
-																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Contact Phone</label>
-																		<div class="col-lg-9 col-xl-9">
-																			<div class="input-group input-group-lg input-group-solid">
-																				<div class="input-group-prepend">
-																					<span class="input-group-text">
-																						<i class="la la-phone"></i>
-																					</span>
-																				</div>
-																				<input type="text" class="form-control form-control-lg form-control-solid" name="phone" value="4567896745" placeholder="Phone" />
-																			</div>
-																			<span class="form-text text-muted">We'll never share your email with anyone else.</span>
-																		</div>
-																	</div>
-																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Email Address</label>
-																		<div class="col-lg-9 col-xl-9">
-																			<div class="input-group input-group-lg input-group-solid">
-																				<div class="input-group-prepend">
-																					<span class="input-group-text">
-																						<i class="la la-at"></i>
-																					</span>
-																				</div>
-																				<input type="text" class="form-control form-control-lg form-control-solid" name="email" value="anna.krox@loop.com" placeholder="Email" />
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Company Site</label>
-																		<div class="col-lg-9 col-xl-9">
-																			<div class="input-group input-group-lg input-group-solid">
-																				<input type="text" class="form-control form-control-lg form-control-solid" name="companywebsite" placeholder="Username" value="loop" />
-																				<div class="input-group-append">
-																					<span class="input-group-text">.com</span>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
+																
 																</div>
 															</div>
 														</div>
