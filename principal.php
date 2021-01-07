@@ -1469,7 +1469,44 @@ License: You must have a valid license purchased only from themeforest(the above
 											<?php endif; ?>
 		
 										</div>
-										
+										<?php /*?><div class="row">
+											<div class="col-xl-8">
+												<!--begin::Tiles Widget 23-->
+												<div class="card card-custom gutter-b" style="height: 250px">
+													<!--begin::Body-->
+													<div class="card-body d-flex flex-column p-0">
+														<!--begin::Stats-->
+														<div class="flex-grow-1 card-spacer pb-0">
+															<div class="d-flex justify-content-between align-items-center flex-wrap">
+																<div class="mr-2">
+																	<a href="#" class="text-dark-75 text-hover-primary font-weight-bolder font-size-h2">Generate Reports</a>
+																	<div class="text-muted font-size-lg font-weight-bold pt-2">Finance and accounting reports</div>
+																</div>
+																<div class="font-weight-bolder font-size-h3 text-success">$24,500</div>
+															</div>
+														</div>
+														<!--end::Stats-->
+														<!--begin::Chart-->
+														<div id="kt_tiles_widget_23_chart" class="card-rounded-bottom" data-color="success" style="height: 100px"></div>
+														<!--end::Chart-->
+													</div>
+													<!--end::Body-->
+												</div>
+												<!--end::Tiles Widget 23-->
+											</div>
+											<div class="col-xl-4">
+												<!--begin::Tiles Widget 24-->
+												<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b" style="height: 250px; background-image: url(assets/media/stock-600x400/img-28.jpg)">
+													<!--begin::Body-->
+													<div class="card-body">
+														<a href='#' class="text-dark-75 text-hover-primary font-weight-bolder font-size-h3">Weekly Sales Stats</a>
+														<div class="text-dark-50 font-weight-bold font-size-lg pt-2">890,344 Sales</div>
+													</div>
+													<!--end::Body-->
+												</div>
+												<!--end::Tiles Widget 24-->
+											</div>
+										</div><?php */ ?>
 									</div>
 								</div>
 								<!--end::Row-->
