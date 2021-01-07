@@ -121,9 +121,12 @@ var demo3 = function() {
 		div: '#map',
 		lat: -15.849511,
 		lng: -48.022440,
+		dblclick: function(e) {
+			alert('click');
+		},
 	});
 
-	google.maps.event.addListener(map, 'dblclick', function(event) {
+	/*google.maps.event.addListener(map, 'dblclick', function(event) {
 		map.addMarker({
 			lat: event.latLng.lat(),
 			lng: event.latLng.lng(),
@@ -133,7 +136,7 @@ var demo3 = function() {
 			}
 		});	
 		map.setZoom(5);
- 	});
+ 	});*/
 
 
 	/*
