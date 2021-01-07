@@ -107,6 +107,8 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
 
+initMap();
+
 //let markers = [];
 function initMap() {
   
