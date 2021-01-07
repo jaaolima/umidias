@@ -108,6 +108,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 // to the base of the flagpole.
 
 var demo3 = function() {
+  alert('iniciou');
         var map = new GMaps({
             div: '#map',
             lat: -51.38739,
