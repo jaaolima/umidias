@@ -1472,7 +1472,186 @@ License: You must have a valid license purchased only from themeforest(the above
 										
 									</div>
 								</div>
+								<!--end::Row-->
+								<!--begin::Row-->
+								<?php /* ?><div class="row">
+									<div class="col-xl-4">
+										<!--begin::Mixed Widget 10-->
+										<div class="card card-custom card-stretch gutter-b">
+											<!--begin::Body-->
+											<div class="card-body d-flex flex-column">
+												<div class="flex-grow-1 pb-5">
+													<!--begin::white-->
+													<div class="d-flex align-items-center pr-2 mb-6">
+														<span class="text-muted font-weight-bold font-size-lg flex-grow-1">7 Hours Ago</span>
+														<div class="symbol symbol-50">
+															<span class="symbol-label bg-light-light">
+																<img src="assets/media/svg/misc/006-plurk.svg" class="h-50 align-self-center" alt="" />
+															</span>
+														</div>
+													</div>
+													<!--end::Info-->
+													<!--begin::Link-->
+													<a href="#" class="text-dark font-weight-bolder text-hover-primary font-size-h4">PitStop - Multiple Email
+													<br />Generator</a>
+													<!--end::Link-->
+													<!--begin::Desc-->
+													<p class="text-dark-50 font-weight-normal font-size-lg mt-6">Pitstop creates quick email campaigns.
+													<br />We help to strengthen your brand
+													<br />for your every purpose.</p>
+													<!--end::Desc-->
+												</div>
+												<!--begin::Team-->
+												<div class="d-flex align-items-center">
+													<!--begin::Pic-->
+													<a href="#" class="symbol symbol-45 symbol-light mr-3">
+														<div class="symbol-label">
+															<img src="assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" alt="" />
+														</div>
+													</a>
+													<!--end::Pic-->
+													<!--begin::Pic-->
+													<a href="#" class="symbol symbol-45 symbol-light mr-3">
+														<div class="symbol-label">
+															<img src="assets/media/svg/avatars/028-girl-16.svg" class="h-75 align-self-end" alt="" />
+														</div>
+													</a>
+													<!--end::Pic-->
+													<!--begin::Pic-->
+													<a href="#" class="symbol symbol-45 symbol-light">
+														<div class="symbol-label">
+															<img src="assets/media/svg/avatars/024-boy-9.svg" class="h-75 align-self-end" alt="" />
+														</div>
+													</a>
+													<!--end::Pic-->
+												</div>
+												<!--end::Team-->
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Mixed Widget 10-->
+									</div>
+									<div class="col-xl-4">
+										<!--begin::Mixed Widget 11-->
+										<div class="card card-custom card-stretch gutter-b">
+											<!--begin::Body-->
+											<div class="card-body d-flex flex-column">
+												<div class="flex-grow-1 pb-5">
+													<!--begin::Info-->
+													<div class="d-flex align-items-center pr-2 mb-6">
+														<span class="text-muted font-weight-bold font-size-lg flex-grow-1">2 Days Ago</span>
+														<div class="symbol symbol-50">
+															<span class="symbol-label bg-light-light">
+																<img src="assets/media/svg/misc/015-telegram.svg" class="h-50 align-self-center" alt="" />
+															</span>
+														</div>
+													</div>
+													<!--end::Info-->
+													<a href="#" class="text-dark font-weight-bolder text-hover-primary font-size-h4">Craft - ReactJS Admin
+													<br />Theme</a>
+													<!--begin::Desc-->
+													<p class="text-dark-50 font-weight-normal font-size-lg mt-6">Craft uses the latest and greatest frameworks
+													<br />with ReactJS for complete modernization and
+													<br />future proofing your business operations
+													<br />and sales opportunities</p>
+													<!--end::Desc-->
+												</div>
+												<!--begin::Team-->
+												<div class="d-flex align-items-center">
+													<!--begin::Pic-->
+													<a href="#" class="symbol symbol-45 symbol-light mr-3">
+														<div class="symbol-label">
+															<img src="assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" alt="" />
+														</div>
+													</a>
+													<!--end::Pic-->
+													<!--begin::Pic-->
+													<a href="#" class="symbol symbol-45 symbol-light mr-3">
+														<div class="symbol-label">
+															<img src="assets/media/svg/avatars/028-girl-16.svg" class="h-75 align-self-end" alt="" />
+														</div>
+													</a>
+													<!--end::Pic-->
+													<!--begin: Pic-->
+													<a href="#" class="symbol symbol-45 symbol-light mr-3">
+														<div class="symbol-label">
+															<img src="assets/media/svg/avatars/024-boy-9.svg" class="h-75 align-self-end" alt="" />
+														</div>
+													</a>
+													<!--end::Pic-->
+													<!--begin::Pic-->
+													<a href="#" class="symbol symbol-45 symbol-light">
+														<div class="symbol-label">
+															<img src="assets/media/svg/avatars/005-girl-2.svg" class="h-75 align-self-end" alt="" />
+														</div>
+													</a>
+													<!--end::Pic-->
+												</div>
+												<!--end::Team-->
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Mixed Widget 11-->
+									</div>
+									<div class="col-xl-4">
+										<!--begin::Mixed Widget 12-->
+										<div class="card card-custom card-stretch gutter-b">
+											<!--begin::Body-->
+											<div class="card-body d-flex flex-column">
+												<div class="flex-grow-1 pb-5">
+													<!--begin::Info-->
+													<div class="d-flex align-items-center pr-2 mb-6">
+														<span class="text-muted font-weight-bold font-size-lg flex-grow-1">5 Weeks Ago</span>
+														<div class="symbol symbol-50">
+															<span class="symbol-label bg-light-light">
+																<img src="assets/media/svg/misc/003-puzzle.svg" class="h-50 align-self-center" alt="" />
+															</span>
+														</div>
+													</div>
+													<!--end::Info-->
+													<a href="#" class="text-dark font-weight-bolder text-hover-primary font-size-h4">KT.com - High Quality
+													<br />Templates</a>
+													<!--begin::Desc-->
+													<p class="text-dark-50 font-weight-normal font-size-lg mt-6">Easy to use, incredibly flexible and secure
+													<br />with in-depth documentation that outlines
+													<br />everything for you</p>
+													<!--end::Desc-->
+												</div>
+												<!--begin::Team-->
+												<div class="d-flex align-items-center">
+													<!--begin::Pic-->
+													<a href="#" class="symbol symbol-45 symbol-light mr-3">
+														<div class="symbol-label">
+															<img src="assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" alt="" />
+														</div>
+													</a>
+													<!--end::Pic-->
+													<!--begin::Pic-->
+													<a href="#" class="symbol symbol-45 symbol-light mr-3">
+														<div class="symbol-label">
+															<img src="assets/media/svg/avatars/028-girl-16.svg" class="h-75 align-self-end" alt="" />
+														</div>
+													</a>
+													<!--end::Pic-->
+													<!--begin::Pic-->
+													<a href="#" class="symbol symbol-45 symbol-light">
+														<div class="symbol-label">
+															<img src="assets/media/svg/avatars/024-boy-9.svg" class="h-75 align-self-end" alt="" />
+														</div>
+													</a>
+													<!--end::Pic-->
+												</div>
+												<!--end::Team-->
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Mixed Widget 12-->
+									</div>
+								</div><?php */ ?>
 
+								<!--end::Row-->
+								<!--begin::Row-->
+								
 								<div class="row">
 									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 || $_SESSION['id_perfil'] == 4 ) :  ?>
 										<div class="col-xl-12">
