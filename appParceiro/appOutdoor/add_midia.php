@@ -38,7 +38,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<style>
 			#map {
 				width: 100%;
-				height: 500px;
+				height: 300px;
 			}
 		</style>
 	</head>
@@ -192,9 +192,9 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</div>
 																	</div>
 																	<div class="form-group row"> 
-																		<div class="form-group col-md-12">
-																			<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
+																		<div class="form-group col-md-6">
 																			<div id="map" class="rounded"></div>
+																			<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
 																		</div>
 																	</div>
 																	<div class="form-group row">
