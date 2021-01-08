@@ -924,7 +924,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<i class="flaticon2-calendar-3 text-success"></i>
 													</div>
 													<div class="navi-text">
-														<a href="perfil.php"class="font-weight-bold">Meu perfil</a>
+														<div href="perfil.php"class="font-weight-bold">Meu perfil</div>
 														<div class="text-muted">Account settings and more
 														<span class="label label-light-danger label-inline font-weight-bold">update</span></div>
 													</div>
