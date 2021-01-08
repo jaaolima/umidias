@@ -63,7 +63,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<!--begin::Info-->
 													<div class="d-flex flex-column mr-auto">
 														<!--begin: Title-->
-														<a href="appCliente/appoutdoor/listar_midia.php" class="card-title text-hover-primary font-weight-bolder font-size-h5 text-dark mb-1">Outdoor</a>
+														<a href="appCliente/appOutdoor/listar_midia.php" class="card-title text-hover-primary font-weight-bolder font-size-h5 text-dark mb-1">Outdoor</a>
 														<span class="text-muted font-weight-bold">Creates Limitless possibilities</span>
 														<!--end::Title-->
 													</div>
