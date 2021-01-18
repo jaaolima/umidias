@@ -1300,7 +1300,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 					<!--end::Header Menu Wrapper-->
 					<!--begin::Container-->
-					<div class="d-flex flex-row flex-column-fluid container">
+					<div class="d-flex flex-row flex-column-fluid ">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
 							<!--begin::Subheader-->
