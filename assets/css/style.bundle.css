@@ -444,15 +444,7 @@ mark,
 .figure-caption {
   font-size: 90%;
   color: #7E8299; }
-.left {
-    position: fixed;
-    left: 0px;
-    display: inline-block;
-    white-space: nowrap;
-    width: 50px;
-    height: 100% ;
-    transition: width .5s;
-}
+
 .botao {
   border-radius: 13px;
   background-image: -moz-linear-gradient( 45deg, rgb(220,129,223) 0%, rgb(232,161,212) 41%, rgb(244,192,201) 100%);
