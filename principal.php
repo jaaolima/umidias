@@ -102,6 +102,21 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--end::Container-->
 					</div>
 					<!--end::Header-->
+					<div class="left bg-white">
+   						<div class="nav-pills">
+						   <p>Dashboard</p>
+						</div>
+						<div class="nav-pills">
+						   <p>Dashboard</p>
+						</div>
+						<div class="nav-pills">
+						   <p>Dashboard</p>
+						</div>
+						<div class="nav-pills">
+						   <p>Dashboard</p>
+						</div>
+					</div>
+
 					<!--begin::Header Menu Wrapper-->
 					<div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
 						<div class="container">

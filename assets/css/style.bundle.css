@@ -444,7 +444,16 @@ mark,
 .figure-caption {
   font-size: 90%;
   color: #7E8299; }
-
+.left {
+    position: fixed;
+    top: 50%;
+    left: 15px;
+    background: #337ab7;
+    display: inline-block;
+    white-space: nowrap;
+    width: 50px;
+    transition: width .5s;
+}
 .botao {
   border-radius: 13px;
   background-image: -moz-linear-gradient( 45deg, rgb(220,129,223) 0%, rgb(232,161,212) 41%, rgb(244,192,201) 100%);
@@ -33353,7 +33362,7 @@ a.text-white:hover, a.text-white:focus {
     max-height: 1000px !important; }
   .max-w-xxl-1000px {
     max-width: 1000px !important; } }
-
+    
 .left-0 {
   left: 0 !important; }
 
