@@ -1411,10 +1411,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class="card-body d-flex">
 															<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 																<div class="flex-grow-1" style="display: inherit;">
-																	<span class="svg-icon svg-icon-gray svg-icon-1,5x font-weight-bolder font-size-h3" style="margin-right: 5px; margin-top: -4px;"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-11-19-154210/theme/html/demo8/dist/../src/media/svg/icons/Navigation/Plus.svg--><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill svg-icon-gray" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-																		<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-																		</svg><!--end::Svg Icon--></span>
-																	<h3  class="text-gray font-weight-bolder font-size-h3">Escolha sua mídia</h3>
+																	<h3  class="text-gray font-weight-light font-size-h3">Alugue sua mídia</h3>
 																</div>
 																<div class="row m-0">
 																	<div class="col bg-white px-6 py-6 rounded-xl mr-7 mb-10 mt-7 card-2" style="text-align: center;">
