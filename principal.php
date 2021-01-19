@@ -104,16 +104,16 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--end::Header-->
 					<div class="left bg-white">
    						<div class="nav-pills">
-						   <p>Dashboard</p>
+						   <p>D</p>
 						</div>
 						<div class="nav-pills">
-						   <p>Dashboard</p>
+						   <p>D</p>
 						</div>
 						<div class="nav-pills">
-						   <p>Dashboard</p>
+						   <p>D</p>
 						</div>
 						<div class="nav-pills">
-						   <p>Dashboard</p>
+						   <p>D</p>
 						</div>
 					</div>
 

@@ -447,11 +447,10 @@ mark,
 .left {
     position: fixed;
     top: 50%;
-    left: 15px;
-    background: #337ab7;
+    left: 0px;
     display: inline-block;
     white-space: nowrap;
-    width: 50px;
+    width: 100px;
     transition: width .5s;
 }
 .botao {
