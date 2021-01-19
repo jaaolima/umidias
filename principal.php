@@ -1452,7 +1452,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<!--end::Tiles Widget 25-->
 												</div>
 											<?php endif; ?>
-											<?php/* if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 || $_SESSION['id_perfil'] == 2 || $_SESSION['id_perfil'] == 4) :  ?>	
+											<?php /* if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 || $_SESSION['id_perfil'] == 2 || $_SESSION['id_perfil'] == 4) :  ?>	
 												<div class="col-xl-6">
 													<!--begin::Stats Widget 27-->
 													<div class="card card-custom bg-white card-stretch gutter-b h-300px">
@@ -1466,7 +1466,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 													<!--end::Stats Widget 27-->
 												</div>
-											<?php endif; */?>	
+											<?php endif; */ ?>	
 										</div>	
 									</div>
 								</div>
