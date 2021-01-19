@@ -446,7 +446,6 @@ mark,
   color: #7E8299; }
 .left {
     position: fixed;
-    top: 50%;
     left: 0px;
     display: inline-block;
     white-space: nowrap;
