@@ -84,7 +84,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Menu Container-->
 						<div id="kt_aside_menu" class="aside-menu my-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 825px; overflow: hidden;">
 							<!--begin::Menu Nav-->
-							<ul class="menu-nav">
+							<ul class="menu-nav nav-pills">
 								<li class="menu-item menu-item-active my-4" aria-haspopup="true">
 									<a href="/metronic/demo1/index.html" class="menu-link">
 										<span class="svg-icon menu-icon">
@@ -101,7 +101,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">painel de controle</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item menu-item my-4 nav-pills" aria-haspopup="true">
+								<li class="menu-item menu-item my-4 " aria-haspopup="true">
 									<a href="/metronic/demo1/index.html" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
