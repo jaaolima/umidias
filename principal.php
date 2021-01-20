@@ -101,7 +101,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">painel de controle</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item menu-item-active" aria-haspopup="true">
+								<li class="menu-item menu-item" aria-haspopup="true">
 									<a href="/metronic/demo1/index.html" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
@@ -117,7 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">painel de controle</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item menu-item-active" aria-haspopup="true">
+								<li class="menu-item menu-item" aria-haspopup="true">
 									<a href="/metronic/demo1/index.html" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
@@ -133,7 +133,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">painel de controle</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item menu-item-active" aria-haspopup="true">
+								<li class="menu-item menu-item" aria-haspopup="true">
 									<a href="/metronic/demo1/index.html" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
