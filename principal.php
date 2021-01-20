@@ -158,16 +158,17 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 				<!--begin::Wrapper-->
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+					<div class=" py-2 py-lg-4 " id="kt_subheader">
+						<div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap m-0">
+							<a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" id="kt_dashboard_daterangepicker" data-toggle="tooltip" title="" data-placement="left" data-original-title="Select dashboard daterange">
+								<span class="text-muted font-size-base font-weight-bold mr-2" id="kt_dashboard_daterangepicker_title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hoje: </font></font></span>
+								<span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">19 de janeiro</font></font></span>
+							</a>
+						</div>
+					</div>
 					<!--begin::Container-->
 					<div class="d-flex flex-row flex-column-fluid ">
-						<div class=" py-2 py-lg-4 " id="kt_subheader">
-							<div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap m-0">
-								<a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" id="kt_dashboard_daterangepicker" data-toggle="tooltip" title="" data-placement="left" data-original-title="Select dashboard daterange">
-									<span class="text-muted font-size-base font-weight-bold mr-2" id="kt_dashboard_daterangepicker_title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hoje: </font></font></span>
-									<span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">19 de janeiro</font></font></span>
-								</a>
-							</div>
-						</div>
+						
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
 							<div class="content flex-column-fluid" id="conteudo">
