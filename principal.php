@@ -86,7 +86,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav nav-pills">
 								<li class="menu-item menu-item-active my-4" aria-haspopup="true">
-									<a href="/metronic/demo1/index.html" class="btn btn-primary rounded ml-6 mr-20">
+									<a href="/metronic/demo1/index.html" class="btn btn-primary rounded ml-6 mr-30">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 								</li>
 								<li class="menu-item menu-item my-4 " aria-haspopup="true">
-									<a href="/metronic/demo1/index.html" class="menu-link">
+									<a href="/metronic/demo1/index.html" class="btn btn-primary rounded ml-6 mr-30">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 								</li>
 								<li class="menu-item menu-item my-4" aria-haspopup="true">
-									<a href="/metronic/demo1/index.html" class="menu-link">
+									<a href="/metronic/demo1/index.html" class="btn btn-primary rounded ml-6 mr-30">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -134,7 +134,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 								</li>
 								<li class="menu-item menu-item my-4" aria-haspopup="true">
-									<a href="/metronic/demo1/index.html" class="menu-link">
+									<a href="/metronic/demo1/index.html" class="btn btn-primary rounded ml-6 mr-30">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
