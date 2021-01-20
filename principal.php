@@ -255,7 +255,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 4 ) :  ?>	
 												<div class="col-xl-12">
 													<!--begin::Tiles Widget 25-->
-													<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center" style="height: 300px; ">
+													<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
 														<div class="card-body d-flex">
 															<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 																<div class="flex-grow-1" style="display: inherit;">
