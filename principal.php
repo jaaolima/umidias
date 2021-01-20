@@ -180,7 +180,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
 							<div class="content flex-column-fluid" id="conteudo">
-								<div class="mb-2">
+								<div class="mb-8">
 									<h2>Dashboard</h2>
 								</div>
 								<!--begin::Row-->	
