@@ -58,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="brand flex-column-auto" id="kt_brand" kt-hidden-height="65" style="">
 						<!--begin::Logo-->
 						<a href="/metronic/demo1/index.html" class="brand-logo">
-							<img alt="Logotipo" src="/metronic/theme/html/demo1/dist/assets/media/logos/logo-light.png">
+							<img alt="Logo" src="assets/media/logos/logo-default.png" class="max-h-30px " />
 						</a>
 						<!--end::Logo-->
 						<!--begin::Toggle-->
