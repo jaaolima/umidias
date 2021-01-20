@@ -158,7 +158,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 				<!--begin::Wrapper-->
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-					<div class=" py-2 py-lg-4 bg-secondary" id="kt_subheader">
+					<div class=" py-2 py-lg-4 " id="kt_subheader" style="background:none;">
 						<div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap m-0">
 							<a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" id="kt_dashboard_daterangepicker" data-toggle="tooltip" title="" data-placement="left" data-original-title="Select dashboard daterange">
 								<span class="text-muted font-size-base font-weight-bold mr-2" id="kt_dashboard_daterangepicker_title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hoje: </font></font></span>
