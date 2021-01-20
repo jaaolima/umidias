@@ -63,7 +63,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</a>
 						<!--end::Logo-->
 						<!--begin::Toggle-->
-						<button class="brand-toggle btn btn-sm px-0 justify-content-end" id="kt_aside_toggle">
+						<button class="brand-toggle btn btn-sm px-0 mr-0  justify-content-end" id="kt_aside_toggle">
 							<span class="svg-icon svg-icon svg-icon-xl">
 								<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Navigation/Angle-double-left.svg-->
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
