@@ -98,7 +98,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">painel de controle</font></font></span>
+										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item menu-item my-4 " aria-haspopup="true">
@@ -114,7 +114,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">painel de controle</font></font></span>
+										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item menu-item my-4" aria-haspopup="true">
@@ -130,7 +130,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">painel de controle</font></font></span>
+										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mídias alugadas</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item menu-item my-4" aria-haspopup="true">
@@ -146,7 +146,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">painel de controle</font></font></span>
+										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
 									</a>
 								</li>
 							</ul>
