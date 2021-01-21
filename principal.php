@@ -320,9 +320,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 || $_SESSION['id_perfil'] == 4 ) :  ?>
 										<div class="col-xl-12">
-											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
+											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 												<div class="card-body d-flex">
-													<div class="d-flex py-5 flex-column align-items-start flex-grow-1 justify-content-center">
+													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 														<div class="flex-grow-1" style="display: inherit;">
 															<h3 class="card-title font-weight-light text-gray">Minhas Mídias</h3>
 														</div>
