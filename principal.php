@@ -85,7 +85,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div id="kt_aside_menu" class="aside-menu my-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 825px; overflow: hidden;">
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav nav-pills">
-								<li class="menu-item menu-item-active my-4" aria-haspopup="true">
+								<li class="menu-item menu-item-active my-4 active" aria-haspopup="true">
 									<a href="/metronic/demo1/index.html" class="btn rounded ml-2 mr-30 text-left">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
