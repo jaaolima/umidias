@@ -324,7 +324,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="card card-custom card-stretch gutter-b">
 												<!--begin::Header-->
 												<div class="card-header ">
-													<h3 class="card-title font-weight-bolder text-dark">Minhas Mídias</h3>
+													<h3 class="text-gray font-weight-light font-size-h3">Minhas Mídias</h3>
 													
 												</div>
 												<!--end::Header-->
