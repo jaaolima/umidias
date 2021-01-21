@@ -330,7 +330,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<!--end::Header-->
 												<!--begin::Body-->
 												<div class="card-body pt-2">
-													<table class="table-hover">
+													<table class="table table-hover">
 														<thead>
 															<tr>
 																<th>Mídias contratadas</th>
