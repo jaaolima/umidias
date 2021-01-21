@@ -258,7 +258,9 @@ License: You must have a valid license purchased only from themeforest(the above
 													<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
 														<div class="card-body d-flex">
 															<div class="d-flex py-5 flex-column align-items-start flex-grow-1 justify-content-center">
-																
+																<div class="flex-grow-1" style="display: inherit;">
+																	<h3  class="text-gray font-weight-light font-size-h3">Alugue sua mídia</h3>
+																</div>
 																<div class="row m-0 col-12" >
 																	<div class="col-3 bg-white pl-20 py-6 mb-10 mt-7 border-right pr-20" style="text-align: center;">
 																		<span class="svg-icon svg-icon-2x svg-icon-white d-block my-2">
@@ -321,8 +323,9 @@ License: You must have a valid license purchased only from themeforest(the above
 											<!--begin::List Widget 13-->
 											<div class="card card-custom card-stretch gutter-b">
 												<!--begin::Header-->
-												<div class="flex-grow-1" style="display: inherit;">
-													<h3  class="text-gray font-weight-light font-size-h3">Alugue sua mídia</h3>
+												<div class="card-header border-0">
+													<h3 class="card-title font-weight-bolder text-dark">Minhas Mídias</h3>
+													
 												</div>
 												<!--end::Header-->
 												<!--begin::Body-->
@@ -360,7 +363,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="card card-custom gutter-b card-stretch">
 												<!--begin::Header-->
 												<div class="card-header border-0">
-													<h3 class="card-title font-weight-bolder text-dark">Minhas Mídias</h3>
+													<h3 class="text-gray font-weight-light font-size-h3">Minhas Mídias</h3>
 													
 												</div>
 												<!--end::Header-->
