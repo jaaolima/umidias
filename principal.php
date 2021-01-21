@@ -324,7 +324,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="card-body d-flex">
 													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 														<div class="flex-grow-1" style="display: inherit;">
-															<h3 class="card-title font-weight-light text-gray">Minhas Mídias</h3>
+															<h3 class="card-title font-weight-light text-gray">Minhas mídias</h3>
 														</div>
 														<div class="row m-0 col-12" >											
 															<table class="table table-hover">
@@ -357,110 +357,35 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">	
 									<?php if($_SESSION['id_perfil'] == 2  ) :  ?>
 										<div class="col-xl-12">
-											<!--begin::List Widget 7-->
-											<div class="card card-custom gutter-b card-stretch">
-												<!--begin::Header-->
-												<div class="card-header border-0">
-													<h3 class="text-gray font-weight-light font-size-h3">Minhas Mídias</h3>
-													
+											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+												<div class="card-body d-flex">
+													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+														<div class="flex-grow-1" style="display: inherit;">
+															<h3 class="card-title font-weight-light text-gray">Minhas mídias</h3>
+														</div>
+														<div class="row m-0 col-12" >											
+															<table class="table table-hover">
+																<thead>
+																	<tr>
+																		<th>Mídias contratadas</th>
+																		<th>Data inicial</th>
+																		<th>Data final</th>
+																		<th>Valor contratado</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>Universo Painéis</td>
+																		<td>21/01/2021</td>
+																		<td>21/01/2021</td>
+																		<td>00,00 RS</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
 												</div>
-												<!--end::Header-->
-												<!--begin::Body-->
-												<div class="card-body pt-0">
-													<!--begin::Item-->
-													<div class="d-flex align-items-center flex-wrap mb-10">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50 symbol-light mr-5">
-															<span class="symbol-label">
-																<img src="assets/media/svg/misc/006-plurk.svg" class="h-50 align-self-center" alt="" />
-															</span>
-														</div>
-														<!--end::Symbol-->
-														<!--begin::Text-->
-														<div class="d-flex flex-column flex-grow-1 mr-2">
-															<a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Top Authors</a>
-															<span class="text-muted font-weight-bold">Mark, Rowling, Esther</span>
-														</div>
-														<!--end::Text-->
-														<span class="label label-xl label-light label-inline my-lg-0 my-2 text-dark-50 font-weight-bolder">+82$</span>
-													</div>
-													<!--end::Item-->
-													<!--begin::Item-->
-													<div class="d-flex align-items-center flex-wrap mb-10">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50 symbol-light mr-5">
-															<span class="symbol-label">
-																<img src="assets/media/svg/misc/015-telegram.svg" class="h-50 align-self-center" alt="" />
-															</span>
-														</div>
-														<!--end::Symbol-->
-														<!--begin::Text-->
-														<div class="d-flex flex-column flex-grow-1 mr-2">
-															<a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Popular Authors</a>
-															<span class="text-muted font-weight-bold">Randy, Steve, Mike</span>
-														</div>
-														<!--end::Text-->
-														<span class="label label-xl label-light label-inline my-lg-0 my-2 text-dark-50 font-weight-bolder">+280$</span>
-													</div>
-													<!--end::Item-->
-													<!--begin::Item-->
-													<div class="d-flex align-items-center flex-wrap mb-10">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50 symbol-light mr-5">
-															<span class="symbol-label">
-																<img src="assets/media/svg/misc/003-puzzle.svg" class="h-50 align-self-center" alt="" />
-															</span>
-														</div>
-														<!--end::Symbol-->
-														<!--begin::Text-->
-														<div class="d-flex flex-column flex-grow-1 mr-2">
-															<a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">New Users</a>
-															<span class="text-muted font-weight-bold">John, Pat, Jimmy</span>
-														</div>
-														<!--end::Text-->
-														<span class="label label-xl label-light label-inline my-lg-0 my-2 text-dark-50 font-weight-bolder">+4500$</span>
-													</div>
-													<!--end::Item-->
-													<!--begin::Item-->
-													<div class="d-flex align-items-center flex-wrap mb-10">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50 symbol-light mr-5">
-															<span class="symbol-label">
-																<img src="assets/media/svg/misc/005-bebo.svg" class="h-50 align-self-center" alt="" />
-															</span>
-														</div>
-														<!--end::Symbol-->
-														<!--begin::Text-->
-														<div class="d-flex flex-column flex-grow-1 mr-2">
-															<a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Active Customers</a>
-															<span class="text-muted font-weight-bold">Sandra, Tim, Louis</span>
-														</div>
-														<!--end::Text-->
-														<span class="label label-xl label-light label-inline my-lg-0 my-2 text-dark-50 font-weight-bolder">+4500$</span>
-													</div>
-													<!--end::Item-->
-													<!--begin::Item-->
-													<div class="d-flex align-items-center flex-wrap">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50 symbol-light mr-5">
-															<span class="symbol-label">
-																<img src="assets/media/svg/misc/014-kickstarter.svg" class="h-50 align-self-center" alt="" />
-															</span>
-														</div>
-														<!--end::Symbol-->
-														<!--begin::Text-->
-														<div class="d-flex flex-column flex-grow-1 mr-2">
-															<a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Bestseller Theme</a>
-															<span class="text-muted font-weight-bold">Disco, Retro, Sports</span>
-														</div>
-														<!--end::Text-->
-														<span class="label label-xl label-light label-inline my-lg-0 my-2 text-dark-50 font-weight-bolder">+4500$</span>
-													</div>
-													<!--end::Item-->
-												</div>
-												<!--end::Body-->
 											</div>
-											<!--end::List Widget 7-->
 										</div>
 									<?php endif; ?>
 								</div>
