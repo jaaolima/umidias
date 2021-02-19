@@ -13,7 +13,7 @@
 		<div class="card-title">
 			<span class="kt-portlet__head-icon">
 				<i class="fas fa-address-book"></i>
-			</span>&nbsp;
+			</span>&nbsp; 
 			<h3 class="card-label">
 				Mídias Cadastrados
 			</h3>
