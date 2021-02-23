@@ -462,6 +462,14 @@ mark,
   top: 63px;
 
 }
+.dashboard-logo {
+  position: absolute;
+  width: 162px;
+  height: 60px;
+  left: 0px;
+  top: 132px;
+
+}
 
 .botao {
   border-radius: 13px;
