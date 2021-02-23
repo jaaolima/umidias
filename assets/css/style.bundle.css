@@ -454,6 +454,14 @@ mark,
 
   background: #FFFFFF;
 }
+.logo{
+  position: absolute;
+  width: 145px;
+  height: 28px;
+  left: 40px;
+  top: 63px;
+
+}
 
 .botao {
   border-radius: 13px;
