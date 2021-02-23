@@ -445,7 +445,7 @@ mark,
   font-size: 90%;
   color: #7E8299; }
 
-.sidebar{
+.sidebar {
   position: absolute;
   left: 0%;
   right: 5.16%;
@@ -454,7 +454,7 @@ mark,
 
   background: #FFFFFF;
 }
-.logo{
+.logo {
   position: absolute;
   width: 145px;
   height: 28px;
