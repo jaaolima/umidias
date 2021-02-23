@@ -445,6 +445,16 @@ mark,
   font-size: 90%;
   color: #7E8299; }
 
+.sidebar{
+  position: absolute;
+  left: 0%;
+  right: 5.16%;
+  top: 0%;
+  bottom: 0%;
+
+  background: #FFFFFF;
+}
+
 .botao {
   border-radius: 13px;
   background-image: -moz-linear-gradient( 45deg, rgb(220,129,223) 0%, rgb(232,161,212) 41%, rgb(244,192,201) 100%);
@@ -6067,8 +6077,7 @@ button.bg-warning:focus {
   background-color: #F64E60 !important; }
 
 .bg-grey {
-  background-color: #F5F5F5 !important;
-}
+  background-color: #F5F5F5 !important;}
 
 a.bg-danger:hover, a.bg-danger:focus,
 button.bg-danger:hover,

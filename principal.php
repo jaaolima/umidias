@@ -54,7 +54,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--begin::Page-->
 			<div class="d-flex flex-row flex-column-fluid page bg-grey">
 				<!--incio do sidebar-->
-				<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto menu-overlay" id="kt_aside">
+				<div class="siderbar" id="kt_aside">
 					<!--begin::Brand-->
 					<div class="brand flex-column-auto ml-3 mt-10 " id="kt_brand" kt-hidden-height="65" style="">
 						<!--begin::Logo-->
