@@ -66,9 +66,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
 										<div class="card card-custom card-stretch gutter-b">
 											<!--begin::Body-->
-											<div class="card-body text-center pt-4" style="padding: opx !important">
+											<div class="card-body text-center" >
 												<!--begin::User-->
-												<div class="">
+												<div class="style="padding: 0px !important"">
 													<img class="img-fluid"src="assets/media/project-logos/3.png" alt="image" />
 												</div>
 												<!--end::User-->
