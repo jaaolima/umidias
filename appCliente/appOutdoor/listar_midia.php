@@ -59,7 +59,9 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
 							<div class="content flex-column-fluid" id="kt_content">
-								
+								<div class="mb-8">
+									<h1 class="h1-titulo">Encontre seu outdoor</h1>
+								</div>
 								<!--begin::Row-->
 								<div class="row">
 									<!--begin::Column-->
