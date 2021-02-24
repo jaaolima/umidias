@@ -69,7 +69,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="card-body text-center pt-4">
 												<!--begin::User-->
 												<div class="">
-													<img src="assets/media/project-logos/3.png" alt="image" />
+													<img class="img-fluid"src="assets/media/project-logos/3.png" alt="image" />
 												</div>
 												<!--end::User-->
 												<!--begin::Name-->
