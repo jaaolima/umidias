@@ -476,6 +476,21 @@ mark,
 
   color: #57616A !important;
 }
+.titulo-midia {
+  /* H3 */
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* Preto 90% */
+
+  color: #333333;
+  position: absolute;
+  }
 .botao-menu {
   display: flex !important;
   flex-direction: row !important;
