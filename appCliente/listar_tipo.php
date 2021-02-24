@@ -45,7 +45,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-row flex-column-fluid container">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
-							<div class="content flex-column-fluid" id="kt_content">
+							<div class="content flex-column-fluid" id="conteudo">
 								<div class="mb-8 ">
 									<h1 class="h1-titulo">Dashboard</h1>
 								</div>
