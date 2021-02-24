@@ -47,7 +47,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="main d-flex flex-column flex-row-fluid">
 							<div class="content flex-column-fluid" id="conteudo">
 								<div class="mb-8 ">
-									<h1 class="h1-titulo">Dashboard</h1>
+									<h1 class="h1-titulo">Selecione o tipo de mídia</h1>
 								</div>
 								<div class="row">
 									<div class="col-xl-12">
