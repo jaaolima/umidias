@@ -64,13 +64,13 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--end::Logo-->
 						<!--begin::Toggle-->
 						<button class="brand-toggle btn btn-sm px-0 ml-25 menu-close" id="kt_aside_toggle">
-							<span class = "svg-icon svg-icon-primary svg-icon-2x"> <! - begin :: Svg Icon | caminho: /var/www/preview.keenthemes.com/metronic/releases/2021-02-01-052524/theme/html/demo8/dist /../ src / media / svg / icons / Code / Right-circle. svg -> <svg xmlns = "http://www.w3.org/2000/svg" xmlns: xlink = "http://www.w3.org/1999/xlink" width = "24px" height = " 24px "viewBox =" 0 0 24 24 "version =" 1.1 ">
-								<g stroke = "none" stroke-width = "1" fill = "none" fill-rule = "evenodd">
-									<rect x = "0" y = "0" largura = "24" altura = "24" />
-									<circle fill = "# 000000" opacity = "0.3" cx = "12" cy = "12" r = "10" />
-									<path d = "M7.96323356,15.1775211 C7.62849853,15.5122561 7.08578582,15.5122561 6.75105079,15.1775211 C6.41631576,14.842786 6.41631576,14.3000733 6.75105079,13.9485819.15.5122561 6.75105079,15.1775211 C6.41631576,14.842786 6.41631576,14.3000733 6.75105079,13.94819.579.847.279.847.887. 847. 867. 847. 847. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 867. 2220465,13.5110121 C18.5710056,13.8308912 18.5945795,14.3730917 18.2747004,14.7220508 C17.9548212,15.0710098 17.4126207,15.0945838 17.0636617,14.14.3730917 18.2747004,14.7220508 C17.9548212,15.0710098 17.4126207,15.0945838 17.0636617,14.7747046 L12.525700700 "fill573" non-6-7000 "fill573" non-6167000 "fill5.606" non-6176167000 "fill573. transform = "translate (12.500001, 12.000001) rotate (-270.000000) translate (-12.500001, -12.000001)" />
+							<span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-02-01-052524/theme/html/demo8/dist/../src/media/svg/icons/Code/Left-circle.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<rect x="0" y="0" width="24" height="24"/>
+									<circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
+									<path d="M6.96323356,15.1775211 C6.62849853,15.5122561 6.08578582,15.5122561 5.75105079,15.1775211 C5.41631576,14.842786 5.41631576,14.3000733 5.75105079,13.9653383 L10.8939067,8.82248234 C11.2184029,8.49798619 11.7409054,8.4866328 12.0791905,8.79672747 L17.2220465,13.5110121 C17.5710056,13.8308912 17.5945795,14.3730917 17.2747004,14.7220508 C16.9548212,15.0710098 16.4126207,15.0945838 16.0636617,14.7747046 L11.5257773,10.6149773 L6.96323356,15.1775211 Z" fill="#000000" fill-rule="nonzero" transform="translate(11.500001, 12.000001) scale(-1, 1) rotate(-270.000000) translate(-11.500001, -12.000001) "/>
 								</g>
-							</svg> <! - end :: Svg Icon -> </span>
+							</svg><!--end::Svg Icon--></span>
 						</button>
 						<!--end::Toolbar-->
 					</div>
