@@ -68,7 +68,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<!--begin::Body-->
 											<div class="card-body text-center" >
 												<!--begin::User-->
-												<div class="style="padding: 0px !important"">
+												<div class="" style="padding: 0px !important">
 													<img class="img-fluid"src="assets/media/project-logos/3.png" alt="image" />
 												</div>
 												<!--end::User-->
