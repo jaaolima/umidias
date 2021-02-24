@@ -56,14 +56,14 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--incio do sidebar-->
 				<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto menu-overlay" id="kt_aside">
 					<!--begin::Brand-->
-					<div class="brand flex-column-auto ml-3 mt-10 " id="kt_brand" kt-hidden-height="65" style="">
+					<div class="brand flex-column-auto ml-5 mt-10 " id="kt_brand" kt-hidden-height="65" style="">
 						<!--begin::Logo-->
 						<a href="/metronic/demo1/index.html" class="brand-logo">
-							<img alt="Logo" src="assets/media/logo.png" class="logo-default max-h-25px ml-5"  />
+							<img alt="Logo" src="assets/media/logo.png" class="logo-default max-h-25px"  />
 						</a>
 						<!--end::Logo-->
 						<!--begin::Toggle-->
-						<button class="brand-toggle btn btn-sm px-0 ml-30 menu-close" id="kt_aside_toggle">
+						<button class="brand-toggle btn btn-sm px-0 ml-25 menu-close" id="kt_aside_toggle">
 							<span class="svg-icon svg-icon svg-icon-xl">
 								<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Navigation/Angle-double-left.svg-->
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
