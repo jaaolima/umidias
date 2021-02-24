@@ -43,14 +43,7 @@ function redirectTo(url, successCallback){
   })
   .done(function(data) {
     $('#conteudo').html(data);
-    if(!$("#kt_subheader").length)
-    {
-      $('#conteudo').css("margin-top", "-55px");  
-    }
-    /*$('#conteudo').css("margin-top", "-55px");*/
 
-
-    
       if (typeof(successCallback) === "function") {
         successCallback();
       }
