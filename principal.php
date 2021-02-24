@@ -56,7 +56,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--incio do sidebar-->
 				<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto menu-overlay" id="kt_aside">
 					<!--begin::Brand-->
-					<div class="brand flex-column-auto ml-5 mt-10 " id="kt_brand" kt-hidden-height="65" style="">
+					<div class="brand flex-column-auto ml-7 mt-10 " id="kt_brand" kt-hidden-height="65" style="">
 						<!--begin::Logo-->
 						<a href="/metronic/demo1/index.html" class="brand-logo">
 							<img alt="Logo" src="assets/media/logo.png" class="logo-default max-h-25px"  />
