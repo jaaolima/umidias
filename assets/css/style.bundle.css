@@ -475,15 +475,15 @@ mark,
   /* Chumbo */
 
   color: #57616A !important;
-  }
-.dashboard-logo {
-  position: absolute;
-  width: 162px;
-  height: 60px;
-  left: 0px;
-  top: 132px;
-
 }
+.botao-menu {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  background: rgba(183, 33, 255, 0.04) !important;
+  border-radius: 16px !important;
+}
+
 
 .botao {
   border-radius: 13px;
