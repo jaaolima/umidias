@@ -462,6 +462,22 @@ mark,
   top: 63px;
 
 }
+
+.h1-titulo {
+  /* H1 */
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 60px;
+  /* identical to box height */
+
+
+  /* Preto 90% */
+
+  color: #333333;
+}
 .dashboard-logo {
   position: absolute;
   width: 162px;
