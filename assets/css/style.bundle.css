@@ -478,6 +478,22 @@ mark,
 
   color: #333333;
 }
+
+.titulo-div {
+  /* Paragráfo 1 */
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+
+  /* Chumbo */
+
+  color: #57616A;
+  }
 .dashboard-logo {
   position: absolute;
   width: 162px;
