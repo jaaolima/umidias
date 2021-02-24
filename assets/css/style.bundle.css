@@ -445,54 +445,36 @@ mark,
   font-size: 90%;
   color: #7E8299; }
 
-.sidebar {
-  position: absolute;
-  left: 0%;
-  right: 5.16%;
-  top: 0%;
-  bottom: 0%;
-
-  background: #FFFFFF;
-}
-.logo {
-  position: absolute;
-  width: 145px;
-  height: 28px;
-  left: 40px;
-  top: 63px;
-
-}
-
 .h1-titulo {
   /* H1 */
 
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 60px;
+  font-family: Poppins !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 40px !important;
+  line-height: 60px !important;
   /* identical to box height */
 
 
   /* Preto 90% */
 
-  color: #333333;
+  color: #333333 !important;
 }
 
 .titulo-div {
   /* Paragráfo 1 */
 
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 27px;
+  font-family: Poppins !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 18px !important;
+  line-height: 27px !important;
   /* identical to box height */
 
 
   /* Chumbo */
 
-  color: #57616A;
+  color: #57616A !important;
   }
 .dashboard-logo {
   position: absolute;
