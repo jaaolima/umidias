@@ -68,7 +68,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<!--begin::Body-->
 											<div class="card-body text-center pt-4">
 												<!--begin::User-->
-												<div class="mt-7">
+												<div class="">
 													<img src="assets/media/project-logos/3.png" alt="image" />
 												</div>
 												<!--end::User-->
