@@ -491,12 +491,35 @@ mark,
   color: #333333;
 
   }
-.botao-menu {
+.botao-menu-active {
   display: flex !important;
   flex-direction: row !important;
   align-items: flex-start !important;
   background: rgba(183, 33, 255, 0.04) !important;
   border-radius: 16px !important;
+}
+
+.botao-menu {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  border-radius: 16px !important;
+}
+
+.texto-menu-active{
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+color: #B721FF;
+
+}
+
+.texto-menu{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  color: #57616A;
 }
 
 

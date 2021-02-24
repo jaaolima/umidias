@@ -85,7 +85,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div id="kt_aside_menu" class="aside-menu my-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 825px; overflow: hidden;">
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav nav-pills">
-								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true">
+								<li class="menu-item my-4 botao-menu-active mr-20 btn ml-5" aria-haspopup="true">
 									<a href="principal.php" class="btn rounded ml-2 text-left">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
@@ -98,7 +98,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
+										<span class="menu-text texto-menu-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true">
@@ -114,7 +114,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
+										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true">
@@ -130,7 +130,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mídias alugadas</font></font></span>
+										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mídias alugadas</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true">
@@ -146,7 +146,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
+										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
 									</a>
 								</li>
 							</ul>
