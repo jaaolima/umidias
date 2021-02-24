@@ -489,6 +489,7 @@ mark,
   /* Preto 90% */
 
   color: #333333;
+
   }
 .botao-menu {
   display: flex !important;
@@ -2582,8 +2583,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #8950FC;
-  border-color: #8950FC;
+  background-color: #B721FF;
+  border-color: #B721FF;
   -webkit-box-shadow: none;
   box-shadow: none; }
   .btn-primary:hover {
