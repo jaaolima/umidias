@@ -63,8 +63,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						</a>
 						<!--end::Logo-->
 						<!--begin::Toggle-->
-						<button class="brand-toggle btn btn-md px-0 ml-25 menu-close" id="kt_aside_toggle">
-							<span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-02-01-052524/theme/html/demo8/dist/../src/media/svg/icons/Code/Left-circle.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+						<button class="brand-toggle btn btn-sm px-0 ml-25 menu-close" id="kt_aside_toggle">
+							<span class="svg-icon svg-icon-primary svg-icon-3x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-02-01-052524/theme/html/demo8/dist/../src/media/svg/icons/Code/Left-circle.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<rect x="0" y="0" width="24" height="24"/>
 									<circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
