@@ -99,13 +99,11 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item my-4 mr-20 btn ml-5" aria-haspopup="true">
-									<div href="/metronic/demo1/index.html" class="btn rounded ml-2 text-left">
-										<i class="fas fa-phone-alt texto-menu text-primary"></i>
-										<a href="" class="menu-text tExt-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fale conosco</font></font></a href="">
-									</div>
-								</li>
 							</ul>
+							<div href="/metronic/demo1/index.html" class="btn rounded ml-2 text-left">
+								<i class="fas fa-phone-alt texto-menu text-primary"></i>
+								<a href="" class="menu-text tExt-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fale conosco</font></font></a href="">
+							</div>
 						</div>
 					</div>
 					<!--end::Aside Menu-->
