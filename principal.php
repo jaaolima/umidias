@@ -81,10 +81,10 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div id="kt_aside_menu" class="aside-menu my-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 825px; overflow: hidden;">
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav nav-pills">
-								<li class="menu-item my-4 botao-menu-active mr-20 btn ml-5" aria-haspopup="true">
+								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" id="dashboard-botao" aria-haspopup="true">
 									<a href="principal.php" class="btn rounded ml-2 text-left">
 									<i class="fas fa-home"></i>
-										<span class="menu-text texto-menu-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
+										<span class="menu-text texto-menu" id="dashboard-texto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true">

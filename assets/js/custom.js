@@ -102,3 +102,17 @@ $(document).on('click', function(e) { //Hide menu when clicked outside menu area
 		$(overlay).css({"opacity":"0", "width":"0"});
 	}
 });
+
+$(document).ready(function(){
+  var get = document.URL;
+  if(get.match(/principal/i)){
+      $('.dashboard-botao').addClass('botao-menu-active');
+      $('.dashboard-texto').addClass('texto-menu-active');
+  }
+  if(get.match(/cargo/i)){
+      $('.aw-menu li:eq(1)').addClass('is-selected');
+  }
+  if(get.match(/setor/i)){
+      $('.aw-menu li:eq(2)').addClass('is-selected');
+  }
+});
