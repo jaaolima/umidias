@@ -100,10 +100,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 								</li>
 								<li class="menu-item my-4 mr-20 btn ml-5" aria-haspopup="true">
-									<a href="/metronic/demo1/index.html" class="btn rounded ml-2 text-left">
-									<i class="fas fa-phone-alt texto-menu"></i>
-										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fale conosco</font></font></span>
-									</a>
+									<div href="/metronic/demo1/index.html" class="btn rounded ml-2 text-left">
+										<i class="fas fa-phone-alt texto-menu"></i>
+										<a href="" class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fale conosco</font></font></a href="">
+									</div>
 								</li>
 							</ul>
 						</div>
