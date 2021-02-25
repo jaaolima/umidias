@@ -71,7 +71,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="card-body text-center" style="padding: 0px !important">
 												<!--begin::User-->
 												<div class="" >
-													<img class="img-fluid rounded-top"src="assets/media/project-logos/3.png" alt="image" />
+													<img class="img-midia rounded-top"src="assets/media/project-logos/3.png" alt="image" />
 												</div>
 												<!--end::User-->
 												<!--begin::Name-->
