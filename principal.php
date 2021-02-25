@@ -64,7 +64,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--end::Logo-->
 						<!--begin::Toggle-->
 						<button class="brand-toggle btn btn-sm px-0 ml-25 menu-close" id="kt_aside_toggle">
-							<i class="fas fa-chevron-circle-left text-primary icon-3x"></i>
+							<i class="fas fa-chevron-circle-left text-primary icon-2x"></i>
 						</button>
 						<!--end::Toolbar-->
 					</div>
