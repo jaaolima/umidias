@@ -42,7 +42,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--begin::Wrapper-->
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 						
-					<div class="d-flex flex-row flex-column-fluid container">
+					<div class="d-flex flex-row flex-column-fluid ">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
 							<div class="mb-8 ">
@@ -53,9 +53,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 										<div class="card-body d-flex">
 											<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
-												<div class="flex-grow-1" style="display: inherit;">
-													<h3 class="card-title titulo-div">Minhas mídias</h3>
-												</div>
 												<div class="row m-0 col-12" >											
 													<table class="table table-hover">
 														<thead>
@@ -91,10 +88,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 							</div>
+							<!--end::Content-->
 						</div>
 						<!--begin::Content Wrapper-->
 					</div>
-					<!--end::Container-->
 					
 				</div>
 				<!--end::Wrapper-->
