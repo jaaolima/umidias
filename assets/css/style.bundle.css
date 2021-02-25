@@ -497,7 +497,7 @@ mark,
   align-items: flex-start !important;
   background: rgba(183, 33, 255, 0.04) !important;
   border-radius: 16px !important;
-  color: #B721FF;
+  color: #B721FF !important;
 }
 
 .botao-menu {
