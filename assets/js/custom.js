@@ -103,8 +103,8 @@ $(document).on('click', function(e) { //Hide menu when clicked outside menu area
 	}
 });
 
-$('.dashboard-botao').click(function (e)
-{
-  $('.dashboard-botao').removeClass('botao-menu');
-  $(this).addClass('botao-menu-active');
-});
+$('.botao-menu').click(function (e)
+	{
+		$('.botao-menu').removeClass('botao-menu-active');
+		$(this).addClass('botao-menu-active');
+	});
