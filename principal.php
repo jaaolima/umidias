@@ -84,7 +84,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<li class="menu-item my-4 botao-menu-active mr-20 btn ml-5" aria-haspopup="true">
 									<a href="principal.php" class="btn rounded ml-2 text-left">
 										<i class="fas fa-home"></i>
-										<span class="menu-text texto-menu-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
+										<span class="menu-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true">
