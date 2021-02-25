@@ -81,8 +81,8 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="menu-text text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true">
-									<a href="appCliente/listar_tipo.php" class="btn rounded ml-2 text-left">
+								<li class="menu-item my-4  mr-20 btn ml-5" aria-haspopup="true">
+									<a href="appCliente/listar_tipo.php" class="btn rounded ml-2 text-left botao-menu">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
