@@ -515,6 +515,9 @@ font-weight: normal;
 color: #B721FF;
 
 }
+.botao-menu:hover {
+  background-color: #3F4254 !important;
+  text-decoration: none; }
 
 .texto-menu{
   font-family: Poppins;
