@@ -518,9 +518,9 @@ color: #B721FF;
 .botao-menu:hover {
   background-color: rgba(183, 33, 255, 0.04) !important;
   text-decoration: none; 
-  color:}
+}
 
-.botao-menu:hover > .texto-menu {
+.botao-menu:hover .texto-menu {
   color: #B721FF !important;
 }
 
