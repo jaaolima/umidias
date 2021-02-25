@@ -507,10 +507,9 @@ mark,
   border-radius: 16px !important;
 }
 
-.botao-menu:hover{
-  background: rgba(183, 33, 255, 0.04) !important;
-  color: #B721FF !important;
-}
+.botao-menu:hover {
+  color: #3F4254;
+  text-decoration: none; }
 
 .texto-menu-active{
 
