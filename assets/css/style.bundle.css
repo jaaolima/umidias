@@ -508,10 +508,6 @@ mark,
 }
 
 .texto-menu-active{
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
 color: #B721FF;
 
 }
@@ -525,9 +521,6 @@ color: #B721FF;
 }
 
 .texto-menu{
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
   color: #57616A;
 }
 
