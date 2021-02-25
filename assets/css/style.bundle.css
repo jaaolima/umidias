@@ -507,10 +507,6 @@ mark,
   border-radius: 16px !important;
 }
 
-.botao-menu:hover {
-  color: #3F4254;
-  text-decoration: none; }
-
 .texto-menu-active{
 
 font-family: Poppins;
