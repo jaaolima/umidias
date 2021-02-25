@@ -81,8 +81,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div id="kt_aside_menu" class="aside-menu my-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 825px; overflow: hidden;">
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav nav-pills">
-								<li class="menu-item my-4 botao-menu mr-20 btn ml-5"  aria-haspopup="true">
-									<a href="principal.php" id="dashboard-botao" class="btn rounded ml-2 text-left">
+								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" id="dashboard-botao" aria-haspopup="true">
+									<a href="principal.php" class="btn rounded ml-2 text-left">
 										<i class="fas fa-home"></i>
 										<span class="menu-text texto-menu" id="dashboard-texto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
 									</a>
@@ -303,7 +303,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<td>21/01/2021</td>
 																		<td>00,00 RS</td>
 																		<td>
-																			<span class = "svg-icon svg-icon-primary svg-icon-2x"> <! - begin :: Svg Icon | caminho: /var/www/preview.keenthemes.com/metronic/releases/2021-02-01-052524/theme/html/demo8/dist /../ src / media / svg / icons / Navigation / Arrow-right. svg -> <svg xmlns = "http://www.w3.org/2000/svg" xmlns: xlink = "http://www.w3.org/1999/xlink" width = "24px" height = " 24px "viewBox =" 0 0 24 24 "version =" 1.1 ">
+																			<span class = "svg-icon svg-icon-primary svg-icon-2x"> <!-- begin :: Svg Icon | caminho: /var/www/preview.keenthemes.com/metronic/releases/2021-02-01-052524/theme/html/demo8/dist /../ src / media / svg / icons / Navigation / Arrow-right. svg --> <svg xmlns = "http://www.w3.org/2000/svg" xmlns: xlink = "http://www.w3.org/1999/xlink" width = "24px" height = " 24px "viewBox =" 0 0 24 24 "version =" 1.1 ">
 																				<g stroke = "none" stroke-width = "1" fill = "none" fill-rule = "evenodd">
 																					<polygon points = "0 0 24 0 24 24 0 24" />
 																					<rect fill = "# 000000" opacity = "0.3" transform = "translate (12,000000, 12,000000) rotate (-90,000000) translate (-12,000000, -12,000000)" x = "11" y = "5" width = "2 "altura =" 14 "rx =" 1 "/>
