@@ -77,8 +77,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							<ul class="menu-nav nav-pills">
 								<li class="menu-item my-4 botao-menu botao-menu-active mr-20 btn ml-5"  aria-haspopup="true">
 									<a href="principal.php" class="btn rounded ml-2 text-left">
-										<i class="fas fa-home text-primary "></i>
-										<span class="menu-text text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
+										<i class="fas fa-home texto-menu "></i>
+										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4  mr-20 btn ml-5 botao-menu" aria-haspopup="true">
@@ -94,7 +94,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-text "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
+										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true">
@@ -115,7 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</li>
 								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true">
 									<a href="/metronic/demo1/index.html" class="btn rounded ml-2 text-left">
-										<i class="fas fa-dollar-sign"></i>
+										<i class="fas fa-dollar-sign texto-menu"></i>
 										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
 									</a>
 								</li>
