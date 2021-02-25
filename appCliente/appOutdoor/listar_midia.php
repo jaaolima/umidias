@@ -55,7 +55,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div id="map" class="rounded"></div>
 						</div>
 					</div>
-					<div class="d-flex flex-row flex-column-fluid container">
+					<div class="d-flex flex-row flex-column-fluid container" style="margin:0 !important;">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
 							<div class="content flex-column-fluid" id="kt_content">
