@@ -60,7 +60,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="main d-flex flex-column flex-row-fluid">
 							<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm pl-13">
 								<li class="breadcrumb-item text-muted">
-									<a href="appCliente/appOutdoor/ver_tipo.php" class="text-muted">Alugar mídia</a>
+									<a href="appCliente/appOutdoor/listar_tipo.php" class="text-muted">Alugar mídia</a>
 								</li>
 								<li class="breadcrumb-item text-muted">
 									<a class="text-muted">Encontrar mídia</a>
