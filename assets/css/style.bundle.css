@@ -523,6 +523,12 @@ color: #B721FF;
 .texto-menu{
   color: #57616A;
 }
+.texto-fraco{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  color: #57616A;
+}
 
 
 .botao {
