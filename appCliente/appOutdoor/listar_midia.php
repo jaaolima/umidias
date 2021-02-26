@@ -77,7 +77,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<!--begin::Name-->
 												<div class="my-4">
 													<p class="text-dark font-weight-bold text-dark font-size-h4">St.Central - Taguatinga, Brasilia - DF, 40297-400</p>
-													<p class="text-dark font-weight-bold text-dark font-size-h4">Nexa - Next generation SAAS</p>
+													<p class="text-dark font-weight-normal text-dark font-size-h6">Nexa - Next generation SAAS</p>
 												</div>
 												<!--end::Name-->
 												<!--begin::Label-->
