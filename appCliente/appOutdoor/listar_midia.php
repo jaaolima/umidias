@@ -80,14 +80,6 @@ License: You must have a valid license purchased only from themeforest(the above
 													<p class="text-dark font-weight-normal text-dark font-size-h6">Nexa - Next generation SAAS</p>
 												</div>
 												<!--end::Name-->
-												<!--begin::Label-->
-												<span class="btn btn-text btn-light-info btn-sm font-weight-bold">Active</span>
-												<!--end::Label-->
-												<!--begin::Buttons-->
-												<div class="mt-9">
-													<a href="#" class="btn btn-light-primary font-weight-bolder btn-sm py-3 px-6 text-uppercase">view project</a>
-												</div>
-												<!--end::Buttons-->
 											</div>
 											<!--end::Body-->
 										</div>
