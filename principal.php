@@ -119,7 +119,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
 									<!--begin::Header Menu-->
 									<div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
-										<a href="#" class="font-weight-bold" id="kt_dashboard_daterangepicker" data-toggle="tooltip" title="" data-placement="left" data-original-title="Select dashboard daterange">
+										<a href="#" class="font-weight-bold text-dark" id="kt_dashboard_daterangepicker" data-toggle="tooltip" title="" data-placement="left" data-original-title="Select dashboard daterange">
 											<span class="opacity-60 font-weight-bold mr-2" id="kt_dashboard_daterangepicker_title">Today</span>
 											<span class="font-weight-bold" id="kt_dashboard_daterangepicker_date">Aug 16</span>
 										</a>
