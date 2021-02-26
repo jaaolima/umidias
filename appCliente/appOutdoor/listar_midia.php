@@ -59,11 +59,11 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
 							<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm pl-13">
-								<li class="breadcrumb-item texto-fraco">
-									<a href="" class="texto-fraco">Alugar mídia</a>
+								<li class="breadcrumb-item text-muted">
+									<a href="" class="text-muted">Alugar mídia</a>
 								</li>
-								<li class="breadcrumb-item texto-fraco">
-									<a href="" class="texto-fraco">Encontrar mídia</a>
+								<li class="breadcrumb-item text-muted">
+									<a href="" class="text-muted">Encontrar mídia</a>
 								</li>
 							</ul>
 							<div class="content flex-column-fluid" id="kt_content">
