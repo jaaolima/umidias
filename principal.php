@@ -759,9 +759,9 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
 											<span class="text-dark font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
 											<span class="text-dark font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
-											<div class="symbol symbol-md symbol-circle bg-light-primary mr-3 flex-shrink-0">
-												<img src="/metronic/theme/html/demo8/dist/assets/media/users/300_21.jpg" alt="">
-											</div>
+											<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
+												<span class="symbol-label font-size-h5 font-weight-bold">S</span>
+											</span>
 											<a href="" class="ml-3">
 												<i class="fas fa-angle-down text-primary"></i>
 											</a>
