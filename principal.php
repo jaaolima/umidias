@@ -762,7 +762,9 @@ License: You must have a valid license purchased only from themeforest(the above
 											<span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
 												<span class="symbol-label font-size-h5 font-weight-bold">S</span>
 											</span>
-											<i class="fas fa-angle-down text-primary"></i>
+											<a href="" class="ml-2">
+												<i class="fas fa-angle-down text-primary"></i>
+											</a>
 										</div>
 									</div>
 								</div>
