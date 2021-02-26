@@ -58,6 +58,17 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-row flex-column-fluid container" style="margin:0 !important;">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
+							<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+								<li class="breadcrumb-item text-muted">
+									<a href="" class="text-muted">Features</a>
+								</li>
+								<li class="breadcrumb-item text-muted">
+									<a href="" class="text-muted">Icons</a>
+								</li>
+								<li class="breadcrumb-item text-muted">
+									<a href="" class="text-muted">Fontawesome 5</a>
+								</li>
+							</ul>
 							<div class="content flex-column-fluid" id="kt_content">
 								<div class="mb-8">
 									<h1 class="h1-titulo">Encontre seu outdoor</h1>
