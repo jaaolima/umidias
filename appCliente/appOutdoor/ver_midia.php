@@ -72,10 +72,26 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-8">
 										<div class="mb-8">
-											<h1 class="h1-titulo">St. Central - Taguatinga </h1>
+											<div class="my-10">
+												<h1 class="h1-titulo">St. Central - Taguatinga </h1>
+												<span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
+											</div>
+											<div class="my-10">
+												<p class="font-weight-bold">Descrição </p>
+												<span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
+											</div>
+											<div class="my-10">
+												<p class="font-weight-bold">Tamanho</p>
+												<span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
+											</div>
+											<div class="my-10">
+												<p class="font-weight-bold">Latitude e Longitude</p>
+												<span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
+											</div>
+											
 										</div>
 									</div>
-									<div class="col-4 align-items-center">
+									<div class="col-4">
 										<div class="card card-custom card-stretch gutter-b">
 
 										</div>
