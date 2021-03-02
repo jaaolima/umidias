@@ -64,7 +64,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--end::Logo-->
 						<!--begin::Toggle-->
 						<button class="brand-toggle btn btn-sm px-0 ml-25 menu-close" id="kt_aside_toggle">
-							<i class="fas fa-chevron-circle-left text-primary icon-2x"></i>
+							<img src="/assets/media/Ellipse3.svg" alt="">
 						</button>
 						<!--end::Toolbar-->
 					</div>
@@ -141,6 +141,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									
 								</div>
+								
 							</div>
 							<div class="content flex-column-fluid" id="conteudo">
 								<div class="mb-8 ">
