@@ -65,6 +65,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Toggle-->
 						<button class="brand-toggle btn btn-sm px-0 ml-25 menu-close" id="kt_aside_toggle">
 							<img src="/assets/media/Ellipse3.svg" alt="">
+							<img src="/assets/media/Vector.svg" alt="">
 						</button>
 						<!--end::Toolbar-->
 					</div>
