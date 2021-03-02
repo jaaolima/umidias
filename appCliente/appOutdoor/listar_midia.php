@@ -102,6 +102,14 @@ License: You must have a valid license purchased only from themeforest(the above
 													<span class="text-dark font-weight-bold text-dark font-size-h4">Alcance</span><br>
 													<span class=" texto-fraco font-size-h6">15.456 pessoas</span>
 												</div>
+												<div class="my-4">
+													<a href="appCliente/appOutdoor/ver_midia.php" class="text-primary">Detalhes</a>
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M12 5L19 12L12 19" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+
+												</div>
 												<!--end::Name-->
 											</div>
 											<!--end::Body-->
