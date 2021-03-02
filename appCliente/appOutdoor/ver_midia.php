@@ -134,7 +134,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</div>
 											</div>
 											<div class="separator separator-solid"></div>
-											<div class="my-6 mx-6">
+											<div class="my-6 mx-6 text-right">
 												<h3 class="font-weight-bolder">Total</h3>
 												<h2 class="font-weight-bolder">10.000,00</h2>
 											</div>
