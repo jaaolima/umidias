@@ -103,7 +103,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														</linearGradient>
 													</defs>
 												</svg>
-												<p class="font-weight-bold">Ponto quente</p>
+												<p class="font-weight-bolder">Ponto quente</p>
 												<span>Alcance de 12.456 pessoas por dia </span>
 											</div>
 											<div class="separator separator-solid"></div>
