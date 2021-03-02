@@ -99,7 +99,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<path d="M23 20.9999V18.9999C22.9993 18.1136 22.7044 17.2527 22.1614 16.5522C21.6184 15.8517 20.8581 15.3515 20 15.1299" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 														<path d="M16 3.12988C16.8604 3.35018 17.623 3.85058 18.1676 4.55219C18.7122 5.2538 19.0078 6.11671 19.0078 7.00488C19.0078 7.89305 18.7122 8.75596 18.1676 9.45757C17.623 10.1592 16.8604 10.6596 16 10.8799" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 													</svg>
-													<span class="text-dark font-weight-bold text-dark font-size-h4">Alcance</span>
+													<span class="text-dark font-weight-bold text-dark font-size-h4">Alcance</span><br>
 													<span class=" texto-fraco font-size-h6">15.456 pessoas</span>
 												</div>
 												<!--end::Name-->
