@@ -58,14 +58,11 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
-							<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm pl-13">
-								<li class="breadcrumb-item text-muted">
-									<a href="appCliente/appOutdoor/listar_midia.php" class="text-muted">Midias alugadas</a>
-								</li>
-								<li class="breadcrumb-item text-muted">
-									<a class="text-muted">Detalhes da midia</a>
-								</li>
-							</ul>
+							<a href="appCliente/appOutdoor/listar_midia.php" class="text-muted">Mídias alugadas</a>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M9 18L15 12L9 6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<a class="text-muted">Detalhes da mídia</a>
 							<div class="content flex-column-fluid pt-0" id="kt_content">
 								
 								<!--begin::Row-->
