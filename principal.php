@@ -368,10 +368,10 @@ License: You must have a valid license purchased only from themeforest(the above
 																			</svg>
 																		</a></td>
 																	</tr>
-																	<a href="appCliente/listar_minhas_midias.php" class="text-primary">Ver todas as mídias</a>
+																	
 																</tbody>
-																
 															</table>
+															<a href="appCliente/listar_minhas_midias.php" class="text-primary">Ver todas as mídias</a>
 														</div>
 													</div>
 												</div>
