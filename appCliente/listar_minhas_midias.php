@@ -70,7 +70,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<td>21/01/2021</td>
 																<td>21/01/2021</td>
 																<td>00,00 RS</td>
-																<td><a href="">
+																<td><a href="appCliente/appOutdoor/ver_midia.php">
 																	<span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-02-01-052524/theme/html/demo8/dist/../src/media/svg/icons/Navigation/Right-2.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 																		<polygon points="0 0 24 0 24 24 0 24"/>
