@@ -77,15 +77,15 @@ License: You must have a valid license purchased only from themeforest(the above
 												<span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
 											</div>
 											<div class="my-10">
-												<p class="texto-negrito">Descrição </p>
+												<span class="texto-negrito">Descrição </span>
 												<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quibusdam adipisci vitae provident quo deserunt ipsum quidem fugit mollitia, repudiandae delectus! Blanditiis animi sunt possimus officiis ipsam unde quo obcaecati?</span>
 											</div>
 											<div class="my-10">
-												<p class="texto-negrito">Tamanho</p>
+												<span class="texto-negrito">Tamanho</span>
 												<span>6,50 x 10,2</span>
 											</div>
 											<div class="my-10">
-												<p class="texto-negrito">Latitude e Longitude</p>
+												<span class="texto-negrito">Latitude e Longitude</span>
 												<span>00000000000 000000000</span>
 											</div>
 											
