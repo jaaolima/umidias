@@ -86,7 +86,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</li>
 								<li class="menu-item my-4  mr-20 btn ml-5 botao-menu" aria-haspopup="true">
 									<a href="appCliente/listar_tipo.php" class="btn rounded ml-2 text-left ">
-										<i class="fas fa-book texto-menu"></i>
+										<img src="/assets/media/Home-filled.svg" alt="">
 										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
 									</a>
 								</li>
