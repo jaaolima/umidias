@@ -162,6 +162,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</form>
 							<!--end::Form-->
 						</div>
+
 						<!--end::Signup-->
 						<!--begin::Forgot-->
 						<div class="login-form login-forgot">
@@ -181,6 +182,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</form>
 							<!--end::Form-->
 						</div>
+						
 						<!--end::Forgot-->
 					</div>
 					<!--end::Content body-->
