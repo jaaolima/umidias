@@ -74,7 +74,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--begin::Row-->
 								<div class="row">
 									<!--begin::Column-->
-									<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+									<div class="col-4">
 										<div class="card card-custom card-stretch gutter-b">
 											<!--begin::Body-->
 											<div class="card-body text-center" style="padding: 0px !important">
