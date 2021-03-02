@@ -107,6 +107,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												<span>Alcance de 12.456 pessoas por dia </span>
 											</div>
 											<div class="separator separator-solid"></div>
+											<div class="my-6 mx-6">
+												<h3>Aluguel</h3>
+											</div>
 										</div>
 									</div>
 
