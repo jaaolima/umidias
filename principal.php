@@ -157,7 +157,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												<span class="symbol-label font-size-h5 font-weight-bold">S</span>
 											</span>
 											<a href="appCliente/perfil.php" class="ml-3">
-												<i class="fas fa-angle-down text-primary"></i>
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M6 9L12 15L18 9" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
 											</a>
 										</div>
 									</div>
