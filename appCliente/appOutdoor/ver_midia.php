@@ -49,7 +49,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="d-flex flex-row flex-column-fluid page">
 				
 				<!--begin::Wrapper-->
-				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+				<div class="d-flex flex-column flex-row-fluid wrapper " id="kt_wrapper">
 					<div class="form-group row"> 
 						<div class="form-group col-md-12">
 							<div id="map" class="rounded"></div>
@@ -66,7 +66,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<a class="text-muted">Detalhes da midia</a>
 								</li>
 							</ul>
-							<div class="content flex-column-fluid" id="kt_content">
+							<div class="content flex-column-fluid mt-0" id="kt_content">
 								
 								<!--begin::Row-->
 								<div class="row">
@@ -78,15 +78,15 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<div class="my-10">
 												<p class="font-weight-bold">Descrição </p>
-												<span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
+												<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quibusdam adipisci vitae provident quo deserunt ipsum quidem fugit mollitia, repudiandae delectus! Blanditiis animi sunt possimus officiis ipsam unde quo obcaecati?</span>
 											</div>
 											<div class="my-10">
 												<p class="font-weight-bold">Tamanho</p>
-												<span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
+												<span>6,50 x 10,2</span>
 											</div>
 											<div class="my-10">
 												<p class="font-weight-bold">Latitude e Longitude</p>
-												<span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
+												<span>00000000000 000000000</span>
 											</div>
 											
 										</div>
