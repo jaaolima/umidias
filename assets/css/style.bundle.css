@@ -546,10 +546,10 @@ color: #B721FF;
   margin-bottom: -3px !important;
 }
 .texto-negrito{
-  color: #333333;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
+  color: #333333 !important;
+  font-family: Poppins !important;
+  font-style: normal !important;
+  font-weight: bold !important;
 }
 
 .backgroud-image {
