@@ -545,6 +545,12 @@ color: #B721FF;
   color: #de86dd !important;
   margin-bottom: -3px !important;
 }
+.texto-negrito{
+  color: #333333;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+}
 
 .backgroud-image {
   background-image: -moz-linear-gradient( 45deg, rgb(220,129,223) 0%, rgb(232,161,212) 41%, rgb(244,192,201) 100%);
