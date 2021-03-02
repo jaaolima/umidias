@@ -108,7 +108,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<div class="separator separator-solid"></div>
 											<div class="my-6 mx-6">
-												<h3>Aluguel</h3>
+												<h3 class="font-weight-bolder">Aluguel</h3>
 												<span>O periodo minimo de locação é 15 dias</span>
 											</div>
 											<div class="separator separator-solid"></div>
@@ -132,7 +132,11 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="text-right">
 													<span class="font-weight-bolder text-right">5.000,00</span>
 												</div>
-												
+											</div>
+											<div class="separator separator-solid"></div>
+											<div class="my-6 mx-6">
+												<h3 class="font-weight-bolder">Total</h3>
+												<h2 class="font-weight-bolder">10.000,00</h2>
 											</div>
 										</div>
 									</div>
