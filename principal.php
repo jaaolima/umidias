@@ -369,6 +369,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</a></td>
 																	</tr>
 																</tbody>
+																<a href="appCliente/listar_minhas_midias.php" class="text-primary">Ver todas as mídias</a>
 															</table>
 														</div>
 													</div>
