@@ -85,7 +85,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<!--end::User-->
 												<!--begin::Name-->
 												<div class="my-4 mx-15">
-													<p class="text-dark font-weight-bold text-dark font-size-h4">St.Central - Taguatinga, Brasilia - DF, 40297-400</p>
+													<a href="appCliente/appOutdoor/ver_midia.php"class="text-dark font-weight-bold text-dark font-size-h4">St.Central - Taguatinga, Brasilia - DF, 40297-400</a>
 													<p class="text-dark font-weight-normal text-dark font-size-h6">Nexa - Next generation SAAS</p>
 												</div>
 												<!--end::Name-->
