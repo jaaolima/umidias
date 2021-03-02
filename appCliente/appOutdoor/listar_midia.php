@@ -55,7 +55,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div id="map" class="rounded"></div>
 						</div>
 					</div>
-					<div class="d-flex flex-row flex-column-fluid container" style="margin:0 !important;">
+					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
 							<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm pl-13">
