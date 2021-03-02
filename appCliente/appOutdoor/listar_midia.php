@@ -85,6 +85,10 @@ License: You must have a valid license purchased only from themeforest(the above
 												<!--end::User-->
 												<!--begin::Name-->
 												<div class="my-4 mx-15">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M19.7273 10.3636C19.7273 16.0909 12.3636 21 12.3636 21C12.3636 21 5 16.0909 5 10.3636C5 8.41068 5.77581 6.53771 7.15676 5.15676C8.53771 3.77581 10.4107 3 12.3636 3C14.3166 3 16.1896 3.77581 17.5705 5.15676C18.9515 6.53771 19.7273 8.41068 19.7273 10.3636Z" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M12.3636 12.8183C13.7192 12.8183 14.8181 11.7193 14.8181 10.3637C14.8181 9.00812 13.7192 7.90918 12.3636 7.90918C11.008 7.90918 9.90906 9.00812 9.90906 10.3637C9.90906 11.7193 11.008 12.8183 12.3636 12.8183Z" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
 													<a href="appCliente/appOutdoor/ver_midia.php"class="text-dark font-weight-bold text-dark font-size-h4">St.Central - Taguatinga, Brasilia - DF, 40297-400</a>
 													<p class="text-dark font-weight-normal text-dark font-size-h6">Nexa - Next generation SAAS</p>
 												</div>
@@ -96,45 +100,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!--end::Column-->
 								</div>
 								<!--end::Row-->
-								
-								<!--begin::Row-->
-								
-								<!--begin::Pagination-->
-								<div class="d-flex justify-content-between align-items-center flex-wrap">
-									<div class="d-flex flex-wrap mr-3">
-										<a href="#" class="btn btn-icon btn-sm btn-light-primary mr-2 my-1">
-											<i class="ki ki-bold-double-arrow-back icon-xs"></i>
-										</a>
-										<a href="#" class="btn btn-icon btn-sm btn-light-primary mr-2 my-1">
-											<i class="ki ki-bold-arrow-back icon-xs"></i>
-										</a>
-										<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">...</a>
-										<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">23</a>
-										<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary active mr-2 my-1">24</a>
-										<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">25</a>
-										<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">26</a>
-										<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">27</a>
-										<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">28</a>
-										<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">...</a>
-										<a href="#" class="btn btn-icon btn-sm btn-light-primary mr-2 my-1">
-											<i class="ki ki-bold-arrow-next icon-xs"></i>
-										</a>
-										<a href="#" class="btn btn-icon btn-sm btn-light-primary mr-2 my-1">
-											<i class="ki ki-bold-double-arrow-next icon-xs"></i>
-										</a>
-									</div>
-									<div class="d-flex align-items-center">
-										<select class="form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-primary" style="width: 75px;">
-											<option value="10">10</option>
-											<option value="20">20</option>
-											<option value="30">30</option>
-											<option value="50">50</option>
-											<option value="100">100</option>
-										</select>
-										<span class="text-muted">Displaying 10 of 230 records</span>
-									</div>
-								</div>
-								<!--end::Pagination-->
 							</div>
 							<!--end::Content-->
 						</div>
