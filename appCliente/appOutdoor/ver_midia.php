@@ -110,13 +110,13 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="my-6 mx-6">
 												<h3>Aluguel</h3>
 												<span>O periodo minimo de locação é 15 dias</span>
-												<input type="text">20/10/21
+												<input type="text" value='20/10/21
 													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M18.4 4.7998H5.8C4.80589 4.7998 4 5.60569 4 6.5998V19.1998C4 20.1939 4.80589 20.9998 5.8 20.9998H18.4C19.3941 20.9998 20.2 20.1939 20.2 19.1998V6.5998C20.2 5.60569 19.3941 4.7998 18.4 4.7998Z" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 														<path d="M15.7002 3V6.6" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 														<path d="M8.5 3V6.6" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 														<path d="M4 10.2002H20.2" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-													</svg>
+													</svg>'>
 												</input>
 												<input type="text">22/10/21</input>
 											</div>
