@@ -75,9 +75,9 @@ License: You must have a valid license purchased only from themeforest(the above
 											<h1 class="h1-titulo">St. Central - Taguatinga </h1>
 										</div>
 									</div>
-									<div class="col-4">
+									<div class="col-4 align-items-center">
 										<div class="card card-custom card-stretch gutter-b">
-											
+
 										</div>
 									</div>
 

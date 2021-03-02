@@ -18433,7 +18433,7 @@ button.bg-white:focus {
   bottom: 0;
   left: 0;
   z-index: 1;
-  pointer-events: auto;
+  pointer-events: auto; 
   content: "";
   background-color: rgba(0, 0, 0, 0); }
 
