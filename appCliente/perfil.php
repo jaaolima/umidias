@@ -60,8 +60,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <span class="symbol-label font-size-h5 font-weight-bold">S</span>
                                                 </span>
                                             </div>
-                                            <div class="my-3">
-                                                <span>Nome do usuário</span>
+                                            <div class="my-3 d-flex">
+                                                <div>
+                                                    <span>Nome do usuário</span>
+                                                </div>                                                
                                                 <div class="float-center">
                                                     <span class="float-center">Maria Figueiredo Portugal</span>
                                                 </div>
