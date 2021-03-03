@@ -119,7 +119,9 @@ License: You must have a valid license purchased only from themeforest(the above
 														<path d="M12.3636 12.8183C13.7192 12.8183 14.8181 11.7193 14.8181 10.3637C14.8181 9.00812 13.7192 7.90918 12.3636 7.90918C11.008 7.90918 9.90906 9.00812 9.90906 10.3637C9.90906 11.7193 11.008 12.8183 12.3636 12.8183Z" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 													</svg>
 													<a href="appCliente/appOutdoor/ver_midia.php"class="text-dark font-weight-bold text-dark font-size-h4">St.Central - Taguatinga, Brasilia - DF, 40297-400</a>
-													<p class="texto-fraco font-size-h6">Nexa - Next generation SAAS</p>
+													<div class="my-3">
+														<p class="texto-chumbo font-size-h6">Nexa - Next generation SAAS</p>
+													</div>													
 												</div>
 												<div class="my-8 mx-15 text-left">
 													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
