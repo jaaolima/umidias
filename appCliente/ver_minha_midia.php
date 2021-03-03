@@ -87,7 +87,21 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class="my-12">
                                                 <h3 class="texto-negrito">Latitude e Longitude</h3>
                                                 <span>00000000000 000000000</span>
-                                            </div>											
+                                            </div>
+                                            <div class="my-12">
+                                                <h3 class="texto-negrito">Alugada por 24 dias</h3>
+                                                
+                                            </div>	
+                                            <div class="my-12">
+                                                <h3 class="texto-negrito">Contrato</h3>
+                                                <span>Valor: 10.000,00</span>
+                                                <span>Forma de pagamento: 10.000,00 em 2x</span>
+                                                <a class="text-primary">Baixar segunda via da nota fiscal</a>
+                                            </div>	
+                                            <div class="my-12">
+                                                <h3 class="texto-negrito">Arte</h3>
+                                                <a class="text-primary">Visualizar arte da mídia</a>
+                                            </div>												
 										</div>
 									</div>
                                     <div class="col-4">
