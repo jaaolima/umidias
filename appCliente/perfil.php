@@ -96,6 +96,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 </div>
                                             </div>
                                             <div class="separator separator-solid"></div>
+                                            <div>
+                                                <button class="btn btn-outline-primary">Editar perfil</button>
+                                            </div>
                                             
                                         </div>
                                     </div>
