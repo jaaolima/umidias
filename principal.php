@@ -145,7 +145,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<path d="M8 2V6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 												<path d="M3 10H21" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
-											<p>04 de outubro de 2021</p>
+											<p class="mb-0">04 de outubro de 2021</p>
 										</div>
 									</div>
 									<!--end::Header Menu-->
