@@ -551,6 +551,12 @@ color: #B721FF;
   font-style: normal !important;
   font-weight: bold !important;
 }
+.texto-chumbo{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  color: #57616A;
+}
 .box-shadow{
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.08) !important;
 }

@@ -62,10 +62,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                             <div class="my-3 d-flex">
                                                 <div class="col-6">
-                                                    <span>Nome do usuário</span>
+                                                    <span class="texto-chumbo">Nome do usuário</span>
                                                 </div>                                                
                                                 <div class="col-6">
-                                                    <span>Maria Figueiredo Portugal</span>
+                                                    <span class="texto-negrito">Maria Figueiredo Portugal</span>
                                                 </div>
                                             </div>
                                             <div class="separator separator-solid"></div>
