@@ -351,7 +351,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<tr>
 																		<td>
 																			<div class="d-flex">
-																				<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
+																				<span class="symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success">
 																					<span class="symbol-label font-size-h5 font-weight-bold">P</span>
 																				</span>
 																				<div class="ml-2">
