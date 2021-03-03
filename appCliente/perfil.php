@@ -52,15 +52,15 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="col-xl-12">
                                     <div class="card card-custom card-stretch">
                                         <div class="p-10">
-                                            <div class="mb-6">
+                                            <div class="my-3">
                                                 <h4 class="font-weight-bolder">Perfil</h4>
                                             </div>
-                                            <div>
+                                            <div class="my-3">
                                                 <span class="symbol symbol-circle symbol-80 symbol-light-success">
                                                     <span class="symbol-label font-size-h5 font-weight-bold">S</span>
                                                 </span>
                                             </div>
-                                            <div>
+                                            <div class="my-3">
                                                 <span>Nome do usuário</span>
                                                 <span class="float-center">Maria Figueiredo Portugal</span>
                                             </div>
