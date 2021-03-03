@@ -106,7 +106,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</svg>
 												</div>
 												<div>
-													<p class="font-weight-bolder" style="margin-bottom: -13px;">Ponto quente</p>
+													<p class="font-weight-bolder" style="margin-bottom: -3px;">Ponto quente</p>
 													<span>Alcance de 12.456 pessoas por dia </span>
 												</div>
 											</div>
