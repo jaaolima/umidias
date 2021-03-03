@@ -373,8 +373,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																	
 																</tbody>
 															</table>
-															<div class="float-right">
-																<a href="appCliente/listar_minhas_midias.php" class="text-primary">Ver todas as mídias</a>
+															<div class="w-100">
+																<a href="appCliente/listar_minhas_midias.php" class="text-primary float-right">Ver todas as mídias</a>
 															</div>															
 														</div>
 													</div>
