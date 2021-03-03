@@ -62,7 +62,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                             <div class="my-3">
                                                 <span>Nome do usuário</span>
-                                                <span class="float-center">Maria Figueiredo Portugal</span>
+                                                <div class="float-center">
+                                                    <span class="float-center">Maria Figueiredo Portugal</span>
+                                                </div>
                                             </div>
                                             <div class="separator separator-solid"></div>
                                         </div>
