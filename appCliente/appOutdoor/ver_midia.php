@@ -91,7 +91,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<div class="col-4 pl-20">
+									<div class="col-4 pl-20 border-shadow">
 										<div class="card card-custom card-stretch gutter-b">
 											<div class="my-6 mx-6 d-flex">	
 												<div>

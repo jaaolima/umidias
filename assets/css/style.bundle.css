@@ -551,6 +551,9 @@ color: #B721FF;
   font-style: normal !important;
   font-weight: bold !important;
 }
+.border-shadow{
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.08);
+}
 
 .backgroud-image {
   background-image: -moz-linear-gradient( 45deg, rgb(220,129,223) 0%, rgb(232,161,212) 41%, rgb(244,192,201) 100%);
