@@ -124,7 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														</div>	
 													</div>																								
 													<div class="my-6">
-														<p class="texto-chumbo font-size-h6">Nexa - Next generation SAAS</p>
+														<p class="texto-chumbo font-size-h6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem perferendis dolore culpa vitae neque sapiente maxime, consectetur at alias atque quibusdam commodi officia est officiis earum animi vero suscipit pariatur!</p>
 													</div>													
 												</div>
 												<div class="my-8 mx-15 text-left">
