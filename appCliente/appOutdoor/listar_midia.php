@@ -80,7 +80,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="card-body text-center" style="padding: 0px !important">
 												<!--begin::User-->
 												<div class="" >
-													<img class=" rounded-top img-fluid" src="assets/media/outdoor.jpg" alt="image" />
+													<img class="img-fluid" src="assets/media/outdoor.jpg" alt="image" />
 													<div>
 														<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<g filter="url(#filter0_d)">
