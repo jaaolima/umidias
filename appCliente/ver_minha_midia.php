@@ -71,52 +71,50 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--begin::Row-->
 								<div class="row">
 									<div class="col-8">
-										<div class="mb-8">
-                                            <div class="my-12">
-                                                <h1 class="h1-titulo">St. Central - Taguatinga </h1>
-                                                <span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
-                                            </div>
-                                            <div class="my-12">
-                                                <h3 class="texto-negrito">Descrição </h3>
-                                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quibusdam adipisci vitae provident quo deserunt ipsum quidem fugit mollitia, repudiandae delectus! Blanditiis animi sunt possimus officiis ipsam unde quo obcaecati?</span>
-                                            </div>
-                                            <div class="my-12">
-                                                <h3 class="texto-negrito">Tamanho</h3>
-                                                <span>6,50 x 12,2</span>
-                                            </div>
-                                            <div class="my-12">
-                                                <h3 class="texto-negrito">Latitude e Longitude</h3>
-                                                <span>00000000000 000000000</span>
-                                            </div>
-                                            <div class="my-12">
-                                                <h3 class="texto-negrito">Alugada por 24 dias</h3>
-                                                
-                                            </div>	
-                                            <div class="my-12">
-                                                <h3 class="texto-negrito">Contrato</h3>
-                                                <span>Valor: 10.000,00</span><br>
-                                                <span>Forma de pagamento: 10.000,00 em 2x</span><br>
-                                                <a class="text-primary mt-4">Baixar segunda via da nota fiscal</a>
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M7 10L12 15L17 10" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M12 15V3" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
+                                        <div class="my-12">
+                                            <h1 class="h1-titulo">St. Central - Taguatinga </h1>
+                                            <span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
+                                        </div>
+                                        <div class="my-12">
+                                            <h3 class="texto-negrito">Descrição </h3>
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quibusdam adipisci vitae provident quo deserunt ipsum quidem fugit mollitia, repudiandae delectus! Blanditiis animi sunt possimus officiis ipsam unde quo obcaecati?</span>
+                                        </div>
+                                        <div class="my-12">
+                                            <h3 class="texto-negrito">Tamanho</h3>
+                                            <span>6,50 x 12,2</span>
+                                        </div>
+                                        <div class="my-12">
+                                            <h3 class="texto-negrito">Latitude e Longitude</h3>
+                                            <span>00000000000 000000000</span>
+                                        </div>
+                                        <div class="my-12">
+                                            <h3 class="texto-negrito">Alugada por 24 dias</h3>
+                                            
+                                        </div>	
+                                        <div class="my-12">
+                                            <h3 class="texto-negrito">Contrato</h3>
+                                            <span>Valor: 10.000,00</span><br>
+                                            <span>Forma de pagamento: 10.000,00 em 2x</span><br>
+                                            <a class="text-primary mt-4">Baixar segunda via da nota fiscal</a>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M7 10L12 15L17 10" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12 15V3" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
 
-                                            </div>	
-                                            <div class="my-12">
-                                                <h3 class="texto-negrito">Arte</h3>
-                                                <a class="text-primary">Visualizar arte da mídia</a>
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M7 10L12 15L17 10" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M12 15V3" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </div>												
-										</div>
+                                        </div>	
+                                        <div class="my-12">
+                                            <h3 class="texto-negrito">Arte</h3>
+                                            <a class="text-primary">Visualizar arte da mídia</a>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M7 10L12 15L17 10" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12 15V3" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>												
 									</div>
                                     <div class="col-4">
-                                        <button class="align-items-end btn btn-primary">Exportar relatório</button>
+                                        <button class="align-items-end btn btn-primary float-right">Exportar relatório</button>
                                     </div>
 
 								</div>
