@@ -51,8 +51,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="row">
 								<div class="col-xl-12">
                                     <div class="card card-custom card-stretch">
-                                        <div>
-                                            <p class="font-weight-bold">Perfil</p>
+                                        <div class="p-10">
+                                            <div>
+                                                <p class="font-weight-bold">Perfil</p>
+                                            </div>
                                         </div>
                                     </div>
 								</div>
