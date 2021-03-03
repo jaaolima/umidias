@@ -92,7 +92,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 									<div class="col-4 pl-20 ">
-										<div class="card card-custom card-stretch gutter-b border-shadow">
+										<div class="card card-custom card-stretch gutter-b box-shadow">
 											<div class="my-6 mx-6 d-flex">	
 												<div>
 													<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
