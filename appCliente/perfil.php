@@ -53,7 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="card card-custom card-stretch">
                                         <div class="p-10">
                                             <div>
-                                                <h3 class="font-weight-bold">Perfil</h3>
+                                                <h4 class="font-weight-bolder">Perfil</h4>
                                             </div>
                                         </div>
                                     </div>
