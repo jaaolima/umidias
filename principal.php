@@ -151,7 +151,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="topbar">
 									<div class="topbar-item">
 										<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
-											<div class="text-end">
+											<div class="text-right">
 												<span class="text-dark font-weight-bolder font-size-base d-none d-md-inline mr-3">Olá, Sean</span><br>
 												<span class="text-dark font-weight-bold font-size-base d-flex d-md-inline mr-1">Maria@email.com</span>
 											</div>
