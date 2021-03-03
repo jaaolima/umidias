@@ -366,7 +366,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<rect width="16" height="16" fill="white"/>
 																						</clipPath>
 																						</defs>
-																					</svg>Universo Painéis	
+																					</svg>
+																					<span>Taguatinga Centro</span>	
 																				</div>
 																			</div>
 																		</td>
