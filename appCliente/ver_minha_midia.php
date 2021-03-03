@@ -114,7 +114,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>												
 									</div>
                                     <div class="col-4">
-                                        <button class="align-items-end btn btn-primary float-right">Exportar relatório</button>
+                                        <div class="mt-12">
+                                            <button class="align-items-end btn btn-primary float-right">Exportar relatório</button>
+                                        </div>                                       
                                     </div>
 
 								</div>
