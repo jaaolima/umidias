@@ -350,12 +350,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																<tbody>
 																	<tr>
 																		<td>
-																			<div>
+																			<div class="d-flex">
 																				<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
 																					<span class="symbol-label font-size-h5 font-weight-bold">P</span>
 																				</span>
 																				<div>
-																					<span class="texto-negrito"></span>																				
+																					<span class="texto-negrito">Outdoor</span>																				
 																					<svg class="mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																						<g clip-path="url(#clip0)">
 																						<path d="M14 6.66675C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66675C2 5.07545 2.63214 3.54933 3.75736 2.42411C4.88258 1.29889 6.4087 0.666748 8 0.666748C9.5913 0.666748 11.1174 1.29889 12.2426 2.42411C13.3679 3.54933 14 5.07545 14 6.66675Z" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
