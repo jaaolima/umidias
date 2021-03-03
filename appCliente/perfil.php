@@ -69,6 +69,34 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 </div>
                                             </div>
                                             <div class="separator separator-solid"></div>
+                                            <div class="my-3 d-flex">
+                                                <div class="col-6">
+                                                    <span class="texto-chumbo">Email</span>
+                                                </div>                                                
+                                                <div class="col-6">
+                                                    <span class="texto-negrito">Maria@email.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="separator separator-solid"></div>
+                                            <div class="my-3 d-flex">
+                                                <div class="col-6">
+                                                    <span class="texto-chumbo">CPF</span>
+                                                </div>                                                
+                                                <div class="col-6">
+                                                    <span class="texto-negrito">00000000000</span>
+                                                </div>
+                                            </div>
+                                            <div class="separator separator-solid"></div>
+                                            <div class="my-3 d-flex">
+                                                <div class="col-6">
+                                                    <span class="texto-chumbo">Senha</span>
+                                                </div>                                                
+                                                <div class="col-6">
+                                                    <a href="" class="text-primary">Resetar senha</a>
+                                                </div>
+                                            </div>
+                                            <div class="separator separator-solid"></div>
+                                            
                                         </div>
                                     </div>
 								</div>
