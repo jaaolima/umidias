@@ -363,7 +363,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<td>21/01/2021</td>
 																		<td>21/01/2021</td>
 																		<td>00,00 RS</td>
-																		<td><a href="">
+																		<td><a href="appCliente/ver_minha_midia.php">
 																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 																				<path d="M5 12H19" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 																				<path d="M12 5L19 12L12 19" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
