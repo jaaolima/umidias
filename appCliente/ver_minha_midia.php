@@ -94,7 +94,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>	
                                             <div class="my-12">
                                                 <h3 class="texto-negrito">Contrato</h3>
-                                                <div>
+                                                <div class="d-grid">
                                                     <span>Valor: 10.000,00</span>
                                                     <span>Forma de pagamento: 10.000,00 em 2x</span>
                                                     <a class="text-primary">Baixar segunda via da nota fiscal</a>
