@@ -55,6 +55,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div>
                                                 <h4 class="font-weight-bolder">Perfil</h4>
                                             </div>
+                                            <div>
+                                                <span class="symbol symbol-circle symbol-80 symbol-light-success">
+                                                    <span class="symbol-label font-size-h5 font-weight-bold">S</span>
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
 								</div>
