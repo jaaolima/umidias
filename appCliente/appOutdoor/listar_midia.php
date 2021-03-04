@@ -141,11 +141,9 @@ License: You must have a valid license purchased only from themeforest(the above
 															</svg>
 														</div>
 														<div>
-															<span class="text-dark font-weight-bold text-dark font-size-h4">Alcance</span>
-														</div><br>
-														<div>
+															<span class="text-dark font-weight-bold text-dark font-size-h4">Alcance</span><br>
 															<span class=" texto-fraco font-size-h6">15.456 pessoas</span>
-														</div>														
+														</div>													
 													</div>
 													
 												</div>
