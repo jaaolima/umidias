@@ -72,7 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-8">
 										<div class="mb-8">
-											<div class="my-12">
+											<div class="mb-12">
 												<h1 class="h1-titulo">St. Central - Taguatinga </h1>
 												<span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
 											</div>
@@ -91,7 +91,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<div class="col-4 pl-30 ">
+									<div class="col-4">
 										<div class="card card-custom card-stretch gutter-b box-shadow">
 											<div class="my-6 mx-6 d-flex">	
 												<div>
@@ -129,14 +129,16 @@ License: You must have a valid license purchased only from themeforest(the above
 														<span class="font-weight-bolder text-right">5.000,00</span>
 													</div>
 												</div>												
-												<div>
-													<span>Valor bissemanal da mídia</span>
-													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-														<path d="M9.08984 9.00008C9.32495 8.33175 9.789 7.76819 10.3998 7.40921C11.0106 7.05024 11.7287 6.91902 12.427 7.03879C13.1253 7.15857 13.7587 7.52161 14.2149 8.06361C14.6712 8.60561 14.9209 9.2916 14.9198 10.0001C14.9198 12.0001 11.9198 13.0001 11.9198 13.0001" stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-														<path d="M12 17H12.01" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-													</svg>
-													<div class="text-right">
+												<div class="">
+													<div col-6>
+														<span>Valor bissemanal da mídia</span>
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+															<path d="M9.08984 9.00008C9.32495 8.33175 9.789 7.76819 10.3998 7.40921C11.0106 7.05024 11.7287 6.91902 12.427 7.03879C13.1253 7.15857 13.7587 7.52161 14.2149 8.06361C14.6712 8.60561 14.9209 9.2916 14.9198 10.0001C14.9198 12.0001 11.9198 13.0001 11.9198 13.0001" stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+															<path d="M12 17H12.01" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+														</svg>
+													</div>
+													<div class="text-right col-6">
 														<span class="font-weight-bolder text-right">5.000,00</span>
 													</div>
 												</div>
@@ -147,7 +149,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<h2 class="font-weight-bolder">10.000,00</h2>
 											</div>
 											<div class="my-6 mx-6">
-												<button class="btn btn-primary">Alugar Mídia</button>
+												<button class="btn btn-primary w-100">Alugar Mídia</button>
 											</div>
 										</div>
 									</div>

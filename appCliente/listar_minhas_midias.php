@@ -71,7 +71,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<span class="symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success">
 																			<span class="symbol-label font-size-h5 font-weight-bold">P</span>
 																		</span>
-																		<div class="ml-2 mt-2">
+																		<div class="ml-3 mt-2">
 																			<span class="texto-negrito">Outdoor</span><br>																				
 																			<svg class="mr-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																				<g clip-path="url(#clip0)">
