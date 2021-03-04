@@ -58,14 +58,13 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
-							<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm pl-13">
-								<li class="breadcrumb-item text-muted">
-									<a href="appCliente/listar_tipo.php" class="text-muted">Alugar mídia</a>
-								</li>
-								<li class="breadcrumb-item text-muted">
-									<a class="text-muted">Encontrar mídia</a>
-								</li>
-							</ul>
+							<div class="font-weight-bold p-0 my-2 font-size-sm pl-13">								
+								<a href="appCliente/listar_tipo.php" class="text-muted">Alugar mídia</a>
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9 18L15 12L9 6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<a class="text-muted">Encontrar mídia</a>
+							</div>
 							<div class="content flex-column-fluid" id="kt_content">
 								<div class="mb-8">
 									<h1 class="h1-titulo">Encontre seu outdoor</h1>
