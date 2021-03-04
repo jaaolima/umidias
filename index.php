@@ -41,7 +41,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Main-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Login-->
-			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
+			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login">
 				<!--begin::Aside-->
 				<div class="login-aside flex-row-auto bgi-size-cover bgi-no-repeat max-w-lg-950px " >
 					<div class="login-texto h-lg-100" >
@@ -100,9 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--end::Content header-->
 					<!--begin::Content body-->
 					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
-						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white "  >
 							<!--begin::Signin-->
-							<div class="login-form login-signin">
+							<div class="login-form login-signin m-8">
 								<!--begin::Form-->
 								<form class="form" novalidate="novalidate" id="kt_login_signin_form">
 									<div class="form-group" >
@@ -126,7 +126,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<!--end::Signin-->
 							<!--begin::Signup-->
-							<div class="login-form login-signup">
+							<div class="login-form login-signup m-8">
 								<div class="text-center mb-10 mb-lg-20">
 									<h3 class="font-size-h1">Inscreva-se</h3>
 									<p class="text-muted font-weight-bold">Insira seus dados para criar sua conta</p>
@@ -161,7 +161,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 							<!--end::Signup-->
 							<!--begin::Forgot-->
-							<div class="login-form login-forgot">
+							<div class="login-form login-forgot m-8">
 								<div class="text-center mb-10 mb-lg-20">
 									<h3 class="font-size-h1">Esqueceu a senha?</h3>
 									<p class="text-muted font-weight-bold">Insira seu e-mail para redefinir sua senha</p>
