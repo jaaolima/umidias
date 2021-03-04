@@ -116,8 +116,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									<form class="form" novalidate="novalidate" id="kt_login_signin_form">
 										<div class="form-group" >
 											<input class="form-control Rectangle_1 " type="text"  name="ds_usuario" id="ds_usuario" autocomplete="off" />
-										</div>
-										<div class="form-group">
 											<input class="form-control Rectangle_1" type="password"  name="ds_senha" id="ds_senha"  />
 										</div>
 										<div class="form-group d-flex flex-wrap justify-content-end align-items-center">
