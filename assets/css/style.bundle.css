@@ -578,14 +578,10 @@ color: #B721FF;
 
 Rectangle_1 {
   border-width: 0.88px;
+  border-radius: 3.5px;
   border-color: rgb(112, 112, 112);
   border-style: solid;
   position: absolute;
-  left: 1164px;
-  top: 473px;
-  width: 422px;
-  height: 59px;
-  z-index: 10;
 }
 .GRADIENTE_BARRA {
   background-image: -moz-linear-gradient( -180deg, rgb(220,129,223) 0%, rgb(232,161,212) 74%, rgb(244,192,201) 100%);
