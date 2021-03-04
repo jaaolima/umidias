@@ -35,7 +35,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<style>
 			#map {
 				width: 100%;
-				height: 300px;
+				height: 500px;
 			}
 			
 		</style>
