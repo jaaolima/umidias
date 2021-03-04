@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<!--begin::User-->
 												<div class="" >
 													<img class="img-fluid" src="assets/media/outdoor.jpg" alt="image" />
-													<div>
+													<div class="d-none d-md-block">
 														<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<g filter="url(#filter0_d)">
 																<circle cx="32" cy="28" r="28" fill="white"/>
