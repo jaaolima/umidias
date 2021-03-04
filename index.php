@@ -99,86 +99,90 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 					<!--end::Content header-->
 					<!--begin::Content body-->
-					<div class=" card card-custom bg-white d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
-						<!--begin::Signin-->
-						<div class="login-form login-signin">
-							<!--begin::Form-->
-							<form class="form" novalidate="novalidate" id="kt_login_signin_form">
-								<div class="form-group" >
-									<label class="font-weight-bold text-gray inline">Login: </label>
-									<input class="form-control Rectangle_1 " type="text"  name="ds_usuario" id="ds_usuario" autocomplete="off" />
-								</div>
-								<div class="form-group">
-									<label class="font-weight-bold text-gray">Senha: </label>
-									<input class="form-control Rectangle_1" type="password"  name="ds_senha" id="ds_senha"  />
-								</div>
-								<!--begin::Action-->
-								<div class="form-group d-flex flex-wrap justify-content-between align-items-center">	
-									<button type="button" id="entrar" class="botao font-weight-bold px-30 py-4 my- text-white" >ENTRAR</button>
-								</div>
-								<div class="form-group d-flex flex-wrap justify-content-between align-items-center">
-									<a href="javascript:;" class="text-dark-50 text-hover-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
-								</div>	
-								<!--end::Action-->
-							</form>
-							<!--end::Form-->
-						</div>
-						<!--end::Signin-->
-						<!--begin::Signup-->
-						<div class="login-form login-signup">
-							<div class="text-center mb-10 mb-lg-20">
-								<h3 class="font-size-h1">Inscreva-se</h3>
-								<p class="text-muted font-weight-bold">Insira seus dados para criar sua conta</p>
+					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
+						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+							<!--begin::Signin-->
+							<div class="login-form login-signin">
+								<!--begin::Form-->
+								<form class="form" novalidate="novalidate" id="kt_login_signin_form">
+									<div class="form-group" >
+										<label class="font-weight-bold text-gray inline">Login: </label>
+										<input class="form-control Rectangle_1 " type="text"  name="ds_usuario" id="ds_usuario" autocomplete="off" />
+									</div>
+									<div class="form-group">
+										<label class="font-weight-bold text-gray">Senha: </label>
+										<input class="form-control Rectangle_1" type="password"  name="ds_senha" id="ds_senha"  />
+									</div>
+									<!--begin::Action-->
+									<div class="form-group d-flex flex-wrap justify-content-between align-items-center">	
+										<button type="button" id="entrar" class="botao font-weight-bold px-30 py-4 my- text-white" >ENTRAR</button>
+									</div>
+									<div class="form-group d-flex flex-wrap justify-content-between align-items-center">
+										<a href="javascript:;" class="text-dark-50 text-hover-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
+									</div>	
+									<!--end::Action-->
+								</form>
+								<!--end::Form-->
 							</div>
-							<!--begin::Form-->
-							<form class="form" novalidate="novalidate" id="kt_login_signup_form">
-								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-5 px-6" type="text" placeholder="Seu nome" name="ds_nome" id="ds_nome" autocomplete="off" />
+							<!--end::Signin-->
+							<!--begin::Signup-->
+							<div class="login-form login-signup">
+								<div class="text-center mb-10 mb-lg-20">
+									<h3 class="font-size-h1">Inscreva-se</h3>
+									<p class="text-muted font-weight-bold">Insira seus dados para criar sua conta</p>
 								</div>
-								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Email" name="ds_email" id="ds_email" autocomplete="off" />
-								</div>
-								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Senha" name="nu_senha" id="nu_senha" autocomplete="off" />
-								</div>
-								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Confirme a senha" name="nu_senhaconfirmada" autocomplete="off" />
-								</div>
-								<div class="form-group">
-									<label class="checkbox mb-0">
-									<input type="checkbox" name="agree" />
-									<span></span>Eu concordo  
-									<a href="#">termos e Condições</a></label>
-								</div>
-								<div class="form-group d-flex flex-wrap flex-center">
-									<button type="button" id="kt_login_signup_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Enviar</button>
-									<button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancelar</button>
-								</div>
-							</form>
-							<!--end::Form-->
-						</div>
+								<!--begin::Form-->
+								<form class="form" novalidate="novalidate" id="kt_login_signup_form">
+									<div class="form-group">
+										<input class="form-control form-control-solid h-auto py-5 px-6" type="text" placeholder="Seu nome" name="ds_nome" id="ds_nome" autocomplete="off" />
+									</div>
+									<div class="form-group">
+										<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Email" name="ds_email" id="ds_email" autocomplete="off" />
+									</div>
+									<div class="form-group">
+										<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Senha" name="nu_senha" id="nu_senha" autocomplete="off" />
+									</div>
+									<div class="form-group">
+										<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Confirme a senha" name="nu_senhaconfirmada" autocomplete="off" />
+									</div>
+									<div class="form-group">
+										<label class="checkbox mb-0">
+										<input type="checkbox" name="agree" />
+										<span></span>Eu concordo  
+										<a href="#">termos e Condições</a></label>
+									</div>
+									<div class="form-group d-flex flex-wrap flex-center">
+										<button type="button" id="kt_login_signup_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Enviar</button>
+										<button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancelar</button>
+									</div>
+								</form>
+								<!--end::Form-->
+							</div>
 
-						<!--end::Signup-->
-						<!--begin::Forgot-->
-						<div class="login-form login-forgot">
-							<div class="text-center mb-10 mb-lg-20">
-								<h3 class="font-size-h1">Esqueceu a senha?</h3>
-								<p class="text-muted font-weight-bold">Insira seu e-mail para redefinir sua senha</p>
+							<!--end::Signup-->
+							<!--begin::Forgot-->
+							<div class="login-form login-forgot">
+								<div class="text-center mb-10 mb-lg-20">
+									<h3 class="font-size-h1">Esqueceu a senha?</h3>
+									<p class="text-muted font-weight-bold">Insira seu e-mail para redefinir sua senha</p>
+								</div>
+								<!--begin::Form-->
+								<form class="form_esqueci_senha" novalidate="novalidate" id="form_esqueci_senha">
+									<div class="form-group">
+										<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Email" name="ds_email_resetar" id="ds_email_resetar" autocomplete="off" />
+									</div>
+									<div class="form-group d-flex flex-wrap flex-center">
+										<button type="button" id="resetar" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">resetar</button>
+										<button type="button" id="cancelar" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancelar</button>
+									</div>
+								</form>
+								<!--end::Form-->
 							</div>
-							<!--begin::Form-->
-							<form class="form_esqueci_senha" novalidate="novalidate" id="form_esqueci_senha">
-								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Email" name="ds_email_resetar" id="ds_email_resetar" autocomplete="off" />
-								</div>
-								<div class="form-group d-flex flex-wrap flex-center">
-									<button type="button" id="resetar" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">resetar</button>
-									<button type="button" id="cancelar" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancelar</button>
-								</div>
-							</form>
-							<!--end::Form-->
+							
+							<!--end::Forgot-->
+
 						</div>
 						
-						<!--end::Forgot-->
 					</div>
 					<!--end::Content body-->
 					<!--begin::Content footer for mobile-->
