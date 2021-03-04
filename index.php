@@ -102,13 +102,15 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
 						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white "  >
 							<!--begin::Signin-->
-							<div class="d-flex login-form login-signin m-8">
+							<div class="login-form login-signin m-8">
 								<div>
-									<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4><br>
-								</div>
-								<div>
-									<span class="texto-chumbo">Insira seus dados abaixo para continuar</span><br>
-								</div>
+									<div>
+										<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4><br>
+									</div>
+									<div>
+										<span class="texto-chumbo">Insira seus dados abaixo para continuar</span><br>
+									</div>
+								</div>								
 								<!--begin::Form-->
 								<div>
 									<form class="form" novalidate="novalidate" id="kt_login_signin_form">
