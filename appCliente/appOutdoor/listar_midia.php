@@ -109,8 +109,8 @@ License: You must have a valid license purchased only from themeforest(the above
 															</defs>
 														</svg>
 													</div>
-													<div class="position-absolute texto-branco-bold" style="bottom: 13px; right: 27px;">
-														<span>Alugadas 345 vezes </span>
+													<div class="position-absolute " style="bottom: 13px; right: 27px;">
+														<span class="texto-branco-bold">Alugadas 345 vezes </span>
 													</div>
 												</div>
 												<!--end::User-->
