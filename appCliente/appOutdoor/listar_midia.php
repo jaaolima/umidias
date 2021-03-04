@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<!--begin::User-->
 												<div class="position-relative" >
 													<img class="img-fluid w-100 rounded-top" src="assets/media/outdoor.jpg" alt="image" />
-													<div class="position-absolute">
+													<div class="position-absolute" style="top: 16px; right: 16px;">
 														<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<g filter="url(#filter0_d)">
 																<circle cx="32" cy="28" r="28" fill="white"/>
@@ -109,7 +109,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															</defs>
 														</svg>
 													</div>
-													<div class="position-absolute">
+													<div class="position-absolute" style="bottom: 13px; right: 27px;">
 														<span>Alugadas 345 vezes </span>
 													</div>
 												</div>
