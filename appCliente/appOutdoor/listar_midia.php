@@ -115,7 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<!--end::User-->
 												<!--begin::Name-->
 												<div class="my-8 mx-15 text-left">
-													<div class="d-flex">
+													<div class="d-flex ml-n8">
 														<div>
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path d="M19.7273 10.3636C19.7273 16.0909 12.3636 21 12.3636 21C12.3636 21 5 16.0909 5 10.3636C5 8.41068 5.77581 6.53771 7.15676 5.15676C8.53771 3.77581 10.4107 3 12.3636 3C14.3166 3 16.1896 3.77581 17.5705 5.15676C18.9515 6.53771 19.7273 8.41068 19.7273 10.3636Z" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
