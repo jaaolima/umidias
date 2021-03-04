@@ -106,9 +106,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div>
 									<div>
 										<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
-									</div>
-									<div>
-										<span class="texto-chumbo">Insira seus dados abaixo para continuar</span><br>
+										<span class="texto-chumbo">Insira seus dados abaixo para continuar</span>
 									</div>
 								</div>								
 								<!--begin::Form-->
