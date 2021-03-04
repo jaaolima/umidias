@@ -103,6 +103,12 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white "  >
 							<!--begin::Signin-->
 							<div class="login-form login-signin m-8">
+								<div>
+									<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
+								</div>
+								<div>
+									<span class="texto-chumbo">Insira seus dados abaixo para continuar</span>
+								</div>
 								<!--begin::Form-->
 								<form class="form" novalidate="novalidate" id="kt_login_signin_form">
 									<div class="form-group" >
