@@ -105,7 +105,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class=" login-signin m-8">
 								<div>
 									<div>
-										<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4><br>
+										<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
 									</div>
 									<div>
 										<span class="texto-chumbo">Insira seus dados abaixo para continuar</span><br>
@@ -120,14 +120,12 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="form-group">
 											<input class="form-control Rectangle_1" type="password"  name="ds_senha" id="ds_senha"  />
 										</div>
-										<!--begin::Action-->
+										<div class="form-group d-flex flex-wrap justify-content-between align-items-end">
+											<a href="javascript:;" class="text-dark-50 text-hover-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
+										</div>	
 										<div class="form-group d-flex flex-wrap justify-content-between align-items-center">	
 											<button type="button" id="entrar" class="botao font-weight-bold px-30 py-4 my- text-white" >ENTRAR</button>
 										</div>
-										<div class="form-group d-flex flex-wrap justify-content-between align-items-center">
-											<a href="javascript:;" class="text-dark-50 text-hover-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
-										</div>	
-										<!--end::Action-->
 									</form>
 								</div>								
 							</div>
