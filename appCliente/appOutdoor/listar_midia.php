@@ -65,7 +65,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</svg>
 								<a class="texto-chumbo">Encontrar mídia</a>
 							</div>
-							<div class="content flex-column-fluid px-0" id="kt_content">
+							<div class="content flex-column-fluid" id="kt_content">
 								<div class="mb-8">
 									<h1 class="h1-titulo">Encontre seu outdoor</h1>
 									<p class="texto-fraco">6 resultados</p>

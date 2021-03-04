@@ -66,7 +66,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<a class="text-muted">Detalhes da midia</a>
 								</li>
 							</ul>
-							<div class="content flex-column-fluid pt-0 px-0" id="kt_content">
+							<div class="content flex-column-fluid pt-0" id="kt_content">
 								
 								<!--begin::Row-->
 								<div class="row">
