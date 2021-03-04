@@ -99,14 +99,9 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 					<!--end::Content header-->
 					<!--begin::Content body-->
-					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
+					<div class=" card card-custom bg-white d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
 						<!--begin::Signin-->
 						<div class="login-form login-signin">
-							<div class="text-center mb-10 mb-lg-20">
-								<a href="principal.php" class="flex-column-auto mt-5 pb-lg-0 pb-10">
-									<img alt="Logo" src="assets/media/logo.png" class="logo-default max-h-35px" />
-								</a>	
-							</div>
 							<!--begin::Form-->
 							<form class="form" novalidate="novalidate" id="kt_login_signin_form">
 								<div class="form-group" >
