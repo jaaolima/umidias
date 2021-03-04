@@ -121,7 +121,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input class="form-control Rectangle_1" type="password"  name="ds_senha" id="ds_senha"  />
 										</div>
 										<div class="form-group d-flex flex-wrap justify-content-end align-items-center">
-											<a href="javascript:;" class="text-dark-50 text-hover-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
+											<a href="javascript:;" class="text-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
 										</div>	
 										<div class="form-group d-flex flex-wrap justify-content-between align-items-center">	
 											<button type="button" id="entrar" class="botao font-weight-bold px-30 py-4 my- text-white" >ENTRAR</button>
