@@ -58,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
-							<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm pl-13">
+							<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
 								<li class="breadcrumb-item text-muted">
 									<a href="appCliente/appOutdoor/listar_midia.php" class="text-muted">Midias alugadas</a>
 								</li>
@@ -66,7 +66,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<a class="text-muted">Detalhes da midia</a>
 								</li>
 							</ul>
-							<div class="content flex-column-fluid pt-0" id="kt_content">
+							<div class="content flex-column-fluid pt-0 px-0" id="kt_content">
 								
 								<!--begin::Row-->
 								<div class="row">
