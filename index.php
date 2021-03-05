@@ -156,7 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="form-group">
 										<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Insira aqui seu e-mail" name="ds_email_resetar" id="ds_email_resetar" autocomplete="off" />
 									</div>
-									<div class="form-group d-flex flex-wrap flex-center">
+									<div class="form-group flex-wrap flex-center">
 										<button type="button" id="resetar" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">resetar senha</button><br>
 										<button type="button" id="cancelar" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Voltar</button>
 									</div>
