@@ -62573,7 +62573,7 @@ body {
     background-color: transparent;
     -webkit-transition: margin-top 0.3s ease;
     transition: margin-top 0.3s ease;
-    margin-top: -60px;
+    margin-top: -60px; 
     z-index: 2;
     opacity: 0; }
     .topbar-mobile-on .topbar {
