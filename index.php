@@ -147,7 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--end::Signup-->
 							<!--begin::Forgot-->
 							<div class=" login-forgot m-8">
-								<div class="text-left mb-10 ">
+								<div class="text-left mb-10 mt-4">
 									<h3 class="texto-preto">Esqueceu a senha?</h3>
 									<p class="texto-chumbo">Naõ se preocupe, nós vamos te ajudar a resetá-la</p>
 								</div>
@@ -161,7 +161,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<button type="button" id="resetar" class="btn btn-primary font-weight-bold px-22 py-4 my-3 mx-4">resetar senha</button><br>
 										</div>
 										<div class="mt-4">
-											<a id="cancelar" class="font-weight-bold text-primary">Voltar</a>
+											<a href="javascript:;" id="cancelar" class="font-weight-bold text-primary">Voltar</a>
 										</div>																			
 									</div>
 								</form>
