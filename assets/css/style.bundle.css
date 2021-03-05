@@ -54887,6 +54887,7 @@ code {
 .overlay {
   position: relative; }
   .overlay .overlay-layer {
+    border-radius: 50%;
     position: absolute;
     top: 0;
     bottom: 0;
