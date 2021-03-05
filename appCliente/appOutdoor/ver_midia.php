@@ -115,12 +115,16 @@ License: You must have a valid license purchased only from themeforest(the above
 												<span>O periodo minimo de locação é 15 dias</span>
 											</div>
 											<div class="d-flex my-6 mx-6">
-												<fieldset class="fieldset-border ml-4">
-													<legend class="legend-border">Data</legend>
-												</fieldset>
-												<fieldset class="fieldset-border">
-													<legend class="legend-border">Data</legend>
-												</fieldset>
+												<div class="col-6">
+													<fieldset class="fieldset-border ml-4">
+														<legend class="legend-border">Data</legend>
+													</fieldset>
+												</div>
+												<div class="col-6">
+													<fieldset class="fieldset-border">
+														<legend class="legend-border">Data</legend>
+													</fieldset>
+												</div>												
 											</div>
 											<div class="separator separator-solid"></div>
 											<div class="my-6 mx-6">
