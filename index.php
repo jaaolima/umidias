@@ -147,18 +147,18 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--end::Signup-->
 							<!--begin::Forgot-->
 							<div class=" login-forgot m-8">
-								<div class="text-center mb-10 mb-lg-20">
-									<h3 class="font-size-h1">Esqueceu a senha?</h3>
-									<p class="text-muted font-weight-bold">Insira seu e-mail para redefinir sua senha</p>
+								<div class="text-left mb-10 mb-lg-20">
+									<h3 class="texto-preto">Esqueceu a senha?</h3>
+									<p class="texto-chumbo">Naõ se preocupe, nós vamos te ajudar a resetá-la</p>
 								</div>
 								<!--begin::Form-->
 								<form class="form_esqueci_senha" novalidate="novalidate" id="form_esqueci_senha">
 									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Email" name="ds_email_resetar" id="ds_email_resetar" autocomplete="off" />
+										<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Insira aqui seu e-mail" name="ds_email_resetar" id="ds_email_resetar" autocomplete="off" />
 									</div>
 									<div class="form-group d-flex flex-wrap flex-center">
-										<button type="button" id="resetar" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">resetar</button>
-										<button type="button" id="cancelar" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancelar</button>
+										<button type="button" id="resetar" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">resetar senha</button>
+										<button type="button" id="cancelar" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Voltar</button>
 									</div>
 								</form>
 								<!--end::Form-->
