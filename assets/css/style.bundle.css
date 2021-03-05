@@ -54888,6 +54888,7 @@ code {
   position: relative; }
   .overlay .overlay-layer {
     border-radius: 50%;
+    mix-blend-mode: multiply;
     position: absolute;
     top: 0;
     bottom: 0;
