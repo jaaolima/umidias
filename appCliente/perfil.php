@@ -58,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class="my-6 ">
                                                 <span class="symbol symbol-circle symbol-80 symbol-light-success overlay ">
 													<span class="symbol-label font-size-h5 font-weight-bold overlay-wrapper">S</span> 
-													<button class="overlay-layer">
+													<button class="overlay-layer symbol-circle">
 
 													</button>                                              
                                                 </span>
