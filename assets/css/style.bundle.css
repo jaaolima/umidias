@@ -580,8 +580,6 @@ color: #B721FF;
   border-width: 0.88px !important;
   border-radius: 3.5px !important;
   border-color: rgb(112, 112, 112) !important;
-  border-style: solid !important;
-  position: absolute !important;
 }
 .GRADIENTE_BARRA {
   background-image: -moz-linear-gradient( -180deg, rgb(220,129,223) 0%, rgb(232,161,212) 74%, rgb(244,192,201) 100%);
