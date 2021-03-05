@@ -120,7 +120,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<a href="javascript:;" class="text-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
 										</div>	
 										<div class="form-group d-flex flex-wrap justify-content-center align-items-center">	
-											<button type="button" id="entrar" class="botao font-weight-bold px-30 py-4 my- text-white" >ENTRAR</button>
+											<button type="button" id="entrar" class="btn btn-primary disable font-weight-bold px-30 py-4 text-white" >ENTRAR</button>
 										</div>
 									</form>
 								</div>								
