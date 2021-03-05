@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
 						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white "  >
 							<!--begin::Signin-->
-							<div class=" login-signin m-8">
+							<div class=" login-signin mx-8 mt-8">
 								<div>
 									<div class="mb-8">
 										<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
