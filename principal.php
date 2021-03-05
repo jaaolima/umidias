@@ -156,11 +156,11 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="topbar-item">
 										<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
 											<div class="text-right">
-												<span class="text-dark font-weight-bolder font-size-base d-none d-md-inline mr-3">Olá, Sean</span><br>
+												<span class="text-dark font-weight-bolder font-size-base d-none d-md-inline mr-3">Olá, Maria</span><br>
 												<span class="text-dark font-weight-bold font-size-base d-flex d-md-inline mr-1">Maria@email.com</span>
 											</div>
 											<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
-												<span class="symbol-label font-size-h5 font-weight-bold">S</span>
+												<img src="assets/media/maria.jpg" class="symbol-label"alt="">
 											</span>
 											<a href="appCliente/perfil.php" class="ml-3">
 												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
