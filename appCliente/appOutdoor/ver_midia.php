@@ -117,6 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div>
 												<fieldset class="fieldset-border">
 													<legend class="legend-border">Data</legend>
+													<input type="text">
 												</fieldset>
 											</div>
 											<div class="separator separator-solid"></div>
