@@ -147,7 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--end::Signup-->
 							<!--begin::Forgot-->
 							<div class=" login-forgot m-8">
-								<div class="text-left mb-10 mb-lg-20">
+								<div class="text-left mb-10 ">
 									<h3 class="texto-preto">Esqueceu a senha?</h3>
 									<p class="texto-chumbo">Naõ se preocupe, nós vamos te ajudar a resetá-la</p>
 								</div>
@@ -156,9 +156,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="form-group">
 										<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Insira aqui seu e-mail" name="ds_email_resetar" id="ds_email_resetar" autocomplete="off" />
 									</div>
-									<div class="form-group flex-wrap flex-center">
+									<div class="form-group flex-wrap flex-center d-flex">
 										<div>
-											<button type="button" id="resetar" class="btn btn-primary font-weight-bold px-30 py-4 my-3 mx-4">resetar senha</button><br>
+											<button type="button" id="resetar" class="btn btn-primary font-weight-bold px-22 py-4 my-3 mx-4">resetar senha</button><br>
 										</div>
 										<div>
 											<button type="button" id="cancelar" class="btn btn-light-primary font-weight-bold px-30 py-4 my-3 mx-4">Voltar</button>
