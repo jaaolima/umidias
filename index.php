@@ -126,7 +126,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>								
 							</div>
 							<div class="separator separator-solid"></div>
-							<div class="justify-content-center my-8">
+							<div class="text-center my-8">
 								<span class="texto-chubo">Ainda não tem uma conta?</span>
 								<a href="javascript:;" class="text-primary" id="kt_login_signup">Registre-se</a>
 							</div>
