@@ -56,11 +56,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <h4 class="font-weight-bolder">Perfil</h4>
                                             </div>
                                             <div class="my-6">
-												<button>
-													<span class="symbol symbol-circle symbol-80 symbol-light-success">														
+                                                <span class="symbol symbol-circle symbol-80 symbol-light-success">
+													<button>
 														<span class="symbol-label font-size-h5 font-weight-bold">S</span>
-													</span>
-												</button>                                               
+													</button>                                                   
+                                                </span>
                                             </div>
                                             <div class="my-6 d-flex">
                                                 <div class="col-6">
