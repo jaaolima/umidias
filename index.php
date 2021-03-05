@@ -99,13 +99,14 @@ License: You must have a valid license purchased only from themeforest(the above
 											<button type="button" id="entrar" class="btn btn-primary disable font-weight-bold px-30 py-4 text-white" >ENTRAR</button>
 										</div>									
 									</form>
+								</div>
+								<div class="separator separator-solid"></div>
+								<div class="text-center my-8">
+									<span class="texto-chubo">Ainda não tem uma conta?</span>
+									<a href="javascript:;" class="text-primary" id="kt_login_signup">Registre-se</a>
 								</div>								
 							</div>
-							<div class="separator separator-solid"></div>
-							<div class="text-center my-8">
-								<span class="texto-chubo">Ainda não tem uma conta?</span>
-								<a href="javascript:;" class="text-primary" id="kt_login_signup">Registre-se</a>
-							</div>
+							
 							<!--end::Signin-->
 							<!--begin::Signup-->
 							<div class=" login-signup m-8">
