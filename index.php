@@ -44,24 +44,6 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login">
 				<!--begin::Aside-->
 				<div class="login-aside flex-row-auto bgi-size-cover bgi-no-repeat max-w-lg-950px " >
-					<div class="login-texto h-lg-100" >
-						<h3 class="m-lg-2"style="margin-bottom: -7px; font-size: 1200%; margin-top: -15px;"> 
-							A
-						</h3>
-						<h3 class="m-lg-2" style="margin-bottom: -7px;font-size: 1200%; margin-top: -15px;">
-							digita-
-						</h3>
-						<h3 class="m-lg-2" style="margin-bottom: -7px;font-size: 1200%; margin-top: -15px;">
-							lização
-						</h3>
-						<h3  class="m-lg-2" style="margin-bottom: -7px;font-size: 1200%; margin-top: -15px;">
-							da mídia
-						</h3>
-						<h3 class="m-lg-2" style="margin-bottom: -3px;font-size: 1200%; margin-top: -15px;">
-							offline.
-						</h3>
-					</div>
-					
 					<!--begin: Aside Container-->
 					<?php /*?><div class="d-flex flex-row-fluid flex-column justify-content-between"> 
 						<!--begin: Aside header-->
@@ -92,12 +74,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--begin::Aside-->
 				<!--begin::Content-->
 				<div class="d-flex flex-column flex-row-fluid position-relative p-7 overflow-hidden">
-					<!--begin::Content header-->
-					<div class="position-absolute top-0 right-0 text-right mt-5 mb-15 mb-lg-0 flex-column-auto justify-content-center py-5 px-10">
-						<span class="font-weight-bold text-dark-50">Não tem uma conta ainda?</span>
-						<a href="javascript:;" class="font-weight-bold ml-2" id="kt_login_signup">Crie uma!</a>
-					</div>
-					<!--end::Content header-->
 					<!--begin::Content body-->
 					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
 						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white "  >
