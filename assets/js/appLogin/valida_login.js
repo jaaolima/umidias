@@ -1,15 +1,4 @@
-var _showForm = function(form) {
-	var cls = 'login-' + form + '-on';
-	var form = 'kt_login_' + form + '_form';
 
-	_login.removeClass('login-forgot-on');
-	_login.removeClass('login-signin-on');
-	_login.removeClass('login-signup-on');
-
-	_login.addClass(cls);
-
-	KTUtil.animateClass(KTUtil.getById(form), 'animate__animated animate__backInUp');
-}
 
 $(document).ready(function() {
 	$("#entrar").on("click", function(e){
@@ -38,11 +27,7 @@ $(document).ready(function() {
         redirectTo("index.php");
 	});*/
 
-	$('#cancelar').on('click', function (e) {
-		e.preventDefault();
 
-		_showForm('signin');
-	});
 	
 	$("#resetar").on("click", function(e){
 		e.preventDefault();

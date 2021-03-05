@@ -81,6 +81,12 @@ var KTLogin = function() {
 		    });
         });
 
+		$('#cancelar').on('click', function (e) {
+			e.preventDefault();
+	
+			_showForm('signin');
+		});
+
         // Handle forgot button
         $('#kt_login_forgot').on('click', function (e) {
             e.preventDefault();
