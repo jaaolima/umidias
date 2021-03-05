@@ -114,7 +114,11 @@ License: You must have a valid license purchased only from themeforest(the above
 												<h3 class="font-weight-bolder">Aluguel</h3>
 												<span>O periodo minimo de locação é 15 dias</span>
 											</div>
-											<div>
+											<div class="d-flex my-6 mx-6">
+												<fieldset class="fieldset-border">
+													<legend class="legend-border">Data</legend>
+													<input type="text">
+												</fieldset>
 												<fieldset class="fieldset-border">
 													<legend class="legend-border">Data</legend>
 													<input type="text">
