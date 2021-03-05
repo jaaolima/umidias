@@ -62591,7 +62591,7 @@ body {
       right: 4px; }
 
 @media (min-width: 992px) {
-  .aside-fixed .aside {
+  .aside-fixed {
     position: fixed;
     top: 0;
     bottom: 0;
