@@ -78,27 +78,29 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
 						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white w-100"  style="max-width: 400px;">
 							<!--begin::Signin-->
-							<div class=" login-signin mx-8 mt-8">
-								<div>
-									<div class="mb-8">
-										<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
-										<span class="texto-chumbo">Insira seus dados abaixo para continuar</span>
-									</div>
-								</div>								
-								<!--begin::Form-->
-								<div>
-									<form class="form" novalidate="novalidate" id="kt_login_signin_form">
-										<div class="form-group" >
-											<input class="form-control rectangle_1 my-4" type="text"  name="ds_usuario" id="ds_usuario" autocomplete="off" />
-											<input class="form-control rectangle_1 my-4" type="password"  name="ds_senha" id="ds_senha"  />
+							<div class=" login-signin">
+								<div class="mx-8 mt-8">
+									<div>
+										<div class="mb-8">
+											<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
+											<span class="texto-chumbo">Insira seus dados abaixo para continuar</span>
 										</div>
-										<div class="form-group d-flex flex-wrap justify-content-end align-items-center">
-											<a href="javascript:;" class="text-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
-										</div>	
-										<div class="form-group d-flex flex-wrap justify-content-center align-items-center">	
-											<button type="button" id="entrar" class="btn btn-primary disable font-weight-bold px-30 py-4 text-white" >ENTRAR</button>
-										</div>									
-									</form>
+									</div>								
+									<!--begin::Form-->
+									<div>
+										<form class="form" novalidate="novalidate" id="kt_login_signin_form">
+											<div class="form-group" >
+												<input class="form-control rectangle_1 my-4" type="text"  name="ds_usuario" id="ds_usuario" autocomplete="off" />
+												<input class="form-control rectangle_1 my-4" type="password"  name="ds_senha" id="ds_senha"  />
+											</div>
+											<div class="form-group d-flex flex-wrap justify-content-end align-items-center">
+												<a href="javascript:;" class="text-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
+											</div>	
+											<div class="form-group d-flex flex-wrap justify-content-center align-items-center">	
+												<button type="button" id="entrar" class="btn btn-primary disable font-weight-bold px-30 py-4 text-white" >ENTRAR</button>
+											</div>									
+										</form>
+									</div>
 								</div>
 								<div class="separator separator-solid"></div>
 								<div class="text-center my-8">
