@@ -76,7 +76,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="d-flex flex-column flex-row-fluid position-relative p-7 overflow-hidden">
 					<!--begin::Content body-->
 					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
-						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white "  >
+						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white w-100"  style="max-width: 400px;">
 							<!--begin::Signin-->
 							<div class=" login-signin mx-8 mt-8">
 								<div>
