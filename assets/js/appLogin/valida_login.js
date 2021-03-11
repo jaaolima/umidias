@@ -16,7 +16,7 @@ $(document).ready(function() {
 					$(location).attr('href', 'principal.php');  
 				},
 				error: function(data){
-					swal.fire("Erro", data.responseText, "error");	
+					$("#erro-login"). removeClass('display-none');	
 				}
 			});
 		}
