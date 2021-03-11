@@ -525,10 +525,10 @@ color: #B721FF;
 }
 
 .texto-menu{
-  color: #57616A;
+  color: #57616A !important;
 }
 .texto-vermelho{
-  color: #D1111D;
+  color: #D1111D !important;
 }
 .texto-fraco{
   font-family: Poppins;
