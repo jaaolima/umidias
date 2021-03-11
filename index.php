@@ -86,11 +86,11 @@ License: You must have a valid license purchased only from themeforest(the above
 											<span class="texto-chumbo">Insira seus dados abaixo para continuar</span>
 										</div>
 									</div>
-									<div class="d-none" id="erro-login">
+									<!--<div class="d-none" id="erro-login">
 										<div class="erro-login">
 											<span class="texto-preto">Parece que você inseriu um email ou senha errado.</span>
 										</div>
-									</div>								
+									</div>-->								
 									<!--begin::Form-->
 									<div>
 										<form class="form" novalidate="novalidate" id="kt_login_signin_form">
