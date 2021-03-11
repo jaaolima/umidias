@@ -170,7 +170,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="dropdown-menu">
 												<a class="dropdown-item" href="appCliente/perfil.php">Minha conta</a>
 												<div class="dropdown-divider"></div>
-												<a class="dropdown-item" href="#">Sair</a>
+												<a class="dropdown-item texto-vermelho" href="#">Sair</a>
 											</div>
 										</div>
 									</div>
