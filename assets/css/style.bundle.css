@@ -460,6 +460,10 @@ mark,
 
   color: #333333 !important;
 }
+.erro-login{
+  background-color:#F6CFD2;
+  border-radius: 16px;
+}
 
 .titulo-div {
   /* Paragráfo 1 */

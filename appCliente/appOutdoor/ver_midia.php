@@ -117,12 +117,12 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="d-flex my-6 mx-6">
 												<div class="col-6">
 													<fieldset class="fieldset-border ml-4">
-														<legend class="legend-border">Data</legend>
+														<legend class="legend-border">Data inicial</legend>
 													</fieldset>
 												</div>
 												<div class="col-6">
 													<fieldset class="fieldset-border">
-														<legend class="legend-border">Data</legend>
+														<legend class="legend-border">Data Final</legend>
 													</fieldset>
 												</div>												
 											</div>
