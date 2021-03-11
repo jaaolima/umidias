@@ -162,11 +162,11 @@ License: You must have a valid license purchased only from themeforest(the above
 											<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
 												<img src="assets/media/maria.jpg" class="symbol-label"alt="">
 											</span>
-											<button  class="ml-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<a  class="ml-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M6 9L12 15L18 9" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 												</svg>
-											</button>
+											</a>
 											<div class="dropdown-menu">
 												<a class="dropdown-item" href="appCliente/perfil.php">Action</a>
 												<div class="dropdown-divider"></div>
