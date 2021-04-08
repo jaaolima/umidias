@@ -38,7 +38,7 @@
 				
 				$stmt->execute();
 
-				return $stmt;
+				return $stmt->fetch(PDO::FETCH_ASSOC);
 				
 					
 			}
