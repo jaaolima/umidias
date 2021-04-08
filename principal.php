@@ -4,6 +4,7 @@
 	error_reporting(E_ALL);
 	session_start();
 	require_once("Classes/Midia.php");
+	require_once("Classes/Usuario.php");
 
 	if ( $_SESSION['autenticado'] !=='validado') {
 		header("location: index.php");
@@ -162,8 +163,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="topbar-item">
 										<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
 											<div class="text-right">
-												<span class="text-dark font-weight-bolder font-size-base d-none d-md-inline mr-3">Olá, Maria</span><br>
-												<span class="text-dark font-weight-bold font-size-base d-flex d-md-inline mr-1">Maria@email.com</span>
+												<span class="text-dark font-weight-bolder font-size-base d-none d-md-inline mr-3">Olá, <?php $dadosUsuario['ds_nome'] ?></span><br>
+												<span class="text-dark font-weight-bold font-size-base d-flex d-md-inline mr-1"><?php $dadosUsuario['ds_email'] ?></span>
 											</div>
 											<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
 												<img src="assets/media/maria.jpg" class="symbol-label"alt="">
