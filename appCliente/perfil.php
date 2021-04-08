@@ -1,4 +1,14 @@
+<?php
+	ini_set('display_errors',1);
+	ini_set('display_startup_erros',1);
+	error_reporting(E_ALL);
+	session_start();
+	require_once("Classes/Usuario.php");
 
+	$usuario = new Usuario();
+	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
+
+?>
 <!DOCTYPE html>
 <!--
 Template Name: Metronic - Bootstrap 4 HTML, React, Angular 10 & VueJS Admin Dashboard Theme
@@ -74,7 +84,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <span class="texto-chumbo">Nome do usuário</span>
                                                 </div>                                                
                                                 <div class="col-6">
-                                                    <span class="texto-negrito">Maria Figueiredo Portugal</span>
+                                                    <span class="texto-negrito"><?php echo $dadosUsuario['ds_nome'] ?></span>
                                                 </div>
                                             </div>
                                             <div class="separator separator-solid"></div>
@@ -83,7 +93,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <span class="texto-chumbo">Email</span>
                                                 </div>                                                
                                                 <div class="col-6">
-                                                    <span class="texto-negrito">Maria@email.com</span>
+                                                    <span class="texto-negrito"><?php echo $dadosUsuario['ds_email'] ?></span>
                                                 </div>
                                             </div>
                                             <div class="separator separator-solid"></div>

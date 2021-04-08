@@ -15,7 +15,6 @@
 	$usuario = new Usuario();
 	$retorno = $midia->listarTipoMidia($_POST);
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
-	var_dump($dadosUsuario['ds_nome'])
 ?>
 <!DOCTYPE html>
 <!--
