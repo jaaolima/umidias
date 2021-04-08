@@ -11,7 +11,7 @@
    }
    
 	$midia = new Midia();
-	$dados = $midia->listarTipoMidia();
+	$dados = $midia->listarTipoMidia($_POST);
 ?>
 <!DOCTYPE html>
 <!--
