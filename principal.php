@@ -291,7 +291,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																				<path d="M25 34.6001V44.2001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 																			</svg>
 																		</span>
-																		<p  class="titulo-midia d-block "><?php $dados['ds_nome'] ?></p>
+																		<p  class="titulo-midia d-block "></p>
 																		<a href="appCliente/appOutdoor/listar_midia.php" class="btn btn-primary" type="button" >Alugar mídia</a>
 																	</div>
 																	<div  class="col-3 bg-white pl-20 py-6 mb-10 mt-7 border-right pr-20" style="text-align: center;">
