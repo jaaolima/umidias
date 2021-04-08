@@ -137,7 +137,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--end::Aside Menu-->
 				</div>
 				<!--begin::Wrapper-->
-				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper" style="margin-left: 14%;">
 					
 					<!--begin::Container-->
 					<div class="d-flex flex-row flex-column-fluid ">
