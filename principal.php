@@ -265,7 +265,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<div class="flex-grow-1" style="display: inherit;">
 																	<h3  class="titulo-div">Alugue sua mídia</h3>
 																</div>
-																<div class="row m-0 col-12" >
+																<div class="row m-0 col-12 justify-content-center" >
 																	<?php 
 																		while($dados = $retorno->fetch())
 																		{
