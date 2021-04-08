@@ -3,7 +3,7 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 	session_start();
-	require_once("Classes/Usuario.php");
+	require_once("../Classes/Usuario.php");
 
 	$usuario = new Usuario();
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
