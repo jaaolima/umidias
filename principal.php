@@ -14,7 +14,7 @@
 	$midia = new Midia();
 	$usuario = new Usuario();
 	$retorno = $midia->listarTipoMidia($_POST);
-	$dadosUsuario = $usuario->listarUsuario($id_usuario);
+	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 ?>
 <!DOCTYPE html>
 <!--
