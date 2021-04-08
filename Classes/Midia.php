@@ -1,5 +1,5 @@
 <?php
-	require_once("../Classes/Conecta.php");
+	require_once("Conecta.php");
     class Midia{
         public function listarMidia(array $dados)
 		{
