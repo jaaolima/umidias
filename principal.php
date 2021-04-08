@@ -10,8 +10,8 @@
 		 exit();
    }
    
-$midia = new Midia();
-$dados = $midia->listarTipoMidia();
+	/*$midia = new Midia();
+	$dados = $midia->listarTipoMidia();*/
 ?>
 <!DOCTYPE html>
 <!--
