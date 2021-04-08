@@ -3,7 +3,7 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 	session_start();
-	require_once("Classes/Midia.php");
+	require_once("../Classes/Midia.php");
 	$midia = new Midia();
 	$retorno = $midia->listarTipoMidia($_POST);
 ?>
