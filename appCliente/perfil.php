@@ -4,7 +4,8 @@
 	error_reporting(E_ALL);
 	session_start();
 	require_once("../Classes/Usuario.php");
-
+	
+	$id_usuario = $_SESSION['id_usuario'];
 	$usuario = new Usuario();
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 
