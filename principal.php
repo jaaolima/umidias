@@ -9,9 +9,11 @@
 		header("location: index.php");
 		 exit();
    }
-   
+   $id_usuario = $_SESSION['id_usuario'];
 	$midia = new Midia();
+	$usuario = new Usuario();
 	$retorno = $midia->listarTipoMidia($_POST);
+	$dadosUsuario = $usuario->listarUsuario($id_usuario);
 ?>
 <!DOCTYPE html>
 <!--
