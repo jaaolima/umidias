@@ -24,6 +24,30 @@
     			print "ERRO:".$e->getMessage();		
 			}
         }
+
+		public function listarTipoMidia(array $dados)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT id_midia, ds_midia, ds_icone
+							FROM tb_tipo_midia";
+				
+				$stmt = $con->prepare($select); 
+				
+				
+				$stmt->execute();
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+        }
         public function gravarMidia(array $dados)
 		{
 
