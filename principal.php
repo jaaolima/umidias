@@ -192,25 +192,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-xl-12">
 										<div class="row">
-											<?php /* if($_SESSION['id_perfil'] == 2 || $_SESSION['id_perfil'] == 3 ) :  ?>
-												<div class="col-xl-6">
-													<!--begin::Tiles Widget 21-->
-													<div class="card card-custom wave wave-animate-slow wave-primary gutter-b" style="height: 300px">
-														<!--begin::Body-->
-														<div class="card-body d-flex flex-column p-0">
-															<!--begin::Stats-->
-															<div class="flex-grow-1 card-spacer pb-0">	
-																<div class="font-weight-boldest font-size-h1 pt-2">10.000</div>
-																<div class="font-size-h4 font-weight-bolder">Alcance</div>
-																<div class="text-muted font-weight-bold">Semanal</div>
-																
-															</div>
-														</div>
-														<!--end::Body-->
-													</div>
-													<!--end::Tiles Widget 21-->
-												</div>
-											<?php endif; */?>	
 											<?php if($_SESSION['id_perfil'] == 2  ) :  ?>
 												<div class="col-xl-12">
 													<!--begin::Tiles Widget 25-->
@@ -292,22 +273,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 													<!--end::Tiles Widget 25-->
 												</div>
-											<?php endif; ?>
-											<?php /* if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 3 || $_SESSION['id_perfil'] == 2 || $_SESSION['id_perfil'] == 4) :  ?>	
-												<div class="col-xl-6">
-													<!--begin::Stats Widget 27-->
-													<div class="card card-custom bg-white card-stretch gutter-b h-300px">
-														<!--begin::Body-->
-														<div class="card-body">	
-															<span class="card-title font-weight-bolder text-dark-75 font-size-h2 mb-0 mt-6 d-block">$50,000</span>
-															<span class="font-wight-bold text-muted font-size-sm d-block">Investido</span>
-														</div>
-														<input class="btn btn-primary btn-lg w-100" type="button" value="Acompanhar"/>
-														<!--end::Body-->
-													</div>
-													<!--end::Stats Widget 27-->
-												</div>
-											<?php endif; */ ?>	
+											<?php endif; ?>	
 										</div>	
 									</div>
 								</div>
