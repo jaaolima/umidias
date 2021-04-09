@@ -70,7 +70,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</a>
 						<!--end::Logo-->
 						<!--begin::Toggle-->
-						<button class="brand-toggle btn btn-sm px-0 ml-25 menu-close" id="kt_aside_toggle">
+						<button class="brand-toggle btn btn-sm px-0 ml-25" id="kt_aside_toggle">
 							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<circle cx="16" cy="16" r="16" fill="#B721FF"/>
 								<path d="M18 10L12 16L18 22" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -86,17 +86,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav nav-pills">
 								<li class="menu-item my-4 botao-menu botao-menu-active mr-20 btn ml-5"  aria-haspopup="true">
-									<a href="principal.php" class="btn rounded ml-2 text-left ">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<a href="principal.php" class="btn rounded ml-2 text-left menu-link menu-toggle ">
+										<svg class="menu-icon"width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M4 9.3L12.1 3L20.2 9.3V19.2C20.2 19.6774 20.0104 20.1352 19.6728 20.4728C19.3352 20.8104 18.8774 21 18.4 21H5.8C5.32261 21 4.86477 20.8104 4.52721 20.4728C4.18964 20.1352 4 19.6774 4 19.2V9.3Z" fill="#B721FF" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
 
 										<span class="menu-text texto-menu-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item my-4  mr-20 btn ml-5 botao-menu" aria-haspopup="true">
-									<a href="appCliente/listar_tipo.php" class="btn rounded ml-2 text-left  ">
-										<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<li class="menu-item my-4  mr-20 btn ml-5 botao-menu" aria-haspopup="true" data-menu-toggle="hover">
+									<a href="appCliente/listar_tipo.php" class="btn rounded ml-2 text-left  menu-link menu-toggle">
+										<svg class="menu-icon" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M17.2 1H2.8C1.80589 1 1 1.80589 1 2.8V11.8C1 12.7941 1.80589 13.6 2.8 13.6H17.2C18.1941 13.6 19 12.7941 19 11.8V2.8C19 1.80589 18.1941 1 17.2 1Z" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											<path d="M8.20001 17.2H11.8" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											<path d="M10 13.6V17.2" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -104,18 +104,18 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true">
-									<a href="appCliente/listar_minhas_midias.php" class="btn rounded ml-2 text-left ">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true" data-menu-toggle="hover">
+									<a href="appCliente/listar_minhas_midias.php" class="btn rounded ml-2 text-left menu-link menu-toggle ">
+										<svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8 11L11 14L21 4" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											<path d="M20 12V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H4C3.46957 21 2.96086 20.7893 2.58579 20.4142C2.21071 20.0391 2 19.5304 2 19V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H15" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
 										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mídias alugadas</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true">
-									<a href="/metronic/demo1/index.html" class="btn rounded ml-2 text-left ">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true" data-menu-toggle="hover">
+									<a href="/metronic/demo1/index.html" class="btn rounded ml-2 text-left menu-link menu-toggle">
+										<svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M11.9091 3V21" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											<path d="M16 6.27271H9.86364C9.10415 6.27271 8.37578 6.57441 7.83874 7.11144C7.3017 7.64848 7 8.37686 7 9.13634C7 9.89582 7.3017 10.6242 7.83874 11.1612C8.37578 11.6983 9.10415 12 9.86364 12H13.9545C14.714 12 15.4424 12.3017 15.9794 12.8387C16.5165 13.3758 16.8182 14.1041 16.8182 14.8636C16.8182 15.6231 16.5165 16.3515 15.9794 16.8885C15.4424 17.4255 14.714 17.7273 13.9545 17.7273H7" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
