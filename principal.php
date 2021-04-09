@@ -259,7 +259,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		{ 
 																			$tamanho = 100/ count($dados);
 																			/*$end = end($dados);*/
-																			$borda = if($end){echo 'border-right'};
+																			$borda = if($end){'border-right'};
 																			var_dump($borda);
 																		echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20 '.$borda.'" style="text-align: center; width:'.$tamanho.'% ;">
 																						<span class="svg-icon svg-icon-3x svg-icon-white d-block my-2">
