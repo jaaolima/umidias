@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="row">
 								<div class="col-xl-12">
                                     <div class="card card-custom card-stretch">
-                                        <div class="p-10 d-flex">
+                                        <div class="p-10">
                                             <div class="my-6">
                                                 <h4 class="font-weight-bolder">Perfil</h4>
                                             </div>
-                                            <div class="my-6 d-flex  w-auto btn-clean align-items-center" id="kt_quick_user_toggle">
-                                                <a class="symbol symbol-circle symbol-80 symbol-light-success overlay dropdown" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="my-6 d-flex w-auto btn-clean" id="kt_quick_user_toggle">
+                                                <a class="symbol symbol-circle symbol-80 symbol-light-success overlay dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 													<img src="assets/media/maria.jpg" class="symbol-label font-size-h5 font-weight-bold overlay-wrapper"alt=""> 
 													<span class="overlay-layer symbol-circle " >
 														<svg class="symbol-circle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
