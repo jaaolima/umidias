@@ -66,7 +66,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class="my-6">
                                                 <h4 class="font-weight-bolder">Perfil</h4>
                                             </div>
-                                            <div class="my-6 ">
+                                            <div class="my-6 d-flex">
                                                 <a class="symbol symbol-circle symbol-80 symbol-light-success overlay dropdown" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 													<img src="assets/media/maria.jpg" class="symbol-label font-size-h5 font-weight-bold overlay-wrapper"alt=""> 
 													<span class="overlay-layer symbol-circle " >
