@@ -443,7 +443,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Global Theme Bundle(used by all pages)-->
 		<script src="assets/plugins/global/plugins.bundle.js"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-		<script src="assets/js/scripts.bundle.js"></script>
+		<!--<script src="assets/js/scripts.bundle.js"></script>-->
 		<script src="assets/js/scripts.bundle2.min.js"></script>
 		<!--begin::Page Vendors(used by this page)-->
 		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
