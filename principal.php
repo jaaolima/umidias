@@ -70,7 +70,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</a>
 						<!--end::Logo-->
 						<!--begin::Toggle-->
-						<button class="brand-toggle btn btn-sm px-0 ml-25" id="kt_aside_toggle">
+						<button class="kt-aside__brand-aside-toggler btn btn-sm px-0 ml-25" id="kt_aside_toggle">
 							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<circle cx="16" cy="16" r="16" fill="#B721FF"/>
 								<path d="M18 10L12 16L18 22" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
