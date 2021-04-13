@@ -525,7 +525,7 @@ color: #B721FF;
 }
 
 .botao-menu:hover .svg-hover {
-  fill: #B721FF !important;
+  stroke: #B721FF !important;
 }
 
 .texto-menu{
