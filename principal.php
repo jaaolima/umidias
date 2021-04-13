@@ -252,8 +252,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																<div class="row m-0 col-12 justify-content-center" >
 																	<?php 
 																		$dados = $retorno->fetch();
-																		/*$tamanho = 100/ count($dados);
-																		$end = end($dados);
+																		$tamanho = 100/ count($dados);
+																		/*$end = end($dados);
 																		$borda = if($end){"border-right"};*/
 																		while($dados)
 																		{ 
