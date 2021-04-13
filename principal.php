@@ -85,13 +85,13 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div id="kt_aside_menu" class="aside-menu my-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 825px; overflow: hidden;">
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav nav-pills">
-								<li class="menu-item my-4 botao-menu botao-menu-active mr-20 btn ml-5"  aria-haspopup="true">
+								<li class="menu-item my-4 botao-menu botao-menue mr-20 btn ml-5"  aria-haspopup="true">
 									<a href="principal.php" class="btn rounded ml-2 text-left  ">
 										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M4 9.3L12.1 3L20.2 9.3V19.2C20.2 19.6774 20.0104 20.1352 19.6728 20.4728C19.3352 20.8104 18.8774 21 18.4 21H5.8C5.32261 21 4.86477 20.8104 4.52721 20.4728C4.18964 20.1352 4 19.6774 4 19.2V9.3Z" fill="#B721FF" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
 										</svg>
 
-										<span class="menu-text texto-menu-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
+										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4  mr-20 btn ml-5 botao-menu" aria-haspopup="true" data-menu-toggle="hover">
