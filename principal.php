@@ -124,9 +124,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 								</li>
 							</ul>
-							<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-								<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-							</div>
 							<div class="position-absolute bottom-0 ml-4">
 								<div href="/metronic/demo1/index.html" class="btn rounded ml-2 text-left">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
