@@ -107,6 +107,7 @@ $('.botao-menu').click(function (e)
 	{
 		$('.botao-menu').removeClass('botao-menu-active');
 		$('.botao-menu').addClass('botao-menu-active');
+    $('.svg-hover').removeClass('svg-active');
     $('.svg-hover').addClass('svg-active');
 
     /*$('.texto-menu').removeClass('texto-menu-active');
