@@ -510,7 +510,9 @@ mark,
     stroke: #B721FF !important;
   }
 
-
+.svg-active {
+  stroke: #B721FF !important;
+}
 .botao-menu {
   display: flex !important;
   flex-direction: row !important;
