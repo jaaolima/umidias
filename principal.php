@@ -251,7 +251,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																</div>
 																<div class="row m-0 col-12 justify-content-center" >
 																	<?php 
-																		echo end($retorno->fetch());
+																		echo end($dados = $retorno->fetch());
 
 																		
 																		while($dados = $retorno->fetch())
