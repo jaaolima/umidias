@@ -524,6 +524,10 @@ color: #B721FF;
   color: #B721FF !important;
 }
 
+.botao-menu:hover .svg-hover {
+  fill: #B721FF !important;
+}
+
 .texto-menu{
   color: #57616A !important;
 }
@@ -554,7 +558,7 @@ color: #B721FF;
   margin-bottom: -3px !important;
 }
 .texto-negrito{
-  color: #333333 !important;
+  color: #333333 !important;  
   font-family: Poppins !important;
   font-style: normal !important;
   font-weight: bold !important;
@@ -2662,7 +2666,9 @@ fieldset:disabled a.btn {
   .btn-primary:hover {
     color: #ffffff;
     background-color: #702afb;
-    border-color: #671efb; }
+    border-color: #671efb;
+    .svg{ }
+   }
   .btn-primary:focus, .btn-primary.focus {
     color: #ffffff;
     background-color: #702afb;

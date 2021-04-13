@@ -106,7 +106,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</li>
 								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="appCliente/listar_minhas_midias.php" class="btn rounded ml-2 text-left  ">
-										<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-hover">
 											<path d="M8 11L11 14L21 4" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											<path d="M20 12V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H4C3.46957 21 2.96086 20.7893 2.58579 20.4142C2.21071 20.0391 2 19.5304 2 19V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H15" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
