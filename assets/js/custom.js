@@ -106,9 +106,9 @@ $(document).on('click', function(e) { //Hide menu when clicked outside menu area
 $('.botao-menu').click(function (e)
 	{
 		$('.botao-menu').removeClass('botao-menu-active');
-		$('.botao-menu').addClass('botao-menu-active');
+		$(this).addClass('botao-menu-active');
     $('.svg-hover').removeClass('svg-active');
-    $('.svg-hover').addClass('svg-active');
+    $(this).addClass('svg-active');
 
     /*$('.texto-menu').removeClass('texto-menu-active');
 		$('.texto-menu').addClass('texto-menu-active');*/
