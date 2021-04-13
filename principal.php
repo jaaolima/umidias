@@ -254,8 +254,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		$dados = $retorno->fetch();
 																		$tamanho = 100/ count($dados);
 																		$end = end($dados);
-																		var_dump(current($dados));
-																		$borda = if()){"border-right"};
+																		$borda = if($end){"border-right"};
 																		while($dados)
 																		{ 
 																			
