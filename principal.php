@@ -72,7 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<span class="text-dark font-weight-bolder font-size-base d-none d-md-inline mr-3">Olá, <?php echo $dadosUsuario['ds_nome'] ?></span><br>
 								<span class="text-dark font-weight-bold font-size-base d-flex d-md-inline mr-1"><?php echo $dadosUsuario['ds_email'] ?></span>
 							</div>-->
-							<a href="javascript:;" class="ml-3 dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a href="javascript:;" class="mr-2 dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M6 9L12 15L18 9" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 								</svg>
