@@ -253,9 +253,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<?php
 																		while($dados = $retorno->fetch())
 																		{ 
-																			var_dump($dados);
 																		$valor = count($dados) -1;
-
+																		echo end($dados);
 																		$tamanho = 100/ $valor);
 																		
 																			echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'% ;">
