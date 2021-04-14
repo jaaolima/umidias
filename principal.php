@@ -59,9 +59,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Main-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Page-->
-			<div class="navbar">
+			<div class="navbar my-3">
 				<!--begin::Logo-->
-				<a href="/metronic/demo1/index.html" class="brand-logo mt-3">
+				<a href="/metronic/demo1/index.html" class="brand-logo ml-8">
 					<img alt="Logo" src="assets/media/logo.png" class="logo-default max-h-25px"  />
 				</a>
 				<!--end::Logo-->
