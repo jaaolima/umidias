@@ -254,7 +254,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		while($dados = $retorno->fetch())
 																		{ 
 																		$valor = count($dados) -1;
-																		$tamanho = 100/ $valor);
+																		$tamanho = 100/ $valor;
 																		
 																			echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'% ;">
 																						<span class="svg-icon svg-icon-3x svg-icon-white d-block my-2">
