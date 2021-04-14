@@ -256,7 +256,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		$valor = count($dados) -1;
 																		$ultimo = end($dados);
 																		$penultimo = prev($dados);
-																		$borda = if($penultimo){echo 'border-right'};
+																		$borda = if($penultimo = $dados){echo 'border-right'};
 																		$tamanho = 100/ $valor;
 																		
 																			echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'% ;">
