@@ -59,10 +59,11 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Main-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Page-->
-			<div class="d-flex flex-row flex-column-fluid page">
-   				<div class="navbar">
+			<div class="navbar">
 
-				</div>
+			</div>
+			<div class="d-flex flex-row flex-column-fluid page">
+   				
 				<!--incio do sidebar-->				
 				<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
 					<!--begin::Brand-->
