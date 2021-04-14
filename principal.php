@@ -63,14 +63,14 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--incio do sidebar-->
 				<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
 					<!--begin::Brand-->
-					<div class="brand flex-column-auto ml-7 mt-10 " id="kt_brand" kt-hidden-height="65" style="">
+					<div class="brand flex-column-auto d-flex ml-7 mt-10 " id="kt_brand" kt-hidden-height="65" style="">
 						<!--begin::Logo-->
-						<a href="/metronic/demo1/index.html" class="brand-logo">
+						<a href="/metronic/demo1/index.html" class="brand-logo mt-3">
 							<img alt="Logo" src="assets/media/logo.png" class="logo-default max-h-25px"  />
 						</a>
 						<!--end::Logo-->
 						<!--begin::Toggle-->
-						<button class="kt-aside__brand-aside-toggler btn btn-sm px-0 ml-25" id="kt_aside_toggle">
+						<button class="kt-aside__brand-aside-toggler btn btn-sm px-0 ml-32 position-relative" id="kt_aside_toggle">
 							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<circle cx="16" cy="16" r="16" fill="#B721FF"/>
 								<path d="M18 10L12 16L18 22" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
