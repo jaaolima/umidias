@@ -521,7 +521,7 @@ mark,
 }
 
 .texto-menu-active{
-color: #B721FF;
+color: #B721FF !important;
 
 }
 .botao-menu:hover {
