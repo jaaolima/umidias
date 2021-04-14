@@ -103,13 +103,13 @@ $(document).on('click', function(e) { //Hide menu when clicked outside menu area
 	}
 });
 
-$('.botao-menu').click(function (e)
+$('#menu').click(function (e)
 	{
 		$('.botao-menu').removeClass('botao-menu-active');
 		$(this).addClass('botao-menu-active');
 
 	});
-  $('.svg-hover').click(function (e)
+  $('#menu').click(function (e)
 	{
     $('.svg-hover').removeClass('svg-active');
     $(this).addClass('svg-active');

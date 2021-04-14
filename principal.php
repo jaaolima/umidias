@@ -94,12 +94,12 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="menu-text texto-menu-active texto-menu "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item my-4  mr-20 btn ml-5 botao-menu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item my-4  mr-20 btn ml-5 botao-menu" id="menu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="appCliente/listar_tipo.php" class="btn rounded ml-2 text-left  ">
 										<svg  width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M17.2 1H2.8C1.80589 1 1 1.80589 1 2.8V11.8C1 12.7941 1.80589 13.6 2.8 13.6H17.2C18.1941 13.6 19 12.7941 19 11.8V2.8C19 1.80589 18.1941 1 17.2 1Z" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
-											<path d="M8.20001 17.2H11.8" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
-											<path d="M10 13.6V17.2" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
+											<path d="M17.2 1H2.8C1.80589 1 1 1.80589 1 2.8V11.8C1 12.7941 1.80589 13.6 2.8 13.6H17.2C18.1941 13.6 19 12.7941 19 11.8V2.8C19 1.80589 18.1941 1 17.2 1Z" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover" id="menu"/>
+											<path d="M8.20001 17.2H11.8" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover" id="menu"/>
+											<path d="M10 13.6V17.2" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover" id="menu"/>
 										</svg>
 										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
 									</a>
