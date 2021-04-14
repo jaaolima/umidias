@@ -60,7 +60,11 @@ License: You must have a valid license purchased only from themeforest(the above
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Page-->
 			<div class="navbar">
-
+				<!--begin::Logo-->
+				<a href="/metronic/demo1/index.html" class="brand-logo mt-3">
+					<img alt="Logo" src="assets/media/logo.png" class="logo-default max-h-25px"  />
+				</a>
+				<!--end::Logo-->
 			</div>
 			<div class="d-flex flex-row flex-column-fluid page">
    				
@@ -69,11 +73,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--begin::Brand-->
 					
 					<div class="brand flex-column-auto d-flex ml-7 mt-10 " id="kt_brand" kt-hidden-height="65" style="">
-						<!--begin::Logo-->
-						<a href="/metronic/demo1/index.html" class="brand-logo mt-3">
-							<img alt="Logo" src="assets/media/logo.png" class="logo-default max-h-25px"  />
-						</a>
-						<!--end::Logo-->
+
 						<!--begin::Toggle-->
 						<button class="kt-aside__brand-aside-toggler btn btn-sm px-0 ml-32 position-relative" id="kt_aside_toggle">
 							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
