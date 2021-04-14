@@ -67,7 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <h4 class="font-weight-bolder">Perfil</h4>
                                             </div>
                                             <div class="my-6 d-flex" id="kt_quick_user_toggle">
-                                                <a class="dropdown symbol symbol-circle symbol-80 symbol-light-success overlay" href="javascript:;" aria-haspopup="true" aria-expanded="false">
+                                                <a class="dropdown symbol symbol-circle symbol-80 symbol-light-success overlay" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 													<img src="assets/media/maria.jpg" class="symbol-label font-size-h5 font-weight-bold overlay-wrapper"alt=""> 
 													<span class="overlay-layer symbol-circle " >
 														<svg class="symbol-circle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class="separator separator-solid"></div>
                                             <div class="my-6">
                                                 <button class="btn btn-outline-primary">
-                                                    <svg class="mr-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <svg class="mr-1 svg-editar" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M12 20H21" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                         <path d="M16.5 3.50023C16.8978 3.1024 17.4374 2.87891 18 2.87891C18.2786 2.87891 18.5544 2.93378 18.8118 3.04038C19.0692 3.14699 19.303 3.30324 19.5 3.50023C19.697 3.69721 19.8532 3.93106 19.9598 4.18843C20.0665 4.4458 20.1213 4.72165 20.1213 5.00023C20.1213 5.2788 20.0665 5.55465 19.9598 5.81202C19.8532 6.06939 19.697 6.30324 19.5 6.50023L7 19.0002L3 20.0002L4 16.0002L16.5 3.50023Z" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                     </svg>Editar perfil

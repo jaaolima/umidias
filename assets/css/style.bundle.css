@@ -465,6 +465,10 @@ mark,
   border-radius: 16px;
 }
 
+button:hover .svg-editar{
+  stroke: #ffffff;
+}
+
 .titulo-div {
   /* Paragráfo 1 */
 
