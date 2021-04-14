@@ -253,9 +253,11 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<?php
 																		while($dados = $retorno->fetch())
 																		{ 
-																		$tamanho = 100/ (count($dados) -1);
-																		$valor = count($dados);
-																		var_dump($valor);
+																			var_dump($dados);
+																		$valor = count($dados) -1;
+
+																		$tamanho = 100/ $valor);
+																		
 																			echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'% ;">
 																						<span class="svg-icon svg-icon-3x svg-icon-white d-block my-2">
 																							<svg width="50" height="46" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
