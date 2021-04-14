@@ -65,7 +65,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<img alt="Logo" src="assets/media/logo.png" class="logo-default max-h-25px"  />
 				</a>
 				<!--end::Logo-->
-				<div class="topbar">
+				<div class="topbar mr-8">
 					<div class="topbar-item">
 						<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
 							<!--<div class="text-right">
