@@ -176,7 +176,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 											<div class="dropdown-menu">
 												<a class="dropdown-item" href="appCliente/perfil.php">Minha conta</a>
-												<div class="dropdown-divider"></div>
+												<div class="dropdown-divider mx-5"></div>
 												<a class="dropdown-item texto-vermelho" href="appUsuario/logout.php">Sair</a>
 											</div>
 										</div>
