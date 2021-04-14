@@ -107,10 +107,19 @@ $('.botao-menu').click(function (e)
 	{
 		$('.botao-menu').removeClass('botao-menu-active');
 		$(this).addClass('botao-menu-active');
+
+	});
+  $('.botao-menu').click(function (e)
+	{
     $('.svg-hover').removeClass('svg-active');
     $(this).addClass('svg-active');
+	});
+
+  $('.botao-menu').click(function (e)
+  { 
     $('.texto-menu').removeClass('texto-menu-active');
     $(this).addClass('texto-menu-active');
 	});
+
 
 
