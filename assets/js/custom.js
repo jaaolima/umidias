@@ -103,23 +103,18 @@ $(document).on('click', function(e) { //Hide menu when clicked outside menu area
 	}
 });
 
-$('#menu').click(function (e)
+$('.botao-menu').click(function (e)
 	{
 		$('.botao-menu').removeClass('botao-menu-active');
 		$(this).addClass('botao-menu-active');
-
-	});
-  $('#menu').click(function (e)
-	{
     $('.svg-hover').removeClass('svg-active');
     $(this).addClass('svg-active');
-	});
-
-  $('.texto-menu').click(function (e)
-  { 
     $('.texto-menu').removeClass('texto-menu-active');
     $(this).addClass('texto-menu-active');
+
 	});
+
+
 
 
 
