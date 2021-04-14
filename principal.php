@@ -68,13 +68,10 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="topbar">
 					<div class="topbar-item">
 						<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
-							<div class="text-right">
+							<!--<div class="text-right">
 								<span class="text-dark font-weight-bolder font-size-base d-none d-md-inline mr-3">Olá, <?php echo $dadosUsuario['ds_nome'] ?></span><br>
 								<span class="text-dark font-weight-bold font-size-base d-flex d-md-inline mr-1"><?php echo $dadosUsuario['ds_email'] ?></span>
-							</div>
-							<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
-								<img src="assets/media/maria.jpg" class="symbol-label"alt="">
-							</span>
+							</div>-->
 							<a href="javascript:;" class="ml-3 dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M6 9L12 15L18 9" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -85,6 +82,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="dropdown-divider mx-5"></div>
 								<a class="dropdown-item texto-vermelho" href="appUsuario/logout.php">Sair</a>
 							</div>
+							<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
+								<img src="assets/media/maria.jpg" class="symbol-label"alt="">
+							</span>														
 						</div>
 					</div>
 				</div>
