@@ -100,15 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						
 						<!--begin::Menu Container-->
 						<div id="kt_aside_menu" class="aside-menu my-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 825px; overflow: hidden;">
-							<!--begin::Menu Nav-->
-							<div>
-								<button class="kt-aside__brand-aside-toggler btn btn-sm px-0 ml-32 position-relative" id="kt_aside_toggle">
-									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<circle cx="16" cy="16" r="16" fill="#B721FF"/>
-										<path d="M18 10L12 16L18 22" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</div>	
+							<!--begin::Menu Nav-->	
 							<ul class="menu-nav nav-pills">
 								<li class="menu-item my-4 botao-menu botao-menu-active mr-20 btn ml-5"  aria-haspopup="true">
 									<a href="principal.php" class="btn rounded ml-2 text-left  ">
@@ -171,6 +163,14 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-row flex-column-fluid ">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
+							<div>
+								<button class="kt-aside__brand-aside-toggler btn btn-sm px-0 ml-32 position-relative" id="kt_aside_toggle">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="16" cy="16" r="16" fill="#B721FF"/>
+										<path d="M18 10L12 16L18 22" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</div>
 							<div class="container-fluid d-flex align-items-stretch justify-content-between mt-10" style="padding-right: 30px; padding-left: 40px;">
 								<div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
 									<!--begin::Header Menu-->
