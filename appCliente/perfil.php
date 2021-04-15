@@ -76,12 +76,11 @@ License: You must have a valid license purchased only from themeforest(the above
 															</svg>
 														</span>																									                                          
 													</a>
-																										 
-												 </div>  
-												 <div class="dropdown-menu">
-													<a class="dropdown-item" href="#">Trocar foto</a>
-													<a class="dropdown-item" href="#">Excluir foto</a>
-												</div>	                                      										
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">Trocar foto</a>
+														<a class="dropdown-item" href="#">Excluir foto</a>
+													</div>	       																									 
+												 </div>               										
                                             </div>
                                             <div class="my-6 d-flex">
                                                 <div class="col-6">
