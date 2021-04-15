@@ -79,14 +79,6 @@ License: You must have a valid license purchased only from themeforest(the above
 																										 
 												 </div>                                        										
                                             </div>
-											<div class="dropdown">
-												<button class="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropteste</button>
-												<div class="dropdown-menu">
-													<a class="dropdown-item" href="#">Trocar foto</a>
-													<a class="dropdown-item" href="#">Excluir foto</a>
-												</div>	
-											</div>
-											
                                             <div class="my-6 d-flex">
                                                 <div class="col-6">
                                                     <span class="texto-chumbo">Nome do usuário</span>
