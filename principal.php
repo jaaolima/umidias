@@ -72,15 +72,15 @@ License: You must have a valid license purchased only from themeforest(the above
 					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M6 9L12 15L18 9" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
-				</a>
+				</a>				
+				<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
+					<img src="assets/media/maria.jpg" class="symbol-label"alt="">
+				</span>		
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="appCliente/perfil.php">Minha conta</a>
 					<div class="dropdown-divider mx-5"></div>
 					<a class="dropdown-item texto-vermelho" href="appUsuario/logout.php">Sair</a>
-				</div>
-				<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
-					<img src="assets/media/maria.jpg" class="symbol-label"alt="">
-				</span>														
+				</div>												
 			</div>
 		</div>
 		<div class="d-flex flex-column flex-root">
