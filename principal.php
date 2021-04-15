@@ -100,61 +100,62 @@ License: You must have a valid license purchased only from themeforest(the above
 									<path d="M18 10L12 16L18 22" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 								</svg>
 							</button>
-						</div>
-						<!--begin::Menu Container-->
-						<div id="kt_aside_menu" class="aside-menu mb-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 825px; overflow: hidden;">
-							<!--begin::Menu Nav-->	
-							
-							<ul class="menu-nav nav-pills">
-								<li class="menu-item my-4 botao-menu botao-menu-active mr-20 btn ml-5"  aria-haspopup="true">
-									<a href="principal.php" class="btn rounded ml-2 text-left  ">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4 9.3L12.1 3L20.2 9.3V19.2C20.2 19.6774 20.0104 20.1352 19.6728 20.4728C19.3352 20.8104 18.8774 21 18.4 21H5.8C5.32261 21 4.86477 20.8104 4.52721 20.4728C4.18964 20.1352 4 19.6774 4 19.2V9.3Z" fill="none" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover svg-active"/>
-										</svg>
+							<!--begin::Menu Container-->
+							<div id="kt_aside_menu" class="aside-menu mb-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 825px; overflow: hidden;">
+								<!--begin::Menu Nav-->	
+								
+								<ul class="menu-nav nav-pills">
+									<li class="menu-item my-4 botao-menu botao-menu-active mr-20 btn ml-5"  aria-haspopup="true">
+										<a href="principal.php" class="btn rounded ml-2 text-left  ">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M4 9.3L12.1 3L20.2 9.3V19.2C20.2 19.6774 20.0104 20.1352 19.6728 20.4728C19.3352 20.8104 18.8774 21 18.4 21H5.8C5.32261 21 4.86477 20.8104 4.52721 20.4728C4.18964 20.1352 4 19.6774 4 19.2V9.3Z" fill="none" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover svg-active"/>
+											</svg>
 
-										<span class="menu-text texto-menu-active texto-menu "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
-									</a>
-								</li>
-						
-								<li class="menu-item my-4  mr-20 btn ml-5 botao-menu" aria-haspopup="true" data-menu-toggle="hover">
-									<a href="appCliente/listar_tipo.php" class="btn rounded ml-2 text-left  ">
-										<svg  width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M17.2 1H2.8C1.80589 1 1 1.80589 1 2.8V11.8C1 12.7941 1.80589 13.6 2.8 13.6H17.2C18.1941 13.6 19 12.7941 19 11.8V2.8C19 1.80589 18.1941 1 17.2 1Z" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
-											<path d="M8.20001 17.2H11.8" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
-											<path d="M10 13.6V17.2" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
+											<span class="menu-text texto-menu-active texto-menu "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
+										</a>
+									</li>
+							
+									<li class="menu-item my-4  mr-20 btn ml-5 botao-menu" aria-haspopup="true" data-menu-toggle="hover">
+										<a href="appCliente/listar_tipo.php" class="btn rounded ml-2 text-left  ">
+											<svg  width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.2 1H2.8C1.80589 1 1 1.80589 1 2.8V11.8C1 12.7941 1.80589 13.6 2.8 13.6H17.2C18.1941 13.6 19 12.7941 19 11.8V2.8C19 1.80589 18.1941 1 17.2 1Z" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
+												<path d="M8.20001 17.2H11.8" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
+												<path d="M10 13.6V17.2" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
+											</svg>
+											<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
+										</a>
+									</li>
+									<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true" data-menu-toggle="hover">
+										<a href="appCliente/listar_minhas_midias.php" class="btn rounded ml-2 text-left  ">
+											<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+												<path d="M8 11L11 14L21 4" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
+												<path d="M20 12V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H4C3.46957 21 2.96086 20.7893 2.58579 20.4142C2.21071 20.0391 2 19.5304 2 19V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H15" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
+											</svg>
+											<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mídias alugadas</font></font></span>
+										</a>
+									</li>
+									<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true" data-menu-toggle="hover">
+										<a href="/metronic/demo1/index.html" class="btn rounded ml-2 text-left ">
+											<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M11.9091 3V21" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
+												<path d="M16 6.27271H9.86364C9.10415 6.27271 8.37578 6.57441 7.83874 7.11144C7.3017 7.64848 7 8.37686 7 9.13634C7 9.89582 7.3017 10.6242 7.83874 11.1612C8.37578 11.6983 9.10415 12 9.86364 12H13.9545C14.714 12 15.4424 12.3017 15.9794 12.8387C16.5165 13.3758 16.8182 14.1041 16.8182 14.8636C16.8182 15.6231 16.5165 16.3515 15.9794 16.8885C15.4424 17.4255 14.714 17.7273 13.9545 17.7273H7" class="svg-hover" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+	
+											<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
+										</a>
+									</li>
+								</ul>
+								<div class="position-fixed bottom-0 ml-8 mb-6">
+									<div class="ml-2 text-left">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
-										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
-									</a>
-								</li>
-								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true" data-menu-toggle="hover">
-									<a href="appCliente/listar_minhas_midias.php" class="btn rounded ml-2 text-left  ">
-										<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
-											<path d="M8 11L11 14L21 4" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
-											<path d="M20 12V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H4C3.46957 21 2.96086 20.7893 2.58579 20.4142C2.21071 20.0391 2 19.5304 2 19V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H15" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
-										</svg>
-										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mídias alugadas</font></font></span>
-									</a>
-								</li>
-								<li class="menu-item my-4 botao-menu mr-20 btn ml-5" aria-haspopup="true" data-menu-toggle="hover">
-									<a href="/metronic/demo1/index.html" class="btn rounded ml-2 text-left ">
-										<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M11.9091 3V21" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover"/>
-											<path d="M16 6.27271H9.86364C9.10415 6.27271 8.37578 6.57441 7.83874 7.11144C7.3017 7.64848 7 8.37686 7 9.13634C7 9.89582 7.3017 10.6242 7.83874 11.1612C8.37578 11.6983 9.10415 12 9.86364 12H13.9545C14.714 12 15.4424 12.3017 15.9794 12.8387C16.5165 13.3758 16.8182 14.1041 16.8182 14.8636C16.8182 15.6231 16.5165 16.3515 15.9794 16.8885C15.4424 17.4255 14.714 17.7273 13.9545 17.7273H7" class="svg-hover" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										</svg>
- 
-										<span class="menu-text texto-menu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
-									</a>
-								</li>
-							</ul>
-							<div class="position-fixed bottom-0 ml-8 mb-6">
-								<div class="ml-2 text-left">
-									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									<a href="principal.php" class="menu-text text-primary"><font style="vertical-align: inherit;">Fale conosco</font></a>
-								</div>
-							</div>							
+										<a href="principal.php" class="menu-text text-primary"><font style="vertical-align: inherit;">Fale conosco</font></a>
+									</div>
+								</div>							
+							</div>
 						</div>
+						
 					</div>
 					
 					<!--end::Aside Menu-->
