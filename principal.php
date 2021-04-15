@@ -101,6 +101,14 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Menu Container-->
 						<div id="kt_aside_menu" class="aside-menu my-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 825px; overflow: hidden;">
 							<!--begin::Menu Nav-->
+							<div>
+								<button class="kt-aside__brand-aside-toggler btn btn-sm px-0 ml-32 position-relative" id="kt_aside_toggle">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="16" cy="16" r="16" fill="#B721FF"/>
+										<path d="M18 10L12 16L18 22" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</div>	
 							<ul class="menu-nav nav-pills">
 								<li class="menu-item my-4 botao-menu botao-menu-active mr-20 btn ml-5"  aria-haspopup="true">
 									<a href="principal.php" class="btn rounded ml-2 text-left  ">
@@ -111,14 +119,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="menu-text texto-menu-active texto-menu "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
 									</a>
 								</li>
-								<div>
-									<button class="kt-aside__brand-aside-toggler btn btn-sm px-0 ml-32 position-relative" id="kt_aside_toggle">
-										<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<circle cx="16" cy="16" r="16" fill="#B721FF"/>
-											<path d="M18 10L12 16L18 22" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										</svg>
-									</button>
-								</div>							
+						
 								<li class="menu-item my-4  mr-20 btn ml-5 botao-menu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="appCliente/listar_tipo.php" class="btn rounded ml-2 text-left  ">
 										<svg  width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
