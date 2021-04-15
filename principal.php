@@ -92,8 +92,8 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--incio do sidebar-->				
 				<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto border-right" id="kt_aside" style="margin-top:56px;">
 					<!--begin::Aside Menu-->
-					<div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
-						<div class="d-flex">
+					<div class="aside-menu-wrapper flex-column-fluid position-relative" id="kt_aside_menu_wrapper">
+						<div class="position-absolute mt-8">
 							<button class="kt-aside__brand-aside-toggler btn btn-sm px-0  position-relative" id="kt_aside_toggle" style="margin-left:246px; z-index:1;">
 								<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<circle cx="16" cy="16" r="16" fill="#B721FF"/>
