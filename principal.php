@@ -124,6 +124,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>							
 						</div>
 					</div>
+					
+					<!--end::Aside Menu-->
+				</div>
+				<!--begin::Wrapper-->
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper" style="margin-left: 265px;">
 					<div class="navbar py-3 border-bottom">
 						<!--begin::Logo-->
 						<a href="/metronic/demo1/index.html" class="brand-logo ml-8">
@@ -150,10 +155,6 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>												
 						</div>
 					</div>
-					<!--end::Aside Menu-->
-				</div>
-				<!--begin::Wrapper-->
-				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper" style="margin-left: 265px;">
 					<!--begin::Container-->
 					<div class="d-flex flex-row flex-column-fluid ">
 						<!--begin::Content Wrapper-->
