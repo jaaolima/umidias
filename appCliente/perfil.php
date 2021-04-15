@@ -77,11 +77,33 @@ License: You must have a valid license purchased only from themeforest(the above
 														</span>																									                                          
 													</a>
 													<div class="dropdown-menu">
-														<a class="dropdown-item" href="#">Trocar foto</a>
+														<a class="dropdown-item" href="#" data-toggle="modal" data-target="#Foto">Trocar foto</a>
 														<a class="dropdown-item" href="#">Excluir foto</a>
 													</div>	       																									 
 												 </div>               										
                                             </div>
+											<div class="modal fade" id="Foto">
+												<div class="modal-dialog modal-lg" role="document">
+													<div class="modal-content">
+														<div class="modal-body align-items-center">
+															<div class="">
+																<p class="texto-negrito">Trocar imagem do perfil</p>
+															</div>
+															<div>
+
+															</div>
+															<div>
+																<p class="texto-fraco">ou</p>
+															</div>
+															<div class="d-inline">
+																<button class="btn btn-outline-primary">Escolher foto</button>
+																<a class="text-pimary">Cancelar</a>
+															</div>
+														
+														</div>
+													</div>
+												</div>
+											</div>
                                             <div class="my-6 d-flex">
                                                 <div class="col-6">
                                                     <span class="texto-chumbo">Nome do usuário</span>
