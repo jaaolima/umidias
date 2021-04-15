@@ -169,7 +169,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
 									<!--begin::Header Menu-->
 									<div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
-				 						<div class="my-3 d-flex">
+				 						<div class=" d-flex">
 											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 												<path d="M16 2V6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
