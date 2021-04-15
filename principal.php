@@ -59,7 +59,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Main-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Page-->
-			<div class="container">
+			<div class="container fixed">
 				<div class="navbar py-3 border-bottom">
 					<!--begin::Logo-->
 					<a href="/metronic/demo1/index.html" class="brand-logo ml-8">
