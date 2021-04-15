@@ -68,7 +68,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                             <div class="my-6 d-flex" id="kt_quick_user_toggle">
 											 	<div class="dropdown">
-													<a id="dropdown" class="dropdown symbol symbol-circle symbol-80 symbol-light-success overlay" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<a class=" symbol symbol-circle symbol-80 symbol-light-success overlay" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 														<img src="assets/media/maria.jpg" class="symbol-label font-size-h5 font-weight-bold overlay-wrapper"alt=""> 
 														<span class="overlay-layer symbol-circle " >
 															<svg class="symbol-circle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +76,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															</svg>
 														</span>																									                                          
 													</a>
-													<div class="dropdown-menu" aria-labelledby="dropdown">
+													<div class="dropdown-menu">
 														<a class="dropdown-item" href="#">Trocar foto</a>
 														<a class="dropdown-item" href="#">Excluir foto</a>
 													</div>														 
