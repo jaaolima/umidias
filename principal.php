@@ -57,7 +57,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Body-->
 	<body id="kt_body" class="header-fixed subheader-enabled page-loading">
 		<!--begin::Main-->
-		<header class="position-fixed w-100 bg-white">
+		<header class="position-fixed w-100 bg-white" style="z-index:1;">
 			<div class="navbar py-3 border-bottom">
 				<!--begin::Logo-->
 				<a href="/metronic/demo1/index.html" class="brand-logo ml-8">
