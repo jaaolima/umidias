@@ -65,10 +65,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				</a>
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
-					<!--<div class="text-right">
-						<span class="text-dark font-weight-bolder font-size-base d-none d-md-inline mr-3">Olá, <?php echo $dadosUsuario['ds_nome'] ?></span><br>
-						<span class="text-dark font-weight-bold font-size-base d-flex d-md-inline mr-1"><?php echo $dadosUsuario['ds_email'] ?></span>
-					</div>-->
 					<div class="dropdown">
 						<a href="#" class="mr-2 dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,8 +165,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-row flex-column-fluid ">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
-							
-							<div class="container-fluid d-flex align-items-stretch justify-content-between mt-10" style="padding-right: 30px; padding-left: 40px;">
+							<div class="content flex-column-fluid" id="conteudo">
 								<div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
 									<!--begin::Header Menu-->
 									<div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
@@ -186,10 +181,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<!--end::Header Menu-->
 								</div>
-								
-								
-							</div>
-							<div class="content flex-column-fluid" id="conteudo">
 								<div class="mb-8 ">
 									<h1 class="h1-titulo">Dashboard</h1>
 								</div>
