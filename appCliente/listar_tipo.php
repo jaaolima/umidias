@@ -44,71 +44,68 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Body-->
 	<body id="kt_body" class="header-fixed subheader-enabled page-loading">
 		<!--begin::Main-->
-		<div class="content">
-			<div class="d-flex flex-column flex-root">
-				<!--begin::Page-->
-				<div class="d-flex flex-row flex-column-fluid page">
-					<!--begin::Wrapper-->
-					<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-						<!--begin::Container-->
-						<div class="d-flex flex-row flex-column-fluid ">
-							<!--begin::Content Wrapper-->
-							<div class="main d-flex flex-column flex-row-fluid">
-								<div class="mb-8 ">
-									<h1 class="h1-titulo">Selecione o tipo de mídia</h1>
-								</div>
-								<div class="row">
-									<div class="col-xl-12">
-										<!--begin::Tiles Widget 25-->
-										<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
-											<div class="card-body d-flex">
-												<div class="d-flex py-5 flex-column align-items-start flex-grow-1 justify-content-center">
-													<div class="flex-grow-1" style="display: inherit;">
-														<h3  class="titulo-div">Alugue sua mídia</h3>
-													</div>
-													<div class="row m-0 col-12 justify-content-center" >
-													<?php
-														while($dados = $retorno->fetch())
-														{ 
-														$valor = count($dados) -1;
-														/*$penultimo = $dados[ count($dados) - 2  ];								
-														$borda = if($penultimo = $dados){echo 'border-right'};*/
-														$tamanho = 100/ $valor;
-														
-															echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'% ;">
-																		<span class="svg-icon svg-icon-3x svg-icon-white d-block my-2">
-																			<svg width="50" height="46" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-																				<path d="M44.2 1H5.8C3.14903 1 1 3.14903 1 5.8V29.8C1 32.451 3.14903 34.6 5.8 34.6H44.2C46.851 34.6 49 32.451 49 29.8V5.8C49 3.14903 46.851 1 44.2 1Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-																				<path d="M20.2 44.2H29.8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-																				<path d="M25 34.6001V44.2001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-																			</svg>
-																		</span>
-																		<p  class="titulo-midia d-block ">'.$dados["ds_nome"].'</p>
-																		<a href="appCliente/appOutdoor/listar_midia.php" class="btn btn-primary" type="button" >Alugar mídia</a>
-																	</div>';
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Page-->
+			<div class="d-flex flex-row flex-column-fluid page">
+				<!--begin::Wrapper-->
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+					<!--begin::Container-->
+					<div class="d-flex flex-row flex-column-fluid ">
+						<!--begin::Content Wrapper-->
+						<div class="main d-flex flex-column flex-row-fluid">
+							<div class="mb-8 ">
+								<h1 class="h1-titulo">Selecione o tipo de mídia</h1>
+							</div>
+							<div class="row">
+								<div class="col-xl-12">
+									<!--begin::Tiles Widget 25-->
+									<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
+										<div class="card-body d-flex">
+											<div class="d-flex py-5 flex-column align-items-start flex-grow-1 justify-content-center">
+												<div class="flex-grow-1" style="display: inherit;">
+													<h3  class="titulo-div">Alugue sua mídia</h3>
+												</div>
+												<div class="row m-0 col-12 justify-content-center" >
+												<?php
+													while($dados = $retorno->fetch())
+													{ 
+													$valor = count($dados) -1;
+													/*$penultimo = $dados[ count($dados) - 2  ];								
+													$borda = if($penultimo = $dados){echo 'border-right'};*/
+													$tamanho = 100/ $valor;
+													
+														echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'% ;">
+																	<span class="svg-icon svg-icon-3x svg-icon-white d-block my-2">
+																		<svg width="50" height="46" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M44.2 1H5.8C3.14903 1 1 3.14903 1 5.8V29.8C1 32.451 3.14903 34.6 5.8 34.6H44.2C46.851 34.6 49 32.451 49 29.8V5.8C49 3.14903 46.851 1 44.2 1Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																			<path d="M20.2 44.2H29.8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																			<path d="M25 34.6001V44.2001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																		</svg>
+																	</span>
+																	<p  class="titulo-midia d-block ">'.$dados["ds_nome"].'</p>
+																	<a href="appCliente/appOutdoor/listar_midia.php" class="btn btn-primary" type="button" >Alugar mídia</a>
+																</div>';
 
-														}																	
-													?>
-													</div>
+													}																	
+												?>
 												</div>
 											</div>
 										</div>
-										<!--end::Tiles Widget 25-->
 									</div>
+									<!--end::Tiles Widget 25-->
 								</div>
-								<!--end::Content-->
 							</div>
-							<!--begin::Content Wrapper-->
+							<!--end::Content-->
 						</div>
-						<!--end::Container-->
-						
+						<!--begin::Content Wrapper-->
 					</div>
-					<!--end::Wrapper-->
+					<!--end::Container-->
+					
 				</div>
-				<!--end::Page-->
+				<!--end::Wrapper-->
 			</div>
+			<!--end::Page-->
 		</div>
-			
 		<!--end::Main-->
 		<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
 		<!--begin::Global Config(global config for global JS scripts)-->
