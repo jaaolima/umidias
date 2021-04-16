@@ -253,6 +253,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<?php
 																		while($dados = $retorno->fetch())
 																		{ 
+																		var_dump($dados["id_midia"]);
 																		$valor = count($dados) -1;
 																		$tamanho = 100/ $valor;
 																			if($dados["id_midia"] == end($dados["id_midia"])){ 
