@@ -115,6 +115,25 @@ $('.botao-menu').click(function (e)
 	});
 
 
+  $('.botao-menu-dashboard').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-dashboard').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-dashboard').addClass('texto-menu-active');
+
+	});
+
+  $('.botao-menu-alugar').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-alugar').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-alugar').addClass('texto-menu-active');
+
+	});
+
+
 
 
 
