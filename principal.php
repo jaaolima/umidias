@@ -66,11 +66,13 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
 					<div class="dropdown">
-						<a href="#" class="mr-2 dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M6 9L12 15L18 9" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-						</a>
+						<div  class="mr-2" data-toggle="dropdown" aria-expanded="false">
+							<a href="#">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6 9L12 15L18 9" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</a>	
+						</div>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="appCliente/perfil.php">Minha conta</a>
 							<div class="dropdown-divider mx-5"></div>
