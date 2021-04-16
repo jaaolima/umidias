@@ -28,20 +28,16 @@ License: You must have a valid license purchased only from themeforest(the above
 	<head><base href="../../../">
 		<meta charset="utf-8" />
 		<title>List 4 Columns | Keenthemes</title>
-		<meta name="description" content="Updates and statistics" />
+		<meta name="description" content="User 4 columns listing" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
-		<!--begin::Page Vendors Styles(used by this page)-->
-		<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-		<!--end::Page Vendors Styles-->
 		<!--begin::Global Theme Styles(used by all pages)-->
-		<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />	
+		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
@@ -177,21 +173,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
 		<script src="assets/js/scripts.bundle2.min.js"></script>
-		<!--begin::Page Vendors(used by this page)-->
-		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-		<!--end::Page Vendors-->
-		<!--begin::Page Scripts(used by this page)-->
-		<script src="assets/js/pages/crud/datatables/basic/basic.js"></script>
-		<!--end::Page Scripts-->
 		<!--end::Global Theme Bundle-->
-		<!--begin::Page Vendors(used by this page)-->
-		<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-		<!--end::Page Vendors-->
-		<!--begin::Page Scripts(used by this page)-->
-		<script src="assets/js/pages/widgets.js"></script>
-		<script src="assets/js/custom.js"></script>
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM&callback=initialize"></script>
-		<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
 	</body>
 	<!--end::Body-->
 </html>
