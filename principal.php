@@ -253,7 +253,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<?php
 																		while($dados = $retorno->fetch())
 																		{ 
-																		echo $dados[ count($dados) - 1  ];
+																		echo end($dados);
 																		$valor = count($dados) -1;
 																		/*$penultimo = $dados[ count($dados) - 2  ];								
 																		$borda = if($penultimo = $dados){echo 'border-right'};*/
