@@ -169,7 +169,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-row flex-column-fluid ">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
-							<div class="flex-column-fluid" id="conteudo">
+							<div class="content flex-column-fluid" id="conteudo">
 								<div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
 									<!--begin::Header Menu-->
 									<div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
