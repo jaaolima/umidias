@@ -85,9 +85,9 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="modal fade" id="Foto">
 												<div class="modal-dialog modal-lg" role="document">
 													<div class="modal-content">
-														<div class="modal-body align-items-center">
+														<div class="modal-body text-center">
 															<div class="">
-																<p class="texto-negrito">Trocar imagem do perfil</p>
+																<h3 class="texto-negrito">Trocar imagem do perfil</h3>
 															</div>
 															<div>
 
@@ -95,7 +95,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															<div>
 																<p class="texto-fraco">ou</p>
 															</div>
-															<div class="d-inline">
+															<div class=""style="display:inline-grid;">
 																<button class="btn btn-outline-primary">Escolher foto</button>
 																<a class="text-pimary">Cancelar</a>
 															</div>

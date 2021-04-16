@@ -5515,6 +5515,8 @@ a.close.disabled {
   z-index: 1050;
   display: none;
   width: 100%;
+  max-width: 466px;
+  max-height:511px;
   height: 100%;
   overflow: hidden;
   outline: 0; }
