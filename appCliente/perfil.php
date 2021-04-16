@@ -100,11 +100,11 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<p class="texto-chumbo">Arraste e solte a sua imagem aqui</p>
 																</div>
 															</div>
-															<div>
+															<div class="my4">
 																<p class="texto-fraco">ou</p>
 															</div>
-															<div class=""style="display:inline-grid;">
-																<button class="btn btn-outline-primary">Escolher foto</button>
+															<div class="my4"style="display:inline-grid;">
+																<button class="btn btn-outline-primary mb-4">Escolher foto</button>
 																<a class="text-pimary">Cancelar</a>
 															</div>
 														
