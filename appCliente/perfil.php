@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<p class="texto-chumbo">Arraste e solte a sua imagem aqui</p>
 																</div>
 															</div>
-															<div class="my4">
+															<div class="my-4">
 																<p class="texto-fraco">ou</p>
 															</div>
 															<div class="my4 w-100"style="display:inline-grid;">
