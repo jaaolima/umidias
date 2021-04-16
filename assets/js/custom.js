@@ -129,6 +129,24 @@ $('.botao-menu').click(function (e)
 
 	});
 
+  $('.botao-menu-alugadas').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-alugadas').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-alugadas').addClass('texto-menu-active');
+
+	});
+
+  $('.botao-menu-financeiro').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-financeiro').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-financeiro').addClass('texto-menu-active');
+
+	});
+
 
 
 
