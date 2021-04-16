@@ -252,7 +252,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<div class="row m-0 col-12 justify-content-center" >
 																	<?php
 																		$dadosF = $retorno->fetch();
-																		var_dump($dadosF);
+																		var_dump($dadosF["id_midia"]);
 																	
 																		while($dados = $retorno->fetch())
 																		{ 
