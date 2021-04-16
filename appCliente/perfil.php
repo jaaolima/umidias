@@ -83,7 +83,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												 </div>               										
                                             </div>
 											<div class="modal fade" id="Foto">
-												<div class="modal-dialog modal-md" role="document">
+												<div class="modal-dialog modal-sm" role="document">
 													<div class="modal-content">
 														<div class="modal-body text-center">
 															<div class="my-4">

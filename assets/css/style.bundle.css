@@ -5692,7 +5692,7 @@ a.close.disabled {
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
   .modal-sm {
-    max-width: 300px; } }
+    max-width: 466px; } }
 
 @media (min-width: 992px) {
   .modal-lg,
