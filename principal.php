@@ -256,6 +256,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																	
 																		while($dados = $retorno->fetch())
 																		{ 
+																		var_dump($dados["id_midia"]);
 																		$valor = count($dados) -1;
 																		/*$penultimo = $dados[ count($dados) - 2  ];								
 																		$borda = if($penultimo = $dados){echo 'border-right'};*/
