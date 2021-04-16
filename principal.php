@@ -251,6 +251,9 @@ License: You must have a valid license purchased only from themeforest(the above
 																</div>
 																<div class="row m-0 col-12 justify-content-center" >
 																	<?php
+																		$dadosF = $retorno->fetch();
+																		var_dump($dadosF);
+																	
 																		while($dados = $retorno->fetch())
 																		{ 
 																		$valor = count($dados) -1;
