@@ -267,6 +267,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/js/scripts.bundle.js"></script>
 		<script src="assets/js/scripts.bundle2.min.js"></script>
 		<script src="assets/js/appCliente/perfil.js"></script>
+		<script src="assets\dropzone-5.7.0\dist\dropzone.js"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
