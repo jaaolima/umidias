@@ -219,7 +219,6 @@ License: You must have a valid license purchased only from themeforest(the above
 													<legend class="legend-border">Nome Completo</legend>
 												</fieldset>
                                             </div>
-                                            <div class="separator separator-solid"></div>
 											<div class="row">
 												<div class="my-6 d-flex col-6">
 													<fieldset class="fieldset-border ml-4 w-100">
@@ -232,11 +231,9 @@ License: You must have a valid license purchased only from themeforest(the above
 													</fieldset>                                                 
 												</div>
 											</div>	
-                                            <div class="separator separator-solid"></div>
                                             <div class="my-6 d-flex">                                           
                                                 <a href="" class="text-primary">Resetar senha</a>
                                             </div>
-                                            <div class="separator separator-solid"></div>
                                             
                                         </div>
                                     </div>
