@@ -235,7 +235,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             
                                         </div>
                                     </div>
-									<div class="justify-content-end">
+									<div class="text-end py-8">
 										<a href="">Cancelar</a>
 										<button class="btn btn-primary">Salvar alterações</button>
 									</div>
