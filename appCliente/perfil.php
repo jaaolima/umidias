@@ -235,8 +235,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                             
                                         </div>
                                     </div>
-									<div class="text-end py-8">
-										<a href="">Cancelar</a>
+									<div class="text-right py-8">
+										<a href="#" id="botao_voltar">Cancelar</a>
 										<button class="btn btn-primary">Salvar alterações</button>
 									</div>
 								</div>
