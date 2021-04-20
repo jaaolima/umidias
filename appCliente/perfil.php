@@ -226,7 +226,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<legend class="legend-border">E-mail</legend>
 													</fieldset>                                               
 												</div>
-												<div class="my-6 d-flex col6" >
+												<div class="my-6 d-flex col-6" >
 													<fieldset class="fieldset-border ml-4 w-100">
 														<legend class="legend-border">CPF</legend>
 													</fieldset>                                                 
