@@ -212,24 +212,24 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 												</div>
 											</div>
-                                            <div class="my-6 d-flex">
+                                            <div class=" d-flex">
 												<fieldset class="fieldset-border w-100">
 													<legend class="legend-border">Nome Completo</legend>
 												</fieldset>
                                             </div>
 											<div class="row">
-												<div class="my-6 d-flex col-6">
+												<div class=" d-flex col-6">
 													<fieldset class="fieldset-border w-100">
 														<legend class="legend-border">E-mail</legend>
 													</fieldset>                                               
 												</div>
-												<div class="my-6 d-flex col-6" >
+												<div class=" d-flex col-6" >
 													<fieldset class="fieldset-border w-100">
 														<legend class="legend-border">CPF</legend>
 													</fieldset>                                                 
 												</div>
 											</div>	
-                                            <div class="my-6 d-flex">                                           
+                                            <div class=" d-flex">                                           
                                                 <a href="" class="text-primary">Resetar senha</a>
                                             </div>
                                             
