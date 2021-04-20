@@ -215,13 +215,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class=" d-flex">
 												<fieldset class="fieldset-border w-100">
 													<legend class="legend-border">Nome Completo</legend>
-													<input class="border-0 w-100" type="text" value="<?php echo $dadosUsuario['ds_nome'] ?>">
+													<input class="border-0 w-100" type="text" id="ds_nome"value="<?php echo $dadosUsuario['ds_nome'] ?>">
                                             </div>
 											<div class="row">
 												<div class=" d-flex col-6">
 													<fieldset class="fieldset-border w-100">
 														<legend class="legend-border">E-mail</legend>
-														<input class="border-0 w-100" type="text" value="<?php echo $dadosUsuario['ds_email'] ?>">
+														<input class="border-0 w-100" type="text" id="ds_email" value="<?php echo $dadosUsuario['ds_email'] ?>">
 													</fieldset>                                               
 												</div>
 												<div class=" d-flex col-6" >
@@ -239,7 +239,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
 									<div class="text-right py-8">
 										<a href="#" id="botao_voltar">Cancelar</a>
-										<button class="btn btn-primary ml-10">Salvar alterações</button>
+										<button id="salvar" class="btn btn-primary ml-10">Salvar alterações</button>
 									</div>
 								</div>
 								
