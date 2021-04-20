@@ -230,7 +230,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<input class="border-0 w-100" type="text">
 													</fieldset>                                                 
 												</div>
-												<input class="border-0 w-100" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $dadosUsuario['id_usuario'] ?>">
+												<input class="border-0 w-100" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario ?>">
 											</div>	
                                             <div class="my-6 d-flex">                                           
                                                 <a href="" class="text-primary">Resetar senha</a>
