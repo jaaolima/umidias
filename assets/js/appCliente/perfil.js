@@ -11,5 +11,7 @@ $(document).ready(function(){
         $("#perfil").removeClass("d-none");
     })
 
+    window.Dropzone;
+
 
 })
