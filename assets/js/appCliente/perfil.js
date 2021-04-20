@@ -26,7 +26,7 @@ $(document).ready(function(){
 		                showConfirmButton: true
 		            });
 		            
-					redirectTo("appCliente/alterar_cadastro.php");
+					redirectTo("appCliente/perfil.php");
 		        }
 				, error: function (data) {
 					swal.fire("Erro", data.responseText, "error");
