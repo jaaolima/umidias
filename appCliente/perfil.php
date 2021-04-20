@@ -160,7 +160,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                     </div>
 								</div>
-								<div class="col-xl-12 d-none" id="editar" >
+								<div class="col-xl-12 d-none h-auto" id="editar" >
                                     <div class="card card-custom card-stretch">
                                         <div class="p-10">
                                             <div class="my-6">
@@ -237,7 +237,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
 									<div class="text-right py-8">
 										<a href="#" id="botao_voltar">Cancelar</a>
-										<button class="btn btn-primary">Salvar alterações</button>
+										<button class="btn btn-primary ml-10">Salvar alterações</button>
 									</div>
 								</div>
 								
