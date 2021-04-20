@@ -160,7 +160,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                     </div>
 								</div>
-								<div class="col-xl-12" type="hidden" >
+								<div class="col-xl-12" style="content-visibility:hidden;" >
                                     <div class="card card-custom card-stretch">
                                         <div class="p-10">
                                             <div class="my-6">
