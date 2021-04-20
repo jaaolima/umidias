@@ -160,7 +160,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                     </div>
 								</div>
-								<div class="col-xl-12" style="content-visibility:hidden;" >
+								<div class="col-xl-12 d-none"  >
                                     <div class="card card-custom card-stretch">
                                         <div class="p-10">
                                             <div class="my-6">
@@ -262,6 +262,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
 		<script src="assets/js/scripts.bundle2.min.js"></script>
+		<script src="assets/js/appCliente/perfil.js"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
