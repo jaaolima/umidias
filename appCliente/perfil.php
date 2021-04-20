@@ -215,16 +215,19 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class=" d-flex">
 												<fieldset class="fieldset-border w-100">
 													<legend class="legend-border">Nome Completo</legend>
+													<input class="border-0" type="text" value="<? echo $dadosUsuario['ds_nome'] ?>">
                                             </div>
 											<div class="row">
 												<div class=" d-flex col-6">
 													<fieldset class="fieldset-border w-100">
 														<legend class="legend-border">E-mail</legend>
+														<input class="border-0" type="text" value="<? echo $dadosUsuario['ds_email'] ?>">
 													</fieldset>                                               
 												</div>
 												<div class=" d-flex col-6" >
 													<fieldset class="fieldset-border w-100">
 														<legend class="legend-border">CPF</legend>
+														<input class="border-0" type="text">
 													</fieldset>                                                 
 												</div>
 											</div>	
