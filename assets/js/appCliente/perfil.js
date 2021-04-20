@@ -1,7 +1,8 @@
 $(document).ready(function(){
-    $("#editar").on("click", function(){
+    $("#botao_editar").on("click", function(){
 
-        $("#perfil").addClass("d-none")
+        $("#perfil").addClass("d-none");
+        $("#editar").removeClass("d-none");
     })
 
 
