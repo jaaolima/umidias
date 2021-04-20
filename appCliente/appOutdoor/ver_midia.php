@@ -69,7 +69,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								
 								<!--begin::Row-->
 								<div class="row">
-									<div class="col-8">
+									<div class="col-7">
 										<div class="mb-8">
 											<div class="mb-12">
 												<h1 class="h1-titulo">St. Central - Taguatinga </h1>
@@ -90,7 +90,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<div class="col-4">
+									<div class="col-5">
 										<div class="card card-custom card-stretch gutter-b box-shadow">
 											<div class="my-6 mx-6 d-flex">	
 												<div>
