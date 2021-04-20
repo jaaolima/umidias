@@ -160,8 +160,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                     </div>
 								</div>
-								<div class="col-xl-12 d-none h-auto" id="editar" >
-                                    <div class="card card-custom card-stretch">
+								<div class="col-xl-12 d-none" id="editar" >
+                                    <div class="card card-custom card-stretch  h-auto">
                                         <div class="p-10">
                                             <div class="my-6">
                                                 <h4 class="font-weight-bolder">Perfil</h4>
@@ -229,7 +229,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</fieldset>                                                 
 												</div>
 											</div>	
-                                            <div class=" d-flex">                                           
+                                            <div class="my-6 d-flex">                                           
                                                 <a href="" class="text-primary">Resetar senha</a>
                                             </div>
                                             
