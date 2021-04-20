@@ -641,6 +641,8 @@ color: #B721FF !important;
   width: auto;
   padding: 0 10px;
   border-bottom: none;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
 }
 
 
