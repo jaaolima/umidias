@@ -215,7 +215,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class=" d-flex">
 												<fieldset class="fieldset-border w-100">
 													<legend class="legend-border">Nome Completo</legend>
-												</fieldset>
+													<input type="text">
                                             </div>
 											<div class="row">
 												<div class=" d-flex col-6">
