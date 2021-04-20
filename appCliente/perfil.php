@@ -60,7 +60,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<h1 class="h1-titulo">Informações pessoais</h1>
 							</div>
 							<div class="row">
-								<div class="col-xl-12">
+								<div class="col-xl-12" id="perfil">
                                     <div class="card card-custom card-stretch">
                                         <div class="p-10">
                                             <div class="my-6">
