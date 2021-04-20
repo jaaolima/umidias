@@ -235,11 +235,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                             
                                         </div>
                                     </div>
+									<div class="justify-content-end">
+										<a href="">Cancelar</a>
+										<button class="btn btn-primary">Salvar alterações</button>
+									</div>
 								</div>
-								<div class="justify-content-end">
-									<a href="">Cancelar</a>
-									<button class="btn btn-primary">Salvar alterações</button>
-								</div>
+								
 							</div>
 							<!--end::Content-->
 						</div>
