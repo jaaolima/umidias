@@ -212,30 +212,31 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 												</div>
 											</div>
-                                            <div class=" d-flex">
-												<fieldset class="fieldset-border w-100">
-													<legend class="legend-border">Nome Completo</legend>
-													<input class="border-0 w-100" name="ds_nome" type="text" id="ds_nome"value="<?php echo $dadosUsuario['ds_nome'] ?>">
-                                            </div>
-											<div class="row">
-												<div class=" d-flex col-6">
+											<form id="form_usuario">
+												<div class=" d-flex">
 													<fieldset class="fieldset-border w-100">
-														<legend class="legend-border">E-mail</legend>
-														<input class="border-0 w-100" type="text" name="ds_email" id="ds_email" value="<?php echo $dadosUsuario['ds_email'] ?>">
-													</fieldset>                                               
+														<legend class="legend-border">Nome Completo</legend>
+														<input class="border-0 w-100" name="ds_nome" type="text" id="ds_nome"value="<?php echo $dadosUsuario['ds_nome'] ?>">
 												</div>
-												<div class=" d-flex col-6" >
-													<fieldset class="fieldset-border w-100">
-														<legend class="legend-border">CPF</legend>
-														<input class="border-0 w-100" type="text">
-													</fieldset>                                                 
+												<div class="row">
+													<div class=" d-flex col-6">
+														<fieldset class="fieldset-border w-100">
+															<legend class="legend-border">E-mail</legend>
+															<input class="border-0 w-100" type="text" name="ds_email" id="ds_email" value="<?php echo $dadosUsuario['ds_email'] ?>">
+														</fieldset>                                               
+													</div>
+													<div class=" d-flex col-6" >
+														<fieldset class="fieldset-border w-100">
+															<legend class="legend-border">CPF</legend>
+															<input class="border-0 w-100" type="text">
+														</fieldset>                                                 
+													</div>
+													<input class="border-0 w-100" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario ?>">
+												</div>	
+												<div class="my-6 d-flex">                                           
+													<a href="" class="text-primary">Resetar senha</a>
 												</div>
-												<input class="border-0 w-100" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario ?>">
-											</div>	
-                                            <div class="my-6 d-flex">                                           
-                                                <a href="" class="text-primary">Resetar senha</a>
-                                            </div>
-                                            
+											</form>                                                                                
                                         </div>
                                     </div>
 									<div class="text-right py-8">

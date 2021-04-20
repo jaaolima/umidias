@@ -26,8 +26,7 @@ $(document).ready(function(){
 		                showConfirmButton: true
 		            });
 		            
-                    $("#editar").addClass("d-none");
-                    $("#perfil").removeClass("d-none");
+					redirectTo("appCliente/alterar_cadastro.php");
 		        }
 				, error: function (data) {
 					swal.fire("Erro", data.responseText, "error");
