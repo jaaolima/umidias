@@ -26,7 +26,8 @@ $(document).ready(function(){
 		                showConfirmButton: true
 		            });
 		            
-					redirectTo("appUsuario/listar_usuario.php");
+                    $("#editar").addClass("d-none");
+                    $("#perfil").removeClass("d-none");
 		        }
 				, error: function (data) {
 					swal.fire("Erro", data.responseText, "error");

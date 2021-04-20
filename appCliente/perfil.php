@@ -215,13 +215,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class=" d-flex">
 												<fieldset class="fieldset-border w-100">
 													<legend class="legend-border">Nome Completo</legend>
-													<input class="border-0 w-100" type="text" id="ds_nome"value="<?php echo $dadosUsuario['ds_nome'] ?>">
+													<input class="border-0 w-100" name="ds_nome" type="text" id="ds_nome"value="<?php echo $dadosUsuario['ds_nome'] ?>">
                                             </div>
 											<div class="row">
 												<div class=" d-flex col-6">
 													<fieldset class="fieldset-border w-100">
 														<legend class="legend-border">E-mail</legend>
-														<input class="border-0 w-100" type="text" id="ds_email" value="<?php echo $dadosUsuario['ds_email'] ?>">
+														<input class="border-0 w-100" type="text" name="ds_email" id="ds_email" value="<?php echo $dadosUsuario['ds_email'] ?>">
 													</fieldset>                                               
 												</div>
 												<div class=" d-flex col-6" >
@@ -230,6 +230,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<input class="border-0 w-100" type="text">
 													</fieldset>                                                 
 												</div>
+												<input class="border-0 w-100" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $dadosUsuario['id_usuario'] ?>">
 											</div>	
                                             <div class="my-6 d-flex">                                           
                                                 <a href="" class="text-primary">Resetar senha</a>
