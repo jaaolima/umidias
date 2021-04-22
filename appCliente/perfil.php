@@ -214,9 +214,9 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<form id="form_usuario">
 												<div class=" d-flex">
-													<fieldset class="fieldset-border w-100">
-														<legend class="legend-border">Nome Completo</legend>
-														<input class="border-0 w-100" name="ds_nome" type="text" id="ds_nome"value="<?php echo $dadosUsuario['ds_nome'] ?>">
+													<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+														<legend class="legend-border mb-0">Nome Completo</legend>
+														<input class="border-0 w-100" style="height: 27px;" name="ds_nome" type="text" id="ds_nome"value="<?php echo $dadosUsuario['ds_nome'] ?>">
 												</div>
 												<div class="row">
 													<div class=" d-flex col-6">
