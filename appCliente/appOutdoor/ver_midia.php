@@ -127,14 +127,16 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<div class="d-flex my-6 mx-6">
 												<div class="col-6">
-													<fieldset class="fieldset-border ml-4">
-														<legend class="legend-border">Data inicial</legend>
-													</fieldset>
+													<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+														<legend class="legend-border mb-0">Data Inicial</legend>
+														<input class="border-0 w-100" type="text " style="height: 27px;">
+													</fieldset>   
 												</div>
 												<div class="col-6">
-													<fieldset class="fieldset-border">
-														<legend class="legend-border">Data Final</legend>
-													</fieldset>
+													<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+														<legend class="legend-border mb-0">Data Final</legend>
+														<input class="border-0 w-100" type="text " style="height: 27px;">
+													</fieldset>   
 												</div>												
 											</div>
 											<div class="separator separator-solid"></div>
