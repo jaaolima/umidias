@@ -151,6 +151,7 @@ $('.botao-menu').click(function (e)
     $(this).css({"margin-left": "100px"})
     $('.texto-menu').css({"display": "none"})
     $('#navbar').css({"width": "120px"})
+    $("#kt_wrapper").css({"margin-left" : "120px"})
 
 
   });
