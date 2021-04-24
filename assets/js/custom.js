@@ -148,6 +148,7 @@ $('.botao-menu').click(function (e)
 	});
 
   $('#nav_toggle').click(function(e){
+    $(this).css({"margin-left": "120px"})
     $('#navbar').css({"width": "120px !important"})
 
 
