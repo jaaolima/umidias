@@ -103,10 +103,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								</svg>
 							</button>
 							<button class="kt-aside__brand-aside-toggler btn btn-sm px-0  position-relative d-none" id="nav_toggle_open" style="margin-left:102px; z-index:1;">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M3 12H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path d="M3 6H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path d="M3 18H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="16" cy="16" r="16" fill="#B721FF"/>
+									<path d="M7 16H25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M7 10H25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M7 22H25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 								</svg>
 							</button>
 						</div>
