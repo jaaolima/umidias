@@ -149,7 +149,7 @@ $('.botao-menu').click(function (e)
 
   $('#nav_toggle').click(function(e){
     $(this).css({"display": "none "})
-    $("#nav_toggle_open")).removeClass('d-none')
+    $("#nav_toggle_open").removeClass('d-none')
     $('.texto-menu').css({"display": "none "})
     $('#navbar').css({"width": "120px"})
     $("#kt_wrapper").css({"margin-left" : "120px"})
