@@ -92,7 +92,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="d-flex flex-row flex-column-fluid page">
 				
 				<!--incio do sidebar-->				
-				<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto border-right" id="navbar" style="margin-top:56px;">
+				<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto border-right" id="navbar" style="margin-top:56px; transition:0.5s !important;">
 					<!--begin::Aside Menu-->
 					<div class="aside-menu-wrapper flex-column-fluid position-relative" id="kt_aside_menu_wrapper">
 						<div class="position-absolute mt-8">
@@ -171,7 +171,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 				
 				<!--begin::Wrapper-->
-				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper" style="margin-left: 265px; margin-top: 56px; ">
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper" style="margin-left: 265px; margin-top: 56px; transition:0.5s !important;">
 					
 					<!--begin::Container-->
 					<div class="d-flex flex-row flex-column-fluid ">
