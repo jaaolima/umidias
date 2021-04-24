@@ -148,11 +148,21 @@ $('.botao-menu').click(function (e)
 	});
 
   $('#nav_toggle').click(function(e){
-    $(this).css({"display": "none "})
+    $(this).addClass("d-none")
     $("#nav_toggle_open").removeClass('d-none')
-    $('.texto-menu').css({"display": "none "})
+    $('.texto-menu').addClass("d-none")
     $('#navbar').css({"width": "120px"})
     $("#kt_wrapper").css({"margin-left" : "120px"})
+
+
+  });
+
+  $('#nav_toggle_open').click(function(e){
+    $(this).addClass("d-none")
+    $("#nav_toggle").removeClass('d-none')
+    $('.texto-menu').removeClass('d-none')
+    $('#navbar').css({"width": "265px"})
+    $("#kt_wrapper").css({"margin-left" : "265px"})
 
 
   });
