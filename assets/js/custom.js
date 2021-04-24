@@ -148,7 +148,7 @@ $('.botao-menu').click(function (e)
 	});
 
   $('#nav_toggle').click(function(e){
-    $('#kt_aside').css({"width": "120px;"})
+    $('#navbar').css({"width": "120px;"})
 
 
   });
