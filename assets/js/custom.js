@@ -148,9 +148,9 @@ $('.botao-menu').click(function (e)
 	});
 
   $('#nav_toggle').click(function(e){
-    $(this).css({"margin-left": "120px"})
+    $(this).css({"margin-left": "100px"})
     $('.texto-menu').css({"display": "none"})
-    $('#navbar').css({"width": "120px !important"})
+    $('#navbar').css({"width": "120px"})
 
 
   });
