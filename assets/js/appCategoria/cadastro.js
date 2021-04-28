@@ -33,17 +33,17 @@ $(document).ready(function() {
 
 function validar()
 {
-	if($("#ds_descricao").val() == "")
+	if($("#ds_nome").val() == "")
 	{
-		$("#ds_descricao").focus();
+		$("#ds_nome").focus();
 		swal.fire("Erro", "Preencha a descrição", "error");
-		$("#ds_descricao").addClass("is-invalid");
+		$("#ds_nome").addClass("is-invalid");
 		return false;	
 	}
 	else
 	{
-		$("#ds_descricao").removeClass("is-invalid");	
-		$("#ds_descricao").addClass("is-valid");
+		$("#ds_nome").removeClass("is-invalid");	
+		$("#ds_nome").addClass("is-valid");
 	}
 
 	

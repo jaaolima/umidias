@@ -4,10 +4,10 @@ ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 require_once("../Classes/Categoria.php");
 
-$id_categoria = $_REQUEST['id_categoria'];
+$id_midia = $_REQUEST['id_midia'];
 
 $categoria = new Categoria();
-$dados = $categoria->buscarDadosCategoria($id_categoria);
+$dados = $categoria->buscarDadosCategoria($id_midia);
 
 ?>
 <div class="card card-custom">
@@ -25,11 +25,11 @@ $dados = $categoria->buscarDadosCategoria($id_categoria);
     <!--begin::Form-->
     <form id="form_usuario">
         <div class="card-body">
-        <input type="hidden" name="id_categoria" id="id_categoria" value="<?php echo $id_categoria?>">
+        <input type="hidden" name="id_categoria" id="id_categoria" value="<?php echo $id_midia?>">
             <div class="form-group row">
                 <div class="form-group col-md-6">
                     <label>Descrição <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_descricao']?>"/>
+                    <input type="text" class="form-control" id="ds_nome" name="ds_nome" value="<?php echo $dados['ds_nome']?>"/>
                 </div>
             </div>       
         </div>

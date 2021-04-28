@@ -17,7 +17,7 @@
             <div class="form-group row">
                 <div class="form-group col-md-6">
                     <label>Descrição <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" />
+                    <input type="text" class="form-control" id="ds_nome" name="ds_nome" />
                 </div>
             </div>       
         </div>

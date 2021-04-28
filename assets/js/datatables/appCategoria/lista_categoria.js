@@ -42,7 +42,7 @@ var DatatablesBasicBasic = function() {
 					render: function(data, type, full, meta) {
 						return `
                         
-                         <a href="appCategoria/alterar_cadastro.php?id_categoria=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
+                         <a href="appCategoria/alterar_cadastro.php?id_midia=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
                           <i class="la la-edit"></i>
                         </a>
                         `;
