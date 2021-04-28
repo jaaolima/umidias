@@ -28,7 +28,7 @@ $dados = $categoria->buscarDadosCategoria($id_midia);
         <input type="hidden" name="id_categoria" id="id_categoria" value="<?php echo $id_midia?>">
             <div class="form-group row">
                 <div class="form-group col-md-6">
-                    <label>Descrição <span class="text-danger">*</span></label>
+                    <label>Nome <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_nome" name="ds_nome" value="<?php echo $dados['ds_nome']?>"/>
                 </div>
             </div>       
