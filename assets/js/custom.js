@@ -147,6 +147,24 @@ $('.botao-menu').click(function (e)
 
 	});
 
+  $('.botao-menu-usuario').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-usuario').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-usuario').addClass('texto-menu-active');
+
+	});
+
+  $('.botao-menu-categoria').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-categoria').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-categoria').addClass('texto-menu-active');
+
+	});
+
   $('#nav_toggle').click(function(e){
     $(this).addClass("d-none")
     $("#nav_toggle_open").removeClass('d-none')
