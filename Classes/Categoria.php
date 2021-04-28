@@ -6,8 +6,8 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_categoria, ds_descricao
-							FROM tb_categoria";
+				$select = "SELECT id_midia, ds_nome
+							FROM tb_tipo_midia";
 				
 				$stmt = $con->prepare($select); 
 				
@@ -27,17 +27,17 @@
         public function gravarCategoria(array $dados)
 		{
 
-			$ds_descricao	    = $dados['ds_descricao'];
+			$ds_nome	    = $dados['ds_nome'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_categoria (ds_descricao)
-							VALUES (:ds_descricao)";
+				$insert = "INSERT into tb_tipo_midia (ds_nome)
+							VALUES (:ds_nome)";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_descricao' => $ds_descricao,);
+				$params = array(':ds_nome' => $ds_nome,);
                                 
 				$stmt->execute($params);
 				
@@ -50,19 +50,19 @@
     			print "ERRO:".$e->getMessage();		
 			} 
         }
-        function buscarDadosCategoria($id_categoria)
+        function buscarDadosCategoria($id_midia)
 		{
 			try{
 				$con = Conecta::criarConexao();
 				
 				
 				$select = "SELECT 
-							id_categoria, ds_descricao
-						FROM tb_categoria  
-						WHERE id_categoria = :id_categoria";
+							id_midia, ds_nome
+						FROM tb_tipo_midia  
+						WHERE id_midia = :id_midia";
 
 				$stmt = $con->prepare($select);
-			   	$params = array(':id_categoria' => $id_categoria);
+			   	$params = array(':id_midia' => $id_midia);
 			   
 			    $stmt->execute($params);
 
@@ -77,19 +77,19 @@
         }
         public function gravarAlterarCategoria(array $dados)
 		{
-            $id_categoria	    = $dados['id_categoria'];
-			$ds_descricao	    = $dados['ds_descricao'];
+            $id_midia	    = $dados['id_midia'];
+			$ds_nome	    = $dados['ds_nome'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_categoria SET ds_descricao = :ds_descricao
-							WHERE id_categoria=:id_categoria";
+				$insert = "UPDATE tb_tipo_midia SET ds_nome = :ds_nome
+							WHERE id_midia=:id_midia";
 				
 				$stmt = $con->prepare($insert);
 				
-                $params = array(':ds_descricao' => $ds_descricao,
-                                ':id_categoria' => $id_categoria);
+                $params = array(':ds_nome' => $ds_nome,
+                                ':id_midia' => $id_midia);
                                 
 				$stmt->execute($params);
 				
@@ -106,8 +106,8 @@
 		{
 			try{
 				$con = Conecta::criarConexao();
-				$select = "SELECT id_categoria, ds_descricao
-							FROM tb_categoria ";
+				$select = "SELECT id_midia, ds_nome
+							FROM tb_tipo_midia ";
 				$stmt = $con->prepare($select);
 				$stmt->execute();
 
@@ -116,7 +116,7 @@
 				while($dados = $stmt->fetch())
 				{
 						
-					$options.= "<option value='".$dados['id_categoria']."'>".$dados['ds_descricao']."</option>";
+					$options.= "<option value='".$dados['id_midia']."'>".$dados['ds_nome']."</option>";
 
 				}
 				return $options;
