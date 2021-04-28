@@ -37,6 +37,7 @@ $dados = $categoria->buscarDadosCategoria($id_midia);
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
             <button type="reset" class="btn btn-secondary" id="cancelar">Cancelar</button>
         </div>
+        <input type="hidden" class="form-control" id="id_midia" name="id_midia" value="<?php echo $id_midia?>"/>
     </form>
     <!--end::Form-->
 </div>
