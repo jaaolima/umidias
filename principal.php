@@ -229,7 +229,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class="card-body d-flex">
 															<div class="d-flex py-5 flex-column align-items-start flex-grow-1 justify-content-center">
 																<div class="flex-grow-1" style="display: inherit;">
-																	<h3  class="titulo-div">Alugue sua mídia</h3>
+																	<h3  class="titulo-div">Adicione sua mídia</h3>
 																</div>
 																<div class="row m-0 col-12 justify-content-center" >
 																	<?php
