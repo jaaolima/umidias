@@ -126,7 +126,6 @@ $('.botao-menu').click(function (e)
     $('.svg-alugar').addClass('svg-active');
     $('.texto-menu').removeClass('texto-menu-active');
     $('.texto-menu-alugar').addClass('texto-menu-active');
-    redirectTo('appCliente/listar_tipo.php');
 
 	});
 
@@ -136,7 +135,6 @@ $('.botao-menu').click(function (e)
     $('.svg-alugadas').addClass('svg-active');
     $('.texto-menu').removeClass('texto-menu-active');
     $('.texto-menu-alugadas').addClass('texto-menu-active');
-    redirectTo('appCliente/listar_minhas_midias.php');
 
 
 	});
@@ -158,7 +156,6 @@ $('.botao-menu').click(function (e)
     $('.svg-usuario').addClass('svg-active');
     $('.texto-menu').removeClass('texto-menu-active');
     $('.texto-menu-usuario').addClass('texto-menu-active');
-    redirectTo('/appUsuario/listar_usuario.php');
 
 	});
 
@@ -168,8 +165,7 @@ $('.botao-menu').click(function (e)
     $('.svg-categoria').addClass('svg-active');
     $('.texto-menu').removeClass('texto-menu-active');
     $('.texto-menu-categoria').addClass('texto-menu-active');
-    redirectTo('/appCategoria/listar_categoria.php');
-    /appCategoria/listar_categoria.php
+
 
 	});
 
