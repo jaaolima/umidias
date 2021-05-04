@@ -114,7 +114,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
                                             <div class="my-6 d-flex">
                                                 <div class="col-6">
-                                                    <span class="texto-chumbo">Nome do usuário</span>
+                                                    <span class="texto-chumbo">Nome completo</span>
                                                 </div>                                                
                                                 <div class="col-6">
                                                     <span class="texto-negrito"><?php echo $dadosUsuario['ds_nome'] ?></span>
