@@ -58,7 +58,6 @@ $optionscategoria = $Categoria->listaroptionscategoria($dados["id_midia"]);
 				</div>
 			</div>
             <div class="form-group row"> 
-                <div id="map"></div>
                 <div class="form-group col-md-4">
                     <label >Latitude<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" value="<?php echo $dados['ds_latitude']?> " readonly/>
