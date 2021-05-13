@@ -85,7 +85,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!--begin::Column-->
 									<?php 
 										while($dados = $retorno->fetch()){
-											echo "ola ".$dados["ds_descricao"]."";/*'<div class="col-4" >
+											echo '<div class="col-4" >
 													<div class="card card-custom card-stretch gutter-b">
 														<!--begin::Body-->
 														<div class="card-body text-center" style="padding: 0px !important">
@@ -175,7 +175,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														</div>
 														<!--end::Body-->
 													</div>
-												</div> '*/;
+												</div> ';
 										}
 									
 									?>
