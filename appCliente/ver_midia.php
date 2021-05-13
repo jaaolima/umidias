@@ -1,4 +1,17 @@
+<?php 
+	ini_set('display_errors',1);
+	ini_set('display_startup_erros',1);
+	error_reporting(E_ALL);
+	session_start();
+	require_once("../Classes/Ponto.php");
 
+	$id_ponto = $_POST["id_ponto"];
+	
+	$ponto = new Ponto();
+	$dados = $ponto->BuscarDadosPonto($id_ponto);
+
+
+?>
 <!DOCTYPE html>
 <!--
 Template Name: Metronic - Bootstrap 4 HTML, React, Angular 10 & VueJS Admin Dashboard Theme
@@ -7,7 +20,7 @@ Website: http://www.keenthemes.com/
 Contact: support@keenthemes.com
 Follow: www.twitter.com/keenthemes
 Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
+Like: www.facebook.com/keenthemes 
 Purchase: https://1.envato.market/EA4JP
 Renew Support: https://1.envato.market/EA4JP
 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
@@ -72,12 +85,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="col-7">
 										<div class="mb-8">
 											<div class="mb-12">
-												<h1 class="h1-titulo">St. Central - Taguatinga </h1>
+												<h1 class="h1-titulo"><?php $dados["ds_local"] ?></h1>
 												<span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
 											</div>
 											<div class="my-12">
 												<h4 class="texto-negrito">Descrição </h4>
-												<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quibusdam adipisci vitae provident quo deserunt ipsum quidem fugit mollitia, repudiandae delectus! Blanditiis animi sunt possimus officiis ipsam unde quo obcaecati?</span>
+												<span><?php echo $dados["ds_descricao"]; ?></span>
 											</div>
 											<div class="my-12">
 												<h4 class="texto-negrito">Tamanho</h4>
@@ -85,7 +98,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<div class="my-12">
 												<h4 class="texto-negrito">Latitude e Longitude</h4>
-												<span>00000000000 000000000</span>
+												<span><?php echo $dados["ds_latitude"] " " $dados["ds_longitude"]; ?></span>
 											</div>
 											
 										</div>
@@ -151,7 +164,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														</svg>
 													</div>													
 													<div class="text-right w-100">
-														<span class="font-weight-bolder text-right">5.000,00</span>
+														<span class="font-weight-bolder text-right"><?php $dados["nu_valor"] ?></span>
 													</div>
 												</div>												
 												<div class="d-flex">

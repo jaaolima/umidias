@@ -92,7 +92,7 @@
 				
 				
 				$select = "SELECT 
-							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, id_midia, st_status, ds_observacao
+							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, id_midia, st_status, ds_observacao, ds_local
 						FROM tb_ponto  
 						WHERE id_ponto = :id_ponto";
 
