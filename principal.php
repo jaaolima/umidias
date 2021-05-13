@@ -169,7 +169,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<a href="/appUsuario/listar_usuario.php" class="btn rounded mx-2 text-left dropdown-item">
 											<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gerenc. Usuário</font></font></span>
 										</a>
-										<a href="/appCategoria/listar_categoria.php" class="btn rounded mx-2 text-left ">
+										<a href="/appCategoria/listar_categoria.php" class="btn rounded mx-2 text-left dropdown-item">
 											<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gerenc. Categoria</font></font></span>
 										</a>
 									</div>
