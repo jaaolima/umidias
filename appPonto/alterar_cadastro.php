@@ -10,7 +10,7 @@ $id_ponto = $_REQUEST['id_ponto'];
 $Categoria = new Categoria(); 
 $ponto = new Ponto();
 $dados = $ponto->buscarDadosPonto($id_ponto);
-$optionscategoria = $Categoria->listaroptionscategoria($dados["id_midia"]);
+$optionscategoria = $Categoria->listaroptionscategoria();
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <!--<script
