@@ -32,7 +32,7 @@
 				$caminho_arquivo = "documentos/" . $nome_arquivo;
 				
 				// Faz o upload da imagem para seu respectivo caminho
-				move_uploaded_file($ds_foto["tmp_name"], ../$caminho_arquivo);
+				move_uploaded_file($ds_foto["tmp_name"], '../' . $caminho_arquivo);
 			}
 
 			try{
