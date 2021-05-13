@@ -67,7 +67,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_ponto, ds_descricao, nu_valor, id_midia, st_status, ds_observacao
+				$select = "SELECT id_ponto, ds_descricao, nu_valor, id_midia, st_status, ds_observacao, ds_local
 							FROM tb_ponto";
 				
 				$stmt = $con->prepare($select); 
