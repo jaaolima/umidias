@@ -84,7 +84,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<!--begin::Column-->
 									<?php 
-										while(($dados = $retorno->fetch()){
+										while($dados = $retorno->fetch()){
 											echo '<div class="col-4" >
 													<div class="card card-custom card-stretch gutter-b">
 														<!--begin::Body-->
