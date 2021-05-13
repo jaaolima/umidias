@@ -4,7 +4,7 @@ ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 require_once("../Classes/Categoria.php");
 
-$Categoria = new Categoria();
+$Categoria = new Categoria(); 
 
 
 $optionscategoria = $Categoria->listaroptionscategoria();
@@ -14,25 +14,25 @@ $optionscategoria = $Categoria->listaroptionscategoria();
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9HytuCsyClhgU7vNNo8QHYsGtWiVPBuw&callback=initMap&libraries=&v=weekly"
       defer
     ></script>-->
-    <style>
-        #map {
-            width: 100%;
-        	height: 500px;
-        }
-        
-    </style>
+<style>
+    #map {
+        width: 100%;
+        height: 500px;
+    }
+    
+</style>
 <div class="card card-custom">
-    <div class="card-header">
+      <div class="card-header">
         <h3 class="card-title">
             Cadastro de Pontos 
         </h3>
         <div class="card-toolbar">
-            <div class="example-tools justify-content-center">
-                <span class="example-toggle" data-toggle="tooltip" title="View code"></span>
-                <span class="example-copy" data-toggle="tooltip" title="Copy code"></span>
-            </div>
+          <div class="example-tools justify-content-center">
+              <span class="example-toggle" data-toggle="tooltip" title="View code"></span>
+              <span class="example-copy" data-toggle="tooltip" title="Copy code"></span>
+          </div>
         </div>
-    </div>
+      </div>
     <!--begin::Form-->
     
     <form id="form_usuario">

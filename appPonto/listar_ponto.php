@@ -15,7 +15,7 @@
 			</span>&nbsp;
 			<h3 class="card-label">
 				Pontos Cadastrados
-			</h3>
+			</h3> 
 		</div>
 		<div class="kt-portlet__head-toolbar">
 			<div class="kt-portlet__head-wrapper">
@@ -68,10 +68,10 @@
 						Cadastrar novo
 					</a>
 				</div>
-			</div>
+			</div> 
 		</div>
 	</div>
-	<div class="kt-portlet__body">
+	<div class="card-body">
 
 		<!--begin: Datatable -->
 		<table class="table table-striped- table-bordered table-hover table-checkable" id="table_usuario">
@@ -105,7 +105,6 @@
 		</table>
 
 		<!--end: Datatable -->
-	</div>
 	</div>
 </div>
 
