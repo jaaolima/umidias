@@ -186,7 +186,7 @@ function initMap() {
   
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
-    center: { lat: -15.849511, lng: -48.022440 },
+    center: { lat: <?php echo $dados["ds_latitude"] ?>, lng: <?php echo $dados["ds_longitude"] ?> },
   });
   
   google.maps.event.addListener(map, 'dblclick', function(event) {
