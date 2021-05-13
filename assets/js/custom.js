@@ -169,6 +169,17 @@ $('.botao-menu').click(function (e)
 
 	});
 
+  $('.botao-menu-gerenciamento').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-gerenciamento').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-gerenciamento').addClass('texto-menu-active');
+
+
+	});
+
+
   $('#nav_toggle').click(function(e){
     $(this).addClass("d-none")
     $("#nav_toggle_open").removeClass('d-none')
