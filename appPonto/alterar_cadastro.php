@@ -121,8 +121,8 @@ jQuery(document).ready(function() {
 var demo3 = function() {
 	var map = new GMaps({
 		div: '#map',
-		lat: <? echo $dados["ds_latitude"] ?>,
-		lng: <? echo $dados["ds_longitude"] ?>,
+		lat: <?php echo $dados["ds_latitude"] ?>,
+		lng: <?php echo $dados["ds_longitude"] ?>,
 		dblclick: function(e) {
 			map.removeMarkers();
 			map.addMarker({
