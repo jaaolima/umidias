@@ -7,13 +7,15 @@
     $usuario = new Usuario();
     $retorno = $usuario->listarUsuario($_POST);
 ?>
-
+ 
 <div class="card card-custom gutter-b">
 	<div class="card-header flex-wrap py-3">
 		<div class="card-title">
-			<span class="kt-portlet__head-icon">
-				<i class="fas fa-address-book"></i>
-			</span>&nbsp;
+			<svg width="20" height="20" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M44.2 1H5.8C3.14903 1 1 3.14903 1 5.8V29.8C1 32.451 3.14903 34.6 5.8 34.6H44.2C46.851 34.6 49 32.451 49 29.8V5.8C49 3.14903 46.851 1 44.2 1Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M20.2 44.2H29.8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M25 34.6001V44.2001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>&nbsp;
 			<h3 class="card-label">
 				Usuarios Cadastrados
 			</h3>
