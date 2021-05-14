@@ -35,7 +35,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
       </div>
     <!--begin::Form-->
     
-    <form id="form_usuario">
+    <form id="form_usuario" enctype="multipart/form-data">
         <div class="card-body">
             <div class="form-group row">
                 <div class="form-group col-md-4">
