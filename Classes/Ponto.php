@@ -9,7 +9,7 @@
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
 			$nu_valor    	        = $dados['nu_valor'];
-			$id_midia               = 1;
+			$id_midia               = $dados['id_midia'];
 			$ds_observacao	        = $dados['ds_observacao'];
 
 			$tamanho = 3000000;
