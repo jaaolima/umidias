@@ -39,7 +39,7 @@
 				if( $moved ) {
 					echo "Successfully uploaded";         
 				  } else {
-					echo "Not uploaded because of error #".$ds_foto["error"];
+					  throw exception("Not uploaded because of error #".$ds_foto["error"]); 
 				  }
 			}
 
