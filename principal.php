@@ -72,7 +72,7 @@
 							</a>	
 						</div>
 						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="appCliente/perfil.php">Minha conta</a>
+							<a class="dropdown-item" href="appUsuario/perfil.php">Minha conta</a>
 							<div class="dropdown-divider mx-5"></div>
 							<a class="dropdown-item texto-vermelho" href="appUsuario/logout.php">Sair</a>
 						</div>	
