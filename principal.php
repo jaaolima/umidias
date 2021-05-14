@@ -350,13 +350,13 @@
 												<div class="card-body d-flex">
 													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 														<div class="flex-grow-1" style="display: inherit;">
-															<h3 class="card-title titulo-div">Minhas mídias</h3>
+															<h3 class="card-title titulo-div">Mídias contratadas</h3>
 														</div>
 														<div class="row m-0 col-12" >											
 															<table class="table table-hover">
 																<thead>
 																	<tr>
-																		<th>Mídias contratadas</th>
+																		<th>Tipo de Mídia</th>
 																		<th>Data inicial</th>
 																		<th>Data final</th>
 																		<th>Valor contratado</th>
