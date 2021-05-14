@@ -39,7 +39,9 @@
 				if( $moved ) {
 					echo "Successfully uploaded";         
 				  } else {
-					  throw new exception("Not uploaded because of error #".$ds_foto["error"]); 
+					  echo "Not uploaded because of error #".$ds_foto["error"]; 
+
+					  var_dump($ds_foto);
 				  }
 			}
 
