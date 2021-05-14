@@ -8,7 +8,7 @@
 			$ds_foto                = $_FILES['ds_foto'];
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
-			$nu_valor    	        = $dados['nu_valor'];
+			$nu_valor    	        = $dados['nu_valor']; 
 			$id_midia               = $dados['id_midia'];
 			$ds_observacao	        = $dados['ds_observacao'];
 
