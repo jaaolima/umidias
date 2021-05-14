@@ -21,12 +21,12 @@ $("body").on('click', 'a', function(event){
     var ds_nome = url.searchParams.get("id_paciente");
     location.href='paciente.php?id_paciente='+id_paciente+'&ds_nome='+ds_nome;
     return false;
-  }
+  }*/
 
   if ($(this).attr('href').startsWith('#kt_portlet_base_demo') )
   {
     return true;
-  }*/
+  }
 
 
   event.preventDefault();
