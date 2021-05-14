@@ -3,13 +3,13 @@
     class Ponto{
         public function gravarPonto(array $dados)
 		{
+			$ds_local	        	= $dados['ds_local'];
 			$ds_descricao	        = $dados['ds_descricao'];
 			$ds_foto                = $_FILES['ds_foto'];
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
 			$nu_valor    	        = $dados['nu_valor'];
-			$id_midia               = $dados['id_midia'];
-			$st_status          	= $dados['st_status'];
+			$id_midia               = 1;
 			$ds_observacao	        = $dados['ds_observacao'];
 
 			$tamanho = 3000000;
@@ -37,8 +37,8 @@
 
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_ponto (ds_descricao, ds_foto, ds_latitude, ds_longitude, nu_valor, id_midia, st_status, ds_observacao)
-							VALUES (:ds_descricao, :ds_foto, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :st_status, :ds_observacao)";
+				$insert = "INSERT into tb_ponto (ds_descricao, ds_foto, ds_latitude, ds_longitude, nu_valor, id_midia, ds_local, ds_observacao)
+							VALUES (:ds_descricao, :ds_foto, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_local, :ds_observacao)";
 				
 				$stmt = $con->prepare($insert);
 				
@@ -48,7 +48,7 @@
 								':ds_longitude' => $ds_longitude,
 								':nu_valor' => $nu_valor,
 								':id_midia' =>$id_midia,
-								':st_status' => $st_status,
+								':ds_local' => $ds_local,
 								':ds_observacao' => $ds_observacao);
                                 
 				$stmt->execute($params);
