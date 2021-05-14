@@ -3,7 +3,8 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 	session_start();
-	setlocale(LC_ALL, 'pt_BR');  
+	setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+	date_default_timezone_set('America/Sao_Paulo');
 
 	require_once("Classes/Midia.php");
 	require_once("Classes/Usuario.php");
