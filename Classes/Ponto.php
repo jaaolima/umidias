@@ -140,6 +140,7 @@
 		{	
 			$id_ponto	        	= $dados['id_ponto'];
 			$ds_descricao	        = $dados['ds_descricao'];
+			$ds_local	        	= $dados['ds_local'];
 			$ds_foto                = $_FILES['ds_foto'];
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
@@ -173,20 +174,22 @@
 
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_ponto set ds_descricao = :ds_descricao, ds_foto = :ds_foto, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, st_status = :st_status, ds_observacao = :ds_observacao
+				$insert = "UPDATE tb_ponto set ds_descricao = :ds_descricao, ds_local = :ds_local, ds_foto = :ds_foto, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, st_status = :st_status, ds_observacao = :ds_observacao
 						   WHERE id_ponto = :id_ponto";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':id_ponto' => $id_ponto,
+				$params = array(
 								':ds_descricao' => $ds_descricao,
+								':ds_local' => $ds_local,
 								':ds_foto' => $caminho_arquivo,
 								':ds_latitude' => $ds_latitude,
 								':ds_longitude' => $ds_longitude,
 								':nu_valor' => $nu_valor,
 								':id_midia' =>$id_midia,
 								':st_status' => $st_status,
-								':ds_observacao' => $ds_observacao);
+								':ds_observacao' => $ds_observacao,
+								':id_ponto' => $id_ponto);
                                 
 				$stmt->execute($params);
 				
