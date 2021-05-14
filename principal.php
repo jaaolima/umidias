@@ -178,14 +178,8 @@
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-categoria btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
-									<a href="/appCategoria/listar_categoria.php" class="btn rounded mx-2 text-left ">
-										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-												<rect x="0" y="0" width="24" height="24" />
-												<path d="M3.5,21 L20.5,21 C21.3284271,21 22,20.3284271 22,19.5 L22,8.5 C22,7.67157288 21.3284271,7 20.5,7 L10,7 L7.43933983,4.43933983 C7.15803526,4.15803526 6.77650439,4 6.37867966,4 L3.5,4 C2.67157288,4 2,4.67157288 2,5.5 L2,19.5 C2,20.3284271 2.67157288,21 3.5,21 Z" fill="#000000" opacity="0.3" class="svg-hover svg-categoria"/>
-											</g>
-										</svg>
- 
+									<a href="/appCategoria/listar_categoria.php" class="btn rounded mx-2 text-left ">	
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 573.33331 573" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m475 101.585938h-182.875c-14 .003906-26.832031-7.808594-33.25-20.25l-25.75-49.625c-10.722656-20.738282-32.15625-33.71875-55.5-33.628907h-115.125c-34.511719.015625-62.484375 27.988281-62.5 62.5v349.503907c.015625 34.511718 27.988281 62.484374 62.5 62.5h412.5c34.511719-.015626 62.484375-27.988282 62.5-62.5v-246c-.015625-34.511719-27.988281-62.492188-62.5-62.5zm-412.5-78.375h115.125c14-.011719 26.832031 7.808593 33.25 20.25l25.75 49.621093c1.597656 2.996094 3.394531 5.875 5.375 8.628907h-217v-40.878907c.003906-20.726562 16.773438-37.546875 37.5-37.621093zm450 386.996093c-.058594 20.6875-16.816406 37.441407-37.5 37.5h-412.5c-20.683594-.058593-37.441406-16.8125-37.5-37.5v-283.621093h254.875c1.226562.023437 2.449219-.144532 3.625-.5 2.902344.394531 5.820312.605468 8.75.625h182.75c20.683594.058593 37.441406 16.8125 37.5 37.5zm0 0" fill="#57616a" data-original="#000000" style="" class="svg-hover svg-categoria"/></svg>
 										<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Categorias</font></font></span>
 									</a>
 								</li>
