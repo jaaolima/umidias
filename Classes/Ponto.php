@@ -1,4 +1,6 @@
 <?php
+	ini_set('display_errors',1);
+	error_reporting(E_ALL);
 	require_once("Conecta.php");
     class Ponto{
         public function gravarPonto(array $dados)
@@ -32,7 +34,13 @@
 				$caminho_arquivo = "../docs_pontos/" . $nome_arquivo;
 				
 				// Faz o upload da imagem para seu respectivo caminho
-				move_uploaded_file($ds_foto["tmp_name"],  $caminho_arquivo);
+				$moved = move_uploaded_file($ds_foto["tmp_name"],  $caminho_arquivo);
+
+				if( $moved ) {
+					echo "Successfully uploaded";         
+				  } else {
+					echo "Not uploaded because of error #".$ds_foto["error"];
+				  }
 			}
 
 			try{
