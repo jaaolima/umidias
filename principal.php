@@ -20,7 +20,7 @@
 
 	$retorno = $midia->listarTipoMidia($_POST);
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
-	$meusPontos = $usuario->buscarMeusPontos($id_usuario);
+	$meusPontos = $ponto->buscarMeusPontos($id_usuario);
 ?>
 <!DOCTYPE html>
 <!--
