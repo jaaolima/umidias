@@ -10,7 +10,7 @@
 
 	if ( $_SESSION['autenticado'] !=='validado') {
 		header("location: index.php");
-			exit();
+		exit();
 	}
    	$id_usuario = $_SESSION['id_usuario'];
 
@@ -71,6 +71,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				</a>
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
+					<div>Olá, <?php echo $dadosUsuario['ds_nome'];?>!</div>
 					<div class="dropdown">
 						<div  class="mr-2" data-toggle="dropdown" aria-expanded="false">
 							<a href="#" class="btn-dropdown">
