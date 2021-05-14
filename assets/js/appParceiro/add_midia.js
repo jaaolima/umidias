@@ -5,7 +5,7 @@ $(document).ready(function() {
 		{ 
 			$.ajax({
 		        url: 'appParceiro/gravar_parceiro.php'
-				, data: $("#form_usuario").serialize()
+				, data: $("#kt_projects_add_form").serialize()
 		        , type: 'post'
 		        , success: function(html) {
 		        	swal.fire({
