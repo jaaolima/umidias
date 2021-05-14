@@ -184,7 +184,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="separator separator-solid"></div>
 											<div class="my-6 mx-6 text-right">
 												<h3 class="font-weight-bolder">Total</h3>
-												<h2 class="font-weight-bolder"><?php echo $dados["nu_valor"] * (0,2)?></h2>
+												<h2 class="font-weight-bolder"><?php echo $dados["nu_valor"] * 0,2?></h2>
 											</div>
 											<div class="my-6 mx-6">
 												<button class="btn btn-primary w-100">Alugar Mídia</button>
