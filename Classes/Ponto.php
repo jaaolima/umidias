@@ -43,34 +43,40 @@
 
 					var_dump($ds_foto);
 				}
+
+				try{
+					$con = Conecta::criarConexao();
+					$insert = "INSERT into tb_ponto (ds_descricao, ds_foto, ds_latitude, ds_longitude, nu_valor, id_midia, ds_local, ds_observacao)
+								VALUES (:ds_descricao, :ds_foto, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_local, :ds_observacao)";
+					
+					$stmt = $con->prepare($insert);
+					
+					$params = array(':ds_descricao' => $ds_descricao,
+									':ds_foto' => $caminho_arquivo,
+									':ds_latitude' => $ds_latitude,
+									':ds_longitude' => $ds_longitude,
+									':nu_valor' => $nu_valor,
+									':id_midia' =>$id_midia,
+									':ds_local' => $ds_local,
+									':ds_observacao' => $ds_observacao);
+									
+					$stmt->execute($params);
+					
+					echo "Dados gravados com sucesso!"; 
+					
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+			else
+			{
+				echo "Aconteceu um erro".$error[1];
 			}
 
-			try{
-				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_ponto (ds_descricao, ds_foto, ds_latitude, ds_longitude, nu_valor, id_midia, ds_local, ds_observacao)
-							VALUES (:ds_descricao, :ds_foto, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_local, :ds_observacao)";
-				
-				$stmt = $con->prepare($insert);
-				
-				$params = array(':ds_descricao' => $ds_descricao,
-								':ds_foto' => $caminho_arquivo,
-								':ds_latitude' => $ds_latitude,
-								':ds_longitude' => $ds_longitude,
-								':nu_valor' => $nu_valor,
-								':id_midia' =>$id_midia,
-								':ds_local' => $ds_local,
-								':ds_observacao' => $ds_observacao);
-                                
-				$stmt->execute($params);
-				
-				echo "Dados gravados com sucesso!"; 
-				
-			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			}
+			
 		}
 		public function listarPonto(array $dados)
 		{
