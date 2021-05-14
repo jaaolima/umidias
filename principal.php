@@ -167,16 +167,16 @@
 									</a>
 								</li>
 								<?php if($_SESSION['id_perfil'] == 3  ) :   ?>
-								<li class="menu-item my-4 botao-menu botao-menu-gerenciamento btn ml-5 dropdown" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+								<li class="menu-item my-4 botao-menu botao-menu-cadastro btn ml-5 dropdown" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a class="btn rounded mx-2 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect x="0" y="0" width="24" height="24"/>
-        <path d="M3.5,21 L20.5,21 C21.3284271,21 22,20.3284271 22,19.5 L22,8.5 C22,7.67157288 21.3284271,7 20.5,7 L10,7 L7.43933983,4.43933983 C7.15803526,4.15803526 6.77650439,4 6.37867966,4 L3.5,4 C2.67157288,4 2,4.67157288 2,5.5 L2,19.5 C2,20.3284271 2.67157288,21 3.5,21 Z" fill="#000000" opacity="0.3"/>
-    </g>
-</svg>
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<rect x="0" y="0" width="24" height="24"/>
+												<path d="M3.5,21 L20.5,21 C21.3284271,21 22,20.3284271 22,19.5 L22,8.5 C22,7.67157288 21.3284271,7 20.5,7 L10,7 L7.43933983,4.43933983 C7.15803526,4.15803526 6.77650439,4 6.37867966,4 L3.5,4 C2.67157288,4 2,4.67157288 2,5.5 L2,19.5 C2,20.3284271 2.67157288,21 3.5,21 Z" fill="#000000" opacity="0.3" class="svg-hover svg-cadastro"/>
+											</g>
+										</svg>
  
-										<span class="menu-text texto-menu texto-menu-gerenciamento"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cadastros</font></font></span>
+										<span class="menu-text texto-menu texto-menu-cadastro"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cadastros</font></font></span>
 									</a>
 									<div class="dropdown-menu ">
 										<a href="/appUsuario/listar_usuario.php" class="btn rounded mx-2 text-left dropdown-item">

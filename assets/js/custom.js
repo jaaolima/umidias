@@ -169,13 +169,13 @@ $('.botao-menu').click(function (e)
 
 	});
 
-  $('.botao-menu-gerenciamento').click(function (e)
+  $('.botao-menu-cadastro').click(function (e)
 	{
     $('.svg-hover').removeClass('svg-active');
-    $('.svg-gerenciamento').addClass('svg-active');
+    $('.svg-cadastro').addClass('svg-active');
     $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-gerenciamento').addClass('texto-menu-active');
-
+    $('.texto-menu-cadastro').addClass('texto-menu-active');
+    
 
 	});
 
