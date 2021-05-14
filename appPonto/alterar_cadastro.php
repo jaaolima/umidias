@@ -43,20 +43,27 @@ $optionscategoria = $Categoria->listaroptionscategoria();
         <input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto?>">
             <div class="form-group row">
                 <div class="form-group col-md-4">
+                    <label>Local <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_local']?>"/>
+                </div>
+                <div class="form-group col-md-4">
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_descricao']?>"/>
                 </div>
-                <div class="form-group col-md-4">
-                    <label >Foto <span class="text-danger">*</span></label>
-                    <input type="file" class="form-control" id="ds_foto" name="ds_foto" value="<?php echo $dados['ds_foto']?>"/>
-                </div> 
+                
             </div>
+            <div class="form-group row">
+              <div class="form-group col-md-4">
+                      <label >Foto <span class="text-danger">*</span></label>
+                      <input type="file" class="form-control" id="ds_foto" name="ds_foto" value="<?php echo $dados['ds_foto']?>"/>
+                  </div> 
+              </div>
             <div class="form-group row"> 
-				<div class="form-group col-md-8">
-					<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
-					<div id="map"></div>
-				</div>
-			</div>
+            <div class="form-group col-md-8">
+                <p>Clique duas vezes no mapa para marcar a localização do ponto</p>
+                <div id="map"></div>
+            </div>
+          </div>
             <div class="form-group row"> 
                 <div class="form-group col-md-4">
                     <label >Latitude<span class="text-danger">*</span></label>
