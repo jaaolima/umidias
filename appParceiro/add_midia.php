@@ -215,7 +215,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															<h3 class="mb-10 font-weight-bold text-dark">Revisão</h3>
 															<div class="form-group">
 																<label>Local</label>
-																<input type="text" class="form-control form-control-lg form-control-solid" name="address1"  value="<?php echo $_GET["ds_local"];?>" />
+																<input type="text" class="form-control form-control-lg form-control-solid" name="address1"  value="Local" />
 															</div>
 															<div class="form-group">
 																<label>Descrição</label>
@@ -241,7 +241,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<button type="button" class="btn btn-light-primary font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-prev">Anterior</button>
 															</div>
 															<div>
-																<button type="button" class="btn btn-success font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-submit">Enviar</button>
+																<button type="button" id="salvar" class="btn btn-success font-weight-bolder text-uppercase px-9 py-4">Enviar</button>
 																<button type="button" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-next">Proximo</button>
 															</div>
 														</div>
@@ -278,6 +278,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Global Theme Bundle-->
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/custom/projects/add-project.js"></script>
+		<script src="assets/js/appParceiro/add_midia.js"></script>
+		
 		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->
