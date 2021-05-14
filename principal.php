@@ -160,8 +160,8 @@
 								<li class="menu-item my-4 botao-menu botao-menu-financeiro btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/metronic/demo1/index.html" class="btn rounded mx-2 text-left ">
 										<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path opacity="0.3" d="M11.9091 3V21" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover svg-financeiro"/>
-											<path opacity="0.3" d="M16 6.27271H9.86364C9.10415 6.27271 8.37578 6.57441 7.83874 7.11144C7.3017 7.64848 7 8.37686 7 9.13634C7 9.89582 7.3017 10.6242 7.83874 11.1612C8.37578 11.6983 9.10415 12 9.86364 12H13.9545C14.714 12 15.4424 12.3017 15.9794 12.8387C16.5165 13.3758 16.8182 14.1041 16.8182 14.8636C16.8182 15.6231 16.5165 16.3515 15.9794 16.8885C15.4424 17.4255 14.714 17.7273 13.9545 17.7273H7" class="svg-hover svg-financeiro" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											<path  d="M11.9091 3V21" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover svg-financeiro"/>
+											<path  d="M16 6.27271H9.86364C9.10415 6.27271 8.37578 6.57441 7.83874 7.11144C7.3017 7.64848 7 8.37686 7 9.13634C7 9.89582 7.3017 10.6242 7.83874 11.1612C8.37578 11.6983 9.10415 12 9.86364 12H13.9545C14.714 12 15.4424 12.3017 15.9794 12.8387C16.5165 13.3758 16.8182 14.1041 16.8182 14.8636C16.8182 15.6231 16.5165 16.3515 15.9794 16.8885C15.4424 17.4255 14.714 17.7273 13.9545 17.7273H7" class="svg-hover svg-financeiro" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
  
 										<span class="menu-text texto-menu texto-menu-financeiro"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
@@ -172,8 +172,8 @@
 								<li class="menu-item my-4 botao-menu botao-menu-usuario btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appUsuario/listar_usuario.php" class="btn rounded mx-2 text-left ">
 										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="24" height="24" x="0" y="0" viewBox="0 0 19.738 19.738" style="enable-background:new 0 0 512 512" xml:space="preserve">
-											<path style="" d="M18.18,19.738h-2c0-3.374-2.83-6.118-6.311-6.118s-6.31,2.745-6.31,6.118h-2   c0-4.478,3.729-8.118,8.311-8.118C14.451,11.62,18.18,15.26,18.18,19.738z" fill="#57616a" data-original="#010002" class="svg-hover svg-usuario"/>
-											<path style="" d="M9.87,10.97c-3.023,0-5.484-2.462-5.484-5.485C4.385,2.461,6.846,0,9.87,0   c3.025,0,5.486,2.46,5.486,5.485S12.895,10.97,9.87,10.97z M9.87,2C7.948,2,6.385,3.563,6.385,5.485S7.948,8.97,9.87,8.97   c1.923,0,3.486-1.563,3.486-3.485S11.791,2,9.87,2z" fill="#57616a" data-original="#010002" class="svg-hover svg-usuario"/>
+											<path opacity="0.3" style="" d="M18.18,19.738h-2c0-3.374-2.83-6.118-6.311-6.118s-6.31,2.745-6.31,6.118h-2   c0-4.478,3.729-8.118,8.311-8.118C14.451,11.62,18.18,15.26,18.18,19.738z" fill="#57616a" data-original="#010002" class="svg-hover svg-usuario"/>
+											<path opacity="0.3" style="" d="M9.87,10.97c-3.023,0-5.484-2.462-5.484-5.485C4.385,2.461,6.846,0,9.87,0   c3.025,0,5.486,2.46,5.486,5.485S12.895,10.97,9.87,10.97z M9.87,2C7.948,2,6.385,3.563,6.385,5.485S7.948,8.97,9.87,8.97   c1.923,0,3.486-1.563,3.486-3.485S11.791,2,9.87,2z" fill="#57616a" data-original="#010002" class="svg-hover svg-usuario"/>
 										</svg>
 										<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuários</font></font></span>
 									</a>
