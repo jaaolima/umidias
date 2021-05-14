@@ -189,16 +189,18 @@ License: You must have a valid license purchased only from themeforest(the above
 																			<h3 class="mb-10 font-weight-bold text-dark">Especificações</h3>
 																		</div>
 																	</div>
-																	<div class="form-group row"> 
-																		<div class="form-group col-md-4">
-																			<label >Latitude<span class="text-danger">*</span></label>
-																			<input type="text" class="form-control" id="ds_latitude" name="ds_latitude" readonly/>
-																		</div> 
-																		<div class="form-group col-md-4">
-																			<label >Longitude<span class="text-danger">*</span></label>
-																			<input type="text" class="form-control" id="ds_longitude" name="ds_longitude" readonly/>
-																		</div> 
-																	</div> 
+																	<div class="form-group row">
+																		<label class="col-xl-3 col-lg-3 col-form-label">Valor</label>
+																		<div class="col-lg-9 col-xl-9">
+																			<input class="form-control form-control-lg form-control-solid" name="ds_latitude" id="ds_latitude" type="text"  />
+																		</div>
+																	</div>
+																	<div class="form-group row">
+																		<label class="col-xl-3 col-lg-3 col-form-label">Valor</label>
+																		<div class="col-lg-9 col-xl-9">
+																			<input class="form-control form-control-lg form-control-solid" name="ds_longitude" id="ds_longitude" type="text"  />
+																		</div>
+																	</div>
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Valor</label>
 																		<div class="col-lg-9 col-xl-9">

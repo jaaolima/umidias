@@ -35,7 +35,7 @@ $(document).ready(function() {
 	});
 
     $("#nu_valor").inputmask({
-        "mask": "R$999.999,99",
+        "mask": "R$999",
 		autoUnmask: true,
 	});
 
