@@ -222,7 +222,7 @@
 												<path d="M8 2V6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 												<path d="M3 10H21" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
-											<p class="mb-0 mt-1 ml-2 texto-chumbo"><?php echo date('d') .' de '.date('F').' de '.date('Y');?></p>
+											<p class="mb-0 mt-1 ml-2 texto-chumbo"><?php echo date('d') .' de '.date('B').' de '.date('Y');?></p>
 										</div>
 									</div>
 									<!--end::Header Menu-->
