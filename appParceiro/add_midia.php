@@ -221,7 +221,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															<h3 class="mb-10 font-weight-bold text-dark">Revisão</h3>
 															<div class="form-group">
 																<label>Local</label>
-																<input type="text" class="form-control form-control-lg form-control-solid" name="address1"  value="<?php $_GET["ds_local"] ?>" />
+																<input type="text" class="form-control form-control-lg form-control-solid" name="address1"  value="<?php echo $_GET["ds_local"];?>" />
 															</div>
 															<div class="form-group">
 																<label>Descrição</label>
