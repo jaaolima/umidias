@@ -55,7 +55,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
             <div class="form-group row">
               <div class="form-group col-md-4">
                       <label >Foto <span class="text-danger">*</span></label>
-                      <input type="file" class="form-control" id="ds_foto" name="ds_foto" value="<?php echo $dados['ds_foto']?>"/>
+                      <input type="file" class="form-control" id="ds_foto" name="ds_foto" <?php echo $dados['ds_foto']?>/>
                   </div> 
               </div>
             <div class="form-group row"> 
