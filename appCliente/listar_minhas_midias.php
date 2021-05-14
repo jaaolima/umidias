@@ -1,4 +1,18 @@
 
+<?php
+	ini_set('display_errors',1);
+	ini_set('display_startup_erros',1);
+	error_reporting(E_ALL);
+	session_start();
+
+	require_once("Classes/Ponto.php");
+
+   	$id_usuario = $_SESSION['id_usuario'];
+
+	$ponto = new Ponto();
+
+	$meusPontos = $ponto->listarMeusPontos($id_usuario);
+?>
 <!DOCTYPE html>
 <!--
 Template Name: Metronic - Bootstrap 4 HTML, React, Angular 10 & VueJS Admin Dashboard Theme
