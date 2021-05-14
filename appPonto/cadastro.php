@@ -128,7 +128,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
     </form>
     <!--end::Form-->
 </div>
-<script src="assets/js/pages/crud/file-upload/dropzonejs.js"></script>
+
 <script src="./assets/js/appPonto/cadastro.js" type="text/javascript"></script>
 
 <script>
