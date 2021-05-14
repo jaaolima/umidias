@@ -152,7 +152,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="row justify-content-center my-10 px-8 my-lg-15 px-lg-10">
 												<div class="col-xl-12 col-xxl-7">
 													<!--begin::Form Wizard-->
-													<form class="form" id="kt_projects_add_form" method="get">
+													<form class="form" id="form_usuario" method="get">
 														<!--begin::Step 1-->
 														<div class="pb-5" data-wizard-type="step-content" data-wizard-state="current">
 															<h3 class="mb-10 font-weight-bold text-dark">Detalhes da Mídia</h3>
