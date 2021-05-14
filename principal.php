@@ -180,13 +180,13 @@
 									</a>
 									<div class="dropdown-menu ">
 										<a href="/appUsuario/listar_usuario.php" class="btn rounded mx-2 text-left dropdown-item">
-											<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuário</font></font></span>
+											<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuários</font></font></span>
 										</a>
 										<a href="/appCategoria/listar_categoria.php" class="btn rounded mx-2 text-left dropdown-item">
-											<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Categoria</font></font></span>
+											<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Categorias</font></font></span>
 										</a>
 										<a href="/appPonto/listar_ponto.php" class="btn rounded mx-2 text-left dropdown-item">
-											<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ponto</font></font></span>
+											<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pontos</font></font></span>
 										</a>
 									</div>
 								</li>
