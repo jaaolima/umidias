@@ -44,7 +44,8 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                 </div>
                 <div class="dropzone dropzone-multi col-md-4" id="kt_dropzone_5">
                     <label>Fotos <span class="text-danger">*</span></label>
-                    <div class="dropzone-panel mb-lg-0 mb-2">
+                    <input type="file" name="ds_foto" id="ds_foto">
+                    <!--<div class="dropzone-panel mb-lg-0 mb-2">
                         <a class="dropzone-select btn btn-primary font-weight-bold btn-sm">Selecione suas imagens</a>
                     </div>
                     <div class="dropzone-items">
@@ -68,7 +69,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div> 
 			<div class="form-group row"> 
@@ -107,15 +108,6 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                 </div>
             </div>
             <div class="form-group row">
-                <div class="form-group col-md-4">
-                    <label >Status<span class="text-danger">*</span></label>
-                    <select class="form-control" id="st_status" name="st_status">
-                        <option value="">Selecione..</option>
-                        <option value="1">Disponível</option>
-                        <option value="2">Pré-reservado</option>
-                        <option value="3">Reservado</option>
-                    </select>
-                </div>
                 <div class="form-group col-md-4">
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
