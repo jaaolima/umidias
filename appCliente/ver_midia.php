@@ -98,7 +98,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<div class="my-12">
 												<h4 class="texto-negrito">Latitude e Longitude</h4>
-												<span><?php echo $dados["ds_latitude"] " " $dados["ds_longitude"];?></span>
+												<span><?php echo $dados["ds_latitude"] . " " . $dados["ds_longitude"];?></span>
 											</div>
 											
 										</div>
