@@ -46,36 +46,11 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
                 </div>
-                <div class="dropzone dropzone-multi col-md-4" id="kt_dropzone_5">
-                    <label>Fotos <span class="text-danger">*</span></label>
-                    <input type="file" name="ds_foto" id="ds_foto">
-                    <!--<div class="dropzone-panel mb-lg-0 mb-2">
-                        <a class="dropzone-select btn btn-primary font-weight-bold btn-sm">Selecione suas imagens</a>
-                    </div>
-                    <div class="dropzone-items">
-                        <div class="dropzone-item" style="display:none">
-                            <div class="dropzone-file">
-                                <div class="dropzone-filename" title="some_image_file_name.jpg">
-                                    <span data-dz-name="">some_image_file_name.jpg</span>
-                                    <strong>(
-                                    <span data-dz-size="">340kb</span>)</strong>
-                                </div>
-                                <div class="dropzone-error" data-dz-errormessage=""></div>
-                            </div>
-                            <div class="dropzone-progress">
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress=""></div>
-                                </div>
-                            </div>
-                            <div class="dropzone-toolbar">
-                                <span class="dropzone-delete" data-dz-remove="">
-                                    <i class="flaticon2-cross"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>-->
-                </div>
-            </div> 
+            </div>
+            <div class="form-group row">
+                <label>Fotos <span class="text-danger">*</span></label>
+                <input type="file" name="ds_foto" id="ds_foto">
+            </div>
 			<div class="form-group row"> 
 				<div class="form-group col-md-8">
 					<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
