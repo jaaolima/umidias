@@ -147,6 +147,7 @@
 									</a>
 								</li>
 								<?php endif ;?>
+								<?php if($_SESSION['id_perfil'] == 2 && $_SESSION['id_perfil'] == 1 ) :   ?>
 								<li class="menu-item my-4 botao-menu botao-menu-alugadas btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="appCliente/listar_minhas_midias.php" class="btn rounded mx-2 text-left  ">
 										<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
@@ -166,6 +167,7 @@
 										<span class="menu-text texto-menu texto-menu-financeiro"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
 									</a>
 								</li>
+								<?php endif ;?>
 								<?php if($_SESSION['id_perfil'] == 3  ) :   ?>
 								<li class="menu-item my-4 botao-menu botao-menu-usuario btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appUsuario/listar_usuario.php" class="btn rounded mx-2 text-left ">
