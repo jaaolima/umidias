@@ -3,6 +3,8 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 	session_start();
+	setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+	date_default_timezone_set('America/Sao_Paulo');
 
 	require_once("Classes/Midia.php");
 	require_once("Classes/Usuario.php");
@@ -10,7 +12,7 @@
 
 	if ( $_SESSION['autenticado'] !=='validado') {
 		header("location: index.php");
-			exit();
+		exit();
 	}
    	$id_usuario = $_SESSION['id_usuario'];
 
@@ -23,18 +25,7 @@
 	$meusPontos = $ponto->listarMeusPontos($id_usuario);
 ?>
 <!DOCTYPE html>
-<!--
-Template Name: Metronic - Bootstrap 4 HTML, React, Angular 10 & VueJS Admin Dashboard Theme
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: https://1.envato.market/EA4JP
-Renew Support: https://1.envato.market/EA4JP
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
+
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href=""> 
@@ -71,6 +62,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				</a>
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
+					<div><p class="mb-0 mt-1 ml-2 texto-chumbo">Olá, <?php echo $dadosUsuario['ds_nome'];?>!</p></div>
 					<div class="dropdown">
 						<div  class="mr-2" data-toggle="dropdown" aria-expanded="false">
 							<a href="#" class="btn-dropdown">
@@ -128,7 +120,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<path d="M4 9.3L12.1 3L20.2 9.3V19.2C20.2 19.6774 20.0104 20.1352 19.6728 20.4728C19.3352 20.8104 18.8774 21 18.4 21H5.8C5.32261 21 4.86477 20.8104 4.52721 20.4728C4.18964 20.1352 4 19.6774 4 19.2V9.3Z" fill="none" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover svg-dashboard svg-active"/>
 										</svg>
 
-										<span class="menu-text texto-menu-active texto-menu texto-menu-dashboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dashboard</font></font></span>
+										<span class="menu-text texto-menu-active texto-menu texto-menu-dashboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Painel de Controle</font></font></span>
 									</a>
 								</li>
 								<?php if($_SESSION['id_perfil'] == 1 ) :   ?>
@@ -177,22 +169,24 @@ License: You must have a valid license purchased only from themeforest(the above
 								<?php if($_SESSION['id_perfil'] == 3  ) :   ?>
 								<li class="menu-item my-4 botao-menu botao-menu-gerenciamento btn ml-5 dropdown" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a class="btn rounded mx-2 text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M11.9091 3V21" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover svg-gerenciamento"/>
-											<path d="M16 6.27271H9.86364C9.10415 6.27271 8.37578 6.57441 7.83874 7.11144C7.3017 7.64848 7 8.37686 7 9.13634C7 9.89582 7.3017 10.6242 7.83874 11.1612C8.37578 11.6983 9.10415 12 9.86364 12H13.9545C14.714 12 15.4424 12.3017 15.9794 12.8387C16.5165 13.3758 16.8182 14.1041 16.8182 14.8636C16.8182 15.6231 16.5165 16.3515 15.9794 16.8885C15.4424 17.4255 14.714 17.7273 13.9545 17.7273H7" class="svg-hover svg-gerenciamento" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect x="0" y="0" width="24" height="24"/>
+        <path d="M3.5,21 L20.5,21 C21.3284271,21 22,20.3284271 22,19.5 L22,8.5 C22,7.67157288 21.3284271,7 20.5,7 L10,7 L7.43933983,4.43933983 C7.15803526,4.15803526 6.77650439,4 6.37867966,4 L3.5,4 C2.67157288,4 2,4.67157288 2,5.5 L2,19.5 C2,20.3284271 2.67157288,21 3.5,21 Z" fill="#000000" opacity="0.3"/>
+    </g>
+</svg>
  
-										<span class="menu-text texto-menu texto-menu-gerenciamento"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gerenciamento</font></font></span>
+										<span class="menu-text texto-menu texto-menu-gerenciamento"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cadastros</font></font></span>
 									</a>
 									<div class="dropdown-menu ">
 										<a href="/appUsuario/listar_usuario.php" class="btn rounded mx-2 text-left dropdown-item">
-											<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuário</font></font></span>
+											<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuários</font></font></span>
 										</a>
 										<a href="/appCategoria/listar_categoria.php" class="btn rounded mx-2 text-left dropdown-item">
-											<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Categoria</font></font></span>
+											<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Categorias</font></font></span>
 										</a>
 										<a href="/appPonto/listar_ponto.php" class="btn rounded mx-2 text-left dropdown-item">
-											<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ponto</font></font></span>
+											<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pontos</font></font></span>
 										</a>
 									</div>
 								</li>
@@ -230,13 +224,13 @@ License: You must have a valid license purchased only from themeforest(the above
 												<path d="M8 2V6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 												<path d="M3 10H21" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
-											<p class="mb-0 mt-1 ml-2 texto-chumbo"><?php echo date('d') .' de '.date('F').' de '.date('Y');?></p>
+											<p class="mb-0 mt-1 ml-2 texto-chumbo"><?php echo strftime('%A, %d de %B de %Y', strtotime('today')); ?></p>
 										</div>
 									</div>
 									<!--end::Header Menu-->
 								</div>
 								<div class="mb-8 ">
-									<h1 class="h1-titulo">Dashboard</h1>
+									<h1 class="h1-titulo">Painel de Controle</h1>
 								</div>
 								<!--begin::Row-->	
 								<div class="row">
@@ -356,13 +350,13 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="card-body d-flex">
 													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 														<div class="flex-grow-1" style="display: inherit;">
-															<h3 class="card-title titulo-div">Minhas mídias</h3>
+															<h3 class="card-title titulo-div">Mídias contratadas</h3>
 														</div>
 														<div class="row m-0 col-12" >											
 															<table class="table table-hover">
 																<thead>
 																	<tr>
-																		<th>Mídias contratadas</th>
+																		<th>Tipo de Mídia</th>
 																		<th>Data inicial</th>
 																		<th>Data final</th>
 																		<th>Valor contratado</th>
