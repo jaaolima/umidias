@@ -93,12 +93,13 @@
 				$select = "SELECT id_ponto, nu_valor, t.id_midia, ds_local, t.ds_nome
 							FROM tb_ponto p
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
-							where id_usuario=:id_usuario";
+							limit 1
+							/*where id_usuario=:id_usuario*/";
 				
 				$stmt = $con->prepare($select); 
-				$params = array(':id_usuario' => $id_usuario);
+				/*$params = array(':id_usuario' => $id_usuario);*/
 				
-				$stmt->execute($params);
+				$stmt->execute();
 
 				return $stmt;
 				
