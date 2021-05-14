@@ -42,9 +42,10 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
                 </div>
-                <div class="dropzone dropzone-multi" id="kt_dropzone_5">
+                <div class="dropzone dropzone-multi col-md-4" id="kt_dropzone_5">
+                    <label>Fotos <span class="text-danger">*</span></label>
                     <div class="dropzone-panel mb-lg-0 mb-2">
-                        <a class="dropzone-select btn btn-light-primary font-weight-bold btn-sm">Selecione suas imagens</a>
+                        <a class="dropzone-select btn btn-primary font-weight-bold btn-sm">Selecione suas imagens</a>
                     </div>
                     <div class="dropzone-items">
                         <div class="dropzone-item" style="display:none">
