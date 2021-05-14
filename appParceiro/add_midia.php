@@ -190,13 +190,13 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</div>
 																	</div>
 																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Valor</label>
+																		<label class="col-xl-3 col-lg-3 col-form-label">Latitude</label>
 																		<div class="col-lg-9 col-xl-9">
 																			<input class="form-control form-control-lg form-control-solid" name="ds_latitude" id="ds_latitude" type="text"  />
 																		</div>
 																	</div>
 																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Valor</label>
+																		<label class="col-xl-3 col-lg-3 col-form-label">Longitude</label>
 																		<div class="col-lg-9 col-xl-9">
 																			<input class="form-control form-control-lg form-control-solid" name="ds_longitude" id="ds_longitude" type="text"  />
 																		</div>

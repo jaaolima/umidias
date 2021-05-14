@@ -30,7 +30,7 @@ $(document).ready(function() {
 	});
 
 	$("#ds_longitude").inputmask({
-        "mask": "9999999",
+        "mask": "999.9999999",
 		autoUnmask: true,
 	});
 
