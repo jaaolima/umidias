@@ -169,12 +169,30 @@ $('.botao-menu').click(function (e)
 
 	});
 
-  $('.botao-menu-cadastro').click(function (e)
+  $('.botao-menu-usuario').click(function (e)
 	{
     $('.svg-hover').removeClass('svg-active');
-    $('.svg-cadastro').addClass('svg-active');
+    $('.svg-usuario').addClass('svg-active');
     $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-cadastro').addClass('texto-menu-active');
+    $('.texto-menu-usuario').addClass('texto-menu-active');
+
+
+	});
+  $('.botao-menu-categoria').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-categoria').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-categoria').addClass('texto-menu-active');
+    
+
+	});
+  $('.botao-menu-ponto').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-ponto').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-ponto').addClass('texto-menu-active');
     
 
 	});
