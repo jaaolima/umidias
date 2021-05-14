@@ -71,7 +71,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				</a>
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
-					<div>Olá, <?php echo $dadosUsuario['ds_nome'];?>!</div>
+					<div><p class="mb-0 mt-1 ml-2 texto-chumbo">Olá, <?php echo $dadosUsuario['ds_nome'];?>!</p></div>
 					<div class="dropdown">
 						<div  class="mr-2" data-toggle="dropdown" aria-expanded="false">
 							<a href="#" class="btn-dropdown">
