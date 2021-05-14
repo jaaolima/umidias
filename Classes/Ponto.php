@@ -14,7 +14,7 @@
 			$id_midia               = $dados['id_midia'];
 			$ds_observacao	        = $dados['ds_observacao'];
 
-			$tamanho = 3000000;
+			$tamanho = 20000000;
 
 			$error = array();
 			$tamanho_mb = $tamanho/1024/1024;
