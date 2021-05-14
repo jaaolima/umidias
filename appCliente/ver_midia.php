@@ -5,7 +5,7 @@
 	session_start();
 	require_once("../Classes/Ponto.php");
 
-	$id_ponto = $_POST["id_ponto"];
+	$id_ponto = $_POST["id_ponto"]; 
 	
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
