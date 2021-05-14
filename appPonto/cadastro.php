@@ -49,7 +49,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
             </div>
             <div class="form-group row">
                 <label>Fotos <span class="text-danger">*</span></label>
-                <input type="file" name="ds_foto" id="ds_foto">
+                <input type="file"  class="form-control" name="ds_foto" id="ds_foto">
             </div>
 			<div class="form-group row"> 
 				<div class="form-group col-md-8">
