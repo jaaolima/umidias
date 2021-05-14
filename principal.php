@@ -190,7 +190,7 @@
 										<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Categorias</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item my-4 botao-menu botao-menu-categoria btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appPonto/listar_ponto.php" class="btn rounded mx-2 text-left ">
 										<svg width="24" height="24" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M44.2 1H5.8C3.14903 1 1 3.14903 1 5.8V29.8C1 32.451 3.14903 34.6 5.8 34.6H44.2C46.851 34.6 49 32.451 49 29.8V5.8C49 3.14903 46.851 1 44.2 1Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="svg-hover svg-ponto"/>
@@ -198,7 +198,7 @@
 											<path d="M25 34.6001V44.2001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="svg-hover svg-ponto"/>
 										</svg>
  
-										<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pontos</font></font></span>
+										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pontos</font></font></span>
 									</a>
 								</li>
 								<?php endif ;?>
