@@ -39,6 +39,10 @@ $optionscategoria = $Categoria->listaroptionscategoria();
         <div class="card-body">
             <div class="form-group row">
                 <div class="form-group col-md-4">
+                    <label>Local <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_local" name="ds_local"/>
+                </div>
+                <div class="form-group col-md-4">
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
                 </div>
