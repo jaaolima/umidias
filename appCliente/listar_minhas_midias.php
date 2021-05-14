@@ -5,7 +5,7 @@
 	error_reporting(E_ALL);
 	session_start();
 
-	require_once("Classes/Ponto.php");
+	require_once("../Classes/Ponto.php");
 
    	$id_usuario = $_SESSION['id_usuario'];
 
