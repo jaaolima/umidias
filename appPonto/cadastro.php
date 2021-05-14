@@ -76,7 +76,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                     <label >Valor Sugerido</label>
                     <input type="text" class="form-control" value="50R$" id="nu_valorsugerido" name="nu_valorsugerido"readonly/>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-2">
                     <label >Tipo de Mídia <span class="text-danger">*</span></label>
                     <select class="form-control" id="id_midia" name="id_midia">
                         <option>Selecione..</option>
