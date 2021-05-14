@@ -85,12 +85,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-8">
                                         <div class="my-12">
-                                            <h1 class="h1-titulo">St. Central - Taguatinga </h1>
+                                            <h1 class="h1-titulo"><?php echo $dados["ds_local"]; ?></h1>
                                             <span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
                                         </div>
                                         <div class="my-12">
                                             <h3 class="texto-negrito">Descrição </h3>
-                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quibusdam adipisci vitae provident quo deserunt ipsum quidem fugit mollitia, repudiandae delectus! Blanditiis animi sunt possimus officiis ipsam unde quo obcaecati?</span>
+                                            <span><?php echo $dados["ds_descricao"]; ?></span>
                                         </div>
                                         <div class="my-12">
                                             <h3 class="texto-negrito">Tamanho</h3>
@@ -98,7 +98,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                         <div class="my-12">
                                             <h3 class="texto-negrito">Latitude e Longitude</h3>
-                                            <span>00000000000 000000000</span>
+                                            <span><?php echo $dados["ds_latitude"] . ' ' . $dados["ds_longitude"] ; ?></span>
                                         </div>
                                         <div class="my-12">
                                             <h3 class="texto-negrito">Alugada por 24 dias</h3>
@@ -106,7 +106,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>	
                                         <div class="my-12">
                                             <h3 class="texto-negrito">Contrato</h3>
-                                            <span class="">Valor: 10.000,00</span><br>
+                                            <span class="">Valor: <?php echo $dados["nu_valor"] ; ?></span><br>
                                             <span class="">Forma de pagamento: 10.000,00 em 2x</span><br>
                                             <div class="mt-8">
                                                 <a class="text-primary ">Baixar segunda via da nota fiscal</a>
