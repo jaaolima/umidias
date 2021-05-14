@@ -33,7 +33,7 @@
 				// Caminho de onde ficará o arquivo
 				$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_pontos/" . $nome_arquivo;
 
-				chmod("/var/www/app.unimidias.com.br/docs_pontos/", 0777);
+			
 				
 				// Faz o upload da imagem para seu respectivo caminho
 				$moved = move_uploaded_file($ds_foto["tmp_name"],  $caminho_arquivo);
