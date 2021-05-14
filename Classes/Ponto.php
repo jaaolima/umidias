@@ -38,14 +38,7 @@
 				// Faz o upload da imagem para seu respectivo caminho
 				$moved = move_uploaded_file($ds_foto["tmp_name"],  $caminho_arquivo);
 
-				if( $moved ) {
-					echo "Successfully uploaded";         
-				} else {
-					echo "Not uploaded because of error #".$ds_foto["error"]; 
-
-					var_dump($ds_foto);
-				}
-
+				
 				try{
 					$con = Conecta::criarConexao();
 					$insert = "INSERT into tb_ponto (ds_descricao, ds_foto, ds_latitude, ds_longitude, nu_valor, id_midia, ds_local, ds_observacao)
