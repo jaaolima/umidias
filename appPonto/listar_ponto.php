@@ -63,7 +63,7 @@
 						</div>
 					</div>-->
 					&nbsp;
-					<a href="appPonto/cadastro.php" class="btn btn-light-primary font-weight-bolder dropdown-toggle">
+					<a href="appPonto/cadastro.php" class="btn btn-light-primary font-weight-bolder">
 						<i class="la la-plus"></i>
 						Cadastrar novo
 					</a>
