@@ -12,7 +12,7 @@
 	<div class="card-header flex-wrap py-3">
 		<div class="card-title">
 			
-			<i class="flaticon-map"></i>
+			<i class="flaticon-map icon-xl"></i>
 			&nbsp;
 			<h3 class="card-label">
 				Parceiros Cadastrados
