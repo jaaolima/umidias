@@ -142,13 +142,13 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="col-6">
 													<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 														<legend class="legend-border mb-0">Data Inicial</legend>
-														<input class="border-0 w-100" type="text " style="height: 27px;">
+														<input class="border-0 w-100" type="date" style="height: 27px;">
 													</fieldset>   
 												</div>
 												<div class="col-6">
 													<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 														<legend class="legend-border mb-0">Data Final</legend>
-														<input class="border-0 w-100" type="text " style="height: 27px;">
+														<input class="border-0 w-100" type="date" style="height: 27px;">
 													</fieldset>   
 												</div>												
 											</div>
