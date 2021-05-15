@@ -5,6 +5,6 @@
 	require_once("../Classes/Parceiro.php");
 	$parceiro = new Parceiro();
     $id_estado = $_REQUEST['id_estado'];
-    $options = $parceiro->listarOptionsCidade($id_estado);
+    $options = $parceiro->listarOptionsCidade($id_estado, null);
     echo $options;
 ?>
