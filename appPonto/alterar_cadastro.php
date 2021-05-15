@@ -128,12 +128,23 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 <script>
 //alterar foto
 
-let foto = document.getElementById('alterar_foto');
+let alterarFoto = document.getElementById('alterar_foto');
 let file = document.getElementById('ds_foto');
+let foto = document.getElementById('foto');
 
-foto.addEventListener('click', () => {
+alterarFoto.addEventListener('click', () => {
   file.click();
 });
+
+file.addEventListener('change' (e) => {
+  let reader = new FileReader();
+
+  reader.onload = () => {
+    foto.src = reader.result;
+  }
+
+  reader.readAsDataURL(file.files[0]);
+})
 
 
     // The following example creates complex markers to indicate beaches near
