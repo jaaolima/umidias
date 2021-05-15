@@ -77,18 +77,6 @@ function validar()
 		$("#ds_longitude").addClass("is-valid");
 	}
 
-	if($("#ds_foto").val() == "")
-	{
-		$("#ds_foto").focus();
-		swal.fire("Erro", "adicione uma foto", "error");
-		$("#ds_foto").addClass("is-invalid");
-		return false;	
-	}
-	else
-	{
-		$("#ds_foto").removeClass("is-invalid");	
-		$("#ds_foto").addClass("is-valid");
-	}
 
 	if($("#nu_valor").val() == "")
 	{
