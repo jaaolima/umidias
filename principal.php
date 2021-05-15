@@ -171,7 +171,7 @@
 								<?php if($_SESSION['id_perfil'] == 3  ) :   ?>
 								<li class="menu-item my-4 botao-menu botao-menu-usuario btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appUsuario/listar_usuario.php" class="btn rounded mx-2 text-left ">
-										<i class="flaticon-users"></i>
+										<i class="flaticon-users icon-md"></i>
 										<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuários</font></font></span>
 									</a>
 								</li>
