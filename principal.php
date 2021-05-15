@@ -177,7 +177,7 @@
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
-									<a href="/appPonto/listar_ponto.php" class="btn rounded mx-2 text-left ">
+									<a href="#" class="btn rounded mx-2 text-left ">
 									<i class="flaticon-line-graph icon-xl"></i>
  
 										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Relatórios</font></font></span>
