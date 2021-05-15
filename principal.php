@@ -167,23 +167,11 @@
 								</li>
 								<?php endif ;?>
 								<?php if($_SESSION['id_perfil'] == 3  ) :   ?>
-								<li class="menu-item my-4 botao-menu botao-menu-usuario btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
-									<a href="/appUsuario/listar_usuario.php" class="btn rounded mx-2 text-left ">
-										<i class="flaticon-users icon-xl"></i>
-										<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuários</font></font></span>
-									</a>
-								</li>
+								
 								<li class="menu-item my-4 botao-menu botao-menu-categoria btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appCategoria/listar_categoria.php" class="btn rounded mx-2 text-left ">	
 										<i class="flaticon-cogwheel-2 icon-xl"></i>
 										<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Categorias</font></font></span>
-									</a>
-								</li>
-								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
-									<a href="/appPonto/listar_ponto.php" class="btn rounded mx-2 text-left ">
-									<i class="flaticon-placeholder icon-xl"></i>
- 
-										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pontos</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
@@ -193,6 +181,21 @@
 										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
 									</a>
 								</li>
+
+								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+									<a href="/appPonto/listar_ponto.php" class="btn rounded mx-2 text-left ">
+									<i class="flaticon-placeholder icon-xl"></i>
+ 
+										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pontos</font></font></span>
+									</a>
+								</li>
+								<li class="menu-item my-4 botao-menu botao-menu-usuario btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+									<a href="/appUsuario/listar_usuario.php" class="btn rounded mx-2 text-left ">
+										<i class="flaticon-users icon-xl"></i>
+										<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuários</font></font></span>
+									</a>
+								</li>
+								
 								<?php endif ;?>
 							</ul>
 							<div class="position-fixed bottom-0 ml-8 mb-6">
