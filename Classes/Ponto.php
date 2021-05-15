@@ -162,59 +162,93 @@
 			$st_status          	= $dados['st_status'];
 			$ds_observacao	        = $dados['ds_observacao'];
 			
+			if($ds_foto == "" || $ds_foto == NULL){
 
-			$tamanho = 3000000;
-
-			$error = array();
-			$tamanho_mb = $tamanho/1024/1024;
-			
-			if($ds_foto["size"] > $tamanho) {
-				$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
+				try{
+					$con = Conecta::criarConexao();
+					$insert = "UPDATE tb_ponto set ds_descricao = :ds_descricao, ds_local = :ds_local, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, st_status = :st_status, ds_observacao = :ds_observacao
+							   WHERE id_ponto = :id_ponto";
+					
+					$stmt = $con->prepare($insert);
+					
+					$params = array(
+									':ds_descricao' => $ds_descricao,
+									':ds_local' => $ds_local,
+									':ds_latitude' => $ds_latitude,
+									':ds_longitude' => $ds_longitude,
+									':nu_valor' => $nu_valor,
+									':id_midia' =>$id_midia,
+									':st_status' => $st_status,
+									':ds_observacao' => $ds_observacao,
+									':id_ponto' => $id_ponto);
+									
+					$stmt->execute($params);
+					
+					echo "Dados alterados com sucesso!"; 
+					
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
 			}
-
-			
-
-			if (count($error) == 0) {
-				// Pega extensão da imagem
-				preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $ds_foto["name"], $ext);
-				// Gera um nome único para o arquivo
-				$nome_arquivo = md5(uniqid(time())) . "arquivo." . $ext[1];
-				// Caminho de onde ficará o arquivo
-				$caminho_arquivo = "../documentos/" . $nome_arquivo;
-				
-				// Faz o upload da imagem para seu respectivo caminho
-				move_uploaded_file($ds_foto["tmp_name"], $caminho_arquivo);
-			}
-
-			try{
-				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_ponto set ds_descricao = :ds_descricao, ds_local = :ds_local, ds_foto = :ds_foto, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, st_status = :st_status, ds_observacao = :ds_observacao
-						   WHERE id_ponto = :id_ponto";
-				
-				$stmt = $con->prepare($insert);
-				
-				$params = array(
-								':ds_descricao' => $ds_descricao,
-								':ds_local' => $ds_local,
-								':ds_foto' => $caminho_arquivo,
-								':ds_latitude' => $ds_latitude,
-								':ds_longitude' => $ds_longitude,
-								':nu_valor' => $nu_valor,
-								':id_midia' =>$id_midia,
-								':st_status' => $st_status,
-								':ds_observacao' => $ds_observacao,
-								':id_ponto' => $id_ponto);
-                                
-				$stmt->execute($params);
-				
-				echo "Dados alterados com sucesso!"; 
-				
-			}
-			catch(exception $e)
+			else
 			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			}
+
+			
+				if (count($error) == 0) {
+					// Pega extensão da imagem
+					preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $ds_foto["name"], $ext);
+					// Gera um nome único para o arquivo
+					$nome_arquivo = md5(uniqid(time())) . "arquivo." . $ext[1];
+					// Caminho de onde ficará o arquivo
+					$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_pontos/" . $nome_arquivo;
+
+					$gravar_caminho_arquivo = "docs_pontos/" . $nome_arquivo;
+
+				
+					
+					// Faz o upload da imagem para seu respectivo caminho
+					$moved = move_uploaded_file($ds_foto["tmp_name"],  $caminho_arquivo);
+
+					
+
+					try{
+						$con = Conecta::criarConexao();
+						$insert = "UPDATE tb_ponto set ds_descricao = :ds_descricao, ds_local = :ds_local, ds_foto = :ds_foto, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, st_status = :st_status, ds_observacao = :ds_observacao
+								   WHERE id_ponto = :id_ponto";
+						
+						$stmt = $con->prepare($insert);
+						
+						$params = array(
+										':ds_descricao' => $ds_descricao,
+										':ds_local' => $ds_local,
+										':ds_foto' => $gravar_caminho_arquivo,
+										':ds_latitude' => $ds_latitude,
+										':ds_longitude' => $ds_longitude,
+										':nu_valor' => $nu_valor,
+										':id_midia' =>$id_midia,
+										':st_status' => $st_status,
+										':ds_observacao' => $ds_observacao,
+										':id_ponto' => $id_ponto);
+										
+						$stmt->execute($params);
+						
+						echo "Dados alterados com sucesso!"; 
+						
+					}
+					catch(exception $e)
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					}
+				}
+				else
+				{
+					echo "Aconteceu um erro".$error[1];
+				}
+			}	
 			
 		}
 		
