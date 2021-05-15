@@ -8,7 +8,7 @@ $id_parceiro = $_REQUEST['id_parceiro'];
 
 $parceiro = new Parceiro();
 $dados = $parceiro->buscarDadosParceiro($id_parceiro);
-$optionsUF = $parceiro->listaroptionsUF($dados['id_cidade']);
+$optionsUF = $parceiro->listaroptionsUF($dados['id_estado']);
  
 ?>
 

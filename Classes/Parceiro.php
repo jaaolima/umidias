@@ -143,13 +143,12 @@
 			} 
 		}
 		
-		public function listarOptionsUF()
+		public function listarOptionsUF($id_estado)
 		{
 			try{
 				$con = Conecta::criarConexao();
-				$select = "SELECT distinct e.id_estado, ds_uf
-							FROM estados e 
-							INNER JOIN cidades c on e.id_estado=c.id_cidade
+				$select = "SELECT distinct id_estado, ds_uf
+							FROM estados 
 							ORDER BY ds_uf";
 				$stmt = $con->prepare($select);
 				$stmt->execute();
@@ -158,8 +157,15 @@
 
 				while($dados = $stmt->fetch())
 				{
-						
-					$options.= "<option value='".$dados['id_estado']."'>".$dados['ds_uf']."</option>";
+					if($id_estado == $dados['id_estado'])
+					{
+						$options.= "<option value='".$dados['id_estado']."' selected>".$dados['ds_uf']."</option>";
+					}	
+					else
+					{
+						$options.= "<option value='".$dados['id_estado']."'>".$dados['ds_uf']."</option>";	
+					}
+					
 
 				}
 				return $options;
@@ -172,33 +178,33 @@
 			}
 		}
 		public function listarOptionsCidade($id_estado)
-	{
-		try{
-			$con = Conecta::criarConexao();
-			$select = "SELECT id_cidade, ds_nome FROM cidades WHERE id_estado = :id_estado";
-			$stmt = $con->prepare($select);
-			$params = array(':id_estado' => $id_estado);
-			$stmt->execute($params);
-
-			$options = "";
-
-			while($dados = $stmt->fetch())
-			{
-				
-				$options.= "<option value='".$dados['id_cidade']."'>".$dados['ds_nome']."</option>";
-
-				
-			}
-			return $options;
-
-		}
-		catch(exception $e)
 		{
-			header('HTTP/1.1 500 Internal Server Error');
-			print $e->getMessage();
+			try{
+				$con = Conecta::criarConexao();
+				$select = "SELECT id_cidade, ds_nome FROM cidades WHERE id_estado = :id_estado";
+				$stmt = $con->prepare($select);
+				$params = array(':id_estado' => $id_estado);
+				$stmt->execute($params);
+
+				$options = "";
+
+				while($dados = $stmt->fetch())
+				{
+					
+					$options.= "<option value='".$dados['id_cidade']."'>".$dados['ds_nome']."</option>";
+
+					
+				}
+				return $options;
+
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+				print $e->getMessage();
+			}
+			
 		}
-		
-	}
 
     }
 
