@@ -136,7 +136,7 @@ alterarFoto.addEventListener('click', () => {
   file.click();
 });
 
-file.addEventListener('change' (e) => {
+file.addEventListener('change', (event) => {
   let reader = new FileReader();
 
   reader.onload = () => {
@@ -144,7 +144,7 @@ file.addEventListener('change' (e) => {
   }
 
   reader.readAsDataURL(file.files[0]);
-})
+});
 
 
     // The following example creates complex markers to indicate beaches near
