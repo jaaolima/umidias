@@ -116,9 +116,7 @@
 							<ul class="menu-nav nav-pills">
 								<li class="menu-item my-4 botao-menu botao-menu-dashboard botao-menu-active btn ml-5" style="width:max-content;"  aria-haspopup="true">
 									<a href="principal.php" class="btn rounded mx-2 text-left  ">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4 9.3L12.1 3L20.2 9.3V19.2C20.2 19.6774 20.0104 20.1352 19.6728 20.4728C19.3352 20.8104 18.8774 21 18.4 21H5.8C5.32261 21 4.86477 20.8104 4.52721 20.4728C4.18964 20.1352 4 19.6774 4 19.2V9.3Z" fill="none" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-hover svg-dashboard svg-active"/>
-										</svg>
+										<i class="flaticon-home-2 icon-xl"></i>
 
 										<span class="menu-text texto-menu-active texto-menu texto-menu-dashboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Painel de Controle</font></font></span>
 									</a>
@@ -171,23 +169,19 @@
 								<?php if($_SESSION['id_perfil'] == 3  ) :   ?>
 								<li class="menu-item my-4 botao-menu botao-menu-usuario btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appUsuario/listar_usuario.php" class="btn rounded mx-2 text-left ">
-										<i class="flaticon-users icon-xl svg-hover svg-categoria"></i>
+										<i class="flaticon-users icon-xl"></i>
 										<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuários</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-categoria btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appCategoria/listar_categoria.php" class="btn rounded mx-2 text-left ">	
-										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="24" height="24" x="0" y="0" viewBox="0 0 573.33331 573" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m475 101.585938h-182.875c-14 .003906-26.832031-7.808594-33.25-20.25l-25.75-49.625c-10.722656-20.738282-32.15625-33.71875-55.5-33.628907h-115.125c-34.511719.015625-62.484375 27.988281-62.5 62.5v349.503907c.015625 34.511718 27.988281 62.484374 62.5 62.5h412.5c34.511719-.015626 62.484375-27.988282 62.5-62.5v-246c-.015625-34.511719-27.988281-62.492188-62.5-62.5zm-412.5-78.375h115.125c14-.011719 26.832031 7.808593 33.25 20.25l25.75 49.621093c1.597656 2.996094 3.394531 5.875 5.375 8.628907h-217v-40.878907c.003906-20.726562 16.773438-37.546875 37.5-37.621093zm450 386.996093c-.058594 20.6875-16.816406 37.441407-37.5 37.5h-412.5c-20.683594-.058593-37.441406-16.8125-37.5-37.5v-283.621093h254.875c1.226562.023437 2.449219-.144532 3.625-.5 2.902344.394531 5.820312.605468 8.75.625h182.75c20.683594.058593 37.441406 16.8125 37.5 37.5zm0 0" fill="#57616a" data-original="#000000" style="" class="svg-hover svg-categoria"/></g></svg>
+										<i class="flaticon-cogwheel-2 icon-xl"></i>
 										<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Categorias</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appPonto/listar_ponto.php" class="btn rounded mx-2 text-left ">
-										<svg width="24" height="24" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M44.2 1H5.8C3.14903 1 1 3.14903 1 5.8V29.8C1 32.451 3.14903 34.6 5.8 34.6H44.2C46.851 34.6 49 32.451 49 29.8V5.8C49 3.14903 46.851 1 44.2 1Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="svg-hover svg-ponto"/>
-											<path d="M20.2 44.2H29.8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="svg-hover svg-ponto"/>
-											<path d="M25 34.6001V44.2001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="svg-hover svg-ponto"/>
-										</svg>
+									<i class="flaticon-placeholder icon-xl"></i>
  
 										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pontos</font></font></span>
 									</a>
