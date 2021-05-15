@@ -124,7 +124,7 @@
 								<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 2) :   ?>
 								<li class="menu-item my-4  btn ml-5 botao-menu botao-menu-alugar" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="appCliente/listar_tipo.php" class="btn rounded mx-2 text-left  ">
-										<i class="flaticon-tabs icon-xl"></i>
+										<i class="flaticon-web icon-xl"></i>
 										<span class="menu-text texto-menu texto-menu-alugar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
 									</a>
 								</li>
@@ -133,7 +133,7 @@
 								<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 2 ) :   ?>
 								<li class="menu-item my-4 botao-menu botao-menu-alugadas btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="appCliente/listar_minhas_midias.php" class="btn rounded mx-2 text-left  ">
-										<i class="flaticon-list icon-xl"></i>
+										<i class="flaticon-list-3 icon-xl"></i>
 										<span class="menu-text texto-menu texto-menu-alugadas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mídias alugadas</font></font></span>
 									</a>
 								</li>
@@ -187,7 +187,7 @@
 							</ul>
 							<div class="position-fixed bottom-0 ml-8 mb-6">
 								<a  href="principal.php" class="btn ml-2 text-left d-flex">
-								<i class="flaticon-support icon-xl"></i>
+								<i class="flaticon-chat-1 icon-xl"></i>
 									<p class="menu-text texto-menu text-primary ml-2">Fale conosco</p>
 								</a>
 							</div>							
