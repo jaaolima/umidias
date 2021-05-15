@@ -162,7 +162,7 @@
 			$st_status          	= $dados['st_status'];
 			$ds_observacao	        = $dados['ds_observacao'];
 			
-			echo $ds_foto;
+			echo $ds_foto["ds_foto"];
 			/*if($ds_foto == "" || $ds_foto == NULL){
 
 				try{
