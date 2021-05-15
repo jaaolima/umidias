@@ -91,7 +91,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class='card-body text-center' style='padding: 0px !important'>
 															<!--begin::User-->
 															<div class='position-relative' >
-																<img class='img-fluid w-100 rounded-top' src='assets/media/outdoor.jpg' alt='image' />
+																<img class='img-fluid w-100 rounded-top' src='".$dados["ds_foto"]."' alt='image' />
 																<div class='position-absolute' style='top: 16px; right: 16px;'>
 																	<svg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'>
 																		<g filter='url(#filter0_d)'>
