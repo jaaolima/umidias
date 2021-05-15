@@ -177,7 +177,7 @@
 			print $e->getMessage();
 			}
 		}
-		public function listarOptionsCidade($id_estado)
+		public function listarOptionsCidade($id_estado, $id_cidade)
 		{
 			try{
 				$con = Conecta::criarConexao();
@@ -190,8 +190,15 @@
 
 				while($dados = $stmt->fetch())
 				{
+					if($id_cidade == $dados['id_cidade'])
+					{
+						$options.= "<option value='".$dados['id_cidade']."' selected>".$dados['ds_nome']."</option>";
+					}
+					else
+					{
+						$options.= "<option value='".$dados['id_cidade']."'>".$dados['ds_nome']."</option>";
+					}
 					
-					$options.= "<option value='".$dados['id_cidade']."'>".$dados['ds_nome']."</option>";
 
 					
 				}

@@ -9,6 +9,7 @@ $id_parceiro = $_REQUEST['id_parceiro'];
 $parceiro = new Parceiro();
 $dados = $parceiro->buscarDadosParceiro($id_parceiro);
 $optionsUF = $parceiro->listaroptionsUF($dados['id_estado']);
+$optionsCidade = $parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_cidade']);
  
 ?>
 
@@ -66,6 +67,9 @@ $optionsUF = $parceiro->listaroptionsUF($dados['id_estado']);
                     <label >Município<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_cidade" name="id_cidade">
                         <option>Selecione..</option>
+                        <?php 
+							echo $optionsCidade;
+						?>
                     </select>
                 </div>
                 <div class="form-group col-md-3">
