@@ -55,8 +55,8 @@ $optionscategoria = $Categoria->listaroptionscategoria();
             <div class="form-group row">
               <div class="form-group col-md-4">
                       <label >Foto <span class="text-danger">*</span></label>
-                      <a class="" id="alterar_foto">
-                        <img src="app.unimidias.com.br/docs_pontos/1aa3e5b29450f4e16131bef7c2c0c9edarquivo.jpg" >
+                      <a class="w-100" id="alterar_foto">
+                        <img id="foto" class="w-100" src="/docs_pontos/1aa3e5b29450f4e16131bef7c2c0c9edarquivo.jpg" >
                       </a>
                       <input type="file" class="form-control d-none" id="ds_foto" name="ds_foto" accept="image/*"/>
                   </div> 
@@ -121,6 +121,16 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 
 <script src="./assets/js/appPonto/alterar_cadastro.js" type="text/javascript"></script>
 <script>
+//alterar foto
+
+let foto = document.getElementBy('foto');
+let file = document.getElementBy('ds_foto');
+
+foto.addEventListener('click', () => {
+  file.click();
+});
+
+
     // The following example creates complex markers to indicate beaches near
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
