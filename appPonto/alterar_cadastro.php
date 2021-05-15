@@ -55,9 +55,9 @@ $optionscategoria = $Categoria->listaroptionscategoria();
             <div class="form-group row">
               <div class="form-group col-md-4">
                       <label >Foto <span class="text-danger">*</span></label>
-                      <button>
-                        <img src="<?php echo $dados["ds_foto"] ?>" >
-                      </button>
+                      <a class="" id="alterar_foto">
+                        <img src="app.unimidias.com.br/docs_pontos/1aa3e5b29450f4e16131bef7c2c0c9edarquivo.jpg" >
+                      </a>
                       <input type="file" class="form-control d-none" id="ds_foto" name="ds_foto" accept="image/*"/>
                   </div> 
               </div>
