@@ -162,7 +162,8 @@
 			$st_status          	= $dados['st_status'];
 			$ds_observacao	        = $dados['ds_observacao'];
 			
-			if($ds_foto == "" || $ds_foto == NULL){
+			echo $ds_foto;
+			/*if($ds_foto == "" || $ds_foto == NULL){
 
 				try{
 					$con = Conecta::criarConexao();
@@ -196,7 +197,15 @@
 			else
 			{
 
-			
+				$tamanho = 20000000;
+
+				$error = array();
+				$tamanho_mb = $tamanho/1024/1024;
+				
+				if($ds_foto["size"] > $tamanho) {
+					$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
+				}
+
 				if (count($error) == 0) {
 					// Pega extensão da imagem
 					preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $ds_foto["name"], $ext);
@@ -247,8 +256,8 @@
 				else
 				{
 					echo "Aconteceu um erro".$error[1];
-				}
-			}	
+				}*
+			}	*/
 			
 		}
 		
