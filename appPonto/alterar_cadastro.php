@@ -55,7 +55,10 @@ $optionscategoria = $Categoria->listaroptionscategoria();
             <div class="form-group row">
               <div class="form-group col-md-4">
                       <label >Foto <span class="text-danger">*</span></label>
-                      <input type="file" class="form-control" id="ds_foto" name="ds_foto" <?php echo $dados['ds_foto']?>/>
+                      <button>
+                        <img src="<?php echo $dados["ds_foto"] ?>" >
+                      </button>
+                      <input type="file" class="form-control d-none" id="ds_foto" name="ds_foto" accept="image/*"/>
                   </div> 
               </div>
             <div class="form-group row"> 
