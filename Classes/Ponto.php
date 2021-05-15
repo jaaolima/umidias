@@ -162,8 +162,7 @@
 			$st_status          	= $dados['st_status'];
 			$ds_observacao	        = $dados['ds_observacao'];
 			
-			echo $ds_foto["name"];
-			/*if($ds_foto == "" || $ds_foto == NULL){
+			if($ds_foto["name"] == "" ){
 
 				try{
 					$con = Conecta::criarConexao();
@@ -256,8 +255,8 @@
 				else
 				{
 					echo "Aconteceu um erro".$error[1];
-				}*
-			}	*/
+				}
+			}	
 			
 		}
 		
