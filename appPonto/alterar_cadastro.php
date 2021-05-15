@@ -123,8 +123,8 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 <script>
 //alterar foto
 
-let foto = document.getElementBy('foto');
-let file = document.getElementBy('ds_foto');
+let foto = document.getElementById('foto');
+let file = document.getElementById('ds_foto');
 
 foto.addEventListener('click', () => {
   file.click();
