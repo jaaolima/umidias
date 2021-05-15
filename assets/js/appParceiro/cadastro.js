@@ -35,7 +35,7 @@ $(document).ready(function() {
 		$.ajax({
 	        url: 'appParceiro/listar_options_cidade.php'
 	        , type: 'post'
-	        , data: {id_estado : id_estado}
+	        , data: {id_estado : id_estado, id_cidade: null}
 	        , success: function(html) {
 	        	$("#id_cidade").empty();
 	        	$("#id_cidade").append(html);     
