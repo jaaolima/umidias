@@ -137,6 +137,11 @@ alterarFoto.addEventListener('click', () => {
 });
 
 file.addEventListener('change', (event) => {
+  if(file.files.lenght <= 0){
+    return
+  }
+
+
   let reader = new FileReader();
 
   reader.onload = () => {
