@@ -162,7 +162,7 @@
 								</li>
 
 								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
-									<a href="#" class="btn rounded mx-2 text-left ">
+									<a href="/appParceiro/listar_parceiro.php" class="btn rounded mx-2 text-left ">
 									<i class="flaticon-map icon-xl"></i>
  
 										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Parceiros</font></font></span>
