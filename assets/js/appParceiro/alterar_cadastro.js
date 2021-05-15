@@ -45,6 +45,10 @@ $(document).ready(function() {
 		autoUnmask: true,
 	});
 
+	$("#nu_aliquota").inputmask({
+		"mask": "99.9"
+	});
+
 	$("#id_estado").on("change", function() {
 		var id_estado = $("#id_estado option:selected").val();
 		$.ajax({
@@ -202,6 +206,19 @@ function validar()
 	{
 		$("#nu_telefone").removeClass("is-invalid");	
 		$("#nu_telefone").addClass("is-valid");
+	}
+
+	if($("#id_regime").val() == "")
+	{
+		$("#id_regime").focus();
+		swal.fire("Erro", "Selecione o regime fiscal", "error");
+		$("#id_regime").addClass("is-invalid");
+		return false;		
+	}
+	else
+	{
+		$("#id_regime").removeClass("is-invalid");	
+		$("#id_regime").addClass("is-valid");
 	}
 	
 	
