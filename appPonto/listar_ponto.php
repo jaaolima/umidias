@@ -10,7 +10,7 @@
 <div class="card card-custom gutter-b">
 	<div class="card-header flex-wrap py-3">
 		<div class="card-title">
-			<i class="flaticon-placeholder icon-xl"></i>
+			<i class="flaticon-placeholder icon-xl"></i>&nbsp;
 			<h3 class="card-label">
 				Pontos Cadastrados
 			</h3> 
