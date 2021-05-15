@@ -128,9 +128,9 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 <script>
 //alterar foto
 
-let alterarfoto = document.getElementById('alterar_foto');
-let file = document.getElementById('ds_foto');
-let foto = document.getElementById('foto');
+var alterarfoto = document.getElementById('alterar_foto');
+var file = document.getElementById('ds_foto');
+var foto = document.getElementById('foto');
 
 alterarfoto.addEventListener('click', () => {
   file.click();
@@ -142,7 +142,7 @@ file.addEventListener('change', (event) => {
   }
 
 
-  let reader = new FileReader();
+  var reader = new FileReader();
 
   reader.onload = () => {
     foto.src = reader.result;
