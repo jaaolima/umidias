@@ -12,7 +12,7 @@
 	<div class="card-header flex-wrap py-3">
 		<div class="card-title">
 			<span class="kt-portlet__head-icon">
-				<i class="fas fa-address-book"></i>
+				<i class="flaticon-map"></i>
 			</span>&nbsp;
 			<h3 class="card-label">
 				Parceiros Cadastrados
