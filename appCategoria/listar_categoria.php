@@ -13,7 +13,7 @@
 		<div class="card-title">
 		<i class="flaticon-cogwheel-2 icon-xl"></i>&nbsp;
 			<h3 class="card-label">
-				Categorias Cadastrados
+				Categorias Cadastradas
 			</h3>
 		</div>
 		<div class="kt-portlet__head-toolbar">
@@ -62,7 +62,7 @@
 						</div>
 					</div>-->
 					&nbsp;
-					<a href="appCategoria/cadastro.php" class="btn btn-light-primary font-weight-bolder dropdown-toggle">
+					<a href="appCategoria/cadastro.php" class="btn btn-light-primary font-weight-bolder">
 						<i class="la la-plus"></i>
 						Cadastrar novo
 					</a>
