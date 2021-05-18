@@ -420,6 +420,14 @@
 									<div class="row">
 										<div class="col-4">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+												<div class="card-body d-flex">
+													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+														<div class="flex-grow-1" style="display: inherit;">
+															<h3 class="card-title titulo-div">Total de Pontos</h3>
+														</div>
+														<h5><?php echo count($dadosTodasMidias);?></h5>
+													</div>
+												</div>
 											</div>
 										</div>
 										<div class="col-4">
