@@ -28,16 +28,18 @@
 		{
 
 			$ds_material	    = $dados['ds_material'];
+            $nu_valor	    = $dados['nu_valor'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_material (ds_material)
-							VALUES (:ds_material)";
+				$insert = "INSERT into tb_material (ds_material, nu_valor)
+							VALUES (:ds_material, :nu_valor)";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_material' => $ds_material,);
+				$params = array(':ds_material' => $ds_material,
+                                ':nu_valor' => $nu_valor,);
                                 
 				$stmt->execute($params);
 				
