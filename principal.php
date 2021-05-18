@@ -23,6 +23,7 @@
 	$retorno = $midia->listarTipoMidia($_POST);
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 	$meusPontos = $ponto->listarMeusPontos($id_usuario);
+	$dadosTotalMidias = $ponto->dadosTotalMidias();
 	$dadosTodasMidias = $ponto->listarTodasMidias();
 ?>
 <!DOCTYPE html>
@@ -426,10 +427,7 @@
 															<h3 class="card-title titulo-div">Total de Pontos:</h3>
 														</div>
 														<?php
-															$dadosTotal = $dadosTodasMidias->fetch();
-															echo count($dadosTotal);
-															/*$dadosTotal = count($dadosTodasMidias["id_ponto"]);
-															echo $dadosTotal;*/
+			
 														?>
 														<h5</h5>
 													</div>

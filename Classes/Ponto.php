@@ -129,7 +129,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_ponto, nu_valor, t.ds_nome, ds_local, t.ds_nome
+				$select = "SELECT id_ponto, nu_valor, t.id_midia, ds_local, t.ds_nome
 							FROM tb_ponto p
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia";
 				
@@ -138,6 +138,28 @@
 				$stmt->execute();
 
 				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
+		public function dadosTotalMidias()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT count(id_ponto)
+							FROM tb_ponto ";
+				
+				$stmt = $con->prepare($select); 
+				
+				$stmt->execute();
+
+				return $stmt->fetch();
 				
 					
 			}
