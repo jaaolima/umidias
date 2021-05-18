@@ -426,7 +426,7 @@
 														<div class="flex-grow-1" style="display: inherit;">
 															<h3 class="card-title titulo-div">Total de Pontos:</h3>
 														</div>
-														<h5><?php echo $dadosTotalMidias; ?></h5>
+														<h5><?php echo $dadosTotalMidias["id_ponto"]; ?></h5>
 													</div>
 												</div>
 											</div>
