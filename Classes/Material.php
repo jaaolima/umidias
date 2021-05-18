@@ -6,7 +6,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_material, ds_material
+				$select = "SELECT id_material, ds_material, nu_valor
 							FROM tb_material";
 				
 				$stmt = $con->prepare($select); 
