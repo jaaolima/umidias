@@ -31,7 +31,7 @@
                 <div class="form-group col-md-4">
                     <label >Regime Fiscal<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_regime" name="id_regime">  
-                    
+                        <option value="">Selecione..</option>
                         <option value="SN">Simples Nacional</option>
                         <option value="LR">Lucro Real</option>
                         <option value="LP">Lucro Presumido</option>
