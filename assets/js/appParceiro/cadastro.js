@@ -50,10 +50,6 @@ $(document).ready(function() {
 		});
 	}
 	else{
-		$("#nu_cnpj_cpf").inputmask({
-			"mask": "99.999.999/9999-99",
-			autoUnmask: true,
-		});
 	}
 	
 
