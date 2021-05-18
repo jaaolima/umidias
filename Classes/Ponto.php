@@ -152,7 +152,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT count(id_ponto)
+				$select = "SELECT count(id_ponto) as id_ponto
 							FROM tb_ponto ";
 				
 				$stmt = $con->prepare($select); 
