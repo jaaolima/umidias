@@ -9,6 +9,7 @@
 	require_once("Classes/Midia.php");
 	require_once("Classes/Usuario.php");
 	require_once("Classes/Ponto.php");
+	require_once("Classes/Parceiro.php");
 
 	if ( $_SESSION['autenticado'] !=='validado') {
 		header("location: index.php");
@@ -19,11 +20,13 @@
 	$midia = new Midia();
 	$usuario = new Usuario();
 	$ponto = new Ponto();
+	$parceiro = new Parceiro();
 
 	$retorno = $midia->listarTipoMidia($_POST);
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 	$meusPontos = $ponto->listarMeusPontos($id_usuario);
 	$dadosTotalMidias = $ponto->dadosTotalMidias();
+	$dadosTotalParceiros = $parceiro->dadosTotalParceiros();
 	$dadosTodasMidias = $ponto->listarTodasMidias();
 ?>
 <!DOCTYPE html>
@@ -424,7 +427,7 @@
 												<div class="card-body d-flex">
 													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 														<div class="flex-grow-1" style="display: inherit;">
-															<h3 class="card-title titulo-div">Total de Midias:<?php echo $dadosTotalMidias["id_ponto"]; ?></h3>
+															<h3 class="card-title titulo-div">Total de Midias: <?php echo $dadosTotalMidias["id_ponto"]; ?></h3>
 														</div>
 														<h5>Contratadas:</h5>
 														<h5>Pendentes:</h5>
@@ -435,6 +438,13 @@
 										</div>
 										<div class="col-4">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+												<div class="card-body d-flex">
+													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+														<div class="flex-grow-1" style="display: inherit;">
+															<h3 class="card-title titulo-div">Total de Midias: <?php echo $dadosTotalParceiros["id_usuario"]; ?></h3>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>	
 										<div class="col-4">
