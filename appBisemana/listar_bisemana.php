@@ -88,7 +88,7 @@
 					while ($dados = $retorno->fetch())
 					{
 						echo "<tr>
-								<td>".$dados['id_midia']."</td>
+								<td>".$dados['id_bisemana']."</td>
 								<td>".$dados['ds_bisemana']."</td>
                                 <td>".$dados['dt_inicial']."</td>
                                 <td>".$dados['dt_final']."</td>
