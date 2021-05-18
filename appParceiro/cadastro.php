@@ -114,7 +114,5 @@
     <!--end::Form-->
 </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-<script src="jquery.maskMoney.js" type="text/javascript"></script>
 <script src="./assets/js/appParceiro/cadastro.js" type="text/javascript"></script>
 
