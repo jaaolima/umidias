@@ -43,7 +43,7 @@ var DatatablesBasicBasic = function() {
 						return `
                         
                          <a href="appBisemana/deletar_bisemana.php?id_bisemana=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar">
-                          <i class="la la-edit"></i>
+                          <i class="la la-exit"></i>
                         </a>
                         `;
 					},

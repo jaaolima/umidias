@@ -92,11 +92,11 @@
 				
 				$stmt = $con->prepare($insert);
 				
-                $params = array(':ds_bisemana' => $ds_bisemana);
+                $params = array(':id_bisemana' => $id_bisemana);
                                 
 				$stmt->execute($params);
 				
-				echo "Dados gravados com sucesso!"; 
+				echo "Deletado com sucesso!"; 
 				
 			}
 			catch(exception $e)
