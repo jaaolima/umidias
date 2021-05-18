@@ -19,13 +19,18 @@
                     <label>Bisemana<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_bisemana" name="ds_bisemana" />
                 </div>
+                
+            </div> 
+            <div class="form-group row">
                 <div class="form-group col-md-6">
                     <label>Data Inicial<span class="text-danger">*</span></label>
                     <input type="date" class="form-control" id="dt_inicial" name="dt_inicial" />
+                </div>  
+                <div class="form-group col-md-6">
                     <label>Data Final<span class="text-danger">*</span></label>
                     <input type="date" class="form-control" id="dt_final" name="dt_final" />
-                </div>
-            </div>       
+                </div>  
+            </div>    
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
