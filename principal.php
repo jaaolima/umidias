@@ -124,7 +124,7 @@
 								<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 2) :   ?>
 								<li class="menu-item my-4  btn ml-5 botao-menu botao-menu-alugar" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="appCliente/listar_tipo.php" class="btn rounded mx-2 text-left  ">
-										<i class="flaticon-web icon-xl"></i>
+										<i class="flaticon-web icon-xl svg-hover svg-alugar "></i>
 										<span class="menu-text texto-menu texto-menu-alugar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
 									</a>
 								</li>
@@ -133,13 +133,13 @@
 								<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 2 ) :   ?>
 								<li class="menu-item my-4 botao-menu botao-menu-alugadas btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="appCliente/listar_minhas_midias.php" class="btn rounded mx-2 text-left  ">
-										<i class="flaticon-list-3 icon-xl"></i>
+										<i class="flaticon-list-3 icon-xl svg-hover svg-alugadas"></i>
 										<span class="menu-text texto-menu texto-menu-alugadas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mídias alugadas</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-financeiro btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="#" class="btn rounded mx-2 text-left ">
-									<i class="flaticon-coins icon-xl"></i>
+									<i class="flaticon-coins icon-xl svg-hover svg-financeiro"></i>
  
 										<span class="menu-text texto-menu texto-menu-financeiro"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
 									</a>
@@ -155,7 +155,7 @@
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="#" class="btn rounded mx-2 text-left ">
-									<i class="flaticon-coins icon-xl"></i>
+									<i class="flaticon-coins icon-xl svg-hover svg-financeiro"></i>
  
 										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
 									</a>
@@ -163,7 +163,7 @@
 
 								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appParceiro/listar_parceiro.php" class="btn rounded mx-2 text-left ">
-									<i class="flaticon-map icon-xl"></i>
+									<i class="flaticon-map icon-xl svg-hover svg-parceiro"></i>
  
 										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Parceiros</font></font></span>
 									</a>
@@ -171,21 +171,21 @@
 
 								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appPonto/listar_ponto.php" class="btn rounded mx-2 text-left ">
-									<i class="flaticon-placeholder icon-xl"></i>
+									<i class="flaticon-placeholder icon-xl svg-hover svg-ponto"></i>
  
 										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pontos</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="#" class="btn rounded mx-2 text-left ">
-									<i class="flaticon-line-graph icon-xl"></i>
+									<i class="flaticon-line-graph icon-xl svg-hover svg-relatorio"></i>
  
 										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Relatórios</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-usuario btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appUsuario/listar_usuario.php" class="btn rounded mx-2 text-left ">
-										<i class="flaticon-users icon-xl"></i>
+										<i class="flaticon-users icon-xl svg-hover svg-usuario"></i>
 										<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuários</font></font></span>
 									</a>
 								</li>

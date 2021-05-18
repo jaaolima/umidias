@@ -169,30 +169,34 @@ $('.botao-menu').click(function (e)
 
 	});
 
-  $('.botao-menu-usuario').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-usuario').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-usuario').addClass('texto-menu-active');
-
-
-	});
-  $('.botao-menu-categoria').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-categoria').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-categoria').addClass('texto-menu-active');
-    
-
-	});
   $('.botao-menu-ponto').click(function (e)
 	{
     $('.svg-hover').removeClass('svg-active');
     $('.svg-ponto').addClass('svg-active');
     $('.texto-menu').removeClass('texto-menu-active');
     $('.texto-menu-ponto').addClass('texto-menu-active');
+    
+
+	});
+
+  
+  $('.botao-menu-relatorio').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-relatorio').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-relatorio').addClass('texto-menu-active');
+    
+
+	});
+
+  
+  $('.botao-menu-parceiro').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-parceiro').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-parceiro').addClass('texto-menu-active');
     
 
 	});
