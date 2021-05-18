@@ -43,7 +43,7 @@ $(document).ready(function() {
 	    }); 
 	}); 
 
-	if($("#id_regime option:selected").val() == "CPF"){
+	if($("#id_regime option:selected").val() === "CPF"){
 		$("#nu_cnpj_cpf").inputmask({
 			"mask": "999.999.999-99",
 			autoUnmask: true,
