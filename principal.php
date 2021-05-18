@@ -441,7 +441,7 @@
 												<div class="card-body d-flex">
 													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 														<div class="flex-grow-1" style="display: inherit;">
-															<h3 class="card-title titulo-div">Total de Midias: <?php echo $dadosTotalParceiros["id_usuario"]; ?></h3>
+															<h3 class="card-title titulo-div">Total de Parceiros: <?php echo $dadosTotalParceiros["id_usuario"]; ?></h3>
 														</div>
 													</div>
 												</div>
@@ -466,7 +466,7 @@
 																	<tr>
 																		<th>Tipo de Mídia</th>
 																		<th>Data inicial</th>
-																		<th>Data final</th>
+																		<th>Status</th>
 																		<th>Valor contratado</th>
 																		<th></th>
 																	</tr>
@@ -498,8 +498,8 @@
 																						</div>
 																					</div>
 																				</td>
-																				<td class='py-8'>21/01/2021</td>
-																				<td class='py-8'>21/01/2021</td>
+																				<td class='py-8 texto-vermelho font-weight-bolder'>Faltam 5 dias</td>
+																				<td class='py-8'>".$dadosTodas["ds_tipo"]."</td>
 																				<td class='py-8'>".$dadosTodas["nu_valor"]."</td>
 																				<td class='py-8'><a href='appCliente/ver_minha_midia.php?id_ponto=".$dadosTodas["id_ponto"]."'>
 																					<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
