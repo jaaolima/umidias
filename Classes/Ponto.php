@@ -103,7 +103,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_ponto, nu_valor, t.id_midia, ds_local, t.ds_nome
+				$select = "SELECT id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo
 							FROM tb_ponto p
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
 							limit 1
