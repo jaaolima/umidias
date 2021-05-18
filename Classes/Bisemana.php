@@ -80,21 +80,19 @@
     			print "ERRO:".$e->getMessage();	
 			}	
         }
-        public function gravarAlterarBisemana(array $dados)
+        public function deletarBisemana(array $dados)
 		{
             $id_bisemana	    = $dados['id_bisemana'];
-			$ds_bisemana	    = $dados['ds_bisemana'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_bisemana SET ds_bisemana = :ds_bisemana
+				$insert = "delete from tb_bisemana
 							WHERE id_bisemana=:id_bisemana";
 				
 				$stmt = $con->prepare($insert);
 				
-                $params = array(':ds_bisemana' => $ds_bisemana,
-                                ':id_bisemana' => $id_bisemana);
+                $params = array(':ds_bisemana' => $ds_bisemana);
                                 
 				$stmt->execute($params);
 				
