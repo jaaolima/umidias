@@ -511,7 +511,7 @@ button:hover .svg-editar{
     
     }
   .botao-menu:hover .svg-active {
-    stroke: #B721FF !important;
+    color: #B721FF !important;
   }
 
 .svg-active {
