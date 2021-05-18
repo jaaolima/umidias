@@ -418,6 +418,19 @@
 								</div>
 								<?php if($_SESSION['id_perfil'] == 3 ) :  ?>
 									<div class="row">
+										<div class="col-4">
+											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+											</div>
+										</div>	
+										<div class="col-4">
+											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+											</div>
+										</div>	
+									</div>
 									<div class="row">
 										<div class="col-xl-12">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
