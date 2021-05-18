@@ -465,8 +465,8 @@
 																<thead>
 																	<tr>
 																		<th>Tipo de Mídia</th>
-																		<th>Data inicial</th>
-																		<th>Status</th>
+																		<th>status</th>
+																		<th>Tipo</th>
 																		<th>Valor contratado</th>
 																		<th></th>
 																	</tr>
@@ -498,7 +498,7 @@
 																						</div>
 																					</div>
 																				</td>
-																				<td class='py-8 texto-vermelho font-weight-bolder'>Faltam 5 dias</td>
+																				<td class='py-8 texto-vermelho'>Faltam 5 dias</td>
 																				<td class='py-8'>".$dadosTodas["ds_tipo"]."</td>
 																				<td class='py-8'>".$dadosTodas["nu_valor"]."</td>
 																				<td class='py-8'><a href='appCliente/ver_minha_midia.php?id_ponto=".$dadosTodas["id_ponto"]."'>
