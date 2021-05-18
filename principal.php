@@ -425,7 +425,11 @@
 														<div class="flex-grow-1" style="display: inherit;">
 															<h3 class="card-title titulo-div">Total de Pontos</h3>
 														</div>
-														<h5><?php echo count($dadosTodasMidias);?></h5>
+														<?php
+															$dadosTotal = $dadosTodasMidias->fetch()){
+															echo count($dadosTotal);
+														?>
+														<h5</h5>
 													</div>
 												</div>
 											</div>
