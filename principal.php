@@ -153,19 +153,19 @@
 										<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Categorias</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+								<li class="menu-item my-4 botao-menu botao-menu-financeiro btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="#" class="btn rounded mx-2 text-left ">
 									<i class="flaticon-coins icon-xl svg-hover svg-financeiro"></i>
  
-										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
+										<span class="menu-text texto-menu texto-menu-financeiro"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
 									</a>
 								</li>
 
-								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+								<li class="menu-item my-4 botao-menu botao-menu-parceiro btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appParceiro/listar_parceiro.php" class="btn rounded mx-2 text-left ">
 									<i class="flaticon-map icon-xl svg-hover svg-parceiro"></i>
  
-										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Parceiros</font></font></span>
+										<span class="menu-text texto-menu texto-menu-parceiro"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Parceiros</font></font></span>
 									</a>
 								</li>
 
@@ -176,11 +176,11 @@
 										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pontos</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item my-4 botao-menu botao-menu-ponto btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+								<li class="menu-item my-4 botao-menu botao-menu-relatorio btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="#" class="btn rounded mx-2 text-left ">
 									<i class="flaticon-line-graph icon-xl svg-hover svg-relatorio"></i>
  
-										<span class="menu-text texto-menu texto-menu-ponto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Relatórios</font></font></span>
+										<span class="menu-text texto-menu texto-menu-relatorio"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Relatórios</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-usuario btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
