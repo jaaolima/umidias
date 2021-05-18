@@ -195,7 +195,7 @@
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-material btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
-									<a href="/appmaterial/listar_material.php" class="btn rounded mx-2 text-left ">
+									<a href="/appMaterial/listar_material.php" class="btn rounded mx-2 text-left ">
 										<i class="flaticon-users icon-xl svg-hover svg-material"></i>
 										<span class="menu-text texto-menu texto-menu-material"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Materiais</font></font></span>
 									</a>
