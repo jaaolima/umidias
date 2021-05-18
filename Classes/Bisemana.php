@@ -1,0 +1,134 @@
+<?php
+	require_once("../Classes/Conecta.php");
+    class Bisemana{
+        public function listarBisemana(array $dados)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT id_bisemana, ds_bisemana, dt_inicial, dt_final
+							FROM tb_bisemana";
+				
+				$stmt = $con->prepare($select); 
+				
+				
+				$stmt->execute();
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+        }
+        public function gravarBisemana(array $dados)
+		{
+
+			$ds_bisemana	    = $dados['ds_bisemana'];
+
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "INSERT into tb_bisemana (ds_bisemana)
+							VALUES (:ds_bisemana)";
+				
+				$stmt = $con->prepare($insert);
+				
+				$params = array(':ds_bisemana' => $ds_bisemana,);
+                                
+				$stmt->execute($params);
+				
+				echo "Dados gravados com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+        }
+        function buscarDadosBisemana($id_bisemana)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				
+				$select = "SELECT 
+							id_bisemana, ds_bisemana
+						FROM tb_bisemana  
+						WHERE id_bisemana = :id_bisemana";
+
+				$stmt = $con->prepare($select);
+			   	$params = array(':id_bisemana' => $id_bisemana);
+			   
+			    $stmt->execute($params);
+
+			    return  $stmt->fetch();
+				
+			}	
+			catch(Exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();	
+			}	
+        }
+        public function gravarAlterarBisemana(array $dados)
+		{
+            $id_bisemana	    = $dados['id_bisemana'];
+			$ds_bisemana	    = $dados['ds_bisemana'];
+
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "UPDATE tb_bisemana SET ds_bisemana = :ds_bisemana
+							WHERE id_bisemana=:id_bisemana";
+				
+				$stmt = $con->prepare($insert);
+				
+                $params = array(':ds_bisemana' => $ds_bisemana,
+                                ':id_bisemana' => $id_bisemana);
+                                
+				$stmt->execute($params);
+				
+				echo "Dados gravados com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+		}
+		public function listarOptionsBisemana()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				$select = "SELECT id_bisemana, ds_bisemana
+							FROM tb_bisemana ";
+				$stmt = $con->prepare($select);
+				$stmt->execute();
+
+				$options = "";
+
+				while($dados = $stmt->fetch())
+				{
+						
+					$options.= "<option value='".$dados['id_bisemana']."'>".$dados['ds_bisemana']."</option>";
+
+				}
+				return $options;
+
+			}
+			catch(exception $e)
+			{
+			header('HTTP/1.1 500 Internal Server Error');
+			print $e->getMessage();
+			}
+		}
+
+
+    }
+?>        
