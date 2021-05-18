@@ -426,7 +426,8 @@
 															<h3 class="card-title titulo-div">Total de Pontos:</h3>
 														</div>
 														<?php
-															var_dump($dadosTodasMidias);
+															$dados = $dadosTodasMidias->fetch();
+															var_dump($dados);
 															/*$dadosTotal = count($dadosTodasMidias["id_ponto"]);
 															echo $dadosTotal;*/
 														?>
