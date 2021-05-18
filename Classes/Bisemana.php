@@ -28,8 +28,9 @@
 		{
 
 			$ds_bisemana	    = $dados['ds_bisemana'];
-            $dt_inicial	        = $dados['dt_inicial'];
-            $dt_final	        = $dados['dt_final'];
+
+            $dt_inicial = date('Y-m-d', strtotime($dados["dt_inicial"]));
+            $dt_final = date('Y-m-d', strtotime($dados["dt_final"]));
 
 			
 			try{
