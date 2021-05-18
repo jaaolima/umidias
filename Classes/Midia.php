@@ -30,7 +30,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_midia, ds_nome, ds_icone
+				$select = "SELECT id_midia, ds_midia, ds_icone
 							FROM tb_tipo_midia";
 				
 				$stmt = $con->prepare($select); 
