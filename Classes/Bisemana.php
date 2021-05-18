@@ -28,16 +28,20 @@
 		{
 
 			$ds_bisemana	    = $dados['ds_bisemana'];
+            $dt_inicial	        = $dados['dt_inicial'];
+            $dt_final	        = $dados['dt_final'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_bisemana (ds_bisemana)
-							VALUES (:ds_bisemana)";
+				$insert = "INSERT into tb_bisemana (ds_bisemana, dt_inicial, dt_final)
+							VALUES (:ds_bisemana, :dt_inicial, :dt_final)";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_bisemana' => $ds_bisemana,);
+				$params = array(':ds_bisemana' => $ds_bisemana,
+                                ':dt_inicial' => $dt_inicial,
+                                ':dt_final' => $dt_final);
                                 
 				$stmt->execute($params);
 				

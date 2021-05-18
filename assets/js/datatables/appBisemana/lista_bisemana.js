@@ -42,8 +42,8 @@ var DatatablesBasicBasic = function() {
 					render: function(data, type, full, meta) {
 						return `
                         
-                         <a href="appCategoria/alterar_cadastro.php?id_bisemana=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar">
-                          <i class="la la-delete"></i>
+                         <a href="appBisemana/alterar_cadastro.php?id_bisemana=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar">
+                          <i class="la la-edit"></i>
                         </a>
                         `;
 					},
