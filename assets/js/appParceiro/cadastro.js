@@ -62,8 +62,8 @@ $(document).ready(function() {
         "mask": "(99)99999-9999",
 		autoUnmask: true,
 	});
-	$("#nu_aliquota").inputmask({
-		"mask": "99.9"
+	$("#nu_aliquota").maskMoney({
+		"mask": "999.99"
 	});
 });
 
