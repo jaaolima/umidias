@@ -69,7 +69,7 @@
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M6 9L12 15L18 9" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 								</svg>
-							</a>	
+							</a>	 
 						</div>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="appUsuario/perfil.php">Minha conta</a>
@@ -116,7 +116,7 @@
 							<ul class="menu-nav nav-pills">
 								<li class="menu-item my-4 botao-menu botao-menu-dashboard botao-menu-active btn ml-5" style="width:max-content;"  aria-haspopup="true">
 									<a href="principal.php" class="btn rounded mx-2 text-left  ">
-										<i class="flaticon-home-2 icon-xl"></i>
+										<i class="flaticon-home-2 icon-xl" class="svg-hover svg-painel"></i>
 
 										<span class="menu-text texto-menu-active texto-menu texto-menu-dashboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Painel de Controle</font></font></span>
 									</a>
@@ -149,7 +149,7 @@
 								
 								<li class="menu-item my-4 botao-menu botao-menu-categoria btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appCategoria/listar_categoria.php" class="btn rounded mx-2 text-left ">	
-										<i class="flaticon-cogwheel-2 icon-xl"></i>
+										<i class="flaticon-cogwheel-2 icon-xl" class="svg-hover svg-categorias"></i>
 										<span class="menu-text texto-menu texto-menu-categoria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Categorias</font></font></span>
 									</a>
 								</li>

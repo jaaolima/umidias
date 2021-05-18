@@ -111,12 +111,12 @@ $('.botao-menu').click(function (e)
 	});
 
 
-  $('.botao-menu-dashboard').click(function (e)
+  $('.botao-menu-painel').click(function (e)
 	{
     $('.svg-hover').removeClass('svg-active');
-    $('.svg-dashboard').addClass('svg-active');
+    $('.svg-painel').addClass('svg-active');
     $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-dashboard').addClass('texto-menu-active');
+    $('.texto-menu-painel').addClass('texto-menu-active');
 
 	});
 
@@ -139,7 +139,7 @@ $('.botao-menu').click(function (e)
 
 	});
 
-  $('.botao-menu-financeiro').click(function (e)
+  $('.botao-menu-financeiro').click(function (e) 
 	{
     $('.svg-hover').removeClass('svg-active');
     $('.svg-financeiro').addClass('svg-active');
