@@ -424,9 +424,11 @@
 												<div class="card-body d-flex">
 													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 														<div class="flex-grow-1" style="display: inherit;">
-															<h3 class="card-title titulo-div">Total de Pontos:</h3>
+															<h3 class="card-title titulo-div">Total de Midias:<?php echo $dadosTotalMidias["id_ponto"]; ?></h3>
 														</div>
-														<h5><?php echo $dadosTotalMidias["id_ponto"]; ?></h5>
+														<h5>Contratadas:</h5>
+														<h5>Pendentes:</h5>
+														<h5>Reservadas:</h5>
 													</div>
 												</div>
 											</div>
