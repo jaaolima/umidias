@@ -201,6 +201,16 @@ $('.botao-menu').click(function (e)
 
 	});
 
+  $('.botao-menu-material').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-material').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-material').addClass('texto-menu-active');
+    
+
+	});
+
 
   $('#nav_toggle').click(function(e){
     $(this).addClass("d-none")

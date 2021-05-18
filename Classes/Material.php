@@ -1,13 +1,13 @@
 <?php
 	require_once("../Classes/Conecta.php");
-    class Categoria{
-        public function listarCategoria(array $dados)
+    class Material{
+        public function listarMaterial(array $dados)
 		{
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_midia, ds_tipo
-							FROM tb_tipo_midia";
+				$select = "SELECT id_material, ds_material
+							FROM tb_material";
 				
 				$stmt = $con->prepare($select); 
 				
@@ -24,20 +24,20 @@
     			print "ERRO:".$e->getMessage();		
 			}
         }
-        public function gravarCategoria(array $dados)
+        public function gravarMaterial(array $dados)
 		{
 
-			$ds_tipo	    = $dados['ds_tipo'];
+			$ds_material	    = $dados['ds_material'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_tipo_midia (ds_tipo)
-							VALUES (:ds_tipo)";
+				$insert = "INSERT into tb_material (ds_material)
+							VALUES (:ds_material)";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_tipo' => $ds_tipo,);
+				$params = array(':ds_material' => $ds_material,);
                                 
 				$stmt->execute($params);
 				
@@ -50,19 +50,19 @@
     			print "ERRO:".$e->getMessage();		
 			} 
         }
-        function buscarDadosCategoria($id_midia)
+        function buscarDadosMaterial($id_material)
 		{
 			try{
 				$con = Conecta::criarConexao();
 				
 				
 				$select = "SELECT 
-							id_midia, ds_tipo
-						FROM tb_tipo_midia  
-						WHERE id_midia = :id_midia";
+							id_material, ds_material
+						FROM tb_material  
+						WHERE id_material = :id_material";
 
 				$stmt = $con->prepare($select);
-			   	$params = array(':id_midia' => $id_midia);
+			   	$params = array(':id_material' => $id_material);
 			   
 			    $stmt->execute($params);
 
@@ -75,21 +75,21 @@
     			print "ERRO:".$e->getMessage();	
 			}	
         }
-        public function gravarAlterarCategoria(array $dados)
+        public function gravarAlterarMaterial(array $dados)
 		{
-            $id_midia	    = $dados['id_midia'];
-			$ds_tipo	    = $dados['ds_tipo'];
+            $id_material	    = $dados['id_material'];
+			$ds_material	    = $dados['ds_material'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_tipo_midia SET ds_tipo = :ds_tipo
-							WHERE id_midia=:id_midia";
+				$insert = "UPDATE tb_material SET ds_material = :ds_material
+							WHERE id_material=:id_material";
 				
 				$stmt = $con->prepare($insert);
 				
-                $params = array(':ds_tipo' => $ds_tipo,
-                                ':id_midia' => $id_midia);
+                $params = array(':ds_material' => $ds_material,
+                                ':id_material' => $id_material);
                                 
 				$stmt->execute($params);
 				
@@ -102,12 +102,12 @@
     			print "ERRO:".$e->getMessage();		
 			} 
 		}
-		public function listarOptionsCategoria()
+		public function listarOptionsMaterial()
 		{
 			try{
 				$con = Conecta::criarConexao();
-				$select = "SELECT id_midia, ds_tipo
-							FROM tb_tipo_midia ";
+				$select = "SELECT id_material, ds_material
+							FROM tb_material ";
 				$stmt = $con->prepare($select);
 				$stmt->execute();
 
@@ -116,7 +116,7 @@
 				while($dados = $stmt->fetch())
 				{
 						
-					$options.= "<option value='".$dados['id_midia']."'>".$dados['ds_tipo']."</option>";
+					$options.= "<option value='".$dados['id_material']."'>".$dados['ds_material']."</option>";
 
 				}
 				return $options;

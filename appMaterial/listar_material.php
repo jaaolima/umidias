@@ -3,9 +3,9 @@
 	ini_set('display_startup_erros',1);
     error_reporting(E_ALL);
     
-    require_once("../Classes/Categoria.php");
-    $categoria = new Categoria();
-    $retorno = $categoria->listarCategoria($_POST);
+    require_once("../Classes/Material.php");
+    $material = new Material();
+    $retorno = $material->listarMaterial($_POST);
 ?>
 
 <div class="card card-custom gutter-b">
@@ -13,7 +13,7 @@
 		<div class="card-title">
 		<i class="flaticon-cogwheel-2 icon-xl"></i>&nbsp;
 			<h3 class="card-label">
-				Categorias Cadastradas
+				Materiais Cadastrados
 			</h3>
 		</div>
 		<div class="kt-portlet__head-toolbar">
@@ -62,7 +62,7 @@
 						</div>
 					</div>-->
 					&nbsp;
-					<a href="appCategoria/cadastro.php" class="btn btn-light-primary font-weight-bolder">
+					<a href="appMaterial/cadastro.php" class="btn btn-light-primary font-weight-bolder">
 						<i class="la la-plus"></i>
 						Cadastrar novo
 					</a>
@@ -78,6 +78,7 @@
 				<tr>
 					<th>Id</th>
 					<th>Nome</th>
+                    <th>Valor</th>
 					<th>Ações</th>
 				</tr>
 			</thead>
@@ -86,8 +87,9 @@
 					while ($dados = $retorno->fetch())
 					{
 						echo "<tr>
-								<td>".$dados['id_midia']."</td>
-								<td>".$dados['ds_tipo']."</td>
+								<td>".$dados['id_material']."</td>
+								<td>".$dados['ds_material']."</td>
+                                <td>".$dados['nu_valor']."</td>
 								<td nowrap></td>
 							</tr>";
 					}
@@ -100,4 +102,4 @@
 </div>
 
 <script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-<script src="./assets/js/datatables/appCategoria/lista_categoria.js" type="text/javascript"></script>
+<script src="./assets/js/datatables/appMaterial/lista_material.js" type="text/javascript"></script>
