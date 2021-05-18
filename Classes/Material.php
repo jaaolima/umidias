@@ -59,7 +59,7 @@
 				
 				
 				$select = "SELECT 
-							id_material, ds_material
+							id_material, ds_material, nu_valor
 						FROM tb_material  
 						WHERE id_material = :id_material";
 
@@ -81,16 +81,18 @@
 		{
             $id_material	    = $dados['id_material'];
 			$ds_material	    = $dados['ds_material'];
+            $nu_valor	        = $dados['nu_valor'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_material SET ds_material = :ds_material
+				$insert = "UPDATE tb_material SET ds_material = :ds_material, nu_valor = :nu_valor
 							WHERE id_material=:id_material";
 				
 				$stmt = $con->prepare($insert);
 				
                 $params = array(':ds_material' => $ds_material,
+                                ':nu_valor' => $nu_valor,
                                 ':id_material' => $id_material);
                                 
 				$stmt->execute($params);
