@@ -87,11 +87,14 @@
 				<?php
 					while ($dados = $retorno->fetch())
 					{
+                        $dt_inicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
+                        $dt_final = date('d/m/Y', strtotime($dados["dt_final"]));
+
 						echo "<tr>
 								<td>".$dados['id_bisemana']."</td>
 								<td>".$dados['ds_bisemana']."</td>
-                                <td>".$dados['dt_inicial']."</td>
-                                <td>".$dados['dt_final']."</td>
+                                <td>".$dt_inicial."</td>
+                                <td>".$dt_final."</td>
 								<td nowrap></td>
 							</tr>";
 					}
