@@ -116,7 +116,7 @@
 							<ul class="menu-nav nav-pills">
 								<li class="menu-item my-4 botao-menu botao-menu-dashboard botao-menu-active btn ml-5" style="width:max-content;"  aria-haspopup="true">
 									<a href="principal.php" class="btn rounded mx-2 text-left  ">
-										<i class="flaticon-home-2 icon-xl svg-hover svg-painel"></i>
+										<i class="flaticon-home-2 icon-xl svg-hover svg-painel svg-active"></i>
 
 										<span class="menu-text texto-menu-active texto-menu texto-menu-dashboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Painel de Controle</font></font></span>
 									</a>
