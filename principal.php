@@ -427,7 +427,7 @@
 														</div>
 														<?php
 															$dadosTotal = $dadosTodasMidias->fetch();
-															var_dump(count($dadosTotal["id_ponto"]));
+															var_dump(count($dadosTotal));
 															/*$dadosTotal = count($dadosTodasMidias["id_ponto"]);
 															echo $dadosTotal;*/
 														?>
