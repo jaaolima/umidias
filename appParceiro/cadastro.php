@@ -28,15 +28,33 @@
     <form id="form_usuario">
         <div class="card-body">
             <div class="form-group row">
+                <div class="form-group col-md-4">
+                    <label >Regime Fiscal<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_regime" name="id_regime">  
+                    
+                        <option value="SN">Simples Nacional</option>
+                        <option value="LR">Lucro Real</option>
+                        <option value="LP">Lucro Presumido</option>
+                        <option value="MEI">MEI</option>
+                        <option value="CPF">CPF</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Alíquota padrão</label>
+                    <input type="text" class="form-control" id="nu_aliquota" name="nu_aliquota" />
+                </div>
+            </div>      
+            <div class="form-group row">
                 <div class="form-group col-md-6">
                     <label>Nome da Empresa <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_nomeempresa" name="ds_nomeempresa" />
                 </div>
                 <div class="form-group col-md-3">
                     <label >CNPJ <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="nu_cnpj" name="nu_cnpj" />
+                    <input type="text" class="form-control" id="nu_cnpj_cpf" name="nu_cnpj_cpf" />
                 </div>
             </div>
+            
             <div class="form-group row"> 
                 <div class="form-group col-md-6">
                     <label >Logradouro<span class="text-danger">*</span></label>
@@ -86,21 +104,7 @@
                     <input type="text" class="form-control" id="nu_telefone" name="nu_telefone" />
                 </div>
             </div>   
-            <div class="form-group row">
-                <div class="form-group col-md-4">
-                    <label >Regime Fiscal<span class="text-danger">*</span></label>
-                    <select class="form-control" id="id_regime" name="id_regime">  
-                    
-                        <option value="SN">Simples Nacional</option>
-                        <option value="LR">Lucro Real</option>
-                        <option value="LP">Lucro Presumido</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-2">
-                    <label>Alíquota padrão</label>
-                    <input type="text" class="form-control" id="nu_aliquota" name="nu_aliquota" />
-                </div>
-            </div>      
+
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
