@@ -105,9 +105,9 @@ $optionsmaterial = $Material->listaroptionsmaterial();
                         ?>
                     </select>
                 </div> 
-                <div class="form-group row col-2" id="periodo">
+                <div class="form-group col-2" id="periodo">
                     <label>Período<span class="text-danger">*</span></label>
-                    <select name="id_periodo" id="id_periodo">
+                    <select class="form-control"name="id_periodo" id="id_periodo">
                       <option value="">Selecione...</option>
                       <option value="1">Bisemana</option>
                       <option value="2">Mensal</option>
