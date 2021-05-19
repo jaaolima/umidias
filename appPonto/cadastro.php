@@ -68,7 +68,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
               <div class="form-group col-2">
                   <label>Fotos <span class="text-danger">*</span></label>
                   <div class="uppy" id="kt_uppy_6">
-                    <button class="uppy-btn btn btn-light-success font-weight-bold">Escolha suas fotos</button>
+                    <button class="uppy-btn btn btn-primary font-weight-bold">Escolha suas fotos</button>
                     <div class="uppy-dashboard"></div>
                     <div class="uppy-progress"></div>
                   </div>
