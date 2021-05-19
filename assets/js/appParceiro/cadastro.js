@@ -43,7 +43,18 @@ $(document).ready(function() {
 	    }); 
 	}); 
 
-	if($("#id_regime option:selected").val() == "CPF"){
+	$('[name="id_estado"]').change(function(){
+        if($(this).val() === "CPF"){
+            $('#nu_cpf').show();
+			$('#nu_cnpj').hide();
+            return;
+        }
+
+        $('#nu_cpf').hide();
+		$('[name="nu_cpf"]').prop('checked', false);
+	});
+
+	/*if($("#id_regime option:selected").val() == "CPF"){
 		$("#nu_cnpj_cpf").inputmask({
 			"mask": "999.999.999-99",
 			autoUnmask: true,
@@ -54,7 +65,7 @@ $(document).ready(function() {
 			"mask": "99.999.999/9999-99",
 			autoUnmask: true,
 		});
-	}
+	}*/
 	
 
 	$("#nu_cep").inputmask({

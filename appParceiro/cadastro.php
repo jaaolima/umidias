@@ -51,7 +51,11 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label >CNPJ <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="nu_cnpj_cpf" name="nu_cnpj_cpf" />
+                    <input type="text" class="form-control" id="nu_cnpj" name="nu_cnpj" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label >CPF<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nu_cpf" name="nu_cpf" />
                 </div>
             </div>
             
@@ -80,7 +84,7 @@
                     </select>
                 </div>
                 <div class="form-group col-md-4">
-                    <label >Município<span class="text-danger">*</span></label>
+                    <label >Município<span class="text-danger">*</span></label> 
                     <select class="form-control" id="id_cidade" name="id_cidade">
                         <option>Selecione..</option>
                     </select>
