@@ -61,7 +61,7 @@
 			try{ 
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_parceiro, ds_nomeempresa, nu_cnpj, ds_logradouro, nu_cep, e.ds_uf, c.ds_nome, ds_bairro, ds_responsavel, ds_email, nu_telefone
+				$select = "SELECT id_parceiro, ds_nomeempresa, nu_cnpj, ds_logradouro, nu_cep, e.ds_uf, c.ds_nome, ds_bairro, ds_responsavel, ds_email, nu_telefone, nu_cpf, id_regime
 							FROM tb_parceiro p
 							INNER JOIN estados e ON p.id_estado = e.id_estado
 							INNER JOIN cidades c ON p.id_cidade = c.id_cidade";

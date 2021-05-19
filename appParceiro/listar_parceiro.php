@@ -5,7 +5,7 @@
     
     require_once("../Classes/Parceiro.php");
     $parceiro = new Parceiro();
-    $retorno = $parceiro->listarParceiro($_POST);
+    $retorno = $parceiro->listarParceiro($_POST); 
 ?>
 
 <div class="card card-custom gutter-b">
@@ -94,10 +94,14 @@
 				<?php
 					while ($dados = $retorno->fetch())
 					{
+						$cpf_cnpj = $dados["nu_cnpj"];
+						if($dados["id_regime"] === "CPF"){
+							$cpf_cnpj = $dados["nu_cpf"];
+						};
 						echo "<tr>
 								<td>".$dados['id_parceiro']."</td>
 								<td>".$dados['ds_nomeempresa']."</td>
-								<td>".$dados['nu_cnpj']."</td>
+								<td>".$cpf_cnpj."</td>
 								<td>".$dados['ds_uf']."</td>
 								<td>".$dados['ds_nome']."</td>
 								<td>".$dados['ds_bairro']."</td>

@@ -92,7 +92,7 @@
 								<td>".$dados['id_ponto']."</td>
 								<td>".$dados['ds_descricao']."</td>
 								<td>".$dados['nu_valor']."</td>
-								<td>".$dados['id_midia']."</td>
+								<td>".$dados['ds_tipo']."</td>
 								<td>".$dados['st_status']."</td>
 								<td>".$dados['ds_observacao']."</td>
 								<td nowrap></td>
