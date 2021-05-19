@@ -74,7 +74,7 @@
 				header('HTTP/1.1 500 Internal Server Error');
     			print "ERRO:".$e->getMessage();	
 			}	
-        }
+        } 
         public function gravarAlterarCategoria(array $dados)
 		{
             $id_midia	    = $dados['id_midia'];

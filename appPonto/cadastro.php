@@ -3,11 +3,15 @@ ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 require_once("../Classes/Categoria.php");
+require_once("../Classes/Material.php");
 
 $Categoria = new Categoria(); 
 
+$Material = new Material(); 
+
 
 $optionscategoria = $Categoria->listaroptionscategoria();
+$optionsmaterial = $Material->listaroptionsmaterial();
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <!--<script
@@ -24,7 +28,7 @@ $optionscategoria = $Categoria->listaroptionscategoria();
 <div class="card card-custom">
       <div class="card-header">
         <h3 class="card-title">
-            Cadastro de Pontos 
+            Cadastro de Pontos  
         </h3>
         <div class="card-toolbar">
           <div class="example-tools justify-content-center">
@@ -90,6 +94,13 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                 <div class="form-group col-md-4">
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Material acessível<span class="text-danger">*</span></label>
+                    <option>Selecione..</option>
+                    <?php 
+                      echo $optionsMaterial;
+                    ?>
                 </div>  
             </div>      
         </div>
