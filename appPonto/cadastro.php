@@ -97,10 +97,11 @@ $optionsmaterial = $Material->listaroptionsmaterial();
                 </div>
                 <div class="form-group col-md-4">
                     <label>Material acessível<span class="text-danger">*</span></label>
-                    <option>Selecione..</option>
-                    <?php 
-                      echo $optionsmaterial;
-                    ?>
+                    <select class="form-control" id="id_material" name="id_material">
+                      <option>Selecione..</option>
+                      <?php 
+                        echo $optionsmaterial;
+                      ?>
                 </div>  
             </div>      
         </div>
