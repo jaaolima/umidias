@@ -207,7 +207,7 @@
 									</a>
 								</li>
 								
-								<?php endif ;?>
+								<?php endif ;?> 
 							</ul>
 							<div class="position-fixed bottom-0 ml-8 mb-6">
 								<a  href="principal.php" class="btn ml-2 text-left d-flex">

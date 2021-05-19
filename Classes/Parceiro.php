@@ -54,7 +54,7 @@
 			{
 				header('HTTP/1.1 500 Internal Server Error');
     			print "ERRO:".$e->getMessage();		
-			} 
+			}  
 		}
 		public function listarParceiro(array $dados)
 		{
@@ -250,6 +250,42 @@
 				header('HTTP/1.1 500 Internal Server Error');
 				print $e->getMessage();
 			}
+
+			
+		}
+		public function listarOptionsparceiro()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				$select = "SELECT id_parceiro, ds_nomeempresa FROM tb_parceiro ";
+				$stmt = $con->prepare($select);
+				$stmt->execute();
+
+				$options = "";
+
+				while($dados = $stmt->fetch())
+				{
+					if($id_parceiro == $dados['id_parceiro'])
+					{
+						$options.= "<option value='".$dados['id_parceiro']."' selected>".$dados['ds_nomeempresa']."</option>";
+					}
+					else
+					{
+						$options.= "<option value='".$dados['id_parceiro']."'>".$dados['ds_nomeempresa']."</option>";
+					}
+					
+
+					
+				}
+				return $options;
+
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+				print $e->getMessage();
+			}
+			
 			
 		}
 

@@ -4,14 +4,16 @@ ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 require_once("../Classes/Categoria.php");
 require_once("../Classes/Material.php");
+require_once("../Classes/Responsavel.php");
 
 $Categoria = new Categoria(); 
-
+$Responsavel = new Responsavel(); 
 $Material = new Material(); 
-
+$id_responsavel = "";
 
 $optionscategoria = $Categoria->listaroptionscategoria();
 $optionsmaterial = $Material->listaroptionsmaterial();
+$optionsparceiro = $parceiro->listaroptionsparceiro();
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <!--<script
@@ -42,6 +44,19 @@ $optionsmaterial = $Material->listaroptionsmaterial();
     <form id="form_usuario" enctype="multipart/form-data">
         <div class="card-body">
             <div class="form-group row">
+                <?php if($_SESSION['id_perfil'] == 3  ) :   ?>
+                <div class="form-group col-md-4">
+                    <label>Parceiro <span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_parceiro" name="id_parceiro">
+                        <?php 
+                            echo $optionsparceiro;
+                        ?>
+                    </select>
+                </div>
+                <?php endif ; ?>
+                <?php if($_SESSION['id_perfil'] == 2  ) :   ?>
+                  <input type="text" name="id_parceiro" id="id_parceiro" value="<?php echo $id_parceiro;?>">
+                <?php endif ; ?>
                 <div class="form-group col-md-4">
                     <label>Local <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_local" name="ds_local"/>
@@ -99,7 +114,6 @@ $optionsmaterial = $Material->listaroptionsmaterial();
                 <div class="form-group col-md-2" id="material">
                     <label>Material acessível<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_material" name="id_material">
-                        <option>Selecione..</option>
                         <?php 
                             echo $optionsmaterial;
                         ?>
