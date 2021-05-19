@@ -14,7 +14,7 @@ $id_responsavel = "";
 
 $optionscategoria = $Categoria->listaroptionscategoria();
 $optionsmaterial = $Material->listaroptionsmaterial();
-$optionsparceiro = $Parceiro->listaroptionsparceiro();
+$optionsparceiro = $Parceiro->listaroptionsparceiro(null);
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <!--<script
