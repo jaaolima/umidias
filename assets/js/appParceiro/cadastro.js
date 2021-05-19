@@ -267,10 +267,21 @@ function validarCNPJ(cnpj) {
  
     cnpj = cnpj.replace(/[^\d]+/g,'');
  
-    if(cnpj == '') return false;
+    if(cnpj == '')
+	{
+		$("#nu_cnpj").focus();
+		swal.fire("Erro", "CNPJ inválido", "error");
+		$("#nu_cnpj").addClass("is-invalid");
+		return false;		
+	}
      
     if (cnpj.length != 14)
-        return false;
+	{
+		$("#nu_cnpj").focus();
+		swal.fire("Erro", "CNPJ inválido", "error");
+		$("#nu_cnpj").addClass("is-invalid");
+		return false;		
+	}
  
     // Elimina CNPJs invalidos conhecidos
     if (cnpj == "00000000000000" || 
@@ -283,7 +294,12 @@ function validarCNPJ(cnpj) {
         cnpj == "77777777777777" || 
         cnpj == "88888888888888" || 
         cnpj == "99999999999999")
-        return false;
+	{
+		$("#nu_cnpj").focus();
+		swal.fire("Erro", "CNPJ inválido", "error");
+		$("#nu_cnpj").addClass("is-invalid");
+		return false;		
+	}
          
     // Valida DVs
     tamanho = cnpj.length - 2
@@ -298,8 +314,15 @@ function validarCNPJ(cnpj) {
     }
     resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
     if (resultado != digitos.charAt(0))
-        return false;
+	{
+		$("#nu_cnpj").focus();
+		swal.fire("Erro", "CNPJ inválido", "error");
+		$("#nu_cnpj").addClass("is-invalid");
+		return false;		
+	}
          
+
+
     tamanho = tamanho + 1;
     numeros = cnpj.substring(0,tamanho);
     soma = 0;
@@ -311,7 +334,12 @@ function validarCNPJ(cnpj) {
     }
     resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
     if (resultado != digitos.charAt(1))
-          return false;
+	{
+		$("#nu_cnpj").focus();
+		swal.fire("Erro", "CNPJ inválido", "error");
+		$("#nu_cnpj").addClass("is-invalid");
+		return false;		
+	}
            
     return true;
     
