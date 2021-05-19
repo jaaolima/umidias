@@ -253,7 +253,7 @@
 
 			
 		}
-		public function listaroptionsparceiro()
+		public function listaroptionsparceiro($id_parceiro)
 		{
 			try{
 				$con = Conecta::criarConexao();
