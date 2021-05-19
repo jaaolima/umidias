@@ -49,6 +49,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 <div class="form-group col-md-4">
                     <label>Parceiro <span class="text-danger">*</span></label>
                     <select class="form-control" id="id_parceiro" name="id_parceiro">
+                        <option value="">Selecione...</option>
                         <?php 
                             echo $optionsparceiro;
                         ?>
