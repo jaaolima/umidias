@@ -59,19 +59,14 @@ $(document).ready(function() {
         
 	});
 
-	/*if($("#id_regime option:selected").val() == "CPF"){
-		$("#nu_cnpj_cpf").inputmask({
-			"mask": "999.999.999-99",
-			autoUnmask: true,
-		});
-	}
-	else{
-		$("#nu_cnpj_cpf").inputmask({
-			"mask": "99.999.999/9999-99",
-			autoUnmask: true,
-		});
-	}*/
-	
+	$("#nu_cnpj").inputmask({
+		"mask": "99.999.999/9999-99",
+		autoUnmask: true,
+	});
+	$("#nu_cpf").inputmask({
+		"mask": "999.999.999-99",
+		autoUnmask: true,
+	});
 
 	$("#nu_cep").inputmask({
         "mask": "99.999-999",

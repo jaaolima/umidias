@@ -3,7 +3,7 @@
     class Parceiro{
         public function gravarParceiro(array $dados)
 		{
-
+			
 			$ds_nomeempresa	    = $dados['ds_nomeempresa'];
 			$nu_cnpj 	        = $dados['nu_cnpj'];
             $ds_logradouro    	= $dados['ds_logradouro'];
@@ -17,16 +17,22 @@
             $nu_telefone        = $dados['nu_telefone'];
 			$id_regime			= $dados['id_regime'];
 			$nu_aliquota 		= $dados['nu_aliquota'];
+			$nu_cpf 	        = NULL;
+			if($id_regime === "CPF"){
+				$nu_cpf 	    = $dados['nu_cpf'];
+			}
+
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
-							VALUES (:ds_nomeempresa, :nu_cnpj, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
+				$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj, nu_cpf, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
+							VALUES (:ds_nomeempresa, :nu_cnpj, :nu_cpf,  :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
 				
 				$stmt = $con->prepare($insert);
 				
 				$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
 								':nu_cnpj' => $nu_cnpj,
+								':nu_cpf' => $nu_cpf,
 								':ds_logradouro' => $ds_logradouro,
 								':nu_numerolog' => $nu_numerolog,
 								':nu_cep' =>$nu_cep,
