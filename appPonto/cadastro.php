@@ -64,10 +64,14 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                     <input type="text" class="form-control" id="ds_local" name="ds_local"/>
                 </div>
             </div>
-            <div class="row">
+            <div class="form-group row">
               <div class="form-group row col-4">
                   <label>Fotos <span class="text-danger">*</span></label>
-                  <input type="file"  class="form-control" name="ds_foto" id="ds_foto" accept="image/*">
+                  <div class="uppy" id="kt_uppy_6">
+                    <button class="uppy-btn btn btn-light-success font-weight-bold">Escolha suas fotos</button>
+                    <div class="uppy-dashboard"></div>
+                    <div class="uppy-progress"></div>
+                  </div>
               </div>
               <div class="form-group col-md-3">
                   <label>Descrição <span class="text-danger">*</span></label>
@@ -116,6 +120,14 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div>
+                <div class="form-group col-md-2" id="material">
+                    <label>Material acessível<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_material" name="id_material">
+                        <?php 
+                            echo $optionsmaterial;
+                        ?>
+                    </select>
+                </div> 
                 <div class="form-group col-md-2" id="tamanho">
                     <label>Tamanho<span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_tamanho" name="ds_tamanho">
@@ -123,14 +135,6 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                         <option value="">Selecione...</option>
                         <option value="">Selecione...</option>
                         <option value="">Selecione...</option>
-                    </select>
-                </div> 
-                <div class="form-group col-md-2" id="material">
-                    <label>Material acessível<span class="text-danger">*</span></label>
-                    <select class="form-control" id="id_material" name="id_material">
-                        <?php 
-                            echo $optionsmaterial;
-                        ?>
                     </select>
                 </div> 
                 <div class="form-group col-2" id="periodo">
