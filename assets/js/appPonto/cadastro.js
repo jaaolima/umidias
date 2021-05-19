@@ -48,6 +48,18 @@ $('[name="id_midia"]').change(function(){
 
 	
 });
+$('[name="id_midia"]').change(function(){
+	if($(this).val() == 1){
+		$('#periodo').show();
+		return;
+	}
+
+	$('#periodo').hide();
+	$('[name="id_periodo"]').prop('checked', false);
+
+
+	
+});
 function validar()
 { 
 	if($("#ds_descricao").val() == "")

@@ -55,6 +55,7 @@ $optionsmaterial = $Material->listaroptionsmaterial();
                 <label>Fotos <span class="text-danger">*</span></label>
                 <input type="file"  class="form-control" name="ds_foto" id="ds_foto" accept="image/*">
             </div>
+            
 			<div class="form-group row"> 
 				<div class="form-group col-md-8">
 					<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
@@ -95,7 +96,7 @@ $optionsmaterial = $Material->listaroptionsmaterial();
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div>
-                <div class="form-group col-md-4" id="material">
+                <div class="form-group col-md-2" id="material">
                     <label>Material acessível<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_material" name="id_material">
                         <option>Selecione..</option>
@@ -103,7 +104,15 @@ $optionsmaterial = $Material->listaroptionsmaterial();
                             echo $optionsmaterial;
                         ?>
                     </select>
-                </div>  
+                </div> 
+                <div class="form-group row col-2" id="periodo">
+                    <label>Período<span class="text-danger">*</span></label>
+                    <select name="id_periodo" id="id_periodo">
+                      <option value="">Selecione...</option>
+                      <option value="1">Bisemana</option>
+                      <option value="2">Mensal</option>
+                    </select>
+                </div>
             </div>      
         </div>
         <div class="card-footer">
