@@ -156,7 +156,8 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
 </div>
 
 <script src="./assets/js/appPonto/cadastro.js" type="text/javascript"></script>
-
+<script src="assets/plugins/custom/uppy/uppy.bundle.js"></script>
+<script src="assets/js/pages/crud/file-upload/uppy.js"></script>
 <script>
     // The following example creates complex markers to indicate beaches near
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
