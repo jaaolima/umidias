@@ -18,7 +18,7 @@ $(document).ready(function() {
 				, mimeType: 'multipart/form-data'
 				, processData: false
 				, contentType: false
-		        , success: function(html) {
+		        , success: function(html) { 
 		        	swal.fire({
 		                position: 'top-right',
 		                type: 'success',
@@ -36,9 +36,21 @@ $(document).ready(function() {
 	});
 	
 });
+$('[name="id_midia"]').change(function(){
+	if($(this).val() == 1){
+		$('#material').show();
+		return;
+	}
 
+	$('#material').hide();
+	$('[name="id_material"]').prop('checked', false);
+	}
+
+	
+});
 function validar()
-{	if($("#ds_descricao").val() == "")
+{ 
+	if($("#ds_descricao").val() == "")
 	{
 		$("#ds_descricao").focus();
 		swal.fire("Erro", "Preencha a Descrição", "error");

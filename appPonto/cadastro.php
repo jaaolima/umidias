@@ -95,7 +95,7 @@ $optionsmaterial = $Material->listaroptionsmaterial();
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-4" id="material">
                     <label>Material acessível<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_material" name="id_material">
                       <option>Selecione..</option>
