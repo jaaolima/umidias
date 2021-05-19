@@ -99,7 +99,7 @@ $optionsmaterial = $Material->listaroptionsmaterial();
                     <label>Material acessível<span class="text-danger">*</span></label>
                     <option>Selecione..</option>
                     <?php 
-                      echo $optionsMaterial;
+                      echo $optionsmaterial;
                     ?>
                 </div>  
             </div>      
