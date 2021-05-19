@@ -46,7 +46,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
         <div class="card-body">
             <div class="form-group row">
                 <?php if($_SESSION['id_perfil'] == 3  ) :   ?>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                     <label>Parceiro <span class="text-danger">*</span></label>
                     <select class="form-control" id="id_parceiro" name="id_parceiro">
                         <option value="">Selecione...</option>
@@ -59,19 +59,22 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 <?php if($_SESSION['id_perfil'] == 2  ) :   ?>
                   <input type="text" name="id_parceiro" id="id_parceiro" value="<?php echo $id_parceiro;?>">
                 <?php endif ; ?>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                     <label>Local <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_local" name="ds_local"/>
                 </div>
-                <div class="form-group col-md-3">
-                    <label>Descrição <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
-                </div>
             </div>
-            <div class="form-group row col-4">
-                <label>Fotos <span class="text-danger">*</span></label>
-                <input type="file"  class="form-control" name="ds_foto" id="ds_foto" accept="image/*">
+            <div class="row">
+              <div class="form-group row col-4">
+                  <label>Fotos <span class="text-danger">*</span></label>
+                  <input type="file"  class="form-control" name="ds_foto" id="ds_foto" accept="image/*">
+              </div>
+              <div class="form-group col-md-3">
+                  <label>Descrição <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
+              </div>
             </div>
+            
             
 			<div class="form-group row"> 
 				<div class="form-group col-md-8">
@@ -109,10 +112,19 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div>
             </div>
             <div class="form-group row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-2">
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div>
+                <div class="form-group col-md-2" id="tamanho">
+                    <label>Tamanho<span class="text-danger">*</span></label>
+                    <select class="form-control" id="ds_tamanho" name="ds_tamanho">
+                        <option value="">Selecione...</option>
+                        <option value="">Selecione...</option>
+                        <option value="">Selecione...</option>
+                        <option value="">Selecione...</option>
+                    </select>
+                </div> 
                 <div class="form-group col-md-2" id="material">
                     <label>Material acessível<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_material" name="id_material">
