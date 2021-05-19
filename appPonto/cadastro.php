@@ -4,10 +4,10 @@ ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 require_once("../Classes/Categoria.php");
 require_once("../Classes/Material.php");
-require_once("../Classes/Responsavel.php");
+require_once("../Classes/Parceiro.php");
 
 $Categoria = new Categoria(); 
-$Responsavel = new Responsavel(); 
+$Parceiro = new Parceiro(); 
 $Material = new Material(); 
 $id_responsavel = "";
 
