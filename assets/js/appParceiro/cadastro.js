@@ -268,7 +268,7 @@ function validarCNPJ(cnpj) {
  
     cnpj = cnpj.replace(/[^\d]+/g,'');
  
-	if (cnpj = "")
+	if (cnpj == "")
 	{
 		return true;		
 	}
@@ -345,7 +345,7 @@ function validarCNPJ(cnpj) {
 function validarCPF(cpf) {	
 	cpf = cpf.replace(/[^\d]+/g,'');	
 	// Elimina CPFs invalidos conhecidos
-	if (cpf = "")
+	if (cpf == "")
 	{
 		return true;		
 	}	
