@@ -44,7 +44,7 @@ $('[name="id_midia"]').change(function(){
 
 	$('#material').hide();
 	$('[name="id_material"]').prop('checked', false);
-	}
+
 
 	
 });
