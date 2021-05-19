@@ -50,9 +50,13 @@ $(document).ready(function() {
 			$('#cnpj').hide();
             return;
         }
+		else{
+			$('#cnpj').show();
+			$('#cpf').hide();
+			$('[name="nu_cpf"]').prop('checked', false);
+		}
 
-        $('#cpf').hide();
-		$('[name="nu_cpf"]').prop('checked', false);
+        
 	});
 
 	/*if($("#id_regime option:selected").val() == "CPF"){
