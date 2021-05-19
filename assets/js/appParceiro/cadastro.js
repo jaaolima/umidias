@@ -265,15 +265,14 @@ function validar()
 	return true;
 }
 function validarCNPJ(cnpj) {
- 
-    cnpj = cnpj.replace(/[^\d]+/g,'');
- 
+
 	if (cnpj == "")
 	{
 		return true;		
 	}
 	else{
 
+		cnpj = cnpj.replace(/[^\d]+/g,'');
 		if (cnpj.length != 14)
 		{
 			$("#nu_cnpj").focus();
