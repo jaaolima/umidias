@@ -46,7 +46,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
         <div class="card-body">
             <div class="form-group row">
                 <?php if($_SESSION['id_perfil'] == 3  ) :   ?>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label>Parceiro <span class="text-danger">*</span></label>
                     <select class="form-control" id="id_parceiro" name="id_parceiro">
                         <option value="">Selecione...</option>
@@ -59,11 +59,11 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 <?php if($_SESSION['id_perfil'] == 2  ) :   ?>
                   <input type="text" name="id_parceiro" id="id_parceiro" value="<?php echo $id_parceiro;?>">
                 <?php endif ; ?>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label>Local <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_local" name="ds_local"/>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
                 </div>
