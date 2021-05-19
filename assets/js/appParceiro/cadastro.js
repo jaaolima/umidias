@@ -43,14 +43,15 @@ $(document).ready(function() {
 	    }); 
 	}); 
 
+	$('#cpf').hide();
 	$('[name="id_regime"]').change(function(){
         if($(this).val() === "CPF"){
-            $('#nu_cpf').show();
-			$('#nu_cnpj').hide();
+            $('#cpf').show();
+			$('#cnpj').hide();
             return;
         }
 
-        $('#nu_cpf').hide();
+        $('#cpf').hide();
 		$('[name="nu_cpf"]').prop('checked', false);
 	});
 
