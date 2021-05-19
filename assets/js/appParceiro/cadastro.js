@@ -9,7 +9,8 @@ $(document).ready(function() {
 	$("#salvar").on("click", function(e){ 
 		var cnpj = $("#nu_cnpj").val();
 		var cnpj = $("#nu_cpf").val();
-		if(validar() && validarCNPJ(cnpj) && validarCPF(cpf))
+		var regime = $("#id_regime").val();
+		if(validar() && validarCNPJ(cnpj, regime) && validarCPF(cpf, regime))
 		{ 
 			$.ajax({
 		        url: 'appParceiro/gravar_parceiro.php'
@@ -264,9 +265,9 @@ function validar()
 
 	return true;
 }
-function validarCNPJ(cnpj) {
+function validarCNPJ(cnpj, regime) {
 
-	if (cnpj == "")
+	if (regime === "CPF")
 	{
 		return true;		
 	}
@@ -342,10 +343,10 @@ function validarCNPJ(cnpj) {
 		return true;
 	}	
 }
-function validarCPF(cpf) {	
+function validarCPF(cpf, regime) {	
 	cpf = cpf.replace(/[^\d]+/g,'');	
 	// Elimina CPFs invalidos conhecidos
-	if (cpf == "")
+	if (cpf !== "CPF")
 	{
 		return true;		
 	}	
