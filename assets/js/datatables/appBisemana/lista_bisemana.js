@@ -42,8 +42,8 @@ var DatatablesBasicBasic = function() {
 					render: function(data, type, full, meta) {
 						return `
                         
-                         <a href="appBisemana/deletar_bisemana.php?id_bisemana=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar">
-                          <i class="la la-close"></i>
+                         <a id="excluir"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-bisemana="`+full[0]+`" >
+                          <i class="la la-remove"></i>
                         </a>
                         `;
 					},
@@ -56,7 +56,32 @@ var DatatablesBasicBasic = function() {
 				
 			],
 		});
-	
+		table.on('click', '#excluir', function() {
+			var id_bisemana = $(this).data("bisemana");
+			swal.fire({
+	            title: 'Tem certeza?',
+	            text: "Desejar excluir a Bisemana?",
+	            type: 'warning',
+	            showCancelButton: true,
+	            cancelButtonColor: '#fd397a',
+	            confirmButtonText: 'Sim, posseguir!',
+				cancelButtonText: 'Cancelar'
+	        }).then(function(result) {
+	            if (result.value) {
+					$.ajax({
+				        url: 'appBisemana/excluir_bisemana.php'
+				        , type: 'post'
+				        , data: {id_bisemana : id_bisemana}
+				        , success: function(html) {
+							swal.fire('Pronto!',html,'success');
+							redirectTo("appBisemana/listar_bisemana.php");				
+				        }
+				    });
+	                
+	            }
+	        });
+			
+		}); 
 
 		table.on('change', 'tbody tr .m-checkbox', function() {
 			$(this).parents('tr').toggleClass('active');
