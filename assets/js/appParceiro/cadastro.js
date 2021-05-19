@@ -268,6 +268,11 @@ function validarCNPJ(cnpj) {
  
     cnpj = cnpj.replace(/[^\d]+/g,'');
  
+	if (cnpj = "")
+	{
+		return true;		
+	}
+
     if (cnpj.length != 14)
 	{
 		$("#nu_cnpj").focus();
@@ -339,7 +344,11 @@ function validarCNPJ(cnpj) {
 }
 function validarCPF(cpf) {	
 	cpf = cpf.replace(/[^\d]+/g,'');	
-	// Elimina CPFs invalidos conhecidos	
+	// Elimina CPFs invalidos conhecidos
+	if (cpf = "")
+	{
+		return true;		
+	}	
 	if (cpf.length != 11 || 
 		cpf == "00000000000" || 
 		cpf == "11111111111" || 
