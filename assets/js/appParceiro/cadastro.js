@@ -44,7 +44,7 @@ $(document).ready(function() {
 	}); 
 
 	$('[name="id_estado"]').change(function(){
-        if($(this).val() === "CPF"){
+        if($(this).val() == "CPF"){
             $('#nu_cpf').show();
 			$('#nu_cnpj').hide();
             return;
