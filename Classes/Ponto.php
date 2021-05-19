@@ -86,7 +86,7 @@
 				$con = Conecta::criarConexao();
 				
 				$select = "SELECT id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, ds_foto, t.ds_tipo
-							FROM tb_ponto
+							FROM tb_ponto p
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia";
 				
 				$stmt = $con->prepare($select); 
