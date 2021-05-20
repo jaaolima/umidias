@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 	$("#salvar").on("click", function(e){
 		
-		if(/*validar()*/ true)
+		/*if(validar() )
 		{ 	var form = $("#form_usuario").get(0); 
 			$.ajax({
 		        url: 'appPonto/gravar_ponto.php'
@@ -32,7 +32,7 @@ $(document).ready(function() {
 					swal.fire("Erro", data.responseText, "error");
 				}
 		    });		
-		}	
+		}	*/
 	});
 	
 });
@@ -213,9 +213,9 @@ var KTDropzoneDemo = function () {
 
         // multiple file upload
         $('#dropzone').dropzone({
-            url: 'appPonto/gravar_ponto.php', // Set the url for your upload script location
             paramName: "foto[]", // The name that will be used to transfer the file
             maxFiles: 5,
+			autoProcessQueue: false,
             addRemoveLinks: true,
             accept: function(file, done) {
                 if (file.name == "justinbieber.jpg") {
@@ -223,7 +223,34 @@ var KTDropzoneDemo = function () {
                 } else {
                     done();
                 }
-            }
+            },
+			init: function(){
+				if(/*validar()*/ true)
+				{ 	var form = $("#form_usuario").get(0); 
+					$.ajax({
+						url: 'appPonto/gravar_ponto.php'
+						, data: $("#form_usuario").serialize()
+						, type: 'post'
+						, data: new FormData(form)
+						, mimeType: 'multipart/form-data'
+						, processData: false
+						, contentType: false
+						, success: function(html) { 
+							swal.fire({
+								position: 'top-right',
+								type: 'success',
+								title: html,
+								showConfirmButton: true
+							});
+							
+							redirectTo("appPonto/listar_ponto.php");
+						}
+						, error: function (data) {
+							swal.fire("Erro", data.responseText, "error");
+						}
+					});		
+				}	
+			}
         });
 
 
