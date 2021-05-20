@@ -130,11 +130,10 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div> 
                 <div class="form-group col-md-2" id="tamanho">
                     <label>Tamanho<span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_tamanho" name="ds_tamanho">
+                    <select class="form-control" id="id_tamanho" name="id_tamanho">
                         <option value="">Selecione...</option>
-                        <option value="">Selecione...</option>
-                        <option value="">Selecione...</option>
-                        <option value="">Selecione...</option>
+                        <option value="1">9,0 x 3,60</option>
+                        <option value="2">6,0 x 3,0</option>
                     </select>
                 </div> 
                 <div class="form-group col-2" id="periodo">

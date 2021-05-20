@@ -50,6 +50,18 @@ $('[name="id_midia"]').change(function(){
 });
 $('[name="id_midia"]').change(function(){
 	if($(this).val() == 1){
+		$('#tamanho').show();
+		return;
+	}
+
+	$('#tamanho').hide();
+	$('[name="id_tamanho"]').prop('checked', false);
+
+
+	
+});
+$('[name="id_midia"]').change(function(){
+	if($(this).val() == 1){
 		$('#periodo').show();
 		return;
 	}
@@ -62,6 +74,45 @@ $('[name="id_midia"]').change(function(){
 });
 function validar()
 { 
+	if($("#id_midia option:selected").val() == 1){
+		if($("#id_material").val() == "")
+		{
+			$("#id_material").focus();
+			swal.fire("Erro", "Escolha o material", "error");
+			$("#id_material").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#id_material").removeClass("is-invalid");	
+			$("#id_material").addClass("is-valid");
+		}
+		if($("#id_tamanho").val() == "")
+		{
+			$("#id_tamanho").focus();
+			swal.fire("Erro", "Escolha o tamanho", "error");
+			$("#id_tamanho").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#id_tamanho").removeClass("is-invalid");	
+			$("#id_tamanho").addClass("is-valid");
+		}
+		if($("#periodo").val() == "")
+		{
+			$("#periodo").focus();
+			swal.fire("Erro", "Escolha o período", "error");
+			$("#periodo").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#periodo").removeClass("is-invalid");	
+			$("#periodo").addClass("is-valid");
+		}
+
+	}
 	if($("#ds_descricao").val() == "")
 	{
 		$("#ds_descricao").focus();
