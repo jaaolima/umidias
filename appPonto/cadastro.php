@@ -66,13 +66,11 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
             </div>
             <div class="form-group row">
               <div class="form-group col-4">
-                <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">Multiple File Upload</label>
-                <div class="col-lg-4 col-md-9 col-sm-12">
-                  <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_2"></div>
-                    <div class="dropzone-msg dz-message needsclick">
-                      <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
-                      <span class="dropzone-msg-desc">Upload up to 10 files</span>
-                    </div>
+                <label class="">Multiple File Upload</label>
+                <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_2"></div>
+                  <div class="dropzone-msg dz-message needsclick">
+                    <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
+                    <span class="dropzone-msg-desc">Upload up to 10 files</span>
                   </div>
                 </div>
               </div>
@@ -84,15 +82,15 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
               </div>
             </div>
             <div class="form-group row"> 
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-2">
                     <label >Latitude<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" readonly/>
                 </div> 
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-2">
                     <label >Longitude<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" readonly/>
                 </div> 
