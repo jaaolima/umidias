@@ -78,6 +78,16 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                         <p>Clique duas vezes no mapa para marcar a localização do ponto</p>
                         <div id="map"></div>
                     </div>
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <label >Latitude<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" readonly/>
+                        </div> 
+                        <div class="form-group col-md-2">
+                            <label >Longitude<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" readonly/>
+                        </div> 
+                    </div>
                 </div>
             </div>
             <div class="form-group row"> 
@@ -85,14 +95,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
                 </div>
-                <div class="form-group col-md-2">
-                    <label >Latitude<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" readonly/>
-                </div> 
-                <div class="form-group col-md-2">
-                    <label >Longitude<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" readonly/>
-                </div> 
+               
             </div> 
             <div class="form-group row">    
                 <div class="form-group col-md-2">
