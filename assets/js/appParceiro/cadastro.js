@@ -345,13 +345,11 @@ function validarCNPJ(cnpj, regime) {
 }
 function validarCPF(cpf, regime) {	
 	
-	// Elimina CPFs invalidos conhecidos
-	if (cpf !== "CPF")
+	
+	if (regime === "CPF")
 	{
-		return true;		
-	}	
-	else{
-		cpf = cpf.replace(/[^\d]+/g,'');	
+		cpf = cpf.replace(/[^\d]+/g,'');
+		// Elimina CPFs invalidos conhecidos	
 		if (cpf.length != 11 || 
 			cpf == "00000000000" || 
 			cpf == "11111111111" || 
@@ -398,5 +396,8 @@ function validarCPF(cpf, regime) {
 			return false;		
 		}			
 		return true;   
+	}
+	else{
+		return true;
 	}
 }
