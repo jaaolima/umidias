@@ -10,6 +10,7 @@
 	require_once("Classes/Usuario.php");
 	require_once("Classes/Ponto.php");
 	require_once("Classes/Parceiro.php");
+	require_once("Classes/Cliente.php");
 
 	if ( $_SESSION['autenticado'] !=='validado') {
 		header("location: index.php");
@@ -21,6 +22,7 @@
 	$usuario = new Usuario();
 	$ponto = new Ponto();
 	$parceiro = new Parceiro();
+	$cliente = new Cliente();
 
 	$retorno = $midia->listarTipoMidia($_POST);
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
