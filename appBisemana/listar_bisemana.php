@@ -5,7 +5,7 @@
     
     require_once("../Classes/Bisemana.php");
     $bisemana = new Bisemana();
-    $retorno = $bisemana->listarBisemana($_POST);
+    $retorno = $bisemana->listarTodasBisemana($_POST);
 ?>
 
 <div class="card card-custom gutter-b">
