@@ -225,32 +225,33 @@ var KTDropzoneDemo = function () {
                 }
             },
 			init: function(){
-				if(/*validar()*/ true)
-				{ 	var form = $("#form_usuario").get(0); 
-					$.ajax({
-						url: 'appPonto/gravar_ponto.php'
-						, data: $("#form_usuario").serialize()
-						, type: 'post'
-						, data: new FormData(form)
-						, mimeType: 'multipart/form-data'
-						, processData: false
-						, contentType: false
-						, success: function(html) { 
-							swal.fire({
-								position: 'top-right',
-								type: 'success',
-								title: html,
-								showConfirmButton: true
-							});
-							
-							redirectTo("appPonto/listar_ponto.php");
-						}
-						, error: function (data) {
-							swal.fire("Erro", data.responseText, "error");
-						}
-					});		
-				}	
-			}
+				$("#salvar").on("click", function(e){
+					if(/*validar()*/ true)
+					{ 	var form = $("#form_usuario").get(0); 
+						$.ajax({
+							url: 'appPonto/gravar_ponto.php'
+							, data: $("#form_usuario").serialize()
+							, type: 'post'
+							, data: new FormData(form)
+							, mimeType: 'multipart/form-data'
+							, processData: false
+							, contentType: false
+							, success: function(html) { 
+								swal.fire({
+									position: 'top-right',
+									type: 'success',
+									title: html,
+									showConfirmButton: true
+								});
+								
+								redirectTo("appPonto/listar_ponto.php");
+							}
+							, error: function (data) {
+								swal.fire("Erro", data.responseText, "error");
+							}
+						});		
+					}	
+				});
         });
 
 
