@@ -62,3 +62,12 @@ var DatatablesBasicBasic = function() {
 jQuery(document).ready(function() {
 	DatatablesBasicBasic.init();
 });
+$(document).ready(function() {
+	    
+
+    $("#ver_foto").on("click", function(){
+		$('#foto').removeClass("d-none");
+		$('#map').addClass("d-none");
+    }); 
+
+});

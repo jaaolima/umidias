@@ -54,6 +54,10 @@ License: You must have a valid license purchased only from themeforest(the above
 				width: 100%;
 				height: 500px;
 			}
+			#foto {
+				width: 100%;
+				height: 500px;
+			}
 			
 		</style>
 	</head>
@@ -70,8 +74,9 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="form-group row"> 
 						<div class="form-group col-md-12 position-relative">
 							<div id="map" class="rounded"></div>
-							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 200px;">ver fotos</button>
-							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 80px;">ver localização</button>
+							<img id="foto" class="rounded img-fluid d-none" src="<?php echo $dados["ds_foto"];?>"></img>
+							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 220px;" id="ver_foto">ver fotos</button>
+							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 80px;" id="ver_mapa">ver localização</button>
 						</div>
 					</div>
 					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
