@@ -267,7 +267,11 @@ function validar()
 }
 function validarCNPJ(cnpj, regime) {
 
-	if (regime != "CPF"){
+	if (regime === "CPF")
+	{
+		return true;		
+	}
+	else{
 
 		cnpj = cnpj.replace(/[^\d]+/g,'');
 		if (cnpj.length != 14)
@@ -338,18 +342,12 @@ function validarCNPJ(cnpj, regime) {
 			
 		return true;
 	}	
-	
-	else
-	{
-		return true;		
-	}
 }
 function validarCPF(cpf, regime) {	
 	
-	
-	if (regime === "CPF")
-	{
-		cpf = cpf.replace(/[^\d]+/g,'');	
+	cpf = cpf.replace(/[^\d]+/g,'');
+	if (regime === "CPF"){
+		// Elimina CPFs invalidos conhecidos	
 		if (cpf.length != 11 || 
 			cpf == "00000000000" || 
 			cpf == "11111111111" || 
