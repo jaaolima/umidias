@@ -24,7 +24,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
 <style>
     #map {
         width: 100%;
-        height: 500px;
+        height: 300px;
     }
     
 </style>
