@@ -212,7 +212,7 @@ var KTDropzoneDemo = function () {
 
 
         // multiple file upload
-        $('#kt_dropzone_2').dropzone({
+        $('#dropzone').dropzone({
             url: 'appPonto/gravar_ponto.php', // Set the url for your upload script location
             paramName: "foto[]", // The name that will be used to transfer the file
             maxFiles: 5,
