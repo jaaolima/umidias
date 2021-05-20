@@ -65,33 +65,34 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div>
             </div>
             <div class="form-group row">
-              <div class="form-group col-2">
-                  <label>Fotos <span class="text-danger">*</span></label>
-                  <div class="uppy" id="kt_uppy_6">
-                    <button class="uppy-btn btn btn-primary font-weight-bold">Escolha suas fotos</button>
-                    <div class="uppy-dashboard"></div>
-                    <div class="uppy-progress"></div>
+              <div class="form-group col-4">
+                <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">Multiple File Upload</label>
+                <div class="col-lg-4 col-md-9 col-sm-12">
+                  <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_2"></div>
+                    <div class="dropzone-msg dz-message needsclick">
+                      <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
+                      <span class="dropzone-msg-desc">Upload up to 10 files</span>
+                    </div>
                   </div>
+                </div>
               </div>
-              <div class="form-group col-md-3">
-                  <label>Descrição <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
+              <div class="form-group col-4"> 
+                <div class="form-group ">
+                  <p>Clique duas vezes no mapa para marcar a localização do ponto</p>
+                  <div id="map"></div>
+                </div>
               </div>
             </div>
-            
-            
-			<div class="form-group row"> 
-				<div class="form-group col-md-8">
-					<p>Clique duas vezes no mapa para marcar a localização do ponto</p>
-					<div id="map"></div>
-				</div>
-			</div>
             <div class="form-group row"> 
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
+                    <label>Descrição <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
+                </div>
+                <div class="form-group col-md-3">
                     <label >Latitude<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" readonly/>
                 </div> 
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label >Longitude<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" readonly/>
                 </div> 
@@ -120,10 +121,6 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div> 
             </div>
             <div class="form-group row">
-                <div class="form-group col-md-2">
-                    <label>Observações <span class="text-danger">*</span></label>
-                    <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
-                </div>
                 <div class="form-group col-md-2" id="material">
                     <label>Material acessível<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_material" name="id_material">
@@ -139,6 +136,10 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                       <option value="1">Bisemana</option>
                       <option value="2">Mensal</option>
                     </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Observações <span class="text-danger">*</span></label>
+                    <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div>
             </div>      
         </div>
