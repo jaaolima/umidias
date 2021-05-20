@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 	$("#salvar").on("click", function(e){
 		
-		if(validar())
+		if(/*validar()*/ true)
 		{ 	var form = $("#form_usuario").get(0); 
 			$.ajax({
 		        url: 'appPonto/gravar_ponto.php'
@@ -214,7 +214,7 @@ var KTDropzoneDemo = function () {
         // multiple file upload
         $('#kt_dropzone_2').dropzone({
             url: "https://keenthemes.com/scripts/void.php", // Set the url for your upload script location
-            paramName: "file", // The name that will be used to transfer the file
+            paramName: "foto[]", // The name that will be used to transfer the file
             maxFiles: 5,
             maxFilesize: 5, // MB
             addRemoveLinks: true,

@@ -7,14 +7,17 @@
 		{
 			$ds_local	        	= $dados['ds_local'];
 			$ds_descricao	        = $dados['ds_descricao'];
-			$ds_foto                = $_FILES['ds_foto'];
+			$ds_foto                = $_FILES['foto'];
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
 			$nu_valor    	        = $dados['nu_valor']; 
 			$id_midia               = $dados['id_midia'];
 			$ds_observacao	        = $dados['ds_observacao'];
 			$id_material	        = $dados['id_material'];
-			if($id_midia == 2){
+
+
+			var_dump($ds_foto);
+			/*if($id_midia == 2){
 				$id_material = 2;
 			}
 			$id_periodo	        = $dados['id_periodo'];
@@ -86,7 +89,7 @@
 			else
 			{
 				echo "Aconteceu um erro".$error[1];
-			}
+			}*/
 
 			
 		}
