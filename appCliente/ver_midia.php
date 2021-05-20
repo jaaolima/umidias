@@ -6,6 +6,7 @@
 	require_once("../Classes/Ponto.php");
 
 	$id_ponto = $_GET["id_ponto"]; 
+	$id_midia = $_GET["id_midia"]; 
 	
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
@@ -136,22 +137,67 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="separator separator-solid"></div>
 											<div class="my-6 mx-6">
 												<h3 class="font-weight-bolder">Aluguel</h3>
-												<span>O periodo minimo de locação é 15 dias</span>
 											</div>
+											<?php if($id_midia == 1) : ?>
 											<div class="d-flex my-6 mx-6">
-												<div class="col-6">
-													<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
-														<legend class="legend-border mb-0">Data Inicial</legend>
-														<input class="border-0 w-100" type="date" style="height: 27px;">
-													</fieldset>   
-												</div>
-												<div class="col-6">
-													<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
-														<legend class="legend-border mb-0">Data Final</legend>
-														<input class="border-0 w-100" type="date" style="height: 27px;">
-													</fieldset>   
-												</div>												
+												<table  class="table table-hover" id="table_bisemana">
+													<thead>
+														<tr>
+															<th>ID bisemanas</th>
+															<th>Bisemanas Disponiveis</th>
+															<th>Data Inicial</th>
+															<th>Data Final</th>
+															<th>Selecione</th>
+														</tr>
+													</thead>
+													<tbody>
+														<?php
+															while ($dados = $retorno->fetch())
+															{
+
+																$dt_inicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
+																$dt_final = date('d/m/Y', strtotime($dados["dt_final"]));
+
+
+																echo "<tr>
+																		<td>".$dados['id_bisemana']."</td>
+																		<td>".$dados['ds_bisemana']."</td>
+																		<td>".$dt_inicial."</td>
+																		<td>".$dt_inicial."</td>
+																		<td><input name='bisemana[]' id='bisemana' value='".$dados['id_bisemana']."' type='checkbox'></td>
+																	</tr>";
+															}
+														?>
+													</tbody>
+												</table>												
 											</div>
+											<?php endif ;?>
+											<?php if($id_midia == 2) : ?>
+											<div class="d-flex my-6 mx-6">
+												<div class="col-4">
+													<label >Data de Inicio:<span class="text-danger">*</span></label>
+													<input type="date" class="form-control" name="dt_inicial" id="dt_inicial">
+												</div>
+												<div class="col-4">
+													<label >Meses de locação:<span class="text-danger">*</span></label>
+													<select name="mes" id="mes">
+														<option value="">Selecione...</option>
+														<option value="1">1 mês</option>
+														<option value="2">2 meses</option>
+														<option value="3">3 meses</option>
+														<option value="4">4 meses</option>
+														<option value="5">5 meses</option>
+														<option value="6">6 meses</option>
+														<option value="7">7 meses</option>
+														<option value="8">8 meses</option>
+														<option value="9">9 meses</option>
+														<option value="10">10 meses</option>
+														<option value="11">11 meses</option>
+														<option value="12">12 meses</option>
+													</select>
+												</div>
+											</div>
+											<?php endif ;?>
 											<div class="separator separator-solid"></div>
 											<div class="my-6 mx-6">
 												<div class="d-flex">

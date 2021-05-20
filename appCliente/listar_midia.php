@@ -7,6 +7,7 @@
 	require_once("../Classes/Ponto.php");
 	$ponto = new Ponto();
 	$retorno = $ponto->listarPonto($_POST);
+	$id_midia = $_GET["id_midia"];
 ?>
 <!DOCTYPE html>
 <!-- 
@@ -161,7 +162,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															</div>
 															<div class='separator separator-solid'></div>
 															<div class='my-8 mx-4 text-right'>
-																<a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."' class='text-primary'>Ver detalhes
+																<a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$id_midia."' class='text-primary'>Ver detalhes
 																	<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
 																		<path d='M5 12H19' stroke='#B721FF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
 																		<path d='M12 5L19 12L12 19' stroke='#B721FF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
