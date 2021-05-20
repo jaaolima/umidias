@@ -67,7 +67,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
             <div class="form-group row">
                 <div class="form-group col-4">
                     <label class="">Multiple File Upload</label>
-                    <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_2" style="height: 70%;"></div>
+                    <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_2" style="height: 80%;"></div>
                     <div class="dropzone-msg dz-message needsclick">
                         <h3 class="dropzone-msg-title">Solte os arquivos aqui ou clique para fazer o upload.</h3>
                         <span class="dropzone-msg-desc">Faça upload de até 5 arquivos</span>
@@ -79,32 +79,26 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                         <div id="map"></div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-2">
+                        <div class="form-group col-md-6">
                             <label >Latitude<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" readonly/>
                         </div> 
-                        <div class="form-group col-md-2">
+                        <div class="form-group col-md-6">
                             <label >Longitude<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" readonly/>
                         </div> 
                     </div>
                 </div>
             </div>
-            <div class="form-group row"> 
-                <div class="form-group col-md-4">
-                    <label>Descrição <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
-                </div>
-               
-            </div> 
+ 
             <div class="form-group row">    
                 <div class="form-group col-md-2">
                     <label >Tipo de Mídia <span class="text-danger">*</span></label>
                     <select class="form-control" id="id_midia" name="id_midia">
                         <option>Selecione..</option>
                         <?php 
-						            	echo $optionscategoria;
-						            ?>
+                            echo $optionscategoria;
+                        ?>
                     </select>
                 </div>
                 <div class="form-group col-md-2">
@@ -119,8 +113,6 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                         <option value="2">6,0 x 3,0</option>
                     </select>
                 </div> 
-            </div>
-            <div class="form-group row">
                 <div class="form-group col-md-2" id="material">
                     <label>Material acessível<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_material" name="id_material">
@@ -137,11 +129,17 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                       <option value="2">Mensal</option>
                     </select>
                 </div>
+            </div>
+            <div class="form-group row">
                 <div class="form-group col-md-2">
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div>
-            </div>      
+                <div class="form-group col-md-4">
+                    <label>Descrição <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
+                </div>
+            </div>   
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
