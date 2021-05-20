@@ -16,7 +16,7 @@ $(document).ready(function() {
 		        url: 'appParceiro/gravar_parceiro.php'
 				, data: $("#form_usuario").serialize()
 		        , type: 'post'
-		        , success: function(html) {
+		        , success: function(html) { 
 		        	swal.fire({
 		                position: 'top-right',
 		                type: 'success',

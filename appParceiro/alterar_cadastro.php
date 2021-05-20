@@ -30,6 +30,21 @@ $optionsCidade = $parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_
         <div class="card-body">
         <input type="hidden" name="id_parceiro" id="id_parceiro" value="<?php echo $id_parceiro?>">
             <div class="form-group row">
+                <div class="form-group col-md-4">
+                    <label >Regime Fiscal<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_regime" name="id_regime">  
+                    
+                        <option value="SN" <?php if($dados['id_regime'] == "SN") echo "selected"; ?>>Simples Nacional</option>
+                        <option value="LR" <?php if($dados['id_regime'] == "LR") echo "selected"; ?>>Lucro Real</option>
+                        <option value="LP" <?php if($dados['id_regime'] == "LP") echo "selected"; ?>>Lucro Presumido</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Alíquota padrão</label>
+                    <input type="text" class="form-control" id="nu_aliquota" name="nu_aliquota" value="<?php echo $dados['nu_aliquota']; ?>" />
+                </div>
+            </div>  
+            <div class="form-group row">
                 <div class="form-group col-md-6">
                     <label>Nome da Empresa <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_nomeempresa" name="ds_nomeempresa" value="<?php echo $dados['ds_nomeempresa']?>"/>
@@ -91,21 +106,7 @@ $optionsCidade = $parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_
                     <input type="text" class="form-control" id="nu_telefone" name="nu_telefone" value="<?php echo $dados['nu_telefone']?>"/>
                 </div>
             </div> 
-            <div class="form-group row">
-                <div class="form-group col-md-4">
-                    <label >Regime Fiscal<span class="text-danger">*</span></label>
-                    <select class="form-control" id="id_regime" name="id_regime">  
-                    
-                        <option value="SN" <?php if($dados['id_regime'] == "SN") echo "selected"; ?>>Simples Nacional</option>
-                        <option value="LR" <?php if($dados['id_regime'] == "LR") echo "selected"; ?>>Lucro Real</option>
-                        <option value="LP" <?php if($dados['id_regime'] == "LP") echo "selected"; ?>>Lucro Presumido</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-2">
-                    <label>Alíquota padrão</label>
-                    <input type="text" class="form-control" id="nu_aliquota" name="nu_aliquota" value="<?php echo $dados['nu_aliquota']; ?>" />
-                </div>
-            </div>            
+                     
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
