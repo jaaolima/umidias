@@ -80,7 +80,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																				<path d="M25 34.6001V44.2001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 																			</svg>
 																		</span>
-																		<p  class="titulo-midia d-block ">'.$dados["ds_nome"].'</p>
+																		<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
 																		<a href="appCliente/listar_midia.php" class="btn btn-primary" type="button" >Adicionar mídia</a>
 																	</div>';
 														}
@@ -93,7 +93,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																				<path d="M25 34.6001V44.2001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 																			</svg>
 																		</span>
-																		<p  class="titulo-midia d-block ">'.$dados["ds_nome"].'</p>
+																		<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
 																		<a href="appCliente/listar_midia.php" class="btn btn-primary" type="button" >Adicionar mídia</a>
 																	</div>';
 														}
