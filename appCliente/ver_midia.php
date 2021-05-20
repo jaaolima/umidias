@@ -4,10 +4,12 @@
 	error_reporting(E_ALL);
 	session_start();
 	require_once("../Classes/Ponto.php");
+	require_once("../Classes/Bisemana.php");
 
 	$id_ponto = $_GET["id_ponto"]; 
 	$id_midia = $_GET["id_midia"]; 
 	
+	$bisemana = new Bisemana();
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
     $retorno = $bisemana->listarBisemana();
