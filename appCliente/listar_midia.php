@@ -6,8 +6,9 @@
 	
 	require_once("../Classes/Ponto.php");
 	$ponto = new Ponto();
-	$retorno = $ponto->listarPonto($_POST);
 	$id_midia = $_GET["id_midia"];
+	$retorno = $ponto->listarPonto($id_midia);
+	
 ?>
 <!DOCTYPE html>
 <!-- 
