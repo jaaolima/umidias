@@ -72,9 +72,6 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                             <h3 class="dropzone-msg-title">Escolha boas fotos</h3>
                             <span class="dropzone-msg-desc">Faça upload de até 5 arquivos</span>
                         </div>
-                        <div class="fallback">
-                            <input name="foto" type="file" multiple />
-                        </div>
                     </div>
                 </div>
                 <div class="form-group col-4"> 
