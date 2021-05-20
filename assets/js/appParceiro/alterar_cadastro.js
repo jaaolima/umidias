@@ -44,7 +44,6 @@ $(document).ready(function() {
 	        }
 	    }); 
 	}); 
-	$('#cpf').hide();
 	$('[name="id_regime"]').change(function(){
         if($(this).val() === "CPF"){
             $('#cpf').show();
@@ -99,19 +98,35 @@ function validar()
 		$("#ds_nomeempresa").addClass("is-valid");
 	}
 
-	if($("#nu_cnpj").val() == "")
-	{
-		$("#nu_cnpj").focus();
-		swal.fire("Erro", "Preencha o CNPJ", "error");
-		$("#nu_cnpj").addClass("is-invalid");
-		return false;	
-	}
-	else
-	{
-		$("#nu_cnpj").removeClass("is-invalid");	
-		$("#nu_cnpj").addClass("is-valid");
-	}
+	if($("#id_regime").val() === "CPF"){
+		if($("#nu_cpf").val() == "")
+		{
+			$("#nu_cpf").focus();
+			swal.fire("Erro", "Preencha o CPF", "error");
+			$("#nu_cpf").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#nu_cpf").removeClass("is-invalid");	
+			$("#nu_cpf").addClass("is-valid");
+		}
 
+	}
+	else{
+		if($("#nu_cnpj").val() == "")
+		{
+			$("#nu_cnpj").focus();
+			swal.fire("Erro", "Preencha o CNPJ", "error");
+			$("#nu_cnpj").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#nu_cnpj").removeClass("is-invalid");	
+			$("#nu_cnpj").addClass("is-valid");
+		}
+	}
 	if($("#ds_logradouro").val() == "")
 	{
 		$("#ds_logradouro").focus();
