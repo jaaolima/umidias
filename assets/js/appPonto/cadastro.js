@@ -55,7 +55,7 @@ $('[name="id_midia"]').change(function(){
 	}
 
 	$('#tamanho').hide();
-	$('[name="id_tamanho"]').prop('checked', false);
+	$('[name="ds_tamanho"]').prop('checked', false);
 
 
 	
@@ -87,17 +87,17 @@ function validar()
 			$("#id_material").removeClass("is-invalid");	
 			$("#id_material").addClass("is-valid");
 		}
-		if($("#id_tamanho").val() == "")
+		if($("#ds_tamanho").val() == "")
 		{
-			$("#id_tamanho").focus();
+			$("#ds_tamanho").focus();
 			swal.fire("Erro", "Escolha o tamanho", "error");
-			$("#id_tamanho").addClass("is-invalid");
+			$("#ds_tamanho").addClass("is-invalid");
 			return false;	
 		}
 		else
 		{
-			$("#id_tamanho").removeClass("is-invalid");	
-			$("#id_tamanho").addClass("is-valid");
+			$("#ds_tamanho").removeClass("is-invalid");	
+			$("#ds_tamanho").addClass("is-valid");
 		}
 		if($("#periodo").val() == "")
 		{

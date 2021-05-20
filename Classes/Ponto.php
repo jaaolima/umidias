@@ -21,9 +21,9 @@
 			if($id_midia == 2){
 				$id_periodo = 2;
 			}
-			$id_tamanho	        = $dados['id_tamanho'];
+			$ds_tamanho	        = $dados['ds_tamanho'];
 			if($id_midia == 2){
-				$id_tamanho = 1;
+				$ds_tamanho = 1;
 			}
 
 			$tamanho = 20000000;
@@ -55,8 +55,8 @@
 				
 				try{
 					$con = Conecta::criarConexao();
-					$insert = "INSERT into tb_ponto (ds_descricao, ds_foto, ds_latitude, ds_longitude, nu_valor, id_midia, ds_local, ds_observacao, id_material, id_periodo, id_tamanho)
-								VALUES (:ds_descricao, :ds_foto, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_local, :ds_observacao, :id_material, :id_periodo, :id_tamanho)";
+					$insert = "INSERT into tb_ponto (ds_descricao, ds_foto, ds_latitude, ds_longitude, nu_valor, id_midia, ds_local, ds_observacao, id_material, id_periodo, ds_tamanho)
+								VALUES (:ds_descricao, :ds_foto, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_local, :ds_observacao, :id_material, :id_periodo, :ds_tamanho)";
 					
 					$stmt = $con->prepare($insert);
 					
@@ -70,7 +70,7 @@
 									':ds_observacao' => $ds_observacao,
 									':id_material' => $id_material,
 									':id_periodo' => $id_periodo,
-									':id_tamanho' => $id_tamanho);
+									':ds_tamanho' => $ds_tamanho);
 									
 					$stmt->execute($params);
 					
@@ -193,7 +193,7 @@
 				
 				
 				$select = "SELECT 
-							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, id_midia, st_status, ds_observacao, ds_local, id_tamanho
+							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, id_midia, st_status, ds_observacao, ds_local, ds_tamanho
 						FROM tb_ponto  
 						WHERE id_ponto = :id_ponto";
 

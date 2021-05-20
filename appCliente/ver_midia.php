@@ -98,7 +98,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<div class="my-12">
 												<h4 class="texto-negrito">Tamanho</h4>
-												<span><?php echo $dados["id_tamanho"]; ?></span>
+												<span><?php echo $dados["ds_tamanho"]; ?></span>
 											</div>
 											<div class="my-12">
 												<h4 class="texto-negrito">Latitude e Longitude</h4>
