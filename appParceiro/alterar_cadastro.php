@@ -52,18 +52,18 @@ $optionsCidade = $parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_
                     <input type="text" class="form-control" id="ds_nomeempresa" name="ds_nomeempresa" value="<?php echo $dados['ds_nomeempresa']?>"/>
                 </div>
                 <?php if($dados["id_regime"] == "CPF") { ?>
-                <div class="form-group col-md-3 hidden" id="cnpj">
+                <div class="form-group col-md-3 d-none" id="cnpj">
                     <label >CNPJ <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="nu_cnpj" name="nu_cnpj" value="<?php echo $dados['nu_cnpj']?>"/>
                 </div>
                 <?php } else{  ?>
-                <div class="form-group col-md-3 hidden" id="cnpj">
+                <div class="form-group col-md-3 " id="cnpj">
                     <label >CNPJ <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="nu_cnpj" name="nu_cnpj" value="<?php echo $dados['nu_cnpj']?>"/>
                 </div>
                 <?php } ?>
                 <?php if($dados["id_regime"] != "CPF") { ?>
-                <div class="form-group col-md-3 hidden" id="cpf">
+                <div class="form-group col-md-3 d-none" id="cpf">
                     <label >CPF<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="nu_cpf" name="nu_cpf" value="<?php echo $dados['nu_cpf']?>"/>
                 </div>
