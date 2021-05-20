@@ -266,6 +266,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/plugins/global/plugins.bundle.js"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
+		<script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 		<script src="assets/js/appCliente/ver_midia.js"></script>
 		<script>
 			// The following example creates complex markers to indicate beaches near
