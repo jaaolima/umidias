@@ -37,6 +37,8 @@ $optionsCidade = $parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_
                         <option value="SN" <?php if($dados['id_regime'] == "SN") echo "selected"; ?>>Simples Nacional</option>
                         <option value="LR" <?php if($dados['id_regime'] == "LR") echo "selected"; ?>>Lucro Real</option>
                         <option value="LP" <?php if($dados['id_regime'] == "LP") echo "selected"; ?>>Lucro Presumido</option>
+                        <option value="LR" <?php if($dados['id_regime'] == "MEI") echo "selected"; ?>>MEI</option>
+                        <option value="LP" <?php if($dados['id_regime'] == "CPF") echo "selected"; ?>>CPF</option>
                     </select>
                 </div>
                 <div class="form-group col-md-2">
