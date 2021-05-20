@@ -155,19 +155,19 @@ License: You must have a valid license purchased only from themeforest(the above
 													</thead>
 													<tbody>
 														<?php
-															while ($dados = $retorno->fetch())
+															while ($dadosBisemana = $retorno->fetch())
 															{
 
-																$dt_inicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
-																$dt_final = date('d/m/Y', strtotime($dados["dt_final"]));
+																$dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
+																$dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
 
 
 																echo "<tr>
-																		<td>".$dados['id_bisemana']."</td>
-																		<td>".$dados['ds_bisemana']."</td>
+																		<td>".$dadosBisemana['id_bisemana']."</td>
+																		<td>".$dadosBisemana['ds_bisemana']."</td>
 																		<td>".$dt_inicial."</td>
 																		<td>".$dt_inicial."</td>
-																		<td><input name='bisemana[]' id='bisemana' value='".$dados['id_bisemana']."' type='checkbox'></td>
+																		<td><input name='bisemana[]' id='bisemana' value='".$dadosBisemana['id_bisemana']."' type='checkbox'></td>
 																	</tr>";
 															}
 														?>
@@ -266,6 +266,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/plugins/global/plugins.bundle.js"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
+		<script src="assets/js/appCliente/ver_midia.js"></script>
 		<script>
 			// The following example creates complex markers to indicate beaches near
 		// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
