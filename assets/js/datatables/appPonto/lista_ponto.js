@@ -45,6 +45,9 @@ var DatatablesBasicBasic = function() {
                          <a href="appPonto/alterar_cadastro.php?id_ponto=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
                           <i class="la la-edit"></i>
                         </a>
+						<a id="excluir"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-ponto="`+full[0]+`" >
+                          <i class="la la-remove"></i>
+                        </a>
                         `;
 					},
 				},
@@ -56,6 +59,32 @@ var DatatablesBasicBasic = function() {
 				
 			],
 		});
+		table.on('click', '#excluir', function() {
+			var id_ponto = $(this).data("ponto");
+			swal.fire({
+	            title: 'Tem certeza?',
+	            text: "Desejar excluir o Ponto?",
+	            type: 'warning',
+	            showCancelButton: true,
+	            cancelButtonColor: '#fd397a',
+	            confirmButtonText: 'Sim, posseguir!',
+				cancelButtonText: 'Cancelar'
+	        }).then(function(result) {
+	            if (result.value) {
+					$.ajax({
+				        url: 'appPonto/excluir_ponto.php'
+				        , type: 'post'
+				        , data: {id_ponto : id_ponto}
+				        , success: function(html) {
+							swal.fire('Pronto!',html,'success');
+							redirectTo("appPonto/listar_ponto.php");				
+				        }
+				    });
+	                
+	            }
+	        });
+			
+		}); 
 	
 
 		table.on('change', 'tbody tr .m-checkbox', function() {

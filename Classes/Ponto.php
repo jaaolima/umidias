@@ -320,6 +320,31 @@
 			}	
 			
 		}
+		public function deletarPonto(array $dados)
+		{
+            $id_ponto	    = $dados['id_ponto'];
+
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "delete from tb_ponto
+							WHERE id_ponto=:id_ponto";
+				
+				$stmt = $con->prepare($insert);
+				
+                $params = array(':id_ponto' => $id_ponto);
+                                
+				$stmt->execute($params);
+				
+				echo "Deletado com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+		}
 		
 	}	
 
