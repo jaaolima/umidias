@@ -137,7 +137,7 @@
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':id_parceiro' => $id_parceiro, 
+				$params = array(':id_parceiro' => $id_parceiro,  
 								':ds_nomeempresa' => $ds_nomeempresa, 
 								':nu_cnpj' => $nu_cnpj,
 								':nu_cpf' => $nu_cpf,

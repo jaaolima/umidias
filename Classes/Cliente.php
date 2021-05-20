@@ -102,6 +102,29 @@
     			print "ERRO:".$e->getMessage();		
 			} 
         }
+		public function dadosTotalCliente()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT count(id_usuario) as id_usuario
+							FROM tb_usuario
+							where id_usuario = 1 ";
+				
+				$stmt = $con->prepare($select); 
+				
+				$stmt->execute();
+
+				return $stmt->fetch();
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
 
 
     }
