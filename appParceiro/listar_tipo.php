@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																			</svg>
 																		</span>
 																		<p  class="titulo-midia d-block ">'.$dados["ds_nome"].'</p>
-																		<a href="appParceiro/add_midia.php" class="btn btn-primary" type="button" >Adicionar mídia</a>
+																		<a href="appParceiro/add_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Adicionar mídia</a>
 																	</div>';
 														}
 														else{
@@ -94,7 +94,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																			</svg>
 																		</span>
 																		<p  class="titulo-midia d-block ">'.$dados["ds_nome"].'</p>
-																		<a href="appParceiro/add_midia.php" class="btn btn-primary" type="button" >Adicionar mídia</a>
+																		<a href="appParceiro/add_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Adicionar mídia</a>
 																	</div>';
 														}																
 												?>
