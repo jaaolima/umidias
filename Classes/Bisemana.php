@@ -131,6 +131,31 @@
 			print $e->getMessage();
 			}
 		}
+		public function listarBisemana()
+		{
+			$hoje = date('Y/m/d');
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT id_bisemana, ds_bisemana, dt_final, dt_inicial
+							FROM tb_bisemana
+							where dt_final > :hoje";
+				
+				$stmt = $con->prepare($select); 
+				$params = array(':hoje' => $hoje);
+				
+				$stmt->execute($params);
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
 
 
     }

@@ -10,6 +10,7 @@
 	
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
+    $retorno = $bisemana->listarBisemana();
 
 
 ?>
@@ -180,7 +181,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</div>
 												<div class="col-4">
 													<label >Meses de locação:<span class="text-danger">*</span></label>
-													<select name="mes" id="mes">
+													<select name="mes" id="mes" class="form-control">
 														<option value="">Selecione...</option>
 														<option value="1">1 mês</option>
 														<option value="2">2 meses</option>
