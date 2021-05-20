@@ -88,7 +88,7 @@
 				
 				
 				$select = "SELECT 
-							id_parceiro, ds_nomeempresa, nu_cnpj, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota
+							id_parceiro, ds_nomeempresa, nu_cnpj, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota, nu_cpf
 						FROM tb_parceiro  
 						WHERE id_parceiro = :id_parceiro";
 
