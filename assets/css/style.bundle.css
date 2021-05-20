@@ -566,12 +566,12 @@ color: #B721FF !important;
 }
 
 .btn-mapa {
-  background: #FFFFFF;
+  background: #FFFFFF !important;
   /* Roxo */
-  text: #B721FF ;
-  border: 1.5px solid #B721FF;
-  box-sizing: border-box;
-  border-radius: 16px;
+  color: #B721FF !important;
+  border: 1.5px solid #B721FF !important;
+  box-sizing: border-box !important;
+  border-radius: 16px !important;
 }
 
 .login-texto {
