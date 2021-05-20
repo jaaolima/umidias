@@ -97,14 +97,6 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div> 
             </div> 
             <div class="form-group row">    
-                <div class="form-group col-md-4">
-                    <label >Valor<span class="text-danger">*</span></label>
-                    <input type="number" class="form-control" id="nu_valor" name="nu_valor"/>
-                </div>
-                <div class="form-group col-md-2">
-                    <label >Valor Sugerido</label>
-                    <input type="text" class="form-control" value="50R$" id="nu_valorsugerido" name="nu_valorsugerido"readonly/>
-                </div>
                 <div class="form-group col-md-2">
                     <label >Tipo de Mídia <span class="text-danger">*</span></label>
                     <select class="form-control" id="id_midia" name="id_midia">
@@ -114,6 +106,18 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
 						            ?>
                     </select>
                 </div>
+                <div class="form-group col-md-2">
+                    <label >Valor<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="nu_valor" name="nu_valor"/>
+                </div>
+                <div class="form-group col-md-2" id="tamanho">
+                    <label>Tamanho<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_tamanho" name="id_tamanho">
+                        <option value="">Selecione...</option>
+                        <option value="1">9,0 x 3,60</option>
+                        <option value="2">6,0 x 3,0</option>
+                    </select>
+                </div> 
             </div>
             <div class="form-group row">
                 <div class="form-group col-md-2">
@@ -126,14 +130,6 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                         <?php 
                             echo $optionsmaterial;
                         ?>
-                    </select>
-                </div> 
-                <div class="form-group col-md-2" id="tamanho">
-                    <label>Tamanho<span class="text-danger">*</span></label>
-                    <select class="form-control" id="id_tamanho" name="id_tamanho">
-                        <option value="">Selecione...</option>
-                        <option value="1">9,0 x 3,60</option>
-                        <option value="2">6,0 x 3,0</option>
                     </select>
                 </div> 
                 <div class="form-group col-2" id="periodo">
