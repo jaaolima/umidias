@@ -67,7 +67,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
             <div class="form-group row">
                 <div class="form-group col-4">
                     <label class="">Multiple File Upload</label>
-                    <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_2"></div>
+                    <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_2" style="height: 70%;"></div>
                     <div class="dropzone-msg dz-message needsclick">
                         <h3 class="dropzone-msg-title">Solte os arquivos aqui ou clique para fazer o upload.</h3>
                         <span class="dropzone-msg-desc">Faça upload de até 5 arquivos</span>
