@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 	$("#salvar").on("click", function(e){ 
 		var cnpj = $("#nu_cnpj").val();
-		var cnpj = $("#nu_cpf").val();
+		var cpf = $("#nu_cpf").val();
 		var regime = $("#id_regime").val();
 		if(validar() && validarCNPJ(cnpj, regime) && validarCPF(cpf, regime))
 		{ 
@@ -344,7 +344,7 @@ function validarCNPJ(cnpj, regime) {
 	}	
 }
 function validarCPF(cpf, regime) {	
-	
+
 	cpf = cpf.replace(/[^\d]+/g,'');
 	if (regime === "CPF"){
 		// Elimina CPFs invalidos conhecidos	
