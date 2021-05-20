@@ -164,9 +164,8 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT count(id_usuario) as id_usuario
-							FROM tb_usuario 
-							where id_usuario = 2";
+				$select = "SELECT count(id_parceiro) as id_parceiro
+							FROM tb_parceiro ";
 				
 				$stmt = $con->prepare($select); 
 				
