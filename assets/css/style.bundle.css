@@ -565,6 +565,15 @@ color: #B721FF !important;
   text-align: center;
 }
 
+.btn-mapa {
+  background: #FFFFFF;
+  /* Roxo */
+  text: #B721FF ;
+  border: 1.5px solid #B721FF;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
 .login-texto {
   display: block;
   color: #de86dd !important;

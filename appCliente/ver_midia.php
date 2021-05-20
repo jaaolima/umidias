@@ -70,7 +70,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="form-group row"> 
 						<div class="form-group col-md-12 position-relative">
 							<div id="map" class="rounded"></div>
-							<button class="btn btn-primary position-absolute">Botão</button>
+							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 150px;">ver fotos</button>
+							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 80px;">ver localização</button>
 						</div>
 					</div>
 					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
