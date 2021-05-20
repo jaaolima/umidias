@@ -68,6 +68,14 @@ $(document).ready(function() {
     $("#ver_foto").on("click", function(){
 		$('#foto').removeClass("d-none");
 		$('#map').addClass("d-none");
+		$(this).addClass("btn-mapa-active");
+		$(this).removeClass("btn-mapa");
+    }); 
+	$("#ver_mapa").on("click", function(){
+		$('#map').removeClass("d-none");
+		$('#foto').addClass("d-none");
+		$(this).addClass("btn-mapa-active");
+		$(this).removeClass("btn-mapa");
     }); 
 
 });
