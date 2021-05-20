@@ -80,7 +80,7 @@
 				<tr>
 					<th>Id Parceiro</th>
 					<th>Nome da Empresa</th>
-					<th>CNPJ</th>
+					<th>CNPJ/CPF</th>
 					<th>UF</th>
 					<th>Municipio</th>
 					<th>Bairro</th>
