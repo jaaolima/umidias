@@ -453,20 +453,17 @@
 										</div>
 										<div class="col-4">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
-												<div class="flex-grow-1 card-spacer pb-0">
-													<span class="svg-icon svg-icon-2x svg-icon-info">
-														<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
-														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-															<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																<polygon points="0 0 24 0 24 24 0 24" />
-																<path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																<path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
-															</g>
-														</svg>
-														<!--end::Svg Icon-->
-													</span>
-													<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalParceiros["id_parceiro"]; ?></div>
-													<div class="text-muted font-weight-bold">Parceiros</div>
+												<div class="card-body d-flex flex-column p-0">
+													<!--begin::Stats-->
+													<div class="flex-grow-1 card-spacer pb-0">
+														<i class="flaticon-users icon-xl"></i>
+														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalParceiros["id_parceiro"]; ?></div>
+														<div class="text-muted font-weight-bold">Parceiros</div>
+													</div>
+													<!--end::Stats-->
+													<!--begin::Chart-->
+													<div id="kt_tiles_widget_21_chart" class="card-rounded-bottom" data-color="info" style="height: 100px"></div>
+													<!--end::Chart-->
 												</div>
 											</div>
 										</div>	
@@ -475,17 +472,7 @@
 												<div class="card-body d-flex flex-column p-0">
 													<!--begin::Stats-->
 													<div class="flex-grow-1 card-spacer pb-0">
-														<span class="svg-icon svg-icon-2x svg-icon-info">
-															<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
-															<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																	<polygon points="0 0 24 0 24 24 0 24" />
-																	<path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																	<path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
-																</g>
-															</svg>
-															<!--end::Svg Icon-->
-														</span>
+														<i class="flaticon-users icon-xl"></i>
 														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalCliente["id_usuario"]; ?></div>
 														<div class="text-muted font-weight-bold">usuários</div>
 													</div>
@@ -641,6 +628,175 @@
 		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM&callback=initialize"></script>
 		<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
 		<script src="assets/js/pages/crud/file-upload/dropzonejs.js"></script>
+		<script type="text/javascript">
+			var KTWidgets = function () {
+			// Private properties
+
+			// General Controls
+
+			// Stats widgets
+			
+			var _initMixedWidget21 = function () {
+				var element = document.getElementById("kt_tiles_widget_21_chart");
+				var height = parseInt(KTUtil.css(element, 'height'));
+				var color = KTUtil.hasAttr(element, 'data-color') ? KTUtil.attr(element, 'data-color') : 'info';
+
+				if (!element) {
+					return;
+				}
+
+				var options = {
+					series: [{
+						name: 'Net Profit',
+						data: [20, 20, 30, 15, 30, 30]
+					}],
+					chart: {
+						type: 'area',
+						height: height,
+						toolbar: {
+							show: false
+						},
+						zoom: {
+							enabled: false
+						},
+						sparkline: {
+							enabled: true
+						}
+					},
+					plotOptions: {},
+					legend: {
+						show: false
+					},
+					dataLabels: {
+						enabled: false
+					},
+					fill: {
+						type: 'solid',
+						opacity: 1
+					},
+					stroke: {
+						curve: 'smooth',
+						show: true,
+						width: 3,
+						colors: [KTApp.getSettings()['colors']['theme']['base'][color]]
+					},
+					xaxis: {
+						categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+						axisBorder: {
+							show: false,
+						},
+						axisTicks: {
+							show: false
+						},
+						labels: {
+							show: false,
+							style: {
+								colors: KTApp.getSettings()['colors']['gray']['gray-500'],
+								fontSize: '12px',
+								fontFamily: KTApp.getSettings()['font-family']
+							}
+						},
+						crosshairs: {
+							show: false,
+							position: 'front',
+							stroke: {
+								color: KTApp.getSettings()['colors']['gray']['gray-300'],
+								width: 1,
+								dashArray: 3
+							}
+						},
+						tooltip: {
+							enabled: true,
+							formatter: undefined,
+							offsetY: 0,
+							style: {
+								fontSize: '12px',
+								fontFamily: KTApp.getSettings()['font-family']
+							}
+						}
+					},
+					yaxis: {
+						min: 0,
+						max: 32,
+						labels: {
+							show: false,
+							style: {
+								colors: KTApp.getSettings()['colors']['gray']['gray-500'],
+								fontSize: '12px',
+								fontFamily: KTApp.getSettings()['font-family']
+							}
+						}
+					},
+					states: {
+						normal: {
+							filter: {
+								type: 'none',
+								value: 0
+							}
+						},
+						hover: {
+							filter: {
+								type: 'none',
+								value: 0
+							}
+						},
+						active: {
+							allowMultipleDataPointsSelection: false,
+							filter: {
+								type: 'none',
+								value: 0
+							}
+						}
+					},
+					tooltip: {
+						style: {
+							fontSize: '12px',
+							fontFamily: KTApp.getSettings()['font-family']
+						},
+						y: {
+							formatter: function (val) {
+								return "$" + val + " thousands"
+							}
+						}
+					},
+					colors: [KTApp.getSettings()['colors']['theme']['light'][color]],
+					markers: {
+						colors: [KTApp.getSettings()['colors']['theme']['light'][color]],
+						strokeColor: [KTApp.getSettings()['colors']['theme']['base'][color]],
+						strokeWidth: 3
+					}
+				};
+
+				var chart = new ApexCharts(element, options);
+				chart.render();
+			}
+
+			// Public methods
+			return {
+				init: function () {
+					// General Controls
+					_initDaterangepicker();
+					// Tiles Widgets
+					_initMixedWidget21();
+
+					// Form Widgets
+					_initPriceSlider('kt_price_slider');
+
+				}
+			}
+		}();
+
+		// Webpack support
+		if (typeof module !== 'undefined') {
+			module.exports = KTWidgets;
+		}
+
+		jQuery(document).ready(function () {
+			KTWidgets.init();
+		});
+
+	
+		</script>
 		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->
