@@ -7,7 +7,7 @@
 		{
 			$ds_local	        	= $dados['ds_local'];
 			$ds_descricao	        = $dados['ds_descricao'];
-			$ds_foto                = $dados['foto'];
+			$ds_foto                = $_FILES['foto'];
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
 			$nu_valor    	        = $dados['nu_valor']; 
