@@ -186,14 +186,14 @@
     			print "ERRO:".$e->getMessage();		
 			}
 		}
-		function buscarDadosPonto($id_ponto)
+		function BuscarDadosPonto($id_ponto)
 		{
 			try{
 				$con = Conecta::criarConexao();
 				
 				
 				$select = "SELECT 
-							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, id_midia, st_status, ds_observacao, ds_local
+							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, id_midia, st_status, ds_observacao, ds_local, id_tamanho
 						FROM tb_ponto  
 						WHERE id_ponto = :id_ponto";
 
