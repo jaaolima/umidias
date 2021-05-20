@@ -197,7 +197,7 @@ function validar()
 		swal.fire("Erro", "Selecione um status", "error");
 		$("#st_status").addClass("is-invalid");
 		return false;		
-	}
+	} 
 	else
 	{
 		$("#st_status").removeClass("is-invalid");	

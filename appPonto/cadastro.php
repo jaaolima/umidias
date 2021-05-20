@@ -71,6 +71,9 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                         <div class="dropzone-msg dz-message needsclick">
                             <h3 class="dropzone-msg-title">Escolha boas fotos</h3>
                             <span class="dropzone-msg-desc">Faça upload de até 5 arquivos</span>
+                            <div class="fallback">
+                                <input name="foto[]" type="file" multiple />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,7 +113,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                     <label>Tamanho<span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_tamanho" name="ds_tamanho">
                         <option value="">Selecione...</option>
-                        <option value="9,0 x 3,60">9,0 x 3,60</option>
+                        <option value="9,0 x 3,60">9,0 x 3,60</option> 
                         <option value="6,0 x 3,0">6,0 x 3,0</option>
                     </select>
                 </div> 
