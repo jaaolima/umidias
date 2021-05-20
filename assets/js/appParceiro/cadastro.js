@@ -348,8 +348,7 @@ function validarCPF(cpf, regime) {
 	
 	if (regime === "CPF")
 	{
-		cpf = cpf.replace(/[^\d]+/g,'');
-		// Elimina CPFs invalidos conhecidos	
+		cpf = cpf.replace(/[^\d]+/g,'');	
 		if (cpf.length != 11 || 
 			cpf == "00000000000" || 
 			cpf == "11111111111" || 
