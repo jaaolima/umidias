@@ -574,6 +574,15 @@ color: #B721FF !important;
   border-radius: 16px !important;
 }
 
+.btn-mapa {
+  background: #FFFFFF !important;
+  /* Roxo */
+  color: #B721FF !important;
+  border: 1.5px solid #B721FF !important;
+  box-sizing: border-box !important;
+  border-radius: 16px !important;
+}
+
 .login-texto {
   display: block;
   color: #de86dd !important;
