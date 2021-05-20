@@ -67,12 +67,11 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
             <div class="form-group row">
                 <div class="form-group col-4">
                     <label class="">Fotos da Mídia<span class="text-danger">*</span></label>
-                    <div class="dropzone dropzone-default dropzone-primary" id="dropzone" style="height: 90%;">
-                        <div class="dropzone-msg dz-message needsclick">
-                            <h3 class="dropzone-msg-title">Escolha boas fotos</h3>
-                            <span class="dropzone-msg-desc">Faça upload de até 5 arquivos</span>
-                        </div>
+                    <form class="dropzone" id="dropzone" style="height: 90%;">
+                    <div class="fallback">
+                        <input name="fileToUpload" type="file" multiple />
                     </div>
+                    </form>
                 </div>
                 <div class="form-group col-4"> 
                     <div class="form-group ">
