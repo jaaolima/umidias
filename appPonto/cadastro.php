@@ -65,21 +65,20 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div>
             </div>
             <div class="form-group row">
-              <div class="form-group col-4">
-                <label class="">Multiple File Upload</label>
-                <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_2"></div>
-                  <div class="dropzone-msg dz-message needsclick">
-                    <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
-                    <span class="dropzone-msg-desc">Upload up to 10 files</span>
-                  </div>
+                <div class="form-group col-4">
+                    <label class="">Multiple File Upload</label>
+                    <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_2"></div>
+                    <div class="dropzone-msg dz-message needsclick">
+                        <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
+                        <span class="dropzone-msg-desc">Upload up to 10 files</span>
+                    </div>
                 </div>
-              </div>
-              <div class="form-group col-4"> 
-                <div class="form-group ">
-                  <p>Clique duas vezes no mapa para marcar a localização do ponto</p>
-                  <div id="map"></div>
+                <div class="form-group col-4"> 
+                    <div class="form-group ">
+                        <p>Clique duas vezes no mapa para marcar a localização do ponto</p>
+                        <div id="map"></div>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="form-group row"> 
                 <div class="form-group col-md-4">
