@@ -101,7 +101,7 @@
 							where id_midia=:id_midia";
 				
 				$stmt = $con->prepare($select); 
-				$params = array(':id_midia' => $id_midia)
+				$params = array(':id_midia' => $id_midia);
 				
 				$stmt->execute($params);
 
