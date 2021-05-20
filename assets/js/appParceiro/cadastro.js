@@ -267,11 +267,7 @@ function validar()
 }
 function validarCNPJ(cnpj, regime) {
 
-	if (regime === "CPF")
-	{
-		return true;		
-	}
-	else{
+	if (regime != "CPF"){
 
 		cnpj = cnpj.replace(/[^\d]+/g,'');
 		if (cnpj.length != 14)
@@ -342,6 +338,11 @@ function validarCNPJ(cnpj, regime) {
 			
 		return true;
 	}	
+	
+	else
+	{
+		return true;		
+	}
 }
 function validarCPF(cpf, regime) {	
 	

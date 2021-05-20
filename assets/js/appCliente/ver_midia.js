@@ -21,6 +21,7 @@ var DatatablesBasicBasic = function() {
 				'lengthMenu': 'Mostrar _MENU_',
 			},
 			"oLanguage": {
+			    "sSearch": "<span>Pesquisar:</span> _INPUT_",
 			    "sLengthMenu": "<span>Mostrar:</span> _MENU_",
 			    "sInfo": "<span>Mostrando </span>_START_ até _END_ de _TOTAL_",
 			    "sZeroRecords": "Não existem dados cadastrados",

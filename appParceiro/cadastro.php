@@ -4,7 +4,7 @@
 	error_reporting(E_ALL);
     require_once("../Classes/Parceiro.php");
 
-    $parceiro = new Parceiro();
+    $parceiro = new Parceiro(); 
   
 
 	$optionsUF = $parceiro->listaroptionsUF(null);
