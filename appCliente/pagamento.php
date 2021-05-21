@@ -73,7 +73,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_pix" style="display: none;">
                                 <div class="my-6 mx-6">
-                                    <h3>Pagamento em pix</h3>
+                                    <h3>Pagamento em pix:</h3>
                                 </div>
                             </div>
 
