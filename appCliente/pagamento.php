@@ -27,8 +27,8 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="d-flex flex-row flex-column-fluid page">
 				<!--begin::Wrapper-->
 				<div class="d-flex flex-column flex-row-fluid wrapper " id="kt_wrapper">
-					<div class="row">
-                        <div class="col-8">
+                    <div class="col-8">
+                        <div class="row">
                             <div class="card card-custom card-stretch gutter-b box-shadow">
                                 <div class="my-6 mx-6">
                                     <h3>Método de pagamento:</h3>
@@ -54,9 +54,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <label for="pix">Pix</label>                         
                                     </div>
                                 </div>
-                            </div>  
-                        </div>
-                        <div class="col-4">
+                            </div> 
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="row">
                             <div class="card card-custom card-stretch gutter-b box-shadow">
                                 <div class="my-6 mx-6">
                                     <h3>Revisão:</h3>
@@ -91,7 +93,6 @@ License: You must have a valid license purchased only from themeforest(the above
 
                             </div>
                         </div>
-                        
                     </div>
 				</div>
 				<!--end::Wrapper-->
