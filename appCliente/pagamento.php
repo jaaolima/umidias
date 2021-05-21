@@ -29,7 +29,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="d-flex flex-column flex-row-fluid wrapper " id="kt_wrapper">
 					<div class="row">
                         <div class="col-8">
-                            <div class="card card-custom card-stretch gutter-b box-shadow">
+                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto">
                                 <div class="my-6 mx-6">
                                     <h3>Método de pagamento:</h3>
                                 </div>
@@ -80,12 +80,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <span>01/01/1970 até 01/01/1970</span>
                                     </div>
                                     <div class="my-12">
-                                        <h4 class="texto-negrito">Valor Total </h4>
-                                        <span style="color: green;">R$ 00.00</span>
-                                    </div>
-                                    <div class="my-12">
                                         <h4 class="texto-negrito">Material </h4>
                                         <span>Teste</span>
+                                    </div>
+                                    <div class="my-12">
+                                        <h4 class="texto-negrito">Valor Total </h4>
+                                        <span style="color: green;">R$ 00.00</span>
                                     </div>
                                 </div>
 
@@ -99,7 +99,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--end::Page-->
 		</div>
 		<script src="assets/js/scripts.bundle.js"></script>
-		<script src="assets/js/appCliente/ver_midia.js"></script>
+		<script src="assets/js/appCliente/pagamento.js"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->

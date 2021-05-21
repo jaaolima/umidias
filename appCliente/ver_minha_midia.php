@@ -51,6 +51,10 @@ License: You must have a valid license purchased only from themeforest(the above
 				width: 100%;
 				height: 500px;
 			}
+			#foto {
+				width: 100%;
+				height: 500px;
+			}
 			
 		</style>
 	</head>
@@ -67,6 +71,9 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="form-group row"> 
 						<div class="form-group col-md-12">
 							<div id="map" class="rounded"></div>
+							<img id="foto" class="rounded img-fluid d-none" src="<?php echo $dados["ds_foto"];?>"></img>
+							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 220px;" id="ver_foto">ver fotos</button>
+							<button class="btn btn-mapa-active position-absolute" style="top: 10px;right: 80px;" id="ver_mapa">ver localização</button>
 						</div>
 					</div>
 					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
@@ -82,7 +89,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="content flex-column-fluid pt-0" id="kt_content">
 								
 								<!--begin::Row-->
-								<div class="row">
+								<div class="row"> 
 									<div class="col-8">
                                         <div class="my-12">
                                             <h1 class="h1-titulo"><?php echo $dados["ds_local"]; ?></h1>
@@ -158,6 +165,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/plugins/global/plugins.bundle.js"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
+		<script src="assets/js/appCliente/ver_minha_midia.js"></script>
 		<script>
 			// The following example creates complex markers to indicate beaches near
 		// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
