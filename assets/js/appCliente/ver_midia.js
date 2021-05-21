@@ -143,7 +143,7 @@ function validarAlugar(id_midia){
 		}
 	}
 	if(id_midia == 1){
-		if($("#bisemana:checked").val() == "")
+		if($("input[type='checkbox']").val() == "")
 		{
 			$("#bisemana").focus();
 			swal.fire("Erro", "Selecione um bisemana", "error");
