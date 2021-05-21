@@ -27,74 +27,71 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="d-flex flex-row flex-column-fluid page">
 				<!--begin::Wrapper-->
 				<div class="d-flex flex-column flex-row-fluid wrapper " id="kt_wrapper">
-                    <div class="row">
+					<div class="row">
                         <div class="col-8">
-                            <div class="row">
-                                <div class="card card-custom card-stretch gutter-b box-shadow">
-                                    <div class="my-6 mx-6">
-                                        <h3>Método de pagamento:</h3>
-                                    </div>
-                                    <div class="my-6 mx-6">
-                                        <div class="my-6">
-                                            <input type="radio" id="boleto_parcelado" name="metodo">
-                                            <label for="boleto_parcelado">Boleto Parcelado</label>
-                                        </div>
-                                        <div class="separator separator-solid"></div>
-                                        <div class="my-6">
-                                            <input type="radio" id="boleto" name="metodo">
-                                            <label for="boleto">Boleto</label>                                      
-                                        </div >
-                                        <div class="separator separator-solid"></div>
-                                        <div class="my-6">
-                                            <input type="radio" id="credito" name="metodo">
-                                            <label for="credito">Cartão de crédito</label>                                     
-                                        </div>
-                                        <div class="separator separator-solid"></div>
-                                        <div class="my-6">
-                                            <input type="radio" id="pix" name="metodo">
-                                            <label for="pix">Pix</label>                         
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div> 
-                        </div>
-                        <div class="col-4">
-                            <div class="row">
-                                <div class="card card-custom card-stretch gutter-b box-shadow">
-                                    <div class="my-6 mx-6">
-                                        <h3>Revisão:</h3>
+                            <div class="card card-custom card-stretch gutter-b box-shadow">
+                                <div class="my-6 mx-6">
+                                    <h3>Método de pagamento:</h3>
+                                </div>
+                                <div class="my-6 mx-6">
+                                    <div class="my-6">
+                                        <input type="radio" id="boleto_parcelado" name="metodo">
+                                        <label for="boleto_parcelado">Boleto Parcelado</label>
                                     </div>
                                     <div class="separator separator-solid"></div>
-                                    <div class="my-6 mx-6 ">
-                                        <div class="mb-12">
-                                            <h4 class="texto-negrito">Local </h4>
-                                            <span>Teste</span>
-                                        </div>
-                                        <div class="my-12">
-                                            <h4 class="texto-negrito">Latitude Longitude</h4>
-                                            <span>Teste</span>
-                                        </div>
-                                        <div class="my-12">
-                                            <h4 class="texto-negrito">Tipo</h4>
-                                            <span>Teste</span>
-                                        </div>
-                                        <div class="my-12">
-                                            <h4 class="texto-negrito">Período</h4>
-                                            <span>01/01/1970 até 01/01/1970</span>
-                                        </div>
-                                        <div class="my-12">
-                                            <h4 class="texto-negrito">Valor Total </h4>
-                                            <span style="color: green;">R$ 00.00</span>
-                                        </div>
-                                        <div class="my-12">
-                                            <h4 class="texto-negrito">Material </h4>
-                                            <span>Teste</span>
-                                        </div>
+                                    <div class="my-6">
+                                        <input type="radio" id="boleto" name="metodo">
+                                        <label for="boleto">Boleto</label>                                      
+                                    </div >
+                                    <div class="separator separator-solid"></div>
+                                    <div class="my-6">
+                                        <input type="radio" id="credito" name="metodo">
+                                        <label for="credito">Cartão de crédito</label>                                     
                                     </div>
-
+                                    <div class="separator separator-solid"></div>
+                                    <div class="my-6">
+                                        <input type="radio" id="pix" name="metodo">
+                                        <label for="pix">Pix</label>                         
+                                    </div>
                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col-4">
+                            <div class="card card-custom card-stretch gutter-b box-shadow">
+                                <div class="my-6 mx-6">
+                                    <h3>Revisão:</h3>
+                                </div>
+                                <div class="separator separator-solid"></div>
+                                <div class="my-6 mx-6 ">
+                                    <div class="mb-12">
+                                        <h4 class="texto-negrito">Local </h4>
+                                        <span>Teste</span>
+                                    </div>
+                                    <div class="my-12">
+                                        <h4 class="texto-negrito">Latitude Longitude</h4>
+                                        <span>Teste</span>
+                                    </div>
+                                    <div class="my-12">
+                                        <h4 class="texto-negrito">Tipo</h4>
+                                        <span>Teste</span>
+                                    </div>
+                                    <div class="my-12">
+                                        <h4 class="texto-negrito">Período</h4>
+                                        <span>01/01/1970 até 01/01/1970</span>
+                                    </div>
+                                    <div class="my-12">
+                                        <h4 class="texto-negrito">Valor Total </h4>
+                                        <span style="color: green;">R$ 00.00</span>
+                                    </div>
+                                    <div class="my-12">
+                                        <h4 class="texto-negrito">Material </h4>
+                                        <span>Teste</span>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
+                        
                     </div>
 				</div>
 				<!--end::Wrapper-->
