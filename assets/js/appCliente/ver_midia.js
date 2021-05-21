@@ -92,7 +92,8 @@ $("#alugar").on("click", function(e){
 		, type: 'post'
 		, success: function(html) {
 			$("#alugar_midia").html(html);
-			$("#alugar_midia").slideDown(); 
+			$("#alugar_midia").slideDown();
+			$("#ver_midia").hide();
 		}
 		, error: function (data) {
 			$("#alugar_midia").slideUp();
