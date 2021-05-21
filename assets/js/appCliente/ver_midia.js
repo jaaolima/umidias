@@ -104,13 +104,10 @@ $(document).ready(function() {
 			
 		if(validarDetalhe())
 		{
-			$.ajax({
-		        url: 'appCliente/pagamento.php'
-				, data: $("#form_usuario").serialize()
-		        , type: 'post'
-
-		    });		
-			/*redirectTo("appCliente/pagamento.php");	*/
+			var id_ponto = $("#id_ponto").val();
+			var dt_inicial = $("#dt_inicial").val();
+			var ds_arte = $('input[type=file]').val()
+			redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&ds_arte="+ds_arte);	
 		}	
 	});
 

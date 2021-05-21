@@ -4,7 +4,7 @@
 	error_reporting(E_ALL);
 	session_start();
 
-
+    $id_ponto = $_GET["id_ponto"];
 ?>
 <!DOCTYPE html>
 <!--
