@@ -95,11 +95,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Latitude Longitude</h4>
-                                        <span>Teste</span>
+                                        <span><?php echo $dados["ds_latitude"]." ".$dados["ds_longitude"]; ?></span>
                                     </div>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Tipo</h4>
-                                        <span>Teste</span>
+                                        <span><?php echo $dados["ds_tipo"]?></span>
                                     </div>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Período</h4>
@@ -107,11 +107,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Material </h4>
-                                        <span>Teste</span>
+                                        <span>Lona</span>
                                     </div>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Valor Total </h4>
-                                        <span style="color: green;">R$ 00.00</span>
+                                        <span style="color: green;"><?php $dados["nu_valor"];?></span>
                                     </div>
                                 </div>
 
