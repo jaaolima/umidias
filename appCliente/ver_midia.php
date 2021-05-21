@@ -271,7 +271,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<button id="alugar" class="btn btn-primary w-100">Alugar Mídia</button>
 											</div>
 										</div>
-										<div class="card card-custom card-stretch gutter-b box-shadow d-none" id="alugar_midia">
+										<div class="card card-custom card-stretch gutter-b box-shadow" id="alugar_midia" style="display: none;">
 											<div class="my-6 mx-6">
 												<h3 class="font-weight-bolder">Detalhes adicionais:</h3>
 											</div>
