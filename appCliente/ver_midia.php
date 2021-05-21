@@ -264,8 +264,6 @@ License: You must have a valid license purchased only from themeforest(the above
 													<h3 class="font-weight-bolder">Total</h3>
 													<h2 class="font-weight-bolder"><?php echo $dados["nu_valor"] + ($dados["nu_valor"] * 0.2) ;?></h2>
 												</div>
-												<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
-												<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
 											</form>
 											<div class="my-6 mx-6">
 												<button id="alugar" class="btn btn-primary w-100">Alugar Mídia</button>
@@ -279,7 +277,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<form class="my-6 mx-6" id="form_detalhe">
 												<div class="form-group row"> 
 													<?php if($id_midia == 1) : ?>
-													<div class="col-12">
+													<div class="form-group">
 														<label>Tipo de material</label>
 														<select name="id_material" id="id_material" class="form-control">
 															<option value="">Selecione...</option>
@@ -288,8 +286,10 @@ License: You must have a valid license purchased only from themeforest(the above
 															?>
 														</select>
 													</div>
+												</div>
+												<div class="form-group row"> 
 													<?php endif ;?>
-													<div class="col-12">
+													<div class="form-group">
 														<label>Adicione sua Arte</label>
 														<input type="file" class="form-control" name="ds_arte" id="ds_arte">
 														<span class="texto-chumbo">A arte deve ter escala de 9,0 x 3,60</span>

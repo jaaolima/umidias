@@ -85,14 +85,64 @@ $(document).ready(function() {
 });
 
 $("#alugar").on("click", function(e){
-	$('#alugar_midia').show();
-	$('#ver_midia').hide();
-		
+	var id_midia = $("#id_midia").val();
+	if(validar(id_midia)){
+		$('#alugar_midia').show();
+		$('#ver_midia').hide();
+	}
+	
 });
 
 
 $("#voltar").on("click", function(e){
+
 	$('#ver_midia').show();
 	$('#alugar_midia').hide();
 		
 });
+
+function validar(id_midia){
+	if(id_midia == 2){
+		if($("#dt_inicial").val() == "")
+		{
+			$("#dt_inicial").focus();
+			swal.fire("Erro", "Adicione uma data Inicial", "error");
+			$("#dt_inicial").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#dt_inicial").removeClass("is-invalid");	
+			$("#dt_inicial").addClass("is-valid");
+		}
+		if($("#mes option:selected").val() == "")
+		{
+			$("#mes").focus();
+			swal.fire("Erro", "Selecione a quantidade de meses", "error");
+			$("#mes").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#mes").removeClass("is-invalid");	
+			$("#mes").addClass("is-valid");
+		}
+	}
+	if($id_midia == 1){
+		if($("#bisemana checked").val() == "")
+		{
+			$("#bisemana").focus();
+			swal.fire("Erro", "Selecione um bisemana", "error");
+			$("#bisemana").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#bisemana").removeClass("is-invalid");	
+			$("#bisemana").addClass("is-valid");
+		}
+	}
+
+	return true;
+	
+}
