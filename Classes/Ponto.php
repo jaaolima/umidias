@@ -219,7 +219,7 @@
 				
 				
 				$select = "SELECT 
-							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, ds_tipo, st_status, ds_observacao, ds_local, ds_tamanho, nu_valor
+							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, ds_tipo, st_status, ds_observacao, ds_local, ds_tamanho, nu_valor, id_midia
 						FROM tb_ponto p
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
 						WHERE id_ponto = :id_ponto";

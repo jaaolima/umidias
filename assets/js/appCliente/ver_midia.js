@@ -104,10 +104,22 @@ $(document).ready(function() {
 			
 		if(validarDetalhe())
 		{
-			var id_ponto = $("#id_ponto").val();
-			var dt_inicial = $("#dt_inicial").val();
-			var ds_arte = $('input[type=file]').val()
-			redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&ds_arte="+ds_arte);	
+			var id_midia = $("#id_midia").val();
+			if(id_midia == 2){
+				var id_ponto = $("#id_ponto").val();
+				var dt_inicial = $("#dt_inicial").val();
+				var mes = $("#mes").val();
+				var ds_arte = $('input[type=file]').val()
+				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&mes="+mes+"&ds_arte="+ds_arte);	
+			}
+			if(id_midia == 1){
+				var id_ponto = $("#id_ponto").val();
+				var bisemana = $("#bisemana").val();
+				var id_material = $("#id_material").val();
+				var ds_arte = $('input[type=file]').val();
+				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
+			}
+			
 		}	
 	});
 

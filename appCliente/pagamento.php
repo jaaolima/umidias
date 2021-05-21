@@ -9,6 +9,15 @@
 
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
+    $id_midia = $dados["id_midia"];
+    if($id_midia == 1){
+        $bisemana = $_POST["bisemana"];
+        $id_material = $_POST["id_material"];
+    }
+    if($id_midia == 2){
+        $dt_inicial = $_POST["dt_inicial"];
+        $mes = $_POST["mes"];
+    }
 ?>
 <!DOCTYPE html>
 <!--
@@ -109,6 +118,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <h4 class="texto-negrito">Material </h4>
                                         <span>Lona</span>
                                     </div>
+                                    <?php if($id_midia == 1) : ?>
+                                    <div class="my-12">
+                                        <h4 class="texto-negrito">Material </h4>
+                                        <span>Lona</span>
+                                    </div>
+                                    <?php endif; ?>
+                                    <?php if($id_midia == 1) : ?>
+                                    <div class="my-12">
+                                        <h4 class="texto-negrito">Material </h4>
+                                        <span><?php echo $id_midia; ?></span>
+                                    </div>
+                                    <?php endif; ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Valor Total </h4>
                                         <span style="color: green;"><?php echo $dados["nu_valor"];?></span>
