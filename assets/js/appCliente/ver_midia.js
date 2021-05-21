@@ -85,20 +85,14 @@ $(document).ready(function() {
 });
 
 $("#alugar").on("click", function(e){
-	$.ajax({
-		url: 'appCliente/alugar_midia.php'
-		, data: $("#form_alugar").serialize()
-		, type: 'post'
-		, success: function(html) {
-			$("#alugar_midia").html(html);
-			$("#alugar_midia").slideDown();
-			$("#ver_midia").hide();
-		}
-		, error: function (data) {
-			$("#alugar_midia").slideUp();
-			swal("Erro", data.responseText, "error");
-		}
-	});		
+	$('#alugar_midia').show();
+	$('#ver_midia').hide();
+		
+});
 
-			
+
+$("#voltar").on("click", function(e){
+	$('#ver_midia').show();
+	$('#alugar_midia').hide();
+		
 });

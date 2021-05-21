@@ -5,14 +5,17 @@
 	session_start();
 	require_once("../Classes/Ponto.php");
 	require_once("../Classes/Bisemana.php");
+	require_once("../Classes/Material.php");
 
 	$id_ponto = $_GET["id_ponto"]; 
 	$id_midia = $_GET["id_midia"]; 
-	
+
+	$material = new material();
 	$bisemana = new Bisemana();
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
     $retorno = $bisemana->listarBisemana();
+    $optionsMaterial = $material->listarOptionsMaterial();
 
 
 ?>
@@ -114,8 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<div class="col-5">
-										<div id="alugar_midia"></div>
+									<div class="col-5">										
 										<div class="card card-custom card-stretch gutter-b box-shadow" id="ver_midia">
 											<form id="form_alugar">
 												<div class="my-6 mx-6 d-flex">	
@@ -267,6 +269,39 @@ License: You must have a valid license purchased only from themeforest(the above
 											</form>
 											<div class="my-6 mx-6">
 												<button id="alugar" class="btn btn-primary w-100">Alugar Mídia</button>
+											</div>
+										</div>
+										<div class="card card-custom card-stretch gutter-b box-shadow d-none" id="alugar_midia">
+											<div class="my-6 mx-6">
+												<h3 class="font-weight-bolder">Detalhes adicionais:</h3>
+											</div>
+											<div class="separator separator-solid"></div>
+											<form class="my-6 mx-6" id="form_detalhe">
+												<div class="form-group row"> 
+													<?php if($id_midia == 1) : ?>
+													<div class="col-12">
+														<label>Tipo de material</label>
+														<select name="id_material" id="id_material" class="form-control">
+															<option value="">Selecione...</option>
+															<?php 
+																echo $optionsMaterial;
+															?>
+														</select>
+													</div>
+													<?php endif ;?>
+													<div class="col-12">
+														<label>Adicione sua Arte</label>
+														<input type="file" class="form-control" name="ds_arte" id="ds_arte">
+														<span class="texto-chumbo">A arte deve ter escala de 9,0 x 3,60</span>
+													</div>
+												</div>
+												<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
+												<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
+											</form>
+											<div class="separator separator-solid"></div>
+											<div class="my-6 mx-6 d-flex">
+												<button class="btn btn-outline-primary w-100 mr-4" id="voltar">Voltar</button>
+												<button class="btn btn-primary w-100" id="pagamento">Ir para método de Pagamento</button>
 											</div>
 										</div>
 									</div>
