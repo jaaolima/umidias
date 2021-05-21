@@ -15,8 +15,8 @@
         $id_material = $_GET["id_material"];
     }
     if($id_midia == 2){
-        $dt_inicial = $_POST["dt_inicial"];
-        $mes = $_POST["mes"];
+        $dt_inicial = $_GET["dt_inicial"];
+        $mes = $_GET["mes"];
     }
 ?>
 <!DOCTYPE html>
