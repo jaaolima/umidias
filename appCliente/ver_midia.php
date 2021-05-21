@@ -261,7 +261,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<h2 class="font-weight-bolder"><?php echo $dados["nu_valor"] + ($dados["nu_valor"] * 0.2) ;?></h2>
 											</div>
 											<div class="my-6 mx-6">
-												<button class="btn btn-primary w-100">Alugar Mídia</button>
+												<button id="alugar" class="btn btn-primary w-100">Alugar Mídia</button>
 											</div>
 										</div>
 									</div>
