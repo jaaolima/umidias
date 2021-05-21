@@ -115,7 +115,8 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 									<div class="col-5">
-										<div class="card card-custom card-stretch gutter-b box-shadow">
+										<div id="alugar_midia"></div>
+										<div class="card card-custom card-stretch gutter-b box-shadow" id="ver_midia">
 											<div class="my-6 mx-6 d-flex">	
 												<div>
 													<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,7 +150,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<h3 class="font-weight-bolder">Aluguel</h3>
 											</div>
 											<?php if($id_midia == 1) : ?>
-											<div class="d-flex my-6 mx-6">
+											<form class="d-flex my-6 mx-6" id="form_alugar">
 												<table  class="table table-hover" id="table_bisemana">
 													<thead>
 														<tr>
@@ -180,10 +181,10 @@ License: You must have a valid license purchased only from themeforest(the above
 														?>
 													</tbody>
 												</table>												
-											</div>
+											</form>
 											<?php endif ;?>
 											<?php if($id_midia == 2) : ?>
-											<div class="d-flex my-6 mx-6">
+											<form class="d-flex my-6 mx-6" id="form_alugar">
 												<div class="col-4">
 													<label >Data de Inicio:<span class="text-danger">*</span></label>
 													<input type="date" class="form-control" name="dt_inicial" id="dt_inicial">
@@ -206,7 +207,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<option value="12">12 meses</option>
 													</select>
 												</div>
-											</div>
+											</form>
 											<?php endif ;?>
 											<div class="separator separator-solid"></div>
 											<div class="my-6 mx-6">
