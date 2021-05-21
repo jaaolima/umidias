@@ -62,6 +62,7 @@ var DatatablesBasicBasic = function() {
 jQuery(document).ready(function() {
 	DatatablesBasicBasic.init();
 });
+
 $(document).ready(function() {
 	    
 
@@ -73,6 +74,7 @@ $(document).ready(function() {
 		$('#ver_mapa').removeClass("btn-mapa-active");
 		$('#ver_mapa').addClass("btn-mapa");
     }); 
+	
 	$("#ver_mapa").on("click", function(){
 		$('#map').removeClass("d-none");
 		$('#foto').addClass("d-none");
@@ -82,41 +84,45 @@ $(document).ready(function() {
 		$('#ver_foto').addClass("btn-mapa");
     }); 
 
-});
+	$("#alugar").on("click", function(e){
+		var id_midia = $("#id_midia").val();
+		if(validar(id_midia)){
+			$('#alugar_midia').show();
+			$('#ver_midia').hide();
+		}
+		
+	});
 
-$("#alugar").on("click", function(e){
-	var id_midia = $("#id_midia").val();
-	if(validar(id_midia)){
-		$('#alugar_midia').show();
-		$('#ver_midia').hide();
-	}
+	$("#voltar").on("click", function(e){
+
+		$('#ver_midia').show();
+		$('#alugar_midia').hide();
+			
+	});
 	
+	$("#pagamento").on("click", function(e){
+			
+		if(validarDetalhe() )
+		{ 	
+			var form = $("#form_alugar").get(0); 
+			$.ajax({
+				url: 'appCliente/pagamento.php'
+				, data: $("#form_alugar").serialize()
+				, type: 'post'
+				, data: new FormData(form)
+				, mimeType: 'multipart/form-data'
+				, processData: false
+				, contentType: false
+			});		
+		}	
+	});
+
 });
 
 
-$("#voltar").on("click", function(e){
 
-	$('#ver_midia').show();
-	$('#alugar_midia').hide();
-		
-});
 
-$("#pagamento").on("click", function(e){
-		
-	if(validarDetalhe() )
-	{ 	
-		var form = $("#form_alugar").get(0); 
-		$.ajax({
-			url: 'appCliente/pagamento.php'
-			, data: $("#form_alugar").serialize()
-			, type: 'post'
-			, data: new FormData(form)
-			, mimeType: 'multipart/form-data'
-			, processData: false
-			, contentType: false
-		});		
-	}	
-});
+
 
 function validar(id_midia){
 	if(id_midia == 2){
