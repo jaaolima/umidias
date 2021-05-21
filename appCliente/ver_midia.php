@@ -180,7 +180,8 @@ License: You must have a valid license purchased only from themeforest(the above
 															}
 														?>
 													</tbody>
-												</table>												
+												</table>	
+												<input type="hidden" value="<?php echo $id_midia; ?>">											
 											</form>
 											<?php endif ;?>
 											<?php if($id_midia == 2) : ?>
@@ -207,6 +208,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<option value="12">12 meses</option>
 													</select>
 												</div>
+												<input type="hidden" value="<?php echo $id_midia; ?>">	
 											</form>
 											<?php endif ;?>
 											<div class="separator separator-solid"></div>

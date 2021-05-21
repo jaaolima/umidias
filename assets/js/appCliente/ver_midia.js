@@ -85,7 +85,6 @@ $(document).ready(function() {
 });
 
 $("#alugar").on("click", function(e){
-
 	$.ajax({
 		url: 'appCliente/alugar_midia.php'
 		, data: $("#form_alugar").serialize()
