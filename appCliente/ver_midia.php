@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 									<div class="col-5">	
-										<div >								
+										<form id="form_alugar">								
 											<div class="card card-custom card-stretch gutter-b box-shadow" id="ver_midia">
 												<div class="my-6 mx-6 d-flex">	
 													<div>
@@ -265,7 +265,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<h2 class="font-weight-bolder"><?php echo $dados["nu_valor"] + ($dados["nu_valor"] * 0.2) ;?></h2>
 												</div>
 												<div class="my-6 mx-6">
-													<button id="alugar" class="btn btn-primary w-100">Alugar Mídia</button>
+													<button id="alugar" type="button"class="btn btn-primary w-100">Alugar Mídia</button>
 												</div>
 											</div>
 											<div class="card card-custom card-stretch gutter-b box-shadow" id="alugar_midia" style="display: none;">
@@ -299,11 +299,11 @@ License: You must have a valid license purchased only from themeforest(the above
 												</div>
 												<div class="separator separator-solid"></div>
 												<div class="my-6 mx-6 d-flex">
-													<button class="btn btn-outline-primary w-100 mr-4" id="voltar">Voltar</button>
-													<button class="btn btn-primary w-100" id="pagamento">Ir para método de Pagamento</button>
+													<button class="btn btn-outline-primary w-100 mr-4" type="button" id="voltar">Voltar</button>
+													<button class="btn btn-primary w-100" type="button" id="pagamento">Ir para método de Pagamento</button>
 												</div>
 											</div>
-										</div>
+										</form>
 									</div>
 
 								</div>

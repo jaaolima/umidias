@@ -100,7 +100,7 @@ $(document).ready(function() {
 			
 	});
 	
-	/*$("#pagamento").on("click", function(e){
+	$("#pagamento").on("click", function(e){
 			
 		if(validarDetalhe() )
 		{ 	
@@ -115,7 +115,7 @@ $(document).ready(function() {
 				, contentType: false
 			});		
 		}	
-	});*/
+	});
 
 });
 
