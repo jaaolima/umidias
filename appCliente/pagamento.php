@@ -35,23 +35,23 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="my-6 mx-6">
                                     <div class="my-6">
+                                        <input type="radio" id="boleto_parcelado" name="metodo">
                                         <label for="boleto_parcelado">Boleto Parcelado</label>
-                                        <input type="radio" id="metodo" name="boleto_parcelado">
                                     </div>
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
-                                        <label for="boleto">Boleto</label>
-                                        <input type="radio" id="metodo" name="boleto">
+                                        <input type="radio" id="boleto" name="metodo">
+                                        <label for="boleto">Boleto</label>                                      
                                     </div >
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
-                                        <label for="credito">Cartão de crédito</label>
-                                        <input type="radio" id="metodo" name="credito">
+                                        <input type="radio" id="credito" name="metodo">
+                                        <label for="credito">Cartão de crédito</label>                                     
                                     </div>
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
-                                        <label for="pix">Pix</label>
-                                        <input type="radio" id="metodo" name="pix">
+                                        <input type="radio" id="pix" name="metodo">
+                                        <label for="pix">Pix</label>                         
                                     </div>
                                 </div>
                             </div>  
