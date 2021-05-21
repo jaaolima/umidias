@@ -275,7 +275,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<div class="separator separator-solid"></div>
 											<form class="my-6 mx-6" id="form_detalhe">
-												<div class="form-group row"> 
+												<div class="form-group"> 
 													<?php if($id_midia == 1) : ?>
 													<div class="form-group">
 														<label>Tipo de material</label>
@@ -287,7 +287,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														</select>
 													</div>
 												</div>
-												<div class="form-group row"> 
+												<div class="form-group"> 
 													<?php endif ;?>
 													<div class="form-group">
 														<label>Adicione sua Arte</label>
