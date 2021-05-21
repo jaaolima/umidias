@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	    
 
-	$("#pagamento").on("click", function(e){ 
+	/*$("#pagamento").on("click", function(e){ 
 		if(validar())
 		{ 
 			$.ajax({
 		        url: 'appCliente/gravar_alterar_cliente.php'
-				, data: $("#form_usuario").serialize()
+				, data: $("#form_detalhe").serialize()
 		        , type: 'post'
 		    });		
 		}	
@@ -15,7 +15,7 @@ $(document).ready(function() {
 		$('#form_detalhe').trigger("reset");
         var id_ponto = $("#id_ponto").val();
         redirectTo(`appCliente/ver_midia?id_ponto=`+id_ponto+`.php`);
-    }); 
+    }); */
 });
 
 function validar()
