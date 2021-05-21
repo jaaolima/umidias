@@ -86,7 +86,7 @@ $(document).ready(function() {
 
 	$("#alugar").on("click", function(e){
 		var id_midia = $("#id_midia").val();
-		if(validar(id_midia)){
+		if(validarAlugar(id_midia)){
 			$('#alugar_midia').show();
 			$('#ver_midia').hide();
 		}
@@ -124,7 +124,7 @@ $(document).ready(function() {
 
 
 
-function validar(id_midia){
+function validarAlugar(id_midia){
 	if(id_midia == 2){
 		if($("#dt_inicial").val() == "")
 		{

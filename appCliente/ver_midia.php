@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 									<div class="col-5">	
-										<form id="form_alugar">								
+										<div >								
 											<div class="card card-custom card-stretch gutter-b box-shadow" id="ver_midia">
 												<div class="my-6 mx-6 d-flex">	
 													<div>
@@ -303,7 +303,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<button class="btn btn-primary w-100" id="pagamento">Ir para método de Pagamento</button>
 												</div>
 											</div>
-										</form>
+										</div>
 									</div>
 
 								</div>
