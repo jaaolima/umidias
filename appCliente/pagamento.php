@@ -3,8 +3,12 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 	session_start();
+    require_once("../Classes/Ponto.php");
 
     $id_ponto = $_GET["id_ponto"];
+
+	$ponto = new Ponto();
+	$dados = $ponto->BuscarDadosPonto($id_ponto);
 ?>
 <!DOCTYPE html>
 <!--
@@ -87,7 +91,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="my-6 mx-6 ">
                                     <div class="mb-12">
                                         <h4 class="texto-negrito">Local </h4>
-                                        <span>Teste</span>
+                                        <span><?php echo $dados["ds_local"]; ?></span>
                                     </div>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Latitude Longitude</h4>
