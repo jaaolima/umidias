@@ -33,6 +33,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="my-6 mx-6">
                                     <h3>Método de pagamento:</h3>
                                 </div>
+                                <div class="separator separator-solid"></div>
                                 <div class="my-6 mx-6">
                                     <div class="my-6">
                                         <input type="radio" id="boleto_parcelado" name="metodo">
@@ -54,7 +55,28 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <label for="pix">Pix</label>                         
                                     </div>
                                 </div>
-                            </div>  
+                            </div> 
+                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto" id="card_boleto_parcelado" style="display: none;">
+                                <div class="my-6 mx-6">
+                                    <h3>Pagamento em boleto parcelado:</h3>
+                                </div>
+                            </div>
+                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto" id="card_boleto" style="display: none;">
+                                <div class="my-6 mx-6">
+                                    <h3>Pagamento em boleto:</h3>
+                                </div>
+                            </div>
+                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto" id="card_credito" style="display: none;">
+                                <div class="my-6 mx-6">
+                                    <h3>Pagamento em cartão de credito:</h3>
+                                </div>
+                            </div>
+                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto" id="card_pix" style="display: none;">
+                                <div class="my-6 mx-6">
+                                    <h3>Pagamento em pix</h3>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="col-4">
                             <div class="card card-custom card-stretch gutter-b box-shadow">
