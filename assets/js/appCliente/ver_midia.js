@@ -74,7 +74,7 @@ $(document).ready(function() {
 		$('#ver_mapa').removeClass("btn-mapa-active");
 		$('#ver_mapa').addClass("btn-mapa");
     }); 
-	
+
 	$("#ver_mapa").on("click", function(){
 		$('#map').removeClass("d-none");
 		$('#foto').addClass("d-none");
@@ -164,10 +164,9 @@ function validar(id_midia){
 			$("#bisemana").removeClass("is-invalid");	
 			$("#bisemana").addClass("is-valid");
 		}
+		
 	}
-
-	return true;
-	
+	return true;	
 }
 function validarDetalhe(){
 	if(id_midia == 1){
