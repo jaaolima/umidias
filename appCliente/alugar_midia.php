@@ -18,34 +18,41 @@
     
     <div class="my-6 mx-6">
         <?php if($id_midia == 2) : ?>
-        <div class="form-group"> 
+        <div class="form-group row"> 
             <div class="col-6">
                 <label>Data Inicial</label>
-                <input type="date" value="" class="form-control">
+                <input type="date" value="<?php echo $_POST["dt_inicial"] ?>" class="form-control">
             </div>
+            <?php 
+                $dt_inicial = $_POST["dt_inicial"];
+                $mes = $_POST["mes"];
+            
+            
+            ?>
             <div class="col-6">
                 <label>Data Final</label>
                 <input type="date" value="" class="form-control">
             </div>
         </div>
-        <div class="form-group"> 
+        <div class="form-group row"> 
             <div class="col-6">
                 <label>Tipo de material</label>
                 <select name="" id="" class="form-control">
+                    <option value="">Selecione...</option>
                     <?php 
                         echo $optionsMaterial;
                     ?>
                 </select>
             </div>
         </div>
-        <div class="form-group"> 
+        <div class="form-group row"> 
             <div class="col-6">
                 <label>Adicione sua Arte</label>
                 <input type="file" class="form-control">
-
+                <span class="texto-chumbo">A arte deve ter escala de 9,0 x 3,60</span>
             </div>
         </div>
-        <?php endif ; ?>
+        <?php endif ;?>
     </div>
     <div class="separator separator-solid"></div>
     <div class="my-6 mx-6">
