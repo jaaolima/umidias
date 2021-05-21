@@ -14,7 +14,8 @@ $(document).ready(function() {
     $("#voltar").on("click", function(){
 		$('#form_detalhe').trigger("reset");
         var id_ponto = $("#id_ponto").val();
-        redirectTo("appCliente/ver_midia.php?id_ponto="+id_ponto);
+        var id_midia = $("#id_midia").val();
+        redirectTo("appCliente/ver_midia.php?id_ponto="+id_ponto+"&&id_midia="+id_midia);
     }); 
 });
 
