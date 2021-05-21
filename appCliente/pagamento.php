@@ -56,22 +56,22 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                 </div>
                             </div> 
-                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto" id="card_boleto_parcelado" style="display: none;">
+                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_boleto_parcelado" style="display: none;">
                                 <div class="my-6 mx-6">
                                     <h3>Pagamento em boleto parcelado:</h3>
                                 </div>
                             </div>
-                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto" id="card_boleto" style="display: none;">
+                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_boleto" style="display: none;">
                                 <div class="my-6 mx-6">
                                     <h3>Pagamento em boleto:</h3>
                                 </div>
                             </div>
-                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto" id="card_credito" style="display: none;">
+                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_credito" style="display: none;">
                                 <div class="my-6 mx-6">
                                     <h3>Pagamento em cartão de credito:</h3>
                                 </div>
                             </div>
-                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto" id="card_pix" style="display: none;">
+                            <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_pix" style="display: none;">
                                 <div class="my-6 mx-6">
                                     <h3>Pagamento em pix</h3>
                                 </div>
