@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	    
 
-	/*$("#pagamento").on("click", function(e){ 
+	$("#pagamento").on("click", function(e){ 
 		if(validar())
 		{ 
 			$.ajax({
@@ -14,8 +14,8 @@ $(document).ready(function() {
     $("#voltar").on("click", function(){
 		$('#form_detalhe').trigger("reset");
         var id_ponto = $("#id_ponto").val();
-        redirectTo(`appCliente/ver_midia?id_ponto=`+id_ponto+`.php`);
-    }); */
+        redirectTo("appCliente/ver_midia?id_ponto="+id_ponto+".php");
+    }); 
 });
 
 function validar()
