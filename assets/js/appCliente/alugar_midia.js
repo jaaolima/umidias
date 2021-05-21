@@ -30,7 +30,7 @@ function validar()
 	else
 	{
 		$("#ds_arte").removeClass("is-invalid");	
-		$("#ds_arte").addClass("is-valid");
+		$("#ds_arte").addClass("is-valid"); 
 	}
 
 	
