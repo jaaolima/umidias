@@ -11,8 +11,8 @@
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
     $id_midia = $dados["id_midia"];
     if($id_midia == 1){
-        $bisemana = $_POST["bisemana"];
-        $id_material = $_POST["id_material"];
+        $bisemana = $_GET["bisemana"];
+        $id_material = $_GET["id_material"];
     }
     if($id_midia == 2){
         $dt_inicial = $_POST["dt_inicial"];
@@ -114,11 +114,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <h4 class="texto-negrito">Período</h4>
                                         <span>01/01/1970 até 01/01/1970</span>
                                     </div>
-                                    <div class="my-12">
-                                        <h4 class="texto-negrito">Material </h4>
-                                        <span>Lona</span>
-                                    </div>
-                                    <?php if($id_midia == 1) : ?>
+                                    <?php if($id_midia == 2) : ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Material </h4>
                                         <span>Lona</span>
@@ -127,7 +123,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <?php if($id_midia == 1) : ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Material </h4>
-                                        <span><?php echo $id_midia; ?></span>
+                                        <span><?php echo $id_material; ?></span>
                                     </div>
                                     <?php endif; ?>
                                     <div class="my-12">
