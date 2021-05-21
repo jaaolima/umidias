@@ -18,7 +18,7 @@
         <h3 class="font-weight-bolder">Detalhes adicionais:</h3>
     </div>
     <div class="separator separator-solid"></div>
-    <form class="my-6 mx-6" id="form_alugar">
+    <form class="my-6 mx-6" id="form_detalhe">
         <div class="form-group row"> 
             <?php if($id_midia == 1) : ?>
             <div class="col-6">

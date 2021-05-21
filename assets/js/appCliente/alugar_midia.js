@@ -12,7 +12,7 @@ $(document).ready(function() {
 		}	
 	});
     $("#voltar").on("click", function(){
-		$('#form_alugar').trigger("reset");
+		$('#form_detalhe').trigger("reset");
         var id_ponto = $("#id_ponto").val();
         redirectTo(`appCliente/ver_midia?id_ponto=`+id_ponto+`.php`);
     }); 
