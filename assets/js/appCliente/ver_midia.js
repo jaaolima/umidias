@@ -103,17 +103,8 @@ $(document).ready(function() {
 	$("#pagamento").on("click", function(e){
 			
 		if(validarDetalhe() )
-		{ 	
-			var form = $("#form_alugar").get(0); 
-			$.ajax({
-				url: 'appCliente/pagamento.php'
-				, data: $("#form_alugar").serialize()
-				, type: 'post'
-				, data: new FormData(form)
-				, mimeType: 'multipart/form-data'
-				, processData: false
-				, contentType: false
-			});		
+		{
+			redirectTo("appCliente/pagamento.php");	
 		}	
 	});
 
