@@ -128,7 +128,7 @@ function validar(id_midia){
 			$("#mes").addClass("is-valid");
 		}
 	}
-	if($id_midia == 1){
+	if(id_midia == 1){
 		if($("#bisemana checked").val() == "")
 		{
 			$("#bisemana").focus();
