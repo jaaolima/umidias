@@ -102,9 +102,15 @@ $(document).ready(function() {
 	
 	$("#pagamento").on("click", function(e){
 			
-		if(validarDetalhe() )
+		if(validarDetalhe())
 		{
-			redirectTo("appCliente/pagamento.php");	
+			$.ajax({
+		        url: 'appCliente/pagamento.php'
+				, data: $("#form_usuario").serialize()
+		        , type: 'post'
+
+		    });		
+			/*redirectTo("appCliente/pagamento.php");	*/
 		}	
 	});
 
