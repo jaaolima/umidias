@@ -42,8 +42,8 @@
     </form>
     <div class="separator separator-solid"></div>
     <div class="my-6 mx-6 d-flex">
-        <button class="btn btn-primary w-100 mr-4" id="voltar">Voltar</button>
-        <button class="btn btn-outline-primary w-100" id="pagamento">Ir para método de Pagamento</button>
+        <button class="btn btn-outline-primary w-100 mr-4" id="voltar">Voltar</button>
+        <button class="btn btn-primary w-100" id="pagamento">Ir para método de Pagamento</button>
     </div>
 </div>
 <script src="assets/js/appCliente/alugar_midia.js"></script>
