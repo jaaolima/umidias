@@ -173,7 +173,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<td>".$dadosBisemana['id_bisemana']."</td>
 																		<td>".$dadosBisemana['ds_bisemana']."</td>
 																		<td>".$dt_inicial."</td>
-																		<td>".$dt_inicial."</td>
+																		<td>".$dt_final."</td>
 																		<td><input name='bisemana[]' id='bisemana' value='".$dadosBisemana['id_bisemana']."' type='checkbox'></td>
 																	</tr>";
 															}
