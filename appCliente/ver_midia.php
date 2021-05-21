@@ -117,7 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="col-5">
 										<div id="alugar_midia"></div>
 										<div class="card card-custom card-stretch gutter-b box-shadow" id="ver_midia">
-											<form action="" id="form_alugar">
+											<form id="form_alugar">
 												<div class="my-6 mx-6 d-flex">	
 													<div>
 														<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -262,12 +262,12 @@ License: You must have a valid license purchased only from themeforest(the above
 													<h3 class="font-weight-bolder">Total</h3>
 													<h2 class="font-weight-bolder"><?php echo $dados["nu_valor"] + ($dados["nu_valor"] * 0.2) ;?></h2>
 												</div>
-												<div class="my-6 mx-6">
-													<button id="alugar" class="btn btn-primary w-100">Alugar Mídia</button>
-												</div>
 												<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
 												<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
 											</form>
+											<div class="my-6 mx-6">
+												<button id="alugar" class="btn btn-primary w-100">Alugar Mídia</button>
+											</div>
 										</div>
 									</div>
 
