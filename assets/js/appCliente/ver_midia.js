@@ -101,6 +101,23 @@ $("#voltar").on("click", function(e){
 		
 });
 
+$("#pagamento").on("click", function(e){
+		
+	if(validarDetalhe() )
+	{ 	
+		var form = $("#form_alugar").get(0); 
+		$.ajax({
+			url: 'appCliente/pagamento.php'
+			, data: $("#form_alugar").serialize()
+			, type: 'post'
+			, data: new FormData(form)
+			, mimeType: 'multipart/form-data'
+			, processData: false
+			, contentType: false
+		});		
+	}	
+});
+
 function validar(id_midia){
 	if(id_midia == 2){
 		if($("#dt_inicial").val() == "")
@@ -145,4 +162,34 @@ function validar(id_midia){
 
 	return true;
 	
+}
+function validarDetalhe(){
+	if(id_midia == 1){
+		if($("#id_material option:selected").val() == "")
+		{
+			$("#id_material").focus();
+			swal.fire("Erro", "Selecione um material", "error");
+			$("#id_material").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#id_material").removeClass("is-invalid");	
+			$("#id_material").addClass("is-valid");
+		}
+		
+	}
+	if($("#ds_arte").val() == "")
+		{
+			$("#ds_arte").focus();
+			swal.fire("Erro", "Adicione uma arte", "error");
+			$("#ds_arte").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#ds_arte").removeClass("is-invalid");	
+			$("#ds_arte").addClass("is-valid");
+		}
+	return true;
 }

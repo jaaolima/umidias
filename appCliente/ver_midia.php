@@ -117,9 +117,9 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<div class="col-5">										
-										<div class="card card-custom card-stretch gutter-b box-shadow" id="ver_midia">
-											<form id="form_alugar">
+									<div class="col-5">	
+										<form id="form_alugar">								
+											<div class="card card-custom card-stretch gutter-b box-shadow" id="ver_midia">
 												<div class="my-6 mx-6 d-flex">	
 													<div>
 														<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -264,46 +264,46 @@ License: You must have a valid license purchased only from themeforest(the above
 													<h3 class="font-weight-bolder">Total</h3>
 													<h2 class="font-weight-bolder"><?php echo $dados["nu_valor"] + ($dados["nu_valor"] * 0.2) ;?></h2>
 												</div>
-											</form>
-											<div class="my-6 mx-6">
-												<button id="alugar" class="btn btn-primary w-100">Alugar Mídia</button>
-											</div>
-										</div>
-										<div class="card card-custom card-stretch gutter-b box-shadow" id="alugar_midia" style="display: none;">
-											<div class="my-6 mx-6">
-												<h3 class="font-weight-bolder">Detalhes adicionais:</h3>
-											</div>
-											<div class="separator separator-solid"></div>
-											<form class="my-6 mx-6" id="form_detalhe">
-												<div class="form-group"> 
-													<?php if($id_midia == 1) : ?>
-													<div class="form-group">
-														<label>Tipo de material</label>
-														<select name="id_material" id="id_material" class="form-control">
-															<option value="">Selecione...</option>
-															<?php 
-																echo $optionsMaterial;
-															?>
-														</select>
-													</div>
+												<div class="my-6 mx-6">
+													<button id="alugar" class="btn btn-primary w-100">Alugar Mídia</button>
 												</div>
-												<div class="form-group"> 
-													<?php endif ;?>
-													<div class="form-group">
-														<label>Adicione sua Arte</label>
-														<input type="file" class="form-control" name="ds_arte" id="ds_arte">
-														<span class="texto-chumbo">A arte deve ter escala de 9,0 x 3,60</span>
-													</div>
-												</div>
-												<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
-												<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
-											</form>
-											<div class="separator separator-solid"></div>
-											<div class="my-6 mx-6 d-flex">
-												<button class="btn btn-outline-primary w-100 mr-4" id="voltar">Voltar</button>
-												<button class="btn btn-primary w-100" id="pagamento">Ir para método de Pagamento</button>
 											</div>
-										</div>
+											<div class="card card-custom card-stretch gutter-b box-shadow" id="alugar_midia" style="display: none;">
+												<div class="my-6 mx-6">
+													<h3 class="font-weight-bolder">Detalhes adicionais:</h3>
+												</div>
+												<div class="separator separator-solid"></div>
+												<div class="my-6 mx-6" >
+													<div class="form-group"> 
+														<?php if($id_midia == 1) : ?>
+														<div class="form-group">
+															<label>Tipo de material</label>
+															<select name="id_material" id="id_material" class="form-control">
+																<option value="">Selecione...</option>
+																<?php 
+																	echo $optionsMaterial;
+																?>
+															</select>
+														</div>
+													</div>
+													<div class="form-group"> 
+														<?php endif ;?>
+														<div class="form-group">
+															<label>Adicione sua Arte</label>
+															<input type="file" class="form-control" name="ds_arte" id="ds_arte">
+															<span class="texto-chumbo">A arte deve ter escala de 9,0 x 3,60</span>
+														</div>
+													</div>
+													<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
+													<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
+												</div>
+												<div class="separator separator-solid"></div>
+												<div class="my-6 mx-6 d-flex">
+													<button class="btn btn-outline-primary w-100 mr-4" id="voltar">Voltar</button>
+													<button class="btn btn-primary w-100" id="pagamento">Ir para método de Pagamento</button>
+												</div>
+											</div>
+										</form>
 									</div>
 
 								</div>
