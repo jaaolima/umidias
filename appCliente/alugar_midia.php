@@ -21,7 +21,7 @@
     <form class="my-6 mx-6" id="form_detalhe">
         <div class="form-group row"> 
             <?php if($id_midia == 1) : ?>
-            <div class="col-6">
+            <div class="col-12">
                 <label>Tipo de material</label>
                 <select name="id_material" id="id_material" class="form-control">
                     <option value="">Selecione...</option>
@@ -31,7 +31,7 @@
                 </select>
             </div>
             <?php endif ;?>
-            <div class="col-6">
+            <div class="col-12">
                 <label>Adicione sua Arte</label>
                 <input type="file" class="form-control" name="ds_arte" id="ds_arte">
                 <span class="texto-chumbo">A arte deve ter escala de 9,0 x 3,60</span>
@@ -42,8 +42,8 @@
     </form>
     <div class="separator separator-solid"></div>
     <div class="my-6 mx-6 d-flex">
-        <button class="btn btn-primary w-100" id="voltar">Voltar</button>
-        <button class="btn btn-primary w-100" id="pagamento">Ir para método de Pagamento</button>
+        <button class="btn btn-primary w-100 mr-4" id="voltar">Voltar</button>
+        <button class="btn btn-outline-primary w-100" id="pagamento">Ir para método de Pagamento</button>
     </div>
 </div>
 <script src="assets/js/appCliente/alugar_midia.js"></script>
