@@ -2,10 +2,10 @@
 $(document).ready(function() {
 	    
 
-    if($("#boleto").prop("checked"))
-    {
-		$('#card_boleto').show()
-    }
+    $("#boleto").on("click", function(e){
+
+		$('#card_boleto').show();
+    });
     
 
 
