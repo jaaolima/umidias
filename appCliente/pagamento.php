@@ -29,7 +29,29 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="d-flex flex-column flex-row-fluid wrapper " id="kt_wrapper">
 					<div class="row">
                         <div class="col-8">
-
+                            <div class="card card-custom card-stretch gutter-b box-shadow">
+                                <div class="my-6 mx-6">
+                                    <h3>Método de pagamento:</h3>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label for="boleto_parcelado">Boleto Parcelado</label>
+                                        <input type="radio" id="metodo" name="boleto_parcelado">
+                                    </div>
+                                    <div>
+                                        <label for="boleto">Boleto</label>
+                                        <input type="radio" id="metodo" name="boleto">
+                                    </div>
+                                    <div>
+                                        <label for="credito">Cartão de crédito</label>
+                                        <input type="radio" id="metodo" name="credito">
+                                    </div>
+                                    <div>
+                                        <label for="pix">Pix</label>
+                                        <input type="radio" id="metodo" name="pix">
+                                    </div>
+                                </div>
+                            </div>  
                         </div>
                         <div class="col-4">
                             <div class="card card-custom card-stretch gutter-b box-shadow">
@@ -38,7 +60,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="separator separator-solid"></div>
                                 <div class="my-6 mx-6 ">
-                                    <div class="my-12">
+                                    <div class="mb-12">
                                         <h4 class="texto-negrito">Local </h4>
                                         <span>Teste</span>
                                     </div>
