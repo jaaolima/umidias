@@ -120,7 +120,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                     <select class="form-control" id="ds_tamanho" name="ds_tamanho">
                         <option value="">Selecione...</option>
                         <option value="9,0 x 3,60">9,0 x 3,60</option> 
-                        <option value="6,0 x 3,0">6,0 x 3,0</option>
+                        <option value="6,0 x 3,0">6,0 x 3,00</option>
                     </select>
                 </div> 
                 <div class="form-group col-md-2" id="material">

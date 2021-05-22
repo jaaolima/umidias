@@ -75,56 +75,43 @@ $('[name="id_midia"]').change(function(){
 });
 function validar()
 { 
-	if($("#id_midia option:selected").val() == 1){
-		if($("#id_material").val() == "")
-		{
-			$("#id_material").focus();
-			swal.fire("Erro", "Escolha o material", "error");
-			$("#id_material").addClass("is-invalid");
-			return false;	
-		}
-		else
-		{
-			$("#id_material").removeClass("is-invalid");	
-			$("#id_material").addClass("is-valid");
-		}
-		if($("#ds_tamanho").val() == "")
-		{
-			$("#ds_tamanho").focus();
-			swal.fire("Erro", "Escolha o tamanho", "error");
-			$("#ds_tamanho").addClass("is-invalid");
-			return false;	
-		}
-		else
-		{
-			$("#ds_tamanho").removeClass("is-invalid");	
-			$("#ds_tamanho").addClass("is-valid");
-		}
-		if($("#periodo").val() == "")
-		{
-			$("#periodo").focus();
-			swal.fire("Erro", "Escolha o período", "error");
-			$("#periodo").addClass("is-invalid");
-			return false;	
-		}
-		else
-		{
-			$("#periodo").removeClass("is-invalid");	
-			$("#periodo").addClass("is-valid");
-		}
-
-	}
-	if($("#ds_descricao").val() == "")
+	if($("#id_parceiro").val() == "")
 	{
-		$("#ds_descricao").focus();
-		swal.fire("Erro", "Preencha a Descrição", "error");
-		$("#ds_descricao").addClass("is-invalid");
+		$("#id_parceiro").focus();
+		swal.fire("Erro", "Selecione o parceiro", "error");
+		$("#id_parceiro").addClass("is-invalid");
 		return false;	
 	}
 	else
 	{
-	$("#ds_descricao").removeClass("is-invalid");	
-	$("#ds_descricao").addClass("is-valid");
+		$("#id_parceiro").removeClass("is-invalid");	
+		$("#id_parceiro").addClass("is-valid");
+	}
+	
+	if($("#ds_local").val() == "")
+	{
+		$("#ds_local").focus();
+		swal.fire("Erro", "Preencha o local", "error");
+		$("#ds_local").addClass("is-invalid");
+		return false;	
+	}
+	else
+	{
+		$("#ds_local").removeClass("is-invalid");	
+		$("#ds_local").addClass("is-valid");
+	}
+	
+	if($("#fotos").val() == "")
+	{
+		$("#fotos").focus();
+		swal.fire("Erro", "adicione uma foto", "error");
+		$("#fotos").addClass("is-invalid");
+		return false;	
+	}
+	else
+	{
+		$("#fotos").removeClass("is-invalid");	
+		$("#fotos").addClass("is-valid");
 	}
 
 	if($("#ds_latitude").val() == "")
@@ -153,17 +140,17 @@ function validar()
 		$("#ds_longitude").addClass("is-valid");
 	}
 
-	if($("#ds_foto").val() == "")
+	if($("#id_midia option:selected").val() == "")
 	{
-		$("#ds_foto").focus();
-		swal.fire("Erro", "adicione uma foto", "error");
-		$("#ds_foto").addClass("is-invalid");
-		return false;	
+		$("#id_midia").focus();
+		swal.fire("Erro", "Selecione um tipo de mídia", "error");
+		$("#id_midia").addClass("is-invalid");
+		return false;		
 	}
 	else
 	{
-		$("#ds_foto").removeClass("is-invalid");	
-		$("#ds_foto").addClass("is-valid");
+		$("#id_midia").removeClass("is-invalid");	
+		$("#id_midia").addClass("is-valid");
 	}
 
 	if($("#nu_valor").val() == "")
@@ -179,18 +166,67 @@ function validar()
 		$("#nu_valor").addClass("is-valid");
 	}
 
-	if($("#id_midia option:selected").val() == "")
+
+	if($("#id_midia option:selected").val() == 1){
+		if($("#id_material").val() == "")
+		{
+			$("#id_material").focus();
+			swal.fire("Erro", "Escolha o material", "error");
+			$("#id_material").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#id_material").removeClass("is-invalid");	
+			$("#id_material").addClass("is-valid");
+		}
+		if($("#ds_tamanho").val() == "")
+		{
+			$("#ds_tamanho").focus();
+			swal.fire("Erro", "Escolha o tamanho", "error");
+			$("#ds_tamanho").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#ds_tamanho").removeClass("is-invalid");	
+			$("#ds_tamanho").addClass("is-valid");
+		}
+		if($("#id_periodo option:selected").val() == "")
+		{
+			$("#id_periodo").focus();
+			swal.fire("Erro", "Escolha o período", "error");
+			$("#id_periodo").addClass("is-invalid");
+			return false;	
+		}
+		else
+		{
+			$("#periodo").removeClass("is-invalid");	
+			$("#periodo").addClass("is-valid");
+		}
+
+	}
+
+	
+
+	if($("#ds_descricao").val() == "")
 	{
-		$("#id_midia").focus();
-		swal.fire("Erro", "Selecione um tipo de mídia", "error");
-		$("#id_midia").addClass("is-invalid");
-		return false;		
+		$("#ds_descricao").focus();
+		swal.fire("Erro", "Preencha a Descrição", "error");
+		$("#ds_descricao").addClass("is-invalid");
+		return false;	
 	}
 	else
 	{
-		$("#id_midia").removeClass("is-invalid");	
-		$("#id_midia").addClass("is-valid");
+		$("#ds_descricao").removeClass("is-invalid");	
+		$("#ds_descricao").addClass("is-valid");
 	}
+
+	
+
+	
+
+	
 
 	if($("#st_status option:selected").val() == "")
 	{
