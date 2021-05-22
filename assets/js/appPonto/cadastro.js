@@ -233,7 +233,7 @@ var KTDropzoneDemo = function () {
 
         myDropzone4.on("addedfile", function(file) {
             // Hookup the start button
-            file.previewElement.querySelector("#salvar").onclick = function() { myDropzone4.enqueueFile(file); };
+            //file.previewElement.querySelector("#salvar").onclick = function() { myDropzone4.enqueueFile(file); };
             $(document).find( id + ' .dropzone-item').css('display', '');
             //$( id + " .dropzone-upload, " + id + " .dropzone-remove-all").css('display', 'inline-block');
         });
