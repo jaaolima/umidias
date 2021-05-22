@@ -32,7 +32,7 @@
 			foreach($ds_foto as $key => $foto)
 			{
 				echo "<pre>";
-				var_dump($foto);
+				var_dump($key);
 				echo "</pre>";
 			}
 			exit();
