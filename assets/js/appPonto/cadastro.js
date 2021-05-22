@@ -201,8 +201,8 @@ function validar()
 		}
 		else
 		{
-			$("#periodo").removeClass("is-invalid");	
-			$("#periodo").addClass("is-valid");
+			$("#id_periodo").removeClass("is-invalid");	
+			$("#id_periodo").addClass("is-valid");
 		}
 
 	}
