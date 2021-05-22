@@ -56,7 +56,7 @@
 								
 				$stmt->execute($params);
 
-				$id_ponto = $stmt->lastInsertId;
+				$id_ponto = $con->lastInsertId;
 
 				foreach($ds_foto as $key => $foto)
 				{
