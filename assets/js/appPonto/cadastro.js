@@ -260,7 +260,7 @@ var KTDropzoneDemo = function () {
         });
 
         // Setup the buttons for all transfers
-        document.querySelector( id + " .dropzone-upload").onclick = function() {
+        document.querySelector("#salvar").onclick = function() {
             myDropzone4.enqueueFiles(myDropzone4.getFilesWithStatus(Dropzone.ADDED));
         };
 
