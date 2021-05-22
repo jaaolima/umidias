@@ -474,7 +474,7 @@
 													<div class="flex-grow-1 card-spacer pb-0">
 														<i class="flaticon-users icon-xl"></i>
 														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalCliente["id_usuario"]; ?></div>
-														<div class="text-muted font-weight-bold">usuários</div>
+														<div class="text-muted font-weight-bold">Clientes</div>
 													</div>
 													<!--end::Stats-->
 													<!--begin::Chart-->
