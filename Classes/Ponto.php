@@ -29,7 +29,8 @@
 				$ds_tamanho = 1;
 			}
 
-			
+			var_dump($ds_foto);
+			exit();
 
 			
 
@@ -56,7 +57,7 @@
 								
 				$stmt->execute($params);
 
-				$id_ponto = $con->lastInsertId;
+				$id_ponto = $con->lastInsertId();
 
 				foreach($ds_foto as $key => $foto)
 				{
