@@ -89,7 +89,12 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                                     </div>
                                 </div>
                                 <div class="dropzone-toolbar">
-                                    
+                                    <span class="dropzone-start">
+                                        <i class="flaticon2-arrow"></i>
+                                    </span>
+                                    <span class="dropzone-cancel" data-dz-remove="" style="display: none;">
+                                        <i class="flaticon2-cross"></i>
+                                    </span>
                                     <span class="dropzone-delete" data-dz-remove="">
                                         <i class="flaticon2-cross"></i>
                                     </span>
