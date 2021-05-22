@@ -65,12 +65,13 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-md2 col-form-label">Escolha as fotos:</label>
-                <div class="col-md-2">
+                <label class="col-lg-3 col-form-label">Escolha as fotos:</label>
+                <div class="col-md-4">
                     <div class="dropzone dropzone-multi" id="kt_dropzone_4">
                         <div class="dropzone-panel mb-lg-0 mb-2">
                             <a class="dropzone-select btn btn-light-primary font-weight-bold btn-sm">Selecione os arquivos</a>
-                            <a class="dropzone-remove-all btn btn-light-primary font-weight-bold btn-sm">Remover todos</a>
+                            <a class="dropzone-upload btn btn-light-primary font-weight-bold btn-sm">Upload All</a>
+                            <a class="dropzone-remove-all btn btn-light-primary font-weight-bold btn-sm">Remove All</a>
                         </div>
                         <div class="dropzone-items">
                             <div class="dropzone-item" style="display:none">
@@ -88,6 +89,12 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                                     </div>
                                 </div>
                                 <div class="dropzone-toolbar">
+                                    <span class="dropzone-start">
+                                        <i class="flaticon2-arrow"></i>
+                                    </span>
+                                    <span class="dropzone-cancel" data-dz-remove="" style="display: none;">
+                                        <i class="flaticon2-cross"></i>
+                                    </span>
                                     <span class="dropzone-delete" data-dz-remove="">
                                         <i class="flaticon2-cross"></i>
                                     </span>
