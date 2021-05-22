@@ -66,7 +66,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
             </div>
             <div class="form-group row">
                 <label class="col-lg-3 col-form-label text-lg-right">Escolha as fotos:</label>
-                <div class="col-lg-9">
+                <div class="col-md-4">
                     <div class="dropzone dropzone-multi" id="kt_dropzone_4">
                         <div class="dropzone-panel mb-lg-0 mb-2">
                             <a class="dropzone-select btn btn-light-primary font-weight-bold btn-sm">Selecione os arquivos</a>
