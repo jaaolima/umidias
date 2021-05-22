@@ -94,15 +94,15 @@
 						// Faz o upload da imagem para seu respectivo caminho
 						$moved = move_uploaded_file($foto["tmp_name"],  $caminho_arquivo);
 
-						$insert_foto = "insert into rl_ponto_foto(id_ponto, ds_foto) values (:id_ponto, :id_foto)";
+						$insert_foto = "insert into rl_ponto_foto(id_ponto, ds_foto) values (:id_ponto, :ds_foto)";
 
 						$stmt_foto = $con->prepare($insert_foto);
 				
-						$params = array(':id_ponto' => $id_ponto,
+						$params_foto = array(':id_ponto' => $id_ponto,
 										':ds_foto' => $gravar_caminho_arquivo
 										);
 										
-						$stmt_foto->execute($params);
+						$stmt_foto->execute($params_foto);
 
 					}
 				}
