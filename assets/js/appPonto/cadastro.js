@@ -206,6 +206,7 @@ function validar()
 
 	return true;
 }
+/*
 var KTDropzoneDemo = function () {
     // Private functions
     var demo1 = function () {
@@ -227,10 +228,10 @@ var KTDropzoneDemo = function () {
             },
 			init: function(){
 				$("#salvar").on("click", function(e){
-					if(/*validar()*/ true)
+					if(validar())
 					{ 	var form = $("#form_usuario").get(0); 
 						console.log(form);
-						/*$.ajax({
+						$.ajax({
 							url: 'appPonto/gravar_ponto.php'
 							, data: $(form).serialize()
 							, type: 'post'
@@ -251,7 +252,7 @@ var KTDropzoneDemo = function () {
 							, error: function (data) {
 								swal.fire("Erro", data.responseText, "error");
 							}
-						});		*/
+						});		
 					}	
 				});
 			}
@@ -270,4 +271,4 @@ var KTDropzoneDemo = function () {
 
 KTUtil.ready(function() {
     KTDropzoneDemo.init();
-});
+});*/

@@ -628,6 +628,8 @@
 		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM&callback=initialize"></script>
 		<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
 		<script src="assets/js/pages/crud/file-upload/dropzonejs.js"></script>
+		
+
 		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->
