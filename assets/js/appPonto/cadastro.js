@@ -230,7 +230,7 @@ var KTDropzoneDemo = function () {
 					if(/*validar()*/ true)
 					{ 	var form = $("#form_usuario").get(0); 
 						console.log(form);
-						$.ajax({
+						/*$.ajax({
 							url: 'appPonto/gravar_ponto.php'
 							, data: $(form).serialize()
 							, type: 'post'
@@ -251,7 +251,7 @@ var KTDropzoneDemo = function () {
 							, error: function (data) {
 								swal.fire("Erro", data.responseText, "error");
 							}
-						});		
+						});		*/
 					}	
 				});
 			}
