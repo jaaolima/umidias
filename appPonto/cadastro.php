@@ -73,7 +73,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                             <span class="dropzone-msg-desc">Faça upload de até 5 arquivos</span>
                         </div>
                         <div class="fallback">
-                            <input name="foto" type="file" multiple />
+                            <input name="foto[]" id="foto" type="file" multiple />
                         </div>
                     </div>
                 </div>

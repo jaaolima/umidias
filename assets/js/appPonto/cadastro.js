@@ -229,12 +229,13 @@ var KTDropzoneDemo = function () {
 				$("#salvar").on("click", function(e){
 					if(/*validar()*/ true)
 					{ 	var form = $("#form_usuario").get(0); 
+						console.log(form);
 						$.ajax({
 							url: 'appPonto/gravar_ponto.php'
 							, data: $(form).serialize()
 							, type: 'post'
 							, data: new FormData(form)
-							, mimeType: 'multipart/form-data'
+							, encType: 'multipart/form-data'
 							, processData: false
 							, contentType: false
 							, success: function(html) { 
