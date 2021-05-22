@@ -65,7 +65,48 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div>
             </div>
             <div class="form-group row">
-                <div class="form-group col-4">
+                <label class="col-lg-3 col-form-label text-lg-right">Escolha as fotos:</label>
+                <div class="col-lg-9">
+                    <div class="dropzone dropzone-multi" id="kt_dropzone_4">
+                        <div class="dropzone-panel mb-lg-0 mb-2">
+                            <a class="dropzone-select btn btn-light-primary font-weight-bold btn-sm">Selecione os arquivos</a>
+                            <a class="dropzone-upload btn btn-light-primary font-weight-bold btn-sm">Upload All</a>
+                            <a class="dropzone-remove-all btn btn-light-primary font-weight-bold btn-sm">Remove All</a>
+                        </div>
+                        <div class="dropzone-items">
+                            <div class="dropzone-item" style="display:none">
+                                <div class="dropzone-file">
+                                    <div class="dropzone-filename" title="some_image_file_name.jpg">
+                                        <span data-dz-name="">some_image_file_name.jpg</span>
+                                        <strong>(
+                                        <span data-dz-size="">340kb</span>)</strong>
+                                    </div>
+                                    <div class="dropzone-error" data-dz-errormessage=""></div>
+                                </div>
+                                <div class="dropzone-progress">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress=""></div>
+                                    </div>
+                                </div>
+                                <div class="dropzone-toolbar">
+                                    <span class="dropzone-start">
+                                        <i class="flaticon2-arrow"></i>
+                                    </span>
+                                    <span class="dropzone-cancel" data-dz-remove="" style="display: none;">
+                                        <i class="flaticon2-cross"></i>
+                                    </span>
+                                    <span class="dropzone-delete" data-dz-remove="">
+                                        <i class="flaticon2-cross"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="form-text text-muted">O tamanho máximo do arquivo é 10Mb e o número máximo de fotos é 5.</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <!--<div class="form-group col-4">
                     <label class="">Fotos da Mídia<span class="text-danger">*</span></label>
                     <div class="dropzone dropzone-default dropzone-primary" id="dropzone" style="height: 90%;">
                         <div class="dropzone-msg dz-message needsclick">
@@ -76,7 +117,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                             <input name="foto[]" id="foto" type="file" multiple />
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="form-group col-4"> 
                     <div class="form-group ">
                         <p>Clique duas vezes no mapa para marcar a localização do ponto<span class="text-danger">*</span></p>
