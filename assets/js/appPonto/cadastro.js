@@ -6,9 +6,10 @@ $(document).ready(function() {
         redirectTo("appPonto/listar_ponto.php");
     }); 
 
-	/*$("#salvar").on("click", function(e){
-		
-		if(validar() )
+	$("#salvar").on("click", function(e){
+		var form = $("#form_usuario").get(0); 
+		console.log(form);
+		/*if(validar() )
 		{ 	var form = $("#form_usuario").get(0); 
 			$.ajax({
 		        url: 'appPonto/gravar_ponto.php'
@@ -32,8 +33,8 @@ $(document).ready(function() {
 					swal.fire("Erro", data.responseText, "error");
 				}
 		    });		
-		}	
-	});*/
+		}	*/
+	});
 	
 });
 $('[name="id_midia"]').change(function(){
