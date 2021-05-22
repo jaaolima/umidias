@@ -44,7 +44,6 @@
 				$stmt = $con->prepare($insert);
 				
 				$params = array(':ds_descricao' => $ds_descricao,
-								':ds_foto' => $gravar_caminho_arquivo,
 								':ds_latitude' => $ds_latitude,
 								':ds_longitude' => $ds_longitude,
 								':nu_valor' => $nu_valor,
