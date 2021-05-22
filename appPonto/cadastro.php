@@ -83,11 +83,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                                     </div>
                                     <div class="dropzone-error" data-dz-errormessage=""></div>
                                 </div>
-                                <div class="dropzone-progress">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress=""></div>
-                                    </div>
-                                </div>
+                        
                                 <div class="dropzone-toolbar">
                                     
                                     <span class="dropzone-delete" data-dz-remove="">
