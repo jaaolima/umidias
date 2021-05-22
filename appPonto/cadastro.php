@@ -65,35 +65,9 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-lg-3 col-form-label">Escolha as fotos:</label>
-                <div class="col-md-4">
-                    <div class="dropzone dropzone-multi" id="kt_dropzone_4">
-                        <div class="dropzone-panel mb-lg-0 mb-2">
-                            <a class="dropzone-select btn btn-light-primary font-weight-bold btn-sm">Selecione os arquivos</a>
-                            <a class="dropzone-upload btn btn-light-primary font-weight-bold btn-sm">Upload All</a>
-                            <a class="dropzone-remove-all btn btn-light-primary font-weight-bold btn-sm">Remove All</a>
-                        </div>
-                        <div class="dropzone-items">
-                            <div class="dropzone-item" style="display:none">
-                                <div class="dropzone-file">
-                                    <div class="dropzone-filename" title="some_image_file_name.jpg">
-                                        <span data-dz-name="">some_image_file_name.jpg</span>
-                                        <strong>(
-                                        <span data-dz-size="">340kb</span>)</strong>
-                                    </div>
-                                    <div class="dropzone-error" data-dz-errormessage=""></div>
-                                </div>
-                        
-                                <div class="dropzone-toolbar">
-                                    
-                                    <span class="dropzone-delete" data-dz-remove="">
-                                        <i class="flaticon2-cross"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="form-text text-muted">O tamanho máximo do arquivo é 10Mb e o número máximo de fotos é 5.</span>
+                <div class="form-group col-4">
+                    <label>Selecione os arquivos</label>
+                    <input type="file" id="fotos" name="fotos[]" multiple />
                 </div>
             </div>
             <div class="form-group row">
