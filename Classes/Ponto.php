@@ -45,12 +45,6 @@
 				$ds_tamanho = 1;
 			}
 
-			echo "<pre>";
-			var_dump($ds_foto);
-			echo "</pre>";
-			exit();
-			
-
 				
 			try{
 				$con = Conecta::criarConexao();
