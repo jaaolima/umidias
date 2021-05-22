@@ -29,7 +29,12 @@
 				$ds_tamanho = 1;
 			}
 
-			var_dump($ds_foto);
+			foreach($ds_foto as $key => $foto)
+			{
+				echo "<pre>";
+				var_dump($foto);
+				echo "</pre>";
+			}
 			exit();
 
 			
