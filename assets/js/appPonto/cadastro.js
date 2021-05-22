@@ -6,9 +6,9 @@ $(document).ready(function() {
         redirectTo("appPonto/listar_ponto.php");
     }); 
 
-	$("#salvar").on("click", function(e){
+	/*$("#salvar").on("click", function(e){
 		
-		/*if(validar() )
+		if(validar() )
 		{ 	var form = $("#form_usuario").get(0); 
 			$.ajax({
 		        url: 'appPonto/gravar_ponto.php'
@@ -32,8 +32,8 @@ $(document).ready(function() {
 					swal.fire("Erro", data.responseText, "error");
 				}
 		    });		
-		}	*/
-	});
+		}	
+	});*/
 	
 });
 $('[name="id_midia"]').change(function(){
@@ -231,7 +231,7 @@ var KTDropzoneDemo = function () {
 					{ 	var form = $("#form_usuario").get(0); 
 						$.ajax({
 							url: 'appPonto/gravar_ponto.php'
-							, data: $("#form_usuario").serialize()
+							, data: $(form).serialize()
 							, type: 'post'
 							, data: new FormData(form)
 							, mimeType: 'multipart/form-data'
