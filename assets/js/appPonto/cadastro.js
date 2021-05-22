@@ -6,10 +6,10 @@ $(document).ready(function() {
         redirectTo("appPonto/listar_ponto.php");
     }); 
 
-	$("#salvar").on("click", function(e){
+	/*$("#salvar").on("click", function(e){
 		var form = $("#form_usuario").get(0); 
 		console.log(form);
-		/*if(validar() )
+		if(validar() )
 		{ 	var form = $("#form_usuario").get(0); 
 			$.ajax({
 		        url: 'appPonto/gravar_ponto.php'
@@ -33,8 +33,8 @@ $(document).ready(function() {
 					swal.fire("Erro", data.responseText, "error");
 				}
 		    });		
-		}	*/
-	});
+		}	
+	});*/
 	
 });
 $('[name="id_midia"]').change(function(){
@@ -226,14 +226,14 @@ var KTDropzoneDemo = function () {
             parallelUploads: 5,
             previewTemplate: previewTemplate,
             maxFilesize: 10, // Max filesize in MB
-            autoQueue: false, // Make sure the files aren't queued until manually added
+            autoQueue: true, // Make sure the files aren't queued until manually added
             previewsContainer: id + " .dropzone-items", // Define the container to display the previews
             clickable: id + " .dropzone-select" // Define the element that should be used as click trigger to select files.
         });
 
         myDropzone4.on("addedfile", function(file) {
             // Hookup the start button
-            //file.previewElement.querySelector(id + " .dropzone-start").onclick = function() { myDropzone4.enqueueFile(file); };
+            file.previewElement.querySelector("#salvar").onclick = function() { myDropzone4.enqueueFile(file); };
             $(document).find( id + ' .dropzone-item').css('display', '');
             //$( id + " .dropzone-upload, " + id + " .dropzone-remove-all").css('display', 'inline-block');
         });
