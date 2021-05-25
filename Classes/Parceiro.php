@@ -64,6 +64,10 @@
 							print "ERRO:".$e->getMessage();		
 						}  
 					}
+					else{
+						header('CPF já cadastrado');
+						print "ERRO:".$e->getMessage();		
+					} 
 				}
 				catch(exception $e)
 				{
