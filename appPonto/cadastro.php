@@ -124,9 +124,9 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                         <option value="outro">Outro</option>
                     </select>
                 </div> 
-                <div class="form-group col-md-2" id="outro_tamanho">
+                <div class="form-group col-md-2" id="outro_tamanho" style="display: none;">
                     <label >Outro tamanho<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_tamanho_outro" name="ds_tamanho_outro"/>
+                    <input type="text" class="form-control" id="ds_outro_tamanho" name="ds_outro_tamanho"/>
                 </div> 
             </div>
             <div class="row">
