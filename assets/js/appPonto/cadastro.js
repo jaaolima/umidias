@@ -20,7 +20,7 @@ $(document).ready(function() {
 				, processData: false
 				, contentType: false
 		        , success: function(html) { 
-		        	swal.fire({
+		        	swal.fire({ 
 		                position: 'top-right',
 		                type: 'success',
 		                title: html,
@@ -34,6 +34,10 @@ $(document).ready(function() {
 				}
 		    });		
 		}
+	});
+	$("#ds_tamanho_outro").inputmask({
+		"mask": "9,99 x 9,99",
+		numericInput: true,
 	});
 	
 });
@@ -49,14 +53,14 @@ $('[name="id_midia"]').change(function(){
 
 	
 });
-$('[name="id_midia"]').change(function(){
-	if($(this).val() == 1){
-		$('#tamanho').show();
+$('[name="ds_tamanho"]').change(function(){
+	if($(this).val() === "outro"){
+		$('#outro_tamanho').show();
 		return;
 	}
 
-	$('#tamanho').hide();
-	$('[name="ds_tamanho"]').prop('checked', false);
+	$('#outro_tamanho').hide();
+	$('[name="ds_outro_tamanho"]').prop('checked', false);
 
 
 	

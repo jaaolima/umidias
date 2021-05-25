@@ -4,7 +4,7 @@
 	require_once("Conecta.php");
     class Ponto{
 
-		public function reArrayFiles(&$file_post) {
+		public function reArrayFiles($file_post) {
 
 			$file_ary = array();
 			$file_count = count($file_post['name']);
@@ -41,8 +41,9 @@
 				$id_periodo = 2;
 			}
 			$ds_tamanho	        = $dados['ds_tamanho'];
-			if($id_midia == 2){
-				$ds_tamanho = 1;
+			if($ds_tamanho === "outro"){
+				$ds_outro_tamanho = $dados["ds_outro_tamanho"];
+				$ds_tamanho = $ds_outro_tamanho;
 			}
 
 				
