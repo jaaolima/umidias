@@ -87,7 +87,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 <div id="carouselExampleIndicators" class="carousel slide col-md-4" data-ride="carousel">
                     <div class="carousel-inner">
                         <?php
-                            while($dadosFoto->fetch()){
+                            while($fotos = $dadosFoto->fetch()){
                                 echo "<div class='carousel-item active'>
                                         <img class='d-block w-100' src='".$dadosFoto["ds_foto"]."' >
                                     </div>";
