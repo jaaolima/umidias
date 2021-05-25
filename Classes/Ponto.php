@@ -249,7 +249,7 @@
 				
 				
 				$select = "SELECT 
-							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho, nu_valor, p.id_midia, id_material, id_periodo, id_parceiro
+							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, id_material, id_periodo, id_parceiro
 						FROM tb_ponto p
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
 						WHERE id_ponto = :id_ponto";
@@ -371,6 +371,30 @@
 			
 
 			
+		}
+		function BuscarFotoPonto($id_ponto)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				
+				$select = "SELECT id_ponto_foto, ds_foto, id_ponto
+							from rl_ponto_foto
+							where id_ponto=:id_ponto";
+
+				$stmt = $con->prepare($select);
+			   	$params = array(':id_ponto' => $id_ponto);
+			   
+			    $stmt->execute($params);
+
+			    return  $stmt->fetch();
+				
+			}	
+			catch(Exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();	
+			}	
 		}
 		public function deletarPonto(array $dados)
 		{
