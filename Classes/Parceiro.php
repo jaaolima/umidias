@@ -102,7 +102,7 @@
 						} 
 					}
 					else{
-						echo "CNPJ já cadastrado"
+						echo "CNPJ já cadastrado";
 					}
 				}
 				catch(exception $e)
