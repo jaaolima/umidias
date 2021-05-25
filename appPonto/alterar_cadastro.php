@@ -87,6 +87,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 <div id="carrossel" style='max-height:300px;' class="carousel slide col-md-4" data-ride="carousel">
                     <div class="carousel-inner">
                         <?php
+                            $total = 0;
                             while($fotos = $dadosFoto->fetch()){
                                 $total .= 1;
                                 if($total = 1){
