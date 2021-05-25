@@ -274,7 +274,7 @@
 			$id_parceiro	        = $dados['id_parceiro'];
 			$ds_local	        	= $dados['ds_local'];
 			$ds_descricao	        = $dados['ds_descricao'];
-			$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
+			/*$ds_foto                = $this->reArrayFiles($_FILES['fotos']);*/
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
 			$nu_valor    	        = $dados['nu_valor']; 
@@ -300,7 +300,7 @@
 				
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_ponto set id_parceiro = :id_parceiro, ds_descricao = :ds_descricao, ds_local = :ds_local, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, st_status = :st_status, ds_observacao = :ds_observacao, id_material = :id_material, id_periodo = :id_periodo, ds_tamanho = :ds_tamanho
+				$insert = "UPDATE tb_ponto set id_parceiro = :id_parceiro, ds_descricao = :ds_descricao, ds_local = :ds_local, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, ds_observacao = :ds_observacao, id_material = :id_material, id_periodo = :id_periodo, ds_tamanho = :ds_tamanho
 							   WHERE id_ponto = :id_ponto";
 				
 				$stmt = $con->prepare($insert);
@@ -320,7 +320,7 @@
 								
 				$stmt->execute($params);
 
-				foreach($ds_foto as $key => $foto)
+				/*foreach($ds_foto as $key => $foto)
 				{
 					$tamanho = 20000000;
 
@@ -357,7 +357,7 @@
 						$stmt_foto->execute($params_foto);
 
 					}
-				}
+				}*/
 				
 				echo "Dados gravados com sucesso!"; 
 				

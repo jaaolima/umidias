@@ -83,7 +83,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 
             </div>
             <div class="form-group row">
-                <div class="form-group col-md-4">
+                <!--<div class="form-group col-md-4">
                     <label >Foto <span class="text-danger">*</span></label>
                     <div class="w-100 overlay cursor-pointer" >
                         <img id="foto" name="foto" class="w-100" src="<?php echo $dados["ds_foto"] ?>">
@@ -94,7 +94,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                         </span>	
                     </div>
                     <input type="file" class="form-control d-none" id="ds_foto" name="ds_foto" accept="image/*"/>
-                </div> 
+                </div> -->
                 <div class="form-group col-md-4">
                     <p>Clique duas vezes no mapa para marcar a localização do ponto</p>
                     <div id="map"></div>
