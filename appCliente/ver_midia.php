@@ -78,7 +78,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="form-group row"> 
 						<div class="form-group col-md-12 position-relative">
 							<div id="map" class="rounded"></div>
-							<div id="carrossel"  class="carousel slide d-none"  data-ride="carousel" >
+							<div id="carrossel"  class="carousel slide d-none"  data-ride="carousel"  >
 								<label >Fotos:</label>
 								<div class="carousel-inner">
 									<?php
@@ -100,11 +100,11 @@ License: You must have a valid license purchased only from themeforest(the above
 										
 									?>
 								</div>
-								<a class="carousel-control-prev" role="button" data-target="#carrossel" data-slide="prev">
+								<a class="carousel-control-prev" role="button" data-target="#carrossel" data-slide="prev" style="width:5%;">
 									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 									<span class="sr-only">Anterior</span>
 								</a>
-								<a class="carousel-control-next" role="button" data-target="#carrossel" data-slide="next">
+								<a class="carousel-control-next" role="button" data-target="#carrossel" data-slide="next" style="width:5%;">
 									<span class="carousel-control-next-icon" aria-hidden="true"></span>
 									<span class="sr-only">Próximo</span>
 								</a>
