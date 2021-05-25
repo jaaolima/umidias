@@ -84,12 +84,12 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 
             </div>
             <div class="form-group row">
-                <div id="carouselExampleIndicators" class="carousel slide col-md-4" data-ride="carousel">
+                <div id="carouselExampleIndicators" style='max-height:300px;' class="carousel slide col-md-4" data-ride="carousel">
                     <div class="carousel-inner">
                         <?php
                             while($fotos = $dadosFoto->fetch()){
                                 echo "<div class='carousel-item active'>
-                                        <img class='d-block w-100' style='max-height:300px;' src='".$fotos["ds_foto"]."' >
+                                        <img class='d-block w-100'  src='".$fotos["ds_foto"]."' >
                                     </div>";
                             }
                             
