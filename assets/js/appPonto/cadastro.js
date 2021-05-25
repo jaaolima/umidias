@@ -35,7 +35,7 @@ $(document).ready(function() {
 		    });		
 		}
 	});
-	$("#ds_tamanho_outro").inputmask({
+	$("#ds_outro_tamanho").inputmask({
 		"mask": "9,99 x 9,99",
 		numericInput: true,
 	});
