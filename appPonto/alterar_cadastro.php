@@ -88,10 +88,19 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                     <div class="carousel-inner">
                         <?php
                             while($fotos = $dadosFoto->fetch()){
-
-                                echo "<div class='carousel-item active'>
+                                $total .= 1;
+                                if($total = 1){
+                                    echo "<div class='carousel-item active'>
+                                            <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
+                                        </div>";
+                                }
+                                else{
+                                    echo "<div class='carousel-item'>
                                         <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
                                     </div>";
+                                }
+
+                                
   
                             }
                             
