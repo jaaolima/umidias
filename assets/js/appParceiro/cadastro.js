@@ -81,7 +81,7 @@ $(document).ready(function() {
 		autoUnmask: true,
 	});
 	$("#nu_aliquota").inputmask({
-		"mask": "999.99",
+		"mask": "99.99%",
 		numericInput: true,
 	});
 });

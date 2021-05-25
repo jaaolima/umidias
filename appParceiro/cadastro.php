@@ -36,7 +36,7 @@
                         <option value="LR">Lucro Real</option>
                         <option value="LP">Lucro Presumido</option>
                         <option value="MEI">MEI</option>
-                        <option value="CPF">CPF</option>
+                        <option value="CPF">Pessoa Física</option>
                     </select>
                 </div>
                 <div class="form-group col-md-2">
