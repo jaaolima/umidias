@@ -66,9 +66,9 @@
 					$params = array(':nu_cnpj' => $nu_cnpj);
 					
 					$stmt->execute($params);
-					var_dump($stmt->fetch());
+					$valor = $stmt->fetch();
 	
-					/*if($stmt["nu_cnpj"] == 0){
+					if($valor["nu_cnpj"] == 0){
 						try{
 							$con = Conecta::criarConexao();
 							$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
@@ -100,7 +100,10 @@
 							header('HTTP/1.1 500 Internal Server Error');
 							print "ERRO:".$e->getMessage();		
 						} 
-					}*/
+					}
+					else{
+						echo "CNPJ já cadastrado"
+					}
 				}
 				catch(exception $e)
 				{
