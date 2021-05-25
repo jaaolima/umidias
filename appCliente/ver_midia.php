@@ -15,7 +15,7 @@
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
     $retorno = $bisemana->listarBisemana();
-    $optionsMaterial = $material->listarOptionsMaterial();
+    $optionsMaterial = $material->listarOptionsMaterial(null);
 
 
 ?>
