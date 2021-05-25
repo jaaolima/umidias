@@ -115,9 +115,17 @@
 
 				while($dados = $stmt->fetch())
 				{
-						
-					$options.= "<option value='".$dados['id_midia']."'>".$dados['ds_tipo']."</option>";
+					if($id_midia == $dados['id_midia'])
+					{
+						$options.= "<option value='".$dados['id_midia']."' selected>".$dados['ds_tipo']."</option>";
+					}
+					else
+					{
+						$options.= "<option value='".$dados['id_midia']."'>".$dados['ds_tipo']."</option>";
+					}
+					
 
+					
 				}
 				return $options;
 

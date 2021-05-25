@@ -2,15 +2,31 @@
 ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
-require_once("../Classes/Ponto.php");
 require_once("../Classes/Categoria.php");
-
+require_once("../Classes/Material.php");
+require_once("../Classes/Parceiro.php");
+require_once("../Classes/Ponto.php");
+session_start();
 $id_ponto = $_REQUEST['id_ponto'];
 
 $Categoria = new Categoria(); 
+$Parceiro = new Parceiro(); 
+$Material = new Material();
+$Categoria = new Categoria(); 
 $ponto = new Ponto();
+
 $dados = $ponto->buscarDadosPonto($id_ponto);
-$optionscategoria = $Categoria->listaroptionscategoria();
+$id_categoria = $dados["id_categoria"];
+$id_material = $dados["id_material"];
+$id_parceiro = $dados["id_parceiro"];
+
+
+$optionscategoria = $Categoria->listaroptionscategoria($id_categoria);
+$optionsmaterial = $Material->listaroptionsmaterial($id_material);
+$optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
+
+
+
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <!--<script
@@ -42,6 +58,20 @@ $optionscategoria = $Categoria->listaroptionscategoria();
         <div class="card-body">
         <input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto?>">
             <div class="form-group row">
+                <?php if($_SESSION['id_perfil'] == 3  ) :   ?>
+                <div class="form-group col-md-4">
+                    <label>Parceiro <span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_parceiro" name="id_parceiro">
+                        <option value="">Selecione...</option>
+                        <?php 
+                            echo $optionsparceiro;
+                        ?>
+                    </select>
+                </div> 
+                <?php endif ; ?>
+                <?php if($_SESSION['id_perfil'] == 2  ) :   ?>
+                  <input type="text" name="id_parceiro" id="id_parceiro" value="<?php echo $id_parceiro;?>">
+                <?php endif ; ?>
                 <div class="form-group col-md-4">
                     <label>Local <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_local" name="ds_local" value="<?php echo $dados['ds_local']?>"/>
@@ -53,44 +83,34 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                 
             </div>
             <div class="form-group row">
-              <div class="form-group col-md-4">
-                      <label >Foto <span class="text-danger">*</span></label>
-                      <div class="w-100 overlay cursor-pointer" >
+                <div class="form-group col-md-4">
+                    <label >Foto <span class="text-danger">*</span></label>
+                    <div class="w-100 overlay cursor-pointer" >
                         <img id="foto" name="foto" class="w-100" src="<?php echo $dados["ds_foto"] ?>">
                         <span class="overlay-layer" id="alterar_foto" style="border-radius:0 !important;">
-                          <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M19.8107 18.3107C20.092 18.0294 20.25 17.6478 20.25 17.25V9C20.25 8.60218 20.092 8.22064 19.8107 7.93934C19.5294 7.65804 19.1478 7.5 18.75 7.5H15.75L14.25 5.25H9.75L8.25 7.5H5.25C4.85218 7.5 4.47064 7.65804 4.18934 7.93934C3.90804 8.22064 3.75 8.60218 3.75 9V17.25C3.75 17.6478 3.90804 18.0294 4.18934 18.3107C4.47064 18.592 4.85218 18.75 5.25 18.75H18.75C19.1478 18.75 19.5294 18.592 19.8107 18.3107ZM15 12.75C15 14.4069 13.6569 15.75 12 15.75C10.3431 15.75 9 14.4069 9 12.75C9 11.0931 10.3431 9.75 12 9.75C13.6569 9.75 15 11.0931 15 12.75Z" fill="white"/>
-                          </svg></br>
+                            </svg></br>
                         </span>	
-                      </div>
-                      <input type="file" class="form-control d-none" id="ds_foto" name="ds_foto" accept="image/*"/>
-                  </div> 
-              </div>
-            <div class="form-group row"> 
-            <div class="form-group col-md-8">
-                <p>Clique duas vezes no mapa para marcar a localização do ponto</p>
-                <div id="map"></div>
-            </div>
-          </div>
-            <div class="form-group row"> 
-                <div class="form-group col-md-4">
-                    <label >Latitude<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" value="<?php echo $dados['ds_latitude']?> " readonly/>
+                    </div>
+                    <input type="file" class="form-control d-none" id="ds_foto" name="ds_foto" accept="image/*"/>
                 </div> 
                 <div class="form-group col-md-4">
-                    <label >Longitude<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_longitude" name="ds_longitude"value="<?php echo $dados['ds_longitude']?>" readonly/>
-                </div> 
+                    <p>Clique duas vezes no mapa para marcar a localização do ponto</p>
+                    <div id="map"></div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label >Latitude<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" value="<?php echo $dados['ds_latitude']?> " readonly/>
+                        </div> 
+                        <div class="form-group col-md-6">
+                            <label >Longitude<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" value="<?php echo $dados['ds_longitude']?>" readonly/>
+                        </div> 
+                    </div>
+                </div>
             </div>
-            <div class="form-group row">    
-                <div class="form-group col-md-4">
-                    <label >Valor<span class="text-danger">*</span></label>
-                    <input type="number" class="form-control" id="nu_valor" name="nu_valor" value="<?php echo $dados['nu_valor']?>"/>
-                </div>
-                <div class="form-group col-md-2">
-                    <label >Valor Sugerido</label>
-                    <input type="text" class="form-control" value="50R$" id="nu_valorsugerido" name="nu_valorsugerido"readonly/>
-                </div>
+            <div class="form-group row">
                 <div class="form-group col-md-4">
                     <label >Tipo de Mídia <span class="text-danger">*</span></label>
                     <select class="form-control" id="id_midia" name="id_midia">
@@ -99,16 +119,46 @@ $optionscategoria = $Categoria->listaroptionscategoria();
                         ?>
                     </select>
                 </div>
+                <div class="form-group col-md-4">
+                    <label >Valor<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="nu_valor" name="nu_valor" value="<?php echo $dados['nu_valor']?>"/>
+                </div>
+                <div class="form-group col-md-2" id="tamanho">
+                    <label>Tamanho<span class="text-danger">*</span></label>
+                    <select class="form-control" id="ds_tamanho" name="ds_tamanho">
+                        <option value="">Selecione...</option>
+                        <option value="9,0 x 3,60" <?php if ($dados['ds_tamanho'] === '9,0 x 3,60') echo "selected" ?>>9,0 x 3,60</option> 
+                        <option value="6,0 x 3,0" <?php if ($dados['ds_tamanho'] === '6,0 x 3,0') echo "selected" ?>>6,0 x 3,00</option>
+                        <option value="outro" <?php if ($dados['ds_tamanho'] === 'outro') echo "selected" ?>>Outro</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2" id="outro_tamanho" style="display: none;">
+                    <label >Outro tamanho<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_outro_tamanho" name="ds_outro_tamanho"/>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="form-group col-md-2" id="material">
+                    <label>Material acessível<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_material" name="id_material">
+                        <?php 
+                            echo $optionsmaterial;
+                        ?>
+                    </select>
+                </div> 
+                <div class="form-group col-2" id="periodo">
+                    <label>Período<span class="text-danger">*</span></label>
+                    <select class="form-control"name="id_periodo" id="id_periodo">
+                      <option value="">Selecione...</option>
+                      <option value="1" <?php if ($dados['id_periodo'] == '1') echo "selected" ?>>Bisemana</option>
+                      <option value="2" <?php if ($dados['id_periodo'] == '2') echo "selected" ?>>Mensal</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group row">
                 <div class="form-group col-md-4">
-                    <label >Status<span class="text-danger">*</span></label>
-                    <select class="form-control" id="st_status" name="st_status">
-                        <option value="">Selecione..</option>
-                        <option value="1" <?php if ($dados['st_status'] == '1') echo "selected" ?>>Disponível</option>
-                        <option value="2" <?php if ($dados['st_status'] == '2') echo "selected" ?>>Pré-reservado</option>
-                        <option value="3" <?php if ($dados['st_status'] == '3') echo "selected" ?>>Reservado</option>
-                    </select>
+                    <label>Descrição <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_descricao']?>"/>
                 </div>
                 <div class="form-group col-md-4">
                     <label>Observações <span class="text-danger">*</span></label>
@@ -133,22 +183,22 @@ var file = document.getElementById('ds_foto');
 var foto = document.getElementById('foto');
 
 alterarfoto.addEventListener('click', () => {
-  file.click();
+    file.click();
 });
 
 file.addEventListener('change', (event) => {
-  if(file.files.lenght <= 0){
-    return
-  }
+    if(file.files.lenght <= 0){
+        return
+    }
 
 
-  var reader = new FileReader();
+    var reader = new FileReader();
 
-  reader.onload = () => {
-    foto.src = reader.result;
-  }
+    reader.onload = () => {
+        foto.src = reader.result;
+    }
 
-  reader.readAsDataURL(file.files[0]);
+    reader.readAsDataURL(file.files[0]);
 });
 
 
@@ -224,30 +274,29 @@ var demo3 = function() {
 
 //let marcas = [];
 function initMap() {
-  
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: { lat: <?php echo $dados["ds_latitude"] ?>, lng: <?php echo $dados["ds_longitude"] ?> },
-  });
-  
-  google.maps.event.addListener(map, 'dblclick', function(event) {
-    clearMarkers();
-	//placeMarker(event.latLng, map);
-	addMarker(event.latLng);
- });
-  //setMarkers(map);
-  console.log(map);
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: { lat: <?php echo $dados["ds_latitude"] ?>, lng: <?php echo $dados["ds_longitude"] ?> },
+    });
+    
+    google.maps.event.addListener(map, 'dblclick', function(event) {
+        clearMarkers();
+        //placeMarker(event.latLng, map);
+        addMarker(event.latLng);
+    });
+    //setMarkers(map);
+    console.log(map);
 }
 
 function setMapOnAll(map) {
-  for (let i = 0; i < marcas.length; i++) {
-    marcas[i].setMap(map);
-  }
+    for (let i = 0; i < marcas.length; i++) {
+        marcas[i].setMap(map);
+    }
 }
 
 // Removes the markers from the map, but keeps them in the array.
 function clearMarkers() {
-  setMapOnAll(null);
+    setMapOnAll(null);
 }
 
 // Data for the markers consisting of a name, a LatLng and a zIndex for the
@@ -261,28 +310,28 @@ function clearMarkers() {
 ];*/
 
 function setMarkers(map) {
-  // Adds markers to the map.
-  // Marker sizes are expressed as a Size of X,Y where the origin of the image
-  // (0,0) is located in the top left of the image.
-  // Origins, anchor positions and coordinates of the marker increase in the X
-  // direction to the right and in the Y direction down.
-  const image = {
-    url:
-      "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-    // This marker is 20 pixels wide by 32 pixels high.
-    size: new google.maps.Size(20, 32),
-    // The origin for this image is (0, 0).
-    origin: new google.maps.Point(0, 0),
-    // The anchor for this image is the base of the flagpole at (0, 32).
-    anchor: new google.maps.Point(0, 32),
-  };
-  // Shapes define the clickable region of the icon. The type defines an HTML
-  // <area> element 'poly' which traces out a polygon as a series of X,Y points.
-  // The final coordinate closes the poly by connecting to the first coordinate.
-  const shape = {
-    coords: [1, 1, 1, 20, 18, 20, 18, 1],
-    type: "poly",
-  };
+    // Adds markers to the map.
+    // Marker sizes are expressed as a Size of X,Y where the origin of the image
+    // (0,0) is located in the top left of the image.
+    // Origins, anchor positions and coordinates of the marker increase in the X
+    // direction to the right and in the Y direction down.
+    const image = {
+        url:
+        "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        // This marker is 20 pixels wide by 32 pixels high.
+        size: new google.maps.Size(20, 32),
+        // The origin for this image is (0, 0).
+        origin: new google.maps.Point(0, 0),
+        // The anchor for this image is the base of the flagpole at (0, 32).
+        anchor: new google.maps.Point(0, 32),
+    };
+    // Shapes define the clickable region of the icon. The type defines an HTML
+    // <area> element 'poly' which traces out a polygon as a series of X,Y points.
+    // The final coordinate closes the poly by connecting to the first coordinate.
+    const shape = {
+        coords: [1, 1, 1, 20, 18, 20, 18, 1],
+        type: "poly",
+    };
 
   /*for (let i = 0; i < beaches.length; i++) {
     const beach = beaches[i];
@@ -298,11 +347,11 @@ function setMarkers(map) {
 }
 
 function addMarker(location) {
-  const marker = new google.maps.Marker({
-    position: location,
-    map: map,
-  });
-  marcas.push(marker);
+    const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+    });
+    marcas.push(marker);
 }
 function placeMarker(location, map) {
 	

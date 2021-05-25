@@ -12,8 +12,8 @@ $Parceiro = new Parceiro();
 $Material = new Material(); 
 $id_responsavel = "";
 
-$optionscategoria = $Categoria->listaroptionscategoria();
-$optionsmaterial = $Material->listaroptionsmaterial();
+$optionscategoria = $Categoria->listaroptionscategoria(null);
+$optionsmaterial = $Material->listaroptionsmaterial(null);
 $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -148,13 +148,13 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div>
             </div>
             <div class="form-group row">
-                <div class="form-group col-md-2">
-                    <label>Observações <span class="text-danger">*</span></label>
-                    <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
-                </div>
                 <div class="form-group col-md-4">
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Observações <span class="text-danger">*</span></label>
+                    <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div>
             </div>   
         </div>

@@ -371,7 +371,7 @@
 				$select = "SELECT id_parceiro, ds_nomeempresa FROM tb_parceiro ";
 				$stmt = $con->prepare($select);
 				$stmt->execute();
-
+ 
 				$options = "";
 
 				while($dados = $stmt->fetch())
