@@ -36,7 +36,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
 <style>
     #map {
         width: 100%;
-        height: 500px;
+        height: 300px;
     }
     
 </style>
@@ -59,7 +59,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
         <input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto?>">
             <div class="form-group row">
                 <?php if($_SESSION['id_perfil'] == 3  ) :   ?>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label>Parceiro <span class="text-danger">*</span></label>
                     <select class="form-control" id="id_parceiro" name="id_parceiro">
                         <option value="">Selecione...</option>
@@ -72,11 +72,11 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 <?php if($_SESSION['id_perfil'] == 2  ) :   ?>
                   <input type="text" name="id_parceiro" id="id_parceiro" value="<?php echo $id_parceiro;?>">
                 <?php endif ; ?>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label>Local <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_local" name="ds_local" value="<?php echo $dados['ds_local']?>"/>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_descricao']?>"/>
                 </div>
@@ -111,7 +111,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 </div>
             </div>
             <div class="form-group row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-2">
                     <label >Tipo de Mídia <span class="text-danger">*</span></label>
                     <select class="form-control" id="id_midia" name="id_midia">
                         <?php 
@@ -119,7 +119,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                         ?>
                     </select>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-2">
                     <label >Valor<span class="text-danger">*</span></label>
                     <input type="number" class="form-control" id="nu_valor" name="nu_valor" value="<?php echo $dados['nu_valor']?>"/>
                 </div>
@@ -160,7 +160,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_descricao']?>"/>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-2">
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao" value="<?php echo $dados['ds_observacao']?>"></textarea>
                 </div>  
