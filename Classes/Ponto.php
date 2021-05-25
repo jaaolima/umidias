@@ -21,6 +21,7 @@
 
         public function gravarPonto(array $dados)
 		{
+			$id_parceiro	        	= $dados['id_parceiro'];
 			$ds_local	        	= $dados['ds_local'];
 			$ds_descricao	        = $dados['ds_descricao'];
 			$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
@@ -49,12 +50,13 @@
 				
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_ponto (ds_descricao, ds_latitude, ds_longitude, nu_valor, id_midia, ds_local, ds_observacao, id_material, id_periodo, ds_tamanho)
-							VALUES (:ds_descricao, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_local, :ds_observacao, :id_material, :id_periodo, :ds_tamanho)";
+				$insert = "INSERT into tb_ponto (id_parceiro, ds_descricao, ds_latitude, ds_longitude, nu_valor, id_midia, ds_local, ds_observacao, id_material, id_periodo, ds_tamanho)
+							VALUES (:id_parceiro, :ds_descricao, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_local, :ds_observacao, :id_material, :id_periodo, :ds_tamanho)";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_descricao' => $ds_descricao,
+				$params = array(':id_parceiro' => $id_parceiro,
+								':ds_descricao' => $ds_descricao,
 								':ds_latitude' => $ds_latitude,
 								':ds_longitude' => $ds_longitude,
 								':nu_valor' => $nu_valor,
@@ -247,7 +249,7 @@
 				
 				
 				$select = "SELECT 
-							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, ds_tipo, st_status, ds_observacao, ds_local, ds_tamanho, nu_valor, p.id_midia
+							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho, nu_valor, p.id_midia, id_material, id_periodo, id_parceiro
 						FROM tb_ponto p
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
 						WHERE id_ponto = :id_ponto";
