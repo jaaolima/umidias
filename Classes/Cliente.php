@@ -109,7 +109,7 @@
 				
 				$select = "SELECT count(id_usuario) as id_usuario
 							FROM tb_usuario
-							where id_usuario = 1 ";
+							where id_perfil = 1 ";
 				
 				$stmt = $con->prepare($select); 
 				

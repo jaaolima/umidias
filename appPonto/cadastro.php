@@ -66,6 +66,12 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
             </div>
             <div class="form-group row">
                 <div class="form-group col-4">
+                    <label>Selecione os arquivos</label>
+                    <input type="file" class="form-control" id="fotos" name="fotos[]" multiple />
+                </div>
+            </div>
+            <div class="form-group row">
+                <!--<div class="form-group col-4">
                     <label class="">Fotos da Mídia<span class="text-danger">*</span></label>
                     <div class="dropzone dropzone-default dropzone-primary" id="dropzone" style="height: 90%;">
                         <div class="dropzone-msg dz-message needsclick">
@@ -73,10 +79,10 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                             <span class="dropzone-msg-desc">Faça upload de até 5 arquivos</span>
                         </div>
                         <div class="fallback">
-                            <input name="foto" type="file" multiple />
+                            <input name="foto[]" id="foto" type="file" multiple />
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="form-group col-4"> 
                     <div class="form-group ">
                         <p>Clique duas vezes no mapa para marcar a localização do ponto<span class="text-danger">*</span></p>
@@ -114,7 +120,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                     <select class="form-control" id="ds_tamanho" name="ds_tamanho">
                         <option value="">Selecione...</option>
                         <option value="9,0 x 3,60">9,0 x 3,60</option> 
-                        <option value="6,0 x 3,0">6,0 x 3,0</option>
+                        <option value="6,0 x 3,0">6,0 x 3,00</option>
                     </select>
                 </div> 
                 <div class="form-group col-md-2" id="material">
