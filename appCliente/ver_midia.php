@@ -14,6 +14,7 @@
 	$bisemana = new Bisemana();
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
+	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto);
     $retorno = $bisemana->listarBisemana();
     $optionsMaterial = $material->listarOptionsMaterial(null);
 
@@ -57,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				width: 100%;
 				height: 500px;
 			}
-			#foto {
+			#carrossel {
 				width: 100%;
 				height: 500px;
 			}
@@ -77,7 +78,37 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="form-group row"> 
 						<div class="form-group col-md-12 position-relative">
 							<div id="map" class="rounded"></div>
-							<img id="foto" class="rounded img-fluid d-none" src="<?php echo $dados["ds_foto"];?>"></img>
+							<div id="carrossel"  class="carousel slide col-md-4" data-ride="carousel">
+								<label >Fotos:</label>
+								<div class="carousel-inner">
+									<?php
+										$total = 0;
+										while($fotos = $dadosFoto->fetch()){
+											$total .= 1;
+											if($total == 1){
+												echo "<div class='carousel-item active'>
+														<img class='d-block w-100 img-fluid'  src='".$fotos["ds_foto"]."' >
+													</div>";
+											}
+											else{
+												echo "<div class='carousel-item'>
+														<img class='d-block w-100 img-fluid'  src='".$fotos["ds_foto"]."' >
+													</div>";
+											}
+
+										}
+										
+									?>
+								</div>
+								<a class="carousel-control-prev" role="button" data-target="#carrossel" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Anterior</span>
+								</a>
+								<a class="carousel-control-next" role="button" data-target="#carrossel" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Próximo</span>
+								</a>
+							</div>
 							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 220px;" id="ver_foto">ver fotos</button>
 							<button class="btn btn-mapa-active position-absolute" style="top: 10px;right: 80px;" id="ver_mapa">ver localização</button>
 						</div>
@@ -96,7 +127,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								
 								<!--begin::Row-->
 								<div class="row">
-									<div class="col-7">
+									<div class="col-7 col-sm-6">
 										<div class="mb-8">
 											<div class="mb-12">
 												<h1 class="h1-titulo"><?php echo $dados["ds_local"]; ?></h1>
@@ -117,7 +148,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<div class="col-5">	
+									<div class="col-5 col-sm-6">	
 										<form id="form_alugar">								
 											<div class="card card-custom card-stretch gutter-b box-shadow" id="ver_midia">
 												<div class="my-6 mx-6 d-flex">	

@@ -67,7 +67,7 @@ $(document).ready(function() {
 	    
 
     $("#ver_foto").on("click", function(){
-		$('#foto').removeClass("d-none");
+		$('#carrossel').removeClass("d-none");
 		$('#map').addClass("d-none");
 		$(this).addClass("btn-mapa-active");
 		$(this).removeClass("btn-mapa");
@@ -77,7 +77,7 @@ $(document).ready(function() {
 
 	$("#ver_mapa").on("click", function(){
 		$('#map').removeClass("d-none");
-		$('#foto').addClass("d-none");
+		$('#carrossel').addClass("d-none");
 		$(this).addClass("btn-mapa-active");
 		$(this).removeClass("btn-mapa");
 		$('#ver_foto').removeClass("btn-mapa-active");
