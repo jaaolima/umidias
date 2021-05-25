@@ -106,7 +106,7 @@
     			print "ERRO:".$e->getMessage();		
 			} 
 		}
-		public function listarOptionsMaterial()
+		public function listarOptionsMaterial($id_material)
 		{
 			try{
 				$con = Conecta::criarConexao();

@@ -102,7 +102,7 @@
     			print "ERRO:".$e->getMessage();		
 			} 
 		}
-		public function listarOptionsCategoria()
+		public function listarOptionsCategoria($id_midia)
 		{
 			try{
 				$con = Conecta::criarConexao();
