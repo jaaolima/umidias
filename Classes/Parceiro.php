@@ -22,8 +22,8 @@
 				if(validarCPF($nu_cpf)){
 					try{
 						$con = Conecta::criarConexao();
-						$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj, nu_cpf, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
-									VALUES (:ds_nomeempresa, :nu_cnpj, :nu_cpf,  :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
+						$insert = "INSERT into tb_parceiro (ds_nomeempresa,  nu_cpf, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
+									VALUES (:ds_nomeempresa, :nu_cpf,  :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
 						
 						$stmt = $con->prepare($insert);
 						
@@ -58,7 +58,7 @@
 				try{ 
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT count(nu_cnpj)
+					$select = "SELECT count(nu_cnpj) as nu_cnpj
 								FROM tb_parceiro
 								where nu_cnpj=:nu_cnpj";
 					
@@ -66,12 +66,13 @@
 					$params = array(':nu_cpnj' => $nu_cnpj);
 					
 					$stmt->execute($params);
+					echo $stmt["nu_cnpj"];
 	
-					if($stmt["nu_cnpj"] == 0){
+					/*if($stmt["nu_cnpj"] == 0){
 						try{
 							$con = Conecta::criarConexao();
-							$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj, nu_cpf, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
-										VALUES (:ds_nomeempresa, :nu_cnpj, :nu_cpf,  :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
+							$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
+										VALUES (:ds_nomeempresa, :nu_cnpj, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
 							
 							$stmt = $con->prepare($insert);
 							
@@ -99,7 +100,7 @@
 							header('HTTP/1.1 500 Internal Server Error');
 							print "ERRO:".$e->getMessage();		
 						} 
-					}
+					}*/
 				}
 				catch(exception $e)
 				{
