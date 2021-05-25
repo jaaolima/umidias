@@ -67,8 +67,8 @@
 					
 					$stmt->execute($params);
 					$valor = $stmt->fetch();
-	
-					if($valor["nu_cnpj"] == 0){
+					var_dump($valor["nu_cnpj"]);
+					/*if($valor["nu_cnpj"] == 0){
 						try{
 							$con = Conecta::criarConexao();
 							$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
@@ -103,7 +103,7 @@
 					}
 					else{
 						echo "CNPJ já cadastrado";
-					}
+					}*/
 				}
 				catch(exception $e)
 				{
