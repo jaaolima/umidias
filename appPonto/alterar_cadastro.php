@@ -89,7 +89,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                         <?php
                             while($fotos = $dadosFoto->fetch()){
                                 echo "<div class='carousel-item active'>
-                                        <img class='d-block w-100'  src='".$fotos["ds_foto"]."' >
+                                        <img class='d-block w-100' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
                                     </div>";
                             }
                             
