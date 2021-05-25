@@ -16,7 +16,7 @@ $Categoria = new Categoria();
 $ponto = new Ponto();
 
 $dados = $ponto->buscarDadosPonto($id_ponto);
-$id_categoria = $dados["id_categoria"];
+$id_categoria = $dados["id_midia"];
 $id_material = $dados["id_material"];
 $id_parceiro = $dados["id_parceiro"];
 
