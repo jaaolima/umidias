@@ -194,32 +194,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
 </div>
 
 <script src="./assets/js/appPonto/alterar_cadastro.js" type="text/javascript"></script>
-<script>
-//alterar foto
-
-var alterarfoto = document.getElementById('alterar_foto');
-var file = document.getElementById('ds_foto');
-var foto = document.getElementById('foto');
-
-alterarfoto.addEventListener('click', () => {
-    file.click();
-});
-
-file.addEventListener('change', (event) => {
-    if(file.files.lenght <= 0){
-        return
-    }
-
-
-    var reader = new FileReader();
-
-    reader.onload = () => {
-        foto.src = reader.result;
-    }
-
-    reader.readAsDataURL(file.files[0]);
-});
-
+<script type="text/javascript">
 
     // The following example creates complex markers to indicate beaches near
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
