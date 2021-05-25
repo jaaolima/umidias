@@ -85,6 +85,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
             </div>
             <div class="form-group row">
                 <div id="carrossel" style='max-height:300px;' class="carousel slide col-md-4" data-ride="carousel">
+                    <label >Fotos:</label>
                     <div class="carousel-inner">
                         <?php
                             $total = 0;
