@@ -79,7 +79,6 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="form-group col-md-12 position-relative">
 							<div id="map" class="rounded"></div>
 							<div id="carrossel"  class="carousel slide d-none"  data-ride="carousel"  >
-								<label >Fotos:</label>
 								<div class="carousel-inner">
 									<?php
 										$total = 0;
