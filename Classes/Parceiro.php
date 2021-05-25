@@ -66,6 +66,7 @@
 					$params = array(':nu_cnpj' => $nu_cnpj);
 					
 					$stmt->execute($params);
+					$stmt->fetch();
 					var_dump($stmt);
 	
 					/*if($stmt["nu_cnpj"] == 0){
