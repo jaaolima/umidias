@@ -101,8 +101,6 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                                     </div>";
                                 }
 
-                                
-  
                             }
                             
                         ?>
@@ -111,7 +109,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Anterior</span>
                     </a>
-                    <a class="carousel-control-next" role="button" href="#carrossel" data-slide="next">
+                    <a class="carousel-control-next" role="button" data-target="#carrossel" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Próximo</span>
                     </a>
