@@ -65,9 +65,8 @@
 						}  
 					}
 					else{
-						header('CPF já cadastrado');
-						print "ERRO:".$e->getMessage();		
-					} 
+						echo "CPF já cadastrado";
+					}
 				}
 				catch(exception $e)
 				{
@@ -123,9 +122,8 @@
 						} 
 					}
 					else{
-						header('CPF já cadastrado');
-						print "ERRO:".$e->getMessage();		
-					} 
+						echo "CNPJ já cadastrado";
+					}
 				}
 				catch(exception $e)
 				{
