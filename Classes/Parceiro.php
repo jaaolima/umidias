@@ -119,8 +119,9 @@
 						} 
 					}
 					else{
-						echo "CNPJ já cadastrado";
-					}
+						header('CPF já cadastrado');
+						print "ERRO:".$e->getMessage();		
+					} 
 				}
 				catch(exception $e)
 				{
