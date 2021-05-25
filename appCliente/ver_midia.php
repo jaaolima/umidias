@@ -78,7 +78,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="form-group row"> 
 						<div class="form-group col-md-12 position-relative">
 							<div id="map" class="rounded"></div>
-							<div id="carrossel"  class="carousel slide d-none" data-ride="carousel" >
+							<div id="carrossel"  class="carousel slide"  data-ride="carousel" >
 								<label >Fotos:</label>
 								<div class="carousel-inner">
 									<?php
@@ -87,12 +87,12 @@ License: You must have a valid license purchased only from themeforest(the above
 											$total .= 1;
 											if($total == 1){
 												echo "<div class='carousel-item active'>
-														<img class='d-block w-100 img-fluid'  src='".$fotos["ds_foto"]."' >
+														<img class='d-block w-100 img-fluid' style='height:500px;'  src='".$fotos["ds_foto"]."' >
 													</div>";
 											}
 											else{
 												echo "<div class='carousel-item'>
-														<img class='d-block w-100 img-fluid'  src='".$fotos["ds_foto"]."' >
+														<img class='d-block w-100 img-fluid'  style='height:500px;' src='".$fotos["ds_foto"]."' >
 													</div>";
 											}
 
