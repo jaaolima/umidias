@@ -39,6 +39,10 @@ $(document).ready(function() {
 		"mask": "9,99 x 9,99",
 		numericInput: true,
 	});
+	$("#nu_valor").inputmask({
+		"mask": "9.999,99",
+		numericInput: true,
+	});
 	
 });
 $('[name="id_midia"]').change(function(){
