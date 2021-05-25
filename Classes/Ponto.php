@@ -269,113 +269,107 @@
 			}	
 		}
 		public function gravarAlterarPonto(array $dados)
-		{	
+		{
 			$id_ponto	        	= $dados['id_ponto'];
-			$ds_descricao	        = $dados['ds_descricao'];
+			$id_parceiro	        = $dados['id_parceiro'];
 			$ds_local	        	= $dados['ds_local'];
-			$ds_foto                = $_FILES['ds_foto'];
+			$ds_descricao	        = $dados['ds_descricao'];
+			$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
-			$nu_valor    	        = $dados['nu_valor'];
+			$nu_valor    	        = $dados['nu_valor']; 
 			$id_midia               = $dados['id_midia'];
-			$st_status          	= $dados['st_status'];
 			$ds_observacao	        = $dados['ds_observacao'];
+			$id_material	        = $dados['id_material'];
+
+
 			
-			if($ds_foto["name"] == "" ){
-
-				try{
-					$con = Conecta::criarConexao();
-					$insert = "UPDATE tb_ponto set ds_descricao = :ds_descricao, ds_local = :ds_local, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, st_status = :st_status, ds_observacao = :ds_observacao
-							   WHERE id_ponto = :id_ponto";
-					
-					$stmt = $con->prepare($insert);
-					
-					$params = array(
-									':ds_descricao' => $ds_descricao,
-									':ds_local' => $ds_local,
-									':ds_latitude' => $ds_latitude,
-									':ds_longitude' => $ds_longitude,
-									':nu_valor' => $nu_valor,
-									':id_midia' =>$id_midia,
-									':st_status' => $st_status,
-									':ds_observacao' => $ds_observacao,
-									':id_ponto' => $id_ponto);
-									
-					$stmt->execute($params);
-					
-					echo "Dados alterados com sucesso!"; 
-					
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
-				}
+			if($id_midia == 2){
+				$id_material = 2;
 			}
-			else
-			{
-
-				$tamanho = 20000000;
-
-				$error = array();
-				$tamanho_mb = $tamanho/1024/1024;
-				
-				if($ds_foto["size"] > $tamanho) {
-					$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
-				}
-
-				if (count($error) == 0) {
-					// Pega extensão da imagem
-					preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $ds_foto["name"], $ext);
-					// Gera um nome único para o arquivo
-					$nome_arquivo = md5(uniqid(time())) . "arquivo." . $ext[1];
-					// Caminho de onde ficará o arquivo
-					$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_pontos/" . $nome_arquivo;
-
-					$gravar_caminho_arquivo = "docs_pontos/" . $nome_arquivo;
+			$id_periodo	        = $dados['id_periodo'];
+			if($id_midia == 2){
+				$id_periodo = 2;
+			}
+			$ds_tamanho	        = $dados['ds_tamanho'];
+			if($ds_tamanho === "outro"){
+				$ds_outro_tamanho = $dados["ds_outro_tamanho"];
+				$ds_tamanho = $ds_outro_tamanho;
+			}
 
 				
-					
-					// Faz o upload da imagem para seu respectivo caminho
-					$moved = move_uploaded_file($ds_foto["tmp_name"],  $caminho_arquivo);
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "UPDATE tb_ponto set id_parceiro = :id_parceiro, ds_descricao = :ds_descricao, ds_local = :ds_local, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, st_status = :st_status, ds_observacao = :ds_observacao, id_material = :id_material, id_periodo = :id_periodo, ds_tamanho = :ds_tamanho
+							   WHERE id_ponto = :id_ponto";
+				
+				$stmt = $con->prepare($insert);
+				
+				$params = array(':id_parceiro' => $id_parceiro,
+								':ds_descricao' => $ds_descricao,
+								':ds_local' => $ds_local,
+								':ds_latitude' => $ds_latitude,
+								':ds_longitude' => $ds_longitude,
+								':nu_valor' => $nu_valor,
+								':id_midia' =>$id_midia,
+								':ds_observacao' => $ds_observacao,
+								':id_material' => $id_material,
+								':id_periodo' => $id_periodo,
+								':ds_tamanho' => $ds_tamanho,
+								':id_ponto' => $id_ponto);
+								
+				$stmt->execute($params);
 
-					
-
-					try{
-						$con = Conecta::criarConexao();
-						$insert = "UPDATE tb_ponto set ds_descricao = :ds_descricao, ds_local = :ds_local, ds_foto = :ds_foto, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, st_status = :st_status, ds_observacao = :ds_observacao
-								   WHERE id_ponto = :id_ponto";
-						
-						$stmt = $con->prepare($insert);
-						
-						$params = array(
-										':ds_descricao' => $ds_descricao,
-										':ds_local' => $ds_local,
-										':ds_foto' => $gravar_caminho_arquivo,
-										':ds_latitude' => $ds_latitude,
-										':ds_longitude' => $ds_longitude,
-										':nu_valor' => $nu_valor,
-										':id_midia' =>$id_midia,
-										':st_status' => $st_status,
-										':ds_observacao' => $ds_observacao,
-										':id_ponto' => $id_ponto);
-										
-						$stmt->execute($params);
-						
-						echo "Dados alterados com sucesso!"; 
-						
-					}
-					catch(exception $e)
-					{
-						header('HTTP/1.1 500 Internal Server Error');
-						print "ERRO:".$e->getMessage();		
-					}
-				}
-				else
+				foreach($ds_foto as $key => $foto)
 				{
-					echo "Aconteceu um erro".$error[1];
+					$tamanho = 20000000;
+
+					$error = array();
+					$tamanho_mb = $tamanho/1024/1024;
+					
+					if($foto["size"] > $tamanho) {
+						$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
+					}
+
+					if (count($error) == 0) {
+						// Pega extensão da imagem
+						preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $foto["name"], $ext);
+						// Gera um nome único para o arquivo
+						$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
+						// Caminho de onde ficará o arquivo
+						$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_pontos/" . $nome_arquivo;
+		
+						$gravar_caminho_arquivo = "docs_pontos/" . $nome_arquivo;
+		
+					
+						
+						// Faz o upload da imagem para seu respectivo caminho
+						$moved = move_uploaded_file($foto["tmp_name"],  $caminho_arquivo);
+
+						$insert_foto = "insert into rl_ponto_foto(id_ponto, ds_foto) values (:id_ponto, :ds_foto)";
+
+						$stmt_foto = $con->prepare($insert_foto);
+				
+						$params_foto = array(':id_ponto' => $id_ponto,
+										':ds_foto' => $gravar_caminho_arquivo
+										);
+										
+						$stmt_foto->execute($params_foto);
+
+					}
 				}
-			}	
+				
+				echo "Dados gravados com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+				print "ERRO:".$e->getMessage();		
+			}
+			
+			
+
 			
 		}
 		public function deletarPonto(array $dados)
