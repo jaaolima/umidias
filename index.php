@@ -51,7 +51,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--begin::Login-->
 			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login">
 				<!--begin::Aside-->
-				<div class="login-aside flex-row-auto bgi-size-cover bgi-no-repeat max-w-lg-950px " >
+				<div class="login-aside flex-row-auto bgi-size-cover bgi-no-repeat max-w-lg-550px " >
 					<!--begin: Aside Container-->
 					<?php /*?><div class="d-flex flex-row-fluid flex-column justify-content-between"> 
 						<!--begin: Aside header-->
