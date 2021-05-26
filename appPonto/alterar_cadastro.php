@@ -93,14 +93,14 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                                 $total .= 1;
                                 if($total == 1){
                                     echo "<div class='carousel-item active'>
-                                            <button class='btn btn-primary position-absolute' style='top: 10px;right: 20px;' id='excluir'>Excluir</button>
+                                            <button class='btn btn-primary position-absolute' style='top: 10px;right: 40px;' id='excluir'>Excluir</button>
                                             <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
                                         </div>";
                                         
                                 }
                                 else{
                                     echo "<div class='carousel-item'>
-                                        <button class='btn btn-primary position-absolute' style='top: 10px;right: 20px;' id='excluir'>Excluir</button>
+                                        <button class='btn btn-primary position-absolute' style='top: 10px;right: 40px;' id='excluir'>Excluir</button>
                                         <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
                                     </div>";
                                 }
@@ -109,11 +109,11 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                             
                         ?>
                     </div>
-                    <a class="carousel-control-prev" role="button" data-target="#carrossel" data-slide="prev"  style="width:5%;">
+                    <a class="carousel-control-prev" role="button" data-target="#carrossel" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Anterior</span>
                     </a>
-                    <a class="carousel-control-next" role="button" data-target="#carrossel" data-slide="next"  style="width:5%;">
+                    <a class="carousel-control-next" role="button" data-target="#carrossel" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Próximo</span>
                     </a>
