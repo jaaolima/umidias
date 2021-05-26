@@ -53,7 +53,7 @@ $optionsCidade = $parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_
                 </div>
 
 
-                <div class="form-group col-md-3 d-none" id="cnpj">
+                <div class="form-group col-md-3" id="cnpj">
                     <label >CNPJ <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="nu_cnpj" name="nu_cnpj" value="<?php echo $dados['nu_cnpj']?>"/>
                 </div>
