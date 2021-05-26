@@ -78,7 +78,7 @@ $(document).ready(function() {
 
 	$("#nu_telefone").inputmask({
         "mask": "(99)99999-9999",
-		autoUnmask: true,
+		autoUnmask: true, 
 	});
 	$("#nu_aliquota").inputmask({
 		"mask": "99.99%",
