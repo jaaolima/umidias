@@ -93,15 +93,14 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                                 $total .= 1;
                                 if($total == 1){
                                     echo "<div class='carousel-item active'>
-                                            <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' id='excluir".$dadosFoto["id_ponto_foto"]."'>Excluir</button>
+                                            <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' id='excluir".$fotos["id_ponto_foto"]."'>Excluir</button>
                                             <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
-                                            <input type='hidden' value='".$fotos["id_ponto_foto"]."'/>
                                         </div>";
                                         
                                 }
                                 else{
                                     echo "<div class='carousel-item'>
-                                        <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' id='excluir".$dadosFoto["id_ponto_foto"]."'>Excluir</button>
+                                        <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' id='excluir".$fotos["id_ponto_foto"]."'>Excluir</button>
                                         <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
                                     </div>";
                                 }
@@ -207,13 +206,12 @@ $(document).ready(function() {
 	    <?php 
             while($excluirFoto = $dadosFoto->fetch()){
                 echo "
-                var dados = {
-                    id_ponto_foto: ".$excluirFoto["id_ponto_foto"]."
-                }
                 $('#excluir".$excluirFoto['id_ponto_foto']."').on('click', function(e){   
                     $.ajax({
                         url: 'appPonto/excluir_foto_ponto'
-                        , data: dados
+                        , data: {
+                            id_ponto_foto: ".$excluirFoto["id_ponto_foto"]."
+                        }
                         , type: 'post'
                         , processData: false
                         , contentType: false
