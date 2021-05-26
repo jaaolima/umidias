@@ -129,12 +129,13 @@
 				
 				$stmt->execute($params);
 				$valor = $stmt->fetch();
-				if($valor["nu_cnpj"] == 0){
+				var_dump($valor);
+				/*if($valor["nu_cnpj"] == 0){
 					return true;
 				}
 				else{
 					return false;
-				}
+				}*/
 			}
 			catch(exception $e)
 			{

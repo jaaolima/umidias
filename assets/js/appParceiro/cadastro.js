@@ -24,7 +24,7 @@ $(document).ready(function() {
 		                showConfirmButton: true
 		            });
 		            
-					redirectTo("appParceiro/listar_parceiro.php");
+					/*redirectTo("appParceiro/listar_parceiro.php");*/
 		        }
 				, error: function (data) {
 					swal.fire("Erro", data.responseText, "error");
