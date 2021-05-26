@@ -128,7 +128,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, first(f.ds_foto) as ds_foto, t.ds_tipo
+				$select = "SELECT id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo
 							FROM tb_ponto p
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
