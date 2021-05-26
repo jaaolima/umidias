@@ -122,7 +122,7 @@
 			try{ 
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT count(nu_cnpj)
+				$select = "SELECT count(nu_cnpj) as nu_cnpj
 							FROM tb_parceiro
 							where nu_cnpj=:nu_cnpj";
 				
