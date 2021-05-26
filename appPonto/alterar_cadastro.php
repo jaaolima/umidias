@@ -206,17 +206,18 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
 $(document).ready(function() {
 	    <?php 
            while($excluirFoto = $dadosFoto->fetch()){
-                echo "swal.fire({
-                    title: 'Tem certeza?',
-                    text: 'Desejar excluir essa Foto?',
-                    type: 'warning',
-                    showCancelButton: true,
-                    cancelButtonColor: '#fd397a',
-                    confirmButtonText: 'Sim, posseguir!',
-                    cancelButtonText: 'Cancelar'
-                }).then(function(result) {
-                    if (result.value) {
-                        $('#excluirFoto".$excluirFoto['id_ponto_foto']."').on('click', function(e){   
+                echo "
+                $('#excluirFoto".$excluirFoto['id_ponto_foto']."').on('click', function(e){   
+                    swal.fire({
+                        title: 'Tem certeza?',
+                        text: 'Desejar excluir essa Foto?',
+                        type: 'warning',
+                        showCancelButton: true,
+                        cancelButtonColor: '#fd397a',
+                        confirmButtonText: 'Sim, posseguir!',
+                        cancelButtonText: 'Cancelar'
+                    }).then(function(result) {
+                        if (result.value) {
                             $.ajax({
                                 url: 'appPonto/excluir_foto_ponto.php'
                                 , data: {
@@ -236,12 +237,12 @@ $(document).ready(function() {
                                 , error: function (data) {
                                     swal.fire('Erro', data.responseText, 'error');
                                 }
-                            });		
-                        });
-                        
-                    }
-                });
-                ";
+                            });
+                            
+                        }
+                    });
+                    		
+                });";
             }
         ?>
         
