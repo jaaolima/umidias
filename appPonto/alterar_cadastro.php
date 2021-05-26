@@ -93,7 +93,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                                 $total .= 1;
                                 if($total == 1){
                                     echo "<div class='carousel-item active'>
-                                            <button class='btn btn-primary position-absolute' style='top: 10px;right: 220px;' id='excluir'>Excluir</button>
+                                            <button class='btn btn-outline-primary position-absolute' style='top: 10px;right: 20px;' id='excluir'>Excluir</button>
                                             <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
                                         </div>";
                                         
