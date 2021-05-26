@@ -93,28 +93,14 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                                 $total .= 1;
                                 if($total == 1){
                                     echo "<div class='carousel-item active'>
-                                            <a class='w-100 symbol symbol-light-success overlay'  id='alterar_foto' href=';:javascript'>
-                                                <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos['ds_foto']."' >
-                                                <span class=' dropdown overlay-layer symbol-circle ' >
-                                                <svg class='symbol-circle' width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                                    <path fill-rule='evenodd' clip-rule='evenodd' d='M19.8107 18.3107C20.092 18.0294 20.25 17.6478 20.25 17.25V9C20.25 8.60218 20.092 8.22064 19.8107 7.93934C19.5294 7.65804 19.1478 7.5 18.75 7.5H15.75L14.25 5.25H9.75L8.25 7.5H5.25C4.85218 7.5 4.47064 7.65804 4.18934 7.93934C3.90804 8.22064 3.75 8.60218 3.75 9V17.25C3.75 17.6478 3.90804 18.0294 4.18934 18.3107C4.47064 18.592 4.85218 18.75 5.25 18.75H18.75C19.1478 18.75 19.5294 18.592 19.8107 18.3107ZM15 12.75C15 14.4069 13.6569 15.75 12 15.75C10.3431 15.75 9 14.4069 9 12.75C9 11.0931 10.3431 9.75 12 9.75C13.6569 9.75 15 11.0931 15 12.75Z' fill='white'/>
-                                                </svg>
-                                                </span>	
-                                            </a>
+                                            <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
                                         </div>";
                                         
                                 }
                                 else{
                                     echo "<div class='carousel-item'>
-                                            <a class='w-100 symbol symbol-light-success overlay'  id='alterar_foto' href=';:javascript'>
-                                                <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos['ds_foto']."' >
-                                                <span class=' dropdown overlay-layer symbol-circle ' >
-                                                <svg class='symbol-circle' width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                                    <path fill-rule='evenodd' clip-rule='evenodd' d='M19.8107 18.3107C20.092 18.0294 20.25 17.6478 20.25 17.25V9C20.25 8.60218 20.092 8.22064 19.8107 7.93934C19.5294 7.65804 19.1478 7.5 18.75 7.5H15.75L14.25 5.25H9.75L8.25 7.5H5.25C4.85218 7.5 4.47064 7.65804 4.18934 7.93934C3.90804 8.22064 3.75 8.60218 3.75 9V17.25C3.75 17.6478 3.90804 18.0294 4.18934 18.3107C4.47064 18.592 4.85218 18.75 5.25 18.75H18.75C19.1478 18.75 19.5294 18.592 19.8107 18.3107ZM15 12.75C15 14.4069 13.6569 15.75 12 15.75C10.3431 15.75 9 14.4069 9 12.75C9 11.0931 10.3431 9.75 12 9.75C13.6569 9.75 15 11.0931 15 12.75Z' fill='white'/>
-                                                </svg>
-                                                </span>	
-                                            </a>
-                                        </div>";
+                                        <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
+                                    </div>";
                                 }
 
                             }
@@ -211,30 +197,6 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
 
 <script src="./assets/js/appPonto/alterar_cadastro.js" type="text/javascript"></script>
 <script type="text/javascript">
-//alterar foto
-
-var alterarfoto = document.getElementById('alterar_foto');
-var file = document.getElementById('ds_foto');
-var foto = document.getElementById('foto');
-
-alterarfoto.addEventListener('click', () => {
-  file.click();
-});
-
-file.addEventListener('change', (event) => {
-  if(file.files.lenght <= 0){
-    return
-  }
-
-
-  var reader = new FileReader();
-
-  reader.onload = () => {
-    foto.src = reader.result;
-  }
-
-  reader.readAsDataURL(file.files[0]);
-});
 
     // The following example creates complex markers to indicate beaches near
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
