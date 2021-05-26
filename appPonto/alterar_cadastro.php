@@ -93,14 +93,15 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                                 $total .= 1;
                                 if($total == 1){
                                     echo "<div class='carousel-item active'>
-                                            <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' id='excluir'>Excluir</button>
+                                            <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' id='excluir".$dadosFoto["id_ponto_foto"]."'>Excluir</button>
                                             <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
+                                            <input type='hidden' value='".$fotos["id_ponto_foto"]."'/>
                                         </div>";
                                         
                                 }
                                 else{
                                     echo "<div class='carousel-item'>
-                                        <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' id='excluir'>Excluir</button>
+                                        <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' id='excluir".$dadosFoto["id_ponto_foto"]."'>Excluir</button>
                                         <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
                                     </div>";
                                 }
@@ -202,6 +203,32 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
 <script src="./assets/js/appPonto/alterar_cadastro.js" type="text/javascript"></script>
 <script type="text/javascript">
 
+$(document).ready(function() {
+	    <?php 
+            while($excluirFoto = $dadosFoto->fetch()){
+                echo "
+                var dados = {
+                    id_ponto_foto: ".$excluirFoto["id_ponto_foto"]."
+                }
+                $('#excluir".$excluirFoto['id_ponto_foto']."').on('click', function(e){   
+                    $.ajax({
+                        url: 'appPonto/excluir_foto_ponto'
+                        , data: dados
+                        , type: 'post'
+                        , processData: false
+                        , contentType: false
+                        , success: function(html) { 
+                            redirectTo('appPonto/alterar_cadastro.php?".$id_ponto."');
+                        }
+                        , error: function (data) {
+                            swal.fire('Erro', data.responseText, 'error');
+                        }
+                    });		
+                });"
+            }
+        ?>
+        
+    });
     // The following example creates complex markers to indicate beaches near
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
