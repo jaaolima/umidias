@@ -48,11 +48,13 @@ $(document).ready(function() {
         if($(this).val() === "CPF"){
             $('#cpf').show();
 			$('#cnpj').hide();
+			$("#nu_cnpj").val("");
             return;
         }
 		else{
 			$('#cnpj').show();
 			$('#cpf').hide();
+			$("#nu_cpf").val("");
 			$('[name="nu_cpf"]').prop('checked', false);
 		}
 

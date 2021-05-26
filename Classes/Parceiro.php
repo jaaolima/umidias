@@ -221,11 +221,10 @@
 			$nu_aliquota 		= $dados['nu_aliquota'];
 			$nu_cpf 	    	= $dados['nu_cpf'];
 			if($id_regime === "CPF"){
-				$nu_cnpj = NULL;
 				if($this->validarCPF($nu_cpf)){
 					try{
 						$con = Conecta::criarConexao();
-						$update = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa,  nu_cpf = :nu_cpf, nu_cnpj = :nu_cnpj, ds_logradouro = :ds_logradouro, 
+						$update = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa,  nu_cpf = :nu_cpf, ds_logradouro = :ds_logradouro, 
 										nu_numerolog= :nu_numerolog, nu_cep = :nu_cep, id_estado = :id_estado, id_cidade = :id_cidade, 
 										ds_bairro = :ds_bairro, ds_responsavel = :ds_responsavel, ds_email = :ds_email, nu_telefone = :nu_telefone,
 										id_regime = :id_regime, nu_aliquota = :nu_aliquota
@@ -235,7 +234,6 @@
 						
 						$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
 										':nu_cpf' => $nu_cpf,
-										':nu_cnpj' => $nu_cnpj,
 										':ds_logradouro' => $ds_logradouro,
 										':nu_numerolog' => $nu_numerolog,
 										':nu_cep' =>$nu_cep,
@@ -266,11 +264,10 @@
 				}	
 			}
 			else{
-				$nu_cpf = NULL;
 				if($this->validarCNPJ($nu_cnpj)){
 					try{
 						$con = Conecta::criarConexao();
-						$update = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa, nu_cnpj = :nu_cnpj, nu_cpf = :nu_cpf, ds_logradouro = :ds_logradouro, 
+						$update = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa, nu_cnpj = :nu_cnpj, ds_logradouro = :ds_logradouro, 
 										nu_numerolog= :nu_numerolog, nu_cep = :nu_cep, id_estado = :id_estado, id_cidade = :id_cidade, 
 										ds_bairro = :ds_bairro, ds_responsavel = :ds_responsavel, ds_email = :ds_email, nu_telefone = :nu_telefone,
 										id_regime = :id_regime, nu_aliquota = :nu_aliquota
@@ -280,7 +277,6 @@
 						
 						$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
 										':nu_cnpj' => $nu_cnpj,
-										':nu_cpf' => $nu_cpf,
 										':ds_logradouro' => $ds_logradouro,
 										':nu_numerolog' => $nu_numerolog,
 										':nu_cep' =>$nu_cep,
