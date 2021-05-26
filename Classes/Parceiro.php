@@ -111,7 +111,7 @@
 					echo "passou";
 				}
 				else{
-					echo "CNPJ já cadastrado";
+					header('HTTP/1.1 500 Internal Server Error');
 				}
 			
 			}
