@@ -128,8 +128,8 @@
 				$params = array(':nu_cpnj' => $nu_cnpj);
 				
 				$stmt->execute($params);
-
-				if($stmt["nu_cnpj"] == 0){
+				$valor = $stmt->fetch();
+				if($valor["nu_cnpj"] == 0){
 					return true;
 				}
 				else{
