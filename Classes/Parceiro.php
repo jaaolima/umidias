@@ -131,7 +131,6 @@
 				
 				$stmt->execute($params);
 				$valor = $stmt->fetch();
-				var_dump($valor);
 				if($valor["nu_cnpj"] == 0){
 					return true;
 				}
