@@ -101,13 +101,14 @@
 						
 						echo "Dados gravados com sucesso!"; 
 						
-					}*/
-					echo "passou";
+					}
+					
 					catch(exception $e)
 					{
 						header('HTTP/1.1 500 Internal Server Error');
 						print "ERRO:".$e->getMessage();		
-					} 
+					} */
+					echo "passou";
 				}
 				else{
 					echo "CNPJ já cadastrado";
