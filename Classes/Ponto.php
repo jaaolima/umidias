@@ -128,9 +128,10 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, ds_foto, t.ds_tipo
+				$select = "SELECT id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, first(f.ds_foto) as ds_foto, t.ds_tipo
 							FROM tb_ponto p
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
+							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 							where p.id_midia=:id_midia";
 				
 				$stmt = $con->prepare($select); 
@@ -252,6 +253,7 @@
 							id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, id_material, id_periodo, id_parceiro
 						FROM tb_ponto p
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
+
 						WHERE id_ponto = :id_ponto";
 
 				$stmt = $con->prepare($select);
