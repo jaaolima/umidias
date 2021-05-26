@@ -205,7 +205,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
 
 $(document).ready(function() {
 	    <?php 
-            while($excluirFoto = $dadosFoto->fetch()){
+           /* while($excluirFoto = $dadosFoto->fetch()){
                 echo "
                 $('#excluir".$excluirFoto['id_ponto_foto']."').on('click', function(e){   
                     $.ajax({
@@ -231,7 +231,7 @@ $(document).ready(function() {
                         }
                     });		
                 });";
-            }
+            }*/
         ?>
         
     });
