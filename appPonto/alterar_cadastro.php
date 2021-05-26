@@ -115,6 +115,8 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Próximo</span>
                     </a>
+                    <label>Adicionar:</label>
+                    <input type="file" class="form-control" id="fotos" name="fotos[]" multiple />
                 </div>
                 <div class="form-group col-md-4">
                     <p>Clique duas vezes no mapa para marcar a localização do ponto</p>
