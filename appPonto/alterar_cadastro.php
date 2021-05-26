@@ -216,6 +216,16 @@ $(document).ready(function() {
                         , type: 'post'
                         , processData: false
                         , contentType: false
+                        , success: function(html) { 
+                            swal.fire({ 
+                                position: 'top-right',
+                                type: 'success',
+                                title: html,
+                                showConfirmButton: true
+                            });
+                            
+                            //redirectTo('appPonto/listar_ponto.php');
+                        }
                         , error: function (data) {
                             swal.fire('Erro', data.responseText, 'error');
                         }

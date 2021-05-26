@@ -423,6 +423,31 @@
     			print "ERRO:".$e->getMessage();		
 			} 
 		}
+		public function excluirFotoPonto(array $dados)
+		{
+            $id_ponto_foto	    = $dados['id_ponto_foto'];
+
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "delete from rl_ponto_foto
+							WHERE id_ponto_foto=:id_ponto_foto";
+				
+				$stmt = $con->prepare($insert);
+				
+                $params = array(':id_ponto_foto' => $id_ponto_foto);
+                                
+				$stmt->execute($params);
+				
+				echo "Deletado com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+		}
 		
 	}	
 
