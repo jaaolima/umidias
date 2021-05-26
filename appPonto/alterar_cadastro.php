@@ -211,7 +211,7 @@ $(document).ready(function() {
                     $.ajax({
                         url: 'appPonto/excluir_foto_ponto.php'
                         , data: {
-                            id_ponto_foto: ".$excluirFoto["id_ponto_foto"]."
+                            id_ponto_foto: ".$excluirFoto["id_ponto_foto"].",
                         }
                         , type: 'post'
                         , processData: false
