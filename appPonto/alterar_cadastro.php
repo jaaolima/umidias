@@ -17,6 +17,7 @@ $ponto = new Ponto();
 
 $dados = $ponto->buscarDadosPonto($id_ponto);
 $dadosFoto = $ponto->BuscarFotoPonto($id_ponto);
+$dadosFotoExcluir = $ponto->BuscarFotoPonto($id_ponto);
 $id_categoria = $dados["id_midia"];
 $id_material = $dados["id_material"];
 $id_parceiro = $dados["id_parceiro"];
@@ -89,7 +90,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                     <div class="carousel-inner">
                         <?php
                             $total = 0;
-                            while($fotos = $dadosFoto->fetch()){
+                            while($fotos = $dadosFotoExcluir->fetch()){
                                 $total .= 1;
                                 if($total == 1){
                                     echo "<div class='carousel-item active'>
