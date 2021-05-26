@@ -214,8 +214,6 @@ $(document).ready(function() {
                             id_ponto_foto: ".$excluirFoto["id_ponto_foto"].",
                         }
                         , type: 'post'
-                        , processData: false
-                        , contentType: false
                         , success: function(html) { 
                             swal.fire({ 
                                 position: 'top-right',
