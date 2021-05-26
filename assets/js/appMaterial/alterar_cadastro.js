@@ -30,7 +30,8 @@ $(document).ready(function() {
 		}	
 	});
 	$("#nu_valor").inputmask({
-		"mask": "9.999.99"
+		"mask": "9.999.99",
+		numericInput: true,
 	});
 });
 
