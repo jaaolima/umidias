@@ -53,7 +53,7 @@ $optionsCidade = $parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_
                 </div>
 
 
-                <div class="form-group col-md-3" id="cnpj">
+                <div class="form-group col-md-3 " style="display:none;" id="cnpj">
                     <label >CNPJ <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="nu_cnpj" name="nu_cnpj" value="<?php echo $dados['nu_cnpj']?>"/>
                 </div>
@@ -62,8 +62,8 @@ $optionsCidade = $parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_
                     <input type="text" class="form-control" id="nu_cpf" name="nu_cpf" value="<?php echo $dados['nu_cpf']?>"/>
                 </div>
 
-                <?php /* if($dados["id_regime"] != "CPF") : ?>
-                <div class="form-group col-md-3 d-none" id="cpf">
+                <?php if($dados["id_regime"] != "CPF") : ?>
+                <div class="form-group col-md-3" style="display:none;" id="cpf">
                     <label >CPF<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="nu_cpf" name="nu_cpf" value="<?php echo $dados['nu_cpf']?>"/>
                 </div>
@@ -71,7 +71,7 @@ $optionsCidade = $parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_
                     <label >CNPJ <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="nu_cnpj" name="nu_cnpj" value="<?php echo $dados['nu_cnpj']?>"/>
                 </div>
-                <?php endif; */?>
+                <?php endif; ?>
                 
             </div>
             <div class="form-group row"> 
