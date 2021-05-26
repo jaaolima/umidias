@@ -183,7 +183,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<h3 class="font-weight-bolder">Aluguel</h3>
 												</div>
 												<?php if($id_midia == 1) : ?>
-												<div class="d-flex my-6 mx-6">
+												<div class=" my-6 mx-6">
 													<table  class="table table-hover" id="table_bisemana">
 														<thead>
 															<tr>
