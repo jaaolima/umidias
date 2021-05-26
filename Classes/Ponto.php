@@ -133,7 +133,7 @@
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 							where p.id_midia=:id_midia
-							group by f.id_ponto";
+							group by p.id_ponto";
 				
 				$stmt = $con->prepare($select); 
 				$params = array(':id_midia' => $id_midia);
