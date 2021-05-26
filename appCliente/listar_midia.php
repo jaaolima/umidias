@@ -65,8 +65,16 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="form-group row"> 
 						<div class="form-group col-md-12 position-relative">
 							<div id="map" class="rounded"></div>
-							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 230px;" >Filtros</button>
+							<div class="dropdown">
+								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa position-absolute" style="top: 10px;right: 230px;" >Filtros</button>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item">Pontos quentes</a>
+									<div class="dropdown-divider mx-5"></div>
+									<a class="dropdown-item texto-vermelho">disponiveis</a>
+								</div>
+							</div>
 							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 80px;" >Buscar por datas</button>
+								
 						</div>
 					</div>
 					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
