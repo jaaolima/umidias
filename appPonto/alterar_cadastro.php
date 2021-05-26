@@ -209,7 +209,7 @@ $(document).ready(function() {
                 echo "
                 $('#excluirFoto".$excluirFoto['id_ponto_foto']."').on('click', function(e){   
                     $.ajax({
-                        url: 'appPonto/excluir_foto_ponto'
+                        url: 'appPonto/excluir_foto_ponto.php'
                         , data: {
                             id_ponto_foto: ".$excluirFoto["id_ponto_foto"]."
                         }
