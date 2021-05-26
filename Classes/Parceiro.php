@@ -205,7 +205,7 @@
 		}
 		public function gravarAlterarParceiro(array $dados)
 		{
-			
+			$id_parceiro	    = $dados['id_parceiro'];
 			$ds_nomeempresa	    = $dados['ds_nomeempresa'];
 			$nu_cnpj 	        = $dados['nu_cnpj'];
             $ds_logradouro    	= $dados['ds_logradouro'];
@@ -244,7 +244,8 @@
 										':ds_email' => $ds_email,
 										':nu_telefone' => $nu_telefone,
 										':id_regime' => $id_regime,
-										':nu_aliquota' => $nu_aliquota);
+										':nu_aliquota' => $nu_aliquota,
+										':id_parceiro' => $id_parceiro);
 										
 						$stmt->execute($params);
 						
@@ -286,7 +287,8 @@
 										':ds_email' => $ds_email,
 										':nu_telefone' => $nu_telefone,
 										':id_regime' => $id_regime,
-										':nu_aliquota' => $nu_aliquota);
+										':nu_aliquota' => $nu_aliquota,
+										':id_parceiro' => $id_parceiro);
 										
 						$stmt->execute($params);
 						
