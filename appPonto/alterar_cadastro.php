@@ -216,9 +216,6 @@ $(document).ready(function() {
                         , type: 'post'
                         , processData: false
                         , contentType: false
-                        , success: function(html) { 
-                            redirectTo('appPonto/alterar_cadastro.php?".$id_ponto."');
-                        }
                         , error: function (data) {
                             swal.fire('Erro', data.responseText, 'error');
                         }
