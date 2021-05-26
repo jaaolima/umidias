@@ -63,7 +63,7 @@ $optionsCidade = $parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_
                 </div>
                 <?php endif; ?>
 
-                <?php if($dados["id_regime"] != "CPF") { ?>
+                <?php if($dados["id_regime"] != "CPF") : ?>
                 <div class="form-group col-md-3 d-none" id="cpf">
                     <label >CPF<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="nu_cpf" name="nu_cpf" value="<?php echo $dados['nu_cpf']?>"/>
