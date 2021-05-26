@@ -205,61 +205,107 @@
 		}
 		public function gravarAlterarParceiro(array $dados)
 		{
-			$id_parceiro	    = $dados['id_parceiro'];
+			
 			$ds_nomeempresa	    = $dados['ds_nomeempresa'];
 			$nu_cnpj 	        = $dados['nu_cnpj'];
             $ds_logradouro    	= $dados['ds_logradouro'];
 			$nu_numerolog		= $dados['nu_numerolog'];
 			$nu_cep             = $dados['nu_cep'];
-            $id_estado          = $dados['id_estado'];
+            $id_estado         	= $dados['id_estado'];
             $id_cidade       	= $dados['id_cidade'];
             $ds_bairro          = $dados['ds_bairro'];
             $ds_responsavel     = $dados['ds_responsavel'];
             $ds_email          	= $dados['ds_email'];
             $nu_telefone        = $dados['nu_telefone'];
-			$id_regime 			= $dados['id_regime'];
+			$id_regime			= $dados['id_regime'];
 			$nu_aliquota 		= $dados['nu_aliquota'];
-			$nu_cpf 	        = NULL;
+			$nu_cpf 	    	= $dados['nu_cpf'];
 			if($id_regime === "CPF"){
-				$nu_cpf 	    = $dados['nu_cpf'];
+				if($this->validarCPF($nu_cpf)){
+					try{
+						$con = Conecta::criarConexao();
+						$update = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa,  nu_cpf = :nu_cpf, ds_logradouro = :ds_logradouro, 
+										nu_numerolog= :nu_numerolog, nu_cep = :nu_cep, id_estado = :id_estado, id_cidade = :id_cidade, 
+										ds_bairro = :ds_bairro, ds_responsavel = :ds_responsavel, ds_email = :ds_email, nu_telefone = :nu_telefone,
+										id_regime = :id_regime, nu_aliquota = :nu_aliquota
+									WHERE id_parceiro = :id_parceiro";
+						
+						$stmt = $con->prepare($update);
+						
+						$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
+										':nu_cpf' => $nu_cpf,
+										':ds_logradouro' => $ds_logradouro,
+										':nu_numerolog' => $nu_numerolog,
+										':nu_cep' =>$nu_cep,
+										':id_estado' => $id_estado,
+										':id_cidade' => $id_cidade,
+										':ds_bairro' => $ds_bairro,
+										':ds_responsavel' => $ds_responsavel,
+										':ds_email' => $ds_email,
+										':nu_telefone' => $nu_telefone,
+										':id_regime' => $id_regime,
+										':nu_aliquota' => $nu_aliquota);
+										
+						$stmt->execute($params);
+						
+						echo "Dados gravados com sucesso!"; 
+						
+					}			
+					catch(exception $e)
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					} 
+				}
+				else{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "CPF já cadastrado";
+				}	
+			}
+			else{
+				if($this->validarCNPJ($nu_cnpj)){
+					try{
+						$con = Conecta::criarConexao();
+						$update = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa, nu_cnpj = :nu_cnpj, ds_logradouro = :ds_logradouro, 
+										nu_numerolog= :nu_numerolog, nu_cep = :nu_cep, id_estado = :id_estado, id_cidade = :id_cidade, 
+										ds_bairro = :ds_bairro, ds_responsavel = :ds_responsavel, ds_email = :ds_email, nu_telefone = :nu_telefone,
+										id_regime = :id_regime, nu_aliquota = :nu_aliquota
+									WHERE id_parceiro = :id_parceiro";
+						
+						$stmt = $con->prepare($update);
+						
+						$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
+										':nu_cnpj' => $nu_cnpj,
+										':ds_logradouro' => $ds_logradouro,
+										':nu_numerolog' => $nu_numerolog,
+										':nu_cep' =>$nu_cep,
+										':id_estado' => $id_estado,
+										':id_cidade' => $id_cidade,
+										':ds_bairro' => $ds_bairro,
+										':ds_responsavel' => $ds_responsavel,
+										':ds_email' => $ds_email,
+										':nu_telefone' => $nu_telefone,
+										':id_regime' => $id_regime,
+										':nu_aliquota' => $nu_aliquota);
+										
+						$stmt->execute($params);
+						
+						echo "Dados gravados com sucesso!"; 
+						
+					}			
+					catch(exception $e)
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					} 
+				}
+				else{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "CNPJ já cadastrado";
+				}
+			
 			}
 			
-			try{
-				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa, nu_cnpj = :nu_cnpj, nu_cpf = :nu_cpf, ds_logradouro = :ds_logradouro, 
-									nu_numerolog= :nu_numerolog, nu_cep = :nu_cep, id_estado = :id_estado, id_cidade = :id_cidade, 
-									ds_bairro = :ds_bairro, ds_responsavel = :ds_responsavel, ds_email = :ds_email, nu_telefone = :nu_telefone,
-									id_regime = :id_regime, nu_aliquota = :nu_aliquota
-							WHERE id_parceiro = :id_parceiro";
-				
-				$stmt = $con->prepare($insert);
-				
-				$params = array(':id_parceiro' => $id_parceiro,  
-								':ds_nomeempresa' => $ds_nomeempresa, 
-								':nu_cnpj' => $nu_cnpj,
-								':nu_cpf' => $nu_cpf,
-								':ds_logradouro' => $ds_logradouro,
-								':nu_numerolog' => $nu_numerolog,
-								':nu_cep' =>$nu_cep,
-                                ':id_estado' => $id_estado,
-                                ':id_cidade' => $id_cidade,
-                                ':ds_bairro' => $ds_bairro,
-                                ':ds_responsavel' => $ds_responsavel,
-                                ':ds_email' => $ds_email,
-                                ':nu_telefone' => $nu_telefone,
-								':id_regime' => $id_regime,
-								':nu_aliquota' => $nu_aliquota);
-                                
-				$stmt->execute($params);
-				
-				echo "Dados alterados com sucesso!"; 
-				
-			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			} 
 		}
 		public function dadosTotalParceiros()
 		{
