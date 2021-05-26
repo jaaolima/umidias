@@ -73,8 +73,14 @@ License: You must have a valid license purchased only from themeforest(the above
 									<a class="dropdown-item">disponiveis</a>
 								</div>
 							</div>
-							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 80px;" >Buscar por datas</button>
-								
+							<div class="dropdown position-absolute" style="top: 10px;right: 80px;">
+								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa ">Buscar por datas</button>
+								<div class="dropdown-menu">
+									<a class="dropdown-item">Pontos quentes</a>
+									<div class="dropdown-divider mx-5"></div>
+									<a class="dropdown-item">disponiveis</a>
+								</div>
+							</div>				
 						</div>
 					</div>
 					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">

@@ -94,14 +94,14 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                                 $total .= 1;
                                 if($total == 1){
                                     echo "<div class='carousel-item active'>
-                                            <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' type='button' id='excluirFoto".$fotos["id_ponto_foto"]."'>Excluir</button>
+                                            <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' type='button' id='excluirFoto".$fotos["id_ponto_foto"]."'>Excluir Foto</button>
                                             <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
                                         </div>";
                                         
                                 }
                                 else{
                                     echo "<div class='carousel-item'>
-                                        <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' type='button' id='excluirFoto".$fotos["id_ponto_foto"]."'>Excluir</button>
+                                        <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' type='button' id='excluirFoto".$fotos["id_ponto_foto"]."'>Excluir Foto</button>
                                         <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
                                     </div>";
                                 }
@@ -118,7 +118,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Próximo</span>
                     </a>
-                    <label>Adicionar:</label>
+                    <label>Adicione mais:</label>
                     <input type="file" class="form-control" id="fotos" name="fotos[]" multiple />
                 </div>
                 <div class="form-group col-md-4">
@@ -206,29 +206,42 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
 $(document).ready(function() {
 	    <?php 
            while($excluirFoto = $dadosFoto->fetch()){
-                echo "
-                $('#excluirFoto".$excluirFoto['id_ponto_foto']."').on('click', function(e){   
-                    $.ajax({
-                        url: 'appPonto/excluir_foto_ponto.php'
-                        , data: {
-                            id_ponto_foto: ".$excluirFoto["id_ponto_foto"].",
-                        }
-                        , type: 'post'
-                        , success: function(html) { 
-                            swal.fire({ 
-                                position: 'top-right',
-                                type: 'success',
-                                title: html,
-                                showConfirmButton: true
-                            });
-                            
-                            redirectTo('appPonto/alterar_cadastro.php?id_ponto=".$id_ponto."');
-                        }
-                        , error: function (data) {
-                            swal.fire('Erro', data.responseText, 'error');
-                        }
-                    });		
-                });";
+                echo "swal.fire({
+                    title: 'Tem certeza?',
+                    text: 'Desejar excluir essa Foto?',
+                    type: 'warning',
+                    showCancelButton: true,
+                    cancelButtonColor: '#fd397a',
+                    confirmButtonText: 'Sim, posseguir!',
+                    cancelButtonText: 'Cancelar'
+                }).then(function(result) {
+                    if (result.value) {
+                        $('#excluirFoto".$excluirFoto['id_ponto_foto']."').on('click', function(e){   
+                            $.ajax({
+                                url: 'appPonto/excluir_foto_ponto.php'
+                                , data: {
+                                    id_ponto_foto: ".$excluirFoto["id_ponto_foto"].",
+                                }
+                                , type: 'post'
+                                , success: function(html) { 
+                                    swal.fire({ 
+                                        position: 'top-right',
+                                        type: 'success',
+                                        title: html,
+                                        showConfirmButton: true
+                                    });
+                                    
+                                    redirectTo('appPonto/alterar_cadastro.php?id_ponto=".$id_ponto."');
+                                }
+                                , error: function (data) {
+                                    swal.fire('Erro', data.responseText, 'error');
+                                }
+                            });		
+                        });
+                        
+                    }
+                });
+                ";
             }
         ?>
         
