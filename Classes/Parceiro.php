@@ -125,7 +125,7 @@
 							where nu_cnpj=:nu_cnpj";
 				
 				$stmt = $con->prepare($select); 
-				$params = array(':nu_cpnj' => $nu_cnpj);
+				$params = array(':nu_cnpj' => $nu_cnpj);
 				
 				$stmt->execute($params);
 				$valor = $stmt->fetch();
