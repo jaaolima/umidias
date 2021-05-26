@@ -76,7 +76,7 @@
 			}
 			else{
 				if($this->validarCNPJ($nu_cnpj)){
-					try{
+					/*try{
 						$con = Conecta::criarConexao();
 						$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
 									VALUES (:ds_nomeempresa, :nu_cnpj, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
@@ -101,7 +101,8 @@
 						
 						echo "Dados gravados com sucesso!"; 
 						
-					}
+					}*/
+					echo "passou";
 					catch(exception $e)
 					{
 						header('HTTP/1.1 500 Internal Server Error');
@@ -130,12 +131,12 @@
 				$stmt->execute($params);
 				$valor = $stmt->fetch();
 				var_dump($valor);
-				/*if($valor["nu_cnpj"] == 0){
+				if($valor["nu_cnpj"] == 0){
 					return true;
 				}
 				else{
 					return false;
-				}*/
+				}
 			}
 			catch(exception $e)
 			{
