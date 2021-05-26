@@ -63,8 +63,10 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--begin::Wrapper-->
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 					<div class="form-group row"> 
-						<div class="form-group col-md-12">
+						<div class="form-group col-md-12 position-relative">
 							<div id="map" class="rounded"></div>
+							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 220px;" >Filtros</button>
+							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 80px;" >Buscar por datas</button>
 						</div>
 					</div>
 					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
