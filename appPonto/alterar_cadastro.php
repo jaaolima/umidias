@@ -224,7 +224,7 @@ $(document).ready(function() {
                             swal.fire('Erro', data.responseText, 'error');
                         }
                     });		
-                });"
+                });";
             }
         ?>
         
