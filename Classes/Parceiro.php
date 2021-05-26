@@ -19,64 +19,47 @@
 			$nu_aliquota 		= $dados['nu_aliquota'];
 			$nu_cpf 	    	= $dados['nu_cpf'];
 			if($id_regime === "CPF"){
-				try{ 
-					$con = Conecta::criarConexao();
-					
-					$select = "SELECT count(nu_cpf) as nu_cpf
-								FROM tb_parceiro
-								where nu_cpf = :nu_cpf";
-					
-					$stmt = $con->prepare($select); 
-					$params = array(':nu_cpf' => $nu_cpf);
-					
-					$stmt->execute($params);
-					$valor = $stmt->fetch();
-					if($valor["nu_cpf"] == 0){
-						try{
-							$con = Conecta::criarConexao();
-							$insert = "INSERT into tb_parceiro (ds_nomeempresa,  nu_cpf, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
-										VALUES (:ds_nomeempresa, :nu_cpf,  :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
-							
-							$stmt = $con->prepare($insert);
-							
-							$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
-											':nu_cpf' => $nu_cpf,
-											':ds_logradouro' => $ds_logradouro,
-											':nu_numerolog' => $nu_numerolog,
-											':nu_cep' =>$nu_cep,
-											':id_estado' => $id_estado,
-											':id_cidade' => $id_cidade,
-											':ds_bairro' => $ds_bairro,
-											':ds_responsavel' => $ds_responsavel,
-											':ds_email' => $ds_email,
-											':nu_telefone' => $nu_telefone,
-											':id_regime' => $id_regime,
-											':nu_aliquota' => $nu_aliquota);
-											
-							$stmt->execute($params);
-							
-							echo "Dados gravados com sucesso!"; 
-							
-						}
-						catch(exception $e)
-						{
-							header('HTTP/1.1 500 Internal Server Error');
-							print "ERRO:".$e->getMessage();		
-						}  
-					}
-					else{
-						echo "CPF já cadastrado";
-					}
+				if($this->validarCPF($nu_cpf)){
+					try{
+						$con = Conecta::criarConexao();
+						$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cpf,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
+									VALUES (:ds_nomeempresa, :nu_cpf, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
+						
+						$stmt = $con->prepare($insert);
+						
+						$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
+										':nu_cpf' => $nu_cpf,
+										':ds_logradouro' => $ds_logradouro,
+										':nu_numerolog' => $nu_numerolog,
+										':nu_cep' =>$nu_cep,
+										':id_estado' => $id_estado,
+										':id_cidade' => $id_cidade,
+										':ds_bairro' => $ds_bairro,
+										':ds_responsavel' => $ds_responsavel,
+										':ds_email' => $ds_email,
+										':nu_telefone' => $nu_telefone,
+										':id_regime' => $id_regime,
+										':nu_aliquota' => $nu_aliquota);
+										
+						$stmt->execute($params);
+						
+						echo "Dados gravados com sucesso!"; 
+						
+					}			
+					catch(exception $e)
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					} 
 				}
-				catch(exception $e)
-				{
+				else{
 					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
+					print "CPF já cadastrado";
 				}	
 			}
 			else{
 				if($this->validarCNPJ($nu_cnpj)){
-					/*try{
+					try{
 						$con = Conecta::criarConexao();
 						$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
 									VALUES (:ds_nomeempresa, :nu_cnpj, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
@@ -101,14 +84,12 @@
 						
 						echo "Dados gravados com sucesso!"; 
 						
-					}
-					
+					}			
 					catch(exception $e)
 					{
 						header('HTTP/1.1 500 Internal Server Error');
 						print "ERRO:".$e->getMessage();		
-					} */
-					echo "passou";
+					} 
 				}
 				else{
 					header('HTTP/1.1 500 Internal Server Error');
@@ -133,6 +114,33 @@
 				$stmt->execute($params);
 				$valor = $stmt->fetch();
 				if($valor["nu_cnpj"] == 0){
+					return true;
+				}
+				else{
+					return false;
+				}
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
+		public function validarCPF($nu_cpf)
+		{
+			try{ 
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT count(nu_cpf) as nu_cpf
+							FROM tb_parceiro
+							where nu_cpf=:nu_cpf";
+				
+				$stmt = $con->prepare($select); 
+				$params = array(':nu_cpf' => $nu_cpf);
+				
+				$stmt->execute($params);
+				$valor = $stmt->fetch();
+				if($valor["nu_cpf"] == 0){
 					return true;
 				}
 				else{
