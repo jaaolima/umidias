@@ -222,7 +222,7 @@ $(document).ready(function() {
                                 showConfirmButton: true
                             });
                             
-                            //redirectTo('appPonto/listar_ponto.php');
+                            redirectTo('appPonto/alterar_cadastro.php?id_ponto=".$id_ponto."');
                         }
                         , error: function (data) {
                             swal.fire('Erro', data.responseText, 'error');
