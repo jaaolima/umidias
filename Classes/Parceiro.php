@@ -75,65 +75,44 @@
 				}	
 			}
 			else{
-
-				try{ 
-					$con = Conecta::criarConexao();
-					
-					$select = "SELECT count(nu_cnpj) as nu_cnpj
-								FROM tb_parceiro
-								where nu_cnpj = :nu_cnpj";
-					
-					$stmt = $con->prepare($select); 
-					$params = array(':nu_cnpj' => $nu_cnpj);
-					
-					$stmt->execute($params);
-					$valor = $stmt->fetch();
-					if($valor["nu_cnpj"] == 0){
-						try{
-							$con = Conecta::criarConexao();
-							$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
-										VALUES (:ds_nomeempresa, :nu_cnpj, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
-							
-							$stmt = $con->prepare($insert);
-							
-							$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
-											':nu_cnpj' => $nu_cnpj,
-											':ds_logradouro' => $ds_logradouro,
-											':nu_numerolog' => $nu_numerolog,
-											':nu_cep' =>$nu_cep,
-											':id_estado' => $id_estado,
-											':id_cidade' => $id_cidade,
-											':ds_bairro' => $ds_bairro,
-											':ds_responsavel' => $ds_responsavel,
-											':ds_email' => $ds_email,
-											':nu_telefone' => $nu_telefone,
-											':id_regime' => $id_regime,
-											':nu_aliquota' => $nu_aliquota);
-											
-							$stmt->execute($params);
-							
-							echo "Dados gravados com sucesso!"; 
-							
-						}
-						catch(exception $e)
-						{
-							header('HTTP/1.1 500 Internal Server Error');
-							print "ERRO:".$e->getMessage();		
-						} 
+				if($this->validarCNPJ($nu_cnpj)){
+					try{
+						$con = Conecta::criarConexao();
+						$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
+									VALUES (:ds_nomeempresa, :nu_cnpj, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
+						
+						$stmt = $con->prepare($insert);
+						
+						$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
+										':nu_cnpj' => $nu_cnpj,
+										':ds_logradouro' => $ds_logradouro,
+										':nu_numerolog' => $nu_numerolog,
+										':nu_cep' =>$nu_cep,
+										':id_estado' => $id_estado,
+										':id_cidade' => $id_cidade,
+										':ds_bairro' => $ds_bairro,
+										':ds_responsavel' => $ds_responsavel,
+										':ds_email' => $ds_email,
+										':nu_telefone' => $nu_telefone,
+										':id_regime' => $id_regime,
+										':nu_aliquota' => $nu_aliquota);
+										
+						$stmt->execute($params);
+						
+						echo "Dados gravados com sucesso!"; 
+						
 					}
-					else{
-						echo "CNPJ já cadastrado";
-					}
+					catch(exception $e)
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					} 
 				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
-				}	
+				else{
+					echo "CNPJ já cadastrado";
+				}
+			
 			}
-			
-
-			
 			
 		}
 		public function validarCNPJ($nu_cnpj)
