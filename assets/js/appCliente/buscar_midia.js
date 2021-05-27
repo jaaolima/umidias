@@ -17,7 +17,8 @@ $(document).ready(function() {
         });		
 
 	});
-
+    
+    var id_midia = $("#id_midia").val();
     $.ajax({
         url: 'appCliente/listar_midia.php'
         , data: {id_midia: id_midia}
