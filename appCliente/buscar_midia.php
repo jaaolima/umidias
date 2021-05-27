@@ -72,7 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="dropdown position-absolute" style="top: 10px;right: 80px;">
 								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa ">Buscar por datas</button>
-								<div class="dropdown-menu">
+								<div class="dropdown-menu dropdown-menu-right">
 									<div class="row">
 										<h4 class="texto-negrito">Selecione o periodo que deseja alugar</h4>
 									</div>
