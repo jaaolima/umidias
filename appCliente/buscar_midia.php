@@ -102,6 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			</div>
 			<!--end::Page-->
 		</div>
+		<input type="hidden" value="<?php echo $id_midia?>" id="id_midia"> 
 		<!--end::Main-->
 		<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
 		<!--begin::Global Config(global config for global JS scripts)-->
