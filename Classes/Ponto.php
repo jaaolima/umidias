@@ -558,14 +558,16 @@
     			print "ERRO:".$e->getMessage();		
 			} 
 		}
-		public function listarOptionsLocal()
+		public function listarOptionsLocal($id_midia)
 		{
 			try{
 				$con = Conecta::criarConexao();
 				$select = "SELECT ds_local
-							FROM tb_ponto ";
+							FROM tb_ponto 
+							where id_midia = :id_midia";
 				$stmt = $con->prepare($select);
-				$stmt->execute();
+				$params = array(':id_midia' => $id_midia);
+				$stmt->execute($params);
 
 				$options = "";
 

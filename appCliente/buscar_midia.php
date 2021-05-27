@@ -6,8 +6,8 @@
 
 	require_once("../Classes/Ponto.php");
 	$ponto = new Ponto();
-	$optionsLocal = $ponto->listarOptionsLocal($_POST);
 	$id_midia = $_GET["id_midia"];
+	$optionsLocal = $ponto->listarOptionsLocal($id_midia);
 	
 ?>
 <!DOCTYPE html>
