@@ -72,17 +72,18 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="dropdown position-absolute" style="top: 10px;right: 80px;">
 								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa ">Buscar por datas</button>
-								<div class="dropdown-menu dropdown-menu-right">
+								<div class="dropdown-menu dropdown-menu-right" style="padding:20px;">
 									<div class="row">
 										<h4 class="texto-negrito">Selecione o periodo que deseja alugar</h4>
 									</div>
 									<div class="row">
-										<div class="col-2">
-											<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
-												<legend class="legend-border mb-0">Data Inicial</legend>
-												<input class="border-0 w-100" style="height: 27px;" type="date">
-											</fieldset> 
-										</div>
+										<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
+											<legend class="legend-border mb-0">Data Inicial</legend>
+											<input class="border-0 w-100" style="height: 27px;" type="date">
+										</fieldset> 
+									</div>
+									<div class="row">
+										<div id="calendario"></div>
 									</div>
 								</div>
 							</div>				
@@ -107,12 +108,18 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/plugins/global/plugins.bundle.js"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 		<script>
 			// The following example creates complex markers to indicate beaches near
 		// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 		// to the base of the flagpole.
 		jQuery(document).ready(function() {
 			demo3();
+		});
+		$(function() {
+			$( "#calendario" ).datepicker();
 		});
 
 		var demo3 = function() {
