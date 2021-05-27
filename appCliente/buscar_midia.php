@@ -4,6 +4,9 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 
+	require_once("../Classes/Ponto.php");
+	$ponto = new Ponto();
+	$optionsLocal = $ponto->listarOptionsLocal($_POST);
 	$id_midia = $_GET["id_midia"];
 	
 ?>
@@ -64,6 +67,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div id="map" class="rounded"></div>
 							<div style="top:10px;left:80px;" class="position-absolute col-4">
 								<input type="text" class="form-control" placeholder="Pesquise a região" style="border: 0;border-radius: 16px;">
+								<datalist>
+									<?php echo $optionsLocal; ?>
+								</datalist>
 							</div>
 							<div class="dropdown position-absolute" style="top: 10px;right: 230px;">						
 								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa" id="filtro">Filtros</button>

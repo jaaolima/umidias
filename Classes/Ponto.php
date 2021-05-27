@@ -532,6 +532,31 @@
     			print "ERRO:".$e->getMessage();		
 			} 
 		}
+		public function listarOptionsLocal()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				$select = "SELECT ds_local
+							FROM tb_ponto ";
+				$stmt = $con->prepare($select);
+				$stmt->execute();
+
+				$options = "";
+
+				while($dados = $stmt->fetch())
+				{
+					$options.= "<option>".$dados['ds_local']."</option>";
+
+				}
+				return $options;
+
+			}
+			catch(exception $e)
+			{
+			header('HTTP/1.1 500 Internal Server Error');
+			print $e->getMessage();
+			}
+		}
 		
 	}	
 
