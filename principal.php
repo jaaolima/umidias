@@ -330,7 +330,7 @@
 																								</svg>
 																							</span>
 																							<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
-																							<a href="appCliente/listar_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Alugar mídia</a>
+																							<a href="appCliente/buscar_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Alugar mídia</a>
 																						</div>';
 																			}
 																			else{
@@ -343,7 +343,7 @@
 																								</svg>
 																							</span>
 																							<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
-																							<a href="appCliente/listar_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Alugar mídia</a>
+																							<a href="appCliente/buscar_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Alugar mídia</a>
 																						</div>';
 																			}
 
