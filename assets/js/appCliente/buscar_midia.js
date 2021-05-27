@@ -15,8 +15,12 @@ $(document).ready(function() {
                 swal("Erro", data.responseText, "error");
             }
         });	
-        $('#filtro_mapa').addClass("btn-mapa-active");
-		$('#filtro_mapa').removeClass("btn-mapa");
+
+	});
+
+    $("#filtro_mapa").on("click", function(e){ 
+        $(this).addClass("btn-mapa-active");
+		$(this).removeClass("btn-mapa");
 		$('#filtro').removeClass("btn-mapa-active");
 		$('#filtro').addClass("btn-mapa");	
 
