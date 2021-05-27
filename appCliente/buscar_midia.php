@@ -74,7 +74,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div class="dropdown position-absolute" style="top: 10px;right: 80px;">
-								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa ">Buscar por datas</button>
+								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por datas</button>
 								<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
 									<div class="row">
 										<h4 class="texto-negrito mb-4">Selecione a data inicial</h4>
