@@ -26,6 +26,14 @@ $(document).ready(function() {
 
 	});
 
+    $("#filtro").on("click", function(e){ 
+        $(this).addClass("btn-mapa-active");
+		$(this).removeClass("btn-mapa");
+		$('#filtro_mapa').removeClass("btn-mapa-active");
+		$('#filtro_mapa').addClass("btn-mapa");	
+
+	});
+
     $("#busca_quentes").on("click", function(e){ 
         var id_midia = $("#id_midia").val();
         $.ajax({
