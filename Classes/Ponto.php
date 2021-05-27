@@ -126,7 +126,7 @@
 		public function listarPonto(array $dados)
 		{
 			$dt_inicial = $dados["date"];
-			$id_busca = $dados["id_busca"]
+			$id_busca = $dados["id_busca"];
 			if($id_busca === "data"){
 				$id_midia = $dados["id_midia"];
 			}
