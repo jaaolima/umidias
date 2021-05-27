@@ -384,7 +384,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		//evento dispara quando retira o foco do campo texto
 		mes.onblur = function(){
-			campoDoCalculo.innerHTML = "<h2>"+<?php echo $dados["nu_valor"] ?> + ((<?php echo $dados["nu_valor"] ?>* 0.2) * mes.value) +"</h2>";
+			valor.innerHTML = "<h2>"+<?php echo $dados["nu_valor"] ?> + ((<?php echo $dados["nu_valor"] ?>* 0.2) * mes.value) +"</h2>";
 		}
 		var demo3 = function() {
 			var map = new GMaps({
