@@ -17,4 +17,18 @@ $(document).ready(function() {
         });		
 
 	});
+
+    $.ajax({
+        url: 'appCliente/listar_midia.php'
+        , data: {id_midia: id_midia}
+        , type: 'post'
+        , success: function(html) {
+            $("#lista").html(html);
+            $("#lista").slideDown(); 
+        }
+        , error: function (data) {
+            $("#lista").slideUp();
+            swal("Erro", data.responseText, "error");
+        }
+    });	
 });
