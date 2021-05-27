@@ -76,12 +76,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<h4 class="texto-negrito">Selecione o periodo que deseja alugar</h4>
 									</div>
-									<div class="row">
+									<!--<div class="row">
 										<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
 											<legend class="legend-border mb-0">Data Inicial</legend>
 											<input class="border-0 w-100" style="height: 27px;" type="date">
 										</fieldset> 
-									</div>
+									</div>-->
 									<div class="row">
 										<div id="calendario"></div>
 									</div>
