@@ -64,12 +64,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div id="map" class="rounded"></div>
 							<div style="top:10px;left:80px;" class="position-absolute col-4">
 								<input type="text" class="form-control" placeholder="Pesquise a região" style="border: 0;border-radius: 16px;">
-								<span class="input-group-addon">
-									<button class="fa fa-search" style="background:transparent;border:none"></button>
-								</span>	
 							</div>
 							<div class="dropdown position-absolute" style="top: 10px;right: 230px;">						
-								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa ">Filtros</button>
+								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa" id="filtro">Filtros</button>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" id="busca_quentes">Pontos quentes</a>
 									<div class="dropdown-divider mx-5"></div>

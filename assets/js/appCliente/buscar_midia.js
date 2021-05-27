@@ -14,7 +14,11 @@ $(document).ready(function() {
                 $("#lista").slideUp();
                 swal("Erro", data.responseText, "error");
             }
-        });		
+        });	
+        $(this).addClass("btn-mapa-active");
+		$(this).removeClass("btn-mapa");
+		$('#filtro').removeClass("btn-mapa-active");
+		$('#filtro').addClass("btn-mapa");	
 
 	});
 
