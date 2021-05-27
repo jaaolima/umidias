@@ -290,10 +290,18 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 												</div>
 												<div class="separator separator-solid"></div>
+												<?php if($id_midia == 1) : ?>
+												<div class="my-6 mx-6 text-right">
+													<h3 class="font-weight-bolder">Total</h3>
+													<div id="valor"></div>
+												</div>
+												<?php endif ;?>	
+												<?php if($id_midia == 2) : ?>
 												<div class="my-6 mx-6 text-right">
 													<h3 class="font-weight-bolder">Total</h3>
 													<h2 class="font-weight-bolder"><?php echo $dados["nu_valor"] + ($dados["nu_valor"] * 0.2) ;?></h2>
 												</div>
+												<?php endif ;?>	
 												<div class="my-6 mx-6">
 													<button id="alugar" type="button"class="btn btn-primary w-100">Alugar Mídia</button>
 												</div>
@@ -371,6 +379,13 @@ License: You must have a valid license purchased only from themeforest(the above
 			demo3();
 		});
 
+		var mes = document.getElementById("mes");
+		var valor = document.getElementById("valor")
+
+		//evento dispara quando retira o foco do campo texto
+		mes.onblur = function(){
+			campoDoCalculo.innerHTML = "<h2>"+<?php echo $dados["nu_valor"] ?> + ((<?php echo $dados["nu_valor"] ?>* 0.2) * mes.value) +"</h2>";
+		}
 		var demo3 = function() {
 			var map = new GMaps({
 				div: '#map',
