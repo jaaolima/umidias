@@ -74,7 +74,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa ">Buscar por datas</button>
 								<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
 									<div class="row">
-										<h4 class="texto-negrito">Selecione a data inicial</h4>
+										<h4 class="texto-negrito mb-4">Selecione a data inicial</h4>
 									</div>
 									<!--<div class="row">
 										<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
@@ -84,6 +84,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>-->
 									<div class="row">
 										<div id="calendario"></div>
+									</div>
+									<div class="row">
+										<a id="fechar dropdown" class="text-primary">cancelar</a>
+										<button id="aplicar" class="btn btn-primary">Aplicar</button>
 									</div>
 								</div>
 							</div>				
