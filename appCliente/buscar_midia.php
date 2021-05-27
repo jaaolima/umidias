@@ -62,7 +62,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="form-group row"> 
 						<div class="form-group col-md-12 position-relative">
 							<div id="map" class="rounded"></div>
-							<div class="dropdown position-absolute" style="top: 10px;right: 230px;">
+							<input type="text" class="form-control" placeholder="Pesquise a região" style="top:10px;left:80px;" class="rounded">
+							<div class="dropdown position-absolute" style="top: 10px;right: 230px;">						
 								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa ">Filtros</button>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" id="busca_quentes">Pontos quentes</a>
