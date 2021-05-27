@@ -384,8 +384,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		//evento dispara quando retira o foco do campo texto
 		mes.onblur = function(){
-			taxa = <?php echo $dados["nu_valor"] ?> * mes.value) * 0.2;
-			Total = <?php echo $dados["nu_valor"] ?> * mes.value
+			taxa = <?php echo $dados["nu_valor"] ?> * mes.value * 0.2;
+			Total = <?php echo $dados["nu_valor"] ?> * mes.value;
 			valor.innerHTML = "<h2>"+ parseInt(taxa) + parseInt(total)  +"</h2>";
 		}
 		var demo3 = function() {
