@@ -18,23 +18,24 @@ $(document).ready(function() {
 
 	});
 
-    $("#aplicar").on("keyup", function(e){ 
-        var id_midia = $("#id_midia").val();
-        var busca = $("#busca").val();
-        $.ajax({
-            url: 'appCliente/listar_midia.php'
-            , data: {busca: busca, id_midia: id_midia, id_busca: 'busca'}
-            , type: 'post'
-            , success: function(html) {
-                $("#lista").html(html);
-                $("#lista").slideDown(); 
-            }
-            , error: function (data) {
-                $("#lista").slideUp();
-                swal("Erro", data.responseText, "error");
-            }
-        });	
-
+    $("#aplicar").keypress(function(e){ 
+        if(e.which == 13){
+            var id_midia = $("#id_midia").val();
+            var busca = $("#busca").val();
+            $.ajax({
+                url: 'appCliente/listar_midia.php'
+                , data: {busca: busca, id_midia: id_midia, id_busca: 'busca'}
+                , type: 'post'
+                , success: function(html) {
+                    $("#lista").html(html);
+                    $("#lista").slideDown(); 
+                }
+                , error: function (data) {
+                    $("#lista").slideUp();
+                    swal("Erro", data.responseText, "error");
+                }
+            });	
+        }
 	});
 
 
