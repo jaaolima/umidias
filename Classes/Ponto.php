@@ -123,8 +123,10 @@
 
 			
 		}
-		public function listarPonto($id_midia)
+		public function listarPonto(array $dados)
 		{
+			$dt_inicial = $dados["date"];
+			$id_midia = $dados["date"];
 			try{
 				$con = Conecta::criarConexao();
 				

@@ -5,8 +5,7 @@
 	
 	require_once("../Classes/Ponto.php");
 	$ponto = new Ponto();
-	$id_midia = $_GET["id_midia"];
-	$retorno = $ponto->listarPonto($id_midia);
+	$retorno = $ponto->listarPonto($_POST);
 	
 ?>
 <div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
