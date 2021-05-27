@@ -86,7 +86,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div id="calendario"></div>
 									</div>
 									<div class="row float-right mt-4">
-										<a id="fechar dropdown" class="text-primary">cancelar</a>
+										<a id="fechar dropdown" class="text-primary mr-4 mt-2">cancelar</a>
 										<button id="aplicar" class="btn btn-primary">Aplicar</button>
 									</div>
 								</div>
