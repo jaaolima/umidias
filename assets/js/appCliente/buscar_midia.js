@@ -4,7 +4,7 @@ $(document).ready(function() {
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php'
-            , data: {date: date, id_midia: id_midia}
+            , data: {date: date, id_midia: id_midia, id_busca: data}
             , type: 'post'
             , success: function(html) {
                 $("#lista").html(html);
@@ -17,11 +17,11 @@ $(document).ready(function() {
         });		
 
 	});
-    
+
     var id_midia = $("#id_midia").val();
     $.ajax({
         url: 'appCliente/listar_midia.php'
-        , data: {id_midia: id_midia}
+        , data: {id_midia: id_midia, id_busca: NULL}
         , type: 'post'
         , success: function(html) {
             $("#lista").html(html);
