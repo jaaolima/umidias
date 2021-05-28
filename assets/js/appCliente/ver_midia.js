@@ -178,7 +178,7 @@ $(document).ready(function() {
 				swal.fire({
                     position: 'top-right',
                     type: 'success',
-                    title: valor,
+                    title: valor.length,
                     showConfirmButton: true
                 });
 				var id_material = $("#id_material").val();
