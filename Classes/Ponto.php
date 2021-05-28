@@ -603,7 +603,7 @@
 				$stmt = $con->prepare($insert);
 				
 				$params = array(':id_usuario' => $id_usuario,
-								':id_ponto' => $ds_tipo,
+								':id_ponto' => $id_ponto,
 								':dt_inicial' => $dt_inicial,
 								':dt_final' => $dt_final,
 								':ds_arte' => $ds_arte);
