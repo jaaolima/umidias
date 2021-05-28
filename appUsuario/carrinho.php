@@ -51,7 +51,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 
                                     <?php
                                         var_dump($retorno);
-                                        if(empty($retorno){
+                                        /*if(empty($retorno){
                                             echo "<div class='card card-custom card-stretch gutter-b'>
                                                     <h1>Seu carrinho está vazio</h1>
                                                 </div>";
@@ -110,7 +110,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </div>
                                                 </div> ";
                                             }
-                                        }
+                                        }*/
                                         
 
                                     ?>
