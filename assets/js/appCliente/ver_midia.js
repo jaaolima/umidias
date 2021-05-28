@@ -168,7 +168,7 @@ $(document).ready(function() {
 			}
 			if(id_midia == 1){
 				var id_ponto = $("#id_ponto").val();
-				var valor =	$("bisemana").val();
+				var valor =	$("#bisemana").val();
 				var bisemana = [];
 				/*for (var i=0;i<valor.lenght;i++){
 					if (valor[i].checked == true){
