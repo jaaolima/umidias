@@ -172,7 +172,7 @@ $(document).ready(function() {
 				var bisemana = [];
 				for (var i=0;i<valor.lenght;i++){
 					if (valor[i].checked == true){
-						bisemana.push($valor[i].value);
+						bisemana.push(valor[i].value);
 					}
 				}
 				var id_material = $("#id_material").val();
