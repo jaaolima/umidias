@@ -294,7 +294,7 @@
 				$stmt = $con->prepare($select); 
 				$params = array(':id_usuario' => $id_usuario);
 				
-				$stmt->execute();
+				$stmt->execute($params);
 
 				return $stmt;
 				
