@@ -9,6 +9,7 @@
 
 	$id_ponto = $_GET["id_ponto"]; 
 	$id_midia = $_GET["id_midia"]; 
+	$id_usuario = $_SESSION['id_usuario'];
 
 	$material = new material();
 	$bisemana = new Bisemana();
@@ -334,6 +335,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 													<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
 													<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
+													<input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario; ?>">
 												</div>
 												<div class="separator separator-solid"></div>
 												<div class="my-6 mx-6 d-flex">

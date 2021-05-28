@@ -100,6 +100,41 @@ $(document).ready(function() {
 			
 	});
 	
+	$("#carrinho").on("click", function(e){
+			
+		if(validarDetalhe())
+		{
+			var id_midia = $("#id_midia").val();
+			var id_usuario = $("#id_usuario").val();
+			var id_ponto = $("#id_ponto").val();
+			if(id_midia == 2){
+				$.ajax({
+					url: 'appUsuario/gravar_carrinho.php'
+					, data:	{id_usuario: id_usuario, id_ponto: id_ponto}
+					, type: 'post'
+					, success: function() {
+						var dt_inicial = $("#dt_inicial").val();
+						var mes = $("#mes").val();
+						var ds_arte = $('input[type=file]').val()
+						redirectTo("appUsuario/carrinho.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&mes="+mes+"&ds_arte="+ds_arte);	
+					}
+					, error: function (data) {
+						swal.fire("Erro", data.responseText, "error");
+					}
+				});	
+				
+			}
+			if(id_midia == 1){
+				var id_ponto = $("#id_ponto").val();
+				var bisemana = $("#bisemana").val();
+				var id_material = $("#id_material").val();
+				var ds_arte = $('input[type=file]').val();
+				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
+			}
+			
+		}	
+	});
+
 	$("#pagamento").on("click", function(e){
 			
 		if(validarDetalhe())
@@ -110,14 +145,14 @@ $(document).ready(function() {
 				var dt_inicial = $("#dt_inicial").val();
 				var mes = $("#mes").val();
 				var ds_arte = $('input[type=file]').val()
-				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&mes="+mes+"&ds_arte="+ds_arte);	
+				redirectTo("appCliente/carrinho.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&mes="+mes+"&ds_arte="+ds_arte);	
 			}
 			if(id_midia == 1){
 				var id_ponto = $("#id_ponto").val();
 				var bisemana = $("#bisemana").val();
 				var id_material = $("#id_material").val();
 				var ds_arte = $('input[type=file]').val();
-				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
+				redirectTo("appCliente/carrinho.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
 			}
 			
 		}	
