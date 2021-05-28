@@ -47,7 +47,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <h3>Carrinho:</h3>
                                 </div>
                                 <div class="separator separator-solid"></div>
-                                <div class="my-6 mx-6 d-flex">
+                                <div class="my-6 mx-6 d-flex row">
                                     <?php
                                         while($dados = $retorno->fetch()){
                                             echo "<div class='col-4' >
