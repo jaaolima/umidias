@@ -585,6 +585,38 @@
 			print $e->getMessage();
 			}
 		}
+		public function alugar(array $dados)
+		{
+
+			$id_usuario	    = $dados['id_usuario'];
+			$id_ponto	    = $dados['id_ponto'];
+			$dt_inicial	    = $dados['dt_inicial'];
+			$dt_final	    = $dados['dt_final'];
+			$ds_arte	    = $dados['ds_arte'];
+
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte)
+							VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte)";
+				
+				$stmt = $con->prepare($insert);
+				
+				$params = array(':id_usuario' => $id_usuario,
+								':id_ponto' => $ds_tipo,
+								':dt_inicial' => $dt_inicial,
+								':dt_final' => $dt_final,
+								':ds_arte' => $ds_arte);
+                                
+				$stmt->execute($params);
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+        }
 		
 	}	
 
