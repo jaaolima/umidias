@@ -293,13 +293,13 @@ License: You must have a valid license purchased only from themeforest(the above
 												<?php if($id_midia == 2) : ?>
 												<div class="my-6 mx-6 text-right">
 													<h3 class="font-weight-bolder">Total</h3>
-													<div id="valor"></div>
+													<div id="valor2"></div>
 												</div>
 												<?php endif ;?>	
 												<?php if($id_midia == 1) : ?>
 												<div class="my-6 mx-6 text-right">
 													<h3 class="font-weight-bolder">Total</h3>
-													<h2 class="font-weight-bolder"><?php echo $dados["nu_valor"] + ($dados["nu_valor"] * 0.2) ;?></h2>
+													<div id="valor1"></div>
 												</div>
 												<?php endif ;?>	
 												<div class="my-6 mx-6">
@@ -379,15 +379,27 @@ License: You must have a valid license purchased only from themeforest(the above
 			demo3();
 		});
 
+		//calculo front
 		var mes = document.getElementById("mes");
-		var valor = document.getElementById("valor");
+		var valor1 = document.getElementById("valor1");
 
-		//evento dispara quando retira o foco do campo texto
 		mes.onblur = function(){
 			var taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * mes.value);
 			var total = <?php echo $dados["nu_valor"] ?> * mes.value;
-			valor.innerHTML = "<h2>"+ parseInt(taxa) + parseInt(total)  +"</h2>";
+			valor1.innerHTML = "<h2>"+ parseInt(taxa) + parseInt(total)  +"</h2>";
 		}
+
+		//calculo outdoor
+		var bisemana = document.getElementById("bisemana");
+		var totalBisemana = $('input[type=checkbox]:checked').length;
+		var valor2 = document.getElementById("valor2");
+
+		mes.onblur = function(){
+			var taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana);
+			var total = <?php echo $dados["nu_valor"] ?> * totalBisemana;
+			valor1.innerHTML = /*"<h2>"+ parseInt(taxa) + parseInt(total)  +"</h2>"*/ totalBisemana;
+		}
+
 		var demo3 = function() {
 			var map = new GMaps({
 				div: '#map',
