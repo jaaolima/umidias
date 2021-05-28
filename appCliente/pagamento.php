@@ -77,6 +77,8 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_boleto" style="display: none;">
                                 <div class="my-6 mx-6">
                                     <h3>Pagamento em boleto:</h3>
+                                    <div class="separator separator-solid"></div>
+                                    <button class="btn btn-primary" id="gerar_boleto">Gerar boleto</button>
                                 </div>
                             </div>
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_credito" style="display: none;">
@@ -117,7 +119,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         $date = new DateTime($dt_inicial);
                                         $date->modify('+'.$mes.'months');
                                         $dt_final = $date->format('Y-m-d');
-                                        echo $dt_inicial." até". $dt_final;
+                                        echo $dt_inicial." até ". $dt_final;
                                         ?> 
 
                                         </span>
