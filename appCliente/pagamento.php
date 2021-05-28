@@ -6,7 +6,7 @@
     require_once("../Classes/Ponto.php");
 
     $id_ponto = $_GET["id_ponto"];
-
+ 
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
     $id_midia = $dados["id_midia"];
@@ -15,7 +15,7 @@
         $id_material = $_GET["id_material"];
     }
     if($id_midia == 2){
-        $dt_inicial = $_GET["dt_inicial"];
+        $dt_inicial	= date('Y-m-d',strtotime($_GET["dt_inicial"]));
         $mes = $_GET["mes"];
     }
 ?>
@@ -112,7 +112,15 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Período</h4>
-                                        <span>01/01/1970 até 01/01/1970</span>
+                                        <span>
+                                        <?php 
+                                        $date = new DateTime($dt_inicial);
+                                        $date->modify('+'.$mes.'months');
+                                        $dt_final = $date->format('Y-m-d');
+                                        echo $dt_inicial." até". $dt_final;
+                                        ?> 
+
+                                        </span>
                                     </div>
                                     <?php if($id_midia == 2) : ?>
                                     <div class="my-12">
