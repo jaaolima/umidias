@@ -116,9 +116,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Período</h4>
                                         <?php 
-                                            for($i=0; $i < count($bisemana) ; $i++) { 
+                                            /*for($i=0; $i < count($bisemana) ; $i++) { 
                                                 echo "<span>".$bisemana[$i]."</span>";
-                                            }
+                                            }*/
+                                            var_dump($bisemana);
                                         ?> 
                                     </div>
                                     <?php endif; ?>
