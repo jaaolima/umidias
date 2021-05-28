@@ -50,6 +50,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="my-6 mx-6 d-flex row">
                                     <?php
                                         while($dados = $retorno->fetch()){
+                                            
+                                            var_dump($dados);
                                             if(empty($dados)){
                                                 echo "<div class='card card-custom card-stretch gutter-b'>
                                                         <h1>Seu carrinho está vazio</h1>
