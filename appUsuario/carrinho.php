@@ -124,17 +124,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </div>
                                                                 
                                                             </div>
-                                                            <div class='separator separator-solid'></div>
-                                                            <div class='my-8 mx-4 text-right'>
-                                                                <a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$id_midia."' class='text-primary'>Ver detalhes
-                                                                    <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                                                        <path d='M5 12H19' stroke='#B721FF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
-                                                                        <path d='M12 5L19 12L12 19' stroke='#B721FF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
-                                                                    </svg>
-                                                                </a>
-                                                                
-                    
-                                                            </div>
                                                             <!--end::Name-->
                                                         </div>
                                                         <!--end::Body-->
@@ -154,11 +143,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="separator separator-solid"></div>
                                 <div class="my-6 mx-6 ">
                                     <div class="mb-12">
-                                        <button class="btn btn-outline-primary w-100 mr-4" type="button" id="voltar">Esvaziar carrinho</button>
+                                        <button class="btn btn-primary">Adicionar mais mídias</button>
                                         <button class="btn btn-primary">Ir para método de pagamento</button>
                                     </div>
                                     <div class="mb-12">
-                                        <button class="btn btn-primary">Adicionar mais mídias</button>
+                                        <button class="btn btn-outline-primary w-100 mr-4" type="button" id="voltar">Esvaziar carrinho</button>
                                     </div>
                                 </div>
 
