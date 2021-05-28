@@ -157,7 +157,7 @@ $(document).ready(function() {
 				var dt_inicial = $("#dt_inicial").val();
 				var mes = $("#mes").val();
 				var ds_arte = $('input[type=file]').val()
-				redirectTo("appCliente/carrinho.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&mes="+mes+"&ds_arte="+ds_arte);	
+				redirectTo("appCliente/carrinho.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&ds_arte="+ds_arte+"&mes="+mes);	
 			}
 			if(id_midia == 1){
 				var id_ponto = $("#id_ponto").val();
