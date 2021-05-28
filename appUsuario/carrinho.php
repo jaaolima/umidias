@@ -48,15 +48,16 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="separator separator-solid"></div>
                                 <div class="my-6 mx-6 d-flex row">
+                                
                                     <?php
-                                        while($dados = $retorno->fetch()){
-                                            
-                                            var_dump($retorno);
-                                            if(empty($dados)){
-                                                echo "<div class='card card-custom card-stretch gutter-b'>
-                                                        <h1>Seu carrinho está vazio</h1>
-                                                    </div>";
-                                            }else{
+                                        var_dump($retorno);
+                                        if(empty($retorno->fetch()){
+                                            echo "<div class='card card-custom card-stretch gutter-b'>
+                                                    <h1>Seu carrinho está vazio</h1>
+                                                </div>";
+                                        }else{
+                                            while($dados = $retorno->fetch()){
+
                                                 echo "<div class='col-4' >
                                                     <div class='card card-custom card-stretch gutter-b'>
                                                         <!--begin::Body-->
@@ -109,8 +110,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </div>
                                                 </div> ";
                                             }
-                                            
                                         }
+                                        
 
                                     ?>
                                 </div>
