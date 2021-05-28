@@ -285,7 +285,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo
+				$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, dt_inicial, dt_final
 							FROM rl_alugado a
 							right join tb_ponto p on a.id_ponto=p.id_ponto
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
