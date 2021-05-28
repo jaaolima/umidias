@@ -168,8 +168,8 @@ $(document).ready(function() {
 			}
 			if(id_midia == 1){
 				var id_ponto = $("#id_ponto").val();
-				var valor = document.getElementsByName("valor[]");
-				bisemana = [];
+				var valor = document.getElementsByName("bisemana[]");
+				var bisemana = [];
 				for (var i=0;i<valor.lenght;i++){
 					if (valor[i].checked == true){
 						bisemana.push($valor[i].value);
