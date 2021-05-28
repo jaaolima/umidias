@@ -596,8 +596,9 @@
 			$dt_inicial	    = $dados['dt_inicial'];
 			$dt_final	    = $dados['dt_final'];
 			$ds_arte	    = $dados['ds_arte'];
+			$id_midia	    = $dados['id_midia'];
 
-			
+			if()
 			try{
 				$con = Conecta::criarConexao();
 				$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte)
