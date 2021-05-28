@@ -105,8 +105,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																					</div>
 																				</div>
 																			</td>
-																			<td class='py-8'>21/01/2021</td>
-																			<td class='py-8'>21/01/2021</td>
+																			<td class='py-8'>".$dados["dt_inicial"]."</td>
+																			<td class='py-8'>".$dados["dt_final"]."</td>
 																			<td class='py-8'>".$dados["nu_valor"]."</td>
 																			<td class='py-8'><a href='appCliente/ver_minha_midia.php?id_ponto=".$dados["id_ponto"]."'>
 																				<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
