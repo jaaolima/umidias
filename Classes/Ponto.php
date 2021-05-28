@@ -292,7 +292,7 @@
 							where id_usuario=:id_usuario";
 				
 				$stmt = $con->prepare($select); 
-				/*$params = array(':id_usuario' => $id_usuario);*/
+				$params = array(':id_usuario' => $id_usuario);
 				
 				$stmt->execute();
 
