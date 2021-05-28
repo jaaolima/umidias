@@ -22,7 +22,7 @@ $(document).ready(function() {
     });
     $("#pix").on("click", function(e){
 
-        $('.card-metodo').hide();
+        $('.card-metodo').hide(); 
 		$('#card_pix').show();
         
     });
