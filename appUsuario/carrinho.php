@@ -53,7 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             if($dados == ""){
                                                 echo "<div class='card card-custom card-stretch gutter-b'>
                                                         <h1>Seu carrinho está vazio</h1>
-                                                    </div>"
+                                                    </div>";
                                             }else{
                                                 echo "<div class='col-4' >
                                                     <div class='card card-custom card-stretch gutter-b'>
