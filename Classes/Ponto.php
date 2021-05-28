@@ -136,7 +136,9 @@
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
-								where p.id_midia=:id_midia and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
+								where p.id_midia=:id_midia 
+								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
+								and id_ponto not in (select id_ponto from rl_alugado where :dt_inicial >= dt_inicial and :dt_inicial <= dt_final)";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia);
