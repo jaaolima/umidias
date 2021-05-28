@@ -26,6 +26,29 @@ $(document).ready(function() {
 		$('#card_pix').show();
         
     });
+
+    $("#gerar_boleto").on("click", function(e){
+
+        $.ajax({
+            url: 'appPonto/alugar.php'
+            , data: $("#form_alugar").serialize()
+            , type: 'post'
+            , success: function(html) {
+                swal.fire({
+                    position: 'top-right',
+                    type: 'success',
+                    title: html,
+                    showConfirmButton: true
+                });
+                
+                redirectTo("appCliente/listar_cliente.php");
+            }
+            , error: function (data) {
+                swal.fire("Erro", data.responseText, "error");
+            }
+        });	
+        
+    });
     
 
 

@@ -78,7 +78,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="my-6 mx-6">
                                     <h3>Pagamento em boleto:</h3>
                                     <div class="separator separator-solid"></div>
-                                    <button class="btn btn-primary" id="gerar_boleto">Gerar boleto</button>
+                                    <button class="btn btn-primary mt-4" id="gerar_boleto">Gerar boleto</button>
                                 </div>
                             </div>
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_credito" style="display: none;">
@@ -140,6 +140,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <h4 class="texto-negrito">Valor Total </h4>
                                         <h4 style="color: green;"><?php echo ($dados["nu_valor"] * $mes) + (($dados["nu_valor"] * $mes) * 0.2);?></h4>
                                     </div>
+                                    <form id="form_alugar" type="hidden">
+                                        <input type="text" value="<?php echo $dt_inicial; ?>" name="dt_inicial" id="dt_inicial">
+                                        <input type="text" value="<?php echo $dt_final; ?>" name="dt_final" id="dt_final">
+                                        <input type="text" value="<?php echo $dados["ds_arte"]; ?>" name="arte" id="arte">
+                                        <input type="text" value="<?php echo $id_ponto; ?>" name="id_ponto" id="id_ponto">
+                                    </form>
                                 </div>
 
                             </div>
