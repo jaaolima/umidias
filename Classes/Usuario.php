@@ -127,7 +127,7 @@
 				
 				$select = "SELECT id_ponto, ds_descricao, ds_latitude, ds_longitude, ds_foto, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, id_material, id_periodo, id_parceiro
 						FROM rl_carrinho c 
-						right join tb_ponto p where c.id_ponto = p.id_ponto 
+						right join tb_ponto p on c.id_ponto = p.id_ponto 
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia 
 						WHERE id_usuario = :id_usuario";
 
@@ -136,7 +136,7 @@
 			   
 			    $stmt->execute($params);
 
-			    return  $stmt;
+			    return $stmt;
 				
 			}	
 			catch(Exception $e)
