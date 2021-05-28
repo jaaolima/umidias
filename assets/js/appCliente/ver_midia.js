@@ -168,7 +168,7 @@ $(document).ready(function() {
 			}
 			if(id_midia == 1){
 				var id_ponto = $("#id_ponto").val();
-				var valor =	$("#bisemana").val();
+				var valor = document.getElementsByName("bisemana");
 				var bisemana = [];
 				/*for (var i=0;i<valor.lenght;i++){
 					if (valor[i].checked == true){
@@ -178,7 +178,7 @@ $(document).ready(function() {
 				swal.fire({
                     position: 'top-right',
                     type: 'success',
-                    title: valor,
+                    title: valor.value,
                     showConfirmButton: true
                 });
 				var id_material = $("#id_material").val();
