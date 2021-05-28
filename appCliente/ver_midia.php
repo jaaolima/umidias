@@ -379,8 +379,8 @@ License: You must have a valid license purchased only from themeforest(the above
 			demo3();
 		});
 
-		var mes = document.getElementById("mes");
-		var valor = document.getElementById("valor")
+		var mes = $("#mes").val();
+		var valor = $("#valor").val();
 
 		//evento dispara quando retira o foco do campo texto
 		mes.onblur = function(){
