@@ -175,9 +175,15 @@ $(document).ready(function() {
 						bisemana.push(valor[i].value);
 					}
 				}
+				swal.fire({
+                    position: 'top-right',
+                    type: 'success',
+                    title: bisemana,
+                    showConfirmButton: true
+                });
 				var id_material = $("#id_material").val();
 				var ds_arte = $('input[type=file]').val();
-				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
+				//redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
 			}
 			
 		}	
