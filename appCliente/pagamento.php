@@ -6,7 +6,7 @@
     require_once("../Classes/Ponto.php");
 
     $id_ponto = $_GET["id_ponto"];
- 
+    $id_usuario = $_SESSION["id_usuario"];
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
     $id_midia = $dados["id_midia"];
@@ -145,6 +145,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <input type="text" value="<?php echo $dt_final; ?>" name="dt_final" id="dt_final">
                                         <input type="text" value="<?php echo $dados["ds_arte"]; ?>" name="arte" id="arte">
                                         <input type="text" value="<?php echo $id_ponto; ?>" name="id_ponto" id="id_ponto">
+                                        <input type="text" value="<?php echo $id_usuario; ?>" name="id_usuario" id="id_usuario">
                                     </form>
                                 </div>
 
