@@ -340,7 +340,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="separator separator-solid"></div>
 												<div class="my-6 mx-6 d-flex">
 													<button class="btn btn-outline-primary w-100 mr-4" type="button" id="voltar">Voltar</button>
-													<button class="btn btn-primary w-100" type="button" id="carrinho">Adicionar ao carrinho</button>
+													<button class="btn btn-primary w-100 mr-4" type="button" id="carrinho">Adicionar ao carrinho</button>
 													<button class="btn btn-primary w-100" type="button" id="pagamento">Ir para método de Pagamento</button>
 												</div>
 											</div>
