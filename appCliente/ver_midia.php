@@ -379,13 +379,13 @@ License: You must have a valid license purchased only from themeforest(the above
 			demo3();
 		});
 
-		var mes = $("#mes").val();
-		var valor = document.getElementById("valor")
+		var mes = document.getElementById("mes");
+		var valor = document.getElementById("valor");
 
 		//evento dispara quando retira o foco do campo texto
 		mes.onblur = function(){
-			var taxa = (<?php echo $dados["nu_valor"] ?> * mes * 0.2);
-			var total = (<?php echo $dados["nu_valor"] ?> * mes);
+			var taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * mes.value);
+			var total = <?php echo $dados["nu_valor"] ?> * mes.value;
 			valor.innerHTML = "<h2>"+ parseInt(taxa, 10) + parseInt(total, 10)  +"</h2>";
 		}
 		var demo3 = function() {
