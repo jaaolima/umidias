@@ -386,7 +386,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		mes.onblur = function(){
 			var taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * mes.value);
 			var total = <?php echo $dados["nu_valor"] ?> * mes.value;
-			valor.innerHTML = "<h2>"+ parseInt(taxa, 10) + parseInt(total, 10)  +"</h2>";
+			valor.innerHTML = "<h2>"+ parseInt(taxa) + parseInt(total)  +"</h2>";
 		}
 		var demo3 = function() {
 			var map = new GMaps({
