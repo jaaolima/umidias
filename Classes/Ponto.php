@@ -138,7 +138,7 @@
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 								where p.id_midia=:id_midia 
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
-								and p.id_ponto not in (select id_ponto from rl_alugado where :dt_inicial >= dt_inicial and :dt_inicial <= dt_final)";
+								and p.id_ponto not in (select id_ponto from rl_alugado where ':dt_inicial' between dt_inicial and dt_final)";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia,
@@ -339,6 +339,76 @@
 				
 				$select = "SELECT count(id_ponto) as id_ponto
 							FROM tb_ponto ";
+				
+				$stmt = $con->prepare($select); 
+				
+				$stmt->execute();
+
+				return $stmt->fetch();
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
+		public function dadosTotalContratadas()
+		{
+			$data = date('Y-m-d');
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT count(id_ponto) as id_ponto
+							FROM tb_ponto 
+							where id_ponto not in (select id_ponto from rl_alugado where ':dt_hoje' between dt_inicial and dt_final)";
+				
+				$stmt = $con->prepare($select); 
+				$params = array(':dt_hoje' => $data);
+				$stmt->execute($params);
+
+				return $stmt->fetch();
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
+		public function dadosTotalPendentes()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT count(id_ponto) as id_ponto
+							FROM tb_ponto 
+							where id_ponto not in (select id_ponto from rl_alugado)";
+				
+				$stmt = $con->prepare($select); 
+				
+				$stmt->execute();
+
+				return $stmt->fetch();
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
+		public function dadosTotalReservadas()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT count(id_ponto) as id_ponto
+							FROM tb_ponto 
+							where id_ponto not in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
 				
 				$stmt = $con->prepare($select); 
 				

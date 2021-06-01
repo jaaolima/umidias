@@ -28,6 +28,9 @@
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 	$meusPontos = $ponto->listarMeusPontos($id_usuario);
 	$dadosTotalMidias = $ponto->dadosTotalMidias();
+	$dadosTotalContratadas = $ponto->dadosTotalContratadas();
+	$dadosTotalPendentes = $ponto->dadosTotalPendentes();
+	$dadosTotalReservadas = $ponto->dadosTotalReservadas();
 	$dadosTotalParceiros = $parceiro->dadosTotalParceiros();
 	$dadosTotalCliente = $cliente->dadosTotalCliente();
 	$dadosTodasMidias = $ponto->listarTodasMidias();
@@ -413,7 +416,7 @@
 																						</div>
 																					</div>
 																				</td>
-																				<td class='py-8'>".$dados["dt_inicial"]."</td>
+																				<td class='py-8'>".$dados["dt_inicial"]."</td> 
 																				<td class='py-8'>".$dados["dt_final"]."</td>
 																				<td class='py-8'>".$dados["nu_valor"]."</td>
 																				<td class='py-8'><a href='appCliente/ver_minha_midia.php?id_ponto=".$dados["id_ponto"]."'>
@@ -449,9 +452,9 @@
 														<div class="flex-grow-1" style="display: inherit;">
 															<h3 class="card-title titulo-div">Total de Midias: <?php echo $dadosTotalMidias["id_ponto"]; ?></h3>
 														</div>
-														<h5>Contratadas:</h5>
-														<h5>Pendentes:</h5>
-														<h5>Reservadas:</h5>
+														<h5>Contratadas:</h5><?php echo $dadosTotalContratadas["id_ponto"]; ?>
+														<h5>Pendentes:</h5><?php echo $dadosTotalPendentes["id_ponto"]; ?>
+														<h5>Reservadas:</h5><?php echo $dadosTotalReservadas["id_ponto"]; ?>
 													</div>
 												</div>
 											</div>
