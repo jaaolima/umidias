@@ -385,7 +385,7 @@
 				
 				$select = "SELECT count(id_ponto) as id_ponto
 							FROM tb_ponto 
-							where id_ponto not in (select id_ponto from rl_alugado)";
+							where id_ponto in (select id_ponto from rl_alugado)";
 				
 				$stmt = $con->prepare($select); 
 				
@@ -409,7 +409,7 @@
 				
 				$select = "SELECT count(id_ponto) as id_ponto
 							FROM tb_ponto 
-							where id_ponto not in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
+							where id_ponto in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
 				
 				$stmt = $con->prepare($select); 
 				$params = array(':dt_hoje' => $data);
