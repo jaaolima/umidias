@@ -729,8 +729,6 @@
 				$bisemanas = $_POST["bisemana"];
 				$listaCheckbox = explode(',', $bisemanas);
 
-				var_dump($listaCheckbox);
-	
 				$id_bisemana= '';
 				for ($i=0; $i < count($listaCheckbox); $i++) { 
 					
