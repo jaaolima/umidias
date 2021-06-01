@@ -170,7 +170,7 @@ $(document).ready(function() {
 				var id_ponto = $("#id_ponto").val();
 				var valor = document.getElementsByName("bisemana");
 				var bisemana = [];
-				/*for (var i=0;i<valor.lenght;i++){
+				/*for (var i=0;i<valor.lenght;i++){ 
 					if (valor[i].checked == true){
 						bisemana.push(valor[i].value);
 					}
