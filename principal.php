@@ -452,9 +452,9 @@
 														<div class="flex-grow-1" style="display: inherit;">
 															<h3 class="card-title titulo-div">Total de Midias: <?php echo $dadosTotalMidias["id_ponto"]; ?></h3>
 														</div>
-														<div class="d-flex"><h5>Contratadas:</h5><?php echo $dadosTotalContratadas["id_ponto"]; ?></div>
-														<div class="d-flex"><h5>Pendentes:</h5><?php echo $dadosTotalPendentes["id_ponto"]; ?></div>
-														<div class="d-flex"><h5>Reservadas:</h5><?php echo $dadosTotalReservadas["id_ponto"]; ?></div>
+														<div class="d-flex"><h5>Contratadas: </h5><?php echo $dadosTotalContratadas["id_ponto"]; ?></div>
+														<div class="d-flex"><h5>Pendentes: </h5><?php echo $dadosTotalPendentes["id_ponto"]; ?></div>
+														<div class="d-flex"><h5>Reservadas: </h5><?php echo $dadosTotalReservadas["id_ponto"]; ?></div>
 													</div>
 												</div>
 											</div>
