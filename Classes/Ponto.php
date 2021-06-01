@@ -403,6 +403,7 @@
 		}
 		public function dadosTotalReservadas()
 		{
+			$data = date('Y-m-d');
 			try{
 				$con = Conecta::criarConexao();
 				
@@ -411,8 +412,8 @@
 							where id_ponto not in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
 				
 				$stmt = $con->prepare($select); 
-				
-				$stmt->execute();
+				$params = array(':dt_hoje' => $data)
+				$stmt->execute($params);
 
 				return $stmt->fetch();
 				
