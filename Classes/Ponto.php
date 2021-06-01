@@ -412,7 +412,7 @@
 							where id_ponto not in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
 				
 				$stmt = $con->prepare($select); 
-				$params = array(':dt_hoje' => $data)
+				$params = array(':dt_hoje' => $data);
 				$stmt->execute($params);
 
 				return $stmt->fetch();
