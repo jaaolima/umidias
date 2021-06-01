@@ -144,7 +144,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="my-12">
                                             <h3 class="texto-negrito">Contrato</h3>
                                             <span class="">Valor: <?php echo $dados["nu_valor"] ; ?></span><br>
-                                            <span class="">Forma de pagamento: 10.000,00 em 2x</span><br>
                                             <div class="mt-8">
                                                 <a class="text-primary ">Baixar segunda via da nota fiscal</a>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
