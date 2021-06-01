@@ -168,16 +168,15 @@ $(document).ready(function() {
 			if(id_midia == 1){
 				var id_ponto = $("#id_ponto").val();
 				var valor = document.getElementsByName("bisemana");
-				var bisemana = [];
-				/*for (var i=0;i<valor.lenght;i++){ 
-					if (valor[i].checked == true){
-						bisemana.push(valor[i].value);
-					}
-				}*/
+				var bisemana = new Array();
+				$("input[name='bisemana[]']:checked").each(function ()
+				{
+					bisemana.push( $(this).val());
+				});
 				swal.fire({
                     position: 'top-right',
                     type: 'success',
-                    title: valor.lenght,
+                    title: bisemana,
                     showConfirmButton: true
                 });
 				var id_material = $("#id_material").val();
