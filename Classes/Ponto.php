@@ -440,7 +440,7 @@
 						FROM rl_alugado a
 						right join tb_ponto p on a.id_ponto=p.id_ponto
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
-						WHERE id_ponto = :id_ponto";
+						WHERE a.id_ponto = :id_ponto";
 
 				$stmt = $con->prepare($select);
 			   	$params = array(':id_ponto' => $id_ponto);
