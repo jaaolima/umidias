@@ -15,6 +15,8 @@
 
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
     $listarBisemana = $bisemana->ListarBisemanaPonto($id_bisemana);
+
+    $bisemanaTotal = explode(',', $bisemana);
    
 
     $id_midia = $dados["id_midia"];
@@ -152,10 +154,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <span><?php echo $id_material; ?></span>
                                     </div>
                                     <?php endif; ?>
+                                    <?php if($id_midia == 2) : ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Valor Total </h4>
                                         <h4 style="color: green;"><?php echo ($dados["nu_valor"] * $mes) + (($dados["nu_valor"] * $mes) * 0.2);?></h4>
                                     </div>
+                                    <?php endif; ?>
+                                    <?php if($id_midia == 2) : ?>
+                                    <div class="my-12">
+                                        <h4 class="texto-negrito">Valor Total </h4>
+                                        <h4 style="color: green;"><?php echo ($dados["nu_valor"] * count($bisemanaTotal)) + (($dados["nu_valor"] * count($bisemanaTotal)) * 0.2);?></h4>
+                                    </div>
+                                    <?php endif; ?>
                                     <?php if($id_midia == 2) : ?>
                                     <form id="form_alugar" class="d-none">
                                         <input type="text" value="<?php echo $dt_inicial; ?>" name="dt_inicial" id="dt_inicial">
@@ -166,7 +176,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <input type="text" value="<?php echo $id_midia; ?>" name="id_midia" id="id_midia">
                                     </form>
                                     <?php endif; ?>
-                                    <?php if($id_midia == 2) : ?>
+                                    <?php if($id_midia == 1) : ?>
                                     <form id="form_alugar" class="d-none">
                                         <input type="text" value="<?php echo $_GET["ds_arte"]; ?>" name="ds_arte" id="ds_arte">
                                         <input type="text" value="<?php echo $id_ponto; ?>" name="id_ponto" id="id_ponto">
