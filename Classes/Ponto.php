@@ -728,8 +728,10 @@
 			if($id_midia == 1){
 
 				$listaCheckbox = $_POST['bisemana'];
+
+				echo $listaCheckbox;
 	
-				$id_bisemana= '';
+				/*$id_bisemana= '';
 				for ($i=0; $i < count($listaCheckbox); $i++) { 
 					
 						$id_bisemana = $listaCheckbox[$i];
@@ -768,7 +770,7 @@
 						header('HTTP/1.1 500 Internal Server Error');
 						print "ERRO:".$e->getMessage();		
 					} 	
-				}
+				}*/
 			}
         }
 		
