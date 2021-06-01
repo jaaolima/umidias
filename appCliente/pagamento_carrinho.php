@@ -3,26 +3,14 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 	session_start();
-    require_once("../Classes/Ponto.php");
+    require_once("../Classes/Usuario.php");
 
-    $id_ponto = $_GET["id_ponto"];
     $id_usuario = $_SESSION["id_usuario"];
 
-	$ponto = new Ponto();
 	$usuario = new Usuario();
 
 	$retorno = $usuario->BuscarCarrinho($id_usuario);
-	$dados = $ponto->BuscarDadosPonto($id_ponto);
-    
-    $id_midia = $dados["id_midia"];
-    if($id_midia == 1){
-        $bisemana = $_GET["bisemana"];
-        $id_material = $_GET["id_material"];
-    }
-    if($id_midia == 2){
-        $dt_inicial	= date('Y-m-d',strtotime($_GET["dt_inicial"]));
-        $mes = $_GET["mes"];
-    }
+
 ?>
 <!DOCTYPE html>
 <!--
