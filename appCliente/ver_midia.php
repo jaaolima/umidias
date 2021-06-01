@@ -88,7 +88,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											if($total == 1){
 												echo "<div class='carousel-item active'>
 														<img class='d-block w-100 img-fluid' style='height:500px;'  src='".$fotos["ds_foto"]."' >
-													</div>";
+													</div>"; 
 											}
 											else{
 												echo "<div class='carousel-item'>

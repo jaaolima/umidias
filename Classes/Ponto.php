@@ -558,7 +558,7 @@
 
 			
 		}
-		function BuscarFotoPonto($id_ponto)
+		function BuscarFotoPonto($id_ponto) 
 		{
 			try{
 				$con = Conecta::criarConexao();
