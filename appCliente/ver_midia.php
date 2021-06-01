@@ -216,7 +216,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														</tbody>
 													</table>												
 												</div>
-												<?php endif ;?>
+												<?php endif ;?> 
 												<?php if($id_midia == 2) : ?>
 												<div class="d-flex my-6 mx-6" >
 													<div class="col-4">

@@ -4,11 +4,19 @@
 	error_reporting(E_ALL);
 	session_start();
     require_once("../Classes/Ponto.php");
+    require_once("../Classes/Bisemana.php");
 
     $id_ponto = $_GET["id_ponto"];
+    $id_bisemana = $_GET["bisemana"];
     $id_usuario = $_SESSION["id_usuario"];
+
 	$ponto = new Ponto();
+    $bisemana = new Bisemana();
+
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
+    $listarBisemana = $bisemana->ListarBisemanaPonto($id_bisemana);
+   
+
     $id_midia = $dados["id_midia"];
     if($id_midia == 1){
         $bisemana = $_GET["bisemana"];
@@ -114,13 +122,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                     <?php if($id_midia == 1) : ?>
                                     <div class="my-12">
-                                        <h4 class="texto-negrito">Período</h4>
-                                        <?php 
-                                            /*for($i=0; $i < count($bisemana) ; $i++) { 
-                                                echo "<span>".$bisemana[$i]."</span>";
-                                            }*/
-                                            var_dump($bisemana);
-                                        ?> 
+                                        <h4 class="texto-negrito">Bisemanas</h4>
+                                        <?php echo $id_bisemana; ?>
                                     </div>
                                     <?php endif; ?>
                                     <?php if($id_midia == 2) : ?>
