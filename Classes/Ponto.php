@@ -436,10 +436,10 @@
 				
 				
 				$select = "SELECT 
-							a.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, id_material, id_periodo, id_parceiro
-						FROM tb_ponto a
+							p.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, id_material, id_periodo, id_parceiro
+						FROM tb_ponto p
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
-						WHERE a.id_ponto = :id_ponto";
+						WHERE p.id_ponto = :id_ponto";
 
 				$stmt = $con->prepare($select);
 			   	$params = array(':id_ponto' => $id_ponto);
