@@ -318,7 +318,9 @@
 				
 				$select = "SELECT id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo
 							FROM tb_ponto p
-							inner join tb_tipo_midia t on p.id_midia=t.id_midia";
+							right join rl_ponto_foto f on a.id_ponto=f.id_ponto
+							inner join tb_tipo_midia t on p.id_midia=t.id_midia
+							where f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto";
 				
 				$stmt = $con->prepare($select); 
 				

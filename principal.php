@@ -522,7 +522,7 @@
 																				<td>
 																					<div class='d-flex'>
 																						<span class='symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success'>
-																							<span class='symbol-label font-size-h5 font-weight-bold'>P</span>
+																							<img class='symbol-label img-fluid' src='".$dados["ds_foto"]."'>
 																						</span>
 																						<div class='ml-3 mt-2'>
 																							<span class='texto-negrito'>".$dadosTodas["ds_tipo"]."</span><br>																				
