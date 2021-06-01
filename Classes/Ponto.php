@@ -290,7 +290,7 @@
 				
 				$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, dt_inicial, dt_final, f.ds_foto
 							FROM rl_alugado a
-							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
+							right join rl_ponto_foto f on a.id_ponto=f.id_ponto
 							right join tb_ponto p on a.id_ponto=p.id_ponto
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
 							where id_usuario=:id_usuario";
