@@ -17,7 +17,7 @@
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
 	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto);
     $retorno = $bisemana->listarBisemana();
-    $optionsMaterial = $material->listarOptionsMaterial(null);
+    $optionsMaterial = $material->listarOptionsMaterial(null); 
 
 
 ?>

@@ -10,6 +10,7 @@
 	
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
+	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto);
 
 
 ?>
@@ -71,7 +72,36 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="form-group row"> 
 						<div class="form-group col-md-12">
 							<div id="map" class="rounded"></div>
-							<img id="foto" class="rounded img-fluid d-none" src="<?php echo $dados["ds_foto"];?>"></img>
+							<div id="carrossel"  class="carousel slide d-none"  data-ride="carousel"  >
+								<div class="carousel-inner">
+									<?php
+										$total = 0;
+										while($fotos = $dadosFoto->fetch()){
+											$total .= 1;
+											if($total == 1){
+												echo "<div class='carousel-item active'>
+														<img class='d-block w-100 img-fluid' style='height:500px;'  src='".$fotos["ds_foto"]."' >
+													</div>"; 
+											}
+											else{
+												echo "<div class='carousel-item'>
+														<img class='d-block w-100 img-fluid'  style='height:500px;' src='".$fotos["ds_foto"]."' >
+													</div>";
+											}
+
+										}
+										
+									?>
+								</div>
+								<a class="carousel-control-prev" role="button" data-target="#carrossel" data-slide="prev" style="width:5%;">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Anterior</span>
+								</a>
+								<a class="carousel-control-next" role="button" data-target="#carrossel" data-slide="next" style="width:5%;">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Próximo</span>
+								</a>
+							</div>
 							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 220px;" id="ver_foto">ver fotos</button>
 							<button class="btn btn-mapa-active position-absolute" style="top: 10px;right: 80px;" id="ver_mapa">ver localização</button>
 						</div>
