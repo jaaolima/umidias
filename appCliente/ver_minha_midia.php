@@ -138,8 +138,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <span><?php echo $dados["ds_latitude"] . ' ' . $dados["ds_longitude"] ; ?></span>
                                         </div>
                                         <div class="my-12">
-                                            <h3 class="texto-negrito">Alugada por 24 dias</h3>
-                                            
+                                            <h3 class="texto-negrito">Alugada por:</h3>
+                                            <span><?php echo date('d/m/Y', strtotime($dados["dt_inicial"])) . ' ' . date('d/m/Y', strtotime($dados["dt_final"])) ; ?></span>
                                         </div>	
                                         <div class="my-12">
                                             <h3 class="texto-negrito">Contrato</h3>
