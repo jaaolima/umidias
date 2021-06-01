@@ -101,10 +101,9 @@ $(document).ready(function() {
 	});
 	
 	$("#carrinho").on("click", function(e){
-			
-		if(validarDetalhe())
+		var id_midia = $("#id_midia").val();
+		if(validarDetalhe(id_midia))
 		{
-			var id_midia = $("#id_midia").val();
 			var id_usuario = $("#id_usuario").val();
 			var id_ponto = $("#id_ponto").val();
 			
@@ -133,15 +132,16 @@ $(document).ready(function() {
 					, success: function() {
 						var id_ponto = $("#id_ponto").val();
 						var valor = document.getElementsByName("valor[]");
-						bisemana = [];
+						/*bisemana = [];
 						for (var i=0;i<valor.lenght;i++){
 							if (valor[i].checked == true){
 								bisemana.push($valor[i].value);
 							}
 						}
+						console.log(bisemana);*/
 
 						var id_material = $("#id_material").val(); 
-						var ds_arte = $('input[type=file]').val();
+						var ds_arte = $('input[type=file]').val(); 
 						redirectTo("appCliente/carrinho.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
 					}
 					, error: function (data) {
@@ -155,10 +155,9 @@ $(document).ready(function() {
 	});
 
 	$("#pagamento").on("click", function(e){
-			
-		if(validarDetalhe())
+		var id_midia = $("#id_midia").val();
+		if(validarDetalhe(id_midia))
 		{
-			var id_midia = $("#id_midia").val();
 			if(id_midia == 2){
 				var id_ponto = $("#id_ponto").val();
 				var dt_inicial = $("#dt_inicial").val();
@@ -178,7 +177,7 @@ $(document).ready(function() {
 				swal.fire({
                     position: 'top-right',
                     type: 'success',
-                    title: valor.value,
+                    title: valor.lenght,
                     showConfirmButton: true
                 });
 				var id_material = $("#id_material").val();
@@ -240,7 +239,7 @@ function validarAlugar(id_midia){
 	}
 	return true;	
 }
-function validarDetalhe(){
+function validarDetalhe(id_midia){
 	if(id_midia == 1){
 		if($("#id_material option:selected").val() == "")
 		{
@@ -257,16 +256,16 @@ function validarDetalhe(){
 		
 	}
 	if($("#ds_arte").val() == "")
-		{
-			$("#ds_arte").focus();
-			swal.fire("Erro", "Adicione uma arte", "error");
-			$("#ds_arte").addClass("is-invalid");
-			return false;	
-		}
-		else
-		{
-			$("#ds_arte").removeClass("is-invalid");	
-			$("#ds_arte").addClass("is-valid");
-		}
+	{
+		$("#ds_arte").focus();
+		swal.fire("Erro", "Adicione uma arte", "error");
+		$("#ds_arte").addClass("is-invalid");
+		return false;	
+	}
+	else
+	{
+		$("#ds_arte").removeClass("is-invalid");	
+		$("#ds_arte").addClass("is-valid");
+	}
 	return true;
 }
