@@ -121,7 +121,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <a href="appCliente/listar_tipo.php" class="btn btn-primary w-100">Adicionar mais mídias</a>
                                     </div>
                                     <div class="mb-12">
-                                    <button class="btn btn-primary w-100">Ir para método de pagamento</button>
+                                        <a class="btn btn-primary w-100" href="appCliente/pagamento_carrinho.php">Ir para método de pagamento</a>
                                     </div>
                                     <div class="mb-12">
                                         <button class="btn btn-outline-primary w-100 mr-4" type="button" id="esvaziar">Esvaziar carrinho</button>
