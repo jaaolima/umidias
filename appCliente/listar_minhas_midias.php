@@ -82,8 +82,8 @@ License: You must have a valid license purchased only from themeforest(the above
 															<?php
 																
 																while($dados = $meusPontos->fetch()){
-																	$dataInicial = date_format($dados["dt_inicial"], 'd/m/Y');
-																	$dataFinal = date_format($dados["dt_final"], 'd/m/Y');
+																	$dataInicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
+																	$dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
 																	echo "<tr>
 																			<td>
 																				<div class='d-flex'>
