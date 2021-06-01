@@ -726,7 +726,7 @@
 				}
 			}
 			if($id_midia == 1){
-				$id_bisemana = $_POST["id_bisemana"];
+				$id_bisemana = $_POST["bisemana"];
 				$listaCheckbox = explode(',', $id_bisemana);
 
 				var_dump($listaCheckbox);
