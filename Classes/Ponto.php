@@ -726,12 +726,12 @@
 				}
 			}
 			if($id_midia == 1){
-				$id_bisemana = $_POST["bisemana"];
-				$listaCheckbox = explode(',', $id_bisemana);
+				$bisemanas = $_POST["bisemana"];
+				$listaCheckbox = explode(',', $bisemanas);
 
 				var_dump($listaCheckbox);
 	
-				/*$id_bisemana= '';
+				$id_bisemana= '';
 				for ($i=0; $i < count($listaCheckbox); $i++) { 
 					
 						$id_bisemana = $listaCheckbox[$i];
@@ -770,7 +770,7 @@
 						header('HTTP/1.1 500 Internal Server Error');
 						print "ERRO:".$e->getMessage();		
 					} 	
-				}*/
+				}
 			}
         }
 		
