@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="separator separator-solid"></div>
                                 <div class="my-6 mx-6 ">
                                     <div class="mb-12">
-                                        <button class="btn btn-primary w-100">Adicionar mais mídias</button>
+                                        <a href="appCliente/listar_tipo.php" class="btn btn-primary w-100">Adicionar mais mídias</a>
                                     </div>
                                     <div class="mb-12">
                                     <button class="btn btn-primary w-100">Ir para método de pagamento</button>
