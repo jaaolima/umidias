@@ -126,6 +126,28 @@
 			}
 		}
 
+		public function esvaziarCarrinho(array $dados)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "delete from rl_carrinho where id_usuario=:id_usuario";
+				
+				$stmt = $con->prepare($select); 
+				$params = array(':id_usuario' => $dados["id_usuario"]);
+				$stmt->execute($params);
+
+				echo "Carrinho esvaziado";
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
+
 
     }
 ?>        

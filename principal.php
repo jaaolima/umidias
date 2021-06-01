@@ -74,7 +74,7 @@
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
 					<?php if($_SESSION['id_perfil'] == 1) :   ?>
-					<a href="appUsuario/carrinho.php" class="mr-4">
+					<a href="appCliente/carrinho.php" class="mr-4">
 						<i class="flaticon-shopping-basket icon-xl svg-shop"></i>
 					</a>
 					<?php endif; ?>

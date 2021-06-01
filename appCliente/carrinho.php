@@ -47,6 +47,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <h3>Carrinho:</h3>
                                 </div>
                                 <div class="separator separator-solid"></div>
+                                <input type="hidden" id="id_usuario" value="<?php echo $id_usuario; ?>">
                                 <div class="my-6 mx-6 d-flex row">
                                 
                                     <?php
@@ -123,7 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <button class="btn btn-primary w-100">Ir para método de pagamento</button>
                                     </div>
                                     <div class="mb-12">
-                                        <button class="btn btn-outline-primary w-100 mr-4" type="button" id="voltar">Esvaziar carrinho</button>
+                                        <button class="btn btn-outline-primary w-100 mr-4" type="button" id="esvaziar">Esvaziar carrinho</button>
                                     </div>
                                 </div>
 
@@ -137,7 +138,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--end::Page-->
 		</div>
 		<script src="assets/js/scripts.bundle.js"></script>
-		<script src="assets/js/appCliente/pagamento.js"></script>
+		<script src="assets/js/appCliente/carrinho.js"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->

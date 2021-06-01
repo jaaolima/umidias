@@ -117,7 +117,7 @@ $(document).ready(function() {
 						var dt_inicial = $("#dt_inicial").val();
 						var mes = $("#mes").val();
 						var ds_arte = $('input[type=file]').val()
-						redirectTo("appUsuario/carrinho.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&ds_arte="+ds_arte+"&mes="+mes);	
+						redirectTo("appCliente/carrinho.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&ds_arte="+ds_arte+"&mes="+mes);	
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error");
@@ -142,7 +142,7 @@ $(document).ready(function() {
 
 						var id_material = $("#id_material").val(); 
 						var ds_arte = $('input[type=file]').val();
-						redirectTo("appUsuario/carrinho.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
+						redirectTo("appCliente/carrinho.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error");
