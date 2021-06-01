@@ -16,7 +16,7 @@
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
     $listarBisemana = $bisemana->ListarBisemanaPonto($id_bisemana);
 
-    $bisemanaTotal = explode(',', $bisemana);
+    $bisemanaTotal = explode(',', $id_bisemana);
    
 
     $id_midia = $dados["id_midia"];
