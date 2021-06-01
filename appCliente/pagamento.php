@@ -181,7 +181,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <input type="text" value="<?php echo $_GET["ds_arte"]; ?>" name="ds_arte" id="ds_arte">
                                         <input type="text" value="<?php echo $id_ponto; ?>" name="id_ponto" id="id_ponto">
                                         <input type="text" value="<?php echo $id_usuario; ?>" name="id_usuario" id="id_usuario">
-                                        <input type="text" value="<?php echo $bisemana; ?>" name="bisemana" id="bisemana">
+                                        <input type="text" value="<?php echo $bisemanaTotal; ?>" name="bisemana" id="bisemana">
                                         <input type="text" value="<?php echo $id_material; ?>" name="id_material" id="id_material">
                                         <input type="text" value="<?php echo $id_midia; ?>" name="id_midia" id="id_midia">
                                     </form>
