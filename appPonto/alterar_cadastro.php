@@ -9,6 +9,7 @@ require_once("../Classes/Ponto.php");
 session_start();
 $id_ponto = $_REQUEST['id_ponto'];
 $id_perfil = $_SESSION['id_perfil'];
+$id_usuario = $_SESSION['id_usuario'];
 
 $Categoria = new Categoria(); 
 $Parceiro = new Parceiro(); 
