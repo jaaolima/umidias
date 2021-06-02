@@ -394,14 +394,15 @@ License: You must have a valid license purchased only from themeforest(the above
 		}
 
 		//calculo outdoor
-		var bisemana = document.getElementById("bisemana");
-		var totalBisemana = $('input[type=checkbox]:checked').length;
+		var bisemana = document.getElementByName("bisemana[]");
+		var totalBisemana = $('input[name=bisemana[]]:checked').length;
 		var valor2 = document.getElementById("valor2");
 
 		bisemana.onblur = function(){
 			let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana);
-			let total = <?php echo $dados["nu_valor"] ?> * totalBisemana;
-			valor1.innerHTML = /*"<h2>"+ parseInt(taxa) + parseInt(total)  +"</h2>"*/ totalBisemana;
+			let valor = <?php echo $dados["nu_valor"] ?> * totalBisemana;
+			let total = parseInt(taxa, 10) + parseInt(valor, 10);
+			valor1.innerHTML = "<h2>"+ total +"</h2>";
 		}
 
 		var demo3 = function() {
