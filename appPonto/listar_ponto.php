@@ -37,7 +37,6 @@
 					<th>Descrição</th>
 					<th>Valor</th>
 					<th>Tipo de Mídia</th>
-					<th>Status</th>
 					<th>Observações</th>
 					<th>Ações</th>          
 				</tr>
@@ -51,7 +50,6 @@
 								<td>".$dados['ds_descricao']."</td>
 								<td>".$dados['nu_valor']."</td>
 								<td>".$dados['ds_tipo']."</td>
-								<td>".$dados['st_status']."</td>
 								<td>".$dados['ds_observacao']."</td>
 								<td nowrap></td>
 							</tr>";

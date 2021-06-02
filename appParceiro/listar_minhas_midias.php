@@ -68,10 +68,16 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="card-body d-flex">
 											<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 												<div class="row m-0 col-12" >											
-													<table class="table table-hover">
+													<table class="table table-hover" id="table_ponto">
 														<thead>
 															<tr>
+																<th>Id Ponto</th>
 																<th>Minhas Mídias</th>
+																<th>Descrição</th>
+																<th>Valor</th>
+																<th>Tipo de Mídia</th>
+																<th>Observações</th>
+																<th>Ações</th> 
 															</tr>
 														</thead> 
 														<tbody>
@@ -79,6 +85,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																
 																while($dados = $meusPontos->fetch()){
 																	echo "<tr>
+																				<td>".$dados['id_ponto']."</td>
 																				<td>
 																					<div class='d-flex'>
 																						<div class='d-flex'>
@@ -103,6 +110,11 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</div>
 																					</div>
 																				</td>
+																				<td>".$dados['ds_descricao']."</td>
+																				<td>".$dados['nu_valor']."</td>
+																				<td>".$dados['ds_tipo']."</td>
+																				<td>".$dados['ds_observacao']."</td>
+																				<td nowrap></td>
 																			</tr>";
 																}
 																
@@ -131,6 +143,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#8950FC", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#6993FF", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#EEE5FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#E1E9FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script>
 		<!--end::Global Config-->
 		<!--begin::Global Theme Bundle(used by all pages)-->
+		<script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+		<script src="./assets/js/datatables/appParceiro/lista_minhas_midias.js" type="text/javascript"></script> 
 		<script src="assets/plugins/global/plugins.bundle.js"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
