@@ -311,7 +311,7 @@
     			print "ERRO:".$e->getMessage();		
 			}
 		}
-		public function listarMeusPontos($id_usuario)
+		public function listarMeusPontosParceiro($id_usuario)
 		{
 			try{
 				$con = Conecta::criarConexao();
