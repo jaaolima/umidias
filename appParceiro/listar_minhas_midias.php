@@ -64,7 +64,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 								<div class="card-body d-flex">											
-									<table class="table table-hover" id="table_ponto">
+									<table class="table table-hover w-100" id="table_ponto">
 										<thead>
 											<tr>
 												<th>Id Ponto</th>
