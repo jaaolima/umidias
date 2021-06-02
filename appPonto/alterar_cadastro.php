@@ -57,8 +57,9 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
     </div>
     <!--begin::Form-->
     <form id="form_usuario">
-        <div class="card-body">
+        <input type="hidden" id="id_perfil" name="id_perfil" value="<?php echo $id_perfil; ?>">
         <input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto?>">
+        <div class="card-body">
             <div class="form-group row">
                 <?php if($_SESSION['id_perfil'] == 3  ) :   ?>
                 <div class="form-group col-md-3">
@@ -72,7 +73,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 </div> 
                 <?php endif ; ?>
                 <?php if($_SESSION['id_perfil'] == 2  ) :   ?>
-                  <input type="text" name="id_parceiro" id="id_parceiro" value="<?php echo $id_parceiro;?>">
+                  <input type="hidden" name="id_parceiro" id="id_parceiro" value="<?php echo $id_perfil;?>">
                 <?php endif ; ?>
                 <div class="form-group col-md-3">
                     <label>Local <span class="text-danger">*</span></label>

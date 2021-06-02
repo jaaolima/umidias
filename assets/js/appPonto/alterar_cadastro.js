@@ -1,39 +1,77 @@
 $(document).ready(function() {
 	    
-
-    $("#cancelar").on("click", function(){
-		$('#form_usuario').trigger("reset");
-        redirectTo("appPonto/listar_ponto.php");
-    }); 
-
-	$("#salvar").on("click", function(e){
+	var id_perfil = $("#id_perfil").val();
+	if(id_perfil == 3){
+		$("#salvar").on("click", function(e){
 		
-		if(validar())
-		{ 	var form = $("#form_usuario").get(0);
-			$.ajax({
-		        url: 'appPonto/gravar_alterar_ponto.php'
-				, data: $("#form_usuario").serialize()
-				, type: 'post'
-				, data: new FormData(form)
-				, mimeType: 'multipart/form-data'
-				, processData: false
-				, contentType: false
-		        , success: function(html) {
-		        	swal.fire({
-		                position: 'top-right',
-		                type: 'success',
-		                title: html,
-		                showConfirmButton: true
-		            });
-		            
-                    redirectTo("appPonto/listar_ponto.php");
-		        }
-				, error: function (data) {
-					swal.fire("Erro", data.responseText, "error");
-				}
-		    });		
-		}	
-	});
+			if(validar())
+			{ 	var form = $("#form_usuario").get(0);
+				$.ajax({
+					url: 'appPonto/gravar_alterar_ponto.php'
+					, data: $("#form_usuario").serialize()
+					, type: 'post'
+					, data: new FormData(form)
+					, mimeType: 'multipart/form-data'
+					, processData: false
+					, contentType: false
+					, success: function(html) {
+						swal.fire({
+							position: 'top-right',
+							type: 'success',
+							title: html,
+							showConfirmButton: true
+						});
+						
+						redirectTo("appPonto/listar_ponto.php");
+					}
+					, error: function (data) {
+						swal.fire("Erro", data.responseText, "error");
+					}
+				});		
+			}	
+		});
+		$("#cancelar").on("click", function(){
+			$('#form_usuario').trigger("reset");
+			redirectTo("appPonto/listar_ponto.php");
+		});
+	}
+	if(id_perfil == 3){
+		$("#salvar").on("click", function(e){
+		
+			if(validar())
+			{ 	var form = $("#form_usuario").get(0);
+				$.ajax({
+					url: 'appPonto/gravar_alterar_ponto.php'
+					, data: $("#form_usuario").serialize()
+					, type: 'post'
+					, data: new FormData(form)
+					, mimeType: 'multipart/form-data'
+					, processData: false
+					, contentType: false
+					, success: function(html) {
+						swal.fire({
+							position: 'top-right',
+							type: 'success',
+							title: html,
+							showConfirmButton: true
+						});
+						
+						redirectTo("appParceiro/listar_minhas_midias.php");
+					}
+					, error: function (data) {
+						swal.fire("Erro", data.responseText, "error");
+					}
+				});		
+			}	
+		});
+		$("#cancelar").on("click", function(){
+			$('#form_usuario').trigger("reset");
+			redirectTo("appParceiro/listar_minhas_midias.php");
+		});
+	}
+     
+
+	
 	$("#ds_outro_tamanho").inputmask({
 		"mask": "9,99 x 9,99",
 		numericInput: true,

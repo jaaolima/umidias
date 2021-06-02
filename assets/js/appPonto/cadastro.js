@@ -1,10 +1,7 @@
 $(document).ready(function() {
 	    
 
-    $("#cancelar").on("click", function(){
-		$('#form_usuario').trigger("reset");
-        redirectTo("appPonto/listar_ponto.php");
-    }); 
+    
 	var id_perfil = $("#id_perfil").val();
 	if(id_perfil == 3){
 		$("#salvar").on("click", function(e){
@@ -36,6 +33,10 @@ $(document).ready(function() {
 				});		
 			}
 		});
+		$("#cancelar").on("click", function(){
+			$('#form_usuario').trigger("reset");
+			redirectTo("appPonto/listar_ponto.php");
+		}); 
 	}
 	if(id_perfil == 2){
 		$("#salvar").on("click", function(e){
@@ -67,6 +68,10 @@ $(document).ready(function() {
 				});		
 			}
 		});
+		$("#cancelar").on("click", function(){
+			$('#form_usuario').trigger("reset");
+			redirectTo("appParceiro/listar_tipo.php");
+		}); 
 	}
 	
 	$("#ds_outro_tamanho").inputmask({
