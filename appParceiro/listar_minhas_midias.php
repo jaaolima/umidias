@@ -71,13 +71,12 @@ License: You must have a valid license purchased only from themeforest(the above
 													<table class="table table-hover" id="table_ponto">
 														<thead>
 															<tr>
-																<th>Id Ponto</th>
-																<th>Minhas Mídias</th>
-																<th>Descrição</th>
-																<th>Valor</th>
-																<th>Tipo de Mídia</th>
-																<th>Observações</th>
-																<th>Ações</th> 
+															<th>Id Ponto</th>
+															<th>Descrição</th>
+															<th>Valor</th>
+															<th>Tipo de Mídia</th>
+															<th>Observações</th>
+															<th>Ações</th> 
 															</tr>
 														</thead> 
 														<tbody>
