@@ -21,7 +21,7 @@
 
         public function gravarPonto(array $dados)
 		{
-			$id_parceiro	        	= $dados['id_parceiro'];
+			$id_parceiro	        = $dados['id_parceiro'];
 			$ds_local	        	= $dados['ds_local'];
 			$ds_descricao	        = $dados['ds_descricao'];
 			$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
