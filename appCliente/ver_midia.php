@@ -291,13 +291,13 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 												</div>
 												<div class="separator separator-solid"></div>
-												<?php if($id_midia == 2) : ?>
+												<?php if($id_midia == 1) : ?>
 												<div class="my-6 mx-6 text-right">
 													<h3 class="font-weight-bolder">Total</h3>
 													<div id="valor2"></div>
 												</div>
 												<?php endif ;?>	
-												<?php if($id_midia == 1) : ?>
+												<?php if($id_midia == 2) : ?>
 												<div class="my-6 mx-6 text-right">
 													<h3 class="font-weight-bolder">Total</h3>
 													<div id="valor1"></div>
