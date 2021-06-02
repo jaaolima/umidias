@@ -387,8 +387,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		var valor1 = document.getElementById("valor1");
 
 		mes.onblur = function(){
-			var taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * mes.value);
-			var total = <?php echo $dados["nu_valor"] ?> * mes.value;
+			let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * mes.value);
+			let total = <?php echo $dados["nu_valor"] ?> * mes.value;
 			valor1.innerHTML = "<h2>"+ parseInt(taxa) + parseInt(total)  +"</h2>";
 		}
 
@@ -397,9 +397,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		var totalBisemana = $('input[type=checkbox]:checked').length;
 		var valor2 = document.getElementById("valor2");
 
-		mes.onblur = function(){
-			var taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana);
-			var total = <?php echo $dados["nu_valor"] ?> * totalBisemana;
+		bisemana.onblur = function(){
+			let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana);
+			let total = <?php echo $dados["nu_valor"] ?> * totalBisemana;
 			valor1.innerHTML = /*"<h2>"+ parseInt(taxa) + parseInt(total)  +"</h2>"*/ totalBisemana;
 		}
 
