@@ -4,25 +4,22 @@
 	error_reporting(E_ALL);
 	session_start();
     require_once("../Classes/Ponto.php");
-    require_once("../Classes/Bisemana.php");
 
     $id_ponto = $_GET["id_ponto"];
-    $id_bisemana = $_GET["bisemana"];
     $id_usuario = $_SESSION["id_usuario"];
-
+    $id_midia = $dados["id_midia"];
+    
 	$ponto = new Ponto();
-    $bisemana = new Bisemana();
 
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
-    $listarBisemana = $bisemana->ListarBisemanaPonto($id_bisemana);
 
-    $bisemanaTotal = explode(',', $id_bisemana);
-   
-
-    $id_midia = $dados["id_midia"];
+    
     if($id_midia == 1){
+        $id_bisemana = $_GET["bisemana"];
         $bisemana = $_GET["bisemana"];
         $id_material = $_GET["id_material"];
+
+        $bisemanaTotal = explode(',', $id_bisemana);
     }
     if($id_midia == 2){
         $dt_inicial	= date('Y-m-d',strtotime($_GET["dt_inicial"]));
