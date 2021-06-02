@@ -35,7 +35,7 @@ $(document).ready(function() {
 			redirectTo("appPonto/listar_ponto.php");
 		});
 	}
-	if(id_perfil == 3){
+	if(id_perfil == 2){
 		$("#salvar").on("click", function(e){
 		
 			if(validar())
