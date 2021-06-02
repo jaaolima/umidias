@@ -71,11 +71,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<table class="table table-hover">
 														<thead>
 															<tr>
-																<th>Mídias contratadas</th>
-																<th>Data inicial</th>
-																<th>Data final</th>
-																<th>Valor contratado</th>
-																<th></th>
+																<th>Minhas Mídias</th>
 															</tr>
 														</thead> 
 														<tbody>
