@@ -83,7 +83,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<tbody>
 															<?php
 																
-																while ($dados = $retorno->fetch())
+																while ($dados = $meusPontos->fetch())
 																{
 																	echo "<tr>
 																			<td>".$dados['id_ponto']."</td>
