@@ -48,6 +48,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
     <!--begin::Form-->
     
     <form id="form_usuario" enctype="multipart/form-data">
+        <input type="hidden" id="id_perfil" name="id_perfil" value="<?php echo $id_perfil; ?>">
         <div class="card-body">
             <div class="form-group row">
                 <?php if($id_perfil == 3  ) :   ?>
