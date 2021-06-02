@@ -397,7 +397,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		var totalBisemana = $('input[name=bisemana[]]:checked').length;
 		var valor2 = document.getElementById("valor2");
 
-		(":checkbox").click(function(){
+		("input[name=bisemana[]]:checkbox").click(function(){
 			let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana);
 			let valor = <?php echo $dados["nu_valor"] ?> * totalBisemana;
 			let total = parseInt(taxa, 10) + parseInt(valor, 10);
