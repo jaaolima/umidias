@@ -145,18 +145,6 @@ function validar()
 		$("#ds_local").addClass("is-valid");
 	}
 	
-	if($("#fotos").val() == "")
-	{
-		$("#fotos").focus();
-		swal.fire("Erro", "adicione uma foto", "error");
-		$("#fotos").addClass("is-invalid");
-		return false;	
-	}
-	else
-	{
-		$("#fotos").removeClass("is-invalid");	
-		$("#fotos").addClass("is-valid");
-	}
 
 	if($("#ds_latitude").val() == "")
 	{
