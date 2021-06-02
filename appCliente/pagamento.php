@@ -7,12 +7,12 @@
 
     $id_ponto = $_GET["id_ponto"];
     $id_usuario = $_SESSION["id_usuario"];
-    $id_midia = $dados["id_midia"];
     
+
 	$ponto = new Ponto();
 
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
-
+    $id_midia = $dados["id_midia"];
     
     if($id_midia == 1){
         $id_bisemana = $_GET["bisemana"];
