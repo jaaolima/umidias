@@ -10,7 +10,7 @@ session_start();
 $Categoria = new Categoria(); 
 $Parceiro = new Parceiro(); 
 $Material = new Material(); 
-$id_responsavel = "";
+
 $id_perfil = $_SESSION['id_perfil'];
 
 if($id_perfil == 2){
@@ -62,7 +62,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div> 
                 <?php endif ; ?>
                 <?php if($id_perfil == 2  ) :   ?>
-                  <input type="text" name="id_parceiro" id="id_parceiro" value="<?php echo $id_parceiro;?>">
+                  <input type="text" name="id_parceiro" id="id_parceiro" value="<?php echo $id_perfil;?>">
                 <?php endif ; ?>
                 <div class="form-group col-md-4">
                     <label>Local <span class="text-danger">*</span></label>
