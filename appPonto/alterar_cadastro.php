@@ -74,7 +74,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 </div> 
                 <?php endif ; ?>
                 <?php if($id_perfil == 2  ) :   ?>
-                  <input type="hidden" name="id_parceiro" id="id_parceiro" value="<?php echo $id_perfil;?>">
+                  <input type="hidden" name="id_parceiro" id="id_parceiro" value="<?php echo $dados['id_parceiro'];?>">
                 <?php endif ; ?>
                 <div class="form-group col-md-3">
                     <label>Local <span class="text-danger">*</span></label>
