@@ -401,7 +401,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana);
 			let valor = <?php echo $dados["nu_valor"] ?> * totalBisemana;
 			let total = parseInt(taxa, 10) + parseInt(valor, 10);
-			valor1.innerHTML = "<h2>"+ totalBisemana +"</h2>";
+			valor2.innerHTML = "<h2>"+ totalBisemana +"</h2>";
 		});
 
 		var demo3 = function() {
