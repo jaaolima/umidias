@@ -71,12 +71,12 @@ License: You must have a valid license purchased only from themeforest(the above
 													<table class="table table-hover" id="table_ponto">
 														<thead>
 															<tr>
-															<th>Id Ponto</th>
-															<th>Descrição</th>
-															<th>Valor</th>
-															<th>Tipo de Mídia</th>
-															<th>Observações</th>
-															<th>Ações</th> 
+																<th>Id Ponto</th>
+																<th>Descrição</th>
+																<th>Valor</th>
+																<th>Tipo de Mídia</th>
+																<th>Observações</th>
+																<th>Ações</th> 
 															</tr>
 														</thead> 
 														<tbody>
@@ -121,9 +121,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Global Theme Bundle(used by all pages)-->
 		<script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 		<script src="./assets/js/datatables/appParceiro/lista_minhas_midias.js" type="text/javascript"></script> 
-		<script src="assets/plugins/global/plugins.bundle.js"></script>
-		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-		<script src="assets/js/scripts.bundle.js"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
