@@ -150,7 +150,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 </div>
                 <div class="form-group col-md-2">
                     <label >Valor<span class="text-danger">*</span></label>
-                    <input type="number" class="form-control" id="nu_valor" name="nu_valor" value="<?php echo $dados['nu_valor']?>"/>
+                    <input type="text" class="form-control" id="nu_valor" name="nu_valor" value="<?php echo $dados['nu_valor']?>"/>
                 </div>
                 <div class="form-group col-md-2" id="tamanho">
                     <label>Tamanho<span class="text-danger">*</span></label>
