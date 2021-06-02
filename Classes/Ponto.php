@@ -740,7 +740,7 @@
 						
 						$stmt = $con->prepare($select);
 						
-						$params = array(':id_bisemana' => $id_bisemana);
+						$params = array(':id_bisemana' => $id_bisemana); 
 										
 						$stmt->execute($params);
 						$dados = $stmt->fetch();

@@ -144,7 +144,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--end::Page-->
 		</div>
 		<script src="assets/js/scripts.bundle.js"></script>
-		<script src="assets/js/appCliente/pagamento.js"></script>
+		<script src="assets/js/appCliente/pagamento_carrinho.js"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->

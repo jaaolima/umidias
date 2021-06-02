@@ -129,7 +129,7 @@
 		public function esvaziarCarrinho(array $dados)
 		{
 			try{
-				$con = Conecta::criarConexao();
+				$con = Conecta::criarConexao(); 
 				
 				$select = "delete from rl_carrinho where id_usuario=:id_usuario";
 				

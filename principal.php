@@ -137,20 +137,38 @@
 										<span class="menu-text texto-menu-active texto-menu texto-menu-dashboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Painel de Controle</font></font></span>
 									</a>
 								</li>
-								<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 2) :   ?>
+								<?php if($_SESSION['id_perfil'] == 1) :   ?>
 								<li class="menu-item my-4  btn ml-5 botao-menu botao-menu-alugar" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="appCliente/listar_tipo.php" class="btn rounded mx-2 text-left  ">
 										<i class="flaticon-web icon-xl svg-hover svg-alugar "></i>
 										<span class="menu-text texto-menu texto-menu-alugar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alugar mídia</font></font></span>
 									</a>
 								</li>
-								<?php endif ;?>
-								
-								<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 2 ) :   ?>
 								<li class="menu-item my-4 botao-menu botao-menu-alugadas btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="appCliente/listar_minhas_midias.php" class="btn rounded mx-2 text-left  ">
 										<i class="flaticon-list-3 icon-xl svg-hover svg-alugadas"></i>
 										<span class="menu-text texto-menu texto-menu-alugadas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mídias alugadas</font></font></span>
+									</a>
+								</li>
+								<li class="menu-item my-4 botao-menu botao-menu-financeiro btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+									<a href="#" class="btn rounded mx-2 text-left ">
+									<i class="flaticon-coins icon-xl svg-hover svg-financeiro"></i>
+ 
+										<span class="menu-text texto-menu texto-menu-financeiro"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
+									</a>
+								</li>
+								<?php endif ;?>
+								<?php if($_SESSION['id_perfil'] == 2) :   ?>
+								<li class="menu-item my-4  btn ml-5 botao-menu botao-menu-alugar" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+									<a href="appParceiro/listar_tipo.php" class="btn rounded mx-2 text-left  ">
+										<i class="flaticon-web icon-xl svg-hover svg-alugar "></i>
+										<span class="menu-text texto-menu texto-menu-alugar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adicionar Mídia</font></font></span>
+									</a>
+								</li>
+								<li class="menu-item my-4 botao-menu botao-menu-alugadas btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+									<a href="appParceiro/listar_minhas_midias.php" class="btn rounded mx-2 text-left  ">
+										<i class="flaticon-list-3 icon-xl svg-hover svg-alugadas"></i>
+										<span class="menu-text texto-menu texto-menu-alugadas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Minhas mídias</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-financeiro btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
@@ -287,7 +305,7 @@
 																								</svg>
 																							</span>
 																							<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
-																							<a href="appParceiro/add_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Adicionar mídia</a>
+																							<a href="appPonto/cadastro.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Adicionar mídia</a>
 																						</div>';
 																			}
 																			else{
@@ -300,7 +318,7 @@
 																								</svg>
 																							</span>
 																							<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
-																							<a href="appParceiro/add_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Adicionar mídia</a>
+																							<a href="appPonto/cadastro.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Adicionar mídia</a>
 																						</div>';
 																			}
 
@@ -382,7 +400,7 @@
 															<table class="table table-hover">
 																<thead>
 																	<tr>
-																		<th>Tipo de Mídia</th>
+																		<th>Tipo de Mídia</th> 
 																		<th>Data inicial</th>
 																		<th>Data final</th>
 																		<th>Valor contratado</th>
