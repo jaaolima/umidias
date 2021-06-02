@@ -398,12 +398,12 @@ License: You must have a valid license purchased only from themeforest(the above
 		var totalBisemana = $('input[name=bisemana[]]:checked').length;
 		var valor2 = document.getElementById("valor2");
 
-		bisemana.onblur = function(){
+		bisemana.on('click', function(){
 			let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana);
 			let valor = <?php echo $dados["nu_valor"] ?> * totalBisemana;
 			let total = parseInt(taxa, 10) + parseInt(valor, 10);
 			valor1.innerHTML = "<h2>"+ totalBisemana +"</h2>";
-		}
+		});
 
 		var demo3 = function() {
 			var map = new GMaps({
