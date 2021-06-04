@@ -3,12 +3,12 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 	session_start();
-    require_once("../Classes/Usuario.php");
+    require_once("../Classes/Cliente.php");
 
     $id_usuario = $_SESSION['id_usuario'];
 
-	$usuario = new Usuario();
-	$retorno = $usuario->BuscarCarrinho($id_usuario);
+	$cliente = new Cliente();
+	$retorno = $cliente->BuscarCarrinho($id_usuario);
     /*$id_midia = $dados["id_midia"];
     if($id_midia == 1){
         $bisemana = $_GET["bisemana"];
@@ -16,7 +16,7 @@
     }
     if($id_midia == 2){
         $dt_inicial = $_GET["dt_inicial"];
-        $mes = $_GET["mes"];
+        $mes = $_GET["mes"]; 
     }*/
 ?>
 <!DOCTYPE html>
