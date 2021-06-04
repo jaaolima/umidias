@@ -3,13 +3,13 @@
 	ini_set('display_startup_erros',1);
 	error_reporting(E_ALL);
 	session_start();
-    require_once("../Classes/Usuario.php");
+    require_once("../Classes/Cliente.php");
 
     $id_usuario = $_SESSION["id_usuario"];
 
-	$usuario = new Usuario();
+	$cliente = new Cliente();
 
-	$retorno = $usuario->BuscarCarrinho($id_usuario);
+	$retorno = $cliente->BuscarCarrinho($id_usuario);
 
 ?>
 <!DOCTYPE html>
@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php
+                                        <?php 
                                         
                                             while($dados = $retorno->fetch()){
                                                 echo "<tr>

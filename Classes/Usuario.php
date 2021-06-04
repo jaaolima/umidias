@@ -94,58 +94,7 @@
 			}
 		}
 
-		public function gravarCarrinho(array $dados)
-		{
 		
-			$id_usuario		= $dados['id_usuario'];
-			$id_ponto    	= $dados['id_ponto'];
-		
-			try{
-				$con = Conecta::criarConexao();
-				$insert = "INSERT into rl_carrinho (id_usuario, id_ponto)
-							VALUES (:id_usuario, :id_ponto)";
-				
-				$stmt = $con->prepare($insert);
-				
-				$params = array(':id_usuario' => $id_usuario, 
-								':id_ponto' => $id_ponto);
-
-				$stmt->execute($params);
-				
-			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			}
-		}
-		function buscarCarrinho($id_usuario)
-		{
-			try{
-				$con = Conecta::criarConexao();
-				
-				
-				$select = "SELECT c.id_ponto, ds_descricao, ds_latitude, ds_longitude, f.ds_foto, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, id_material, id_periodo, id_parceiro
-						FROM rl_carrinho c 
-						right join tb_ponto p on c.id_ponto = p.id_ponto 
-						inner join tb_tipo_midia t on p.id_midia=t.id_midia 
-						right join rl_ponto_foto f on p.id_ponto=f.id_ponto
-						WHERE id_usuario = :id_usuario and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
-
-				$stmt = $con->prepare($select);
-			   	$params = array(':id_usuario' => $id_usuario);
-			   
-			    $stmt->execute($params);
-
-			    return $stmt;
-				
-			}	
-			catch(Exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();	
-			}	
-		}
 
 		function buscarDadosUsuario($id_usuario)
 		{

@@ -4,5 +4,5 @@
 	error_reporting(E_ALL);
 	require_once("../Classes/Cliente.php");
 	$cliente = new Cliente();
-	$cliente->gravarCarrinho($_POST);
+	$cliente->alugarCarrinho($_POST);
 ?> 

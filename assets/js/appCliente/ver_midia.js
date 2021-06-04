@@ -106,17 +106,17 @@ $(document).ready(function() {
 		{
 			var id_usuario = $("#id_usuario").val();
 			var id_ponto = $("#id_ponto").val();
+			var dt_inicial = $("#dt_inicial").val();
+			var mes = $("#mes").val();
+			var ds_arte = $('input[type=file]').val();
 			
 			if(id_midia == 2){
 				$.ajax({
 					url: 'appUsuario/gravar_carrinho.php'
-					, data:	{id_usuario: id_usuario, id_ponto: id_ponto}
+					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, dt_inicial: dt_inicial, mes: mes, ds_arte: ds_arte}
 					, type: 'post'
 					, success: function() {
-						var dt_inicial = $("#dt_inicial").val();
-						var mes = $("#mes").val();
-						var ds_arte = $('input[type=file]').val()
-						redirectTo("appCliente/carrinho.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&ds_arte="+ds_arte+"&mes="+mes);	
+						redirectTo("appCliente/carrinho.php");	
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error");
