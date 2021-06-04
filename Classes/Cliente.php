@@ -269,7 +269,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$selectCarrinho = "SELECT c.id_ponto, id_usuario, dt_inicial, dt_final, ds_arte, id_midia, id_bisemana, id_material
+				$selectCarrinho = "SELECT c.id_ponto, id_usuario, dt_inicial, dt_final, ds_arte, id_midia, id_bisemana, c.id_material
 							FROM rl_carrinho c
 							inner join tb_ponto p on c.id_ponto=p.id_ponto
 							where id_usuario = :id_usuario ";
