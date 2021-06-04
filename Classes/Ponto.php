@@ -516,6 +516,7 @@
 			$ds_local	        	= $dados['ds_local'];
 			$ds_descricao	        = $dados['ds_descricao'];
 
+			$ds_foto = NULL;
 			if(!empty($_FILES["size"]["name"])){
 				$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
 			}
@@ -565,6 +566,7 @@
 								
 				$stmt->execute($params);
 
+				var_dump($ds_foto);
 				if(!isset($ds_foto)){
 					foreach($ds_foto as $key => $foto)
 					{
