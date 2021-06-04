@@ -517,7 +517,7 @@
 			$ds_descricao	        = $dados['ds_descricao'];
 
 			$ds_foto    	    	= $_FILES['fotos'];
-			if(!isset($ds_foto)){
+			if(!is_null($ds_foto)){
 				$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
 			}
 
@@ -567,7 +567,7 @@
 				$stmt->execute($params);
 
 				var_dump($ds_foto);
-				if(!isset($ds_foto)){
+				if(!is_null($ds_foto)){
 					foreach($ds_foto as $key => $foto)
 					{
 						$tamanho = 20000000;
