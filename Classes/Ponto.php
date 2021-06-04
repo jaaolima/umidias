@@ -515,7 +515,9 @@
 			$id_parceiro	        = $dados['id_parceiro'];
 			$ds_local	        	= $dados['ds_local'];
 			$ds_descricao	        = $dados['ds_descricao'];
-			$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
+
+			/*$ds_foto                = $this->reArrayFiles($_FILES['fotos']);*/
+			$ds_foto    	    	= $dados['fotos'];
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
 			$nu_valor    	        = $dados['nu_valor']; 
