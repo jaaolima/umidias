@@ -385,10 +385,11 @@ License: You must have a valid license purchased only from themeforest(the above
 			
 
 			$("input[name='bisemana[]']").on("click", function(){
+				<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
 				var totalBisemana = $("input[name='bisemana[]']:checked").length;
 				var valor2 = document.getElementById("valor2");
-				/*let taxa = 0.2 * (<?php echo $dados["nu_valor"]; ?> * totalBisemana); 
-				let valor = <?php echo $dados["nu_valor"]; ?> * totalBisemana;
+				/*let taxa = 0.2 * (<?php echo $valor; ?> * totalBisemana); 
+				let valor = <?php echo $valor; ?> * totalBisemana;
 				let total = parseInt(taxa, 10) + parseInt(valor, 10);*/
 				valor2.innerHTML = "<h2>"+ totalBisemana +"</h2>";
 				
@@ -401,6 +402,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		var valor1 = document.getElementById("valor1");
 
 		mes.onblur = function(){
+			
 			let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * mes.value);
 			let valor = <?php echo $dados["nu_valor"] ?> * mes.value;
 			let total = parseInt(taxa, 10) + parseInt(valor, 10);
