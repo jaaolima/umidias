@@ -156,7 +156,7 @@
 
 			if($id_midia == 1){
 				$id_material    = $dados['id_material'];
-				$bisemanas 		= $dados["bisemana"];
+				$bisemanas 		= $dados["bisemana[]"];
 				$listaCheckbox = explode(',', $bisemanas);
 
 				$id_bisemana= '';
