@@ -28,7 +28,7 @@ $(document).ready(function() {
     $("#gerar_boleto").on("click", function(e){
         id_usuario = $("#id_usuario").val();
         $.ajax({
-            url: 'appCliente/gravar_carrinho.php'
+            url: 'appCliente/alugar_carrinho.php'
             , data: {id_usuario: id_usuario}
             , type: 'post'
             , success: function(html) {
@@ -39,7 +39,7 @@ $(document).ready(function() {
                     showConfirmButton: true
                 });
                 
-                redirectTo("appCliente/listar_minhas_midias.php"); 
+                /*redirectTo("appCliente/listar_minhas_midias.php"); */
             }
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");
