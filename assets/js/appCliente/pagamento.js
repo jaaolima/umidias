@@ -41,7 +41,7 @@ $(document).ready(function() {
                     showConfirmButton: true
                 });
                 
-                /*redirectTo("appCliente/listar_minhas_midias.php");*/
+                redirectTo("appCliente/listar_minhas_midias.php");
             }
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");

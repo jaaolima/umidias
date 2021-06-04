@@ -149,38 +149,91 @@
 		}
 		public function gravarCarrinho(array $dados)
 		{
-		
+			$id_midia		= $dados['id_midia'];
 			$id_usuario		= $dados['id_usuario'];
 			$id_ponto    	= $dados['id_ponto'];
-			$dt_inicial    	= $dados['dt_inicial'];
-			$mes    		= $dados['mes'];
 			$ds_arte    	= $dados['ds_arte'];
 
-			$date = new DateTime($dt_inicial);
-			$date->modify('+'.$mes.'months');
-			$dt_final = $date->format('Y-m-d');
-		
-			try{
-				$con = Conecta::criarConexao();
-				$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte)
-							VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte)";
-				
-				$stmt = $con->prepare($insert);
-				
-				$params = array(':id_usuario' => $id_usuario, 
-								':id_ponto' => $id_ponto,
-								':dt_inicial' => $dt_inicial,
-								':dt_final' => $dt_final,
-								':ds_arte' => $ds_arte);
+			if($id_midia == 1){
+				$id_material    = $dados['id_material'];
+				$bisemanas = $_POST["bisemana"];
+				$listaCheckbox = explode(',', $bisemanas);
 
-				$stmt->execute($params);
+				$id_bisemana= '';
+				for ($i=0; $i < count($listaCheckbox); $i++) { 
+					
+						$id_bisemana = $listaCheckbox[$i];
+						$con = Conecta::criarConexao();
+						$select = "SELECT dt_inicial, dt_final 
+									from tb_bisemana 
+									where id_bisemana = :id_bisemana";
+						
+						$stmt = $con->prepare($select);
+						
+						$params = array(':id_bisemana' => $id_bisemana); 
+										
+						$stmt->execute($params);
+						$dados = $stmt->fetch();
+						$dt_inicial = $dados["dt_inicial"];
+						$dt_final = $dados["dt_final"];
+
+
+					try{
+						$con = Conecta::criarConexao();
+						$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material)
+									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material)";
+						
+						$stmt = $con->prepare($insert);
+						
+						$params = array(':id_usuario' => $id_usuario,
+										':id_ponto' => $id_ponto,
+										':dt_inicial' => $dt_inicial,
+										':dt_final' => $dt_final,
+										':ds_arte' => $ds_arte,
+										':id_material' => $id_material);
+										
+						$stmt->execute($params);
+					}
+					catch(exception $e) 
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					} 	
+				}
+			}
+
+			if($id_midia == 2){
+				$dt_inicial    	= $dados['dt_inicial'];
+				$mes    		= $dados['mes'];
 				
+	
+				$date = new DateTime($dt_inicial);
+				$date->modify('+'.$mes.'months');
+				$dt_final = $date->format('Y-m-d');
+			
+				try{
+					$con = Conecta::criarConexao();
+					$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte)
+								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte)";
+					
+					$stmt = $con->prepare($insert);
+					
+					$params = array(':id_usuario' => $id_usuario, 
+									':id_ponto' => $id_ponto,
+									':dt_inicial' => $dt_inicial,
+									':dt_final' => $dt_final,
+									':ds_arte' => $ds_arte);
+	
+					$stmt->execute($params);
+					
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
 			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			}
+			
 		}
 		function buscarCarrinho($id_usuario)
 		{

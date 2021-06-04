@@ -106,14 +106,15 @@ $(document).ready(function() {
 		{
 			var id_usuario = $("#id_usuario").val();
 			var id_ponto = $("#id_ponto").val();
-			var dt_inicial = $("#dt_inicial").val();
-			var mes = $("#mes").val();
 			var ds_arte = $('input[type=file]').val();
-			
+
 			if(id_midia == 2){
+				var dt_inicial = $("#dt_inicial").val();
+				var mes = $("#mes").val();
+				
 				$.ajax({
 					url: 'appCliente/gravar_carrinho.php'
-					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, dt_inicial: dt_inicial, mes: mes, ds_arte: ds_arte}
+					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, dt_inicial: dt_inicial, mes: mes, ds_arte: ds_arte, id_midia: id_midia}
 					, type: 'post'
 					, success: function() {
 						redirectTo("appCliente/carrinho.php");	
@@ -125,24 +126,19 @@ $(document).ready(function() {
 				
 			}
 			if(id_midia == 1){
+				var bisemana = new Array();
+				$("input[name='bisemana[]']:checked").each(function ()
+				{
+					bisemana.push( $(this).val());
+				});
+				var id_material = $("#id_material").val();
+
 				$.ajax({
-					url: 'appUsuario/gravar_carrinho.php'
-					, data:	{id_usuario: id_usuario, id_ponto: id_ponto}
+					url: 'appCliente/gravar_carrinho.php'
+					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, bisemana: bisemana, id_material: id_material, ds_arte: ds_arte, id_midia: id_midia}
 					, type: 'post'
 					, success: function() {
-						var id_ponto = $("#id_ponto").val();
-						var valor = document.getElementsByName("valor[]");
-						/*bisemana = [];
-						for (var i=0;i<valor.lenght;i++){
-							if (valor[i].checked == true){
-								bisemana.push($valor[i].value);
-							}
-						}
-						console.log(bisemana);*/
-
-						var id_material = $("#id_material").val(); 
-						var ds_arte = $('input[type=file]').val(); 
-						redirectTo("appCliente/carrinho.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
+						redirectTo("appCliente/carrinho.php");
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error");
@@ -167,7 +163,6 @@ $(document).ready(function() {
 			}
 			if(id_midia == 1){
 				var id_ponto = $("#id_ponto").val();
-				var valor = document.getElementsByName("bisemana");
 				var bisemana = new Array();
 				$("input[name='bisemana[]']:checked").each(function ()
 				{

@@ -727,7 +727,7 @@
 
 			
 				$dt_inicial	    = $dados['dt_inicial'];
-				$dt_final	    = $dados['dt_final'];
+				$dt_final	    = $dados['dt_final']; 
 				
 
 				try{
@@ -753,6 +753,7 @@
 				}
 			}
 			if($id_midia == 1){
+				$id_material    = $dados['id_material'];
 				$bisemanas = $_POST["bisemana"];
 				$listaCheckbox = explode(',', $bisemanas);
 
@@ -777,8 +778,8 @@
 
 					try{
 						$con = Conecta::criarConexao();
-						$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte)
-									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte)";
+						$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material)
+									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material)";
 						
 						$stmt = $con->prepare($insert);
 						
@@ -786,7 +787,8 @@
 										':id_ponto' => $id_ponto,
 										':dt_inicial' => $dt_inicial,
 										':dt_final' => $dt_final,
-										':ds_arte' => $ds_arte);
+										':ds_arte' => $ds_arte,
+										':id_material' => $id_material);
 										
 						$stmt->execute($params);
 					}
