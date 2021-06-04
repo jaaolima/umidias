@@ -517,7 +517,7 @@
 			$ds_descricao	        = $dados['ds_descricao'];
 
 			/*$ds_foto                = $this->reArrayFiles($_FILES['fotos']);*/
-			$ds_foto    	    	= $dados['fotos'];
+			$ds_foto    	    	= $_FILES['fotos'];
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
 			$nu_valor    	        = $dados['nu_valor']; 
