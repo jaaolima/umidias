@@ -31,14 +31,7 @@ $(document).ready(function() {
             url: 'appCliente/alugar_carrinho.php'
             , data: {id_usuario: id_usuario}
             , type: 'post'
-            , success: function(html) {
-                swal.fire({
-                    position: 'top-right',
-                    type: 'success',
-                    title: html,
-                    showConfirmButton: true
-                });
-                
+            , success: function(html) {      
                 redirectTo("appCliente/listar_minhas_midias.php"); 
             }
             , error: function (data) {

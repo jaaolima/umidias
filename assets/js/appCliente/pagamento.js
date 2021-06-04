@@ -34,13 +34,6 @@ $(document).ready(function() {
             , data: $("#form_alugar").serialize()
             , type: 'post'
             , success: function(html) {
-                swal.fire({
-                    position: 'top-right',
-                    type: 'success',
-                    title: html,
-                    showConfirmButton: true
-                });
-                
                 redirectTo("appCliente/listar_minhas_midias.php");
             }
             , error: function (data) {
