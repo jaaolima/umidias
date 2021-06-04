@@ -567,7 +567,7 @@
 				$stmt->execute($params);
 
 				var_dump($ds_foto);
-				if(!isset($ds_foto)){
+				if(isset($ds_foto)){
 					foreach($ds_foto as $key => $foto)
 					{
 						$tamanho = 20000000;
