@@ -515,7 +515,7 @@
 			$id_parceiro	        = $dados['id_parceiro'];
 			$ds_local	        	= $dados['ds_local'];
 			$ds_descricao	        = $dados['ds_descricao'];
-			
+
 			$ds_foto    	    	= $_FILES['fotos'];
 			if(!is_null($ds_foto["name"])){
 				$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
@@ -567,7 +567,7 @@
 				$stmt->execute($params);
 
 				var_dump($ds_foto);
-				/*if(!is_null($ds_foto["name"])){
+				if(!is_null($ds_foto["name"])){
 					foreach($ds_foto as $key => $foto)
 					{
 						$tamanho = 20000000;
@@ -606,7 +606,7 @@
 
 						}
 					}
-				}*/
+				}
 				
 				echo "Dados gravados com sucesso!"; 
 				
