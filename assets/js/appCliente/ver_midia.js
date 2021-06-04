@@ -139,6 +139,12 @@ $(document).ready(function() {
 					, type: 'post'
 					, success: function() {
 						/*redirectTo("appCliente/carrinho.php");*/
+						swal.fire({
+							position: 'top-right',
+							type: 'success',
+							title: html,
+							showConfirmButton: true
+						});
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error");
