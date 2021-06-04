@@ -380,15 +380,13 @@ License: You must have a valid license purchased only from themeforest(the above
 		// to the base of the flagpole.
 		jQuery(document).ready(function() {
 			demo3();
-		});
 
-		
-		$(document).ready(function() {
 			//calculo outdoor
-			var totalBisemana = $("input[name='bisemana[]']:checked").length;
-			var valor2 = document.getElementById("valor2");
+			
 
 			$("input[name='bisemana[]']").on("click", function(){
+				var totalBisemana = $("input[name='bisemana[]']:checked").length;
+				var valor2 = document.getElementById("valor2");
 				let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana); 
 				let valor = <?php echo $dados["nu_valor"] ?> * totalBisemana;
 				let total = parseInt(taxa, 10) + parseInt(valor, 10);
