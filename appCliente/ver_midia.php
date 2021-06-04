@@ -402,9 +402,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		var valor1 = document.getElementById("valor1");
 
 		mes.onblur = function(){
-			
-			let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * mes.value);
-			let valor = <?php echo $dados["nu_valor"] ?> * mes.value;
+			<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
+			let taxa = 0.2 * (<?php echo $valor ?> * mes.value);
+			let valor = <?php echo $valor ?> * mes.value;
 			let total = parseInt(taxa, 10) + parseInt(valor, 10);
 			valor1.innerHTML = "<h2>"+ total +"</h2>";
 		}
