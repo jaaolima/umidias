@@ -222,7 +222,7 @@
 							where id_perfil = :id_perfil ";
 				
 				$stmtCarrinho = $con->prepare($selectCarrinho); 
-				$paramsCarrinho = array(':id_perfil' => $id_perfil)
+				$paramsCarrinho = array(':id_perfil' => $id_perfil);
 				$stmtCarrinho->execute($paramsCarrinho);
 			}
 			catch(exception $e)
