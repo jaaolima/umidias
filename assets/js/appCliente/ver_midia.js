@@ -112,7 +112,7 @@ $(document).ready(function() {
 			
 			if(id_midia == 2){
 				$.ajax({
-					url: 'appUsuario/gravar_carrinho.php'
+					url: 'appCliente/gravar_carrinho.php'
 					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, dt_inicial: dt_inicial, mes: mes, ds_arte: ds_arte}
 					, type: 'post'
 					, success: function() {
