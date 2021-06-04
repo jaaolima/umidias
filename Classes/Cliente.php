@@ -211,7 +211,7 @@
 		}
 		public function alugarCarrinho(array $dados)
 		{
-			$id_perfil = $dados["id_perfil"];
+			$id_usuario = $dados["id_usuario"];
 
 			try{
 				$con = Conecta::criarConexao();
@@ -219,10 +219,10 @@
 				$selectCarrinho = "SELECT id_ponto, id_usuario, dt_inicial, dt_final, ds_arte, id_midia, id_bisemana
 							FROM rl_carrinho c
 							inner join tb_ponto p on c.id_ponto=p.id_ponto
-							where id_usuario = :id_perfil ";
+							where id_usuario = :id_usuario ";
 				
 				$stmtCarrinho = $con->prepare($selectCarrinho); 
-				$paramsCarrinho = array(':id_perfil' => $id_perfil);
+				$paramsCarrinho = array(':id_usuario' => $id_usuario);
 				$stmtCarrinho->execute($paramsCarrinho);
 
 				while($dadosCarrinho = $stmtCarrinho->fetch()){

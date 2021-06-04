@@ -146,6 +146,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/js/scripts.bundle.js"></script>
 		<script src="assets/js/appCliente/pagamento_carrinho.js"></script>
 		<!--end::Global Theme Bundle-->
+        <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $id_usuario;?>">
 	</body>
 	<!--end::Body-->
 </html>
