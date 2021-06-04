@@ -561,7 +561,7 @@
 								
 				$stmt->execute($params);
 
-				if(!is_null($ds_foto)){
+				/*if(!is_null($ds_foto)){
 					foreach($ds_foto as $key => $foto)
 					{
 						$tamanho = 20000000;
@@ -600,7 +600,7 @@
 
 						}
 					}
-				}
+				}*/
 				
 				echo "Dados gravados com sucesso!"; 
 				
