@@ -517,7 +517,7 @@
 			$ds_descricao	        = $dados['ds_descricao'];
 
 			$ds_foto = NULL;
-			if(!empty($_FILES["size"]["name"])){
+			if(isset($_FILES["size"]["name"])){
 				$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
 			}
 
