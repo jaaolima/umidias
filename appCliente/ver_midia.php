@@ -398,7 +398,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		var valor2 = document.getElementById("valor2");
 		
 
-		$("input[name='bisemana[]']").click(function(){
+		$("input[name='bisemana[]']").on("click", function(){
 			let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana); 
 			let valor = <?php echo $dados["nu_valor"] ?> * totalBisemana;
 			let total = parseInt(taxa, 10) + parseInt(valor, 10);
