@@ -164,18 +164,18 @@
 					
 						$id_bisemana = $listaCheckbox[$i];
 						$con = Conecta::criarConexao();
-						$select = "SELECT dt_inicial, dt_final 
+						$selectBisemana = "SELECT dt_inicial, dt_final 
 									from tb_bisemana 
 									where id_bisemana = :id_bisemana";
 						
-						$stmt = $con->prepare($select);
+						$stmtBisemana = $con->prepare($selectBisemana);
 						
 						$params = array(':id_bisemana' => $id_bisemana); 
 										
-						$stmt->execute($params);
-						$dados = $stmt->fetch();
-						$dt_inicial = $dados["dt_inicial"];
-						$dt_final = $dados["dt_final"];
+						$stmtBisemana->execute($params);
+						$dadosBisemana = $stmtBisemana->fetch();
+						$dt_inicial = $dadosBisemana["dt_inicial"];
+						$dt_final = $dadosBisemana["dt_final"];
 
 
 					try{
@@ -269,7 +269,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$selectCarrinho = "SELECT c.id_ponto, id_usuario, dt_inicial, dt_final, ds_arte, id_midia, id_bisemana
+				$selectCarrinho = "SELECT c.id_ponto, id_usuario, dt_inicial, dt_final, ds_arte, id_midia, id_bisemana, id_material
 							FROM rl_carrinho c
 							inner join tb_ponto p on c.id_ponto=p.id_ponto
 							where id_usuario = :id_usuario ";
@@ -283,17 +283,15 @@
 					$id_ponto	    = $dadosCarrinho['id_ponto'];
 					$ds_arte	    = $dadosCarrinho['ds_arte'];
 					$id_midia	    = $dadosCarrinho['id_midia'];
+					$dt_inicial	    = $dadosCarrinho['dt_inicial'];
+					$dt_final	    = $dadosCarrinho['dt_final'];
+					$id_material	= $dadosCarrinho['id_material'];
 					if($id_midia == 2){
-		
-					
-						$dt_inicial	    = $dadosCarrinho['dt_inicial'];
-						$dt_final	    = $dadosCarrinho['dt_final'];
-						
 		
 						try{
 							$con = Conecta::criarConexao();
-							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte)
-										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte)";
+							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material)
+										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1)";
 							
 							$stmt = $con->prepare($insert);
 							
@@ -313,48 +311,27 @@
 						}
 					}
 					if($id_midia == 1){
-						$bisemanas = $dadosCarrinho["id_bisemana"];
-						$listaCheckbox = explode(',', $bisemanas);
-		
-						$id_bisemana= '';
-						for ($i=0; $i < count($listaCheckbox); $i++) { 
+						try{
+							$con = Conecta::criarConexao();
+							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material)
+										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material)";
 							
-								$id_bisemana = $listaCheckbox[$i];
-								$con = Conecta::criarConexao();
-								$select = "SELECT dt_inicial, dt_final 
-											from tb_bisemana 
-											where id_bisemana = :id_bisemana";
-								
-								$stmt = $con->prepare($select);
-								
-								$params = array(':id_bisemana' => $id_bisemana); 
-												
-								$stmt->execute($params);
-								$dados = $stmt->fetch();
-								$dt_inicial = $dados["dt_inicial"];
-								$dt_final = $dados["dt_final"];
-		
-		
-							try{
-								$con = Conecta::criarConexao();
-								$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte)
-											VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte)";
-								
-								$stmt = $con->prepare($insert);
-								
-								$params = array(':id_usuario' => $id_usuario,
-												':id_ponto' => $id_ponto,
-												':dt_inicial' => $dt_inicial,
-												':dt_final' => $dt_final,
-												':ds_arte' => $ds_arte);
-												
-								$stmt->execute($params);
-							}
-							catch(exception $e) 
-							{
-								header('HTTP/1.1 500 Internal Server Error');
-								print "ERRO:".$e->getMessage();		
-							} 	
+							$stmt = $con->prepare($insert);
+							
+							$params = array(':id_usuario' => $id_usuario,
+											':id_ponto' => $id_ponto,
+											':dt_inicial' => $dt_inicial,
+											':dt_final' => $dt_final,
+											':ds_arte' => $ds_arte,
+											':id_material' => $id_material);
+											
+							$stmt->execute($params);
+							
+						}
+						catch(exception $e)
+						{
+							header('HTTP/1.1 500 Internal Server Error');
+							print "ERRO:".$e->getMessage();		
 						}
 					}
 				}
