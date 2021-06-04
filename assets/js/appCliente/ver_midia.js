@@ -127,7 +127,7 @@ $(document).ready(function() {
 			}
 			if(id_midia == 1){
 				var bisemana = new Array();
-				$("input[name='bisemana[]']:checked").each(function ()
+				$("input[name='bisemana[]']:checked").each(function () 
 				{
 					bisemana.push( $(this).val());
 				});

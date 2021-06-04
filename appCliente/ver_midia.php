@@ -399,13 +399,13 @@ License: You must have a valid license purchased only from themeforest(the above
 		valor2.innerHTML = "<h2>teste</h2>";
 
 		$('input[name=bisemana[]]').click(function(){
-			/*let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana);
+			/*let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana); 
 			let valor = <?php echo $dados["nu_valor"] ?> * totalBisemana;
 			let total = parseInt(taxa, 10) + parseInt(valor, 10);*/
 			swal.fire({
 				position: 'top-right',
 				type: 'success',
-				title: html,
+				title: ,
 				showConfirmButton: true
 			});
 			
