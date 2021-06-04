@@ -387,9 +387,9 @@ License: You must have a valid license purchased only from themeforest(the above
 			$("input[name='bisemana[]']").on("click", function(){
 				var totalBisemana = $("input[name='bisemana[]']:checked").length;
 				var valor2 = document.getElementById("valor2");
-				let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana); 
+				/*let taxa = 0.2 * (<?php echo $dados["nu_valor"] ?> * totalBisemana); 
 				let valor = <?php echo $dados["nu_valor"] ?> * totalBisemana;
-				let total = parseInt(taxa, 10) + parseInt(valor, 10);
+				let total = parseInt(taxa, 10) + parseInt(valor, 10);*/
 				valor2.innerHTML = "<h2>"+ totalBisemana +"</h2>";
 				
 			});
