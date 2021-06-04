@@ -193,6 +193,25 @@
 										':id_material' => $id_material);
 										
 						$stmt->execute($params);
+
+						try{
+							$con = Conecta::criarConexao(); 
+							
+							$delete = "delete from rl_carrinho where id_usuario=:id_usuario";
+							
+							$stmtDelete = $con->prepare($delete); 
+							$paramsDelete = array(':id_usuario' => $id_usuario);
+							$stmtDelete->execute($paramsDelete);
+			
+							echo "Carrinho esvaziado";
+							
+								
+						}
+						catch(exception $e)
+						{
+							header('HTTP/1.1 500 Internal Server Error');
+							print "ERRO:".$e->getMessage();		 
+						}
 					}
 					catch(exception $e) 
 					{
@@ -225,6 +244,25 @@
 									':ds_arte' => $ds_arte);
 	
 					$stmt->execute($params);
+
+					try{
+						$con = Conecta::criarConexao(); 
+						
+						$delete = "delete from rl_carrinho where id_usuario=:id_usuario";
+						
+						$stmtDelete = $con->prepare($delete); 
+						$paramsDelete = array(':id_usuario' => $id_usuario);
+						$stmtDelete->execute($paramsDelete);
+		
+						echo "Carrinho esvaziado";
+						
+							
+					}
+					catch(exception $e)
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		 
+					}
 					
 				}
 				catch(exception $e)
@@ -294,7 +332,7 @@
 										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1)";
 							
 							$stmt = $con->prepare($insert);
-							
+							 
 							$params = array(':id_usuario' => $id_usuario,
 											':id_ponto' => $id_ponto,
 											':dt_inicial' => $dt_inicial,

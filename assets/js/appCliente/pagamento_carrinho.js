@@ -33,7 +33,7 @@ $(document).ready(function() {
             , type: 'post'
             , success: function(html) {      
                 redirectTo("appCliente/listar_minhas_midias.php"); 
-            }
+            } 
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");
             }

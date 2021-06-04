@@ -20,7 +20,7 @@ $(document).ready(function() {
 		$('#card_boleto_parcelado').show();
         
     });
-    $("#pix").on("click", function(e){
+    $("#pix").on("click", function(e){ 
 
         $('.card-metodo').hide(); 
 		$('#card_pix').show();
