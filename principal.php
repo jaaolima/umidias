@@ -675,7 +675,8 @@
 						}],
 						chart: {
 							height: 350,
-							type: 'area'
+							type: 'area',
+							width: 400
 						},
 						dataLabels: {
 							enabled: false
