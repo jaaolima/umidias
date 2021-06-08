@@ -36,6 +36,4 @@
 <div id="lista"></div>
 <input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
 
-
-<script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-<script src="./assets/js/datatables/appPonto/busca_ponto.js" type="text/javascript"></script> 
+<script src="./assets/js/appPonto/busca_ponto_midia.js" type="text/javascript"></script> 
