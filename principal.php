@@ -650,7 +650,7 @@
 					var options = {
 						series: [{
 							name: 'Contratadas',
-							data: [31, 40, 28]
+							data: [<?php echo $dadosTotalContratadas[0]["id_ponto"]; ?>,<?php echo $dadosTotalContratadas[1]["id_ponto"]; ?>, <?php echo $dadosTotalContratadas[2]["id_ponto"]; ?>]
 						}, {
 							name: 'Pendentes',
 							data: [11, 32, 45]
