@@ -696,7 +696,17 @@
 					var chart = new ApexCharts(document.querySelector(apexChart), options);
 					chart.render();
 				}
-			}
+				return {
+					// public functions
+					init: function () {
+						_demo2();
+					}
+				};
+			}();
+			jQuery(document).ready(function () {
+				KTApexChartsDemo.init();
+			});
+
 		</script>
 		
 
