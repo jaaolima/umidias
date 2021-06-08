@@ -478,11 +478,11 @@
 															<div id="chart_2"></div>
 														</div>
 														
-														<div class="d-flex">
+														<!--<div class="d-flex">
 															<div class="d-flex mx-2"><h5>Contratadas: </h5><p style="color: green ;"><?php echo $dadosTotalContratadas["id_ponto"]; ?></p></div>
 															<div class="d-flex mx-2"><h5>Pendentes: </h5><p style="color:#1BC5BD;"><?php echo $dadosTotalPendentes["id_ponto"]; ?></p></div>
 															<div class="d-flex mx-2"><h5>Reservadas: </h5><p style="color: red;"><?php echo $dadosTotalReservadas["id_ponto"]; ?></p></div>
-														</div>
+														</div>-->
 														
 													</div>
 												</div>
@@ -668,16 +668,21 @@
 		<script>
 			const primary = '#6993FF';
 			const success = '#1BC5BD';
+			const danger = '#F64E60';
 			var KTApexChartsDemo = function () {
 				var _demo2 = function () {
 					const apexChart = "#chart_2";
 					var options = {
 						series: [{
-							name: 'series1',
+							name: 'Contratadas',
 							data: [31, 40, 28, 51, 42, 109, 100]
 						}, {
-							name: 'series2',
+							name: 'Pendentes',
 							data: [11, 32, 45, 32, 34, 52, 41]
+						},
+						{
+							name: 'Reservadas',
+							data: [11, 18, 90, 40, 34, 52, 100]
 						}],
 						chart: {
 							height: 350,
@@ -698,7 +703,7 @@
 								format: 'dd/MM/yy HH:mm'
 							},
 						},
-						colors: [primary, success]
+						colors: [primary, success, danger]
 					};
 
 					var chart = new ApexCharts(document.querySelector(apexChart), options);
