@@ -387,8 +387,8 @@
 								</div>
 								<!--end::Row-->
 								<!--begin::Row-->
-								<div class="row">
-									<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 4 ) :  ?>
+								<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 4 ) :  ?>
+									<div class="row">
 										<div class="col-xl-12">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 												<div class="card-body d-flex">
@@ -462,9 +462,10 @@
 											</div>
 										</div>
 											
-									<?php endif; ?>
 									
-								</div>
+									
+									</div>
+								<?php endif; ?>
 								<?php if($_SESSION['id_perfil'] == 3 ) :  ?>
 									<div class="row">
 										<div class="col-4">
@@ -512,75 +513,58 @@
 									</div>
 									<div class="row">
 										<div class="col-xl-12">
-											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+											<!--begin::Tiles Widget 25-->
+											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
 												<div class="card-body d-flex">
-													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+													<div class="d-flex py-5 flex-column align-items-start flex-grow-1 justify-content-center">
 														<div class="flex-grow-1" style="display: inherit;">
-															<h3 class="card-title titulo-div">Todas as Mídias</h3>
+															<h3  class="titulo-div">Lista de mídias</h3>
 														</div>
-														<div class="row m-0 col-12" >											
-															<table class="table table-hover">
-																<thead>
-																	<tr>
-																		<th>Tipo de Mídia</th>
-																		<th>status</th>
-																		<th>Valor contratado</th>
-																		<th></th>
-																	</tr>
-																</thead>
-																<tbody>
-																<?php
-																
-																	while($dadosTodas = $dadosTodasMidias->fetch()){
-																		echo "<tr>
-																				<td>
-																					<div class='d-flex'>
-																						<span class='symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success'>
-																							<img class='symbol-label img-fluid' src='".$dadosTodas["ds_foto"]."'>
-																						</span>
-																						<div class='ml-3 mt-2'>
-																							<span class='texto-negrito'>".$dadosTodas["ds_tipo"]."</span><br>																				
-																							<svg class='mr-1' width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
-																								<g clip-path='url(#clip0)'>
-																								<path d='M14 6.66675C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66675C2 5.07545 2.63214 3.54933 3.75736 2.42411C4.88258 1.29889 6.4087 0.666748 8 0.666748C9.5913 0.666748 11.1174 1.29889 12.2426 2.42411C13.3679 3.54933 14 5.07545 14 6.66675Z' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
-																								<path d='M8 8.66675C9.10457 8.66675 10 7.77132 10 6.66675C10 5.56218 9.10457 4.66675 8 4.66675C6.89543 4.66675 6 5.56218 6 6.66675C6 7.77132 6.89543 8.66675 8 8.66675Z' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
-																								</g>
-																								<defs>
-																								<clipPath id='clip0'>
-																								<rect width='16' height='16' fill='white'/>
-																								</clipPath>
-																								</defs>
-																							</svg>
-																							<span>".$dadosTodas["ds_local"]."</span>	
-																						</div>
-																					</div>
-																				</td>
-																				<td class='py-8 texto-vermelho'>Faltam 5 dias</td>
-																				<td class='py-8'>".$dadosTodas["nu_valor"]."</td>
-																				<td class='py-8'><a href='appCliente/ver_minha_midia.php?id_ponto=".$dadosTodas["id_ponto"]."'>
-																					<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-																						<path d='M5 12H19' stroke='#B721FF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
-																						<path d='M12 5L19 12L12 19' stroke='#B721FF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
-																					</svg>
-																				</a></td>
-																			</tr>";
+														<div class="row m-0 col-12 justify-content-center" >
+															<?php
+																while($dados = $retorno->fetch())
+																{ 
+																	$valor = count($dados) -1;
+																	$tamanho = 100/ $valor;
+																	if($dados["id_midia"] == $valor){ 
+																		echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'%  ;">
+																					<span class="svg-icon svg-icon-3x svg-icon-white d-block my-2">
+																						<svg width="50" height="46" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+																							<path d="M44.2 1H5.8C3.14903 1 1 3.14903 1 5.8V29.8C1 32.451 3.14903 34.6 5.8 34.6H44.2C46.851 34.6 49 32.451 49 29.8V5.8C49 3.14903 46.851 1 44.2 1Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																							<path d="M20.2 44.2H29.8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																							<path d="M25 34.6001V44.2001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																						</svg>
+																					</span>
+																					<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
+																					<a href="appPonto/lista_ponto_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Listar</a>
+																				</div>';
 																	}
-																	
-																?>
-																</tbody>
-															</table>
-															<div class="w-100 mt-6">
-																<a href="appCliente/listar_minhas_midias.php" class="text-primary float-right">Ver todas as mídias</a>
-															</div>															
+																	else{
+																		echo '<div class="bg-white pl-20 py-6 mb-10 mt-7 border-right  pr-20" style="text-align: center; width:'.$tamanho.'% ;">
+																					<span class="svg-icon svg-icon-3x svg-icon-white d-block my-2">
+																						<svg width="50" height="46" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+																							<path d="M44.2 1H5.8C3.14903 1 1 3.14903 1 5.8V29.8C1 32.451 3.14903 34.6 5.8 34.6H44.2C46.851 34.6 49 32.451 49 29.8V5.8C49 3.14903 46.851 1 44.2 1Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																							<path d="M20.2 44.2H29.8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																							<path d="M25 34.6001V44.2001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																						</svg>
+																					</span>
+																					<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
+																					<a href="appPonto/lista_ponto_midia?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Listar</a>
+																				</div>';
+																	}
+
+																}																	
+															?>
 														</div>
 													</div>
 												</div>
 											</div>
+											<!--end::Tiles Widget 25-->
 										</div>
 									</div>
 								<?php endif; ?>
-								<div class="row">	
-									<?php if($_SESSION['id_perfil'] == 2  ) :  ?>
+								<?php if($_SESSION['id_perfil'] == 2  ) :  ?>
+									<div class="row">	
 										<div class="col-xl-12">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 												<div class="card-body d-flex">
@@ -612,8 +596,8 @@
 												</div>
 											</div>
 										</div>
-									<?php endif; ?>
-								</div>
+									</div>
+								<?php endif; ?>
 								<!--end::Row-->
 								<!--end::Dashboard-->
 							</div>

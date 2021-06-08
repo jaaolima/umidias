@@ -283,6 +283,30 @@
     			print "ERRO:".$e->getMessage();		
 			}
 		}
+		public function listarPontoMidia($id_midia)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, ds_foto, t.ds_tipo
+							FROM tb_ponto p
+							inner join tb_tipo_midia t on p.id_midia=t.id_midia
+							where id_midia = :id_midia";
+				
+				$stmt = $con->prepare($select); 
+				$params = array(':id_midia' => $id_midia);
+				$stmt->execute($params);
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
 		public function listarMeusPontos($id_usuario)
 		{
 			try{

@@ -5,7 +5,8 @@
     
     require_once("../Classes/Ponto.php");
     $ponto = new Ponto();
-    $retorno = $ponto->listarTodosPonto();
+    $id_midia = $_REQUEST["id_midia"];
+    $retorno = $ponto->listarPontoMidia($id_midia);
 ?>
 <div class="card card-custom gutter-b">
 	<div class="card-header flex-wrap py-3">
