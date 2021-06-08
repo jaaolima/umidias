@@ -676,7 +676,6 @@
 						chart: {
 							height: 350,
 							type: 'area',
-							width: 100%
 						},
 						dataLabels: {
 							enabled: false
