@@ -689,16 +689,7 @@
 						xaxis: {
 							categories: ["1 mes atrás", "1 semana atrás", "Atual"]
 						},
-						tooltip: {
-							x: {
-								format: 'dd/MM/yy HH:mm'
-							},
-						},
-						options: {
-							menu: {
-								display: false
-							}
-						},
+	
 						colors: [primary, success, danger]
 					};
 
@@ -728,11 +719,7 @@
 						xaxis: {
 							categories: ["1 mes atrás", "1 semana atrás", "Atual"]
 						},
-						tooltip: {
-							x: {
-								format: 'dd/MM/yy HH:mm'
-							},
-						},
+	
 						colors: [primary]
 					};
 
@@ -762,11 +749,7 @@
 						xaxis: {
 							categories: ["1 mes atrás", "1 semana atrás", "Atual"]
 						},
-						tooltip: {
-							x: {
-								format: 'dd/MM/yy HH:mm'
-							},
-						},
+	
 						colors: [primary]
 					};
 
