@@ -518,7 +518,7 @@
 												<div class="card-body d-flex">
 													<div class="d-flex py-5 flex-column align-items-start flex-grow-1 justify-content-center">
 														<div class="flex-grow-1" style="display: inherit;">
-															<h3  class="titulo-div">Lista de mídias</h3>
+															<h3  class="titulo-div">Relatório de mídias Contratadas</h3>
 														</div>
 														<div class="row m-0 col-12 justify-content-center" >
 															<?php
@@ -536,7 +536,7 @@
 																						</svg>
 																					</span>
 																					<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
-																					<a href="appPonto/lista_ponto_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Listar</a>
+																					<a href="appPonto/busca_ponto_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Listar</a>
 																				</div>';
 																	}
 																	else{
@@ -549,7 +549,7 @@
 																						</svg>
 																					</span>
 																					<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
-																					<a href="appPonto/lista_ponto_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Listar</a>
+																					<a href="appPonto/busca_ponto_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Listar</a>
 																				</div>';
 																	}
 
