@@ -391,6 +391,28 @@
     			print "ERRO:".$e->getMessage();		
 			}
 		}
+		public function dadosTotalMidias()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT count(id_ponto) as id_ponto
+							FROM tb_ponto 
+							";
+				
+				$stmt = $con->prepare($select); 
+				$stmt->execute();
+
+				return $stmt->fetch();
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
 		public function dadosTotalContratadas()
 		{
 			
@@ -473,28 +495,7 @@
 
 			return array(mes(), semana(), atual());
 		}
-		public function dadosTotalMidias()
-		{
-			try{
-				$con = Conecta::criarConexao();
-				
-				$select = "SELECT count(id_ponto) as id_ponto
-							FROM tb_ponto 
-							";
-				
-				$stmt = $con->prepare($select); 
-				$stmt->execute();
-
-				return $stmt->fetch();
-				
-					
-			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			}
-		}
+		
 		public function dadosTotalPendentes()
 		{
 			
@@ -576,27 +577,85 @@
 		}
 		public function dadosTotalReservadas()
 		{
-			$data = date('Y-m-d');
-			try{
-				$con = Conecta::criarConexao();
-				
-				$select = "SELECT count(id_ponto) as id_ponto
-							FROM tb_ponto 
-							where id_ponto in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
-				
-				$stmt = $con->prepare($select); 
-				$params = array(':dt_hoje' => $data);
-				$stmt->execute($params);
-
-				return $stmt->fetch();
-				
+			
+			function mesReservados(){	
+				$mes = date('Y-m-d', strtotime('-1 month'));
+				$data = date('Y-m-d');
+				try{
+					$con = Conecta::criarConexao();
 					
+					$select = "SELECT count(id_ponto) as id_ponto
+								FROM tb_ponto 
+								where dt_ponto <= :mes and id_ponto in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':mes' => $mes,
+									':dt_hoje' => $data);
+
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
 			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
+			function semanaReservados(){	
+				$semana = date('Y-m-d', strtotime('-7 days'));
+				$data = date('Y-m-d');
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_ponto) as id_ponto
+								FROM tb_ponto 
+								where dt_ponto <= :semana and id_ponto in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':semana' => $semana,
+									':dt_hoje' => $data);
+					
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
 			}
+
+			function atualReservados(){	
+				$data = date('Y-m-d');
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_ponto) as id_ponto
+								FROM tb_ponto 
+								where id_ponto in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':dt_hoje' => $data);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			return array(mesReservados(), semanaReservados(), atualReservados());
 		}
 		function BuscarDadosPonto($id_ponto)
 		{

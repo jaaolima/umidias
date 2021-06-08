@@ -657,7 +657,7 @@
 						},
 						{
 							name: 'Reservadas',
-							data: [11, 18, 90]
+							data: [<?php echo $dadosTotalReservadas[0]["id_ponto"]; ?>,<?php echo $dadosTotalReservadas[1]["id_ponto"]; ?>, <?php echo $dadosTotalReservadas[2]["id_ponto"]; ?>]
 						}],
 						chart: {
 							height: 350,
