@@ -497,26 +497,82 @@
 		}
 		public function dadosTotalPendentes()
 		{
-			try{
-				$con = Conecta::criarConexao();
+			
+			function mes(){	
+				$mes = date('Y-m-d', strtotime('-1 month'));
 				
-				$select = "SELECT count(id_ponto) as id_ponto
-							FROM tb_ponto 
-							where id_ponto in (select id_ponto from rl_alugado)";
-				
-				$stmt = $con->prepare($select); 
-				
-				$stmt->execute();
-
-				return $stmt->fetch();
-				
+				try{
+					$con = Conecta::criarConexao();
 					
+					$select = "SELECT count(id_ponto) as id_ponto
+								FROM tb_ponto 
+								where dt_ponto <= :mes and id_ponto in (select id_ponto from rl_alugado)";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':mes' => $mes);
+
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
 			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
+			function semana(){	
+				$semana = date('Y-m-d', strtotime('-7 days'));
+				
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_ponto) as id_ponto
+								FROM tb_ponto 
+								where dt_ponto <= :semana and id_ponto in (select id_ponto from rl_alugado)";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':semana' => $semana);
+					
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
 			}
+
+			function atual(){	
+				
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_ponto) as id_ponto
+								FROM tb_ponto 
+								where id_ponto in (select id_ponto from rl_alugado)";
+					
+					$stmt = $con->prepare($select); 
+					$stmt->execute();
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			return array(mes(), semana(), atual());
 		}
 		public function dadosTotalReservadas()
 		{
