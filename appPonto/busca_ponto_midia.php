@@ -12,28 +12,25 @@
             <label>Tipo de busca</label>
             <div class="radio-inline">
                 <label class="radio">
-                    <input type="radio" name="tp_busca" value="1" checked="checked"> Nome
+                    <input type="radio" name="tp_busca" value="1" checked="checked"> Região
                     <span></span>
                 </label>
                 <label class="radio">
-                    <input type="radio" name="tp_busca" value="2"> Atendimento
-                    <span></span>
-                </label>
-                <label class="radio">
-                    <input type="radio" name="tp_busca" value="3"> CPF
-                    <span></span>
-                </label>
-                <label class="radio">
-                    <input type="radio" name="tp_busca" value="4"> Unidade 
+                    <input type="radio" name="tp_busca" value="2"> Preço
                     <span></span>
                 </label>
             </div>
             <span class="form-text text-muted">Selecione o tipo de busca e digite algo para buscar</span>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-6" id="região">
             <input type="text" id="busca" class="form-control" aria-describedby="buscaHelp" placeholder="Pesquisar" >
             <span class="form-text text-muted">Digite o parâmetro para busca</span>
         </div>
+        <div class="form-group col-md-6" id="valor" style="display:none;">
+            <div id="kt_price_slider" class="nouislider nouislider-light nouislider-handle-primary nouislider-bg-light-primary nouislider-shadowless nouislider-borderless"></div>
+            <span class="form-text text-muted">Selecione o valor</span>
+        </div>
+        
 		<!--begin: Datatable -->
 		
 		<!--end: Datatable -->

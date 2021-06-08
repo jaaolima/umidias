@@ -37,4 +37,12 @@ $(document).ready(function() {
         });		
 				
 	});
+    if(tp_busca == 1){
+        $("#regiao").show();
+        $("#valor").hide();
+    }
+    if(tp_busca == 2){
+        $("#regiao").hide();
+        $("#valor").show();
+    }
 });
