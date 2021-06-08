@@ -695,7 +695,7 @@
 							},
 						},
 						options: {
-							legend: {
+							menu: {
 								display: false
 							}
 						},
