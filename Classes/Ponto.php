@@ -631,7 +631,7 @@
 							where id_ponto=:id_ponto";
 
 				$stmt = $con->prepare($select);
-			   	$params = array(':id_ponto' => $id_ponto);
+			   	$params = array(':id_ponto' => $id_ponto); 
 			   
 			    $stmt->execute($params);
 

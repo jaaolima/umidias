@@ -9,8 +9,8 @@
 	$id_ponto = $_GET["id_ponto"]; 
 	
 	$ponto = new Ponto();
-	$dados = $ponto->BuscarDadosPonto($id_ponto);
-	$dadosFoto = $ponto->BuscarFotoPontoAlugado($id_ponto);
+	$dados = $ponto->BuscarDadosPontoAlugado($id_ponto);
+	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto); 
 
 
 ?>
