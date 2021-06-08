@@ -44,7 +44,7 @@
 			</thead>
 			<tbody>
 				<?php
-					while($dados = $meusPontos->fetch()){
+					while($dados = $retorno->fetch()){
                         $dataInicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
                         $dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
                         echo "<tr>
