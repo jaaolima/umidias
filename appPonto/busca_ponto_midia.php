@@ -10,20 +10,20 @@
 	<div class="card-body">
         <div class="form-group col-md-12">
             <label>Tipo de busca</label>
-            <div class="kt-radio-inline">
-                <label class="kt-radio">
+            <div class="radio-inline">
+                <label class="radio">
                     <input type="radio" name="tp_busca" value="1" checked="checked"> Nome
                     <span></span>
                 </label>
-                <label class="kt-radio">
+                <label class="radio">
                     <input type="radio" name="tp_busca" value="2"> Atendimento
                     <span></span>
                 </label>
-                <label class="kt-radio">
+                <label class="radio">
                     <input type="radio" name="tp_busca" value="3"> CPF
                     <span></span>
                 </label>
-                <label class="kt-radio">
+                <label class="radio">
                     <input type="radio" name="tp_busca" value="4"> Unidade 
                     <span></span>
                 </label>

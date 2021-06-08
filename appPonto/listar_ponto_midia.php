@@ -14,7 +14,7 @@
         <div class="card-title"> 
             <i class="flaticon-placeholder icon-xl"></i>&nbsp;
             <h3 class="card-label">
-                Pontos Cadastrados
+                Pontos alugados
             </h3> 
         </div>
         <div class="kt-portlet__head-toolbar">
