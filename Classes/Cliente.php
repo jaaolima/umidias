@@ -102,34 +102,10 @@
     			print "ERRO:".$e->getMessage();		
 			} 
         }
-		public function dadosTotalCliente()
-		{
-			try{
-				$con = Conecta::criarConexao();
-				
-				$select = "SELECT count(id_usuario) as id_usuario
-							FROM tb_usuario
-							where id_perfil = 1 ";
-				
-				$stmt = $con->prepare($select); 
-				
-				$stmt->execute();
-
-				return $stmt->fetch();
-				
-					
-			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			}
-		}
-
-		public function dadosTotalParceiros()
+		public function dadosTotalClientes()
 		{
 			
-			function mesParceiros(){	
+			function mesClientes(){	
 				$mes = date('Y-m-d', strtotime('-1 month'));
 				try{
 					$con = Conecta::criarConexao();
@@ -153,7 +129,7 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function semanaParceiros(){	
+			function semanaClientes(){	
 				$semana = date('Y-m-d', strtotime('-7 days'));
 				try{
 					$con = Conecta::criarConexao();
@@ -178,7 +154,7 @@
 				}
 			}
 
-			function atualParceiros(){	
+			function atualClientes(){	
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -199,7 +175,7 @@
 				}
 			}
 
-			return array(mesParceiros(), semanaParceiros(), atualParceiros());
+			return array(mesClientes(), semanaClientes(), atualClientes());
 		}
 
 		public function esvaziarCarrinho(array $dados)
