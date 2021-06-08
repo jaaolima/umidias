@@ -471,11 +471,13 @@
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 												<div class="card-body d-flex">
 													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
-														<div class="flex-grow-1" style="display: inherit;">
-															<h3 class="card-title titulo-div">Total de Midias: <?php echo $dadosTotalMidias["id_ponto"]; ?></h3>
+													<div class="flex-grow-1 card-spacer pb-0">
+														<i class="flaticon-users icon-xl"></i>
+														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalMidias["id_usuario"]; ?></div>
+															<div class="text-muted font-weight-bold">Mídias</div>
 														</div>
 														<div class="position-relative w-100">
-															<div id="chart_2"></div>
+															<div id="grafico_midia"></div>
 														</div>
 														
 														<!--<div class="d-flex">
@@ -497,10 +499,10 @@
 														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalParceiros["id_parceiro"]; ?></div>
 														<div class="text-muted font-weight-bold">Parceiros</div>
 													</div>
+													<div class="position-relative w-100">
+														<div id="grafico_parceiro"></div>
+													</div>
 													<!--end::Stats-->
-													<!--begin::Chart-->
-													<div id="kt_tiles_widget_21_chart" class="card-rounded-bottom" data-color="info" style="height: 100px"></div>
-													<!--end::Chart-->
 												</div> 
 											</div>
 										</div>	
@@ -513,10 +515,9 @@
 														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalCliente["id_usuario"]; ?></div>
 														<div class="text-muted font-weight-bold">Clientes</div>
 													</div>
-													<!--end::Stats-->
-													<!--begin::Chart-->
-													<div id="kt_tiles_widget_21_chart" class="card-rounded-bottom" data-color="info" style="height: 100px"></div>
-													<!--end::Chart-->
+													<div class="position-relative w-100">
+														<div id="grafico_usuario"></div>
+													</div>
 												</div>
 											</div>
 										</div>	
@@ -670,8 +671,92 @@
 			const success = '#1BC5BD';
 			const danger = '#F64E60';
 			var KTApexChartsDemo = function () {
-				var _demo2 = function () {
-					const apexChart = "#chart_2";
+				var midia = function () {
+					const apexChart = "#grafico_midia";
+					var options = {
+						series: [{
+							name: 'Contratadas',
+							data: [31, 40, 28, 51, 42, 109, 100]
+						}, {
+							name: 'Pendentes',
+							data: [11, 32, 45, 32, 34, 52, 41]
+						},
+						{
+							name: 'Reservadas',
+							data: [11, 18, 90, 40, 34, 52, 100]
+						}],
+						chart: {
+							height: 350,
+							type: 'line',
+							zoom: {
+								enabled: false
+							}
+						},
+						dataLabels: {
+							enabled: false
+						},
+						stroke: {
+							curve: 'smooth'
+						},
+						xaxis: {
+							type: 'datetime',
+							categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+						},
+						tooltip: {
+							x: {
+								format: 'dd/MM/yy HH:mm'
+							},
+						},
+						colors: [primary, success, danger]
+					};
+
+					var chart = new ApexCharts(document.querySelector(apexChart), options);
+					chart.render();
+				}
+				var parceiro = function () {
+					const apexChart = "#parceiro";
+					var options = {
+						series: [{
+							name: 'Contratadas',
+							data: [31, 40, 28, 51, 42, 109, 100]
+						}, {
+							name: 'Pendentes',
+							data: [11, 32, 45, 32, 34, 52, 41]
+						},
+						{
+							name: 'Reservadas',
+							data: [11, 18, 90, 40, 34, 52, 100]
+						}],
+						chart: {
+							height: 350,
+							type: 'line',
+							zoom: {
+								enabled: false
+							}
+						},
+						dataLabels: {
+							enabled: false
+						},
+						stroke: {
+							curve: 'smooth'
+						},
+						xaxis: {
+							type: 'datetime',
+							categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+						},
+						tooltip: {
+							x: {
+								format: 'dd/MM/yy HH:mm'
+							},
+						},
+						colors: [primary, success, danger]
+					};
+
+					var chart = new ApexCharts(document.querySelector(apexChart), options);
+					chart.render();
+				}
+				var usuario = function () {
+					const apexChart = "#grafico_usuario";
 					var options = {
 						series: [{
 							name: 'Contratadas',
@@ -715,7 +800,9 @@
 				return {
 					// public functions
 					init: function () {
-						_demo2();
+						midia();
+						parceiro();
+						usuario();
 					}
 				};
 			}();
