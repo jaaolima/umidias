@@ -664,14 +664,14 @@
 					var options = {
 						series: [{
 							name: 'Contratadas',
-							data: [31, 40, 28, 51, 42, 109, 100]
+							data: [31, 40, 28]
 						}, {
 							name: 'Pendentes',
-							data: [11, 32, 45, 32, 34, 52, 41]
+							data: [11, 32, 45]
 						},
 						{
 							name: 'Reservadas',
-							data: [11, 18, 90, 40, 34, 52, 100]
+							data: [11, 18, 90]
 						}],
 						chart: {
 							height: 350,
@@ -688,7 +688,7 @@
 						},
 						xaxis: {
 							type: 'datetime',
-							categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+							categories: ["1 mes atrás", "1 semana atrás", "Atual"]
 						},
 						tooltip: {
 							x: {
@@ -705,15 +705,8 @@
 					const apexChart = "#grafico_parceiro";
 					var options = {
 						series: [{
-							name: 'Contratadas',
-							data: [31, 40, 28, 51, 42, 109, 100]
-						}, {
-							name: 'Pendentes',
-							data: [11, 32, 45, 32, 34, 52, 41]
-						},
-						{
-							name: 'Reservadas',
-							data: [11, 18, 90, 40, 34, 52, 100]
+							name: 'Total',
+							data: [31, 40, 28]
 						}],
 						chart: {
 							height: 350,
@@ -730,14 +723,14 @@
 						},
 						xaxis: {
 							type: 'datetime',
-							categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+							categories: ["1 mes atrás", "1 semana atrás", "Atual"]
 						},
 						tooltip: {
 							x: {
 								format: 'dd/MM/yy HH:mm'
 							},
 						},
-						colors: [primary, success, danger]
+						colors: [primary]
 					};
 
 					var chart = new ApexCharts(document.querySelector(apexChart), options);
@@ -747,15 +740,8 @@
 					const apexChart = "#grafico_cliente";
 					var options = {
 						series: [{
-							name: 'Contratadas',
-							data: [31, 40, 28, 51, 42, 109, 100]
-						}, {
-							name: 'Pendentes',
-							data: [11, 32, 45, 32, 34, 52, 41]
-						},
-						{
-							name: 'Reservadas',
-							data: [11, 18, 90, 40, 34, 52, 100]
+							name: 'total',
+							data: [31, 40, 28]
 						}],
 						chart: {
 							height: 350,
@@ -772,14 +758,14 @@
 						},
 						xaxis: {
 							type: 'datetime',
-							categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+							categories: ["1 mes atrás", "1 semana atrás", "Atual"]
 						},
 						tooltip: {
 							x: {
 								format: 'dd/MM/yy HH:mm'
 							},
 						},
-						colors: [primary, success, danger]
+						colors: [primary]
 					};
 
 					var chart = new ApexCharts(document.querySelector(apexChart), options);
