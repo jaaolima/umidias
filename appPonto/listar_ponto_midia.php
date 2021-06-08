@@ -6,29 +6,29 @@
     require_once("../Classes/Ponto.php");
     $ponto = new Ponto();
     $id_midia = $_REQUEST["id_midia"];
-    var_dump($id_midia);
     $retorno = $ponto->listarPontoMidia($id_midia);
 ?>
-<div class="card-header flex-wrap py-3">
-    <div class="card-title"> 
-        <i class="flaticon-placeholder icon-xl"></i>&nbsp;
-        <h3 class="card-label">
-            Pontos Cadastrados
-        </h3> 
-    </div>
-    <div class="kt-portlet__head-toolbar">
-        <div class="kt-portlet__head-wrapper">
-            <div class="kt-portlet__head-actions">
-                &nbsp;
-                <a href="appPonto/cadastro.php" class="btn btn-light-primary font-weight-bolder">
-                    <i class="la la-plus"></i>
-                    Cadastrar novo
-                </a>
-            </div>
-        </div> 
-    </div>
-</div>
+
 <div class="card card-custom gutter-b">
+    <div class="card-header flex-wrap py-3">
+        <div class="card-title"> 
+            <i class="flaticon-placeholder icon-xl"></i>&nbsp;
+            <h3 class="card-label">
+                Pontos Cadastrados
+            </h3> 
+        </div>
+        <div class="kt-portlet__head-toolbar">
+            <div class="kt-portlet__head-wrapper">
+                <div class="kt-portlet__head-actions">
+                    &nbsp;
+                    <a href="appPonto/cadastro.php" class="btn btn-light-primary font-weight-bolder">
+                        <i class="la la-plus"></i>
+                        Cadastrar novo
+                    </a>
+                </div>
+            </div> 
+        </div>
+    </div>
 	<div class="card-body">
         <table class="table table-striped- table-bordered table-hover table-checkable" id="table_usuario">
             <thead>
