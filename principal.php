@@ -476,9 +476,9 @@
 														</div>
 														<div id="chart_2"></div>
 														<div class="d-flex">
-															<div class="d-flex"><h5>Contratadas: </h5><p style="color: green ;"><?php echo $dadosTotalContratadas["id_ponto"]; ?></p></div>
-															<div class="d-flex"><h5>Pendentes: </h5><p style="color:yellow;"><?php echo $dadosTotalPendentes["id_ponto"]; ?></p></div>
-															<div class="d-flex"><h5>Reservadas: </h5><p style="color: red;"><?php echo $dadosTotalReservadas["id_ponto"]; ?></p></div>
+															<div class="d-flex mx-2"><h5>Contratadas: </h5><p style="color: green ;"><?php echo $dadosTotalContratadas["id_ponto"]; ?></p></div>
+															<div class="d-flex mx-2"><h5>Pendentes: </h5><p style="color:yellow;"><?php echo $dadosTotalPendentes["id_ponto"]; ?></p></div>
+															<div class="d-flex mx-2"><h5>Reservadas: </h5><p style="color: red;"><?php echo $dadosTotalReservadas["id_ponto"]; ?></p></div>
 														</div>
 														
 													</div>
