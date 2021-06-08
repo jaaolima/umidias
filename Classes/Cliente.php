@@ -102,7 +102,7 @@
     			print "ERRO:".$e->getMessage();		
 			} 
         }
-		public function dadosTotalClientes()
+		public function dadosTotalCliente()
 		{
 			
 			function mesClientes(){	
