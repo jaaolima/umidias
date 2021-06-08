@@ -698,7 +698,7 @@
 							legend: {
 								display: false
 							}
-						}
+						},
 						colors: [primary, success, danger]
 					};
 
