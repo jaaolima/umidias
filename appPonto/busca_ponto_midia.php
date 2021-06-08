@@ -22,7 +22,7 @@
             </div>
             <span class="form-text text-muted">Selecione o tipo de busca e digite algo para buscar</span>
         </div>
-        <div class="form-group col-md-6" id="região">
+        <div class="form-group col-md-6" id="regiao">
             <input type="text" id="busca" class="form-control" aria-describedby="buscaHelp" placeholder="Pesquisar" >
             <span class="form-text text-muted">Digite o parâmetro para busca</span>
         </div>
