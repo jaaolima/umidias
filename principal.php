@@ -483,10 +483,10 @@
 										</div>
 										<div class="col-4">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
-												<div class="card-body d-flex flex-column p-0">
+												<div class="card-body d-flex ">
 													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 														<div class="flex-grow-1" style="display: inherit;">
-															<h3 class="card-title titulo-div">Total de Parceiros: <?php echo $dadosTotalParceiros["id_midia"]; ?></h3>
+															<h3 class="card-title titulo-div">Total de Parceiros: <?php echo $dadosTotalParceiros["id_parceiro"]; ?></h3>
 														</div>
 														<div class="position-relative w-100">
 															<div id="grafico_parceiro"></div>
@@ -497,7 +497,7 @@
 										</div>	
 										<div class="col-4">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
-												<div class="card-body d-flex flex-column p-0">
+												<div class="card-body d-flex ">
 													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 														<div class="flex-grow-1" style="display: inherit;">
 															<h3 class="card-title titulo-div">Total de Clientes: <?php echo $dadosTotalCliente["id_usuario"]; ?></h3>
