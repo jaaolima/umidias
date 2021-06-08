@@ -470,7 +470,6 @@
 										<div class="col-4">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 												<div class="card-body d-flex">
-													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 													<div class="flex-grow-1 card-spacer pb-0">
 														<i class="flaticon-users icon-xl"></i>
 														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalMidias["id_ponto"]; ?></div>
@@ -479,12 +478,6 @@
 														<div class="position-relative w-100">
 															<div id="grafico_midia"></div>
 														</div>
-														
-														<!--<div class="d-flex">
-															<div class="d-flex mx-2"><h5>Contratadas: </h5><p style="color: green ;"><?php echo $dadosTotalContratadas["id_ponto"]; ?></p></div>
-															<div class="d-flex mx-2"><h5>Pendentes: </h5><p style="color:#1BC5BD;"><?php echo $dadosTotalPendentes["id_ponto"]; ?></p></div>
-															<div class="d-flex mx-2"><h5>Reservadas: </h5><p style="color: red;"><?php echo $dadosTotalReservadas["id_ponto"]; ?></p></div>
-														</div>-->
 														
 													</div>
 												</div>
