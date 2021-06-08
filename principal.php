@@ -473,12 +473,11 @@
 													<div class="flex-grow-1 card-spacer pb-0">
 														<i class="flaticon-users icon-xl"></i>
 														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalMidias["id_ponto"]; ?></div>
-															<div class="text-muted font-weight-bold">Mídias</div>
-														</div>
-														<div class="position-relative w-100">
-															<div id="grafico_midia"></div>
-														</div>
+														<div class="text-muted font-weight-bold">Mídias</div>
 														
+													</div>
+													<div class="position-relative w-100">
+														<div id="grafico_midia"></div>
 													</div>
 												</div>
 											</div>
