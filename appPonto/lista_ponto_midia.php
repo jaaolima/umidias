@@ -33,14 +33,13 @@
 		<!--begin: Datatable -->
 		<table class="table table-striped- table-bordered table-hover table-checkable" id="table_usuario">
 			<thead>
-				<tr>
-					<th>Id Ponto</th>
-					<th>Descrição</th>
-					<th>Valor</th>
-					<th>Tipo de Mídia</th>
-					<th>Observações</th>
-					<th>Ações</th>          
-				</tr>
+                <tr>
+                    <th>Tipo de Mídia</th> 
+                    <th>Data inicial</th>
+                    <th>Data final</th>
+                    <th>Valor contratado</th>
+                    <th></th>
+                </tr>
 			</thead>
 			<tbody>
 				<?php
