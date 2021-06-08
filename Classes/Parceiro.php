@@ -313,7 +313,7 @@
 		public function dadosTotalParceiros()
 		{
 			
-			function mes(){	
+			function mesParceiros(){	
 				$mes = date('Y-m-d', strtotime('-1 month'));
 				try{
 					$con = Conecta::criarConexao();
@@ -337,7 +337,7 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function semana(){	
+			function semanaParceiros(){	
 				$semana = date('Y-m-d', strtotime('-7 days'));
 				try{
 					$con = Conecta::criarConexao();
@@ -362,7 +362,7 @@
 				}
 			}
 
-			function atual(){	
+			function atualParceiros(){	
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -383,7 +383,7 @@
 				}
 			}
 
-			return array(mes(), semana(), atual());
+			return array(mesParceiros(), semanaParceiros(), atualParceiros());
 		}
 		
 		public function listarOptionsUF($id_estado)
