@@ -474,7 +474,7 @@
 														<div class="flex-grow-1" style="display: inherit;">
 															<h3 class="card-title titulo-div">Total de Midias: <?php echo $dadosTotalMidias["id_ponto"]; ?></h3>
 														</div>
-														<div class="position-relative">
+														<div class="position-relative w-100">
 															<div id="chart_2"></div>
 														</div>
 														
