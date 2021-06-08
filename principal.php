@@ -34,8 +34,6 @@
 	$dadosTotalParceiros = $parceiro->dadosTotalParceiros();
 	$dadosTotalCliente = $cliente->dadosTotalCliente();
 	$dadosTodasMidias = $ponto->listarTodasMidias();
-
-	var_dump($dadosTotalContratadas);
 ?>
 <!DOCTYPE html> 
 
