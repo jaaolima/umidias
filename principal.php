@@ -694,6 +694,11 @@
 								format: 'dd/MM/yy HH:mm'
 							},
 						},
+						options: {
+							legend: {
+								display: false
+							}
+						}
 						colors: [primary, success, danger]
 					};
 
