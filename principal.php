@@ -473,7 +473,7 @@
 													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 													<div class="flex-grow-1 card-spacer pb-0">
 														<i class="flaticon-users icon-xl"></i>
-														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalMidias["id_midia"]; ?></div>
+														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalMidias["id_ponto"]; ?></div>
 															<div class="text-muted font-weight-bold">Mídias</div>
 														</div>
 														<div class="position-relative w-100">
