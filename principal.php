@@ -686,7 +686,10 @@
 						}],
 						chart: {
 							height: 350,
-							type: 'area',
+							type: 'line',
+							zoom: {
+								enabled: false
+							}
 						},
 						dataLabels: {
 							enabled: false
