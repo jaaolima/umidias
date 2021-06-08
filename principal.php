@@ -660,6 +660,8 @@
 		<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
 		<script src="assets/js/pages/crud/file-upload/dropzonejs.js"></script>
 		<script>
+			const primary = '#6993FF';
+			const success = '#1BC5BD';
 			var KTApexChartsDemo = function () {
 				var _demo2 = function () {
 					const apexChart = "#chart_2";
