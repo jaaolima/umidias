@@ -31,6 +31,7 @@
 			$id_midia               = $dados['id_midia'];
 			$ds_observacao	        = $dados['ds_observacao'];
 			$id_material	        = $dados['id_material'];
+			$dt_ponto = date("Y-m-d");
 
 
 			
@@ -50,8 +51,8 @@
 				
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_ponto (id_parceiro, ds_descricao, ds_latitude, ds_longitude, nu_valor, id_midia, ds_local, ds_observacao, id_material, id_periodo, ds_tamanho)
-							VALUES (:id_parceiro, :ds_descricao, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_local, :ds_observacao, :id_material, :id_periodo, :ds_tamanho)";
+				$insert = "INSERT into tb_ponto (id_parceiro, ds_descricao, ds_latitude, ds_longitude, nu_valor, id_midia, ds_local, ds_observacao, id_material, id_periodo, ds_tamanho, dt_ponto)
+							VALUES (:id_parceiro, :ds_descricao, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_local, :ds_observacao, :id_material, :id_periodo, :ds_tamanho, :dt_ponto)";
 				
 				$stmt = $con->prepare($insert);
 				
@@ -65,7 +66,8 @@
 								':ds_observacao' => $ds_observacao,
 								':id_material' => $id_material,
 								':id_periodo' => $id_periodo,
-								':ds_tamanho' => $ds_tamanho);
+								':ds_tamanho' => $ds_tamanho,
+								':dt_ponto' => $dt_ponto);
 								
 				$stmt->execute($params);
 
