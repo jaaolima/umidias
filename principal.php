@@ -470,14 +470,13 @@
 										<div class="col-4">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 												<div class="card-body d-flex">
-													<div class="flex-grow-1 card-spacer pb-0">
-														<i class="flaticon-users icon-xl"></i>
-														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalMidias["id_ponto"]; ?></div>
-														<div class="text-muted font-weight-bold">Mídias</div>
-														
-													</div>
-													<div class="position-relative w-100">
-														<div id="grafico_midia"></div>
+													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+														<div class="flex-grow-1" style="display: inherit;">
+															<h3 class="card-title titulo-div">Total de Midias: <?php echo $dadosTotalMidias["id_ponto"]; ?></h3>
+														</div>
+														<div class="position-relative w-100">
+															<div id="grafico_midia"></div>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -485,30 +484,27 @@
 										<div class="col-4">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 												<div class="card-body d-flex flex-column p-0">
-													<!--begin::Stats-->
-													<div class="flex-grow-1 card-spacer pb-0">
-														<i class="flaticon-map icon-xl"></i>
-														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalParceiros["id_parceiro"]; ?></div>
-														<div class="text-muted font-weight-bold">Parceiros</div>
+													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+														<div class="flex-grow-1" style="display: inherit;">
+															<h3 class="card-title titulo-div">Total de Parceiros: <?php echo $dadosTotalParceiros["id_midia"]; ?></h3>
+														</div>
+														<div class="position-relative w-100">
+															<div id="grafico_parceiro"></div>
+														</div>
 													</div>
-													<div class="position-relative w-100">
-														<div id="grafico_parceiro"></div>
-													</div>
-													<!--end::Stats-->
 												</div> 
 											</div>
 										</div>	
 										<div class="col-4">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 												<div class="card-body d-flex flex-column p-0">
-													<!--begin::Stats-->
-													<div class="flex-grow-1 card-spacer pb-0">
-														<i class="flaticon-users icon-xl"></i>
-														<div class="font-weight-boldest font-size-h3 pt-2"><?php echo $dadosTotalCliente["id_usuario"]; ?></div>
-														<div class="text-muted font-weight-bold">Clientes</div>
-													</div>
-													<div class="position-relative w-100">
-														<div id="grafico_usuario"></div>
+													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+														<div class="flex-grow-1" style="display: inherit;">
+															<h3 class="card-title titulo-div">Total de Clientes: <?php echo $dadosTotalCliente["id_usuario"]; ?></h3>
+														</div>
+														<div class="position-relative w-100">
+															<div id="grafico_cliente"></div>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -747,8 +743,8 @@
 					var chart = new ApexCharts(document.querySelector(apexChart), options);
 					chart.render();
 				}
-				var usuario = function () {
-					const apexChart = "#grafico_usuario";
+				var cliente = function () {
+					const apexChart = "#grafico_cliente";
 					var options = {
 						series: [{
 							name: 'Contratadas',
@@ -794,7 +790,7 @@
 					init: function () {
 						midia();
 						parceiro();
-						usuario();
+						cliente();
 					}
 				};
 			}();
