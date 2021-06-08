@@ -28,7 +28,7 @@
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 	$meusPontos = $ponto->listarMeusPontos($id_usuario);
 	$dadosTotalMidias = $ponto->dadosTotalMidias();
-	$dadosTotalContratadas = $ponto->dadosTotalContratadas();
+	/*$dadosTotalContratadas = $ponto->dadosTotalContratadas();*/
 	$dadosTotalPendentes = $ponto->dadosTotalPendentes();
 	$dadosTotalReservadas = $ponto->dadosTotalReservadas();
 	$dadosTotalParceiros = $parceiro->dadosTotalParceiros();
