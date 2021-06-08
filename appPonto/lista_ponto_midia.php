@@ -91,4 +91,4 @@
 </div>
 
 <script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-<script src="./assets/js/datatables/appPonto/lista_ponto.js" type="text/javascript"></script> 
+<script src="./assets/js/datatables/appPonto/lista_ponto_midia.js" type="text/javascript"></script> 
