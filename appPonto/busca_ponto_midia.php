@@ -1,24 +1,6 @@
 
 <div class="card card-custom gutter-b">
-	<div class="card-header flex-wrap py-3">
-		<div class="card-title"> 
-			<i class="flaticon-placeholder icon-xl"></i>&nbsp;
-			<h3 class="card-label">
-				Pontos Cadastrados
-			</h3> 
-		</div>
-		<div class="kt-portlet__head-toolbar">
-			<div class="kt-portlet__head-wrapper">
-				<div class="kt-portlet__head-actions">
-					&nbsp;
-					<a href="appPonto/cadastro.php" class="btn btn-light-primary font-weight-bolder">
-						<i class="la la-plus"></i>
-						Cadastrar novo
-					</a>
-				</div>
-			</div> 
-		</div>
-	</div>
+	
 	<div class="card-body">
         <div class="form-group col-md-12">
             <label>Tipo de busca</label>
@@ -51,8 +33,9 @@
 		<!--end: Datatable -->
 	</div>
 </div>
-<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
 <div id="lista"></div>
+<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
+
 
 <script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 <script src="./assets/js/datatables/appPonto/busca_ponto.js" type="text/javascript"></script> 
