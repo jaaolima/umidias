@@ -474,6 +474,7 @@
 														<div class="flex-grow-1" style="display: inherit;">
 															<h3 class="card-title titulo-div">Total de Midias: <?php echo $dadosTotalMidias["id_ponto"]; ?></h3>
 														</div>
+														<div id="chart_2"></div>
 														<div class="d-flex"><h5>Contratadas: </h5><?php echo $dadosTotalContratadas["id_ponto"]; ?></div>
 														<div class="d-flex"><h5>Pendentes: </h5><?php echo $dadosTotalPendentes["id_ponto"]; ?></div>
 														<div class="d-flex"><h5>Reservadas: </h5><?php echo $dadosTotalReservadas["id_ponto"]; ?></div>
@@ -494,7 +495,7 @@
 													<!--begin::Chart-->
 													<div id="kt_tiles_widget_21_chart" class="card-rounded-bottom" data-color="info" style="height: 100px"></div>
 													<!--end::Chart-->
-												</div>
+												</div> 
 											</div>
 										</div>	
 										<div class="col-4">
@@ -658,6 +659,45 @@
 		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM&callback=initialize"></script>
 		<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
 		<script src="assets/js/pages/crud/file-upload/dropzonejs.js"></script>
+		<script>
+			var KTApexChartsDemo = function () {
+				var _demo2 = function () {
+					const apexChart = "#chart_2";
+					var options = {
+						series: [{
+							name: 'series1',
+							data: [31, 40, 28, 51, 42, 109, 100]
+						}, {
+							name: 'series2',
+							data: [11, 32, 45, 32, 34, 52, 41]
+						}],
+						chart: {
+							height: 350,
+							type: 'area'
+						},
+						dataLabels: {
+							enabled: false
+						},
+						stroke: {
+							curve: 'smooth'
+						},
+						xaxis: {
+							type: 'datetime',
+							categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+						},
+						tooltip: {
+							x: {
+								format: 'dd/MM/yy HH:mm'
+							},
+						},
+						colors: [primary, success]
+					};
+
+					var chart = new ApexCharts(document.querySelector(apexChart), options);
+					chart.render();
+				}
+			}
+		</script>
 		
 
 		<!--end::Page Scripts-->
