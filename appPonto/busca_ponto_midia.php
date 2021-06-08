@@ -1,4 +1,10 @@
+<?php
+	ini_set('display_errors',1);
+	ini_set('display_startup_erros',1);
+    error_reporting(E_ALL);
 
+    $id_midia = $_REQUEST["id_midia"];
+?>
 <div class="card card-custom gutter-b">
 	
 	<div class="card-body">
