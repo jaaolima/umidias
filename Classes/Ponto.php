@@ -402,7 +402,7 @@
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto 
-								where dt_ponto <= :mes and id_ponto not in (select id_ponto from rl_alugado where ':dt_hoje' between dt_inicial and dt_final)";
+								where dt_ponto <= ':mes' and id_ponto not in (select id_ponto from rl_alugado where ':dt_hoje' between dt_inicial and dt_final)";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':mes' => $mes,
@@ -428,7 +428,7 @@
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto 
-								where dt_ponto <= :semana and id_ponto not in (select id_ponto from rl_alugado where ':dt_hoje' between dt_inicial and dt_final)";
+								where dt_ponto <= ':semana' and id_ponto not in (select id_ponto from rl_alugado where ':dt_hoje' between dt_inicial and dt_final)";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':semana' => $semana,
