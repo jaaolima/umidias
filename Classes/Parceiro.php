@@ -18,12 +18,13 @@
 			$id_regime			= $dados['id_regime'];
 			$nu_aliquota 		= $dados['nu_aliquota'];
 			$nu_cpf 	    	= $dados['nu_cpf'];
+			$dt_parceiro 		= date("Y-m-d");
 			if($id_regime === "CPF"){
 				if($this->validarCPF($nu_cpf)){
 					try{
 						$con = Conecta::criarConexao();
-						$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cpf,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
-									VALUES (:ds_nomeempresa, :nu_cpf, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
+						$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cpf,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota, dt_parceiro)
+									VALUES (:ds_nomeempresa, :nu_cpf, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota, :dt_parceiro)";
 						
 						$stmt = $con->prepare($insert);
 						
@@ -39,7 +40,8 @@
 										':ds_email' => $ds_email,
 										':nu_telefone' => $nu_telefone,
 										':id_regime' => $id_regime,
-										':nu_aliquota' => $nu_aliquota);
+										':nu_aliquota' => $nu_aliquota,
+										':dt_parceiro' => $dt_parceiro);
 										
 						$stmt->execute($params);
 						
@@ -61,8 +63,8 @@
 				if($this->validarCNPJ($nu_cnpj)){
 					try{
 						$con = Conecta::criarConexao();
-						$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota)
-									VALUES (:ds_nomeempresa, :nu_cnpj, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota)";
+						$insert = "INSERT into tb_parceiro (ds_nomeempresa, nu_cnpj,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota, dt_parceiro)
+									VALUES (:ds_nomeempresa, :nu_cnpj, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota, :dt_parceiro)";
 						
 						$stmt = $con->prepare($insert);
 						
@@ -78,7 +80,8 @@
 										':ds_email' => $ds_email,
 										':nu_telefone' => $nu_telefone,
 										':id_regime' => $id_regime,
-										':nu_aliquota' => $nu_aliquota);
+										':nu_aliquota' => $nu_aliquota,
+										':dt_parceiro' => $dt_parceiro);
 										
 						$stmt->execute($params);
 						

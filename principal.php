@@ -715,7 +715,7 @@
 					var options = {
 						series: [{
 							name: 'total',
-							data: [31, 40, 28]
+							data: [<?php echo $dadosTotalCliente[0]["id_cliente"]; ?>,<?php echo $dadosTotalCliente[1]["id_cliente"]; ?>, <?php echo $dadosTotalCliente[2]["id_cliente"]; ?>]
 						}],
 						chart: {
 							height: 350,

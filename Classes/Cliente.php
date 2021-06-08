@@ -126,6 +126,82 @@
 			}
 		}
 
+		public function dadosTotalParceiros()
+		{
+			
+			function mesParceiros(){	
+				$mes = date('Y-m-d', strtotime('-1 month'));
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_usuario) as id_usuario
+								FROM tb_usuario 
+								where dt_usuario <= :mes";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':mes' => $mes);
+
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+			function semanaParceiros(){	
+				$semana = date('Y-m-d', strtotime('-7 days'));
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_usuario) as id_usuario
+								FROM tb_usuario
+								where dt_usuario <= :semana";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':semana' => $semana);
+					
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			function atualParceiros(){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_usuario) as id_usuario
+								FROM tb_usuario";
+					
+					$stmt = $con->prepare($select); 
+					$stmt->execute();
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			return array(mesParceiros(), semanaParceiros(), atualParceiros());
+		}
+
 		public function esvaziarCarrinho(array $dados)
 		{
 			try{
