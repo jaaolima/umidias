@@ -112,7 +112,7 @@
 					
 					$select = "SELECT count(id_usuario) as id_usuario
 								FROM tb_usuario 
-								where dt_usuario <= :mes";
+								where dt_usuario <= :mes and id_perfil = 1";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':mes' => $mes);
@@ -136,7 +136,7 @@
 					
 					$select = "SELECT count(id_usuario) as id_usuario
 								FROM tb_usuario
-								where dt_usuario <= :semana";
+								where dt_usuario <= :semana and id_perfil = 1";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':semana' => $semana);
@@ -159,7 +159,8 @@
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(id_usuario) as id_usuario
-								FROM tb_usuario";
+								FROM tb_usuario
+								where id_perfil = 1";
 					
 					$stmt = $con->prepare($select); 
 					$stmt->execute();
