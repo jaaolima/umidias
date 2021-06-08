@@ -685,7 +685,7 @@
 					var options = {
 						series: [{
 							name: 'Total',
-							data: [<?php echo $dadosTotalParceiros[0]["id_ponto"]; ?>,<?php echo $dadosTotalParceiros[1]["id_ponto"]; ?>, <?php echo $dadosTotalParceiros[2]["id_ponto"]; ?>]
+							data: [<?php echo $dadosTotalParceiros[0]["id_parceiro"]; ?>,<?php echo $dadosTotalParceiros[1]["id_parceiro"]; ?>, <?php echo $dadosTotalParceiros[2]["id_parceiro"]; ?>]
 						}],
 						chart: {
 							height: 350,
