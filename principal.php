@@ -549,7 +549,7 @@
 																						</svg>
 																					</span>
 																					<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
-																					<a href="appPonto/lista_ponto_midia?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Listar</a>
+																					<a href="appPonto/lista_ponto_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Listar</a>
 																				</div>';
 																	}
 
