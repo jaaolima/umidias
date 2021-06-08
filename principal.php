@@ -757,7 +757,6 @@
 							curve: 'smooth'
 						},
 						xaxis: {
-							type: 'datetime',
 							categories: ["1 mes atrás", "1 semana atrás", "Atual"]
 						},
 						tooltip: {
