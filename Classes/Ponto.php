@@ -498,7 +498,7 @@
 		public function dadosTotalPendentes()
 		{
 			
-			function mes(){	
+			function mesPendentes(){	
 				$mes = date('Y-m-d', strtotime('-1 month'));
 				
 				try{
@@ -523,7 +523,7 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function semana(){	
+			function semanaPendentes(){	
 				$semana = date('Y-m-d', strtotime('-7 days'));
 				
 				try{
@@ -549,7 +549,7 @@
 				}
 			}
 
-			function atual(){	
+			function atualPendentes(){	
 				
 				try{
 					$con = Conecta::criarConexao();
@@ -572,7 +572,7 @@
 				}
 			}
 
-			return array(mes(), semana(), atual());
+			return array(mesPendentes(), semanaPendentes(), atualPendentes());
 		}
 		public function dadosTotalReservadas()
 		{
