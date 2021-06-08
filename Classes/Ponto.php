@@ -393,9 +393,10 @@
 		}
 		public function dadosTotalContratadas()
 		{
-			$data = date('Y-m-d');
+			
 			function mes(){	
 				$mes = date('Y-m-d', strtotime('-1 month'));
+				$data = date('Y-m-d');
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -421,6 +422,7 @@
 			}
 			function semana(){	
 				$semana = date('Y-m-d', strtotime('-7 days'));
+				$data = date('Y-m-d');
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -446,6 +448,7 @@
 			}
 
 			function atual(){	
+				$data = date('Y-m-d');
 				try{
 					$con = Conecta::criarConexao();
 					
