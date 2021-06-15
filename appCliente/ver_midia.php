@@ -391,7 +391,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				let taxa = 0.2 * (<?php echo $valor; ?> * totalBisemana); 
 				let valor = <?php echo $valor; ?> * totalBisemana;
 				let total = parseInt(taxa, 10) + parseInt(valor, 10);
-				valor2.innerHTML = "<h2>"+ new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(total) +"</h2>";
+				valor2.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 				
 			});
 
@@ -406,7 +406,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			let taxa = 0.2 * (<?php echo $valor ?> * mes.value);
 			let valor = <?php echo $valor ?> * mes.value;
 			let total = parseInt(taxa, 10) + parseInt(valor, 10);
-			valor1.innerHTML = "<h2>"+ new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(total) +"</h2>";
+			valor1.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 		}
 
 		
