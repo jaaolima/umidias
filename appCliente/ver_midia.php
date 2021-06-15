@@ -189,9 +189,9 @@ License: You must have a valid license purchased only from themeforest(the above
 														<thead>
 															<tr>
 																<th>ID bisemanas</th>
-																<th>Bisemanas Disponiveis</th>
 																<th>Data Inicial</th>
 																<th>Data Final</th>
+																<th>Bisemanas Disponiveis</th>
 																<th>Selecione</th>
 															</tr>
 														</thead>
@@ -206,9 +206,9 @@ License: You must have a valid license purchased only from themeforest(the above
 
 																	echo "<tr>
 																			<td>".$dadosBisemana['id_bisemana']."</td>
-																			<td>".$dadosBisemana['ds_bisemana']."</td>
 																			<td>".$dt_inicial."</td>
 																			<td>".$dt_final."</td>
+																			<td>".$dadosBisemana['ds_bisemana']."</td>
 																			<td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox'></td>
 																		</tr>";
 																}
@@ -335,7 +335,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 													<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
 													<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
-													<input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario; ?>">
+													<input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario; ?>"> 
 												</div>
 												<div class="separator separator-solid"></div>
 												<div class="my-6 mx-6 d-flex">
@@ -391,7 +391,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				let taxa = 0.2 * (<?php echo $valor; ?> * totalBisemana); 
 				let valor = <?php echo $valor; ?> * totalBisemana;
 				let total = parseInt(taxa, 10) + parseInt(valor, 10);
-				valor2.innerHTML = "<h2>"+ total +"</h2>";
+				valor2.innerHTML = "<h2>"+ numberFormat(total) +"</h2>";
 				
 			});
 
@@ -406,7 +406,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			let taxa = 0.2 * (<?php echo $valor ?> * mes.value);
 			let valor = <?php echo $valor ?> * mes.value;
 			let total = parseInt(taxa, 10) + parseInt(valor, 10);
-			valor1.innerHTML = "<h2>"+ total +"</h2>";
+			valor1.innerHTML = "<h2>"+ numberFormat(total) +"</h2>";
 		}
 
 		
