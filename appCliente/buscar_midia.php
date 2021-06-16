@@ -107,7 +107,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por Bisemanas </button>
 									<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
 										<div class="row">
-											<h4 class="texto-negrito mb-4 ml-2">Selecione as bisemanas</h4>
+											<h4 class="texto-negrito mb-4 mr-2">Selecione as bisemanas</h4>
 											<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="14 dias de exibição"><i class="flaticon-questions-circular-button"></i></a>
 										</div>
 										<table  class="table table-hover" id="table_bisemana">
@@ -169,6 +169,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/plugins/global/plugins.bundle.js"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
+		<script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 		<script src="assets/js/appCliente/buscar_midia.js"></script>
 		<script>
 			// The following example creates complex markers to indicate beaches near
