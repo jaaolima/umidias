@@ -182,6 +182,7 @@
 						else{
 							$datasBisemana .= "between ".$dados["dt_inicial"]." and ".$dados["dt_final"]." or ";
 						}
+						var_dump($datasBisemana);
 						
 					}
 					catch(exception $e)
@@ -192,7 +193,7 @@
 
 					
 				}
-				try{
+				/*try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo
@@ -215,7 +216,7 @@
 				{
 					header('HTTP/1.1 500 Internal Server Error');
 					print "ERRO:".$e->getMessage();		
-				}
+				}*/
 			}
 			if($id_busca === ""){
 				try{
