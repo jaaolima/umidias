@@ -74,7 +74,7 @@ $(document).ready(function() {
 
     $(".excluir").on("click", function(e){
         id_usuario = $("#id_usuario").val(); 
-        id_ponto = this.attr("ponto");
+        id_ponto = $(this).attr("ponto");
         console.log(id_ponto);
         /*$.ajax({
             url: 'appCliente/gravar_carrinho.php'
