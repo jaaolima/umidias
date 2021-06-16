@@ -164,13 +164,13 @@
 				for ($i=0; $i < count($bisemana); $i++) { 
 					try{
 						$con = Conecta::criarConexao();
-						
+
 						$select = "SELECT dt_inicial, dt_final
 								from tb_bisemana
 								where id_bisemana = :id_bisemana";
 					
 						$stmtBisemana = $con->prepare($select); 
-						$params = array(':id_bisemana' => $id_bisemana[$i]);
+						$params = array(':id_bisemana' => $bisemana[$i]);
 						
 						$stmtBisemana->execute($params);
 		
