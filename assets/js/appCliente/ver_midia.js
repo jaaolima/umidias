@@ -71,7 +71,7 @@ $(document).ready(function() {
 		$('#map').addClass("d-none");
 		$(this).addClass("btn-mapa-active");
 		$(this).removeClass("btn-mapa");
-		$('#ver_mapa').removeClass("btn-mapa-active");
+		$('#ver_mapa').removeClass("btn-mapa-active"); 
 		$('#ver_mapa').addClass("btn-mapa");
     }); 
 
