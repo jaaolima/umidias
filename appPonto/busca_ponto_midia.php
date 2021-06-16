@@ -29,10 +29,11 @@
         <div class="form-group col-md-6" id="valor" style="display:none;">
             <div class="d-flex">
                 <input type="number" class="form-control col-2" name="valor_inicial" id="valor_inicial">
-                <p class="ju"> até </p>
+                <i class="ju"> até </i>
                 <input type="number" class="form-control col-2" name="valor_final" id="valor_final">
+                <button class="btn btn-primary" id="aplicar">Aplicar</button>
             </div>
-            <button class="btn btn-primary" id="aplicar">Aplicar</button>
+            
         </div>
         <input type="hidden" value="<?php echo $id_midia; ?>" id="id_midia" name="id_midia">
         
