@@ -288,7 +288,7 @@
 		public function listarPontoMidia(array $dados)
 		{
 			$id_midia = $dados["id_midia"];
-			$id_busca = $dados["id_buscar"] 
+			$id_busca = $dados["id_busca"];
 			if($id_busca === "regiao"){
 				$busca = $dados["busca"];
 				try{
