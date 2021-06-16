@@ -54,6 +54,17 @@ $(document).ready(function() {
         });		
 				
 	});
+
+    $("#valor_inicial").inputmask({
+		"mask": "9.999",
+		numericInput: true,
+	});
+
+    $("#valor_final").inputmask({
+		"mask": "9.999",
+		numericInput: true,
+	});
+
     $("#buscar_regiao").on('click', function(){
 
         $("#regiao").show(); 

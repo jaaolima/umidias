@@ -79,7 +79,7 @@ $(document).ready(function() {
 		numericInput: true,
 	});
 	$("#nu_valor").inputmask({
-		"mask": "9.999.99",
+		"mask": "9.999",
 		numericInput: true,
 	});
 	
