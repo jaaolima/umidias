@@ -48,5 +48,5 @@ $(document).ready(function() {
             $("#valor").show();
         }*/
         console.log($("input[name='tp_busca']").val())
-    
+    });
 });
