@@ -182,17 +182,14 @@
 						else{
 							$datasBisemana .= "between ".$dados["dt_inicial"]." and ".$dados["dt_final"]." or ";
 						}
-						var_dump($datasBisemana);
-						
 					}
 					catch(exception $e)
 					{
 						header('HTTP/1.1 500 Internal Server Error');
 						print "ERRO:".$e->getMessage();		
-					}
-
-					
+					}	
 				}
+				var_dump($datasBisemana);
 				/*try{
 					$con = Conecta::criarConexao();
 					
