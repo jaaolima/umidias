@@ -184,7 +184,7 @@
 							$datasBisemana .= "(dt_inicial between ".$dados["dt_inicial"]." and ".$dados["dt_final"].")";
 						}
 						else{
-							$datasBisemana .= " or (dt_inicial between ".$dados["dt_inicial"]." and ".$dados["dt_final"];
+							$datasBisemana .= " or (dt_inicial between ".$dados["dt_inicial"]." and ".$dados["dt_final"].")";
 						}
 					}
 					catch(exception $e)
