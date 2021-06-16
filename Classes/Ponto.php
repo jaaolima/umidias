@@ -165,11 +165,11 @@
 					try{
 						$con = Conecta::criarConexao();
 
-						$select = "SELECT dt_inicial, dt_final
+						$selectBisemana = "SELECT dt_inicial, dt_final
 								from tb_bisemana
 								where id_bisemana = :id_bisemana";
 					
-						$stmtBisemana = $con->prepare($select); 
+						$stmtBisemana = $con->prepare($selectBisemana); 
 						$params = array(':id_bisemana' => $bisemana[$i]);
 						
 						$stmtBisemana->execute($params);
@@ -196,8 +196,6 @@
 								where p.id_midia=:id_midia 
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
 								and p.id_ponto not in (select id_ponto from rl_alugado ".$datasBisemana.")";
-
-					var_dump($select);
 					
 					$stmt = $con->prepare($select); 
 					
