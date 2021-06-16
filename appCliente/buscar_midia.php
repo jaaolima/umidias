@@ -86,66 +86,66 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div class="dropdown position-absolute" style="top: 10px;right: 80px;">
-							<?php if($id_midia == 2) :  ?>
-								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por datas</button>
-								<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
-									<?php if($id_midia == 2) :  ?>
-										<div class="row">
-											<h4 class="texto-negrito mb-4">Selecione a data inicial</h4>
-										</div>
-										<div class="row">
-											<div id="calendario"></div>
-										</div>
-										<div class="row float-right mt-4">
-											<button id="aplicar" class="btn btn-primary">Aplicar</button>
-										</div>
-									<?php endif;?>
+								<?php if($id_midia == 2) :  ?>
+									<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por datas</button>
+									<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
+										<?php if($id_midia == 2) :  ?>
+											<div class="row">
+												<h4 class="texto-negrito mb-4">Selecione a data inicial</h4>
+											</div>
+											<div class="row">
+												<div id="calendario"></div>
+											</div>
+											<div class="row float-right mt-4">
+												<button id="aplicar" class="btn btn-primary">Aplicar</button>
+											</div>
+										<?php endif;?>
+										
+									</div>
+								<?php endif;?>
+								<?php if($id_midia == 1) :  ?>
+									<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por Bisemanas </button>
+									<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
 									
-								</div>
-							<?php endif;?>
-							<?php if($id_midia == 1) :  ?>
-								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por Bisemanas </i></button>
-								<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
-								
-									<div class="row">
-										<h4 class="texto-negrito mb-4">Selecione as bisemanas</h4>
-										<i class="flaticon-questions-circular-button">
+										<div class="row">
+											<h4 class="texto-negrito mb-4">Selecione as bisemanas</h4>
+											<a href="javascript:;"><i class="flaticon-questions-circular-button"></i></a>
+										</div>
+										<table  class="table table-hover" id="table_bisemana">
+											<thead>
+												<tr>
+													<th>ID bisemanas</th>
+													<th>Data Inicial</th>
+													<th>Data Final</th>
+													<th>Bisemanas Disponiveis</th>
+													<th>Selecione</th>
+												</tr>
+											</thead>
+											<tbody>
+												<?php
+													while ($dadosBisemana = $retorno->fetch())
+													{
+
+														$dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
+														$dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
+
+
+														echo "<tr>
+																<td>".$dadosBisemana['id_bisemana']."</td>
+																<td>".$dt_inicial."</td>
+																<td>".$dt_final."</td>
+																<td>".$dadosBisemana['ds_bisemana']."</td>
+																<td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox'></td>
+															</tr>";
+													}
+												?>
+											</tbody>
+										</table>
+										<div class="row float-right mt-4">
+											<button id="aplicarBisemana" class="btn btn-primary">Aplicar</button>
+										</div>
 									</div>
-									<table  class="table table-hover" id="table_bisemana">
-										<thead>
-											<tr>
-												<th>ID bisemanas</th>
-												<th>Data Inicial</th>
-												<th>Data Final</th>
-												<th>Bisemanas Disponiveis</th>
-												<th>Selecione</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php
-												while ($dadosBisemana = $retorno->fetch())
-												{
-
-													$dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
-													$dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
-
-
-													echo "<tr>
-															<td>".$dadosBisemana['id_bisemana']."</td>
-															<td>".$dt_inicial."</td>
-															<td>".$dt_final."</td>
-															<td>".$dadosBisemana['ds_bisemana']."</td>
-															<td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox'></td>
-														</tr>";
-												}
-											?>
-										</tbody>
-									</table>
-									<div class="row float-right mt-4">
-										<button id="aplicarBisemana" class="btn btn-primary">Aplicar</button>
-									</div>
-								</div>
-							<?php endif;?>
+								<?php endif;?>
 								
 							</div>				
 						</div>
