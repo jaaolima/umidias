@@ -200,6 +200,29 @@
     			print "ERRO:".$e->getMessage();		 
 			}
 		}
+
+		public function excluirpontoCarrinho(array $dados)
+		{
+			try{
+				$con = Conecta::criarConexao(); 
+				
+				$select = "delete from rl_carrinho where id_usuario=:id_usuario and id_ponto=:id_ponto";
+				
+				$stmt = $con->prepare($select); 
+				$params = array(':id_usuario' => $dados["id_usuario"],
+								':id_ponto' => $dados["id_ponto"]);
+				$stmt->execute($params);
+
+				echo "Carrinho esvaziado";
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		 
+			}
+		}
 		public function gravarCarrinho(array $dados)
 		{
 			$id_midia		= $dados['id_midia'];

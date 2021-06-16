@@ -75,10 +75,9 @@ $(document).ready(function() {
     $(".excluir").on("click", function(e){
         id_usuario = $("#id_usuario").val(); 
         id_ponto = $(this).attr("ponto");
-        console.log(id_ponto);
-        /*$.ajax({
-            url: 'appCliente/gravar_carrinho.php'
-            , data: {id_usuario: id_usuario}
+        $.ajax({
+            url: 'appCliente/excluir_ponto_carrinho.php'
+            , data: {id_usuario: id_usuario, id_ponto: id_ponto}
             , type: 'post'
             , success: function(html) {
                 swal.fire({
@@ -88,12 +87,12 @@ $(document).ready(function() {
                     showConfirmButton: true
                 });
                 
-                redirectTo("appCliente/listar_minhas_midias.php");
+                redirectTo("appCliente/carrinho.php");
             }
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");
             }
-        });	*/
+        });
         
     });
     
