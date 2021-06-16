@@ -192,6 +192,7 @@
 						print "ERRO:".$e->getMessage();		
 					}	
 				}
+				var_dump($datasBisemana);
 				try{
 					$con = Conecta::criarConexao();
 					
