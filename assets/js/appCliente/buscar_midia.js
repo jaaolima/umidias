@@ -18,6 +18,29 @@ $(document).ready(function() {
 
 	});
 
+    $("#aplicarBisemana").on("click", function(e){ 
+        var bisemana = new Array();
+        $("input[name='bisemana[]']:checked").each(function ()
+        {
+            bisemana.push( $(this).val());
+        });
+        var id_midia = $("#id_midia").val();
+        $.ajax({
+            url: 'appCliente/listar_midia.php'
+            , data: {bisemana: bisemana, id_midia: id_midia, id_busca: 'bisemana'}
+            , type: 'post'
+            , success: function(html) {
+                $("#lista").html(html);
+                $("#lista").slideDown(); 
+            }
+            , error: function (data) {
+                $("#lista").slideUp();
+                swal("Erro", data.responseText, "error");
+            }
+        });	
+
+	});
+
     $("#busca").on("keyup", function(e){ 
         var id_midia = $("#id_midia").val();
         var busca = $("#busca").val();
@@ -109,7 +132,7 @@ $(document).ready(function() {
 var DatatablesBasicBasic = function() {
 
 	var initTable1 = function() {
-		var table = $('#table_bisemana');
+		var table = $('#table_bisemana'); 
 
 		// begin first table
 		table.DataTable({

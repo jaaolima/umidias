@@ -110,7 +110,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<h4 class="texto-negrito mb-4 mr-2">Selecione as bisemanas</h4>
 											<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Duas semanas(14 dias de exibição)"><i class="flaticon-questions-circular-button"></i></a>
 										</div>
-										<table  class="table table-hover" id="table_bisemana">
+										<table  class="table table-hover" id="table_bisemana"> 
 											<thead>
 												<tr>
 													<th>ID bisemanas</th>
