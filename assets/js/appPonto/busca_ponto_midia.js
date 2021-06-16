@@ -39,11 +39,11 @@ $(document).ready(function() {
 	});
     $("input[name='tp_busca']").on('click', function(){
 
-        if(this.val() == 1){
+        if($("input[name='tp_busca']").val() == 1){
             $("#regiao").show(); 
             $("#valor").hide();
         }
-        if(this.val() == 2){
+        if($("input[name='tp_busca']").val() == 2){
             $("#regiao").hide();
             $("#valor").show();
         }
