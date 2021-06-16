@@ -34,6 +34,26 @@ $(document).ready(function() {
         });		
 				
 	});
+
+    $("#aplicar").on("keyup", function(e){
+		var valor_inicial = $("#valor_inicial").val();
+        var valor_final = $("#valor_final").val();
+
+        $.ajax({
+            url: 'appPonto/listar_ponto_midia.php'
+            , data: {tp_busca: "valor", valor_inicial: valor_inicial, valor_final: valor_final, id_midia: id_midia}
+            , type: 'post'
+            , success: function(html) {
+                $("#lista").html(html);
+                $("#lista").slideDown(); 
+            }
+            , error: function (data) {
+                $("#lista").slideUp();
+                swal("Erro", data.responseText, "error"); 
+            }
+        });		
+				
+	});
     $("#buscar_regiao").on('click', function(){
 
         $("#regiao").show(); 
