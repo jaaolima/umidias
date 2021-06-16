@@ -10,8 +10,8 @@
 	$ponto = new Ponto();
 	$bisemana = new Bisemana();
 
-	$id_midia = $_GET["id_midia"];
-	
+	$id_midia = $_REQUEST["id_midia"];
+
 	$optionsLocal = $ponto->listarOptionsLocal($id_midia);]
 	$retorno = $bisemana->listarBisemana();
 	
@@ -88,16 +88,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="dropdown position-absolute" style="top: 10px;right: 80px;">
 								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por datas</button>
 								<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
-									<?php if($id_midia == 2) :  ?>
+									<!-- <?php if($id_midia == 2) :  ?>
 										<div class="row">
 											<h4 class="texto-negrito mb-4">Selecione a data inicial</h4>
 										</div>
-										<!--<div class="row">
-											<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
-												<legend class="legend-border mb-0">Data Inicial</legend>
-												<input class="border-0 w-100" style="height: 27px;" type="date">
-											</fieldset> 
-										</div>-->
 										<div class="row">
 											<div id="calendario"></div>
 										</div>
@@ -142,7 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="row float-right mt-4">
 											<button id="aplicarBisemana" class="btn btn-primary">Aplicar</button>
 										</div>
-									<?php endif;?>
+									<?php endif;?> -->
 								</div>
 							</div>				
 						</div>
