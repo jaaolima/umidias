@@ -176,7 +176,7 @@
 		
 						$dados = $stmtBisemana->fetch();
 
-						$datasBisemana .= "between".$dados["dt_inicial"]." and ".$dados["dt_final"]." or ";
+						$datasBisemana .= "between ".$dados["dt_inicial"]." and ".$dados["dt_final"]." or ";
 					}
 					catch(exception $e)
 					{
@@ -186,8 +186,7 @@
 
 					
 				}
-				var_dump($datasBisemana);
-				/*try{
+				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo
@@ -196,13 +195,11 @@
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 								where p.id_midia=:id_midia 
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
-								and p.id_ponto not in (select id_ponto from rl_alugado where ':dt_inicial' between dt_inicial and dt_final)";
+								and p.id_ponto not in (select id_ponto from rl_alugado where ':dt_inicial' ".$datasBisemana;
 					
 					$stmt = $con->prepare($select); 
-					$params = array(':id_midia' => $id_midia,
-									':dt_inicial' => $dt_inicial);
 					
-					$stmt->execute($params);
+					$stmt->execute();
 	
 					return $stmt;
 					
@@ -212,7 +209,7 @@
 				{
 					header('HTTP/1.1 500 Internal Server Error');
 					print "ERRO:".$e->getMessage();		
-				}*/
+				}
 			}
 			if($id_busca === ""){
 				try{
