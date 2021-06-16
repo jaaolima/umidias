@@ -12,7 +12,7 @@
 
 	$id_midia = $_REQUEST["id_midia"];
 
-	$optionsLocal = $ponto->listarOptionsLocal($id_midia);]
+	$optionsLocal = $ponto->listarOptionsLocal($id_midia);
 	$retorno = $bisemana->listarBisemana();
 	
 ?>
