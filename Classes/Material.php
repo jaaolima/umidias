@@ -28,7 +28,8 @@
 		{
 
 			$ds_material	    = $dados['ds_material'];
-            $nu_valor	    = $dados['nu_valor'];
+			$ds_especificacao	= $dados['ds_especificacao'];
+            $nu_valor	    	= $dados['nu_valor'];
 
 			
 			try{
@@ -82,6 +83,7 @@
 		{
             $id_material	    = $dados['id_material'];
 			$ds_material	    = $dados['ds_material'];
+			$ds_especificacao	= $dados['ds_especificacao'];
             $nu_valor	        = $dados['nu_valor'];
 
 			
