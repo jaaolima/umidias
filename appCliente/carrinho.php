@@ -60,6 +60,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <!--begin::User-->
                                                         <div class='position-relative' >
                                                             <img class='img-fluid w-100 rounded-top' src='".$dados["ds_foto"]."' alt='image' style='max-height:300px;' />
+                                                            <div class="position-absolute"  style='top: 16px; right: 16px;'>
+                                                                <label class='btn btn-md btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow' data-action='change' data-toggle='tooltip' title='' data-original-title='Change avatar'>
+                                                                    <i class='far fa-trash-alt icon-sm text-muted'></i>
+                                                                </label>
+                                                            </div>
                                                             <div class='position-absolute ' style='bottom: 13px; right: 27px;'>
                                                                 <span class='text-white font-weight-bold'>Alugadas 345 vezes </span>
                                                             </div>
@@ -101,9 +106,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </div>
                                                         <!--end::Name-->
                                                     </div>
-                                                    <label class='btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow' data-action='change' data-toggle='tooltip' title='' data-original-title='Change avatar'>
-                                                        <i class='far fa-trash-alt icon-sm text-muted'></i>
-                                                    </label>
+
+                                                    
                                                     <!--end::Body-->
                                                 </div>
                                             </div> ";
@@ -111,6 +115,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                     ?>
                                 </div>
+                                
+                                
                             </div> 
                         </div>
                         <div class="col-4">
