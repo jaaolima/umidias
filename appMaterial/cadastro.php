@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <label>Especificações técnicas<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="ds_especficacao" name="ds_especficacao" />
+                        <input type="text" class="form-control" id="ds_especificacao" name="ds_especificacao" />
                     </div>
                     <div class="col-md-3">
                         <label>Valor<span class="text-danger">*</span></label>

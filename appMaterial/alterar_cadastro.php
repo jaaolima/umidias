@@ -25,12 +25,22 @@ $dados = $material->buscarDadosMaterial($id_material);
     <!--begin::Form-->
     <form id="form_usuario">
         <div class="card-body">
-            <div class="form-group row">
-                <div class="form-group col-md-6">
-                    <label>Nome <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_material" name="ds_material" value="<?php echo $dados['ds_material']?>"/>
-                    <label>Valor <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="nu_valor" name="nu_valor" value="<?php echo $dados['nu_valor']?>"/>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Material<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="ds_material" name="ds_material" value="<?php echo $dados['ds_material']?>"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label>Especificações técnicas<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="ds_especificacao" name="ds_especificacao" value="<?php echo $dados['ds_especificacao']?>" />
+                    </div>
+                    <div class="col-md-3">
+                        <label>Valor<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="nu_valor" name="nu_valor" value="<?php echo $dados['nu_valor']?>" />
+                    </div>
                 </div>
             </div>       
         </div>

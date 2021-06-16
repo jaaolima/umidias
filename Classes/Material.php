@@ -6,7 +6,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_material, ds_material, nu_valor
+				$select = "SELECT id_material, ds_material, nu_valor, ds_especificacao
 							FROM tb_material";
 				
 				$stmt = $con->prepare($select); 
@@ -33,13 +33,14 @@
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_material (ds_material, nu_valor)
-							VALUES (:ds_material, :nu_valor)";
+				$insert = "INSERT into tb_material (ds_material, nu_valor, ds_especificacao)
+							VALUES (:ds_material, :nu_valor, :ds_especificacao)";
 				
 				$stmt = $con->prepare($insert);
 				
 				$params = array(':ds_material' => $ds_material,
-                                ':nu_valor' => $nu_valor,);
+                                ':nu_valor' => $nu_valor,
+								':ds_especificacao' => $ds_especificacao);
                                 
 				$stmt->execute($params);
 				
@@ -59,7 +60,7 @@
 				
 				
 				$select = "SELECT 
-							id_material, ds_material, nu_valor
+							id_material, ds_material, nu_valor, ds_especificacao
 						FROM tb_material  
 						WHERE id_material = :id_material";
 
@@ -86,13 +87,14 @@
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_material SET ds_material = :ds_material, nu_valor = :nu_valor
+				$insert = "UPDATE tb_material SET ds_material = :ds_material, nu_valor = :nu_valor, ds_especificacao = :ds_especificacao
 							WHERE id_material=:id_material";
 				
 				$stmt = $con->prepare($insert);
 				
                 $params = array(':ds_material' => $ds_material,
                                 ':nu_valor' => $nu_valor,
+								':ds_especificacao' => $ds_especificacao,
                                 ':id_material' => $id_material);
                                 
 				$stmt->execute($params);
