@@ -12,11 +12,13 @@
             <label>Tipo de busca</label>
             <div class="radio-inline">
                 <label class="radio">
-                    <input type="radio" class="mr-2" id="buscar_regiao" name="tp_busca" value="1" checked="checked"> Região
+                    <label class="mr-2" for="buscar_regiao">Região</label>
+                    <input type="radio" id="buscar_regiao" name="tp_busca" value="1" checked="checked">
                     <span></span>
                 </label>
                 <label class="radio">
-                    <input type="radio" class="mr-2" id="buscar_valor" name="tp_busca" value="2"> Preço
+                    <label class="mr-2" for="buscar_valor">Preço</label>
+                    <input type="radio" id="buscar_valor" name="tp_busca" value="2"> 
                     <span></span>
                 </label>
             </div>
