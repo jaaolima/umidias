@@ -77,7 +77,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php echo $optionsLocal; ?>
 								</datalist>
 							</div>
-							<div class="dropdown position-absolute" style="top: 10px;right: 230px;">						
+							<div class="dropdown position-absolute" style="top: 10px;right: 260px;">						
 								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa" id="filtro">Filtros</button>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" id="busca_quentes">Pontos quentes</a>
@@ -106,10 +106,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<?php if($id_midia == 1) :  ?>
 									<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por Bisemanas </button>
 									<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
-									
 										<div class="row">
-											<h4 class="texto-negrito mb-4">Selecione as bisemanas</h4>
-											<a href="javascript:;"><i class="flaticon-questions-circular-button"></i></a>
+											<h4 class="texto-negrito mb-4 ml-2">Selecione as bisemanas</h4>
+											<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="14 dias de exibição"><i class="flaticon-questions-circular-button"></i></a>
 										</div>
 										<table  class="table table-hover" id="table_bisemana">
 											<thead>
