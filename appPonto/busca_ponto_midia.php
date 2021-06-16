@@ -28,9 +28,9 @@
         </div>
         <div class="form-group col-md-6" id="valor" style="display:none;">
             <div class="d-flex">
-                <input type="number" class="form-control col-2" name="valor_inicial" id="valor_inicial">
-                <i class="ju"> até </i>
-                <input type="number" class="form-control col-2" name="valor_final" id="valor_final">
+                <input type="number" class="form-control col-2 mr-2" name="valor_inicial" id="valor_inicial">
+                <i class="mr-2"> até </i>
+                <input type="number" class="form-control col-2 mr-2" name="valor_final" id="valor_final">
                 <button class="btn btn-primary" id="aplicar">Aplicar</button>
             </div>
             
