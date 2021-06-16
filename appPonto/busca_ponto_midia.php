@@ -30,6 +30,7 @@
             <div id="kt_price_slider" class="nouislider nouislider-light nouislider-handle-primary nouislider-bg-light-primary nouislider-shadowless nouislider-borderless"></div>
             <span class="form-text text-muted">Selecione o valor</span>
         </div>
+        <input type="hidden" value="<?php echo $id_midia; ?>" id="id_midia" name="id_midia">
         
 		<!--begin: Datatable -->
 		

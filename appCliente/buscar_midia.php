@@ -126,7 +126,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			// The following example creates complex markers to indicate beaches near
 		// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 		// to the base of the flagpole.
-		jQuery(document).ready(function() {
+		jQuery(document).ready(function() { 
 			demo3();
 		});
 		$(function() {

@@ -6,7 +6,7 @@
     require_once("../Classes/Ponto.php");
     $ponto = new Ponto();
     $id_midia = $_REQUEST["id_midia"];
-    $retorno = $ponto->listarPontoMidia($id_midia);
+    $retorno = $ponto->listarPontoMidia($_REQUEST); 
 ?>
 
 <div class="card card-custom gutter-b">
@@ -14,7 +14,7 @@
         <div class="card-title"> 
             <i class="flaticon-placeholder icon-xl"></i>&nbsp;
             <h3 class="card-label">
-                Pontos alugados
+                Pontos alugados 
             </h3> 
         </div>
         <div class="kt-portlet__head-toolbar">
