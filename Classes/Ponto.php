@@ -176,7 +176,13 @@
 		
 						$dados = $stmtBisemana->fetch();
 
-						$datasBisemana .= "between ".$dados["dt_inicial"]." and ".$dados["dt_final"]." or ";
+						if($bisemana[$i] == count($bisemana)){
+							$datasBisemana .= "between ".$dados["dt_inicial"]." and ".$dados["dt_final"];
+						}
+						else{
+							$datasBisemana .= "between ".$dados["dt_inicial"]." and ".$dados["dt_final"]." or ";
+						}
+						
 					}
 					catch(exception $e)
 					{
