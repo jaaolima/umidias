@@ -162,18 +162,29 @@
 				$bisemana = $dados["bisemana"];
 				$datasBisemana = "";
 				for ($i=0; $i < count($bisemana); $i++) { 
-					$select = "SELECT dt_inicial, dt_final
+					try{
+						$con = Conecta::criarConexao();
+						
+						$select = "SELECT dt_inicial, dt_final
 								from tb_bisemana
 								where id_bisemana = :id_bisemana";
 					
-					$stmt = $con->prepare($select); 
-					$params = array(':id_bisemana' => $id_bisemana[$i]);
-					
-					$stmt->execute($params);
-	
-					$dados = $stmt->fetch();
+						$stmtBisemana = $con->prepare($select); 
+						$params = array(':id_bisemana' => $id_bisemana[$i]);
+						
+						$stmtBisemana->execute($params);
+		
+						$dados = $stmtBisemana->fetch();
 
-					$datasBisemana .= "between".$dados["dt_inicial"]." and ".$dados["dt_final"]." or ";
+						$datasBisemana .= "between".$dados["dt_inicial"]." and ".$dados["dt_final"]." or ";
+					}
+					catch(exception $e)
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					}
+
+					
 				}
 				var_dump($datasBisemana);
 				/*try{
