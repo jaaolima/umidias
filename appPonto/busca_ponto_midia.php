@@ -27,7 +27,11 @@
             <span class="form-text text-muted">Digite o parâmetro para busca</span>
         </div>
         <div class="form-group col-md-6" id="valor" style="display:none;">
-            <div id="kt_price_slider"></div>
+            <div class="d-flex">
+                <input type="number" class="form-control" name="valor_inicial" id="valor_inicial">
+                <p> até </p>
+                <input type="number" class="form-control" name="valor_final" id="valor_final">
+            </div>
             <span class="form-text text-muted">Selecione o valor</span>
         </div>
         <input type="hidden" value="<?php echo $id_midia; ?>" id="id_midia" name="id_midia">
