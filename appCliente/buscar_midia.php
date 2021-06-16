@@ -80,7 +80,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="dropdown position-absolute" style="top: 10px;right: 260px;">						
 								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa" id="filtro">Filtros</button>
 								<div class="dropdown-menu">
-									<a class="dropdown-item mr-2" id="busca_quentes">Pontos quentes <div  data-toggle="tooltip" data-placement="right" title="Pontos mais Alugados"><i class="flaticon-questions-circular-button"></i></div></a>
+									<a class="dropdown-item mr-2" id="busca_quentes">Pontos quentes <div class="ml-2" data-toggle="tooltip" data-placement="right" title="Pontos mais Alugados"><i class="flaticon-questions-circular-button"></i></div></a>
 									<div class="dropdown-divider mx-5"></div>
 									<a class="dropdown-item" id="busca_disponiveis">disponiveis</a>
 								</div>
@@ -108,7 +108,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
 										<div class="row">
 											<h4 class="texto-negrito mb-4 mr-2">Selecione as bisemanas</h4>
-											<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="14 dias de exibição"><i class="flaticon-questions-circular-button"></i></a>
+											<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Duas semanas(14 dias de exibição)"><i class="flaticon-questions-circular-button"></i></a>
 										</div>
 										<table  class="table table-hover" id="table_bisemana">
 											<thead>
