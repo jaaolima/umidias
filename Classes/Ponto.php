@@ -288,8 +288,8 @@
 		public function listarPontoMidia(array $dados)
 		{
 			$id_midia = $dados["id_midia"];
-			$id_busca = $dados["id_busca"];
-			if($id_busca === "regiao"){
+			$tp_busca = $dados["tp_busca"];
+			if($tp_busca === "regiao"){
 				$busca = $dados["busca"];
 				try{
 					$con = Conecta::criarConexao();
@@ -301,6 +301,33 @@
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								where p.id_midia = :id_midia
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto) and ds_local like '%".$buca."%'";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_midia' => $id_midia);
+					
+					$stmt->execute($params);
+	
+					return $stmt;
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+			if($tp_busca === ""){
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, dt_inicial, dt_final, f.ds_foto
+								FROM rl_alugado a
+								right join rl_ponto_foto f on a.id_ponto=f.id_ponto
+								right join tb_ponto p on a.id_ponto=p.id_ponto
+								inner join tb_tipo_midia t on p.id_midia=t.id_midia
+								where p.id_midia = :id_midia
+								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto)";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia);
