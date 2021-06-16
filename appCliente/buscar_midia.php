@@ -88,7 +88,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="dropdown position-absolute" style="top: 10px;right: 80px;">
 								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por datas</button>
 								<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
-									<!-- <?php if($id_midia == 2) :  ?>
+									<?php if($id_midia == 2) :  ?>
 										<div class="row">
 											<h4 class="texto-negrito mb-4">Selecione a data inicial</h4>
 										</div>
@@ -136,7 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="row float-right mt-4">
 											<button id="aplicarBisemana" class="btn btn-primary">Aplicar</button>
 										</div>
-									<?php endif;?> -->
+									<?php endif;?>
 								</div>
 							</div>				
 						</div>
