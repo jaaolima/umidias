@@ -5,9 +5,15 @@
 	error_reporting(E_ALL);
 
 	require_once("../Classes/Ponto.php");
+	require_once("../Classes/Bisemana.php");
+
 	$ponto = new Ponto();
+	$bisemana = new Bisemana();
+
 	$id_midia = $_GET["id_midia"];
-	$optionsLocal = $ponto->listarOptionsLocal($id_midia);
+	
+	$optionsLocal = $ponto->listarOptionsLocal($id_midia);]
+	$retorno = $bisemana->listarBisemana();
 	
 ?>
 <!DOCTYPE html>
@@ -82,21 +88,61 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="dropdown position-absolute" style="top: 10px;right: 80px;">
 								<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por datas</button>
 								<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
-									<div class="row">
-										<h4 class="texto-negrito mb-4">Selecione a data inicial</h4>
-									</div>
-									<!--<div class="row">
-										<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
-											<legend class="legend-border mb-0">Data Inicial</legend>
-											<input class="border-0 w-100" style="height: 27px;" type="date">
-										</fieldset> 
-									</div>-->
-									<div class="row">
-										<div id="calendario"></div>
-									</div>
-									<div class="row float-right mt-4">
-										<button id="aplicar" class="btn btn-primary">Aplicar</button>
-									</div>
+									<?php if($id_midia == 2) :  ?>
+										<div class="row">
+											<h4 class="texto-negrito mb-4">Selecione a data inicial</h4>
+										</div>
+										<!--<div class="row">
+											<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
+												<legend class="legend-border mb-0">Data Inicial</legend>
+												<input class="border-0 w-100" style="height: 27px;" type="date">
+											</fieldset> 
+										</div>-->
+										<div class="row">
+											<div id="calendario"></div>
+										</div>
+										<div class="row float-right mt-4">
+											<button id="aplicar" class="btn btn-primary">Aplicar</button>
+										</div>
+									<?php endif;?>
+									<?php if($id_midia == 1) :  ?>
+										<div class="row">
+											<h4 class="texto-negrito mb-4">Selecione as bisemanas</h4>
+										</div>
+										<table  class="table table-hover" id="table_bisemana">
+											<thead>
+												<tr>
+													<th>ID bisemanas</th>
+													<th>Data Inicial</th>
+													<th>Data Final</th>
+													<th>Bisemanas Disponiveis</th>
+													<th>Selecione</th>
+												</tr>
+											</thead>
+											<tbody>
+												<?php
+													while ($dadosBisemana = $retorno->fetch())
+													{
+
+														$dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
+														$dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
+
+
+														echo "<tr>
+																<td>".$dadosBisemana['id_bisemana']."</td>
+																<td>".$dt_inicial."</td>
+																<td>".$dt_final."</td>
+																<td>".$dadosBisemana['ds_bisemana']."</td>
+																<td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox'></td>
+															</tr>";
+													}
+												?>
+											</tbody>
+										</table>
+										<div class="row float-right mt-4">
+											<button id="aplicarBisemana" class="btn btn-primary">Aplicar</button>
+										</div>
+									<?php endif;?>
 								</div>
 							</div>				
 						</div>
@@ -126,7 +172,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			// The following example creates complex markers to indicate beaches near
 		// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 		// to the base of the flagpole.
-		jQuery(document).ready(function() { 
+		jQuery(document).ready(function() {  
 			demo3();
 		});
 		$(function() {
