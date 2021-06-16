@@ -37,16 +37,16 @@ $(document).ready(function() {
         });		
 				
 	});
-    $("input[name='tp_busca']").on('click', function(){
+    $("#buscar_regiao").on('click', function(){
 
-        /*if($("input[name='tp_busca']").val() == 1){
-            $("#regiao").show(); 
-            $("#valor").hide();
-        }
-        if($("input[name='tp_busca']").val() == 2){
-            $("#regiao").hide();
-            $("#valor").show();
-        }*/
-        console.log($("input[name='tp_busca']").val())
+        $("#regiao").show(); 
+        $("#valor").hide();
+
+    });
+
+    $("#buscar_valor").on('click', function(){
+        
+        $("#regiao").hide();
+        $("#valor").show();
     });
 });
