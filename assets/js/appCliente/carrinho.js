@@ -50,7 +50,7 @@ $(document).ready(function() {
         
     });
     $("#gravar").on("click", function(e){
-        id_usuario = $("#id_usuario").val();
+        id_usuario = $("#id_usuario").val(); 
         $.ajax({
             url: 'appCliente/gravar_carrinho.php'
             , data: {id_usuario: id_usuario}
@@ -69,6 +69,31 @@ $(document).ready(function() {
                 swal.fire("Erro", data.responseText, "error");
             }
         });	
+        
+    });
+
+    $(".excluir").on("click", function(e){
+        id_usuario = $("#id_usuario").val(); 
+        id_ponto = this.attr("ponto");
+        console.log(id_ponto);
+        /*$.ajax({
+            url: 'appCliente/gravar_carrinho.php'
+            , data: {id_usuario: id_usuario}
+            , type: 'post'
+            , success: function(html) {
+                swal.fire({
+                    position: 'top-right',
+                    type: 'success',
+                    title: html,
+                    showConfirmButton: true
+                });
+                
+                redirectTo("appCliente/listar_minhas_midias.php");
+            }
+            , error: function (data) {
+                swal.fire("Erro", data.responseText, "error");
+            }
+        });	*/
         
     });
     
