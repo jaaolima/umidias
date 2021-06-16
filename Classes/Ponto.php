@@ -181,10 +181,10 @@
 						// 	$datasBisemana .= " or ".$dados["dt_inicial"]." and ".$dados["dt_final"];
 						// }
 						if($bisemana[$i] == $bisemana[0]){
-							$datasBisemana .= "between ".$dados["dt_inicial"]." and ".$dados["dt_final"];
+							$datasBisemana .= "(dt_inicial between ".$dados["dt_inicial"]." and ".$dados["dt_final"].")";
 						}
 						else{
-							$datasBisemana .= " or ".$dados["dt_inicial"]." and ".$dados["dt_final"];
+							$datasBisemana .= " or (dt_inicial between ".$dados["dt_inicial"]." and ".$dados["dt_final"];
 						}
 					}
 					catch(exception $e)
@@ -193,6 +193,7 @@
 						print "ERRO:".$e->getMessage();		
 					}	
 				}
+				var_dump($datasBisemana);
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -202,7 +203,7 @@
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 								where p.id_midia=:id_midia 
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
-								and p.id_ponto not in (select id_ponto from rl_alugado where dt_inicial ".$datasBisemana.")";
+								and p.id_ponto not in (select id_ponto from rl_alugado where  ".$datasBisemana.")";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia);
