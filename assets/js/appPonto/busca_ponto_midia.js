@@ -35,7 +35,7 @@ $(document).ready(function() {
 				
 	});
 
-    $("#aplicar").on("keyup", function(e){
+    $("#aplicar").on("click", function(e){
 		var valor_inicial = $("#valor_inicial").val();
         var valor_final = $("#valor_final").val();
 
