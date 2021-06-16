@@ -125,7 +125,7 @@
 
 			
 		}
-		public function listarPonto(array $dados) 
+		public function listarPonto(array $dados)  
 		{
 			$id_midia = $dados["id_midia"];
 			$id_busca = $dados["id_busca"];
@@ -160,7 +160,22 @@
 			}
 			if($id_busca === "bisemana"){
 				$bisemana = $dados["bisemana"];
-				var_dump($bisemana);
+				$datasBisemana = "";
+				for ($i=0; $i < count($bisemana); $i++) { 
+					$select = "SELECT dt_inicial, dt_final
+								from tb_bisemana
+								where id_bisemana = :id_bisemana";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_bisemana' => $id_bisemana[$i]);
+					
+					$stmt->execute($params);
+	
+					$dados = $stmt->fetch();
+
+					$datasBisemana .= "between".$dados["dt_inicial"]." and ".$dados["dt_final"]." or ";
+				}
+				var_dump($datasBisemana);
 				/*try{
 					$con = Conecta::criarConexao();
 					
@@ -1017,7 +1032,7 @@
 			print $e->getMessage();
 			}
 		}
-		public function alugar(array $dados)
+		public function alugar(array $dados) 
 		{
 
 			$id_usuario	    = $dados['id_usuario'];
@@ -1031,7 +1046,7 @@
 				$dt_final	    = $dados['dt_final']; 
 				
 
-				try{
+				try{ 
 					$con = Conecta::criarConexao();
 					$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte)
 								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte)";
