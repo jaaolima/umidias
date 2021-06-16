@@ -60,7 +60,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <!--begin::User-->
                                                         <div class='position-relative' >
                                                             <img class='img-fluid w-100 rounded-top' src='".$dados["ds_foto"]."' alt='image' style='max-height:300px;' />
-                                                            <div class="position-absolute"  style='top: 16px; right: 16px;'>
+                                                            <div class='position-absolute'  style='top: 16px; right: 16px;'>
                                                                 <label class='btn btn-md btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow' data-action='change' data-toggle='tooltip' title='' data-original-title='Change avatar'>
                                                                     <i class='far fa-trash-alt icon-sm text-muted'></i>
                                                                 </label>
