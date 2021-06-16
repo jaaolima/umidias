@@ -160,6 +160,7 @@
 			}
 			if($id_busca === "bisemana"){
 				$bisemana = $dados["bisemana"];
+				$id_midia = $dados["id_midia"];
 				$datasBisemana = "";
 				for ($i=0; $i < count($bisemana); $i++) { 
 					try{
@@ -205,8 +206,8 @@
 								and p.id_ponto not in (select id_ponto from rl_alugado where dt_inicial ".$datasBisemana.")";
 					
 					$stmt = $con->prepare($select); 
-					
-					$stmt->execute();
+					$params = array(':id_midia' => $id_midia);
+					$stmt->execute($params);
 	
 					return $stmt;
 					
