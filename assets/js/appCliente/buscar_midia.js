@@ -83,7 +83,7 @@ $(document).ready(function() {
                 $("#lista").slideDown(); 
             }
             , error: function (data) {
-                $("#lista").slideUp();
+                $("#lista").slideUp(); 
                 swal("Erro", data.responseText, "error");
             }
         });		

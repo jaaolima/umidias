@@ -213,7 +213,7 @@
 								':id_ponto' => $dados["id_ponto"]);
 				$stmt->execute($params);
 
-				echo "Carrinho esvaziado";
+				echo "Ponto retirado";
 				
 					
 			}

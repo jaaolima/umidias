@@ -37,7 +37,7 @@
 		<!--end: Datatable -->
 	</div>
 </div>
-<div id="lista"></div>
+<div id="lista"></div> 
 <input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
 
 <script src="./assets/js/appPonto/busca_ponto_midia.js" type="text/javascript"></script> 
