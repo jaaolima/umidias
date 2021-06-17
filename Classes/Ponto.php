@@ -1052,8 +1052,13 @@
 
 			$id_usuario	    = $dados['id_usuario'];
 			$id_ponto	    = $dados['id_ponto'];
-			$ds_arte	    = $dados['ds_arte'];
+			$ds_arte	    = $_FILES['ds_arte'];
 			$id_midia	    = $dados['id_midia'];
+
+			$name = $ds_arte['name'][0];
+			$type = $ds_arte['type'][0];
+			$tmp = $ds_arte['tmp_name'][0];
+			$size = $ds_arte['size'][0];
 			if($id_midia == 2){
 
 			
@@ -1063,18 +1068,55 @@
 
 				try{ 
 					$con = Conecta::criarConexao();
-					$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte)
-								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte)";
+					$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final)
+								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final)";
 					
 					$stmt = $con->prepare($insert);
 					
 					$params = array(':id_usuario' => $id_usuario,
 									':id_ponto' => $id_ponto,
 									':dt_inicial' => $dt_inicial,
-									':dt_final' => $dt_final,
-									':ds_arte' => $ds_arte);
+									':dt_final' => $dt_final);
 									
 					$stmt->execute($params);
+					
+					//gravar arte
+					$tamanho = 20000000;
+
+					$error = array();
+					$tamanho_mb = $tamanho/1024/1024;
+					
+					if($size > $tamanho) {
+						$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
+					}
+
+					if (count($error) == 0) {
+						// Pega extensão da imagem
+						preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $name, $ext);
+						// Gera um nome único para o arquivo
+						$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
+						// Caminho de onde ficará o arquivo
+						$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_artes/" . $nome_arquivo;
+		
+						$gravar_caminho_arquivo = "docs_artes/" . $nome_arquivo;
+		
+					
+						
+						// Faz o upload da imagem para seu respectivo caminho
+						$moved = move_uploaded_file($tmp,  $caminho_arquivo);
+
+						$insert_foto = "insert into rl_arte(id_ponto, id_usuario,  ds_arte) values (:id_ponto, :id_usuario :ds_arte)";
+
+						$stmt_foto = $con->prepare($insert_foto);
+				
+						$params_foto = array(':id_ponto' => $id_ponto,
+											':id_usuario' => $id_usuario,
+											':ds_arte' => $gravar_caminho_arquivo
+											);
+										
+						$stmt_foto->execute($params_foto);
+
+					}
 					
 				}
 				catch(exception $e)
@@ -1109,8 +1151,8 @@
 
 					try{
 						$con = Conecta::criarConexao();
-						$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material)
-									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material)";
+						$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final,  id_material)
+									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :id_material)";
 						
 						$stmt = $con->prepare($insert);
 						
@@ -1118,10 +1160,46 @@
 										':id_ponto' => $id_ponto,
 										':dt_inicial' => $dt_inicial,
 										':dt_final' => $dt_final,
-										':ds_arte' => $ds_arte,
 										':id_material' => $id_material);
 										
 						$stmt->execute($params);
+
+						//gravar arte
+						$tamanho = 20000000;
+
+						$error = array();
+						$tamanho_mb = $tamanho/1024/1024;
+						
+						if($size > $tamanho) {
+							$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
+						}
+
+						if (count($error) == 0) {
+							// Pega extensão da imagem
+							preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $name, $ext);
+							// Gera um nome único para o arquivo
+							$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
+							// Caminho de onde ficará o arquivo
+							$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_artes/" . $nome_arquivo;
+			
+							$gravar_caminho_arquivo = "docs_artes/" . $nome_arquivo;
+			
+						
+							
+							// Faz o upload da imagem para seu respectivo caminho
+							$moved = move_uploaded_file($tmp,  $caminho_arquivo);
+
+							$insert_arte = "insert into rl_arte(id_ponto, id_usuario,  ds_arte) values (:id_ponto, :id_usuario :ds_arte)";
+
+							$stmt_arte = $con->prepare($insert_arte);
+					
+							$params_arte = array(':id_ponto' => $id_ponto,
+												':id_usuario' => $id_usuario,
+												':ds_arte' => $gravar_caminho_arquivo
+												);
+											
+							$stmt_arte->execute($params_arte);
+						}
 					}
 					catch(exception $e) 
 					{

@@ -65,9 +65,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     <i class='far fa-trash-alt icon-md texto-vermelho'></i>
                                                                 </a>
                                                             </div>
-                                                            <div class='position-absolute ' style='bottom: 13px; right: 27px;'>
-                                                                <span class='text-white font-weight-bold'>Alugadas 345 vezes </span>
-                                                            </div>
                                                         </div>
                                                         <!--end::User-->
                                                         <!--begin::Name-->
@@ -80,7 +77,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     </svg>
                                                                 </div>
                                                                 <div class='ml-2'>
-                                                                    <a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."'class='text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_local']."</a>
+                                                                    <a class='text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_local']."</a>
                                                                 </div>	
                                                             </div>																								
                                                             <div class='my-6'>
