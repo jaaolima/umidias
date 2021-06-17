@@ -81,8 +81,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </div>	
                                                             </div>																								
                                                             <div class='my-6'>
-                                                                <p class='texto-chumbo font-size-h6'>".$dados['ds_descricao']."</p>
-                                                            </div>													
+                                                                <p class='texto-chumbo font-size-h6'>".$dados['ds_tipo']."</p>
+                                                            </div>	
+                                                            <div class='my-6'>
+                                                                <p class='texto-chumbo font-size-h6'>".$dados['ds_material']."</p>
+                                                            </div>												
                                                         </div>
                                                         <div class='my-8 mx-15 text-left'>
                                                             <div class='d-flex ml-n8'>
