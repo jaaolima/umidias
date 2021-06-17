@@ -80,7 +80,7 @@ $(document).ready(function() {
 	});
 	$("#nu_valor").inputmask({
 		"mask": "9.999",
-		numericInput: true,
+		numericInput: true, 
 	});
 	
 });
