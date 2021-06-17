@@ -330,7 +330,9 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class="form-group">
 															<label>Adicione sua Arte</label>
 															<input type="file" class="form-control" name="ds_arte" id="ds_arte">
-															<span class="texto-chumbo">A arte deve ter escala de 9,0 x 3,60</span>
+															<div class="bg-danger my-2">
+																<p class="font-weght-bolder">O arquivo da arte deve ser enviado seguindo as especificações da mídia escolhida e sendo um PDF, CMYK, 300DPI.</p>
+															</div>
 														</div>
 													</div>
 													<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
@@ -406,7 +408,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			let taxa = 0.2 * (<?php echo $valor ?> * mes.value);
 			let valor = <?php echo $valor ?> * mes.value;
 			let total = parseInt(taxa, 10) + parseInt(valor, 10);
-			valor1.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+			valor1.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
 		}
 
 		
