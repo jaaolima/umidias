@@ -76,7 +76,7 @@ $(document).ready(function() {
         id_carrinho = $(this).attr("id");
         $.ajax({
             url: 'appCliente/excluir_ponto_carrinho.php'
-            , data: {id_carrinho: id_ponto}
+            , data: {id_carrinho: id_carrinho}
             , type: 'post'
             , success: function(html) {
                 swal.fire({
