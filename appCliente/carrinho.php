@@ -79,10 +79,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 <div class='ml-2'>
                                                                     <a class='text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_local']."</a>
                                                                 </div>	
-                                                            </div>																								
-                                                            <div class='my-6'>
-                                                                <p class='texto-chumbo font-size-h6'>".$dados['ds_material']."</p>
-                                                            </div>												
+                                                            </div>																																			
                                                         </div>
                                                         <div class='my-8 mx-15 text-left'>
                                                             <div class='d-flex ml-n8'>
@@ -94,6 +91,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                         <path d='M16 3.12988C16.8604 3.35018 17.623 3.85058 18.1676 4.55219C18.7122 5.2538 19.0078 6.11671 19.0078 7.00488C19.0078 7.89305 18.7122 8.75596 18.1676 9.45757C17.623 10.1592 16.8604 10.6596 16 10.8799' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
                                                                     </svg>
                                                                 </div>
+                                                                <div class='ml-2'>
+                                                                    <span class='text-dark font-weight-bold text-dark font-size-h4'>Tipo:</span><br>
+                                                                    <p class='texto-chumbo font-size-h6'>".$dados['ds_tipo']."</p>
+                                                                </div>													
                                                             </div>
                                                             
                                                         </div>
