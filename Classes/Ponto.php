@@ -1052,7 +1052,7 @@
 
 			$id_usuario	    = $dados['id_usuario'];
 			$id_ponto	    = $dados['id_ponto'];
-			$ds_arte	    = $_FILES['ds_arte'];
+			$ds_arte	    = $_FILES['ds_arte[]'];
 			$id_midia	    = $dados['id_midia'];
 
 			$name = $ds_arte['name'][0];
