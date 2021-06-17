@@ -167,7 +167,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <form id="form_alugar" class="d-none">
                                         <input type="text" value="<?php echo $dt_inicial; ?>" name="dt_inicial" id="dt_inicial">
                                         <input type="text" value="<?php echo $dt_final; ?>" name="dt_final" id="dt_final">
-                                        <input type="file" value="<?php echo $_GET["ds_arte"]; ?>" name="ds_arte[]" id="ds_arte">
+                                        <input type="text" value="<?php echo $_GET["ds_arte"]; ?>" name="ds_arte" id="ds_arte">
                                         <input type="text" value="<?php echo $id_ponto; ?>" name="id_ponto" id="id_ponto">
                                         <input type="text" value="<?php echo $id_usuario; ?>" name="id_usuario" id="id_usuario">
                                         <input type="text" value="<?php echo $id_midia; ?>" name="id_midia" id="id_midia">
@@ -175,7 +175,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <?php endif; ?>
                                     <?php if($id_midia == 1) : ?>
                                     <form id="form_alugar" class="d-none">
-                                        <input type="file" value="<?php echo $_GET["ds_arte"]; ?>" name="ds_arte[]" id="ds_arte">
+                                        <input type="text" value="<?php echo $_GET["ds_arte"]; ?>" name="ds_arte" id="ds_arte">
                                         <input type="text" value="<?php echo $id_ponto; ?>" name="id_ponto" id="id_ponto">
                                         <input type="text" value="<?php echo $id_usuario; ?>" name="id_usuario" id="id_usuario">
                                         <input type="text" value="<?php echo $id_bisemana; ?>" name="bisemana" id="bisemana">
