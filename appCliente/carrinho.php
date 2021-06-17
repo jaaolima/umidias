@@ -91,7 +91,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                                 </div>
                                                                 <div class='ml-2'>
-                                                                    <span class='text-dark font-weight-bold text-dark font-size-h4'>Tipo:</span><br>
+                                                                    <span class='text-dark font-weight-bold text-dark font-size-h4'>Tipo</span><br>
                                                                     <p class='texto-chumbo font-size-h6'>".$dados['ds_tipo']."</p>
                                                                 </div>													
                                                             </div>
@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <div class='my-4 mx-15 text-left'>
                                                             <div class='d-flex ml-n8'>
                                                                 <div class='mt-1'>
-                                                                    <img src='assets/media/tape.jpg'>
+                                                                    <img  src='assets/media/tape.png'> 
                                                                 </div>
                                                                 <div class='ml-2'>
                                                                     <span class='text-dark font-weight-bold text-dark font-size-h4'>Material</span><br>
