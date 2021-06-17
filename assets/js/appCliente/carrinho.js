@@ -73,11 +73,10 @@ $(document).ready(function() {
     });
 
     $(".excluir").on("click", function(e){
-        id_usuario = $("#id_usuario").val(); 
-        id_ponto = $(this).attr("ponto");
+        id_carrinho = $(this).attr("id");
         $.ajax({
             url: 'appCliente/excluir_ponto_carrinho.php'
-            , data: {id_usuario: id_usuario, id_ponto: id_ponto}
+            , data: {id_carrinho: id_ponto}
             , type: 'post'
             , success: function(html) {
                 swal.fire({
@@ -90,7 +89,7 @@ $(document).ready(function() {
                 redirectTo("appCliente/carrinho.php");
             }
             , error: function (data) {
-                swal.fire("Erro", data.responseText, "error");
+                swal.fire("Erro", data.responseText, "error"); 
             }
         });
         

@@ -4,5 +4,5 @@
 	error_reporting(E_ALL);
 	require_once("../Classes/Cliente.php");
 	$Cliente = new Cliente();
-	$Cliente->excluirPontoCarrinho($_POST);
+	$Cliente->excluirPontoCarrinho($_POST); 
 ?> 

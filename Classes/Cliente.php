@@ -150,7 +150,7 @@
 				catch(exception $e)
 				{
 					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
+					print "ERRO:".$e->getMessage();		 
 				}
 			}
 
@@ -206,11 +206,10 @@
 			try{
 				$con = Conecta::criarConexao(); 
 				
-				$select = "delete from rl_carrinho where id_usuario=:id_usuario and id_ponto=:id_ponto";
+				$select = "delete from rl_carrinho where id_carrinho=:id_carrinho";
 				
 				$stmt = $con->prepare($select); 
-				$params = array(':id_usuario' => $dados["id_usuario"],
-								':id_ponto' => $dados["id_ponto"]);
+				$params = array(':id_carrinho' => $dados["id_carrinho"]);
 				$stmt->execute($params);
 
 				echo "Ponto retirado";
@@ -318,7 +317,7 @@
 				$con = Conecta::criarConexao();
 				
 				
-				$select = "SELECT c.id_ponto, ds_descricao, ds_latitude, ds_longitude, f.ds_foto, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, p.id_material, id_periodo, id_parceiro
+				$select = "SELECT id_carrinho c.id_ponto, ds_descricao, ds_latitude, ds_longitude, f.ds_foto, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, p.id_material, id_periodo, id_parceiro
 						FROM rl_carrinho c 
 						right join tb_ponto p on c.id_ponto = p.id_ponto 
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia 

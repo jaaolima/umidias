@@ -61,7 +61,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <div class='position-relative' >
                                                             <img class='img-fluid w-100 rounded-top' src='".$dados["ds_foto"]."' alt='image' style='max-height:300px;' />
                                                             <div class='position-absolute'  style='top: -14px; right: -14px;'>
-                                                                <a ponto='".$dados['id_ponto']."' class='excluir btn btn-md btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow' data-action='change' data-toggle='tooltip' title='' data-original-title='excluir'>
+                                                                <a id='".$dados["id_carrinho"]."' class='excluir btn btn-md btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow' data-action='change' data-toggle='tooltip' title='' data-original-title='excluir'>
                                                                     <i class='far fa-trash-alt icon-md texto-vermelho'></i>
                                                                 </a>
                                                             </div>
@@ -71,7 +71,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </div>
                                                         <!--end::User-->
                                                         <!--begin::Name-->
-                                                        <div class='my-8 mx-15 text-left'>
+                                                        <div class='my-8 mx-15 text-left'> 
                                                             <div class='d-flex ml-n8'>
                                                                 <div class='mt-1'>
                                                                     <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
