@@ -342,7 +342,7 @@
 																		$tamanho = 100/ $valor;
 																			if($dados["id_midia"] == $valor){ 
 																				echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'%  ;">
-																							<img scr="assets/media/billboard.png"></img>
+																							<img height="24px" width="24px" src="assets/media/billboard.png"></img>
 																							<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
 																							<a href="appCliente/buscar_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Alugar mídia</a>
 																						</div>';
