@@ -3,7 +3,7 @@
 session_start();
 if ( $_SESSION['autenticado'] ==='validado') {
 	header("location: principal.php");
-	exit();
+	exit(); 
 }
 
 ?>

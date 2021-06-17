@@ -297,13 +297,7 @@
 																			$tamanho = 100/ $valor;
 																			if($dados["id_midia"] == $valor){ 
 																				echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'%  ;">
-																							<span class="svg-icon svg-icon-3x svg-icon-white d-block my-2">
-																								<svg width="50" height="46" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-																									<path d="M44.2 1H5.8C3.14903 1 1 3.14903 1 5.8V29.8C1 32.451 3.14903 34.6 5.8 34.6H44.2C46.851 34.6 49 32.451 49 29.8V5.8C49 3.14903 46.851 1 44.2 1Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-																									<path d="M20.2 44.2H29.8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-																									<path d="M25 34.6001V44.2001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-																								</svg>
-																							</span>
+																							<img scr="assets/media/billboard.png></img>"
 																							<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
 																							<a href="appPonto/cadastro.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Adicionar mídia</a>
 																						</div>';
