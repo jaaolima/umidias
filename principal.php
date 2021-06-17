@@ -603,7 +603,6 @@
 		<script src="assets/plugins/global/plugins.bundle.js"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
-		<script src="assets/js/scripts.bundle2.min.js"></script>
 		<!--begin::Page Vendors(used by this page)-->
 		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
 		<!--end::Page Vendors-->
@@ -620,6 +619,7 @@
 		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM&callback=initialize"></script>
 		<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
 		<script src="assets/js/pages/crud/file-upload/dropzonejs.js"></script>
+		<script src="assets/js/scripts.bundle2.min.js"></script>
 		<script>
 			const primary = '#6993FF';
 			const success = '#1BC5BD';
