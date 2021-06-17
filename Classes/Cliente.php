@@ -321,7 +321,7 @@
 						FROM rl_carrinho c 
 						right join tb_ponto p on c.id_ponto = p.id_ponto 
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia 
-						inner join tb_material m on p.id_material=m.id_material 
+						right join tb_material m on p.id_material=m.id_material 
 						right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 						WHERE id_usuario = :id_usuario and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
 
