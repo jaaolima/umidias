@@ -105,7 +105,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<?php endif;?>
 								<?php if($id_midia == 1) :  ?> 
 									<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por Bisemanas </button>
-									<div class="dropdown-menu dropdown-menu-right" style="padding:30px;">
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="filtro_mapa" style="padding:30px;"> 
 										<div class="row">
 											<h4 class="texto-negrito mb-4 mr-2">Selecione as bisemanas</h4>
 											<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Duas semanas(14 dias de exibição)"><i class="flaticon-questions-circular-button"></i></a>
