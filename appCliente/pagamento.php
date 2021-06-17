@@ -58,16 +58,19 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="my-6">
                                         <input type="radio" id="boleto_parcelado" name="metodo">
                                         <label for="boleto_parcelado">Boleto Parcelado</label>
+                                        <img src="assets/media/credit-card.png" > 
                                     </div>
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
                                         <input type="radio" id="boleto" name="metodo">
-                                        <label for="boleto">Boleto</label>                                      
+                                        <label for="boleto">Boleto</label>   
+                                        <img src="assets/media/credit-card.png" >                                    
                                     </div >
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
                                         <input type="radio" id="credito" name="metodo">
-                                        <label for="credito">Cartão de crédito</label>                                     
+                                        <label for="credito">Cartão de crédito</label>
+                                        <img src="assets/media/credit-card.png" >                                    
                                     </div>
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
@@ -180,7 +183,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <input type="text" value="<?php echo $id_usuario; ?>" name="id_usuario" id="id_usuario">
                                         <input type="text" value="<?php echo $id_bisemana; ?>" name="bisemana" id="bisemana">
                                         <input type="text" value="<?php echo $id_material; ?>" name="id_material" id="id_material">
-                                        <input type="text" value="<?php echo $id_midia; ?>" name="id_midia" id="id_midia">
+                                        <input type="text" value="<?php echo $id_midia; ?>" name="id_midia" id="id_midia"> 
                                     </form>
                                     <?php endif; ?>
                                 </div>

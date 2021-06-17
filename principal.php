@@ -297,7 +297,7 @@
 																			$tamanho = 100/ $valor;
 																			if($dados["id_midia"] == $valor){ 
 																				echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'%  ;">
-																							<img scr="assets/media/billboard.png"></img>
+																							<img height="46px" width="50px" src="assets/media/display.png"></img>
 																							<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
 																							<a href="appPonto/cadastro.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Adicionar mídia</a>
 																						</div>';
@@ -342,7 +342,7 @@
 																		$tamanho = 100/ $valor;
 																			if($dados["id_midia"] == $valor){ 
 																				echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'%  ;">
-																							<img height="50px" width="46px" src="assets/media/display.png"></img>
+																							<img height="46px" width="50px" src="assets/media/display.png"></img>
 																							<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
 																							<a href="appCliente/buscar_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Alugar mídia</a>
 																						</div>';
@@ -516,9 +516,7 @@
 																	$tamanho = 100/ $valor;
 																	if($dados["id_midia"] == $valor){ 
 																		echo '<div class="bg-white pl-20 py-6 mb-10 mt-7  pr-20" style="text-align: center; width:'.$tamanho.'%  ;">
-																					<span class="svg-icon svg-icon-3x svg-icon-white d-block my-2">
-																						<img scr="assets/media/billboard.png"></img>
-																					</span>
+																					<img height="46px" width="50px" src="assets/media/display.png"></img>
 																					<p  class="titulo-midia d-block ">'.$dados["ds_tipo"].'</p>
 																					<a href="appPonto/busca_ponto_midia.php?id_midia='.$dados["id_midia"].'" class="btn btn-primary" type="button" >Listar</a>
 																				</div>';
