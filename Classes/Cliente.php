@@ -317,7 +317,7 @@
 				$con = Conecta::criarConexao();
 				
 				
-				$select = "SELECT id_carrinho c.id_ponto, ds_descricao, ds_latitude, ds_longitude, f.ds_foto, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, p.id_material, id_periodo, id_parceiro
+				$select = "SELECT id_carrinho, c.id_ponto, ds_descricao, ds_latitude, ds_longitude, f.ds_foto, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, p.id_material, id_periodo, id_parceiro
 						FROM rl_carrinho c 
 						right join tb_ponto p on c.id_ponto = p.id_ponto 
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia 
