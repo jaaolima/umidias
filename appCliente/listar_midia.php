@@ -130,4 +130,3 @@
     </div>
     <!--begin::Content Wrapper-->
 </div>
-<script src="assets/js/scripts.bundle.js"></script>

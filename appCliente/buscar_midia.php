@@ -49,6 +49,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		<script src="assets/js/scripts.bundle.js"></script>
 		<style>
 			#map {
 				width: 100%;
