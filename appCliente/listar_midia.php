@@ -60,7 +60,7 @@
                                                         </linearGradient>
                                                         <clipPath id='clip0'>
                                                             <rect width='32' height='32' fill='white' transform='translate(16 12)'/>
-                                                        </clipPath>
+                                                        </clipPath> 
                                                     </defs>
                                                 </svg>
                                             </div>
@@ -130,3 +130,4 @@
     </div>
     <!--begin::Content Wrapper-->
 </div>
+<script src="assets/js/scripts.bundle.js"></script>
