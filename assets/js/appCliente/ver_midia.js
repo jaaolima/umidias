@@ -141,7 +141,7 @@ $(document).ready(function() {
 						redirectTo("appCliente/carrinho.php");
 					}
 					, error: function (data) {
-						swal.fire("Erro", data.responseText, "error");
+						swal.fire("Erro", data.responseText, "error"); 
 					}
 				});	
 				
@@ -169,7 +169,7 @@ $(document).ready(function() {
 					bisemana.push( $(this).val());
 				});
 				var id_material = $("#id_material").val();
-				var ds_arte = $('input[type=file]').val();
+				var ds_arte = $('input[type=file]');
 				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
 			}
 			
