@@ -27,7 +27,7 @@ $(document).ready(function() {
         
     });
 
-    $("#gerar_boleto").on("click", function(e){
+    $("#gerar_boleto").on("click", function(e){ 
 
         $.ajax({
             url: 'appPonto/alugar.php'
