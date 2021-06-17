@@ -330,8 +330,8 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class="form-group">
 															<label>Adicione sua Arte</label>
 															<input type="file" class="form-control" name="ds_arte" id="ds_arte">
-															<div class="bg-danger my-2">
-																<p class="font-weght-bolder">O arquivo da arte deve ser enviado seguindo as especificações da mídia escolhida e sendo um PDF, CMYK, 300DPI.</p>
+															<div class="card card-custom card-stretch gutter-b box-shadow bg-warning-o-80 my-2 p-2 col-8">
+																<p class="font-weight-bold m-0">O arquivo da arte deve ser enviado seguindo as especificações da mídia escolhida e sendo um PDF, CMYK, 300DPI.</p>
 															</div>
 														</div>
 													</div>
