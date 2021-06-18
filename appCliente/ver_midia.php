@@ -474,7 +474,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		var material = document.getElementById("id_material");
 		var valormidia = document.getElementById("valor_midia");
 		material.onblur = function(){
-			let valor = $(this).attr('valor');
+			let valor = $(this).find(':selected').attr('valor')
 			let total =  parseInt(valor, 10);
 			valormidia.innerHTML = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); 
 		}

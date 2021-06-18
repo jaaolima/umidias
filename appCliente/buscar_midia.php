@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<?php endif;?>
 										
 									</div>
-								<?php endif;?>
+								<?php endif;?> 
 								<?php if($id_midia == 1) :  ?> 
 									<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por Bisemanas </button>
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="filtro_mapa" style="padding:30px;"> 
