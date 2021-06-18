@@ -338,7 +338,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class="form-group">
                                                             <label>Tipo de material</label>
                                                             <select name="id_material" id="id_material" class="form-control">
-                                                                <option value="lona">Lona</option>
+                                                                <option valor="700" value="lona">Lona</option>
                                                             </select>
                                                         </div>
                                                     </div>
