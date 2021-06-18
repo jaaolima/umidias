@@ -59,7 +59,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class='card-body text-center' style='padding: 0px !important'>
                                                         <!--begin::User-->
                                                         <div class='position-relative' >
-                                                            <img class='img-fluid w-100 rounded-top' src='".$dados["ds_foto"]."' alt='image' style='max-height:300px;' />
+                                                            <img class='img-fluid w-100 rounded-top' src='".$dados["ds_foto"]."' alt='image' style='height:300px;' />
                                                             <div class='position-absolute'  style='top: -14px; right: -14px;'>
                                                                 <a id='".$dados["id_carrinho"]."' class='excluir btn btn-md btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow' data-action='change' data-toggle='tooltip' title='' data-original-title='excluir'>
                                                                     <i class='far fa-trash-alt icon-md texto-vermelho'></i>

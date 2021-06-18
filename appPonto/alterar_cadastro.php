@@ -88,7 +88,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 
             </div>
             <div class="form-group row">
-                <div id="carrossel" style='max-height:300px;' class="carousel slide col-md-4" data-ride="carousel">
+                <div id="carrossel" style='height:300px;' class="carousel slide col-md-4" data-ride="carousel">
                     <label >Fotos:</label>
                     <div class="carousel-inner">
                         <?php
@@ -98,14 +98,14 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                                 if($total == 1){
                                     echo "<div class='carousel-item active'>
                                             <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' type='button' id='excluirFoto".$fotos["id_ponto_foto"]."'>Excluir Foto</button>
-                                            <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
+                                            <img class='d-block w-100 img-fluid' style='height:300px;'  src='".$fotos["ds_foto"]."' >
                                         </div>";
                                         
                                 }
                                 else{
                                     echo "<div class='carousel-item'>
                                         <button class='btn btn-outline-primary bg-white  position-absolute' style='top: 10px;right: 40px;' type='button' id='excluirFoto".$fotos["id_ponto_foto"]."'>Excluir Foto</button>
-                                        <img class='d-block w-100 img-fluid' style='max-height:300px;'  src='".$fotos["ds_foto"]."' >
+                                        <img class='d-block w-100 img-fluid' style='height:300px;'  src='".$fotos["ds_foto"]."' >
                                     </div>";
                                 }
 
