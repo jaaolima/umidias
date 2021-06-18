@@ -276,7 +276,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														</div>
 													</div>	
 													<?php endif ;?>											
-													<div class="d-flex">
+													<!-- <div class="d-flex">
 														<div class="ml-n4 col-10">
 															<span>Taxa de serviço</span>
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -288,7 +288,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class="text-right w-100">
 															<span class="font-weight-bolder text-right">20%</span>
 														</div>
-													</div>
+													</div> -->
 												</div>
 												<div class="separator separator-solid"></div>
 												<?php if($id_midia == 1) : ?>
@@ -309,7 +309,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<div class="card card-custom card-stretch gutter-b box-shadow" id="alugar_midia" style="display: none;">
 												<div class="my-6 mx-6">
-													<h3 class="font-weight-bolder">Detalhes adicionais:</h3>
+													<h3 class="font-weight-bolder">Detalhes adicionais:</h3> 
 												</div>
 												<div class="separator separator-solid"></div>
 												<div class="my-6 mx-6" >

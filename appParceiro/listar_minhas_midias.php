@@ -32,7 +32,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<meta charset="utf-8" />
 		<title>List 4 Columns | Keenthemes</title>
 		<meta name="description" content="User 4 columns listing" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> 
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
@@ -72,6 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<th>Descrição</th>
 												<th>Valor</th>
 												<th>Tipo de Mídia</th>
+												<th>Status</th>
 												<th>Observações</th>
 												<th>Ações</th> 
 											</tr>
@@ -80,6 +81,17 @@ License: You must have a valid license purchased only from themeforest(the above
 											<?php
 												
 												while($dados = $meusPontos->fetch()){
+													$hoje = date('Y-m-d');
+                                            
+													if($hoje >= $dados["dt_inicial"] && $dados["dt_final"] >= $hoje){
+														$status = "<span class='label label-xl label-dot label-danger mr-2 mt-1'></span><p>Indisponível agora</p>";
+													}
+													if($hoje < $dados["dt_inicial"]){
+														$status = "<span class='label label-xl label-dot label-warning mr-2 mt-1'></span><p>Reservado depois</p>";
+													}
+													if(empty($dados["dt_final"]) && empty($dados["dt_inicial"])){
+														$status = "<span class='label label-xl label-dot label-success mr-2 mt-1'></span><p>Disponível agora</p>";
+													}
 													echo "<tr>
 																<td>".$dados['id_ponto']."</td>
 																<td>
