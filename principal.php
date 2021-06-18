@@ -755,7 +755,7 @@
 						}],
 						chart: {
 							type: 'bar',
-							height: 350
+							height: 300
 						},
 						plotOptions: {
 							bar: {
@@ -777,7 +777,7 @@
 						},
 						yaxis: {
 							title: {
-								text: '$ (thousands)'
+								text: 'Pontos'
 							}
 						},
 						fill: {
