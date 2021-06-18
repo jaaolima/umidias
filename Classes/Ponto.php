@@ -858,6 +858,82 @@
 
 			return array(Alugados($id_usuario), Pendentes($id_usuario), livres($id_usuario));
 		}
+		public function graficoPontoParceiroFront($id_usuario)
+		{
+			
+			function Alugados($id_usuario){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(a.id_ponto) as id_ponto
+								FROM rl_alugado a
+								right join tb_ponto p on a.id_ponto=p.id_ponto
+								where p.id_midia = 2 and a.st_status = 'A' and p.id_parceiro=:id_usuario";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_usuario' => $id_usuario);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+			function Pendentes($id_usuario){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(a.id_ponto) as id_ponto
+								FROM rl_alugado a
+								right join tb_ponto p on a.id_ponto=p.id_ponto
+								where p.id_midia = 2 and a.st_status = 'P' and p.id_parceiro=:id_usuario";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_usuario' => $id_usuario);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			function Livres($id_usuario){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(a.id_ponto) as id_ponto
+								FROM rl_alugado a
+								right join tb_ponto p on a.id_ponto=p.id_ponto
+								where p.id_midia = 2 and a.st_status = 'L' and p.id_parceiro=:id_usuario";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_usuario' => $id_usuario);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			return array(Alugados($id_usuario), Pendentes($id_usuario), livres($id_usuario));
+		}
 		function BuscarDadosPonto($id_ponto)
 		{
 			try{

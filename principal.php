@@ -36,7 +36,8 @@
 	$dadosTotalCliente = $cliente->dadosTotalCliente();
 	$dadosTodasMidias = $ponto->listarTodasMidias();
 
-	$graficoPontoParceiroOutdoor = $ponto->graficoPontoParceiroOutdoor($id_usuario);
+	$graficoPontoParceiroFront = $ponto->graficoPontoParceiroFront($id_usuario);
+	$graficoPontoParceiroFront = $ponto->graficoPontoParceiroFront($id_usuario);
 ?>
 <!DOCTYPE html> 
 
@@ -748,13 +749,13 @@
 					var options = {
 						series: [{
 							name: 'Ativos',
-							data: [<?php echo $graficoPontoParceiroOutdoor[0]["id_ponto"]; ?>, 55]
+							data: [<?php echo $graficoPontoParceiroOutdoor[0]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[0]["id_ponto"]; ?>]
 						}, {
 							name: 'Pendentes',
-							data: [<?php echo $graficoPontoParceiroOutdoor[1]["id_ponto"]; ?>, 85]
+							data: [<?php echo $graficoPontoParceiroOutdoor[1]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[0]["id_ponto"]; ?>]
 						}, {
 							name: 'Livres',
-							data: [<?php echo $graficoPontoParceiroOutdoor[2]["id_ponto"]; ?>, 41]
+							data: [<?php echo $graficoPontoParceiroOutdoor[2]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[0]["id_ponto"]; ?>]
 						}],
 						chart: {
 							type: 'bar',
