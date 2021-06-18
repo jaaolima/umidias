@@ -216,6 +216,13 @@ License: You must have a valid license purchased only from themeforest(the above
 														</tbody>
 													</table>												
 												</div>
+												<div class="separator separator-solid"></div>
+												<div class="form-group">
+													<label>Tipo de material</label>
+													<select name="id_material" id="id_material" class="form-control">
+														<option value="lona">Lona</option>
+													</select>
+												</div>
 												<?php endif ;?> 
 												<?php if($id_midia == 2) : ?>
 												<div class="d-flex my-6 mx-6" >
@@ -239,6 +246,16 @@ License: You must have a valid license purchased only from themeforest(the above
 															<option value="10">10 meses</option>
 															<option value="11">11 meses</option>
 															<option value="12">12 meses</option>
+														</select>
+													</div>
+													<div class="separator separator-solid"></div>
+													<div class="form-group">
+														<label>Tipo de material</label>
+														<select name="id_material" id="id_material" class="form-control">
+															<option value="">Selecione...</option>
+															<?php 
+																echo $optionsMaterial;
+															?>
 														</select>
 													</div>
 													
@@ -314,19 +331,6 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="separator separator-solid"></div>
 												<div class="my-6 mx-6" >
 													<div class="form-group"> 
-														<?php if($id_midia == 1) : ?>
-														<div class="form-group">
-															<label>Tipo de material</label>
-															<select name="id_material" id="id_material" class="form-control">
-																<option value="">Selecione...</option>
-																<?php 
-																	echo $optionsMaterial;
-																?>
-															</select>
-														</div>
-													</div>
-													<div class="form-group"> 
-														<?php endif ;?>
 														<div class="form-group">
 															<label>Adicione sua Arte</label>
 															<input type="file" class="form-control" name="ds_arte" id="ds_arte">
