@@ -288,7 +288,7 @@
 											<div class="card-body d-flex ">
 												<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 													<div class="flex-grow-1" style="display: inherit;">
-														<h3 class="card-title titulo-div">Mídias:</h3>
+														<h3 class="card-title titulo-div">Status das mídias:</h3>
 													</div>
 													<div class="position-relative w-100">
 														<div id="grafico_parceiro_midia"></div>
