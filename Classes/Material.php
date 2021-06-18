@@ -114,7 +114,7 @@
 		{
 			try{
 				$con = Conecta::criarConexao();
-				$select = "SELECT id_material, ds_material
+				$select = "SELECT id_material, ds_material, nu_valor
 							FROM tb_material ";
 				$stmt = $con->prepare($select);
 				$stmt->execute();
@@ -125,11 +125,11 @@
 				{
 					if($id_material == $dados['id_material'])
 					{
-						$options.= "<option value='".$dados['id_material']."' selected>".$dados['ds_material']."</option>";
+						$options.= "<option preco='".$dados['nu_valor']."' value='".$dados['id_material']."' selected>".$dados['ds_material']."</option>";
 					}
 					else
 					{
-						$options.= "<option value='".$dados['id_material']."'>".$dados['ds_material']."</option>";
+						$options.= "<option preco='".$dados['nu_valor']."' value='".$dados['id_material']."'>".$dados['ds_material']."</option>";
 					}
 					
 
