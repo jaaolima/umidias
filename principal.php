@@ -748,13 +748,13 @@
 					var options = {
 						series: [{
 							name: 'Ativos',
-							data: [<?php echo $graficoPontoParceiroOutdoor[0] ?>, 55]
+							data: [<?php echo $graficoPontoParceiroOutdoor[0]; ?>, 55]
 						}, {
 							name: 'Pendentes',
-							data: [<?php echo $graficoPontoParceiroOutdoor[1] ?>, 85]
+							data: [<?php echo $graficoPontoParceiroOutdoor[1]; ?>, 85]
 						}, {
 							name: 'Livres',
-							data: [<?php echo $graficoPontoParceiroOutdoor[2] ?>, 41]
+							data: [<?php echo $graficoPontoParceiroOutdoor[2]; ?>, 41]
 						}],
 						chart: {
 							type: 'bar',
