@@ -383,7 +383,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <?php endif ;?>
 											<div class="card card-custom card-stretch gutter-b box-shadow" id="alugar_midia" style="display: none;">
 												<div class="my-6 mx-6">
-													<h3 class="font-weight-bolder">Detalhes adicionais:</h3> 
+													<h3 class="font-weight-bolder">Detalhes adicionais:</h3>  
 												</div>
 												<div class="separator separator-solid"></div>
 												<div class="my-6 mx-6" >
