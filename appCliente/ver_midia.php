@@ -217,11 +217,13 @@ License: You must have a valid license purchased only from themeforest(the above
 													</table>												
 												</div>
 												<div class="separator separator-solid"></div>
-												<div class="form-group">
-													<label>Tipo de material</label>
-													<select name="id_material" id="id_material" class="form-control">
-														<option value="lona">Lona</option>
-													</select>
+												<div class=" my-6 mx-6">
+													<div class="form-group">
+														<label>Tipo de material</label>
+														<select name="id_material" id="id_material" class="form-control">
+															<option value="lona">Lona</option>
+														</select>
+													</div>
 												</div>
 												<?php endif ;?> 
 												<?php if($id_midia == 2) : ?>
@@ -248,7 +250,10 @@ License: You must have a valid license purchased only from themeforest(the above
 															<option value="12">12 meses</option>
 														</select>
 													</div>
-													<div class="separator separator-solid"></div>
+											
+												</div>
+												<div class="separator separator-solid"></div>
+												<div class="d-flex my-6 mx-6" >
 													<div class="form-group">
 														<label>Tipo de material</label>
 														<select name="id_material" id="id_material" class="form-control">
@@ -258,7 +263,6 @@ License: You must have a valid license purchased only from themeforest(the above
 															?>
 														</select>
 													</div>
-													
 												</div>
 												<?php endif ;?>
 												<div class="separator separator-solid"></div>
