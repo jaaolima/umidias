@@ -755,7 +755,7 @@
 							data: [<?php echo $graficoPontoParceiroOutdoor[1]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[1]["id_ponto"]; ?>]
 						}, {
 							name: 'Livres',
-							data: [<?php echo $graficoPontoParceiroOutdoor[2]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[3]["id_ponto"]; ?>]
+							data: [<?php echo $graficoPontoParceiroOutdoor[2]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[2]["id_ponto"]; ?>]
 						}],
 						chart: {
 							type: 'bar',
