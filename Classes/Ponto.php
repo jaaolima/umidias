@@ -785,7 +785,7 @@
 		public function graficoPontoParceiroOutdoor($id_usuario)
 		{
 			
-			function Alugados(){	
+			function Alugados($id_usuario){	
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -808,7 +808,7 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function Pendentes(){	
+			function Pendentes($id_usuario){	
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -832,7 +832,7 @@
 				}
 			}
 
-			function Livres(){	
+			function Livres($id_usuario){	
 				try{
 					$con = Conecta::criarConexao();
 					
