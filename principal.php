@@ -752,10 +752,10 @@
 							data: [<?php echo $graficoPontoParceiroOutdoor[0]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[0]["id_ponto"]; ?>]
 						}, {
 							name: 'Pendentes',
-							data: [<?php echo $graficoPontoParceiroOutdoor[1]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[0]["id_ponto"]; ?>]
+							data: [<?php echo $graficoPontoParceiroOutdoor[1]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[1]["id_ponto"]; ?>]
 						}, {
 							name: 'Livres',
-							data: [<?php echo $graficoPontoParceiroOutdoor[2]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[0]["id_ponto"]; ?>]
+							data: [<?php echo $graficoPontoParceiroOutdoor[2]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[3]["id_ponto"]; ?>]
 						}],
 						chart: {
 							type: 'bar',
