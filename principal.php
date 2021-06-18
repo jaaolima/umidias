@@ -276,7 +276,25 @@
 								<div class="mb-8 ">
 									<h1 class="h1-titulo">Painel de Controle</h1>
 								</div>
-								<!--begin::Row-->	
+								<!--begin::Row-->
+								<?php if($_SESSION['id_perfil'] == 2  ) :  ?>
+								<div class="row">
+									<div class="col-4">
+										<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+											<div class="card-body d-flex ">
+												<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+													<div class="flex-grow-1" style="display: inherit;">
+														<h3 class="card-title titulo-div">Mídias:</h3>
+													</div>
+													<div class="position-relative w-100">
+														<div id="grafico_parceiro_midia"></div>
+													</div>
+												</div>
+											</div> 
+										</div>
+									</div>
+								</div>	
+								<?php endif: ?>
 								<div class="row">
 									<div class="col-xl-12">
 										<div class="row">
@@ -623,6 +641,7 @@
 			const primary = '#6993FF';
 			const success = '#1BC5BD';
 			const danger = '#F64E60';
+			const warning = '#FFA800';
 			var KTApexChartsDemo = function () {
 				var midia = function () {
 					const apexChart = "#grafico_midia";
@@ -721,12 +740,70 @@
 					var chart = new ApexCharts(document.querySelector(apexChart), options);
 					chart.render();
 				}
+				var parceiroMidia = function () {
+					const apexChart = "#chart_3";
+					var options = {
+						series: [{
+							name: 'Ativos',
+							data: [44, 55]
+						}, {
+							name: 'Pendentes',
+							data: [76, 85]
+						}, {
+							name: 'Livres',
+							data: [35, 41]
+						}],
+						chart: {
+							type: 'bar',
+							height: 350
+						},
+						plotOptions: {
+							bar: {
+								horizontal: false,
+								columnWidth: '55%',
+								endingShape: 'rounded'
+							},
+						},
+						dataLabels: {
+							enabled: false
+						},
+						stroke: {
+							show: true,
+							width: 2,
+							colors: ['transparent']
+						},
+						xaxis: {
+							categories: ['Outdoor', 'Front-light'],
+						},
+						yaxis: {
+							title: {
+								text: '$ (thousands)'
+							}
+						},
+						fill: {
+							opacity: 1
+						},
+						tooltip: {
+							y: {
+								formatter: function (val) {
+									return "$ " + val + " thousands"
+								}
+							}
+						},
+						colors: [primary, success, warning]
+					};
+
+					var chart = new ApexCharts(document.querySelector(apexChart), options);
+					chart.render();
+				}
+
 				return {
 					// public functions
 					init: function () {
 						midia();
 						parceiro();
 						cliente();
+						parceiroMidia();
 					}
 				};
 			}();
