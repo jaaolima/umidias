@@ -367,7 +367,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"></span>
+                                                                <span class="font-weight-bolder text-right">R$ 00,00</span>
                                                             </div>
                                                         </div>										
                                                     </div>
