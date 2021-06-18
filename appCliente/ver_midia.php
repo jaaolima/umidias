@@ -217,6 +217,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </table>												
                                                     </div>
                                                     <div class="separator separator-solid"></div>
+													<div class="my-6 mx-6">
+                                                        <h3 class="font-weight-bolder">Material</h3>
+                                                    </div>
                                                     <div class=" my-6 mx-6">
                                                         <div class="form-group">
                                                             <label>Tipo de material</label>
@@ -324,6 +327,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 
                                                     </div>
                                                     <div class="separator separator-solid"></div>
+													<div class="my-6 mx-6">
+                                                        <h3 class="font-weight-bolder">Material</h3>
+                                                    </div>
                                                     <div class="d-flex my-6 mx-6" >
                                                         <div class="form-group">
                                                             <label>Tipo de material</label>
