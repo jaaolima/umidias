@@ -240,7 +240,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><?php echo "R$ ". $dados["nu_valor"]; . ",00" ?></span>
+                                                                <span class="font-weight-bolder text-right"><?php echo "R$ ". $dados["nu_valor"] . ",00"; ?></span>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex">
@@ -353,7 +353,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><?php echo "R$ ". $dados["nu_valor"]; . ",00"?></span>
+                                                                <span class="font-weight-bolder text-right"><?php echo "R$ ". $dados["nu_valor"] . ",00";?></span>
                                                             </div>
                                                         </div>	
                                                         <div class="d-flex">
