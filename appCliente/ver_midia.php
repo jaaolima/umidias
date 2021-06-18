@@ -477,7 +477,6 @@ License: You must have a valid license purchased only from themeforest(the above
 			let valor = $(this).find(':selected').attr('valor')
 			let total =  parseInt(valor, 10);
 			valormidia.innerHTML = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-			valor2.append(+ total); 
 		}
 
 		
