@@ -458,7 +458,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			});
 
 		})
-
+		<?php if($id_midia == 2) : ?>
 		//calculo front
 		var mes = document.getElementById("mes");
 		var valor1 = document.getElementById("valor1");
@@ -469,6 +469,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			let total =  parseInt(valor, 10);
 			valor1.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
 		}
+		<?php endif; ?>
 
 		var material = document.getElementById("id_material");
 		var valormidia = document.getElementById("valor_midia");
