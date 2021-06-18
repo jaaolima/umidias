@@ -257,7 +257,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><div id="valor_midia">R$ 00,00</div></span>
+                                                                <span class="font-weight-bolder text-right"><div id="valor_midia">R$ 0,00</div></span>
                                                             </div>
                                                         </div>										
                                                     </div>
@@ -367,7 +367,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right">R$ 00,00</span>
+                                                                <span class="font-weight-bolder text-right">R$ 0,00</span>
                                                             </div>
                                                         </div>										
                                                     </div>
