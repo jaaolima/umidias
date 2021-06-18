@@ -861,7 +861,7 @@
 		public function graficoPontoParceiroFront($id_usuario)
 		{
 			
-			function Alugados($id_usuario){	
+			function AlugadosFront($id_usuario){	
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -884,7 +884,7 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function Pendentes($id_usuario){	
+			function PendentesFront($id_usuario){	
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -908,7 +908,7 @@
 				}
 			}
 
-			function Livres($id_usuario){	
+			function LivresFront($id_usuario){	
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -932,7 +932,7 @@
 				}
 			}
 
-			return array(Alugados($id_usuario), Pendentes($id_usuario), livres($id_usuario));
+			return array(AlugadosFront($id_usuario), PendentesFront($id_usuario), livresFront($id_usuario));
 		}
 		function BuscarDadosPonto($id_ponto)
 		{
