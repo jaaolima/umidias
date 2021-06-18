@@ -221,10 +221,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Material</h3>
                                                     </div>
                                                     <div class="my-6 mx-6">
-                                                        <div class="form-group">
+
+														<div class="form-group">
                                                             <label>Tipo de material</label>
                                                             <select name="id_material" id="id_material" class="form-control">
-                                                                <option value="lona">Lona</option>
+                                                                <option value="">Selecione...</option>
+                                                                <?php 
+                                                                    echo $optionsMaterial;
+                                                                ?>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -253,7 +257,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"></span>
+                                                                <span class="font-weight-bolder text-right"><div id="valor_midia"></div></span>
                                                             </div>
                                                         </div>										
                                                     </div>
@@ -331,13 +335,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Material</h3>
                                                     </div>
                                                     <div class="my-6 mx-6" >
-                                                        <div class="form-group">
+														<div class="form-group">
                                                             <label>Tipo de material</label>
                                                             <select name="id_material" id="id_material" class="form-control">
-                                                                <option value="">Selecione...</option>
-                                                                <?php 
-                                                                    echo $optionsMaterial;
-                                                                ?>
+                                                                <option value="lona">Lona</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -366,7 +367,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><div id="valor_midia"></div></span>
+                                                                <span class="font-weight-bolder text-right"></span>
                                                             </div>
                                                         </div>										
                                                     </div>
