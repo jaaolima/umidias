@@ -294,7 +294,7 @@
 										</div>
 									</div>
 								</div>	
-								<?php endif: ?>
+								<?php endif; ?>
 								<div class="row">
 									<div class="col-xl-12">
 										<div class="row">
@@ -741,7 +741,7 @@
 					chart.render();
 				}
 				var parceiroMidia = function () {
-					const apexChart = "#chart_3";
+					const apexChart = "#parceiro_midia";
 					var options = {
 						series: [{
 							name: 'Ativos',
