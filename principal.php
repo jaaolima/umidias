@@ -28,12 +28,15 @@
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 	$meusPontos = $ponto->listarMeusPontos($id_usuario);
 	$dadosTotalMidias = $ponto->dadosTotalMidias();
+
 	$dadosTotalContratadas = $ponto->dadosTotalContratadas();
 	$dadosTotalPendentes = $ponto->dadosTotalPendentes();
 	$dadosTotalReservadas = $ponto->dadosTotalReservadas();
 	$dadosTotalParceiros = $parceiro->dadosTotalParceiros();
 	$dadosTotalCliente = $cliente->dadosTotalCliente();
 	$dadosTodasMidias = $ponto->listarTodasMidias();
+
+	$graficoPontoParceiroOutdoor = $ponto->graficoPontoParceiroOutdoor($id_usuario);
 ?>
 <!DOCTYPE html> 
 
@@ -745,13 +748,13 @@
 					var options = {
 						series: [{
 							name: 'Ativos',
-							data: [44, 55]
+							data: [graficoPontoParceiroOutdoor[0], 55]
 						}, {
 							name: 'Pendentes',
-							data: [76, 85]
+							data: [graficoPontoParceiroOutdoor[1], 85]
 						}, {
 							name: 'Livres',
-							data: [35, 41]
+							data: [graficoPontoParceiroOutdoor[2], 41]
 						}],
 						chart: {
 							type: 'bar',
@@ -786,7 +789,7 @@
 						tooltip: {
 							y: {
 								formatter: function (val) {
-									return "$ " + val + " thousands"
+									return val + " Pontos"
 								}
 							}
 						},

@@ -782,6 +782,82 @@
 
 			return array(mesReservados(), semanaReservados(), atualReservados());
 		}
+		public function graficoPontoParceiroOutdoor($id_usuario)
+		{
+			
+			function Alugados(){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_ponto) as id_ponto
+								FROM rl_alugado a
+								right join tb_ponto p on a.id_ponto=p.id_ponto
+								where id_midia = 1 and a.st_status = 'A' and id_usuario=:id_usuario";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_usuario' => $id_usuario);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+			function Pendentes(){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_ponto) as id_ponto
+								FROM rl_alugado a
+								right join tb_ponto p on a.id_ponto=p.id_ponto
+								where id_midia = 1 and a.st_status = 'P' and id_usuario=:id_usuario";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_usuario' => $id_usuario);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			function Livres(){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_ponto) as id_ponto
+								FROM rl_alugado a
+								right join tb_ponto p on a.id_ponto=p.id_ponto
+								where id_midia = 1 and a.st_status = 'L' and id_usuario=:id_usuario";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_usuario' => $id_usuario);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			return array(Alugados(), Pendentes(), livres());
+		}
 		function BuscarDadosPonto($id_ponto)
 		{
 			try{
@@ -1053,7 +1129,7 @@
 			$id_usuario	    = $dados['id_usuario'];
 			$id_ponto	    = $dados['id_ponto'];
 			$ds_arte	    = $dados['ds_arte'];
-			$id_midia	    = $dados['id_midia'];
+			$id_midia	    = $dados['id_midia']; 
 
 			var_dump($ds_arte);
 
