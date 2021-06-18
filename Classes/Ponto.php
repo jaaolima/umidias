@@ -856,7 +856,7 @@
 				}
 			}
 
-			return array(Alugados(), Pendentes(), livres());
+			return array(Alugados($id_usuario), Pendentes($id_usuario), livres($id_usuario));
 		}
 		function BuscarDadosPonto($id_ponto)
 		{
