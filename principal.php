@@ -36,7 +36,7 @@
 	$dadosTotalCliente = $cliente->dadosTotalCliente();
 	$dadosTodasMidias = $ponto->listarTodasMidias();
 
-	$graficoPontoParceiroFront = $ponto->graficoPontoParceiroFront($id_usuario);
+	$graficoPontoParceiroOutdoor = $ponto->graficoPontoParceiroOutdoor($id_usuario);
 	$graficoPontoParceiroFront = $ponto->graficoPontoParceiroFront($id_usuario);
 ?>
 <!DOCTYPE html> 
