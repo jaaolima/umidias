@@ -125,11 +125,11 @@
 				{
 					if($id_material == $dados['id_material'])
 					{
-						$options.= "<option preco='".$dados['nu_valor']."' value='".$dados['id_material']."' selected>".$dados['ds_material']."</option>";
+						$options.= "<option valor='".$dados['nu_valor']."' value='".$dados['id_material']."' selected>".$dados['ds_material']."</option>";
 					}
 					else
 					{
-						$options.= "<option preco='".$dados['nu_valor']."' value='".$dados['id_material']."'>".$dados['ds_material']."</option>";
+						$options.= "<option valor='".$dados['nu_valor']."' value='".$dados['id_material']."'>".$dados['ds_material']."</option>";
 					}
 					
 

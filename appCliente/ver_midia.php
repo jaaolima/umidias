@@ -366,7 +366,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"></span>
+                                                                <span class="font-weight-bolder text-right"><div id="valor_midia"></div></span>
                                                             </div>
                                                         </div>										
                                                     </div>
@@ -467,6 +467,14 @@ License: You must have a valid license purchased only from themeforest(the above
 			let valor = <?php echo $valor ?> * mes.value;
 			let total =  parseInt(valor, 10);
 			valor1.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
+		}
+
+		var material = document.getElementById("id_material");
+		var valormidia = document.getElementById("valor_midia");
+		material.onblur = function(){
+			let valor = $(this).attr('valor');
+			let total =  parseInt(valor, 10);
+			valormidia.innerHTML = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); 
 		}
 
 		
