@@ -260,7 +260,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="separator separator-solid"></div>
                                                     <div class="my-6 mx-6 text-right">
                                                         <h3 class="font-weight-bolder">Total</h3>
-                                                        <div id="valor2"><h2>R$ 000,00</h2></div>
+                                                        <div id="valor2"><h2>R$ 0,00</h2></div>
                                                     </div>
                                                     <div class="my-6 mx-6">
                                                         <button id="alugar" type="button"class="btn btn-primary w-100">Alugar Mídia</button>
@@ -373,7 +373,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="separator separator-solid"></div>
                                                     <div class="my-6 mx-6 text-right">
                                                         <h3 class="font-weight-bolder">Total</h3>
-                                                        <div id="valor1"><h2>R$ 000,00</h2></div>
+                                                        <div id="valor1"><h2>R$ 0,00</h2></div>
                                                     </div>
                                                     <div class="my-6 mx-6">
                                                         <button id="alugar" type="button"class="btn btn-primary w-100">Alugar Mídia</button>
