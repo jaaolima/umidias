@@ -792,7 +792,7 @@
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM rl_alugado a
 								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where id_midia = 1 and a.st_status = 'A' and id_usuario=:id_usuario";
+								where p.id_midia = 1 and a.st_status = 'A' and p.id_parceiro=:id_usuario";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_usuario' => $id_usuario);
@@ -839,7 +839,7 @@
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM rl_alugado a
 								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 1 and a.st_status = 'L' and id_usuario=:id_usuario";
+								where p.id_midia = 1 and a.st_status = 'L' and p.id_parceiro=:id_usuario";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_usuario' => $id_usuario);
