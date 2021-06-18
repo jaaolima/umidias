@@ -366,7 +366,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><?php echo $dados["nu_valor"]; ?></span>
+                                                                <span class="font-weight-bolder text-right"></span>
                                                             </div>
                                                         </div>										
                                                     </div>

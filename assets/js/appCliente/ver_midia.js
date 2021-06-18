@@ -85,8 +85,7 @@ $(document).ready(function() {
     }); 
 
 	$("#alugar").on("click", function(e){
-		var id_midia = $("#id_midia").val();
-		if(validarAlugar(id_midia)){
+		if(validarAlugar()){
 			$('#alugar_midia').show();
 			$('#ver_midia').hide();
 		}
@@ -169,7 +168,7 @@ $(document).ready(function() {
 					bisemana.push( $(this).val());
 				});
 				var id_material = $("#id_material").val();
-				var ds_arte = $('input[type=file]').files[0];
+				var ds_arte = $('input[type=file]').files[0]; 
 				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
 			}
 			
@@ -225,24 +224,22 @@ function validarAlugar(id_midia){
 		}
 		
 	}
+	if($("#id_material option:selected").val() == "")
+	{
+		$("#id_material").focus();
+		swal.fire("Erro", "Selecione um material", "error");
+		$("#id_material").addClass("is-invalid");
+		return false;	
+	}
+	else
+	{
+		$("#id_material").removeClass("is-invalid");	
+		$("#id_material").addClass("is-valid");
+	}
 	return true;	
 }
-function validarDetalhe(id_midia){
-	if(id_midia == 1){
-		if($("#id_material option:selected").val() == "")
-		{
-			$("#id_material").focus();
-			swal.fire("Erro", "Selecione um material", "error");
-			$("#id_material").addClass("is-invalid");
-			return false;	
-		}
-		else
-		{
-			$("#id_material").removeClass("is-invalid");	
-			$("#id_material").addClass("is-valid");
-		}
-		
-	}
+function validarDetalhe(){
+
 	if($("#ds_arte").val() == "")
 	{
 		$("#ds_arte").focus();
