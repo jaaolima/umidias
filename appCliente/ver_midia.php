@@ -390,9 +390,8 @@ License: You must have a valid license purchased only from themeforest(the above
 				<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
 				var totalBisemana = $("input[name='bisemana[]']:checked").length;
 				var valor2 = document.getElementById("valor2");
-				let taxa = 0.2 * (<?php echo $valor; ?> * totalBisemana); 
 				let valor = <?php echo $valor; ?> * totalBisemana;
-				let total = parseInt(taxa, 10) + parseInt(valor, 10);
+				let total = parseInt(valor, 10);
 				valor2.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 				
 			});
@@ -405,9 +404,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		mes.onblur = function(){
 			<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
-			let taxa = 0.2 * (<?php echo $valor ?> * mes.value);
 			let valor = <?php echo $valor ?> * mes.value;
-			let total = parseInt(taxa, 10) + parseInt(valor, 10);
+			let total =  parseInt(valor, 10);
 			valor1.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
 		}
 
