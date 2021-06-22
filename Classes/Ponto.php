@@ -1023,7 +1023,26 @@
 			$nu_valor    	        = $dados['nu_valor']; 
 			$id_midia               = $dados['id_midia'];
 			$ds_observacao	        = $dados['ds_observacao'];
-			$id_material	        = $dados['id_material'];
+			if(isset($dados['id_material'])){
+				$listaCheckbox = $dados['id_material'];
+
+				$id_material= '';
+
+				for ($i=0; $i < count($listaCheckbox); $i++) { 
+					
+					if($listaCheckbox[0] == $listaCheckbox[$i]){
+						$id_material .= $listaCheckbox[$i];
+					}
+					else{
+						$id_material .= "," . $listaCheckbox[$i];
+					}
+					
+				}
+				
+			}
+			else{
+				$id_material = NULL;
+			};
 
 
 			
