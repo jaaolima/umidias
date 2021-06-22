@@ -150,8 +150,10 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                             echo $optionsmaterial;
                         ?>
                     </select> -->
-                    <label for="papel">Papel</label>
-                    <input type="checkbox" id="papel" name="ds_material[]">
+                    <div class="form-group">
+                        <label for="papel">Papel</label>
+                        <input type="checkbox" id="papel" name="ds_material[]">
+                    </div>
                 </div> 
                 <div class="form-group col-2" id="periodo">
                     <label>Período<span class="text-danger">*</span></label>
