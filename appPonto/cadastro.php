@@ -145,15 +145,11 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
             <div class="row">
                 <div class="form-group col-md-2" id="material">
                     <label>Material acessível<span class="text-danger">*</span></label>
-                    <!-- <select class="form-control" id="id_material" name="id_material">
+                    <select class="form-control" id="id_material" name="id_material">
                         <?php 
                             echo $optionsmaterial;
                         ?>
-                    </select> -->
-                    <div class="form-group">
-                        <label for="papel">Papel</label>
-                        <input type="checkbox" id="papel" name="ds_material[]">
-                    </div>
+                    </select>
                 </div> 
                 <div class="form-group col-2" id="periodo">
                     <label>Período<span class="text-danger">*</span></label>
