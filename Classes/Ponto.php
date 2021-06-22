@@ -1014,7 +1014,7 @@
 			$ds_descricao	        = $dados['ds_descricao'];
 
 			$ds_foto = NULL;
-			var_dump($_FILES["fotos"]);
+			var_dump($_FILES["fotos"]["name"]);
 			if(isset($_FILES["fotos"]["name"])){
 				$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
 			}
