@@ -579,14 +579,12 @@
 													<table class="table table-hover" id="table_ponto">
 														<thead>
 															<tr>
-																<th>Id Ponto</th>
 																<th>Minhas Mídias</th>
 																<th>Descrição</th>
 																<th>Valor</th>
 																<th>Tipo de Mídia</th>
 																<!-- <th>Status</th> -->
 																<th>Observações</th>
-																<th>Ações</th> 
 															</tr>
 														</thead> 
 														<tbody>
@@ -605,7 +603,6 @@
 																		$status = "<span class='label label-xl label-dot label-success mr-2 mt-1'></span><p>Disponível agora</p>";
 																	}*/
 																	echo "<tr>
-																			<td>".$dados['id_ponto']."</td>
 																			<td>
 																				<div class='d-flex'>
 																					<div class='d-flex'>
