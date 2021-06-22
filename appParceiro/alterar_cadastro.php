@@ -47,7 +47,11 @@ $optionsCidade = $parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_
                 </div>
             </div>  
             <div class="form-group row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-3">
+                    <label>Usuário<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_usuario" name="ds_usuario" value="<?php echo $dados['ds_usuario']?>"/>
+                </div>
+                <div class="form-group col-md-3">
                     <label>Nome da Empresa <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_nomeempresa" name="ds_nomeempresa" value="<?php echo $dados['ds_nomeempresa']?>"/>
                 </div>

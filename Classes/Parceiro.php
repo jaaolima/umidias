@@ -5,6 +5,7 @@
 		{
 			
 			$ds_nomeempresa	    = $dados['ds_nomeempresa'];
+			$ds_usuario	    	= $dados['ds_usuario'];
 			$nu_cnpj 	        = $dados['nu_cnpj'];
             $ds_logradouro    	= $dados['ds_logradouro'];
 			$nu_numerolog		= $dados['nu_numerolog'];
@@ -19,6 +20,8 @@
 			$nu_aliquota 		= $dados['nu_aliquota'];
 			$nu_cpf 	    	= $dados['nu_cpf'];
 			$dt_parceiro 		= date("Y-m-d");
+			$ds_senha       =  '123456';
+
 			if($id_regime === "CPF"){
 				if($this->validarCPF($nu_cpf)){
 					try{
@@ -44,7 +47,36 @@
 										':dt_parceiro' => $dt_parceiro);
 										
 						$stmt->execute($params);
-						
+
+						$id_parceiro = $con->lastInsertId();
+
+						try{
+							$con = Conecta::criarConexao();
+							$insertUsuario = "INSERT into tb_usuario (ds_nome, :ds_usuario ds_email, ds_senha, id_perfil, id_parceiro)
+										VALUES (:ds_nome, :ds_usuario, :ds_email, :ds_senha, :id_perfil, :id_parceiro)";
+							
+							$stmtUsuario = $con->prepare($insertUsuario);
+							
+							$paramsUsuario = array(':ds_nome' => $ds_nomeempresa,
+											':ds_usuario' => $ds_usuario,
+											':ds_email' => $ds_email,
+											':id_perfil' => 2,
+											':ds_senha' =>$ds_senha,
+											':id_parceiro' =>$id_parceiro);
+			
+							$stmtUsuario->execute($paramsUsuario);
+			
+			
+							
+							echo "Dados gravados com sucesso!"; 
+							
+						}
+						catch(exception $e)
+						{
+							header('HTTP/1.1 500 Internal Server Error');
+							print "ERRO:".$e->getMessage();		
+						} 
+
 						echo "Dados gravados com sucesso!"; 
 						
 					}			
@@ -81,7 +113,7 @@
 										':nu_telefone' => $nu_telefone,
 										':id_regime' => $id_regime,
 										':nu_aliquota' => $nu_aliquota,
-										':dt_parceiro' => $dt_parceiro);
+										':dt_parceiro' => $dt_parceiro); 
 										
 						$stmt->execute($params);
 						
@@ -188,7 +220,7 @@
 				
 				
 				$select = "SELECT 
-							id_parceiro, ds_nomeempresa, nu_cnpj, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota, nu_cpf
+							id_parceiro, ds_nomeempresa, nu_cnpj, ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota, nu_cpf, ds_usuario
 						FROM tb_parceiro  
 						WHERE id_parceiro = :id_parceiro";
 

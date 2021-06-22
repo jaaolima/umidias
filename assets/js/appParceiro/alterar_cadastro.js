@@ -87,6 +87,18 @@ $(document).ready(function() {
  
 function validar()
 {
+	if($("#ds_usuario").val() == "")
+	{
+		$("#ds_usuario").focus();
+		swal.fire("Erro", "Preencha o nome da empresa", "error");
+		$("#ds_usuario").addClass("is-invalid");
+		return false;	
+	}
+	else
+	{
+		$("#ds_usuario").removeClass("is-invalid");	
+		$("#ds_usuario").addClass("is-valid");
+	}
 	if($("#ds_nomeempresa").val() == "")
 	{
 		$("#ds_nomeempresa").focus();

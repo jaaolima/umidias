@@ -45,7 +45,11 @@
                 </div>
             </div>      
             <div class="form-group row">
-                <div class="form-group col-md-6"> 
+                <div class="form-group col-md-3"> 
+                    <label>Usuário<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_usuário" name="ds_usuário" />
+                </div>
+                <div class="form-group col-md-3"> 
                     <label>Nome da Empresa <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_nomeempresa" name="ds_nomeempresa" />
                 </div>
@@ -97,7 +101,7 @@
             <div class="form-group row">
                 <div class="form-group col-md-4">
                     <label >Responsável<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_responsavel" name="ds_responsavel" />
+                    <input type="text" class="form-control" id="ds_responsavel" name="ds_responsavel" /> 
                 </div>
                 <div class="form-group col-md-4">
                     <label >E-mail<span class="text-danger">*</span></label>
