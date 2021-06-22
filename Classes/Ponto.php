@@ -832,17 +832,17 @@
 				}
 			}
 
-			function Livres($id_usuario){	
+			function Livres($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM rl_alugado a
 								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 1 and a.st_status = 'L' and p.id_parceiro=:id_usuario";
+								where p.id_midia = 1 and a.st_status = 'L' and p.id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
-					$params = array(':id_usuario' => $id_usuario);
+					$params = array(':id_parceiro' => $id_parceiro);
 					$stmt->execute($params);
 
 					return $stmt->fetch();
@@ -856,22 +856,22 @@
 				}
 			}
 
-			return array(Alugados($id_usuario), Pendentes($id_usuario), livres($id_usuario));
+			return array(Alugados($id_parceiro), Pendentes($id_parceiro), livres($id_parceiro));
 		}
-		public function graficoPontoParceiroFront($id_usuario)
+		public function graficoPontoParceiroFront($id_parceiro)
 		{
 			
-			function AlugadosFront($id_usuario){	
+			function AlugadosFront($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM rl_alugado a
 								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 2 and a.st_status = 'A' and p.id_parceiro=:id_usuario";
+								where p.id_midia = 2 and a.st_status = 'A' and p.id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
-					$params = array(':id_usuario' => $id_usuario);
+					$params = array(':id_parceiro' => $id_parceiro);
 					$stmt->execute($params);
 
 					return $stmt->fetch();
@@ -884,41 +884,17 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function PendentesFront($id_usuario){	
+			function PendentesFront($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM rl_alugado a
 								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 2 and a.st_status = 'P' and p.id_parceiro=:id_usuario";
+								where p.id_midia = 2 and a.st_status = 'P' and p.id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
-					$params = array(':id_usuario' => $id_usuario);
-					$stmt->execute($params);
-
-					return $stmt->fetch();
-					
-						
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
-				}
-			}
-
-			function LivresFront($id_usuario){	
-				try{
-					$con = Conecta::criarConexao();
-					
-					$select = "SELECT count(a.id_ponto) as id_ponto
-								FROM rl_alugado a
-								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 2 and a.st_status = 'L' and p.id_parceiro=:id_usuario";
-					
-					$stmt = $con->prepare($select); 
-					$params = array(':id_usuario' => $id_usuario);
+					$params = array(':id_parceiro' => $id_parceiro);
 					$stmt->execute($params);
 
 					return $stmt->fetch();
@@ -932,7 +908,31 @@
 				}
 			}
 
-			return array(AlugadosFront($id_usuario), PendentesFront($id_usuario), livresFront($id_usuario));
+			function LivresFront($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(a.id_ponto) as id_ponto
+								FROM rl_alugado a
+								right join tb_ponto p on a.id_ponto=p.id_ponto
+								where p.id_midia = 2 and a.st_status = 'L' and p.id_parceiro=:id_parceiro";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			return array(AlugadosFront($id_parceiro), PendentesFront($id_parceiro), livresFront($id_parceiro));
 		}
 		function BuscarDadosPonto($id_ponto)
 		{
