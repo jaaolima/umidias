@@ -1039,7 +1039,7 @@
 					
 				}
 
-				str_replace(" ", "", $id_material);
+				str_replace(" ", NULL, $id_material);
 				
 			}
 			else{
