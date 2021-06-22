@@ -1032,9 +1032,11 @@
 					
 					if($listaCheckbox[0] == $listaCheckbox[$i]){
 						$id_material .= $listaCheckbox[$i];
+						var_dump($id_material);
 					}
 					else{
 						$id_material .= "," . $listaCheckbox[$i];
+						var_dump($id_material);
 					}
 					
 				}
@@ -1043,9 +1045,6 @@
 			else{
 				$id_material = NULL;
 			};
-
-			str_replace(" ",'', $id_material);
-			var_dump($id_material);
 
 
 			
