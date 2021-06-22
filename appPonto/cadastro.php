@@ -146,11 +146,9 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 <div class="form-group col-md-2" id="material">
                     <label>Material acessível<span class="text-danger">*</span></label>
                     <div class="form-group">
-                        <select class="form-control" id="id_material" name="id_material">
-                            <?php 
-                                echo $optionsmaterial;
-                            ?>
-                        </select>
+                        <?php 
+                            echo $optionsmaterial;
+                        ?>
                     </div>
                 </div> 
                 <div class="form-group col-2" id="periodo">
