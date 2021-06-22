@@ -125,13 +125,13 @@
 				{
 					if($id_material == $dados['id_material'])
 					{
-						$options.= "<label for='".$dados['id_material']."'>".$dados['ds_material']."</label>
-                        	<input type='checkbox' id='".$dados['id_material']."' name='ds_material[]' value='".$dados['id_material']."'></br>"; 
+						$options.= "<input type='checkbox' id='".$dados['id_material']."' name='id_material[]' value='".$dados['id_material']."'>
+									<label for='".$dados['id_material']."'>".$dados['ds_material']."</label></br>"; 
 					}
 					else
 					{
-						$options.= "<label for='".$dados['id_material']."'>".$dados['ds_material']."</label>
-                        	<input type='checkbox' id='".$dados['id_material']."' name='ds_material[]' value='".$dados['id_material']."'></br>"; 
+						$options.= "<input type='checkbox' id='".$dados['id_material']."' name='id_material[]' value='".$dados['id_material']."'>
+									<label for='".$dados['id_material']."'>".$dados['ds_material']."</label></br>"; 
 					}
 					
 
