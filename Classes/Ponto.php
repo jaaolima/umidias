@@ -1039,13 +1039,12 @@
 					
 				}
 
-				str_replace(" ",'', $id_material);
-				
 			}
 			else{
 				$id_material = NULL;
 			};
 
+			str_replace(" ",'', $id_material);
 			var_dump($id_material);
 
 
