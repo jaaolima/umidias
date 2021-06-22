@@ -1082,7 +1082,7 @@
 								
 				$stmt->execute($params);
 				
-				if($ds_foto !== NULL)){
+				if($ds_foto !== NULL){
 					foreach($ds_foto as $key => $foto)
 					{
 						$tamanho = 20000000;
