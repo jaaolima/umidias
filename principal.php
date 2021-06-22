@@ -17,6 +17,11 @@
 		exit();
 	}
    	$id_usuario = $_SESSION['id_usuario'];
+	$id_parceiro = $_SESSION['id_parceiro'];
+
+	if($id_parceiro == ""){
+		$id_parceiro = NULL;
+	}
 
 	$midia = new Midia();
 	$usuario = new Usuario();
@@ -28,7 +33,7 @@
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 	$meusPontos = $ponto->listarMeusPontos($id_usuario);
 	$dadosTotalMidias = $ponto->dadosTotalMidias();
-	$meusPontos = $ponto->listarMeusPontosParceiro($id_usuario);
+	$meusPontos = $ponto->listarMeusPontosParceiro($id_parceiro);
 
 	$dadosTotalContratadas = $ponto->dadosTotalContratadas();
 	$dadosTotalPendentes = $ponto->dadosTotalPendentes();

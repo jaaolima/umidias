@@ -9,7 +9,7 @@
 				//*$ds_senha = hash("SHA512", $ds_senha);
 				
 				$select = "SELECT 
-							id_usuario, ds_usuario, ds_nome, id_perfil
+							id_usuario, ds_usuario, ds_nome, id_perfil, id_parceiro
 						FROM tb_usuario  
 						WHERE ds_usuario = :ds_usuario and ds_senha = :ds_senha";
 

@@ -464,7 +464,7 @@
     			print "ERRO:".$e->getMessage();		
 			}
 		}
-		public function listarMeusPontosParceiro($id_usuario)
+		public function listarMeusPontosParceiro($id_parceiro)
 		{
 			try{
 				$con = Conecta::criarConexao();
@@ -473,11 +473,11 @@
 							FROM tb_ponto p
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
-							where id_parceiro=:id_usuario
+							where id_parceiro=:id_parceiro
 							and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
 				
 				$stmt = $con->prepare($select); 
-				$params = array(':id_usuario' => $id_usuario);
+				$params = array(':id_parceiro' => $id_parceiro);
 				
 				$stmt->execute($params);
 
