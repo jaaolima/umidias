@@ -124,7 +124,7 @@
 				while($dados = $stmt->fetch())
 				{
 					$valores = explode(",", $id_material);
-					if(in_array("$dados['id_material']", $valores)){
+					if(in_array($dados['id_material'], $valores)){
 						$options.= "<input type='checkbox' id='".$dados['id_material']."' name='id_material[]' value='".$dados['id_material']." checked'>
 							<label for='".$dados['id_material']."'>".$dados['ds_material']."</label></br>"; 
 					}
