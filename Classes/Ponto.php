@@ -1014,6 +1014,7 @@
 			$ds_descricao	        = $dados['ds_descricao'];
 
 			$ds_foto = NULL;
+			var_dump($_FILES["fotos"]);
 			if(isset($_FILES["fotos"]["name"])){
 				$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
 			}
@@ -1081,8 +1082,7 @@
 								':id_ponto' => $id_ponto);
 								
 				$stmt->execute($params);
-				
-				var_dump($ds_foto[1]);
+
 				// if($ds_foto !== NULL){
 				// 	foreach($ds_foto as $key => $foto)
 				// 	{
