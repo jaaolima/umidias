@@ -125,7 +125,7 @@
 				{
 					if($id_material == $dados['id_material'])
 					{
-						$options.= "<option valor='".$dados['nu_valor']."' value='".$dados['id_material']."' selected>".$dados['ds_material']."</option>";
+						$options.= "<option valor='".$dados['nu_valor']."' value='".$dados['id_material']."' selected>".$dados['ds_material']."</option>"; 
 					}
 					else
 					{
