@@ -131,7 +131,7 @@
 					else{
 						$options.= "<input type='checkbox' id='".$dados['id_material']."' name='id_material[]' value='".$dados['id_material']." '>
 							<label for='".$dados['id_material']."'>".$dados['ds_material']."</label></br>"; 
-					}
+					} 
 					
 					// if($id_material == $dados['id_material'])
 					// {
