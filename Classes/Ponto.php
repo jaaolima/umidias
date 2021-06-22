@@ -1014,9 +1014,9 @@
 			$ds_descricao	        = $dados['ds_descricao'];
 
 			$ds_foto = NULL;
-			if(isset($_FILES["fotos"]["name"])){
+			/*if(isset($_FILES["fotos"]["name"])){
 				$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
-			}
+			}*/
 
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
