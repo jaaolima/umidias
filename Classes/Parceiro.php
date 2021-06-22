@@ -355,7 +355,7 @@
 					$stmt = $con->prepare($update);
 					
 					$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
-									':ds_usuario' => $ds_nomeempresa, 
+									':ds_usuario' => $ds_usuario, 
 									':nu_cnpj' => $nu_cnpj,
 									':ds_logradouro' => $ds_logradouro,
 									':nu_numerolog' => $nu_numerolog,
