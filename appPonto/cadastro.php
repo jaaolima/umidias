@@ -67,14 +67,14 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                   <input type="hidden" name="id_parceiro" id="id_parceiro" value="<?php echo $id_usuario;?>">
                 <?php endif ; ?>
                 <div class="form-group col-md-4">
-                    <label>Local <span class="text-danger">*</span></label>
+                    <label>Região <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_local" name="ds_local"/>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="form-group col-4">
                     <label>Selecione os arquivos</label>
-                    <input type="file" class="form-control" id="fotos" name="fotos[]" multiple />
+                    <input type="file" class="form-control" id="fotos" name="fotos[]" multiple /> 
                 </div>
             </div>
             <div class="form-group row">
@@ -129,17 +129,18 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div>
                 <div class="form-group col-md-2" id="tamanho">
                     <label>Tamanho<span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_tamanho" name="ds_tamanho">
+                    <input type="text" class="form-control" id="ds_tamanho" name="ds_tamanho"/>
+                    <!-- <select class="form-control" id="ds_tamanho" name="ds_tamanho">
                         <option value="">Selecione...</option>
                         <option value="9,0 x 3,60">9,0 x 3,60</option> 
                         <option value="6,0 x 3,0">6,0 x 3,00</option>
                         <option value="outro">Outro</option>
-                    </select>
+                    </select> -->
                 </div> 
-                <div class="form-group col-md-2" id="outro_tamanho" style="display: none;">
+                <!-- <div class="form-group col-md-2" id="outro_tamanho" style="display: none;">
                     <label >Outro tamanho<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_outro_tamanho" name="ds_outro_tamanho"/>
-                </div> 
+                </div>  -->
             </div>
             <div class="row">
                 <div class="form-group col-md-2" id="material">

@@ -78,7 +78,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                   <input type="hidden" name="id_parceiro" id="id_parceiro" value="<?php echo $dados['id_parceiro'];?>">
                 <?php endif ; ?>
                 <div class="form-group col-md-3">
-                    <label>Local <span class="text-danger">*</span></label>
+                    <label>Região <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_local" name="ds_local" value="<?php echo $dados['ds_local']?>"/>
                 </div>
                 <div class="form-group col-md-3">
@@ -90,7 +90,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
             <div class="form-group row">
                 <div id="carrossel" style='height:300px;' class="carousel slide col-md-4" data-ride="carousel">
                     <label >Fotos:</label>
-                    <div class="carousel-inner">
+                    <div class="carousel-inner"> 
                         <?php
                             $total = 0;
                             while($fotos = $dadosFotoExcluir->fetch()){
@@ -154,17 +154,18 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 </div>
                 <div class="form-group col-md-2" id="tamanho">
                     <label>Tamanho<span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_tamanho" name="ds_tamanho">
+                    <input type="text" class="form-control" id="ds_tamanho" name="ds_tamanho" value="<?php echo $dados["ds_tamanho"]; ?>"/>
+                    <!-- <select class="form-control" id="ds_tamanho" name="ds_tamanho">
                         <option value="">Selecione...</option>
                         <option value="9,0 x 3,60" <?php if ($dados['ds_tamanho'] === '9,0 x 3,60') echo "selected" ?>>9,0 x 3,60</option> 
                         <option value="6,0 x 3,0" <?php if ($dados['ds_tamanho'] === '6,0 x 3,0') echo "selected" ?>>6,0 x 3,00</option>
                         <option value="outro" <?php if ($dados['ds_tamanho'] === 'outro') echo "selected" ?>>Outro</option>
-                    </select>
+                    </select> -->
                 </div>
-                <div class="form-group col-md-2" id="outro_tamanho" style="display: none;">
+                <!-- <div class="form-group col-md-2" id="outro_tamanho" style="display: none;">
                     <label >Outro tamanho<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_outro_tamanho" name="ds_outro_tamanho"/>
-                </div> 
+                </div>  -->
             </div>
             <div class="row">
                 <div class="form-group col-md-2" id="material">

@@ -78,9 +78,13 @@ $(document).ready(function() {
 		"mask": "9,99 x 9,99",
 		numericInput: true,
 	});
+	$("#ds_tamanho").inputmask({
+		"mask": "9,99 x 9,99",
+		numericInput: true,
+	});
 	$("#nu_valor").inputmask({
 		"mask": "9.999",
-		numericInput: true, 
+		numericInput: true,  
 	});
 	
 });
