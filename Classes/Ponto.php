@@ -1014,9 +1014,9 @@
 			$ds_descricao	        = $dados['ds_descricao'];
 
 			$ds_foto = NULL;
-			/*if(isset($_FILES["fotos"]["name"])){
+			if(isset($_FILES["fotos"]["name"])){
 				$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
-			}*/
+			}
 
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
@@ -1082,7 +1082,7 @@
 								
 				$stmt->execute($params);
 				
-				if(isset($ds_foto)){
+				if($ds_foto !== NULL)){
 					foreach($ds_foto as $key => $foto)
 					{
 						$tamanho = 20000000;
