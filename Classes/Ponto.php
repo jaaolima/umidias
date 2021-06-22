@@ -782,20 +782,20 @@
 
 			return array(mesReservados(), semanaReservados(), atualReservados());
 		}
-		public function graficoPontoParceiroOutdoor($id_usuario)
+		public function graficoPontoParceiroOutdoor($id_parceiro)
 		{
 			
-			function Alugados($id_usuario){	
+			function Alugados($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM rl_alugado a
 								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 1 and a.st_status = 'A' and p.id_parceiro=:id_usuario";
+								where p.id_midia = 1 and a.st_status = 'A' and p.id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
-					$params = array(':id_usuario' => $id_usuario);
+					$params = array(':id_parceiro' => $id_parceiro);
 					$stmt->execute($params);
 
 					return $stmt->fetch();
@@ -808,17 +808,17 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function Pendentes($id_usuario){	
+			function Pendentes($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM rl_alugado a
 								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 1 and a.st_status = 'P' and p.id_parceiro=:id_usuario";
+								where p.id_midia = 1 and a.st_status = 'P' and p.id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
-					$params = array(':id_usuario' => $id_usuario);
+					$params = array(':id_parceiro' => $id_parceiro);
 					$stmt->execute($params);
 
 					return $stmt->fetch();
