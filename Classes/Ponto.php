@@ -1018,6 +1018,8 @@
 				$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
 			}
 
+			var_dump($ds_foto);
+
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
 			$nu_valor    	        = $dados['nu_valor']; 
@@ -1082,46 +1084,46 @@
 								
 				$stmt->execute($params);
 
-				if($ds_foto !== NULL){
-					foreach($ds_foto as $key => $foto)
-					{
-						$tamanho = 20000000;
+				// if($ds_foto !== NULL){
+				// 	foreach($ds_foto as $key => $foto)
+				// 	{
+				// 		$tamanho = 20000000;
 
-						$error = array();
-						$tamanho_mb = $tamanho/1024/1024;
+				// 		$error = array();
+				// 		$tamanho_mb = $tamanho/1024/1024;
 						
-						if($foto["size"] > $tamanho) {
-							$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
-						}
+				// 		if($foto["size"] > $tamanho) {
+				// 			$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
+				// 		}
 
-						if (count($error) == 0) {
-							// Pega extensão da imagem
-							preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $foto["name"], $ext);
-							// Gera um nome único para o arquivo
-							$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
-							// Caminho de onde ficará o arquivo
-							$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_pontos/" . $nome_arquivo;
+				// 		if (count($error) == 0) {
+				// 			// Pega extensão da imagem
+				// 			preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $foto["name"], $ext);
+				// 			// Gera um nome único para o arquivo
+				// 			$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
+				// 			// Caminho de onde ficará o arquivo
+				// 			$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_pontos/" . $nome_arquivo;
 			
-							$gravar_caminho_arquivo = "docs_pontos/" . $nome_arquivo;
+				// 			$gravar_caminho_arquivo = "docs_pontos/" . $nome_arquivo;
 			
 						
 							
-							// Faz o upload da imagem para seu respectivo caminho
-							$moved = move_uploaded_file($foto["tmp_name"],  $caminho_arquivo);
+				// 			// Faz o upload da imagem para seu respectivo caminho
+				// 			$moved = move_uploaded_file($foto["tmp_name"],  $caminho_arquivo);
 
-							$insert_foto = "insert into rl_ponto_foto(id_ponto, ds_foto) values (:id_ponto, :ds_foto)";
+				// 			$insert_foto = "insert into rl_ponto_foto(id_ponto, ds_foto) values (:id_ponto, :ds_foto)";
 
-							$stmt_foto = $con->prepare($insert_foto);
+				// 			$stmt_foto = $con->prepare($insert_foto);
 					
-							$params_foto = array(':id_ponto' => $id_ponto,
-											':ds_foto' => $gravar_caminho_arquivo
-											);
+				// 			$params_foto = array(':id_ponto' => $id_ponto,
+				// 							':ds_foto' => $gravar_caminho_arquivo
+				// 							);
 											
-							$stmt_foto->execute($params_foto);
+				// 			$stmt_foto->execute($params_foto);
 
-						}
-					}
-				}
+				// 		}
+				// 	}
+				// }
 				
 				echo "Dados gravados com sucesso!"; 
 				
