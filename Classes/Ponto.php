@@ -1038,6 +1038,8 @@
 					}
 					
 				}
+
+				str_replace(" ", "", $id_material);
 				
 			}
 			else{
