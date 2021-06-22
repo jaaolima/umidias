@@ -1014,10 +1014,10 @@
 			$ds_descricao	        = $dados['ds_descricao'];
 
 			$ds_foto = NULL;
-			var_dump($_FILES["fotos"]["name"]);
-			if(isset($_FILES["fotos"]["name"])){
+			if(isset($_FILES["fotos"]["name"][0])){
 				$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
 			}
+			var_dump($ds_foto);
 
 			$ds_latitude    	    = $dados['ds_latitude'];
 			$ds_longitude    	    = $dados['ds_longitude'];
