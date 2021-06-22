@@ -285,134 +285,122 @@
 			$ds_senha       	=  '123456';
 
 			if($id_regime === "CPF"){
-				if($this->validarCPF($nu_cpf)){
+				try{
+					$con = Conecta::criarConexao();
+					$update = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa, ds_usuario = :ds_usuario,  nu_cpf = :nu_cpf, ds_logradouro = :ds_logradouro, 
+									nu_numerolog= :nu_numerolog, nu_cep = :nu_cep, id_estado = :id_estado, id_cidade = :id_cidade, 
+									ds_bairro = :ds_bairro, ds_responsavel = :ds_responsavel, ds_email = :ds_email, nu_telefone = :nu_telefone,
+									id_regime = :id_regime, nu_aliquota = :nu_aliquota
+								WHERE id_parceiro = :id_parceiro";
+					
+					$stmt = $con->prepare($update);
+					
+					$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
+									':ds_usuario' => $ds_usuario, 
+									':nu_cpf' => $nu_cpf,
+									':ds_logradouro' => $ds_logradouro,
+									':nu_numerolog' => $nu_numerolog,
+									':nu_cep' =>$nu_cep,
+									':id_estado' => $id_estado,
+									':id_cidade' => $id_cidade,
+									':ds_bairro' => $ds_bairro,
+									':ds_responsavel' => $ds_responsavel,
+									':ds_email' => $ds_email,
+									':nu_telefone' => $nu_telefone,
+									':id_regime' => $id_regime,
+									':nu_aliquota' => $nu_aliquota,
+									':id_parceiro' => $id_parceiro);
+									
+					$stmt->execute($params);
+
 					try{
 						$con = Conecta::criarConexao();
-						$update = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa, ds_usuario = :ds_usuario,  nu_cpf = :nu_cpf, ds_logradouro = :ds_logradouro, 
-										nu_numerolog= :nu_numerolog, nu_cep = :nu_cep, id_estado = :id_estado, id_cidade = :id_cidade, 
-										ds_bairro = :ds_bairro, ds_responsavel = :ds_responsavel, ds_email = :ds_email, nu_telefone = :nu_telefone,
-										id_regime = :id_regime, nu_aliquota = :nu_aliquota
-									WHERE id_parceiro = :id_parceiro";
+						$updateUsuario = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email, ds_usuario = :ds_usuario
+								WHERE id_parceiro = :id_parceiro";
 						
-						$stmt = $con->prepare($update);
+						$stmtUsuario = $con->prepare($updateUsuario);
 						
-						$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
-										':ds_usuario' => $ds_usuario, 
-										':nu_cpf' => $nu_cpf,
-										':ds_logradouro' => $ds_logradouro,
-										':nu_numerolog' => $nu_numerolog,
-										':nu_cep' =>$nu_cep,
-										':id_estado' => $id_estado,
-										':id_cidade' => $id_cidade,
-										':ds_bairro' => $ds_bairro,
-										':ds_responsavel' => $ds_responsavel,
-										':ds_email' => $ds_email,
-										':nu_telefone' => $nu_telefone,
-										':id_regime' => $id_regime,
-										':nu_aliquota' => $nu_aliquota,
-										':id_parceiro' => $id_parceiro);
-										
-						$stmt->execute($params);
-
-						try{
-							$con = Conecta::criarConexao();
-							$updateUsuario = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email, ds_usuario = :ds_usuario
-									WHERE id_parceiro = :id_parceiro";
-							
-							$stmtUsuario = $con->prepare($updateUsuario);
-							
-							$paramsUsuario = array(':ds_nome' => $ds_nomeempresa, 
-												':ds_email' => $ds_email,
-												':ds_usuario' => $ds_usuario,
-												':id_parceiro'=>$id_parceiro);
-							$stmtUsuario->execute($paramsUsuario);
-			
-							
-							echo "Dados alterados com sucesso!"; 
-							
-						}
-						catch(exception $e)
-						{
-							header('HTTP/1.1 500 Internal Server Error');
-							print "ERRO:".$e->getMessage();		
-						}
+						$paramsUsuario = array(':ds_nome' => $ds_nomeempresa, 
+											':ds_email' => $ds_email,
+											':ds_usuario' => $ds_usuario,
+											':id_parceiro'=>$id_parceiro);
+						$stmtUsuario->execute($paramsUsuario);
+		
 						
-					}			
+						echo "Dados alterados com sucesso!"; 
+						
+					}
 					catch(exception $e)
 					{
 						header('HTTP/1.1 500 Internal Server Error');
 						print "ERRO:".$e->getMessage();		
-					} 
-				}
-				else{
+					}
+					
+				}			
+				catch(exception $e)
+				{
 					header('HTTP/1.1 500 Internal Server Error');
-					print "CPF já cadastrado";
-				}	
+					print "ERRO:".$e->getMessage();		
+				} 
 			}
 			else{
-				if($this->validarCNPJ($nu_cnpj)){
+				try{
+					$con = Conecta::criarConexao();
+					$update = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa, ds_usuario = :ds_usuario, nu_cnpj = :nu_cnpj, ds_logradouro = :ds_logradouro, 
+									nu_numerolog= :nu_numerolog, nu_cep = :nu_cep, id_estado = :id_estado, id_cidade = :id_cidade, 
+									ds_bairro = :ds_bairro, ds_responsavel = :ds_responsavel, ds_email = :ds_email, nu_telefone = :nu_telefone,
+									id_regime = :id_regime, nu_aliquota = :nu_aliquota
+								WHERE id_parceiro = :id_parceiro";
+					
+					$stmt = $con->prepare($update);
+					
+					$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
+									':ds_usuario' => $ds_nomeempresa, 
+									':nu_cnpj' => $nu_cnpj,
+									':ds_logradouro' => $ds_logradouro,
+									':nu_numerolog' => $nu_numerolog,
+									':nu_cep' =>$nu_cep,
+									':id_estado' => $id_estado,
+									':id_cidade' => $id_cidade,
+									':ds_bairro' => $ds_bairro,
+									':ds_responsavel' => $ds_responsavel,
+									':ds_email' => $ds_email,
+									':nu_telefone' => $nu_telefone,
+									':id_regime' => $id_regime,
+									':nu_aliquota' => $nu_aliquota,
+									':id_parceiro' => $id_parceiro);
+									
+					$stmt->execute($params);
+					
 					try{
 						$con = Conecta::criarConexao();
-						$update = "UPDATE tb_parceiro set ds_nomeempresa = :ds_nomeempresa, ds_usuario = :ds_usuario, nu_cnpj = :nu_cnpj, ds_logradouro = :ds_logradouro, 
-										nu_numerolog= :nu_numerolog, nu_cep = :nu_cep, id_estado = :id_estado, id_cidade = :id_cidade, 
-										ds_bairro = :ds_bairro, ds_responsavel = :ds_responsavel, ds_email = :ds_email, nu_telefone = :nu_telefone,
-										id_regime = :id_regime, nu_aliquota = :nu_aliquota
-									WHERE id_parceiro = :id_parceiro";
+						$updateUsuario = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email, ds_usuario = :ds_usuario
+								WHERE id_parceiro = :id_parceiro";
 						
-						$stmt = $con->prepare($update);
+						$stmtUsuario = $con->prepare($updateUsuario);
 						
-						$params = array(':ds_nomeempresa' => $ds_nomeempresa, 
-										':ds_usuario' => $ds_nomeempresa, 
-										':nu_cnpj' => $nu_cnpj,
-										':ds_logradouro' => $ds_logradouro,
-										':nu_numerolog' => $nu_numerolog,
-										':nu_cep' =>$nu_cep,
-										':id_estado' => $id_estado,
-										':id_cidade' => $id_cidade,
-										':ds_bairro' => $ds_bairro,
-										':ds_responsavel' => $ds_responsavel,
-										':ds_email' => $ds_email,
-										':nu_telefone' => $nu_telefone,
-										':id_regime' => $id_regime,
-										':nu_aliquota' => $nu_aliquota,
-										':id_parceiro' => $id_parceiro);
-										
-						$stmt->execute($params);
+						$paramsUsuario = array(':ds_nome' => $ds_nomeempresa, 
+											':ds_email' => $ds_email,
+											':ds_usuario' => $ds_usuario,
+											':id_parceiro'=>$id_parceiro);
+						$stmtUsuario->execute($paramsUsuario);
+		
 						
-						try{
-							$con = Conecta::criarConexao();
-							$updateUsuario = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email, ds_usuario = :ds_usuario
-									WHERE id_parceiro = :id_parceiro";
-							
-							$stmtUsuario = $con->prepare($updateUsuario);
-							
-							$paramsUsuario = array(':ds_nome' => $ds_nomeempresa, 
-												':ds_email' => $ds_email,
-												':ds_usuario' => $ds_usuario,
-												':id_parceiro'=>$id_parceiro);
-							$stmtUsuario->execute($paramsUsuario);
-			
-							
-							echo "Dados alterados com sucesso!"; 
-							
-						}
-						catch(exception $e)
-						{
-							header('HTTP/1.1 500 Internal Server Error');
-							print "ERRO:".$e->getMessage();		
-						}
+						echo "Dados alterados com sucesso!"; 
 						
-					}			
+					}
 					catch(exception $e)
 					{
 						header('HTTP/1.1 500 Internal Server Error');
 						print "ERRO:".$e->getMessage();		
-					} 
-				}
-				else{
+					}
+					
+				}			
+				catch(exception $e)
+				{
 					header('HTTP/1.1 500 Internal Server Error');
-					print "CNPJ já cadastrado";
-				}
+					print "ERRO:".$e->getMessage();		
+				} 
 			
 			}
 			
