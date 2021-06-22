@@ -1014,7 +1014,7 @@
 			$ds_descricao	        = $dados['ds_descricao'];
 
 			$ds_foto = NULL;
-			if($_FILES["fotos"]["name"][0] === ""){
+			if($_FILES["fotos"]["name"][0] !== ""){
 				$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
 			}
 
