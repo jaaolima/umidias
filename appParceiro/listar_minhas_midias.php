@@ -72,7 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<th>Descrição</th>
 												<th>Valor</th>
 												<th>Tipo de Mídia</th>
-												<th>Status</th>
+												<!-- <th>Status</th> -->
 												<th>Observações</th>
 												<th>Ações</th> 
 											</tr>
@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<?php
 												
 												while($dados = $meusPontos->fetch()){
-													$hoje = date('Y-m-d');
+													/*$hoje = date('Y-m-d');
                                             
 													if($hoje >= $dados["dt_inicial"] && $dados["dt_final"] >= $hoje){
 														$status = "<span class='label label-xl label-dot label-danger mr-2 mt-1'></span><p>Indisponível agora</p>";
@@ -91,7 +91,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													}
 													if(empty($dados["dt_final"]) && empty($dados["dt_inicial"])){
 														$status = "<span class='label label-xl label-dot label-success mr-2 mt-1'></span><p>Disponível agora</p>";
-													}
+													}*/
 													echo "<tr>
 																<td>".$dados['id_ponto']."</td>
 																<td>
@@ -122,7 +122,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<td>".$dados['nu_valor']."</td>
 																<td>".$dados['ds_tipo']."</td>
 																<td>".$dados['ds_observacao']."</td>
-																<td nowrap></td>
+																<td nowrap></td> 
 															</tr>";
 												}
 												
