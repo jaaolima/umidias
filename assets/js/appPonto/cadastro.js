@@ -73,6 +73,11 @@ $(document).ready(function() {
 			redirectTo("appParceiro/listar_tipo.php");
 		}); 
 	}
+	id_midia = $("#id_midia").val();
+	if(id_midia == 2){
+		$('#material').hide();
+		$('#periodo').hide();
+	}
 	
 	$("#ds_outro_tamanho").inputmask({
 		"mask": "9,99 x 9,99",
