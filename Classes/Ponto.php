@@ -915,7 +915,7 @@
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM rl_alugado a
 								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 2 and a.st_status = 'L' and p.id_parceiro=:id_parceiro or p.id_ponto not in (SELECT id_ponto FROM rl_alugado al where al.st_status = 'L' and p.id_parceiro=:id_parceiro and al.id_ponto=p.id_ponto)";
+								where p.id_midia = 2  and p.id_parceiro=:id_parceiro and (a.st_status = 'L' or p.id_ponto not in (SELECT id_ponto FROM rl_alugado al where al.id_ponto=p.id_ponto))";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
