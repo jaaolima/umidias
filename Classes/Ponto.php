@@ -1082,7 +1082,7 @@
 								
 				$stmt->execute($params);
 				
-				var_dump($ds_foto);
+				var_dump($ds_foto[1]);
 				// if($ds_foto !== NULL){
 				// 	foreach($ds_foto as $key => $foto)
 				// 	{
