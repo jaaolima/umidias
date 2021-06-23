@@ -33,7 +33,7 @@
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 	$meusPontos = $ponto->listarMeusPontos($id_usuario);
 	$dadosTotalMidias = $ponto->dadosTotalMidias();
-	$meusPontos = $ponto->listarMeusPontosParceiro($id_parceiro);
+	$meusPontosParceiro = $ponto->listarMeusPontosParceiro($id_parceiro);
 
 	$dadosTotalContratadas = $ponto->dadosTotalContratadas();
 	$dadosTotalPendentes = $ponto->dadosTotalPendentes();
@@ -588,14 +588,14 @@
 																<th>Descrição</th>
 																<th>Valor</th>
 																<th>Tipo de Mídia</th>
-																<!-- <th>Status</th> -->
+																<th>Status</th>
 																<th>Observações</th>
 															</tr>
 														</thead> 
 														<tbody>
 															<?php
 																
-																while($dados = $meusPontos->fetch()){
+																while($dados = $meusPontosParceiro->fetch()){
 																	/*$hoje = date('Y-m-d');
 															
 																	if($hoje >= $dados["dt_inicial"] && $dados["dt_final"] >= $hoje){
@@ -635,6 +635,11 @@
 																			<td>".$dados['ds_descricao']."</td>
 																			<td>".$dados['nu_valor']."</td>
 																			<td>".$dados['ds_tipo']."</td>
+																			<td>
+																				<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
+																					<div class='progress-bar bg-success' role='Progresso' style='width: 63%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+																				</div>
+																			</td>
 																			<td>".$dados['ds_observacao']."</td>
 																		</tr>";
 																}
