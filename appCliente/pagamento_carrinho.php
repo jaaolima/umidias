@@ -44,11 +44,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="my-6">
                                         <input type="radio" id="boleto_parcelado" name="metodo">
                                         <label for="boleto_parcelado">Boleto Parcelado</label>
+                                        <i class="fas fa-barcode"></i>  
                                     </div>
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
                                         <input type="radio" id="boleto" name="metodo">
-                                        <label for="boleto">Boleto</label>                                      
+                                        <label for="boleto">Boleto</label>    
+                                        <i class="fas fa-barcode"></i>                                      
                                     </div >
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
@@ -65,11 +67,13 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div> 
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_boleto_parcelado" style="display: none;">
                                 <div class="my-6 mx-6">
+                                    <i class="fas fa-barcode"></i>  
                                     <h3>Pagamento em boleto parcelado:</h3>
                                 </div>
                             </div>
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_boleto" style="display: none;">
                                 <div class="my-6 mx-6">
+                                    <i class="fas fa-barcode"></i>  
                                     <h3>Pagamento em boleto:</h3>
                                     <div class="separator separator-solid"></div>
                                     <button class="btn btn-primary mt-4" id="gerar_boleto">Gerar boleto</button>
