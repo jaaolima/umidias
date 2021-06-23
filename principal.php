@@ -641,7 +641,6 @@
 																					<div class='progress-bar bg-warning' role='Progresso' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
 																				</div>
 																			</td>
-																			<td>".$dados['ds_observacao']."</td>
 																		</tr>";
 																}
 																
