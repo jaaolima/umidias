@@ -34,7 +34,7 @@ $(document).ready(function() {
             , data: $("#form_alugar").serialize()
             , type: 'post'
             , success: function(html) {
-                // redirectTo("appCliente/listar_minhas_midias.php");
+                redirectTo("appCliente/listar_minhas_midias.php");
             }
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");
