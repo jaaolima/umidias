@@ -478,7 +478,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			let total =  parseInt(valor, 10);
 			valormidia.innerHTML = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 			var valorTotal = parseInt($('#valor2').val());
-			valorMidia.innerHTML = "<h2>"+ (total + valorTotal).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"
+			valormidia.innerHTML = "<h2>"+ (total + valorTotal).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"
 		}
 
 		
