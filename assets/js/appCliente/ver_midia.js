@@ -116,7 +116,7 @@ $(document).ready(function() {
 					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, dt_inicial: dt_inicial, mes: mes, ds_arte: ds_arte, id_midia: id_midia}
 					, type: 'post'
 					, success: function() {
-						redirectTo("appCliente/carrinho.php");	
+						redirectTo("appCliente/carrinho.php");	 
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error");
@@ -169,7 +169,8 @@ $(document).ready(function() {
 				});
 				var id_material = $("#id_material").val();
 				var ds_arte = $('input[type=file]').files[0]; 
-				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);
+				console.log($('input[type=file]'))
+				/*redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);*/
 			}
 			
 		}	

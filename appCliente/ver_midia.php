@@ -218,7 +218,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </div>
                                                     <div class="separator separator-solid"></div>
 													<div class="my-6 mx-6">
-                                                        <h3 class="font-weight-bolder">Material</h3>
+                                                        <h3 class="font-weight-bolder">Material</h3> 
                                                     </div>
                                                     <div class="my-6 mx-6">
 
