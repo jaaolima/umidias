@@ -162,7 +162,7 @@
 				{
 					$valores = explode(",", $id_material);
 					if(in_array($dados['id_material'], $valores)){
-						$options.= "<option value='".$dados['id_material']."'>".$dados['ds_material']." - R$ ".$dados["nu_valor"].",00</option>";
+						$options.= "<option valor='".$dados["nu_valor"]."' value='".$dados['id_material']."'>".$dados['ds_material']." - R$ ".$dados["nu_valor"].",00</option>";
 						// $options.= "<input type='checkbox' id='".$dados['id_material']."' name='id_material[]' value='".$dados['id_material']."' checked>
 						// 	<label for='".$dados['id_material']."'>".$dados['ds_material']."</label></br>"; 
 					}

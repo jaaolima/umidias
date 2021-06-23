@@ -225,7 +225,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class="form-group">
                                                             <label>Tipo de material</label>
                                                             <select name="id_material" id="id_material" class="form-control">
-                                                                <option value="">Selecione...</option>
+                                                                <option valor="0" value="">Selecione...</option>
                                                                 <?php 
                                                                     echo $optionsMaterial;
                                                                 ?>
