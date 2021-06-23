@@ -147,6 +147,40 @@
 			}
 		}
 
+		public function listarOptionsMaterialMidia($id_material)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				$select = "SELECT id_material, ds_material, nu_valor
+							FROM tb_material ";
+				$stmt = $con->prepare($select);
+				$stmt->execute();
+
+				$options = "";
+
+				while($dados = $stmt->fetch())
+				{
+					$valores = explode(",", $id_material);
+					if(in_array($dados['id_material'], $valores)){
+						$options.= "<option value='".$dados['id_material']."'>".$dados['ds_material']."/".$dados["nu_valor"]."</option>";
+						// $options.= "<input type='checkbox' id='".$dados['id_material']."' name='id_material[]' value='".$dados['id_material']."' checked>
+						// 	<label for='".$dados['id_material']."'>".$dados['ds_material']."</label></br>"; 
+					}
+				
+					
+
+					
+				}
+				return $options;
+
+			}
+			catch(exception $e)
+			{
+			header('HTTP/1.1 500 Internal Server Error');
+			print $e->getMessage();
+			}
+		}
+
 
     }
 ?>        
