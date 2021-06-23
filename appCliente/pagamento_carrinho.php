@@ -76,6 +76,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_credito" style="display: none;">
                                 <div class="my-6 mx-6">
+                                    <i class="far fa-credit-card"></i>
                                     <h3>Pagamento em cartão de credito:</h3>
                                 </div>
                             </div>

@@ -72,6 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
                                         <input type="radio" id="pix" name="metodo"> 
+                                        <i class="far fa-credit-card"></i>
                                         <label for="pix">Pix</label>                         
                                     </div>
                                 </div>
