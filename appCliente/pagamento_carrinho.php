@@ -157,15 +157,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>
-                                                            <span>".$dados["ds_tipo"]."</span>
-                                                        </td>
-                                                        <td>
-                                                            <span>".$dados["ds_material"]."</span>
-                                                        </td>
-                                                        <td>
-                                                            <span>".$dados["dt_inicial"]." até ".$dados["dt_final"]."</span>
-                                                        </td>
+                                                        <td>".$dados["ds_tipo"]."</td>
+                                                        <td>".$dados["ds_material"]."</td>
+                                                        <td>".$dados["dt_inicial"]." até ".$dados["dt_final"]."</td>
                                                     </tr>";
                                             }
                                             
