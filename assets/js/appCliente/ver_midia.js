@@ -168,7 +168,7 @@ $(document).ready(function() {
 					bisemana.push( $(this).val());
 				});
 				var id_material = $("#id_material").val();
-				var ds_arte = $('input[type=file]').files[0]; 
+				// var ds_arte = $('input[type=file]').files[0]; 
 				console.log($('input[type=file]'))
 				/*redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&bisemana="+bisemana+"&ds_arte="+ds_arte+"&id_material="+id_material);*/
 			}
