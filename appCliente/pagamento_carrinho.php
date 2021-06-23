@@ -44,19 +44,19 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="my-6">
                                         <input type="radio" id="boleto_parcelado" name="metodo">
                                         <label for="boleto_parcelado">Boleto Parcelado</label>
-                                        <i class="fas fa-barcode"></i>  
+                                        <i class="fas fa-barcode icon-lg"></i>  
                                     </div>
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
                                         <input type="radio" id="boleto" name="metodo">
                                         <label for="boleto">Boleto</label>    
-                                        <i class="fas fa-barcode"></i>                                      
+                                        <i class="fas fa-barcode icon-lg"></i>                                      
                                     </div >
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
                                         <input type="radio" id="credito" name="metodo">
                                         <label for="credito">Cartão de crédito</label>    
-                                        <i class="far fa-credit-card"></i>                                 
+                                        <i class="far fa-credit-card icon-lg"></i>                              
                                     </div>
                                     <div class="separator separator-solid"></div>
                                     <div class="my-6">
@@ -68,7 +68,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_boleto_parcelado" style="display: none;">
                                 <div class="my-6 mx-6">
                                     <div class="d-flex">
-                                        <i class="fas fa-barcode"></i>  
+                                        <i class="fas fa-barcode icon-lg ml-2"></i>  
                                         <h3>Pagamento em boleto parcelado:</h3>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_boleto" style="display: none;">
                                 <div class="my-6 mx-6">
                                     <div class="d-flex">
-                                        <i class="fas fa-barcode"></i>  
+                                        <i class="fas fa-barcode icon-lg ml-2"></i>  
                                         <h3>Pagamento em boleto:</h3>
                                     </div>
                                     <div class="separator separator-solid"></div>
@@ -86,7 +86,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_credito" style="display: none;">
                                 <div class="my-6 mx-6">
                                     <div class="d-flex">
-                                        <i class="far fa-credit-card"></i>
+                                        <i class="far fa-credit-card icon-lg ml-2"></i>
                                         <h3>Pagamento em cartão de credito:</h3>
                                     </div>
                                 </div>
