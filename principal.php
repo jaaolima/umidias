@@ -636,8 +636,9 @@
 																			<td>".$dados['nu_valor']."</td>
 																			<td>".$dados['ds_tipo']."</td>
 																			<td>
+																				<span>Aguardando pagamento</span>
 																				<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
-																					<div class='progress-bar bg-success' role='Progresso' style='width: 63%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+																					<div class='progress-bar bg-warning' role='Progresso' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
 																				</div>
 																			</td>
 																			<td>".$dados['ds_observacao']."</td>
