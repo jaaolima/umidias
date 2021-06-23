@@ -124,7 +124,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <table class="table table-hover">
                                         <thead>
                                             <tr>
-                                                <th>Tipo de Mídia</th>
+                                                <th>Mídias</th>
+                                                <th>Tipo</th>
+                                                <th>Material</th>
+                                                <th>Data</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -150,9 +153,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                         </clipPath>
                                                                         </defs>
                                                                     </svg>
-                                                                    <span>".$dados["ds_local"]."</span>	
+                                                                    <span>".$dados["ds_local"]."</span>				
                                                                 </div>
                                                             </div>
+                                                        </td>
+                                                        <td>
+                                                            <span>".$dados["ds_tipo"]."</span>
+                                                        </td>
+                                                        <td>
+                                                            <span>".$dados["ds_material"]."</span>
+                                                        </td>
+                                                        <td>
+                                                            <span>".$dados["dt_inicial"]." até ".$dados["dt_final"]."</span>
                                                         </td>
                                                     </tr>";
                                             }

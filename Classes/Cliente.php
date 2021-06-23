@@ -317,13 +317,13 @@
 				$con = Conecta::criarConexao();
 				
 				
-				$select = "SELECT id_carrinho, c.id_ponto, ds_descricao, ds_latitude, ds_longitude, f.ds_foto, t.ds_tipo, ds_observacao, ds_local, ds_tamanho, ds_material, p.id_midia, p.id_material, id_periodo, id_parceiro
+				$select = "SELECT id_carrinho, c.id_ponto, ds_descricao, ds_latitude, ds_longitude, f.ds_foto, t.ds_tipo, ds_observacao, ds_local, ds_tamanho, ds_material, p.id_midia, c.id_material, ds_material, id_periodo, id_parceiro, c.dt_final, c.dt_inicial
 						FROM rl_carrinho c 
 						right join tb_ponto p on c.id_ponto = p.id_ponto 
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia 
-						right join tb_material m on p.id_material=m.id_material 
+						right join tb_material m on c.id_material=m.id_material 
 						right join rl_ponto_foto f on p.id_ponto=f.id_ponto
-						WHERE id_usuario = :id_usuario and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
+						WHERE id_usuario = :id_usuario and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)"; 
 
 				$stmt = $con->prepare($select);
 			   	$params = array(':id_usuario' => $id_usuario); 
