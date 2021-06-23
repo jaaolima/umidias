@@ -67,27 +67,35 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div> 
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_boleto_parcelado" style="display: none;">
                                 <div class="my-6 mx-6">
-                                    <i class="fas fa-barcode"></i>  
-                                    <h3>Pagamento em boleto parcelado:</h3>
+                                    <div class="d-flex">
+                                        <i class="fas fa-barcode"></i>  
+                                        <h3>Pagamento em boleto parcelado:</h3>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_boleto" style="display: none;">
                                 <div class="my-6 mx-6">
-                                    <i class="fas fa-barcode"></i>  
-                                    <h3>Pagamento em boleto:</h3>
+                                    <div class="d-flex">
+                                        <i class="fas fa-barcode"></i>  
+                                        <h3>Pagamento em boleto:</h3>
+                                    </div>
                                     <div class="separator separator-solid"></div>
                                     <button class="btn btn-primary mt-4" id="gerar_boleto">Gerar boleto</button>
                                 </div>
                             </div>
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_credito" style="display: none;">
                                 <div class="my-6 mx-6">
-                                    <i class="far fa-credit-card"></i>
-                                    <h3>Pagamento em cartão de credito:</h3>
+                                    <div class="d-flex">
+                                        <i class="far fa-credit-card"></i>
+                                        <h3>Pagamento em cartão de credito:</h3>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto card-metodo" id="card_pix" style="display: none;">
                                 <div class="my-6 mx-6">
-                                    <h3>Pagamento em pix:</h3>
+                                    <div class="d-flex">
+                                        <h3>Pagamento em pix:</h3>
+                                    </div>
                                 </div>
                             </div>
 
