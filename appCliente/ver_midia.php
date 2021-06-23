@@ -474,15 +474,10 @@ License: You must have a valid license purchased only from themeforest(the above
 		var material = document.getElementById("id_material");
 		var valormidia = document.getElementById("valor_midia");
 		material.onblur = function(){
-			let valor = $(this).find(':selected').attr('valor')
-			let valorMaterial =  parseInt(valor, 10);
-			valormidia.innerHTML = valorMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-			var valorMidia = $('#valor2').val();
-
-			console.log(valorMidia);
-
-
-			// valorTotal.innerHTML = "<h2>"+ (total + valorTotal).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"
+			let valorMaterial = $(this).find(':selected').attr('valor')
+			let valorTotalMaterial =  parseInt(valorMaterial, 10);
+			valormidia.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+			
 		}
 
 		
