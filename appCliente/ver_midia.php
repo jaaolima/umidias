@@ -7,8 +7,8 @@
 	require_once("../Classes/Bisemana.php");
 	require_once("../Classes/Material.php");
 
-	$id_ponto = $_GET["id_ponto"]; 
-	$id_midia = $_GET["id_midia"]; 
+	$id_ponto = $_REQUEST["id_ponto"]; 
+	$id_midia = $_REQUEST["id_midia"]; 
 	$id_usuario = $_SESSION['id_usuario'];
 
 	$material = new material();
