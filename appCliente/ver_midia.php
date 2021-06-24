@@ -127,6 +127,14 @@ License: You must have a valid license purchased only from themeforest(the above
 								
 								<!--begin::Row-->
 								<div class="row">
+									<div class="justify-center w-100">
+										<span>Aguardando pagamento</span>
+										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
+											<div class='progress-bar bg-warning' role='Progresso' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
 									<div class="col-7 col-sm-6">
 										<div class="mb-8">
 											<div class="mb-12">
