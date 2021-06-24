@@ -41,7 +41,7 @@ var DatatablesBasicBasic = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="appPonto/ver_minha_midia.php?id_ponto=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Mídia">
+                        <a href="appParceiro/ver_minha_midia.php?id_ponto=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Mídia">
                           <i class="la la-chart-bar"></i>
                         </a>
                          <a href="appPonto/alterar_cadastro.php?id_ponto=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Alterar Cadastro">
