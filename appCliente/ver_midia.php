@@ -479,7 +479,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			let valorTotalMaterial =  parseInt(valorMaterial, 10);
 			Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 			var valorMidia = $("#valor2").text();
-			console.log(valorMidia)
+			console.log(parseInt(valorMidia, 10))
 			
 		}
 
