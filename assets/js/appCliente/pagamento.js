@@ -29,8 +29,8 @@ $(document).ready(function() {
 
     $("#gerar_boleto").on("click", function(e){ 
 
-        id_ponto - $("#id_ponto").val();
-        id_midia - $("#id_midia").val();
+        id_ponto = $("#id_ponto").val();
+        id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appPonto/alugar.php'
             , data: $("#form_alugar").serialize()
