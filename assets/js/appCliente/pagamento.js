@@ -36,7 +36,7 @@ $(document).ready(function() {
             , data: $("#form_alugar").serialize()
             , type: 'post'
             , success: function(html) {
-                redirectTo("appCliente/ver_midia.php?id_ponto="+id_ponto+"&id_midia="+id_midia);
+                redirectTo("appCliente/ver_minha_midia.php?id_ponto="+id_ponto+"&id_midia="+id_midia);
             }
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");
