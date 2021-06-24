@@ -15,7 +15,7 @@ $id_perfil = $_SESSION['id_perfil'];
 
 if($id_perfil == 2){
     $id_midia = $_GET["id_midia"];
-    $id_usuario = $_SESSION['id_usuario'];
+    $id_parceiro = $_SESSION['id_parceiro'];
 }
 
 $optionscategoria = $Categoria->listaroptionscategoria(null);
@@ -64,7 +64,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 </div> 
                 <?php endif ; ?>
                 <?php if($id_perfil == 2  ) :   ?>
-                  <input type="hidden" name="id_parceiro" id="id_parceiro" value="<?php echo $id_usuario;?>">
+                  <input type="hidden" name="id_parceiro" id="id_parceiro" value="<?php echo $id_parceiro;?>">
                 <?php endif ; ?>
                 <div class="form-group col-md-4">
                     <label>Região <span class="text-danger">*</span></label>
