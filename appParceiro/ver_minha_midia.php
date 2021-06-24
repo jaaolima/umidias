@@ -7,6 +7,7 @@
 	require_once("../Classes/Ponto.php");
 
 	$id_ponto = $_REQUEST["id_ponto"]; 
+    var_dump($id_ponto);
 	
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPontoAlugado($id_ponto);
