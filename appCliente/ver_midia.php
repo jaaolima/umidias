@@ -17,7 +17,7 @@
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
 	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto);
     $retorno = $bisemana->listarBisemana();
-	var_dump($dados["id_material"]);
+	echo $dados["id_material"];
     //$optionsMaterial = $material->listarOptionsMaterialMidia($dados["id_material"]);  
 
 
