@@ -14,6 +14,7 @@
 	$material = new material();
 	$bisemana = new Bisemana();
 	$ponto = new Ponto();
+	var_dump($id_ponto);
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
 	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto);
     $retorno = $bisemana->listarBisemana();
