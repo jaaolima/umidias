@@ -317,7 +317,6 @@
 															<th>Valor</th>
 															<th>Tipo de Mídia</th>
 															<th>Status</th>
-															<th>Observações</th>
 														</tr>
 													</thead> 
 													<tbody>
