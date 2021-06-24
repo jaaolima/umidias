@@ -4,21 +4,24 @@
 	error_reporting(E_ALL);
 	session_start();
     require_once("../Classes/Ponto.php");
+    require_once("../Classes/Material.php");
+    require_once("../Classes/Bisemana.php");
 
     $id_ponto = $_GET["id_ponto"];
     $id_usuario = $_SESSION["id_usuario"];
     
 
 	$ponto = new Ponto();
+    $material = new Material();
+    $bisemana = new Bisemana();
 
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
     $id_midia = $dados["id_midia"];
     
     if($id_midia == 1){
         $id_bisemana = $_GET["bisemana"];
-        $bisemana = $_GET["bisemana"];
         $id_material = $_GET["id_material"];
-
+        $dadosMaterial = $material->BuscarDadosMaterial($id_material);
         $bisemanaTotal = explode(',', $id_bisemana);
     }
     if($id_midia == 2){
@@ -176,19 +179,19 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <?php if($id_midia == 1) : ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Material </h4>
-                                        <span><?php echo $id_material; ?></span>
+                                        <span><?php echo $dadosMaterial["ds_material"]; ?></span>
                                     </div>
                                     <?php endif; ?>
                                     <?php if($id_midia == 2) : ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Valor Total </h4>
-                                        <h4 style="color: green;"><?php echo ($dados["nu_valor"] * $mes) + (($dados["nu_valor"] * $mes) * 0.2);?></h4>
+                                        <h4 style="color: green;"><?php echo ($dados["nu_valor"] * $mes) ;?></h4>
                                     </div>
                                     <?php endif; ?>
                                     <?php if($id_midia == 1) : ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Valor Total </h4>
-                                        <h4 style="color: green;"><?php echo ($dados["nu_valor"] * count($bisemanaTotal)) + (($dados["nu_valor"] * count($bisemanaTotal)) * 0.2);?></h4>
+                                        <h4 style="color: green;"><?php echo ($dados["nu_valor"] * count($bisemanaTotal) + $dadosMaterial["nu_valor"]);?></h4>
                                     </div>
                                     <?php endif; ?>
                                     <?php if($id_midia == 2) : ?>
