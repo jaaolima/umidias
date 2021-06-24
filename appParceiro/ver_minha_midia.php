@@ -10,6 +10,7 @@
 	
 	$ponto = new Ponto();
 	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto); 
+    $dadosAlugado = $ponto->BuscarAlugadoPonto($id_ponto); 
 
 
 ?>
@@ -119,30 +120,27 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
                                     <div class="col-8"></div>
                                     <div class="col-4">
-                                        <div class="mb-8 ">
-                                            <h1 class="h1-titulo">Minhas mídias</h1>
-                                        </div>
                                         <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
                                             <div class="card-body">											
                                                 <table class="table table-hover" id="table_ponto">
                                                     <thead>
                                                         <tr>
                                                             <th>ID alugado</th>
-                                                            <th>Valor</th>
-                                                            <th>Observações</th>
-                                                            <th>Ações</th> 
+                                                            <th>Data inicial</th>
+                                                            <th>Data Final</th>
+                                                            <th>Cliente</th>
+                                                            <th>Status</th> 
                                                         </tr>
                                                     </thead> 
                                                     <tbody>
                                                         <?php
                                                             
-                                                            while($dados = $meusPontos->fetch()){
+                                                            while($dados = $dadosAlugado->fetch()){
                                                                 echo "<tr>
                                                                             <td>".$dados['id_alugado']."</td>
-                                                                            <td>".$dados['ds_descricao']."</td>
-                                                                            <td>".$dados['nu_valor']."</td>
-                                                                            <td>".$dados['ds_tipo']."</td>
-                                                                            <td>".$dados['ds_observacao']."</td>
+                                                                            <td>".$dados['dt_inicial']."</td>
+                                                                            <td>".$dados['dt_final']."</td>
+                                                                            <td>".$dados['ds_nome']."</td>
                                                                             <td nowrap></td> 
                                                                         </tr>";
                                                             }
@@ -178,7 +176,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/plugins/global/plugins.bundle.js"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
-		<script src="assets/js/appCliente/ver_minha_midia.js"></script>
+		<script src="assets/js/appPonto/ver_minha_midia.js"></script>
 		<script>
 			// The following example creates complex markers to indicate beaches near
 		// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
