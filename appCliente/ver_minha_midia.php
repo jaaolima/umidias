@@ -121,7 +121,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--begin::Row-->
 								<div class="row justify-content-center">
 									<div class="text-center">
-										<span class="font-height-bolder">Aguardando Pagamento</span>
+										<span class="font-weight-bolder">Aguardando Pagamento</span>
 										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
 											<div class='progress-bar bg-danger' role='Progresso' style='width: 10%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
 										</div>
@@ -139,7 +139,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                         <div class="my-12">
                                             <h3 class="texto-negrito">Tamanho</h3>
-                                            <span>6,50 x 12,2</span>
+                                            <span><?php echo $dados["ds_tamanho"]; ?></span>
                                         </div>
                                         <div class="my-12">
                                             <h3 class="texto-negrito">Latitude e Longitude</h3>
@@ -151,7 +151,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>	
                                         <div class="my-12">
                                             <h3 class="texto-negrito">Contrato</h3>
-                                            <span class="">Valor: <?php echo $dados["nu_valor"] ; ?></span><br>
+                                            <span class="">Valor: <?php echo "R$ ".$dados["nu_valor"].",00" ; ?></span><br>
                                             <div class="mt-8">
                                                 <a class="text-primary ">Baixar segunda via da nota fiscal</a>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
