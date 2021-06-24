@@ -7,7 +7,7 @@
     require_once("../Classes/Material.php");
     require_once("../Classes/Bisemana.php");
 
-    $id_ponto = $_GET["id_ponto"];
+    $id_ponto = $_REQUEST["id_ponto"];
     $id_usuario = $_SESSION["id_usuario"];
     
 
@@ -19,14 +19,14 @@
     $id_midia = $dados["id_midia"];
     
     if($id_midia == 1){
-        $id_bisemana = $_GET["bisemana"];
-        $id_material = $_GET["id_material"];
+        $id_bisemana = $_REQUEST["bisemana"];
+        $id_material = $_REQUEST["id_material"];
         $dadosMaterial = $material->BuscarDadosMaterial($id_material);
         $bisemanaTotal = explode(',', $id_bisemana);
     }
     if($id_midia == 2){
-        $dt_inicial	= date('Y-m-d',strtotime($_GET["dt_inicial"]));
-        $mes = $_GET["mes"];
+        $dt_inicial	= date('Y-m-d',strtotime($_REQUEST["dt_inicial"]));
+        $mes = $_REQUEST["mes"];
     }
 ?>
 <!DOCTYPE html>
