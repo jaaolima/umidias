@@ -120,7 +120,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								
 								<!--begin::Row-->
 								<div class="row justify-content-center">
-									<div class="text-center">
+									<div class="text-center" style="font-size:20px;">
 										<span class="font-weight-bolder">Aguardando Pagamento</span>
 										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
 											<div class='progress-bar bg-danger' role='Progresso' style='width: 10%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>

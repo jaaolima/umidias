@@ -303,6 +303,70 @@
 											</div> 
 										</div>
 									</div>
+									<div class="col-8">
+										<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+											<div class="card-body">
+												<div class="flex-grow-1" style="display: inherit;">
+													<h3  class="titulo-div">Mídias Alugadas</h3>
+												</div>										
+												<table class="table table-hover" id="table_ponto">
+													<thead>
+														<tr>
+															<th>Minhas Mídias</th>
+															<th>Descrição</th>
+															<th>Valor</th>
+															<th>Tipo de Mídia</th>
+															<th>Status</th>
+															<th>Observações</th>
+														</tr>
+													</thead> 
+													<tbody>
+														<?php
+															
+															while($dados = $meusPontosParceiro->fetch()){
+																echo "<tr>
+																		<td>
+																			<div class='d-flex'>
+																				<div class='d-flex'>
+																					<span class='symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success'>
+																						<img class='symbol-label img-fluid' src='".$dados["ds_foto"]."'>
+																					</span>
+																					<div class='ml-3 mt-2'>
+																						<span class='texto-negrito'>".$dados["ds_tipo"]."</span><br>																				
+																						<svg class='mr-1' width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
+																							<g clip-path='url(#clip0)'>
+																							<path d='M14 6.66675C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66675C2 5.07545 2.63214 3.54933 3.75736 2.42411C4.88258 1.29889 6.4087 0.666748 8 0.666748C9.5913 0.666748 11.1174 1.29889 12.2426 2.42411C13.3679 3.54933 14 5.07545 14 6.66675Z' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
+																							<path d='M8 8.66675C9.10457 8.66675 10 7.77132 10 6.66675C10 5.56218 9.10457 4.66675 8 4.66675C6.89543 4.66675 6 5.56218 6 6.66675C6 7.77132 6.89543 8.66675 8 8.66675Z' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
+																							</g>
+																							<defs>
+																							<clipPath id='clip0'>
+																							<rect width='16' height='16' fill='white'/>
+																							</clipPath>
+																							</defs>
+																						</svg>
+																						<span>".$dados["ds_local"]."</span>	
+																					</div>
+																				</div>
+																			</div>
+																		</td>
+																		<td>".$dados['ds_descricao']."</td>
+																		<td>".$dados['nu_valor']."</td>
+																		<td>".$dados['ds_tipo']."</td>
+																		<td>
+																			<span>Aguardando pagamento</span>
+																			<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
+																				<div class='progress-bar bg-warning' role='Progresso' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+																			</div>
+																		</td>
+																	</tr>";
+															}
+															
+														?>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
 								</div>	
 								<?php endif; ?>
 								<div class="row">
@@ -570,85 +634,6 @@
 												</div>
 											</div>
 											<!--end::Tiles Widget 25-->
-										</div>
-									</div>
-								<?php endif; ?>
-								<?php if($_SESSION['id_perfil'] == 2  ) :  ?>
-									<div class="row">	
-										<div class="col-xl-12">
-											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
-												<div class="card-body">
-													<div class="flex-grow-1" style="display: inherit;">
-														<h3  class="titulo-div">Minhas Mídias</h3>
-													</div>										
-													<table class="table table-hover" id="table_ponto">
-														<thead>
-															<tr>
-																<th>Minhas Mídias</th>
-																<th>Descrição</th>
-																<th>Valor</th>
-																<th>Tipo de Mídia</th>
-																<th>Status</th>
-																<th>Observações</th>
-															</tr>
-														</thead> 
-														<tbody>
-															<?php
-																
-																while($dados = $meusPontosParceiro->fetch()){
-																	/*$hoje = date('Y-m-d');
-															
-																	if($hoje >= $dados["dt_inicial"] && $dados["dt_final"] >= $hoje){
-																		$status = "<span class='label label-xl label-dot label-danger mr-2 mt-1'></span><p>Indisponível agora</p>";
-																	}
-																	if($hoje < $dados["dt_inicial"]){
-																		$status = "<span class='label label-xl label-dot label-warning mr-2 mt-1'></span><p>Reservado depois</p>";
-																	}
-																	if(empty($dados["dt_final"]) && empty($dados["dt_inicial"])){
-																		$status = "<span class='label label-xl label-dot label-success mr-2 mt-1'></span><p>Disponível agora</p>";
-																	}*/
-																	echo "<tr>
-																			<td>
-																				<div class='d-flex'>
-																					<div class='d-flex'>
-																						<span class='symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success'>
-																							<img class='symbol-label img-fluid' src='".$dados["ds_foto"]."'>
-																						</span>
-																						<div class='ml-3 mt-2'>
-																							<span class='texto-negrito'>".$dados["ds_tipo"]."</span><br>																				
-																							<svg class='mr-1' width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
-																								<g clip-path='url(#clip0)'>
-																								<path d='M14 6.66675C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66675C2 5.07545 2.63214 3.54933 3.75736 2.42411C4.88258 1.29889 6.4087 0.666748 8 0.666748C9.5913 0.666748 11.1174 1.29889 12.2426 2.42411C13.3679 3.54933 14 5.07545 14 6.66675Z' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
-																								<path d='M8 8.66675C9.10457 8.66675 10 7.77132 10 6.66675C10 5.56218 9.10457 4.66675 8 4.66675C6.89543 4.66675 6 5.56218 6 6.66675C6 7.77132 6.89543 8.66675 8 8.66675Z' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
-																								</g>
-																								<defs>
-																								<clipPath id='clip0'>
-																								<rect width='16' height='16' fill='white'/>
-																								</clipPath>
-																								</defs>
-																							</svg>
-																							<span>".$dados["ds_local"]."</span>	
-																						</div>
-																					</div>
-																				</div>
-																			</td>
-																			<td>".$dados['ds_descricao']."</td>
-																			<td>".$dados['nu_valor']."</td>
-																			<td>".$dados['ds_tipo']."</td>
-																			<td>
-																				<span>Aguardando pagamento</span>
-																				<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
-																					<div class='progress-bar bg-warning' role='Progresso' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
-																				</div>
-																			</td>
-																		</tr>";
-																}
-																
-															?>
-														</tbody>
-													</table>
-												</div>
-											</div>
 										</div>
 									</div>
 								<?php endif; ?>
