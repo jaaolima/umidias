@@ -478,9 +478,13 @@ License: You must have a valid license purchased only from themeforest(the above
 			let valorMaterial = $(this).find(':selected').attr('valor')
 			let valorTotalMaterial =  parseInt(valorMaterial, 10);
 			Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-			var valorMidia = $("#valor2").text();
-			console.log(parseInt(valorMidia, 10))
-			
+
+			<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
+			var totalBisemana = $("input[name='bisemana[]']:checked").length;
+			let valor = <?php echo $valor; ?> * totalBisemana;
+			let total = parseInt(valor, 10);
+			valor2 = total + valorTotalMaterial
+			valor2.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 		}
 
 		
