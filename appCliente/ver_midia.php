@@ -391,7 +391,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<div class="form-group"> 
 														<div class="form-group">
 															<label>Adicione sua Arte</label>
-															<input type="file" class="form-control" name="ds_arte" id="ds_arte">
+															<input type="file" class="form-control" name="ds_arte" id="ds_arte" accept="application/pdf,application/vnd.ms-excel">
 															<div class="card card-custom card-stretch gutter-b box-shadow bg-warning-o-80 my-4 p-2 col-12">
 																<p class=" m-0" style="font-size:11px;">O arquivo da arte deve ser enviado seguindo as especificações da mídia escolhida e sendo um PDF, CMYK, 300DPI.</p>
 															</div>
@@ -475,10 +475,12 @@ License: You must have a valid license purchased only from themeforest(the above
 		var material = document.getElementById("id_material");
 		var Totalmaterial = document.getElementById("valor_material");
 		material.onblur = function(){
+			//adicionar na div material
 			let valorMaterial = $(this).find(':selected').attr('valor')
 			let valorTotalMaterial =  parseInt(valorMaterial, 10);
 			Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
+			//adicionar na div total
 			<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
 			var totalBisemana = $("input[name='bisemana[]']:checked").length;
 			let valor = <?php echo $valor; ?> * totalBisemana;
