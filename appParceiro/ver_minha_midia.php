@@ -7,10 +7,8 @@
 	require_once("../Classes/Ponto.php");
 
 	$id_ponto = $_REQUEST["id_ponto"]; 
-    var_dump($id_ponto);
 	
 	$ponto = new Ponto();
-	$dados = $ponto->BuscarDadosPontoAlugado($id_ponto);
 	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto); 
 
 
@@ -119,67 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="content flex-column-fluid pt-0" id="kt_content">
 								
-								<!--begin::Row-->
-								<div class="row justify-content-center">
-									<div class="text-center" style="font-size:20px;">
-										<span class="font-weight-bolder">Aguardando Pagamento</span>
-										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
-											<div class='progress-bar bg-danger' role='Progresso' style='width: 10%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
-										</div>
-									</div>
-								</div>
-								<div class="row"> 
-									<div class="col-8">
-                                        <div class="my-12">
-                                            <h1 class="h1-titulo"><?php echo $dados["ds_local"]; ?></h1>
-                                            <span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
-                                        </div>
-                                        <div class="my-12">
-                                            <h3 class="texto-negrito">Descrição </h3>
-                                            <span><?php echo $dados["ds_descricao"]; ?></span>
-                                        </div>
-                                        <div class="my-12">
-                                            <h3 class="texto-negrito">Tamanho</h3>
-                                            <span><?php echo $dados["ds_tamanho"]; ?></span>
-                                        </div>
-                                        <div class="my-12">
-                                            <h3 class="texto-negrito">Latitude e Longitude</h3>
-                                            <span><?php echo $dados["ds_latitude"] . ' ' . $dados["ds_longitude"] ; ?></span>
-                                        </div>
-                                        <div class="my-12">
-                                            <h3 class="texto-negrito">Alugada:</h3>
-                                            <span><?php echo date('d/m/Y', strtotime($dados["dt_inicial"])) . ' até ' . date('d/m/Y', strtotime($dados["dt_final"])) ; ?></span>
-                                        </div>	
-                                        <div class="my-12">
-                                            <h3 class="texto-negrito">Contrato</h3>
-                                            <span class="">Valor: <?php echo "R$ ".$dados["nu_valor"].",00" ; ?></span><br>
-                                            <div class="mt-8">
-                                                <a class="text-primary ">Baixar segunda via da nota fiscal</a>
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M7 10L12 15L17 10" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M12 15V3" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </div>                                                                                        
-                                        </div>	
-                                        <div class="my-12">
-                                            <h3 class="texto-negrito">Arte</h3>
-                                            <a class="text-primary">Visualizar arte da mídia</a>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M7 10L12 15L17 10" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M12 15V3" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </div>												
-									</div>
-                                    <div class="col-4">
-                                        <div class="mt-12">
-                                            <button class="align-items-end btn btn-primary float-right">Exportar relatório</button>
-                                        </div>                                       
-                                    </div>
-
-								</div>
-								<!--end::Row-->
+								
 							</div>
 							<!--end::Content-->
 						</div>
