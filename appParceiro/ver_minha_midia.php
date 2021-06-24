@@ -109,14 +109,51 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
                             <div class="font-weight-bold p-0 my-2 font-size-sm pl-13">								
-								<a href="appCliente/listar_minhas_midias.php" class="texto-chumbo">Mídias alugadas</a>
+								<a href="appParceiro/listar_minhas_midias.php" class="texto-chumbo">Minhas mídias</a>
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M9 18L15 12L9 6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 								</svg>
 								<a class="texto-chumbo">Detalhes da mídia</a>
 							</div>
 							<div class="content flex-column-fluid pt-0" id="kt_content">
-								
+								<div class="row">
+                                    <div class="col-8"></div>
+                                    <div class="col-4">
+                                        <div class="mb-8 ">
+                                            <h1 class="h1-titulo">Minhas mídias</h1>
+                                        </div>
+                                        <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+                                            <div class="card-body">											
+                                                <table class="table table-hover" id="table_ponto">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>ID alugado</th>
+                                                            <th>Valor</th>
+                                                            <th>Observações</th>
+                                                            <th>Ações</th> 
+                                                        </tr>
+                                                    </thead> 
+                                                    <tbody>
+                                                        <?php
+                                                            
+                                                            while($dados = $meusPontos->fetch()){
+                                                                echo "<tr>
+                                                                            <td>".$dados['id_alugado']."</td>
+                                                                            <td>".$dados['ds_descricao']."</td>
+                                                                            <td>".$dados['nu_valor']."</td>
+                                                                            <td>".$dados['ds_tipo']."</td>
+                                                                            <td>".$dados['ds_observacao']."</td>
+                                                                            <td nowrap></td> 
+                                                                        </tr>";
+                                                            }
+                                                            
+                                                        ?>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 								
 							</div>
 							<!--end::Content-->
