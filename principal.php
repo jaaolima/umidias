@@ -307,7 +307,7 @@
 										<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 											<div class="card-body">
 												<div class="flex-grow-1" style="display: inherit;">
-													<h3  class="titulo-div">Mídias Alugadas</h3>
+													<h3  class="titulo-div">Mídias Contratadas</h3>
 												</div>										
 												<table class="table table-hover" id="table_ponto">
 													<thead>
