@@ -29,12 +29,13 @@ $(document).ready(function() {
 
     $("#gerar_boleto").on("click", function(e){ 
 
+        id_ponto - $("#id_ponto").val();
         $.ajax({
             url: 'appPonto/alugar.php'
             , data: $("#form_alugar").serialize()
             , type: 'post'
             , success: function(html) {
-                redirectTo("appCliente/listar_minhas_midias.php");
+                redirectTo("appCliente/ver_midia.php?"+id_ponto);
             }
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");
