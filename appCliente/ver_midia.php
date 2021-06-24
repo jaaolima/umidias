@@ -149,7 +149,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<div class="col-5 col-sm-6">	
+									<div class="col-5 col-sm-6">	 
 										<form id="form_alugar">	
 											<?php if($id_midia == 1) : ?>							
                                                 <div class="card card-custom card-stretch gutter-b box-shadow" id="ver_midia">
@@ -258,7 +258,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><div id="valor_midia">R$ 0,00</div></span>
+                                                                <span class="font-weight-bolder text-right"><div id="valor_material">R$ 0,00</div></span>
                                                             </div>
                                                         </div>										
                                                     </div>
@@ -473,11 +473,13 @@ License: You must have a valid license purchased only from themeforest(the above
 		<?php endif; ?>
 
 		var material = document.getElementById("id_material");
-		var valormidia = document.getElementById("valor_midia");
+		var material = document.getElementById("valor_material");
 		material.onblur = function(){
 			let valorMaterial = $(this).find(':selected').attr('valor')
 			let valorTotalMaterial =  parseInt(valorMaterial, 10);
-			valormidia.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+			material.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+			var valorMidia = $("#valor2").text();
+			console.log(valorMIdia)
 			
 		}
 
