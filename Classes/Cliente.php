@@ -228,6 +228,7 @@
 			$id_usuario		= $dados['id_usuario'];
 			$id_ponto    	= $dados['id_ponto'];
 			$ds_arte    	= $dados['ds_arte'];
+			$nu_valor_alugado    	= $dados['nu_valor_alugado'];
 
 			if($id_midia == 1){
 				$id_material    = $dados['id_material'];
@@ -255,8 +256,8 @@
 
 					try{
 						$con = Conecta::criarConexao();
-						$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material)
-									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material)";
+						$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
+									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material, :nu_valor_alugado)";
 						
 						$stmt = $con->prepare($insert);
 						
@@ -265,7 +266,8 @@
 										':dt_inicial' => $dt_inicial,
 										':dt_final' => $dt_final,
 										':ds_arte' => $ds_arte,
-										':id_material' => $id_material);
+										':id_material' => $id_material,
+										':nu_valor_alugado' => $nu_valor_alugado);
 										
 						$stmt->execute($params);
 
@@ -289,8 +291,8 @@
 			
 				try{
 					$con = Conecta::criarConexao();
-					$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material)
-								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1)";
+					$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
+								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1, :nu_valor_alugado)";
 					
 					$stmt = $con->prepare($insert);
 					
@@ -298,7 +300,8 @@
 									':id_ponto' => $id_ponto,
 									':dt_inicial' => $dt_inicial,
 									':dt_final' => $dt_final,
-									':ds_arte' => $ds_arte);
+									':ds_arte' => $ds_arte,
+									':nu_valor_alugado' => $nu_valor_alugado);
 	
 					$stmt->execute($params);
 					
@@ -317,7 +320,7 @@
 				$con = Conecta::criarConexao();
 				
 				
-				$select = "SELECT id_carrinho, c.id_ponto, ds_descricao, ds_latitude, ds_longitude, f.ds_foto, t.ds_tipo, ds_observacao, ds_local, ds_tamanho, p.id_midia, c.id_material, ds_material, id_periodo, id_parceiro, c.dt_final, c.dt_inicial
+				$select = "SELECT id_carrinho, c.id_ponto, ds_descricao, ds_latitude, ds_longitude, f.ds_foto, t.ds_tipo, ds_observacao, ds_local, ds_tamanho, p.id_midia, c.id_material, ds_material, id_periodo, id_parceiro, c.dt_final, c.dt_inicial, nu_valor_alugado
 						FROM rl_carrinho c 
 						right join tb_ponto p on c.id_ponto = p.id_ponto 
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia 

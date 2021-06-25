@@ -106,6 +106,7 @@ $(document).ready(function() {
 			var id_usuario = $("#id_usuario").val();
 			var id_ponto = $("#id_ponto").val();
 			var ds_arte = $('input[type=file]').val();
+			var valor_alugado = $("#valor_alugado").html();
 
 			if(id_midia == 2){
 				var dt_inicial = $("#dt_inicial").val();
@@ -113,7 +114,7 @@ $(document).ready(function() {
 				
 				$.ajax({
 					url: 'appCliente/gravar_carrinho.php'
-					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, dt_inicial: dt_inicial, mes: mes, ds_arte: ds_arte, id_midia: id_midia}
+					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, dt_inicial: dt_inicial, mes: mes, ds_arte: ds_arte, id_midia: id_midia, valor_alugado: valor_alugado}
 					, type: 'post'
 					, success: function() {
 						redirectTo("appCliente/carrinho.php");	 
@@ -134,7 +135,7 @@ $(document).ready(function() {
 
 				$.ajax({
 					url: 'appCliente/gravar_carrinho.php'
-					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, bisemana: bisemana, id_material: id_material, ds_arte: ds_arte, id_midia: id_midia}
+					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, bisemana: bisemana, id_material: id_material, ds_arte: ds_arte, id_midia: id_midia, valor_alugado: valor_alugado}
 					, type: 'post'
 					, success: function() {
 						redirectTo("appCliente/carrinho.php");
