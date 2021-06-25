@@ -312,7 +312,7 @@
 												<table class="table table-hover" id="table_ponto">
 													<thead>
 														<tr>
-															<th>Minhas Mídias</th>
+															<th>Mídias</th>
 															<th>Descrição</th>
 															<th>Cliente</th>
 															<th>Data Inicial</th>

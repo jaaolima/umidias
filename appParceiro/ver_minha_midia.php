@@ -129,7 +129,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             <th>Data inicial</th>
                                                             <th>Data Final</th>
                                                             <th>Cliente</th>
-                                                            <th>Status</th> 
                                                         </tr>
                                                     </thead> 
                                                     <tbody>
@@ -141,7 +140,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <td>".$dados['dt_inicial']."</td>
                                                                             <td>".$dados['dt_final']."</td>
                                                                             <td>".$dados['ds_nome']."</td>
-                                                                            <td nowrap></td> 
                                                                         </tr>";
                                                             }
                                                             
