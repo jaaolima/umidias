@@ -289,8 +289,8 @@
 			
 				try{
 					$con = Conecta::criarConexao();
-					$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte)
-								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte)";
+					$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material)
+								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1)";
 					
 					$stmt = $con->prepare($insert);
 					
