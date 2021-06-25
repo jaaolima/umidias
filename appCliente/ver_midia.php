@@ -371,7 +371,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-																<div id="valor_alugado"><h2>R$ 0,00</h2></div>
+																<span class="font-weight-bolder text-right"><div id="valor_material">R$ 0,00</div></span>
                                                             </div>
                                                         </div>										
                                                     </div>
