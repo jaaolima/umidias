@@ -163,10 +163,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <button class="btn btn-outline-primary w-100 mr-4" type="button" id="esvaziar">Esvaziar carrinho</button>
                                     </div>
                                 </div>
-                                <div class="my-6 mx-6 text-right">
-                                    <h3 class="font-weight-bolder">Total</h3>
-                                    <div id="valor_alugado"><h2>R$ 0,00</h2></div>
-                                </div>
+                                
                             </div>
                         </div>
                         
