@@ -120,6 +120,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
                                     <div class="col-6">
                                         <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+											<div class="card-header">
+												<h3 class="font-weight-bolder">Alugueis</h3>
+											</div>
                                             <div class="card-body">											
                                                 <table class="table table-hover" id="table_ponto">
                                                     <thead>
