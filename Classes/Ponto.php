@@ -521,9 +521,9 @@
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
 							inner join tb_usuario u on a.id_usuario=u.id_usuario
-							order by a.dt_inicial
 							where p.id_parceiro=:id_parceiro
 							and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
+							order by a.dt_inicial
 							limit 3
 							";
 				
