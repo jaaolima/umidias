@@ -33,7 +33,7 @@
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 	$meusPontos = $ponto->listarMeusPontos($id_usuario);
 	$dadosTotalMidias = $ponto->dadosTotalMidias();
-	$meusPontosParceiro = $ponto->listarMeusPontosParceiro($id_parceiro);
+	$meusPontosAlugadosParceiro = $ponto->listarMeusPontosAlugadosParceiro($id_parceiro);
 
 	$dadosTotalContratadas = $ponto->dadosTotalContratadas();
 	$dadosTotalPendentes = $ponto->dadosTotalPendentes();
@@ -314,13 +314,15 @@
 														<tr>
 															<th>Minhas Mídias</th>
 															<th>Descrição</th>
-															<th>Status</th>
+															<th>Cliente</th>
+															<th>Data Inicial</th>
+															<th>Data Final</th>
 														</tr>
 													</thead> 
 													<tbody>
 														<?php
 															
-															while($dados = $meusPontosParceiro->fetch()){
+															while($dados = $meusPontosAlugadosParceiro->fetch()){
 																echo "<tr>
 																		<td>
 																			<div class='d-flex'>
@@ -347,12 +349,9 @@
 																			</div>
 																		</td>
 																		<td>".$dados['ds_descricao']."</td>
-																		<td>
-																			<span>Aguardando pagamento</span>
-																			<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
-																				<div class='progress-bar bg-warning' role='Progresso' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
-																			</div>
-																		</td>
+																		<td>".$dados['ds_nome']."</td>
+																		<td>".$dados['dt_inicial']."</td>
+																		<td>".$dados['dt_final']."</td>
 																	</tr>";
 															}
 															
