@@ -118,8 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="content flex-column-fluid pt-0" id="kt_content">
 								<div class="row">
-                                    <div class="col-8"></div>
-                                    <div class="col-4">
+                                    <div class="col-6">
                                         <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
                                             <div class="card-body">											
                                                 <table class="table table-hover" id="table_ponto">
