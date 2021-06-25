@@ -1299,10 +1299,11 @@
 		public function alugar(array $dados) 
 		{
 
-			$id_usuario	    = $dados['id_usuario'];
-			$id_ponto	    = $dados['id_ponto'];
-			$ds_arte	    = $dados['ds_arte'];
-			$id_midia	    = $dados['id_midia']; 
+			$id_usuario	    	= $dados['id_usuario'];
+			$id_ponto	    	= $dados['id_ponto'];
+			$ds_arte	    	= $dados['ds_arte'];
+			$id_midia	    	= $dados['id_midia']; 
+			$nu_valor_alugado	= $dados['nu_valor_alugado']; 
 
 
 			// $name = $ds_arte['name'][0];
@@ -1318,15 +1319,16 @@
 
 				try{ 
 					$con = Conecta::criarConexao();
-					$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final)
-								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final)";
+					$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, nu_valor_alugado)
+								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :nu_valor_alugado)";
 					
 					$stmt = $con->prepare($insert);
 					
 					$params = array(':id_usuario' => $id_usuario,
 									':id_ponto' => $id_ponto,
 									':dt_inicial' => $dt_inicial,
-									':dt_final' => $dt_final);
+									':dt_final' => $dt_final,
+									':nu_valor_alugado' => $nu_valor_alugado);
 									
 					$stmt->execute($params);
 					
@@ -1401,8 +1403,8 @@
 
 					try{
 						$con = Conecta::criarConexao();
-						$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final,  id_material)
-									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :id_material)";
+						$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final,  id_material, nu_valor_alugado)
+									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :id_material, :nu_valor_alugado)";
 						
 						$stmt = $con->prepare($insert);
 						
@@ -1410,7 +1412,8 @@
 										':id_ponto' => $id_ponto,
 										':dt_inicial' => $dt_inicial,
 										':dt_final' => $dt_final,
-										':id_material' => $id_material);
+										':id_material' => $id_material,
+										':nu_valor_alugado' => $nu_valor_alugado);
 										
 						$stmt->execute($params);
 

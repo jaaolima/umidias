@@ -191,7 +191,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <?php if($id_midia == 1) : ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Valor Total </h4>
-                                        <h4 style="color: green;"><?php echo ($dados["nu_valor"] * count($bisemanaTotal) + $dadosMaterial["nu_valor"]);?></h4>
+                                        <h4 style="color: green;"><?php echo $nu_valor_alugado = ($dados["nu_valor"] * count($bisemanaTotal) + $dadosMaterial["nu_valor"]);?></h4>
                                     </div>
                                     <?php endif; ?>
                                     <?php if($id_midia == 2) : ?>
@@ -202,6 +202,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <input type="text" value="<?php echo $id_ponto; ?>" name="id_ponto" id="id_ponto">
                                         <input type="text" value="<?php echo $id_usuario; ?>" name="id_usuario" id="id_usuario">
                                         <input type="text" value="<?php echo $id_midia; ?>" name="id_midia" id="id_midia">
+                                        <input type="text" value="<?php echo $nu_valor_alugado; ?>" name="nu_valor_alugado" id="nu_valor_alugado">
                                     </form>
                                     <?php endif; ?>
                                     <?php if($id_midia == 1) : ?>
@@ -212,6 +213,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <input type="text" value="<?php echo $id_bisemana; ?>" name="bisemana" id="bisemana">
                                         <input type="text" value="<?php echo $id_material; ?>" name="id_material" id="id_material">
                                         <input type="text" value="<?php echo $id_midia; ?>" name="id_midia" id="id_midia"> 
+                                        <input type="text" value="<?php echo $nu_valor_alugado; ?>" name="nu_valor_alugado" id="nu_valor_alugado">
                                     </form>
                                     <?php endif; ?>
                                 </div>
