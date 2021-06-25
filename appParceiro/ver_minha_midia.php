@@ -152,6 +152,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                         </div>
                                     </div>
+									<div class="col-6">
+										<div id="timeline"></div>
+									</div>
                                 </div>
 								
 							</div>

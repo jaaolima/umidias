@@ -61,7 +61,7 @@ $(document).ready(function() {
 	});
 
     $("#valor_final").inputmask({
-		"mask": "9.999",
+		"mask": "9.999", 
 		numericInput: true,
 	});
 

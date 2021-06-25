@@ -20,6 +20,26 @@ $(document).ready(function() {
 		$('#ver_foto').addClass("btn-mapa");
     }); 
 
+    $("#visualizar").on("click", function(e){
+		var id_alugado = $(this).data("aluguel");
+
+        $.ajax({
+            
+            url: 'appParceiro/ver_aluguel.php'
+            , data: {id_alugado: id_alugado}
+            , type: 'post'
+            , success: function(html) {
+                $("#timeline").html(html);
+                $("#timeline").slideDown(); 
+            }
+            , error: function (data) {
+                $("#timeline").slideUp();
+                swal("Erro", data.responseText, "error"); 
+            }
+        });		
+				
+	});
+
 });
 var DatatablesBasicBasic = function() {
 
@@ -64,7 +84,7 @@ var DatatablesBasicBasic = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Aluguel">
+                        <a id="visualizar" class="btn btn-sm btn-clean btn-icon btn-icon-md" aluguel="`+full[0]+`" title="Visualizar Aluguel">
                           <i class="la la-chart-bar"></i>
                         </a>
                         `;
