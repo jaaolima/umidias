@@ -125,6 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <thead>
                                                         <tr>
                                                             <th>ID alugado</th>
+															<th>Cliente</th>
                                                             <th>Data inicial</th>
                                                             <th>Data Final</th>
                                                             <th>Cliente</th>
@@ -136,6 +137,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             while($dados = $dadosAlugado->fetch()){
                                                                 echo "<tr>
                                                                             <td>".$dados['id_alugado']."</td>
+																			<td>".$dados['ds_nome']."</td>
                                                                             <td>".$dados['dt_inicial']."</td>
                                                                             <td>".$dados['dt_final']."</td>
                                                                             <td>".$dados['ds_nome']."</td>
