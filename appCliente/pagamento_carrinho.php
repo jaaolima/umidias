@@ -168,6 +168,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </table>
                                 </div>
                                 <div class="my-6 mx-6 text-right">
+                                    <?php 
+                                        // $formatter = numfmt_create('pt_BR', NumberFormatter::CURRENCY);
+                                        // var_dump(numfmt_parse_currency($formatter, , "BRL"));
+                                    ?>
                                     <h3 class="font-weight-bolder">Total</h3>
                                     <div id="valor_alugado"><h2>R$ 0,00</h2></div>
                                 </div>
