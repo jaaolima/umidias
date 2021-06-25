@@ -44,11 +44,12 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="col-8">
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto">
                                 <div class="my-6 mx-6">
-                                    <h3>Carrinho:</h3>
-                                    <div class="text-right">
+                                    <div class="col-6">
+                                        <h3>Carrinho:</h3>
+                                    </div>
+                                    <div class="text-right col-6">
                                         <h3 >Total</h3>
                                     </div>
-                                    
                                 </div>
                                 <div class="separator separator-solid"></div>
                                 <input type="hidden" id="id_usuario" value="<?php echo $id_usuario; ?>">
