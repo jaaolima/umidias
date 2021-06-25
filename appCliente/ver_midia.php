@@ -265,7 +265,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="separator separator-solid"></div>
                                                     <div class="my-6 mx-6 text-right">
                                                         <h3 class="font-weight-bolder">Total</h3>
-                                                        <div id="valor2"><h2>R$ 0,00</h2></div>
+                                                        <div id="valor_alugado"><h2>R$ 0,00</h2></div>
                                                     </div>
                                                     <div class="my-6 mx-6">
                                                         <button id="alugar" type="button"class="btn btn-primary w-100">Alugar Mídia</button>
@@ -375,7 +375,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="separator separator-solid"></div>
                                                     <div class="my-6 mx-6 text-right">
                                                         <h3 class="font-weight-bolder">Total</h3>
-                                                        <div id="valor1"><h2>R$ 0,00</h2></div>
+                                                        <div id="valor_alugado"><h2>R$ 0,00</h2></div>
                                                     </div>
                                                     <div class="my-6 mx-6">
                                                         <button id="alugar" type="button"class="btn btn-primary w-100">Alugar Mídia</button>
@@ -451,10 +451,10 @@ License: You must have a valid license purchased only from themeforest(the above
 			$("input[name='bisemana[]']").on("click", function(){
 				<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
 				var totalBisemana = $("input[name='bisemana[]']:checked").length;
-				var valor2 = document.getElementById("valor2");
+				var valor_alugado = document.getElementById("valor_alugado");
 				let valor = <?php echo $valor; ?> * totalBisemana;
 				let total = parseInt(valor, 10);
-				valor2.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+				valor_alugado.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 				
 			});
 
@@ -462,13 +462,13 @@ License: You must have a valid license purchased only from themeforest(the above
 		<?php if($id_midia == 2) : ?>
 		//calculo front
 		var mes = document.getElementById("mes");
-		var valor1 = document.getElementById("valor1");
+		var valorAlugado = document.getElementById("valorAlugado");
 
 		mes.onblur = function(){
 			<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
 			let valor = <?php echo $valor ?> * mes.value;
 			let total =  parseInt(valor, 10);
-			valor1.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
+			valorAlugado.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
 		}
 		<?php endif; ?>
 
@@ -485,9 +485,9 @@ License: You must have a valid license purchased only from themeforest(the above
 			var totalBisemana = $("input[name='bisemana[]']:checked").length;
 			let valor = <?php echo $valor; ?> * totalBisemana;
 			let total = parseInt(valor, 10);
-			valor2 = total + valorTotalMaterial
-			var local = document.getElementById("valor2");
-			local.innerHTML = "<h2>"+ valor2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+			valor_alugado = total + valorTotalMaterial
+			var local = document.getElementById("valor_alugado");
+			local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 		}
 
 		
