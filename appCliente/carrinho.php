@@ -67,9 +67,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     <i class='far fa-trash-alt icon-md texto-vermelho'></i>
                                                                 </a>
                                                             </div>
-                                                            <div class='position-absolute p-1 bg-white rounded-bottom-right'  style='top: 0px; left: 0px;'>
-                                                                <h4>".$dados["nu_valor_alugado"]."</h4>
-                                                            </div>
                                                         </div>
                                                         <!--end::User-->
                                                         <!--begin::Name-->
