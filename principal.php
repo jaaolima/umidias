@@ -307,15 +307,13 @@
 										<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 											<div class="card-body">
 												<div class="flex-grow-1" style="display: inherit;">
-													<h3  class="titulo-div">Mídias Contratadas</h3>
+													<h3  class="titulo-div">Mídias Contratadas</h3> 
 												</div>										
 												<table class="table table-hover" id="table_ponto">
 													<thead>
 														<tr>
 															<th>Minhas Mídias</th>
 															<th>Descrição</th>
-															<th>Valor</th>
-															<th>Tipo de Mídia</th>
 															<th>Status</th>
 														</tr>
 													</thead> 
@@ -349,8 +347,6 @@
 																			</div>
 																		</td>
 																		<td>".$dados['ds_descricao']."</td>
-																		<td>".$dados['nu_valor']."</td>
-																		<td>".$dados['ds_tipo']."</td>
 																		<td>
 																			<span>Aguardando pagamento</span>
 																			<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
