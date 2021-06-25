@@ -462,13 +462,13 @@ License: You must have a valid license purchased only from themeforest(the above
 		<?php if($id_midia == 2) : ?>
 		//calculo front
 		var mes = document.getElementById("mes");
-		var valorAlugado = document.getElementById("valorAlugado");
+		var valor_alugado = document.getElementById("valor_alugado");
 
 		mes.onblur = function(){
 			<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
 			let valor = <?php echo $valor ?> * mes.value;
 			let total =  parseInt(valor, 10);
-			valorAlugado.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
+			valor_alugado.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
 		}
 		<?php endif; ?>
 
