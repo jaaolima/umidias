@@ -43,12 +43,12 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="row">
                         <div class="col-8">
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto">
-                                <div class="my-6 mx-6">
+                                <div class="my-6 mx-6 d-flex">
                                     <div class="col-6">
                                         <h3>Carrinho:</h3>
                                     </div>
                                     <div class="text-right col-6">
-                                        <h3 >Total</h3>
+                                        <h3>Total:<?php ?></h3>
                                     </div>
                                 </div>
                                 <div class="separator separator-solid"></div>
