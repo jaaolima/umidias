@@ -161,6 +161,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <button class="btn btn-outline-primary w-100 mr-4" type="button" id="esvaziar">Esvaziar carrinho</button>
                                     </div>
                                 </div>
+                                <div class="b-0">
+                                    <div class="text-end">
+                                        <h3>Total:</h3>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
