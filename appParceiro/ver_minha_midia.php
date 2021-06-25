@@ -135,11 +135,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <?php
                                                             
                                                             while($dados = $dadosAlugado->fetch()){
+																$dataInicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
+																$dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
                                                                 echo "<tr>
                                                                             <td>".$dados['id_alugado']."</td>
 																			<td>".$dados['ds_nome']."</td>
-                                                                            <td>".$dados['dt_inicial']."</td>
-                                                                            <td>".$dados['dt_final']."</td>
+                                                                            <td>".$dataInicial."</td>
+                                                                            <td>".$dataFinal."</td>
                                                                             <td>".$dados['ds_nome']."</td>
                                                                         </tr>";
                                                             }
