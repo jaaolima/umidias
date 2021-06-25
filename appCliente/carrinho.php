@@ -45,6 +45,10 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto">
                                 <div class="my-6 mx-6">
                                     <h3>Carrinho:</h3>
+                                    <div class="text-right">
+                                        <h3 >Total</h3>
+                                    </div>
+                                    
                                 </div>
                                 <div class="separator separator-solid"></div>
                                 <input type="hidden" id="id_usuario" value="<?php echo $id_usuario; ?>">
@@ -159,11 +163,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                     <div class="mb-12">
                                         <button class="btn btn-outline-primary w-100 mr-4" type="button" id="esvaziar">Esvaziar carrinho</button>
-                                    </div>
-                                </div>
-                                <div class="b-0">
-                                    <div class="text-end">
-                                        <h3>Total:</h3>
                                     </div>
                                 </div>
 
