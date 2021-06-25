@@ -106,7 +106,7 @@ $(document).ready(function() {
 			var id_usuario = $("#id_usuario").val();
 			var id_ponto = $("#id_ponto").val();
 			var ds_arte = $('input[type=file]').val();
-			var valor_alugado = $("#valor_alugado").html();
+			var valor_alugado = $("#valor1").text();
 
 			if(id_midia == 2){
 				var dt_inicial = $("#dt_inicial").val();
