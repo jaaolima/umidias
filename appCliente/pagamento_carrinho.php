@@ -127,6 +127,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <th>Mídias</th>
                                                 <th>Tipo</th>
                                                 <th>Material</th>
+                                                <th>valor</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -158,6 +159,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </td>
                                                         <td>".$dados["ds_tipo"]."</td>
                                                         <td>".$dados["ds_material"]."</td>
+                                                        <td>".$dados["nu_valor_alugado"]."</td>
                                                     </tr>";
                                             }
                                             
