@@ -1018,7 +1018,7 @@
 				
 				
 				$select = "SELECT 
-							a.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, a.id_material, id_periodo, id_parceiro, dt_inicial, dt_final
+							a.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, a.id_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado
 						FROM rl_alugado a
 						right join tb_ponto p on a.id_ponto=p.id_ponto
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
