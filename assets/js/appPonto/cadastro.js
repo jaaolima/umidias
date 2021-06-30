@@ -89,9 +89,8 @@ $(document).ready(function() {
 	});
 	$("#nu_valor").inputmask({
 		'alias': 'numeric',
-		'groupSeparator': ',',
+		'groupSeparator': '.',
 		'autoGroup': true,
-		'digits': 2,
 		'radixPoint': ".",
 		'digitsOptional': false,
 		'allowMinus': false,
