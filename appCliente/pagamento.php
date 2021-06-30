@@ -17,17 +17,20 @@
 
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
     $id_midia = $dados["id_midia"];
-    
+    $id_material = $_REQUEST["id_material"];
+    $dadosMaterial = $material->BuscarDadosMaterial($id_material);
+
     if($id_midia == 1){
         $id_bisemana = $_REQUEST["bisemana"];
-        $id_material = $_REQUEST["id_material"];
-        $dadosMaterial = $material->BuscarDadosMaterial($id_material);
+        
         $bisemanaTotal = explode(',', $id_bisemana);
     }
     if($id_midia == 2){
         $dt_inicial	= date('Y-m-d',strtotime($_REQUEST["dt_inicial"]));
         $mes = $_REQUEST["mes"];
     }
+    
+    
 ?>
 <!DOCTYPE html>
 <!--
@@ -170,22 +173,24 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </span>
                                     </div>
                                     <?php endif; ?>
-                                    <?php if($id_midia == 2) : ?>
-                                    <div class="my-12">
-                                        <h4 class="texto-negrito">Material </h4>
-                                        <span>Lona</span>
-                                    </div>
-                                    <?php endif; ?>
-                                    <?php if($id_midia == 1) : ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Material </h4>
                                         <span><?php echo $dadosMaterial["ds_material"]; ?></span>
                                     </div>
-                                    <?php endif; ?>
                                     <?php if($id_midia == 2) : ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Valor Total </h4>
-                                        <h4 style="color: green;"><?php echo $nu_valor_alugado = ($dados["nu_valor"] * $mes) + $dadosMaterial["nu_valor"] ;?></h4>
+                                            <?php
+                                                $Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+                                                $Rrs = str_replace("R$ ", "", $Rvirgula);
+                                                $valor = $Rrs; 
+
+                                                $RvirgulaMaterial = str_replace(",", "", $dadosMaterial["nu_valor"])
+                                                $RrsMaterial = str_replace("R$ ", "", $RvirgulaMaterial);
+                                                $valorMaterial = $RrsMaterial; 
+
+                                            ?>
+                                        <h4 style="color: green;"><?php echo $nu_valor_alugado = ($valor * $mes) + $valorMaterial;?></h4>
                                     </div>
                                     <?php endif; ?>
                                     <?php if($id_midia == 1) : ?>
