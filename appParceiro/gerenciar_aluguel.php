@@ -72,7 +72,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <th>Cliente</th>
                                                         <th>Data inicial</th>
                                                         <th>Data Final</th>
-                                                        <th>Cliente</th>
                                                         <th>Gereciar</th>
                                                     </tr>
                                                 </thead> 
@@ -112,7 +111,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     <td>".$dados['ds_nome']."</td>
                                                                     <td>".$dataInicial."</td>
                                                                     <td>".$dataFinal."</td>
-                                                                    <td>".$dados['ds_nome']."</td>
                                                                     <td nowrap></td>
                                                                 </tr>";
                                                         }
@@ -141,7 +139,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Global Config-->
 		<!--begin::Global Theme Bundle(used by all pages)-->
 		<script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-		<script src="./assets/js/datatables/appParceiro/lista_minhas_midias.js" type="text/javascript"></script> 
+		<script src="./assets/js/appParceiro/gerenciar_aluguel.js" type="text/javascript"></script> 
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
