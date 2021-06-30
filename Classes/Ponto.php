@@ -1078,7 +1078,7 @@
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
 						inner join tb_usuario u on a.id_usuario=u.id_usuario
 						WHERE p.id_parceiro = :id_parceiro
-						and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
+						and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto)";
 
 				$stmt = $con->prepare($select);
 			   	$params = array(':id_parceiro' => $id_parceiro);
