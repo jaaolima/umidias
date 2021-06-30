@@ -41,7 +41,7 @@ var DatatablesBasicBasic = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="appParceiro/ver_minha_midia.php?id_alugado=`+full[0]+`"" id="visualizar" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Mídia">
+                        <a id="visualizar" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Mídia">
                           <i class="la la-chart-bar"></i>
                         </a>
 						
