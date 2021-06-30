@@ -68,10 +68,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <tr>
                                                         <th>ID alugado</th>
                                                         <th>Mídia</th>
-                                                        <th>Cliente</th>
                                                         <th>Data inicial</th>
                                                         <th>Data Final</th>
                                                         <th>Status</th>
+                                                        <th>Ações</th>
                                                     </tr>
                                                 </thead> 
                                                 <tbody>
@@ -94,10 +94,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             </div>
                                                                         </div>
                                                                     </td>
-                                                                    <td>".$dados['ds_nome']."</td>
                                                                     <td>".$dataInicial."</td>
                                                                     <td>".$dataFinal."</td>
                                                                     <td>PAGAMENTO PENDENTE</td>
+                                                                    <td nowrap></td>
                                                                 </tr>";
                                                         }
                                                         
