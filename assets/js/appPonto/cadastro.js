@@ -89,11 +89,9 @@ $(document).ready(function() {
 	});
 	$("#nu_valor").inputmask({
 		'alias': 'numeric',
-		'groupSeparator': ',',
-		'digitsOptional': false,
-		'allowMinus': false,
+		'groupSeparator': '.',
+		'autoGroup': true,
 		'prefix': 'R$ ',
-		'placeholder': ''
 	});
 	
 });
