@@ -33,28 +33,28 @@ var DatatablesBasicBasic = function() {
 			order: [[1, 'asc']],
 
 
-			columnDefs: [
+			// columnDefs: [
 
-				{
-					targets: -1,
-					title: 'Ações',
-					orderable: false,
-					render: function(data, type, full, meta) {
-						return `
-                        <a href="appParceiro/ver_minha_midia.php?id_ponto=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Mídia">
-                          <i class="la la-chart-bar"></i>
-                        </a>
+			// 	{
+			// 		targets: -1,
+			// 		title: 'Ações',
+			// 		orderable: false,
+			// 		render: function(data, type, full, meta) {
+			// 			return `
+            //             <a href="appParceiro/ver_minha_midia.php?id_ponto=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Mídia">
+            //               <i class="la la-chart-bar"></i>
+            //             </a>
 						
-                        `;
-					},
-				},
-				{
-					targets: 0,
-					visible: false
-				},
+            //             `;
+			// 		},
+			// 	},
+			// 	{
+			// 		targets: 0,
+			// 		visible: false
+			// 	},
 				
 				
-			],
+			// ],
 		}); 
 	
 

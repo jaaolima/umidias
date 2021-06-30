@@ -60,7 +60,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-7">
                                     <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
                                         <div class="card-body">											
                                             <table class="table table-hover" id="table_ponto">
@@ -72,7 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <th>Cliente</th>
                                                         <th>Data inicial</th>
                                                         <th>Data Final</th>
-                                                        <th>Gereciar</th>
+                                                        <th>Status</th>
                                                     </tr>
                                                 </thead> 
                                                 <tbody>
@@ -111,7 +111,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     <td>".$dados['ds_nome']."</td>
                                                                     <td>".$dataInicial."</td>
                                                                     <td>".$dataFinal."</td>
-                                                                    <td nowrap></td>
+                                                                    <td>PAGAMENTO PENDENTE</td>
                                                                 </tr>";
                                                         }
                                                         
