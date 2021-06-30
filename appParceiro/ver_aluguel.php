@@ -125,8 +125,15 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
         <div class="card-body">
             <div class="flex-grow-1" style="display: inherit;">
                 <h3  class="titulo-div">Detalhes</h3> 
-            </div>	
-
+            </div>
+            <div class="d-flex my-2">
+                <h4>Valor</h4>
+                <p class="ml-2"><?php echo $dadosAlugado["nu_valor_alugado"] ?></p>
+            </div>
+            <div class="d-flex my-2">
+                <h4>Material</h4>
+                <p class="ml-2"><?php echo $dadosAlugado["ds_material"] ?></p>
+            </div>
         </div>
     </div>														
 </div>
