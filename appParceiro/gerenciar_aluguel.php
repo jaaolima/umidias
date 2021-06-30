@@ -108,7 +108,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div id="timeline"></div>
+                                    <div id="timeline "></div>
                                 </div>
                             </div>		
 							<!--end::Content-->
