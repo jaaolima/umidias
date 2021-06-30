@@ -1073,8 +1073,8 @@
 				
 				$select = "SELECT a.id_alugado, a.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, a.id_material, id_periodo, p.id_parceiro, dt_inicial, dt_final, ds_nome, f.ds_foto
 						FROM rl_alugado a
-						right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 						right join tb_ponto p on a.id_ponto=p.id_ponto
+						right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
 						inner join tb_usuario u on a.id_usuario=u.id_usuario
 						WHERE p.id_parceiro = :id_parceiro
