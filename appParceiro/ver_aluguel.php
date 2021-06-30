@@ -126,13 +126,13 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
             <div class="flex-grow-1" style="display: inherit;">
                 <h3  class="titulo-div">Detalhes</h3> 
             </div>
-            <div class="d-flex my-2">
+            <div class="col-6">
                 <h4>Valor</h4>
-                <p class="ml-2"><?php echo $dadosAlugado["nu_valor_alugado"] ?></p>
+                <input class="ml-2 form-control" value="<?php echo $dadosAlugado["nu_valor_alugado"] ?>">
             </div>
-            <div class="d-flex my-2">
+            <div class="col-6">
                 <h4>Material</h4>
-                <p class="ml-2"><?php echo $dadosAlugado["ds_material"] ?></p>
+                <input class="ml-2 form-control" value="<?php echo $dadosAlugado["ds_material"] ?>">
             </div>
         </div>
     </div>														
