@@ -68,6 +68,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <tr>
                                                         <th>ID alugado</th>
                                                         <th>Mídia</th>
+                                                        <th>Dedcrição</th>
                                                         <th>Cliente</th>
                                                         <th>Data inicial</th>
                                                         <th>Data Final</th>
@@ -107,6 +108,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             </div>
                                                                         </div>
                                                                     </td>
+                                                                    <td>".$dados['ds_descricao']."</td>
                                                                     <td>".$dados['ds_nome']."</td>
                                                                     <td>".$dataInicial."</td>
                                                                     <td>".$dataFinal."</td>
