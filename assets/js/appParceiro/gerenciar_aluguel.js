@@ -35,10 +35,10 @@ var DatatablesBasicBasic = function() {
 
 			columnDefs: [
 
-				{
-					targets: -1,
-					title: 'Ações',
-					orderable: false,
+				// {
+				// 	targets: -1,
+				// 	title: 'Ações',
+				// 	orderable: false,
 					// render: function(data, type, full, meta) {
 					// 	return `
                     //     <a href="appParceiro/ver_minha_midia.php?id_ponto=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Mídia">
@@ -47,7 +47,7 @@ var DatatablesBasicBasic = function() {
 						
                     //     `;
 					// },
-				},
+				// },
 				{
 					targets: 0,
 					visible: false
