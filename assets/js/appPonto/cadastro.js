@@ -91,7 +91,6 @@ $(document).ready(function() {
 		'alias': 'numeric',
 		'groupSeparator': '.',
 		'autoGroup': true,
-		'radixPoint': ".",
 		'digitsOptional': false,
 		'allowMinus': false,
 		'prefix': 'R$ ',
