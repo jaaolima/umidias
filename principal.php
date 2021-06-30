@@ -320,9 +320,9 @@
 														<tr>
 															<th>Mídias</th>
 															<th>Descrição</th>
-															<th>Cliente</th>
 															<th>Data Inicial</th>
 															<th>Data Final</th>
+															<th>Status</th>
 														</tr>
 													</thead> 
 													<tbody>
@@ -357,9 +357,9 @@
 																			</div>
 																		</td>
 																		<td>".$dados['ds_descricao']."</td>
-																		<td>".$dados['ds_nome']."</td>
 																		<td>".$dataInicial."</td>
 																		<td>".$dataFinal."</td>
+																		<td><span class='label label-warning label-pill label-inline mr-2'>Pagamento pendente</span></td>
 																	</tr>";
 															}
 															

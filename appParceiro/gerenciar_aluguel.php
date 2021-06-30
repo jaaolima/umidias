@@ -96,7 +96,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     </td>
                                                                     <td>".$dataInicial."</td>
                                                                     <td>".$dataFinal."</td>
-                                                                    <td>PAGAMENTO PENDENTE</td>
+                                                                    <td><span class='label label-warning label-pill label-inline mr-2'>Pagamento pendente</span></td>
                                                                     <td nowrap></td>
                                                                 </tr>";
                                                         }
