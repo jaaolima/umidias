@@ -122,7 +122,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 </div>
 <div class="row">
     <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
-        <div class="card-body">
+        <div class="card-body d-flex">
             <div class="flex-grow-1" style="display: inherit;">
                 <h3  class="titulo-div">Detalhes</h3> 
             </div>
