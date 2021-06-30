@@ -11,7 +11,7 @@ $ponto = new Ponto();
 $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 ?>
 <div class="row">
-    <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+    <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white w-100"  >
         <div class="card-body">	
             <div class="flex-grow-1" style="display: inherit;">
                 <h3  class="titulo-div">Status</h3> 
@@ -121,7 +121,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
     </div>
 </div>
 <div class="row">
-    <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+    <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white w-100"  >
         <div class="card-body ">
             <div class="flex-grow-1" style="display: inherit;">
                 <h3  class="titulo-div">Detalhes</h3> 
