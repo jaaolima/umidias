@@ -120,7 +120,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
                                     <div class="col-8">
                                         <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
-                                            <div class="card-body">											
+                                            <div class="card-body">
+												<div class="flex-grow-1" style="display: inherit;">
+													<h3  class="titulo-div">Alugueis Pendentes</h3> 
+												</div>												
                                                 <table class="table table-hover" id="table_ponto">
                                                     <thead>
                                                         <tr>
