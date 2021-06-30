@@ -175,10 +175,10 @@
 										<span class="menu-text texto-menu texto-menu-alugar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adicionar Mídia</font></font></span>
 									</a>
 								</li>
-								<li class="menu-item my-4 botao-menu botao-menu-alugadas btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+								<li class="menu-item my-4 botao-menu botao-menu-gestor btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="appParceiro/gerenciar_aluguel.php" class="btn rounded mx-2 text-left  ">
-										<i class="flaticon-list-3 icon-xl svg-hover svg-alugadas"></i>
-										<span class="menu-text texto-menu texto-menu-alugadas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gestor de alugueis</font></font></span>
+										<i class="flaticon-list icon-xl svg-hover svg-gestor"></i>
+										<span class="menu-text texto-menu texto-menu-gestor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gestor de alugueis</font></font></span>
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-alugadas btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">

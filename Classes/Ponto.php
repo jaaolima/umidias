@@ -1038,6 +1038,33 @@
     			print "ERRO:".$e->getMessage();	
 			}	
 		}
+		function BuscarDadosAlugado($id_alugado)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				
+				$select = "SELECT 
+							a.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, a.id_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado
+						FROM rl_alugado a
+						right join tb_ponto p on a.id_ponto=p.id_ponto
+						inner join tb_tipo_midia t on p.id_midia=t.id_midia
+						WHERE a.id_alugado = :id_alugado";
+
+				$stmt = $con->prepare($select);
+			   	$params = array(':id_alugado' => $id_alugado);
+			   
+			    $stmt->execute($params);
+
+			    return  $stmt->fetch();
+				
+			}	
+			catch(Exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();	
+			}	
+		}
 		function BuscarAlugadoPonto($id_ponto)
 		{
 			try{

@@ -4,7 +4,11 @@ ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 
 require_once("../Classes/Ponto.php");
+
+$id_alugado = $_REQUEST["id_alugado"];
 $ponto = new Ponto();
+
+$dadosAlugado = $ponto->BuscarDadosAlugado();
 ?>
 <div class="row">
     <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
@@ -48,7 +52,7 @@ $ponto = new Ponto();
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
                         <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Aguardando Confirmação</span>
-                        <button class="btn btn-primary">Confirmar</button>
+                        <button class="btn-sm ml-2 btn btn-primary">Confirmar</button>
                     </div>
                     <!--end::Content-->
                 </div>

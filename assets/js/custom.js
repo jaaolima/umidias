@@ -139,6 +139,16 @@ $('.botao-menu').click(function (e)
 
 	});
 
+  $('.botao-menu-gestor').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-gestor').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-gestor').addClass('texto-menu-active');
+
+
+	});
+
   $('.botao-menu-financeiro').click(function (e) 
 	{
     $('.svg-hover').removeClass('svg-active');
