@@ -67,7 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <thead>
                                                     <tr>
                                                         <th>ID alugado</th>
-                                                        <th>Dedcrição</th>
+                                                        <th>Mídia</th>
                                                         <th>Cliente</th>
                                                         <th>Data inicial</th>
                                                         <th>Data Final</th>
@@ -82,7 +82,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             $dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
                                                             echo "<tr>
                                                                     <td>".$dados['id_alugado']."</td>
-                                                                    <td>".$dados['ds_descricao']."</td>
+                                                                    <td>
+                                                                        <div class='d-flex'>
+                                                                            <div class='d-flex'>
+                                                                                <span class='symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success'>
+                                                                                    <img class='symbol-label img-fluid' src='".$dados["ds_foto"]."'>
+                                                                                </span>
+                                                                                <div class='ml-3 mt-2'>
+                                                                                    <span>".$dados['ds_descricao']."</span>	
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                     <td>".$dados['ds_nome']."</td>
                                                                     <td>".$dataInicial."</td>
                                                                     <td>".$dataFinal."</td>
