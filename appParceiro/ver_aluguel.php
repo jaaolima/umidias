@@ -128,11 +128,11 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
             </div>
             <div class="row">
                 <div class="col-6">
-                    <h4>Valor</h4>
+                    <label>Valor</label>
                     <input class="ml-2 form-control" readonly="readonly" value="<?php echo $dadosAlugado["nu_valor_alugado"] ?>">
                 </div>
                 <div class="col-6">
-                    <h4>Material</h4>
+                    <label>Material</label>
                     <input class="ml-2 form-control" readonly="readonly" value="<?php echo $dadosAlugado["ds_material"] ?>">
                 </div>
             </div>
