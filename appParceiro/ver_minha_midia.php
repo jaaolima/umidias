@@ -10,7 +10,7 @@
 	
 	$ponto = new Ponto();
 	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto); 
-    $dadosAlugado = $ponto->BuscarAlugadoPonto($id_ponto); 
+    $dadosAlugado = $ponto->BuscarAlugadoPonto($id_ponto);  
 
 
 ?>

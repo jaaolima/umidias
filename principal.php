@@ -176,6 +176,12 @@
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-alugadas btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+									<a href="appParceiro/gerenciar_aluguel.php" class="btn rounded mx-2 text-left  ">
+										<i class="flaticon-list-3 icon-xl svg-hover svg-alugadas"></i>
+										<span class="menu-text texto-menu texto-menu-alugadas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gestor de alugueis</font></font></span>
+									</a>
+								</li>
+								<li class="menu-item my-4 botao-menu botao-menu-alugadas btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="appParceiro/listar_minhas_midias.php" class="btn rounded mx-2 text-left  ">
 										<i class="flaticon-list-3 icon-xl svg-hover svg-alugadas"></i>
 										<span class="menu-text texto-menu texto-menu-alugadas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Minhas mídias</font></font></span>
