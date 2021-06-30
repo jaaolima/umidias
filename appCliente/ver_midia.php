@@ -500,7 +500,11 @@ License: You must have a valid license purchased only from themeforest(the above
 				<?php endif;?>
 
 				<?php if($id_midia == 2) : ?>
-					<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
+					<?php
+						$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+						$Rrs = str_replace("R$ ", "", $Rvirgula);
+						$valor = $Rrs; 
+					?>
 					let valor = <?php echo $valor ?> * mes.value;
 					let total =  parseInt(valor, 10);
 					valor_alugado = total + valorTotalMaterial
