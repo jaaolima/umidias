@@ -90,7 +90,6 @@ $(document).ready(function() {
 	$("#nu_valor").inputmask({
 		'alias': 'numeric',
 		'groupSeparator': ',',
-		'autoGroup': true,
 		'digitsOptional': false,
 		'allowMinus': false,
 		'prefix': 'R$ ',
