@@ -185,7 +185,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 $Rrs = str_replace("R$ ", "", $Rvirgula);
                                                 $valor = $Rrs; 
 
-                                                $RvirgulaMaterial = str_replace(",", "", $dadosMaterial["nu_valor"])
+                                                $RvirgulaMaterial = str_replace(",", "", $dadosMaterial["nu_valor"]);
                                                 $RrsMaterial = str_replace("R$ ", "", $RvirgulaMaterial);
                                                 $valorMaterial = $RrsMaterial; 
 
