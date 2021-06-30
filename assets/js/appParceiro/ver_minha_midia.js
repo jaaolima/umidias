@@ -20,26 +20,6 @@ $(document).ready(function() {
 		$('#ver_foto').addClass("btn-mapa");
     }); 
 
-    $("#visualizar").on("click", function(e){
-		var id_alugado = $(this).data("aluguel");
-
-        $.ajax({
-            
-            url: 'appParceiro/ver_aluguel.php'
-            , data: {id_alugado: id_alugado}
-            , type: 'post'
-            , success: function(html) {
-                $("#timeline").html(html);
-                $("#timeline").slideDown(); 
-            }
-            , error: function (data) {
-                $("#timeline").slideUp();
-                swal("Erro", data.responseText, "error"); 
-            }
-        });		
-				
-	});
-
 });
 var DatatablesBasicBasic = function() {
 
@@ -84,9 +64,9 @@ var DatatablesBasicBasic = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a id="visualizar" class="btn btn-sm btn-clean btn-icon btn-icon-md" aluguel="`+full[0]+`" title="Visualizar Aluguel">
-                          <i class="la la-chart-bar"></i>
-                        </a>
+						<a id="visualizar" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-alugado=`+full[0]+` title="Visualizar Mídia">
+						<i class="la la-chart-bar"></i>
+					  </a>
                         `;
 					},
 				},
@@ -102,57 +82,24 @@ var DatatablesBasicBasic = function() {
 		table.on('change', 'tbody tr .m-checkbox', function() {
 			$(this).parents('tr').toggleClass('active');
 		});	
-
-		/*table.on('click', '#btn-frequencia', function() {
+		
+		table.on('click', '#visualizar', function() {
+			var id_alugado = $(this).data("alugado");
+			$.ajax({
+                url: 'appParceiro/ver_aluguel.php'
+                , data: {id_alugado: id_alugado}
+                , type: 'post'
+                , success: function(html) {
+                    $("#timeline").html(html);
+                    $("#timeline").slideDown(); 
+                }
+                , error: function (data) {
+                    $("#timeline").slideUp();
+                    swal("Erro", data.responseText, "error"); 
+                }
+            });		
 			
-			var id_aula = $(this).data("aula");
-
-			redirectTo("appDiario/cadastro_frequencia.php?id_aula="+id_aula);
-			
-		});*/
-
-		table.on('click', '#btn-editar', function() {
-
-			redirectTo("appUsuario/alterar_cadastro");
-			
-		});
-
-		/*table.on('click', '#btn-excluir', function() {
-			var id_aula = $(this).data("aula");
-
-			swal({
-	            title: 'Tem certeza?',
-	            text: "Desejar excluir a aula e todas as frequências associadas?",
-	            type: 'warning',
-	            showCancelButton: true,
-	            confirmButtonText: 'Sim, posseguir!',
-				cancelButtonText: 'Cancelar'
-	        }).then(function(result) {
-	            if (result.value) {
-					$.ajax({
-				        url: 'appDiario/excluir_aula.php'
-				        , type: 'post'
-				        , data: {id_aula : id_aula}
-				        , success: function(html) {
-							swal('Pronto!',html,'success');
-							$.ajax({
-						        url: 'appDiario/listar_aula.php'
-						        , type: 'post'
-						        , data: $("#busca_aula").serialize()
-						        , success: function(html) {
-						        	$("#lista").html(html);
-						        }
-						        , error: function(xhr, status, error) {
-								  	swal("Erro", xhr.responseText, "error");
-								}
-						    });						
-				        }
-				    });
-	                
-	            }
-	        });
-			
-		}); */
+		}); 
 		
 	};
 

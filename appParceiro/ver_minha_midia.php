@@ -128,6 +128,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             <th>Data inicial</th>
                                                             <th>Data Final</th>
 															<th>Status</th>
+															<th>Ações</th>
                                                         </tr>
                                                     </thead> 
                                                     <tbody>
@@ -139,7 +140,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 echo "<tr>
                                                                             <td>".$dados['id_alugado']."</td>
                                                                             <td>".$dataInicial."</td>
+																			<td>".$dataFinal."</td>
                                                                             <td>PENDENTE</td>
+																			<td nowrap></td>
                                                                         </tr>";
                                                             }
                                                             
