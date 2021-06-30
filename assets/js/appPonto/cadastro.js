@@ -75,7 +75,7 @@ $(document).ready(function() {
 	}
 	id_midia = $("#id_midia").val();
 	if(id_midia == 2){
-		$('#material').hide();
+		$('#material').hide(); 
 		$('#periodo').hide();
 	}
 	
@@ -88,8 +88,15 @@ $(document).ready(function() {
 		numericInput: true,
 	});
 	$("#nu_valor").inputmask({
-		"mask": "9.999",
-		numericInput: true,  
+		'alias': 'numeric',
+		'groupSeparator': ',',
+		'autoGroup': true,
+		'digits': 2,
+		'radixPoint': ".",
+		'digitsOptional': false,
+		'allowMinus': false,
+		'prefix': 'R$ ',
+		'placeholder': ''
 	});
 	
 });
