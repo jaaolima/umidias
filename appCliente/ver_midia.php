@@ -468,7 +468,11 @@ License: You must have a valid license purchased only from themeforest(the above
 			var local = document.getElementById("valor_alugado");
 
 			mes.onblur = function(){
-				<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
+				<?php
+					$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+					$Rrs = str_replace("R$ ", "", $dados["nu_valor"]);
+					$valor = $Rrs; 
+				?>
 				let valor = <?php echo $valor ?> * mes.value;
 				let total =  parseInt(valor, 10);
 				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
