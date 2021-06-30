@@ -122,17 +122,19 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 </div>
 <div class="row">
     <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
-        <div class="card-body d-flex">
+        <div class="card-body ">
             <div class="flex-grow-1" style="display: inherit;">
                 <h3  class="titulo-div">Detalhes</h3> 
             </div>
-            <div class="col-6">
-                <h4>Valor</h4>
-                <input class="ml-2 form-control" value="<?php echo $dadosAlugado["nu_valor_alugado"] ?>">
-            </div>
-            <div class="col-6">
-                <h4>Material</h4>
-                <input class="ml-2 form-control" value="<?php echo $dadosAlugado["ds_material"] ?>">
+            <div class="row">
+                <div class="col-6">
+                    <h4>Valor</h4>
+                    <input class="ml-2 form-control" value="<?php echo $dadosAlugado["nu_valor_alugado"] ?>">
+                </div>
+                <div class="col-6">
+                    <h4>Material</h4>
+                    <input class="ml-2 form-control" value="<?php echo $dadosAlugado["ds_material"] ?>">
+                </div>
             </div>
         </div>
     </div>														

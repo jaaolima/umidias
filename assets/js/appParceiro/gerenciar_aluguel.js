@@ -15,7 +15,7 @@ var DatatablesBasicBasic = function() {
 
 			lengthMenu: [5, 10, 25, 50],
 
-			pageLength: 10,
+			pageLength: 5,
 
 			language: {
 				'lengthMenu': 'Mostrar _MENU_',
