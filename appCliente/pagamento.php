@@ -185,7 +185,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <?php if($id_midia == 2) : ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Valor Total </h4>
-                                        <h4 style="color: green;"><?php echo ($dados["nu_valor"] * $mes) ;?></h4>
+                                        <h4 style="color: green;"><?php echo $nu_valor_alugado = ($dados["nu_valor"] * $mes) + $dadosMaterial["nu_valor"] ;?></h4>
                                     </div>
                                     <?php endif; ?>
                                     <?php if($id_midia == 1) : ?>
