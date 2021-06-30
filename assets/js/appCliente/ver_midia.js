@@ -159,8 +159,9 @@ $(document).ready(function() {
 				var id_ponto = $("#id_ponto").val();
 				var dt_inicial = $("#dt_inicial").val();
 				var mes = $("#mes").val();
+				var id_material = $("#id_material").val();
 				var ds_arte = $('input[type=file]')[0].files
-				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&ds_arte="+ds_arte+"&mes="+mes);	
+				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&ds_arte="+ds_arte+"&mes="+mes+"&id_material="+id_material);	
 			}
 			if(id_midia == 1){
 				var id_ponto = $("#id_ponto").val();
