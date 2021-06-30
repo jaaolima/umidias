@@ -125,10 +125,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <thead>
                                                         <tr>
                                                             <th>ID alugado</th>
-															<th>Cliente</th>
                                                             <th>Data inicial</th>
                                                             <th>Data Final</th>
-                                                            <th>Cliente</th>
+															<th>Status</th>
                                                         </tr>
                                                     </thead> 
                                                     <tbody>
@@ -139,10 +138,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																$dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
                                                                 echo "<tr>
                                                                             <td>".$dados['id_alugado']."</td>
-																			<td>".$dados['ds_nome']."</td>
                                                                             <td>".$dataInicial."</td>
-                                                                            <td>".$dataFinal."</td>
-                                                                            <td>".$dados['ds_nome']."</td>
+                                                                            <td>PENDENTE</td>
                                                                         </tr>";
                                                             }
                                                             

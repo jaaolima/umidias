@@ -41,7 +41,7 @@ var DatatablesBasicBasic = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="appParceiro/ver_minha_midia.php?id_ponto=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Mídia">
+                        <a href="appParceiro/ver_minha_midia.php?id_alugado=`+full[0]+`"" id="visualizar" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Mídia">
                           <i class="la la-chart-bar"></i>
                         </a>
 						
@@ -55,6 +55,24 @@ var DatatablesBasicBasic = function() {
 				
 				
 			],
+		}); 
+
+        table.on('click', '#visualizar', function() {
+			var id_alugado = $(this).data("alugado");
+			$.ajax({
+                url: 'appParceiro/ver_aluguel.php'
+                , data: {id_alugado: id_alugado}
+                , type: 'post'
+                , success: function(html) {
+                    $("#timeline").html(html);
+                    $("#timeline").slideDown(); 
+                }
+                , error: function (data) {
+                    $("#timeline").slideUp();
+                    swal("Erro", data.responseText, "error"); 
+                }
+            });		
+			
 		}); 
 	
 
