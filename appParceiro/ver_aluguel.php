@@ -8,7 +8,7 @@ require_once("../Classes/Ponto.php");
 $id_alugado = $_REQUEST["id_alugado"];
 $ponto = new Ponto();
 
-$dadosAlugado = $ponto->BuscarDadosAlugado();
+$dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 ?>
 <div class="row">
     <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
