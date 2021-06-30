@@ -450,61 +450,66 @@ License: You must have a valid license purchased only from themeforest(the above
 
 			//calculo outdoor
 			
-
+			<?php if($id_midia == 1) : ?>
 			$("input[name='bisemana[]']").on("click", function(){
 				<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
 				var totalBisemana = $("input[name='bisemana[]']:checked").length;
-				var valor_alugado = document.getElementById("valor_alugado");
+				var local = document.getElementById("valor_alugado");
 				let valor = <?php echo $valor; ?> * totalBisemana;
 				let total = parseInt(valor, 10);
-				valor_alugado.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 				
 			});
+			<?php endif; ?>
 
-		})
-		<?php if($id_midia == 2) : ?>
-		//calculo front
-		var mes = document.getElementById("mes");
-		var valor_alugado = document.getElementById("valor_alugado");
+			//calculo front
+			<?php if($id_midia == 2) : ?>	
+			var mes = document.getElementById("mes");
+			var local = document.getElementById("valor_alugado");
 
-		mes.onblur = function(){
-			<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
-			let valor = <?php echo $valor ?> * mes.value;
-			let total =  parseInt(valor, 10);
-			valor_alugado.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
-		}
-		<?php endif; ?>
-
-		var material = document.getElementById("id_material");
-		var Totalmaterial = document.getElementById("valor_material");
-		material.onblur = function(){
-			//adicionar na div material
-			let valorMaterial = $(this).find(':selected').attr('valor')
-			let valorTotalMaterial =  parseInt(valorMaterial, 10);
-			Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-
-
-			//adicionar na div total
-			<?php if($id_midia == 1) : ?>
-				<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
-				var totalBisemana = $("input[name='bisemana[]']:checked").length;
-				let valor = <?php echo $valor; ?> * totalBisemana;
-				let total = parseInt(valor, 10);
-				valor_alugado = total + valorTotalMaterial
-			<?php endif;?>
-
-			<?php if($id_midia == 2) : ?>
+			mes.onblur = function(){
 				<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
 				let valor = <?php echo $valor ?> * mes.value;
 				let total =  parseInt(valor, 10);
-				valor_alugado = total + valorTotalMaterial
-			<?php endif;?>
+				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
+			}
+			<?php endif; ?>
 
-			
 
-			var local = document.getElementById("valor_alugado");
-			local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
-		}
+			//calculo material
+			var material = document.getElementById("id_material");
+			var Totalmaterial = document.getElementById("valor_material");
+			material.onblur = function(){
+				//adicionar na div material
+				let valorMaterial = $(this).find(':selected').attr('valor')
+				let valorTotalMaterial =  parseInt(valorMaterial, 10);
+				Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+
+				//adicionar na div total
+				<?php if($id_midia == 1) : ?>
+					<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
+					var totalBisemana = $("input[name='bisemana[]']:checked").length;
+					let valor = <?php echo $valor; ?> * totalBisemana;
+					let total = parseInt(valor, 10);
+					valor_alugado = total + valorTotalMaterial
+				<?php endif;?>
+
+				<?php if($id_midia == 2) : ?>
+					<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
+					let valor = <?php echo $valor ?> * mes.value;
+					let total =  parseInt(valor, 10);
+					valor_alugado = total + valorTotalMaterial
+				<?php endif;?>
+
+				
+
+				var local = document.getElementById("valor_alugado");
+				local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+			}
+
+		})
+		
 
 		
 		
