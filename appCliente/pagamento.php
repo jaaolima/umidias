@@ -22,8 +22,8 @@
 
     if($id_midia == 1){
         $id_bisemana = $_REQUEST["bisemana"];
-        
         $bisemanaTotal = explode(',', $id_bisemana);
+        $listarBisemana = $bisemana->listarBisemanaID($id_bisemana);
     }
     if($id_midia == 2){
         $dt_inicial	= date('Y-m-d',strtotime($_REQUEST["dt_inicial"]));
@@ -156,7 +156,29 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <?php if($id_midia == 1) : ?>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Bisemanas</h4>
-                                        <?php echo $id_bisemana; ?>
+                                        <table  class="table table-hover" id="table_bisemana">
+                                            <thead>
+                                                <tr>
+                                                    <th>Data Inicial</th>
+                                                    <th>Data Final</th>
+                                                    <th>Bisemanas Disponiveis</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php
+                                                    while ($dadosBisemana = $listarBisemana->fetch())
+                                                    {
+                                                        $dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
+                                                        $dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
+                                                        echo "<tr>
+                                                                <td>".$dt_inicial."</td>
+                                                                <td>".$dt_final."</td>
+                                                                <td>".$dadosBisemana['ds_bisemana']."</td>
+                                                            </tr>";
+                                                    }
+                                                ?>
+                                            </tbody>
+                                        </table>
                                     </div>
                                     <?php endif; ?>
                                     <?php if($id_midia == 2) : ?>
