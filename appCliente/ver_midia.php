@@ -245,7 +245,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><?php echo "R$ ". $dados["nu_valor"] . ",00"; ?></span>
+                                                                <span class="font-weight-bolder text-right"><?php echo $dados["nu_valor"] . ",00"; ?></span>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex">
@@ -451,8 +451,13 @@ License: You must have a valid license purchased only from themeforest(the above
 			//calculo outdoor
 			
 			<?php if($id_midia == 1) : ?>
+				
 			$("input[name='bisemana[]']").on("click", function(){
-				<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
+				<?php
+					$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+					$Rrs = str_replace("R$ ", "", $Rvirgula);
+					$valor = $Rrs; 
+				?>
 				var totalBisemana = $("input[name='bisemana[]']:checked").length;
 				var local = document.getElementById("valor_alugado");
 				let valor = <?php echo $valor; ?> * totalBisemana;
