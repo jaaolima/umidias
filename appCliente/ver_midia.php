@@ -497,7 +497,11 @@ License: You must have a valid license purchased only from themeforest(the above
 
 				//adicionar na div total
 				<?php if($id_midia == 1) : ?>
-					<?php $valor = str_replace(".", "", $dados["nu_valor"]); ?>
+					<?php
+						$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+						$Rrs = str_replace("R$ ", "", $Rvirgula);
+						$valor = $Rrs; 
+					?>
 					var totalBisemana = $("input[name='bisemana[]']:checked").length;
 					let valor = <?php echo $valor; ?> * totalBisemana;
 					let total = parseInt(valor, 10);
