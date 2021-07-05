@@ -85,7 +85,8 @@ $(document).ready(function() {
     }); 
 
 	$("#alugar").on("click", function(e){
-		if(validarAlugar()){
+		var id_midia = $("#id_midia").val();
+		if(validarAlugar(id_midia)){
 			$('#alugar_midia').show();
 			$('#ver_midia').hide();
 		}
