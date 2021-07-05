@@ -195,8 +195,17 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <?php endif; ?>
                                     <?php if($id_midia == 1) : ?>
                                     <div class="my-12">
+                                        <?php
+                                            $Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+                                            $valor = str_replace("R$ ", "", $Rvirgula); 
+
+                                            $RvirgulaMaterial = str_replace(",", "", $dadosMaterial["nu_valor"]);
+                                            $RrsMaterial = str_replace("R$ ", "", $RvirgulaMaterial);
+                                            $valorMaterial = $RrsMaterial; 
+
+                                        ?>
                                         <h4 class="texto-negrito">Valor Total </h4>
-                                        <h4 style="color: green;"><?php echo $nu_valor_alugado = ($dados["nu_valor"] * count($bisemanaTotal) + $dadosMaterial["nu_valor"]);?></h4>
+                                        <h4 style="color: green;"><?php echo $nu_valor_alugado = (($valor * count($bisemanaTotal)) + $valorMaterial);?></h4>
                                     </div>
                                     <?php endif; ?>
                                     <?php if($id_midia == 2) : ?>
