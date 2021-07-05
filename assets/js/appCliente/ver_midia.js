@@ -214,18 +214,12 @@ function validarAlugar(id_midia){
 		}
 	}
 	if(id_midia == 1){
-		if($("#bisemana :checked").val() == "")
-		{
-			$("#bisemana").focus();
-			swal.fire("Erro", "Selecione um bisemana", "error");
-			$("#bisemana").addClass("is-invalid");
-			return false;	
-		}
-		else
-		{
-			$("#bisemana").removeClass("is-invalid");	
-			$("#bisemana").addClass("is-valid");
-		}
+		if ($('input[name="bisemana[]"]:checked').length == 0)
+	{
+		$("input[name='bisemana[]']").focus();
+		swal.fire("Aviso", "Selecione uma das opções", "warning");      
+		return false;	
+	}
 		
 	}
 	if($("#id_material option:selected").val() == "")

@@ -190,7 +190,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 $valorMaterial = $RrsMaterial; 
 
                                             ?>
-                                        <h4 style="color: green;"><?php echo $nu_valor_alugado = ($valor * $mes) + $valorMaterial;?></h4>
+                                        <h4 style="color: green;"><?php echo "R$ ".$nu_valor_alugado = ($valor * $mes) + $valorMaterial;?></h4>
                                     </div>
                                     <?php endif; ?>
                                     <?php if($id_midia == 1) : ?>
