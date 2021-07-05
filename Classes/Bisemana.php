@@ -182,7 +182,7 @@
 
 		public function listarBisemanaID($id_bisemana)
 		{
-			$bisemanas = str_replace(",", " or ", $id_bisemana);
+			$bisemanas = str_replace(",", "or id_bisemana = ", $id_bisemana);
 			try{
 				$con = Conecta::criarConexao();
 				
