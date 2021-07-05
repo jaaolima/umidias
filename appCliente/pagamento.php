@@ -167,7 +167,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         $date = new DateTime($dt_inicial);
                                         $date->modify('+'.$mes.'months');
                                         $dt_final = $date->format('Y-m-d');
-                                        echo $dt_inicial." até ". $dt_final;
+                                        echo date('d/m/Y', strtotime($dt_inicial))." até ". date('d/m/Y', strtotime($dt_final));
                                         ?> 
 
                                         </span>
