@@ -182,13 +182,13 @@
 
 		public function listarBisemanaID($id_bisemana)
 		{
-			str_replace(",", " or ", $id_bisemana);
+			$bisemanas = str_replace(",", " or ", $id_bisemana);
 			try{
 				$con = Conecta::criarConexao();
 				
 				$select = "SELECT id_bisemana, ds_bisemana, dt_final, dt_inicial
 							FROM tb_bisemana
-							where id_bisemana = ".$id_bisemana;
+							where id_bisemana = ".$bisemanas;
 				
 				$stmt = $con->prepare($select); 
 				
