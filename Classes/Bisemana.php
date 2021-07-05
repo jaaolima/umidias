@@ -191,9 +191,8 @@
 							where id_bisemana = ".$id_bisemana;
 				
 				$stmt = $con->prepare($select); 
-				$params = array(':hoje' => $hoje);
 				
-				$stmt->execute($params);
+				$stmt->execute();
 
 				return $stmt;
 				
