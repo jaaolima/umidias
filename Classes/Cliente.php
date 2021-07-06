@@ -408,7 +408,8 @@
 							$params = array(':id_usuario' => $id_usuario,
 											':id_ponto' => $id_ponto,
 											':dt_inicial' => $dt_inicial,
-											':dt_final' => $dt_final);
+											':dt_final' => $dt_final,
+											':ds_arte' => $ds_arte);
 											
 							$stmt->execute($params);
 
