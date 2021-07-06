@@ -524,7 +524,7 @@
 							left join tb_status_midia s on a.id_status_midia=s.id_status
 							where p.id_parceiro=:id_parceiro
 							and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
-							order by a.dt_inicial
+							order by desc a.dt_inicial
 							limit 3
 							";
 				
