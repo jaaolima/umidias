@@ -127,6 +127,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <table class="table table-hover" id="table_ponto">
                                                     <thead>
                                                         <tr>
+															<th>ID status</th>
                                                             <th>ID alugado</th>
                                                             <th>Data inicial</th>
                                                             <th>Data Final</th>
@@ -143,6 +144,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																$corStatus = "label-warning";
 																if($dados["id_status_midia"] == 5){ $corStatus =  "label-success"; }
                                                                 echo "<tr>
+																			<td>".$dados['id_status_midia']."</td>
                                                                             <td>".$dados['id_alugado']."</td>
                                                                             <td>".$dataInicial."</td>
 																			<td>".$dataFinal."</td> 
