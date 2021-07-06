@@ -154,7 +154,7 @@
 			print $e->getMessage();
 			}
 		}
-		public function listarBisemana()
+		public function listarBisemana() 
 		{
 			$hoje = date('Y/m/d');
 			try{
