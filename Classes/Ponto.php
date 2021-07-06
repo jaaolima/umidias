@@ -1105,7 +1105,7 @@
 						right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
 						inner join tb_usuario u on a.id_usuario=u.id_usuario
-						right join tb_status_midia s on a.id_status_midia=s.id_status
+						left join tb_status_midia s on a.id_status_midia=s.id_status
 						WHERE p.id_parceiro = :id_parceiro
 						and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto)
 						order by dt_inicial";
