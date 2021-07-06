@@ -49,7 +49,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Main-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Login-->
-			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login" style="background-image: url(assets/media/BG.png)">
+			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login" style="background-image: url(assets/media/BG.png);background-size: 100%;background-size: cover;">
 				<!--begin::Content-->
 				<div class="d-flex flex-column flex-row-fluid position-relative p-7 overflow-hidden">
 					<!--begin::Content body-->
