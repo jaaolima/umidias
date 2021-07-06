@@ -45,11 +45,11 @@ License: You must have a valid license purchased only from themeforest(the above
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
-	<body id="kt_body" class="header-fixed subheader-enabled page-loading" style="background-image: url(assets/media/BG.png)">
+	<body id="kt_body" class="header-fixed subheader-enabled page-loading" >
 		<!--begin::Main-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Login-->
-			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login">
+			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login" style="background-image: url(assets/media/BG.png)">
 				<!--begin::Content-->
 				<div class="d-flex flex-column flex-row-fluid position-relative p-7 overflow-hidden">
 					<!--begin::Content body-->
@@ -61,7 +61,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div>
 										<div class="mb-8">
 											<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
-											<span class="texto-chumbo">Insira seus dados abaixo para continuar</span>
+											<span class="texto-chumbo">Insira seus dados abaixo para continuar</span> 
 										</div>
 									</div>
 									<!--<div class="d-none" id="erro-login">
