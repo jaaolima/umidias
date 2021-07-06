@@ -49,129 +49,128 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Main-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Login-->
-			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login" style="background-image: url(assets/media/BG.png)">
+			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login" >
 				<!--begin::Content-->
-				<div class="d-flex flex-column flex-row-fluid position-relative p-7 overflow-hidden">
-					<!--begin::Content body-->
-					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
-						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white w-100 box-shadow"  style="max-width: 400px;left:300px;">
-							<!--begin::Signin-->
-							<div class=" login-signin">
-								<div class="mx-8 mt-8">
-									<div>
-										<div class="mb-8">
-											<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
-											<span class="texto-chumbo">Insira seus dados abaixo para continuar</span> 
-										</div>
-									</div>
-									<!--<div class="d-none" id="erro-login">
-										<div class="erro-login">
-											<span class="texto-preto">Parece que você inseriu um email ou senha errado.</span>
-										</div>
-									</div>-->								
-									<!--begin::Form-->
-									<div>
-										<form class="form" novalidate="novalidate" id="kt_login_signin_form">
-											<div class="form-group" >
-												<input class="form-control rectangle_1 my-4" type="text"  name="ds_usuario" id="ds_usuario" autocomplete="off" placeholder="Usuário ou E-mail"/>
-												<input class="form-control rectangle_1 my-4" type="password"  name="ds_senha" id="ds_senha"  placeholder="Senha"/>
-											</div>
-											<div class="form-group d-flex flex-wrap justify-content-end align-items-center">
-												<a href="javascript:;" class="text-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
-											</div>	
-											<div class="form-group d-flex flex-wrap justify-content-center align-items-center">	
-												<button type="button" id="entrar" class="btn btn-primary disable font-weight-bold px-30 py-4 text-white" >ENTRAR</button>
-											</div>									
-										</form>
-									</div>
-								</div>
-								<div class="separator separator-solid"></div>
-								<div class="text-center my-8">
-									<span class="texto-chubo">Ainda não tem uma conta?</span>
-									<a href="javascript:;" class="text-primary" id="kt_login_signup">Registre-se</a>
-								</div>								
-							</div>
-							
-							<!--end::Signin-->
-							<!--begin::Signup-->
-							<div class=" login-signup m-8">
-								<div class="text-center mb-10 mb-lg-20">
-									<h3 class="font-size-h1">Inscreva-se</h3>
-									<p class="text-muted font-weight-bold">Insira seus dados para criar sua conta</p>
-								</div>
-								<!--begin::Form-->
-								<form class="form" novalidate="novalidate" id="kt_login_signup_form">
-									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="text" placeholder="Seu nome" name="ds_nome" id="ds_nome" autocomplete="off" />
-									</div>
-									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Email" name="ds_email" id="ds_email" autocomplete="off" />
-									</div>
-									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Senha" name="nu_senha" id="nu_senha" autocomplete="off" />
-									</div>
-									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Confirme a senha" name="nu_senhaconfirmada" autocomplete="off" />
-									</div>
-									<div class="form-group">
-										<label class="checkbox mb-0">
-										<input type="checkbox" name="agree" />
-										<span></span>Eu concordo  
-										<a href="#">termos e Condições</a></label>
-									</div>
-									<div class="form-group d-flex flex-wrap flex-center">
-										<button type="button" id="kt_login_signup_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Enviar</button>
-										<button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancelar</button>
-									</div>
-								</form>
-								<!--end::Form-->
-							</div>
-
-							<!--end::Signup-->
-							<!--begin::Forgot-->
-							<div class=" login-forgot m-8">
-								<div class="text-left mb-10 mt-4">
-									<h3 class="texto-preto">Esqueceu a senha?</h3>
-									<p class="texto-chumbo">Naõ se preocupe, nós vamos te ajudar a resetá-la</p>
-								</div>
-								<!--begin::Form-->
-								<form class="form_esqueci_senha" novalidate="novalidate" id="form_esqueci_senha">
-									<div class="form-group">
-										<input class="form-control rectangle_1 my-4" type="email" placeholder="Insira aqui seu e-mail" name="ds_email_resetar" id="ds_email_resetar" autocomplete="off" />
-									</div>
-									<div class="form-group flex-wrap flex-center text-center">
+				<div class="w-100" style="background-image: url(assets/media/BG.png)">
+					<div class="d-flex flex-column flex-row-fluid position-relative p-7 overflow-hidden">
+						<!--begin::Content body-->
+						<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
+							<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white w-100 box-shadow"  style="max-width: 400px;left:300px;">
+								<!--begin::Signin-->
+								<div class=" login-signin">
+									<div class="mx-8 mt-8">
 										<div>
-											<button type="button" id="resetar" class="btn btn-primary font-weight-bold px-22 py-4 my-3 mx-4">resetar senha</button><br>
+											<div class="mb-8">
+												<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
+												<span class="texto-chumbo">Insira seus dados abaixo para continuar</span> 
+											</div>
 										</div>
-										<div class="mt-4">
-											<a href="javascript:;" id="cancelar" class="font-weight-bold text-primary">Voltar</a>
-										</div>																			
+										<!--<div class="d-none" id="erro-login">
+											<div class="erro-login">
+												<span class="texto-preto">Parece que você inseriu um email ou senha errado.</span>
+											</div>
+										</div>-->								
+										<!--begin::Form-->
+										<div>
+											<form class="form" novalidate="novalidate" id="kt_login_signin_form">
+												<div class="form-group" >
+													<input class="form-control rectangle_1 my-4" type="text"  name="ds_usuario" id="ds_usuario" autocomplete="off" placeholder="Usuário ou E-mail"/>
+													<input class="form-control rectangle_1 my-4" type="password"  name="ds_senha" id="ds_senha"  placeholder="Senha"/>
+												</div>
+												<div class="form-group d-flex flex-wrap justify-content-end align-items-center">
+													<a href="javascript:;" class="text-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
+												</div>	
+												<div class="form-group d-flex flex-wrap justify-content-center align-items-center">	
+													<button type="button" id="entrar" class="btn btn-primary disable font-weight-bold px-30 py-4 text-white" >ENTRAR</button>
+												</div>									
+											</form>
+										</div>
 									</div>
-								</form>
-								<!--end::Form-->
+									<div class="separator separator-solid"></div>
+									<div class="text-center my-8">
+										<span class="texto-chubo">Ainda não tem uma conta?</span>
+										<a href="javascript:;" class="text-primary" id="kt_login_signup">Registre-se</a>
+									</div>								
+								</div>
+								
+								<!--end::Signin-->
+								<!--begin::Signup-->
+								<div class=" login-signup m-8">
+									<div class="text-center mb-10 mb-lg-20">
+										<h3 class="font-size-h1">Inscreva-se</h3>
+										<p class="text-muted font-weight-bold">Insira seus dados para criar sua conta</p>
+									</div>
+									<!--begin::Form-->
+									<form class="form" novalidate="novalidate" id="kt_login_signup_form">
+										<div class="form-group">
+											<input class="form-control form-control-solid h-auto py-5 px-6" type="text" placeholder="Seu nome" name="ds_nome" id="ds_nome" autocomplete="off" />
+										</div>
+										<div class="form-group">
+											<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Email" name="ds_email" id="ds_email" autocomplete="off" />
+										</div>
+										<div class="form-group">
+											<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Senha" name="nu_senha" id="nu_senha" autocomplete="off" />
+										</div>
+										<div class="form-group">
+											<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Confirme a senha" name="nu_senhaconfirmada" autocomplete="off" />
+										</div>
+										<div class="form-group">
+											<label class="checkbox mb-0">
+											<input type="checkbox" name="agree" />
+											<span></span>Eu concordo  
+											<a href="#">termos e Condições</a></label>
+										</div>
+										<div class="form-group d-flex flex-wrap flex-center">
+											<button type="button" id="kt_login_signup_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Enviar</button>
+											<button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancelar</button>
+										</div>
+									</form>
+									<!--end::Form-->
+								</div>
+
+								<!--end::Signup-->
+								<!--begin::Forgot-->
+								<div class=" login-forgot m-8">
+									<div class="text-left mb-10 mt-4">
+										<h3 class="texto-preto">Esqueceu a senha?</h3>
+										<p class="texto-chumbo">Naõ se preocupe, nós vamos te ajudar a resetá-la</p>
+									</div>
+									<!--begin::Form-->
+									<form class="form_esqueci_senha" novalidate="novalidate" id="form_esqueci_senha">
+										<div class="form-group">
+											<input class="form-control rectangle_1 my-4" type="email" placeholder="Insira aqui seu e-mail" name="ds_email_resetar" id="ds_email_resetar" autocomplete="off" />
+										</div>
+										<div class="form-group flex-wrap flex-center text-center">
+											<div>
+												<button type="button" id="resetar" class="btn btn-primary font-weight-bold px-22 py-4 my-3 mx-4">resetar senha</button><br>
+											</div>
+											<div class="mt-4">
+												<a href="javascript:;" id="cancelar" class="font-weight-bold text-primary">Voltar</a>
+											</div>																			
+										</div>
+									</form>
+									<!--end::Form-->
+								</div>
+								
+								<!--end::Forgot-->
+
 							</div>
 							
-							<!--end::Forgot-->
-
 						</div>
-						
-					</div>
-					<!--end::Content body-->
-					<!--begin::Content footer for mobile-->
-					<div class="d-flex d-lg-none flex-column-auto flex-column flex-sm-row justify-content-between align-items-center mt-5 p-5">
-						<div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">© 2020 Unimidias</div>
-						<div class="d-flex order-1 order-sm-2 my-2">
-							<a href="#" class="text-dark-75 text-hover-primary">Sobre</a>
-							<a href="#" class="text-dark-75 text-hover-primary ml-4">Parceiros</a>
-							<a href="#" class="text-dark-75 text-hover-primary ml-4">Contato</a>
+						<!--end::Content body-->
+						<!--begin::Content footer for mobile-->
+						<div class="d-flex d-lg-none flex-column-auto flex-column flex-sm-row justify-content-between align-items-center mt-5 p-5">
+							<div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">© 2020 Unimidias</div>
+							<div class="d-flex order-1 order-sm-2 my-2">
+								<a href="#" class="text-dark-75 text-hover-primary">Sobre</a>
+								<a href="#" class="text-dark-75 text-hover-primary ml-4">Parceiros</a>
+								<a href="#" class="text-dark-75 text-hover-primary ml-4">Contato</a>
+							</div>
 						</div>
+						<!--end::Content footer for mobile-->
 					</div>
-					<!--end::Content footer for mobile-->
 				</div>
-				<!--end::Content-->
-				<!--<div>
-					<img class="GRADIENTE_BARRA" src="assets/css/bottons/GRADIENTEBARRA.png"/>
-				</div>-->
+				
 			</div>
 			<!--end::Login-->
 			
