@@ -331,6 +331,8 @@
 															while($dados = $meusPontosAlugadosParceiro->fetch()){
 																$dataInicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
 																$dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
+																$corStatus = "label-warning";
+																if($dados["id_status_midia"] == 5){ $corStatus =  "label-success"; }
 																echo "<tr>
 																		<td>
 																			<div class='d-flex'>
@@ -359,7 +361,7 @@
 																		<td>".$dados['ds_descricao']."</td>
 																		<td>".$dataInicial."</td>
 																		<td>".$dataFinal."</td>
-																		<td><span class='label label-warning label-pill label-inline mr-2'>Pagamento pendente</span></td>
+																		<td><span class='label ".$corStatus." label-pill label-inline mr-2'>".$dados['ds_status']."</span></td>
 																	</tr>";
 															}
 															
