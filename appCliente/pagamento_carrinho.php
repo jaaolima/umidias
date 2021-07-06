@@ -10,6 +10,7 @@
 	$cliente = new Cliente();
 
 	$retorno = $cliente->BuscarCarrinho($id_usuario);
+    $totalCarrinho = $cliente->BuscarTotalCarrinho($id_usuario);
 
 ?>
 <!DOCTYPE html>
@@ -169,11 +170,15 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="my-6 mx-6 text-right">
                                     <?php 
-                                        // $formatter = numfmt_create('pt_BR', NumberFormatter::CURRENCY);
-                                        // var_dump(numfmt_parse_currency($formatter, , "BRL"));
+                                        $total = 0;
+                                        while($dados = $totalCarrinho->fetch()){
+                                            $Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+                                            $valor = str_replace("R$ ", "", $Rvirgula);
+                                            $total .= $valor;
+                                        }
                                     ?>
                                     <h3 class="font-weight-bolder">Total</h3>
-                                    <div id="valor_alugado"><h2>R$ 0,00</h2></div>
+                                    <div id="valor_alugado"><h2><?php echo $total; ?></h2></div>
                                 </div>
 
                             </div>
@@ -186,7 +191,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--end::Page-->
 		</div>
 		<script src="assets/js/scripts.bundle.js"></script>
-		<script src="assets/js/appCliente/pagamento_carrinho.js"></script>
+		<script src="assets/js/appCliente/pagamento_carrinho.js"></script> 
 		<!--end::Global Theme Bundle-->
         <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $id_usuario;?>">
 	</body>
