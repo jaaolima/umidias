@@ -41,7 +41,7 @@ var DatatablesBasicBasic = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a id="visualizar" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-status=`+full[0]+` title="Visualizar Mídia">
+                        <a id="visualizar" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-status=`+full[0]+` data-alugado=`+full[1]+` title="Visualizar Mídia">
                           <i class="la la-chart-bar"></i>
                         </a>
 						
@@ -52,6 +52,10 @@ var DatatablesBasicBasic = function() {
 					targets: 0,
 					visible: false
 				},
+				{
+					targets: 1,
+					visible: false
+				},
 				
 				
 			],
@@ -59,9 +63,10 @@ var DatatablesBasicBasic = function() {
 
         table.on('click', '#visualizar', function() {
 			var id_status = $(this).data("status");
+			var id_alugado = $(this).data("alugado");
 			$.ajax({
                 url: 'appParceiro/ver_aluguel.php'
-                , data: {id_status: id_status}
+                , data: {id_status: id_status, id_alugado: id_alugado}
                 , type: 'post'
                 , success: function(html) {
                     $("#timeline").html(html);

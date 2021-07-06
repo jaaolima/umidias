@@ -67,6 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <thead>
                                                     <tr>
 														<th>ID status</th>
+														<th>ID alugado</th>
                                                         <th>Mídia</th>
                                                         <th>Data inicial</th>
                                                         <th>Data Final</th>
@@ -82,6 +83,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             $dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
                                                             echo "<tr>
 															 		<td>".$dados['id_status_midia']."</td>
+																	 <td>".$dados['id_alugado']."</td>
                                                                     <td>
                                                                         <div class='d-flex'>
                                                                             <div class='d-flex'>

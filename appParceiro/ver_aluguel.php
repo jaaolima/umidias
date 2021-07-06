@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 require_once("../Classes/Ponto.php");
 
 $id_alugado = $_REQUEST["id_alugado"];
+$id_status = $_REQUEST["id_status"];
 $ponto = new Ponto();
 
 $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
