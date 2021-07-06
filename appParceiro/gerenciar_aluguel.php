@@ -96,13 +96,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     </td>
                                                                     <td>".$dataInicial."</td>
                                                                     <td>".$dataFinal."</td>
-                                                                    <td><span class='label label-warning label-pill label-inline mr-2'>Pagamento pendente</span></td>
+                                                                    <td><span class='label label-warning label-pill label-inline mr-2'>".$dados['ds_status']."</span></td>
                                                                     <td nowrap></td>
                                                                 </tr>";
                                                         }
                                                         
                                                     ?>
-                                                </tbody>
+                                                </tbody> 
                                             </table>
                                         </div>
                                     </div>
