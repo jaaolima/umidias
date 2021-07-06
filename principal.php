@@ -78,8 +78,8 @@
 		<header class="position-fixed w-100 bg-white" style="z-index:2;">
 			<div class="navbar py-3 border-bottom">
 				<!--begin::Logo-->
-				<a href="/metronic/demo1/index.html" class="brand-logo ml-8">
-					<img alt="Logo" src="assets/media/logo.png" class="logo-default max-h-25px"  />
+				<a href="#" class="brand-logo ml-8">
+					<img alt="Logo" src="assets/media/LOGO_.png" class="logo-default max-h-25px"  />
 				</a>
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
@@ -372,7 +372,7 @@
 											</div>
 										</div>
 									</div>
-								</div>	
+								</div>	 
 								<?php endif; ?>
 								<div class="row">
 									<div class="col-xl-12">
