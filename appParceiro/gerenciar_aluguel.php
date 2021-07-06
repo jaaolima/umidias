@@ -66,6 +66,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <table class="table table-hover" id="table_ponto">
                                                 <thead>
                                                     <tr>
+														<th>ID status</th>
                                                         <th>ID alugado</th>
                                                         <th>Mídia</th>
                                                         <th>Data inicial</th>
@@ -81,6 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             $dataInicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
                                                             $dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
                                                             echo "<tr>
+															 		<td>".$dados['id_status_midia']."</td>
                                                                     <td>".$dados['id_alugado']."</td>
                                                                     <td>
                                                                         <div class='d-flex'>
