@@ -79,7 +79,7 @@
 			<div class="navbar py-3 border-bottom">
 				<!--begin::Logo-->
 				<a href="#" class="brand-logo ml-8">
-					<img alt="Logo" src="assets/media/LOGO_.png" class="logo-default max-h-25px"  />
+					<img alt="Logo" src="assets/media/Uni_midia_logo.png" class="logo-default max-h-25px"  />
 				</a>
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
