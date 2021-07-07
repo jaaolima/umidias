@@ -161,7 +161,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <tr>
                                                     <th>Data Inicial</th>
                                                     <th>Data Final</th>
-                                                    <th>Bisemanas Disponiveis</th>
+                                                    <th>Bisemanas</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
