@@ -120,12 +120,46 @@ License: You must have a valid license purchased only from themeforest(the above
 								
 								<!--begin::Row-->
 								<div class="row justify-content-center">
+									<?php if($dados["id_status_midia"] == 1) : ?>
 									<div class="text-center" style="font-size:20px;">
-										<span class="font-weight-bolder">Aguardando Pagamento</span>
+										<span class="font-weight-bolder"><?php echo $dados["ds_status"]; ?></span>
 										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
 											<div class='progress-bar bg-danger' role='Progresso' style='width: 10%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
 										</div>
 									</div>
+									<?php endif; ?>
+									<?php if($dados["id_status_midia"] == 2) : ?>
+									<div class="text-center" style="font-size:20px;">
+										<span class="font-weight-bolder">><?php echo $dados["ds_status"]; ?></span>
+										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
+											<div class='progress-bar bg-danger' role='Progresso' style='width: 25%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+										</div>
+									</div>
+									<?php endif; ?>
+									<?php if($dados["id_status_midia"] == 3) : ?>
+									<div class="text-center" style="font-size:20px;">
+										<span class="font-weight-bolder">><?php echo $dados["ds_status"]; ?></span>
+										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
+											<div class='progress-bar bg-danger' role='Progresso' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+										</div>
+									</div>
+									<?php endif; ?>
+									<?php if($dados["id_status_midia"] == 3) : ?>
+									<div class="text-center" style="font-size:20px;">
+										<span class="font-weight-bolder">><?php echo $dados["ds_status"]; ?></span>
+										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
+											<div class='progress-bar bg-danger' role='Progresso' style='width: 75%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+										</div>
+									</div>
+									<?php endif; ?>
+									<?php if($dados["id_status_midia"] == 3) : ?>
+									<div class="text-center" style="font-size:20px;">
+										<span class="font-weight-bolder">><?php echo $dados["ds_status"]; ?></span>
+										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
+											<div class='progress-bar bg-success' role='Progresso' style='width: 100%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+										</div>
+									</div>
+									<?php endif; ?>
 								</div>
 								<div class="row"> 
 									<div class="col-8">

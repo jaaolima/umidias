@@ -1012,17 +1012,18 @@
     			print "ERRO:".$e->getMessage();	
 			}	
 		}
-		function BuscarDadosPontoAlugado($id_ponto)
+		function BuscarDadosPontoAlugado($id_ponto) 
 		{
 			try{
 				$con = Conecta::criarConexao();
 				
 				
 				$select = "SELECT 
-							a.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, a.id_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado
+							a.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, a.id_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado, id_status_midia, s.ds_status
 						FROM rl_alugado a
 						right join tb_ponto p on a.id_ponto=p.id_ponto
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
+						left join tb_status_midia s on a.id_status_midia=s.id_status
 						WHERE a.id_ponto = :id_ponto";
 
 				$stmt = $con->prepare($select);
