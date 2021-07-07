@@ -144,7 +144,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 									<?php endif; ?>
-									<?php if($dados["id_status_midia"] == 3) : ?>
+									<?php if($dados["id_status_midia"] == 4) : ?>
 									<div class="text-center" style="font-size:20px;">
 										<span class="font-weight-bolder">><?php echo $dados["ds_status"]; ?></span>
 										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
@@ -152,7 +152,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 									<?php endif; ?>
-									<?php if($dados["id_status_midia"] == 3) : ?>
+									<?php if($dados["id_status_midia"] == 5) : ?>
 									<div class="text-center" style="font-size:20px;">
 										<span class="font-weight-bolder">><?php echo $dados["ds_status"]; ?></span>
 										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
