@@ -11,7 +11,7 @@
 <div class="card card-custom gutter-b">
 	<div class="card-header flex-wrap py-3">
 		<div class="card-title">
-		<i class="flaticon-cogwheel-2 icon-xl"></i>&nbsp;
+		<i class="flaticon-folder icon-xl svg-hover svg-material"></i>
 			<h3 class="card-label">
 				Materiais Cadastrados
 			</h3>

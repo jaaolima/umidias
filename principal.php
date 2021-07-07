@@ -787,7 +787,7 @@
 					chart.render();
 				}
 				var parceiroMidia = function () {
-					const apexChart = "#grafico_parceiro_midia";
+					const apexChart = "#grafico_parceiro_midia"; 
 					var options = {
 						series: [{
 							name: 'Ativos',
