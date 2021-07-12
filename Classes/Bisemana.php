@@ -156,7 +156,8 @@
 		}
 		public function listarBisemanaDisponiveis($id_ponto) 
 		{
-			$hoje = date('Y/m/d');
+			$data = date('Y-m-d');
+			$hoje = str_replace("-", "", $data);
 			try{
 				$con = Conecta::criarConexao();
 				
