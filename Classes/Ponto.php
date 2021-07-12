@@ -354,7 +354,8 @@
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 							where p.id_midia=:id_midia 
 							and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
-							and p.id_ponto not in (select id_ponto from rl_alugado)";
+							and p.id_ponto not in (select id_ponto from rl_alugado)
+							limit 3";
 				
 				$stmt = $con->prepare($select); 
 				$params = array(':id_midia' => $id_midia);
