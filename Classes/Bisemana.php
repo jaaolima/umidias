@@ -154,7 +154,7 @@
 			print $e->getMessage();
 			}
 		}
-		public function listarBisemana() 
+		public function listarBisemana($id_ponto) 
 		{
 			$hoje = date('Y/m/d');
 			try{
@@ -162,10 +162,11 @@
 				
 				$select = "SELECT id_bisemana, ds_bisemana, dt_final, dt_inicial
 							FROM tb_bisemana
-							where dt_final > :hoje";
+							where dt_final > :hoje and dt_inicial not in (select dt_inicial from rl_alugado a where a.id_ponto=:id_ponto)";
 				
 				$stmt = $con->prepare($select); 
-				$params = array(':hoje' => $hoje);
+				$params = array(':hoje' => $hoje,
+								':id_ponto' => $id_ponto);
 				
 				$stmt->execute($params);
 
