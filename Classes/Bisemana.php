@@ -181,7 +181,7 @@
 			}
 		}
 
-		public function listarBisemana($id_ponto) 
+		public function listarBisemana() 
 		{
 			$hoje = date('Y/m/d');
 			try{
