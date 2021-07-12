@@ -309,7 +309,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="d-flex my-6 mx-6" >
                                                         <div class="col-4">
                                                             <label >Data de Inicio:<span class="text-danger">*</span></label>
-                                                            <input type="date" class="form-control" name="dt_inicial" id="dt_inicial">
+                                                            <input type="date" class="form-control" name="dt_inicial" id="dt_inicial" min="<?php echo date('Y-m-d'); ?>">
                                                         </div>
                                                         <div class="col-4">
                                                             <label >Meses de locação:<span class="text-danger">*</span></label>
