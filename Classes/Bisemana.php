@@ -162,7 +162,8 @@
 				
 				$select = "SELECT id_bisemana, ds_bisemana, dt_final, dt_inicial
 							FROM tb_bisemana
-							where dt_final > :hoje and dt_inicial not in (select dt_inicial from rl_alugado a where a.id_ponto=:id_ponto)";
+							where dt_final > :hoje and dt_inicial not in (select dt_inicial from rl_alugado a where a.id_ponto=:id_ponto)
+							order by dt_inicial";
 				
 				$stmt = $con->prepare($select); 
 				$params = array(':hoje' => $hoje,
