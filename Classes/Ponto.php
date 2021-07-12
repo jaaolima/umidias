@@ -341,7 +341,7 @@
 			
 		
 		}
-		public function listarPontoProximos(array $dados)  
+		public function listarPontoProximos()  
 		{
 
 
