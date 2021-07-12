@@ -430,11 +430,11 @@
 													<!--begin::Tiles Widget 25-->
 													<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
 														<div class="card-body d-flex">
-															<div class="d-flex py-5 flex-column align-items-start flex-grow-1 justify-content-center">
+															<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 																<div class="flex-grow-1" style="display: inherit;">
 																	<h3  class="titulo-div">Mídias próximas a Você</h3>
 																</div>
-																<div class="row m-0 col-12 justify-content-center" >
+																<div class="row m-0 col-12" >
 																	<?php
 																		 while($dados = $retornoMidias->fetch()){
 																			echo "<div class='col-4' >
