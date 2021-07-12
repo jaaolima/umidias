@@ -506,6 +506,22 @@
 																									<p class='texto-chumbo font-size-h6'>".$dados['ds_descricao']."</p>
 																								</div>													
 																							</div>
+																							<div class='my-4 mx-15 text-left'>
+																								<div class='d-flex ml-n8'>
+																									<div class='mt-1'>
+																									<svg width='24' height='24' viewBox='0 0 50 46' fill='none' xmlns='http://www.w3.org/2000/svg'>
+																										<path d='M44.2 1H5.8C3.14903 1 1 3.14903 1 5.8V29.8C1 32.451 3.14903 34.6 5.8 34.6H44.2C46.851 34.6 49 32.451 49 29.8V5.8C49 3.14903 46.851 1 44.2 1Z' stroke='#333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+																										<path d='M20.2 44.2H29.8' stroke='#333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+																										<path d='M25 34.6001V44.2001' stroke='#333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+																									</svg>
+																									</div>
+																									<div class='ml-2'>
+																										<span class='text-dark font-weight-bold text-dark font-size-h4'>Tipo</span><br>
+																										<p class='texto-chumbo font-size-h6'>".$dados['ds_tipo']."</p>
+																									</div>													
+																								</div>
+																								
+																							</div>
 																							<div class='separator separator-solid'></div>
 																							<div class='my-8 mx-4 text-right'>
 																								<a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$dados['id_midia']."' class='text-primary'>Ver detalhes
