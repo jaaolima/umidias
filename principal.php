@@ -434,7 +434,7 @@
 																<div class="flex-grow-1" style="display: inherit;">
 																	<h3  class="titulo-div">Mídias próximas a Você</h3>
 																</div>
-																<div class="row m-0 col-12" >
+																<div class="row col-12 mt-4" >
 																	<?php
 																		 while($dados = $retornoMidias->fetch()){
 																			echo "<div class='col-4' >
@@ -443,7 +443,7 @@
 																						<div class='card-body text-center' style='padding: 0px !important'>
 																							<!--begin::User-->
 																							<div class='position-relative' >
-																								<img class='img-fluid w-100 rounded-top' src='".$dados["ds_foto"]."' alt='image' style='height:300px;' />
+																								<img class='img-fluid w-100 rounded-top' src='".$dados["ds_foto"]."' alt='image' style='height:200px;' />
 																							</div>
 																							<!--end::User-->
 																							<!--begin::Name-->
@@ -471,8 +471,6 @@
 																										<path d='M12 5L19 12L12 19' stroke='#B721FF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
 																									</svg>
 																								</a>
-																								
-													
 																							</div>
 																							<!--end::Name-->
 																						</div>
