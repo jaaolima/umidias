@@ -30,7 +30,7 @@
                 <?php 
                     while($dados = $retorno->fetch()){
                         echo "<div class='col-4' >
-                                <div class='card card-custom card-stretch gutter-b'>
+                                <div class='card card-custom'>
                                     <!--begin::Body-->
                                     <div class='card-body text-center' style='padding: 0px !important'>
                                         <!--begin::User-->
