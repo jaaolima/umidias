@@ -487,7 +487,7 @@
 																										</svg>
 																									</div>
 																									<div class='ml-2'>
-																										<a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$id_midia."'class='text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_local']."</a>
+																										<a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$dados['id_midia']."'class='text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_local']."</a>
 																									</div>	
 																								</div>																								
 																								<div class='my-6'>
