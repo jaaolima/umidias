@@ -353,7 +353,7 @@
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 							where f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
 							and p.id_ponto not in (select id_ponto from rl_alugado where :hoje between dt_inicial and dt_final)
-							limit 3";
+							limit 10";
 				
 				$stmt = $con->prepare($select); 
 				$params = array(':hoje' => $data);
