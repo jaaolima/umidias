@@ -769,6 +769,7 @@
 				$(".owl-carousel").owlCarousel({
 					items:4,
 					nav:true,
+					center:true,
 					// responsive: {
 					// 	0:{
 					// 		items:1
@@ -780,9 +781,9 @@
 					// 		items:4
 					// 	}
 					// },
-					URLhashListener:true,
-					autoplayHoverPause:true,
-					startPosition: 'URLHash'
+					// URLhashListener:true,
+					// autoplayHoverPause:true,
+					// startPosition: 'URLHash'
 
 				});
 
