@@ -767,8 +767,8 @@
 			//carousel
 			$(document).ready(function(){
 				$(".owl-carousel").owlCarousel({
-					items: 4,
-					nav: true,
+					items:4,
+					nav:true,
 					responsive: {
 						0:{
 							items:1
