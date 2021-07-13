@@ -772,17 +772,17 @@
 					center:true,
 					loop:true,
 					dots:false,
-					responsive: {
-						0:{
-							items:1
-						},
-						360:{
-							items:3
-						},
-						2000:{
-							items:4
-						}
-					}
+					// responsive: {
+					// 	0:{
+					// 		items:1
+					// 	},
+					// 	360:{
+					// 		items:3
+					// 	},
+					// 	2000:{
+					// 		items:4
+					// 	}
+					// }
 
 				});
 
