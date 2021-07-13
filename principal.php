@@ -769,17 +769,17 @@
 				$(".owl-carousel").owlCarousel({
 					items:4,
 					nav:true,
-					responsive: {
-						0:{
-							items:1
-						},
-						360:{
-							items:3
-						},
-						1000:{
-							items:4
-						}
-					},
+					// responsive: {
+					// 	0:{
+					// 		items:1
+					// 	},
+					// 	360:{
+					// 		items:3
+					// 	},
+					// 	1000:{
+					// 		items:4
+					// 	}
+					// },
 					URLhashListener:true,
 					autoplayHoverPause:true,
 					startPosition: 'URLHash'
