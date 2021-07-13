@@ -782,10 +782,7 @@
 						2000:{
 							items:4
 						}
-					},
-					URLhashListener:true,
-					autoplayHoverPause:true,
-					startPosition: 'URLHash'
+					}
 
 				});
 
