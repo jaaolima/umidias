@@ -766,7 +766,7 @@
 
 			//carousel
 			$(document).ready(function(){
-				$(".owl-carousel").olwCarousel();
+				$(".owl-carousel").owlCarousel();
 
 			});
 
