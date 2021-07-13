@@ -767,7 +767,7 @@
 			//carousel
 			$(document).ready(function(){
 				$(".owl-carousel").owlCarousel({
-					items:4,
+					items:3,
 					nav:true,
 					center:true,
 					loop:true,
