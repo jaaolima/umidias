@@ -772,6 +772,7 @@
 					center:true,
 					loop:true,
 					dots:false,
+					margin:10,
 					// responsive: {
 					// 	0:{
 					// 		items:1
