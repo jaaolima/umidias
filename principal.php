@@ -771,7 +771,7 @@
 					nav:true,
 					center:true,
 					loop:true,
-					dols:false
+					dots:false
 
 				});
 
