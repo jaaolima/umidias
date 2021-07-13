@@ -771,7 +771,7 @@
 					nav:true,
 					center:true,
 					loop:true,
-					dots:false
+					dots:false,
 					responsive: {
 						0:{
 							items:1
