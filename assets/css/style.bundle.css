@@ -646,7 +646,7 @@ color: #B721FF !important;
   padding: 0;
 }
 .card-2 {
-  box-shadow: 0 5px 7px rgba(240, 240, 240), 0 3px 6px rgba(240, 240, 240);
+  box-shadow: 0 5px 7px rgba(240, 240, 240), 0 3px 6px rgba(240, 240, 240) !important;
 }
 
 .fieldset-border {
