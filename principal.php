@@ -66,7 +66,9 @@
 		<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />	
+		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets\plugins\owlCarousel\dist\assets\owl.carousel.min.css" rel="stylesheet" type="text/css" />	
+		<link href="assets\plugins\owlCarousel\dist\assets\owl.theme.default.css" rel="stylesheet" type="text/css" />	
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
@@ -758,6 +760,7 @@
 		<script src="assets/js/custom.js"></script>
 		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM&callback=initialize"></script>
 		<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
+		<script src="assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
 		<!-- <script src="assets/js/scripts.bundle2.min.js"></script> -->
 		<script>
 			const primary = '#6993FF';
