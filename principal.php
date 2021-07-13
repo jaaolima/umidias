@@ -772,6 +772,20 @@
 					center:true,
 					loop:true,
 					dots:false
+					responsive: {
+						0:{
+							items:1
+						},
+						360:{
+							items:3
+						},
+						1200:{
+							items:4
+						}
+					},
+					URLhashListener:true,
+					autoplayHoverPause:true,
+					startPosition: 'URLHash'
 
 				});
 
