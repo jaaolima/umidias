@@ -474,7 +474,7 @@
 												<div class="col-xl-12">
 													<!--begin::Tiles Widget 25-->
 													<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
-														<div class="card-body d-flex">
+														<div class="card-body">
 															<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 																<div class="flex-grow-1" style="display: inherit;">
 																	<h3  class="titulo-div">Mídias próximas à Você</h3>
