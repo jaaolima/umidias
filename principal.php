@@ -482,7 +482,7 @@
 																<div class="row col-12 mt-4 owl-carousel owl-theme" >
 																	<?php
 																		 while($dados = $retornoMidias->fetch()){
-																			echo "<div class='col-10 item' >
+																			echo "<div class='item' >
 																					<div class='card card-custom'>
 																						<!--begin::Body-->
 																						<div class='card-body text-center' style='padding: 0px !important'>
