@@ -479,10 +479,10 @@
 																<div class="flex-grow-1" style="display: inherit;">
 																	<h3  class="titulo-div">Mídias próximas à Você</h3>
 																</div>
-																<div class="row col-12 mt-4" >
+																<div class="row col-12 mt-4 owl-carousel owl-theme" >
 																	<?php
 																		 while($dados = $retornoMidias->fetch()){
-																			echo "<div class='col-4' >
+																			echo "<div class='col-4 item' >
 																					<div class='card card-custom'>
 																						<!--begin::Body-->
 																						<div class='card-body text-center' style='padding: 0px !important'>
@@ -763,6 +763,14 @@
 		<script src="assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
 		<!-- <script src="assets/js/scripts.bundle2.min.js"></script> -->
 		<script>
+
+			//carousel
+			$(document).ready(function(){
+				$(".owl-carousel").olwCarousel();
+
+			});
+
+
 			const primary = '#6993FF';
 			const success = '#1BC5BD';
 			const danger = '#F64E60';
