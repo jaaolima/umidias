@@ -763,6 +763,12 @@
 		<script src="assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
 		<!-- <script src="assets/js/scripts.bundle2.min.js"></script> -->
 		<script>
+			//localizacao
+			if('geolocation' in navigator){
+				navigator.geolocation.getCurrentPosition(function(position){
+					console.log(position);
+				})
+			}
 
 			//carousel
 			$(document).ready(function(){
