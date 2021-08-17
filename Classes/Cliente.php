@@ -230,6 +230,36 @@
 			$ds_arte    	= $dados['ds_arte'];
 			$nu_valor_alugado    	= $dados['nu_valor_alugado'];
 
+
+			//arte
+			$name = $ds_arte['name'][0];
+			$type = $ds_arte['type'][0];
+			$tmp = $ds_arte['tmp_name'][0];
+			$size = $ds_arte['size'][0];
+
+			//gravar arte
+			$tamanho = 20000000;
+
+			$error = array();
+			$tamanho_mb = $tamanho/1024/1024;
+			
+			if($size > $tamanho) {
+				$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
+			}
+
+			if (count($error) == 0) {
+				// Pega extensão da imagem
+				preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $name, $ext);
+				// Gera um nome único para o arquivo
+				$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
+				// Caminho de onde ficará o arquivo
+				$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_artes/" . $nome_arquivo;
+
+				$gravar_caminho_arquivo = "docs_artes/" . $nome_arquivo;
+
+			
+			}
+
 			if($id_midia == 1){
 				$id_material    = $dados['id_material'];
 				$bisemanas 		= $dados["bisemana[]"];
@@ -265,11 +295,13 @@
 										':id_ponto' => $id_ponto,
 										':dt_inicial' => $dt_inicial,
 										':dt_final' => $dt_final,
-										':ds_arte' => $ds_arte,
+										':ds_arte' => $gravar_caminho_arquivo,
 										':id_material' => $id_material,
 										':nu_valor_alugado' => $nu_valor_alugado);
 										
 						$stmt->execute($params);
+
+						
 
 					}
 					catch(exception $e) 
@@ -300,7 +332,7 @@
 									':id_ponto' => $id_ponto,
 									':dt_inicial' => $dt_inicial,
 									':dt_final' => $dt_final,
-									':ds_arte' => $ds_arte,
+									':ds_arte' => $gravar_caminho_arquivo,
 									':nu_valor_alugado' => $nu_valor_alugado);
 	
 					$stmt->execute($params);
@@ -391,11 +423,7 @@
 					$dt_final	    = $dadosCarrinho['dt_final'];
 					$id_material	= $dadosCarrinho['id_material'];
 
-					//arte
-					// $name = $ds_arte['name'][0];
-					// $type = $ds_arte['type'][0];
-					// $tmp = $ds_arte['tmp_name'][0];
-					// $size = $ds_arte['size'][0];
+					
 					if($id_midia == 2){
 		
 						try{
@@ -413,42 +441,7 @@
 											
 							$stmt->execute($params);
 
-							//gravar arte
-							// $tamanho = 20000000;
-
-							// $error = array();
-							// $tamanho_mb = $tamanho/1024/1024;
 							
-							// if($size > $tamanho) {
-							// 	$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
-							// }
-
-							// if (count($error) == 0) {
-							// 	// Pega extensão da imagem
-							// 	preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $name, $ext);
-							// 	// Gera um nome único para o arquivo
-							// 	$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
-							// 	// Caminho de onde ficará o arquivo
-							// 	$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_artes/" . $nome_arquivo;
-				
-							// 	$gravar_caminho_arquivo = "docs_artes/" . $nome_arquivo;
-				
-							
-								
-							// 	// Faz o upload da imagem para seu respectivo caminho
-							// 	$moved = move_uploaded_file($tmp,  $caminho_arquivo);
-
-							// 	$insert_arte = "insert into rl_arte(id_ponto, id_usuario,  ds_arte) values (:id_ponto, :id_usuario :ds_arte)";
-
-							// 	$stmt_arte = $con->prepare($insert_arte);
-						
-							// 	$params_arte = array(':id_ponto' => $id_ponto,
-							// 						':id_usuario' => $id_usuario,
-							// 						':ds_arte' => $gravar_caminho_arquivo
-							// 						);
-												
-							// 	$stmt_arte->execute($params_arte);
-							// }
 							
 						}
 						catch(exception $e)

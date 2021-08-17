@@ -99,7 +99,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										}
 										
 									?>
-								</div>
+								</div> 
 								<a class="carousel-control-prev" role="button" data-target="#carrossel" data-slide="prev" style="width:5%;">
 									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 									<span class="sr-only">Anterior</span>
