@@ -35,7 +35,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <html lang="en">
 	<body id="kt_body" class="header-fixed subheader-enabled page-loading">
 		<!--begin::Main-->
-		<div class="d-flex flex-column flex-root">
+		<div class="d-flex flex-column flex-root"> 
 			<!--begin::Page-->
 			<div class="d-flex flex-row flex-column-fluid page">
 				<!--begin::Wrapper-->
@@ -54,14 +54,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                 
                                     <?php
                                         while($dados = $retorno->fetch()){
-
+                                            
                                             echo "<div class='col-4' >
                                                 <div class='card card-custom card-stretch gutter-b'>
                                                     <!--begin::Body-->
                                                     <div class='card-body text-center' style='padding: 0px !important'>
                                                         <!--begin::User-->
                                                         <div class='position-relative' >
-                                                            <img class='img-fluid w-100 rounded-top' src='".$dados["ds_foto"]."' alt='image' style='height:200px;' />
+                                                            <img class='img-fluid w-100 rounded-top' src='".$dados["ds_arte"]."' alt='image' style='height:200px;' />
                                                             <div class='position-absolute'  style='top: -14px; right: -14px;'>
                                                                 <a id='".$dados["id_carrinho"]."' class='excluir btn btn-md btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow' data-action='change' data-toggle='tooltip' title='' data-original-title='excluir'>
                                                                     <i class='far fa-trash-alt icon-md texto-vermelho'></i>
