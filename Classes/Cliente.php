@@ -224,9 +224,9 @@
 		}
 		public function gravarCarrinho(array $dados)
 		{
-			$id_midia		= $dados['id_midia'];
-			$id_usuario		= $dados['id_usuario'];
-			$id_ponto    	= $dados['id_ponto'];
+			$id_midia		= $dados[0]['id_midia'];
+			$id_usuario		= $dados[0]['id_usuario'];
+			$id_ponto    	= $dados[0]['id_ponto'];
 			$ds_arte    	= $_FILES['arte'];
 			// $nu_valor_alugado    	= $dados['nu_valor_alugado'];
 
@@ -250,68 +250,66 @@
 			if (count($error) == 0) {
 				// Pega extensão da imagem
 				preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $name, $ext);
-				var_dump($ext);
-				// Gera um nome único para o arquivo
-				// $nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
-				// // Caminho de onde ficará o arquivo
-				// $caminho_arquivo = "/var/www/app.unimidias.com.br/docs_artes/" . $nome_arquivo;
+				//Gera um nome único para o arquivo
+				$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
+				// Caminho de onde ficará o arquivo
+				$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_artes/" . $nome_arquivo;
 
-				// $gravar_caminho_arquivo = "docs_artes/" . $nome_arquivo;
-
+				$gravar_caminho_arquivo = "docs_artes/" . $nome_arquivo;
 			
 			}
 
-			// if($id_midia == 1){
-			// 	$id_material    = $dados['id_material'];
-			// 	$bisemanas 		= $dados["bisemana[]"];
-			// 	$listaCheckbox = explode(',', $bisemanas);
+			if($id_midia == 1){
+				$id_material    = $dados[0]['id_material'];
+				$bisemanas 		= $dados[1]["bisemana[]"];
+				$listaCheckbox = explode(',', $bisemanas);
 
-			// 	$id_bisemana= '';
-			// 	for ($i=0; $i < count($listaCheckbox); $i++) { 
+				$id_bisemana= '';
+				for ($i=0; $i < count($listaCheckbox); $i++) { 
 					
-			// 			$id_bisemana = $listaCheckbox[$i];
-			// 			$con = Conecta::criarConexao();
-			// 			$selectBisemana = "SELECT dt_inicial, dt_final 
-			// 						from tb_bisemana 
-			// 						where id_bisemana = :id_bisemana";
+						$id_bisemana = $listaCheckbox[$i];
+						$con = Conecta::criarConexao();
+						$selectBisemana = "SELECT dt_inicial, dt_final 
+									from tb_bisemana 
+									where id_bisemana = :id_bisemana";
 						
-			// 			$stmtBisemana = $con->prepare($selectBisemana);
+						$stmtBisemana = $con->prepare($selectBisemana);
 						
-			// 			$params = array(':id_bisemana' => $id_bisemana); 
+						$params = array(':id_bisemana' => $id_bisemana); 
 										
-			// 			$stmtBisemana->execute($params);
-			// 			$dadosBisemana = $stmtBisemana->fetch();
-			// 			$dt_inicial = $dadosBisemana["dt_inicial"];
-			// 			$dt_final = $dadosBisemana["dt_final"];
+						$stmtBisemana->execute($params);
+						$dadosBisemana = $stmtBisemana->fetch();
+						$dt_inicial = $dadosBisemana["dt_inicial"];
+						$dt_final = $dadosBisemana["dt_final"];
 
 
-			// 		try{
-			// 			$con = Conecta::criarConexao();
-			// 			$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
-			// 						VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material, :nu_valor_alugado)";
+					try{
+						$con = Conecta::criarConexao();
+						$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
+									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material, :nu_valor_alugado)";
 						
-			// 			$stmt = $con->prepare($insert);
+						$stmt = $con->prepare($insert);
 						
-			// 			$params = array(':id_usuario' => $id_usuario,
-			// 							':id_ponto' => $id_ponto,
-			// 							':dt_inicial' => $dt_inicial,
-			// 							':dt_final' => $dt_final,
-			// 							':ds_arte' => $gravar_caminho_arquivo,
-			// 							':id_material' => $id_material,
-			// 							':nu_valor_alugado' => $nu_valor_alugado);
+						$params = array(':id_usuario' => $id_usuario,
+										':id_ponto' => $id_ponto,
+										':dt_inicial' => $dt_inicial,
+										':dt_final' => $dt_final,
+										':ds_arte' => $gravar_caminho_arquivo,
+										':id_material' => $id_material,
+										':nu_valor_alugado' => $nu_valor_alugado);
 										
-			// 			$stmt->execute($params);
+						$stmt->execute($params);
 
 						
 
-			// 		}
-			// 		catch(exception $e) 
-			// 		{
-			// 			header('HTTP/1.1 500 Internal Server Error');
-			// 			print "ERRO:".$e->getMessage();		
-			// 		} 	
-			// 	}
-			// }
+					}
+					catch(exception $e) 
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					} 	
+				}
+			}
 
 			// if($id_midia == 2){
 			// 	$dt_inicial    	= $dados['dt_inicial'];
