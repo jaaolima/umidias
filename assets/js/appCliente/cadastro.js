@@ -18,7 +18,7 @@ $(document).ready(function() {
 		                position: 'top-right',
 		                type: 'success',
 		                title: html,
-		                showConfirmButton: true
+		                showConfirmButton: true 
 		            });
 		            
 					redirectTo("appCliente/listar_cliente.php");
