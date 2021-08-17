@@ -262,13 +262,11 @@
 			if($id_midia == 1){
 				$id_material    = $dados['id_material'];
 				$bisemanas 		= $dados["bisemana"];
-				var_dump($bisemanas);
-				$listaCheckbox = explode(',', $bisemanas);
 
 				$id_bisemana= '';
-				for ($i=0; $i < count($listaCheckbox); $i++) { 
+				for ($i=0; $i < count($bisemanas); $i++) { 
 					
-						$id_bisemana = $listaCheckbox[$i];
+						$id_bisemana = $bisemanas[$i];
 						$con = Conecta::criarConexao();
 						$selectBisemana = "SELECT dt_inicial, dt_final 
 									from tb_bisemana 
