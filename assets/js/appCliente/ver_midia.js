@@ -140,9 +140,9 @@ $(document).ready(function() {
 					url: 'appCliente/gravar_carrinho.php'
 					, type: 'post'
 					, data: {form:form, bisemana: bisemana}
-					// , mimeType: 'multipart/form-data'  
-					// , processData: false
-					// , contentType: false
+					, mimeType: 'multipart/form-data'  
+					, processData: false
+					, contentType: false
 					, success: function(html) {
 						// redirectTo("appCliente/carrinho.php");
 						swal.fire({
