@@ -128,18 +128,11 @@ $(document).ready(function() {
 				
 			}
 			if(id_midia == 1){
-				var bisemana = new Array();
-				$("input[name='bisemana[]']:checked").each(function () 
-				{
-					bisemana.push( $(this).val());
-				});
-
-				form = new FormData($("#form_alugar").get(0));
-
+				form = $("#form_alugar").get(0);
 				$.ajax({
 					url: 'appCliente/gravar_carrinho.php'
 					, type: 'post'
-					, data: {form:form, bisemana: bisemana}
+					, data: new FormData(form)
 					, mimeType: 'multipart/form-data'  
 					, processData: false
 					, contentType: false
