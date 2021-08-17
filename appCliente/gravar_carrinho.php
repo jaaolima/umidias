@@ -5,5 +5,4 @@
 	require_once("../Classes/Cliente.php");
 	$Cliente = new Cliente();
 	$Cliente->gravarCarrinho($_POST); 
-	var_dump($_POST);
 ?> 
