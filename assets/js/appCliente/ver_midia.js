@@ -134,11 +134,12 @@ $(document).ready(function() {
 					bisemana.push( $(this).val());
 				});
 
-				form = $("#form_alugar").get(0);
+				form = new FormData($("#form_alugar").get(0));
+
 				$.ajax({
 					url: 'appCliente/gravar_carrinho.php'
 					, type: 'post'
-					, data: [new FormData(form), bisemana]
+					, data: {form:form, bisemana: bisemana}
 					, mimeType: 'multipart/form-data'  
 					, processData: false
 					, contentType: false
