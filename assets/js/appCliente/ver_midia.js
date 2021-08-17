@@ -119,8 +119,14 @@ $(document).ready(function() {
 					url: 'appCliente/gravar_carrinho.php'
 					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, dt_inicial: dt_inicial, mes: mes, ds_arte: ds_arte, id_midia: id_midia, nu_valor_alugado: nu_valor_alugado, id_material: id_material}
 					, type: 'post'
-					, success: function() {
+					, success: function(html) {
 						redirectTo("appCliente/carrinho.php");	 
+						swal.fire({
+							position: 'top-right',
+							type: 'success',
+							title: html,
+							showConfirmButton: true
+						});
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error");
