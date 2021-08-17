@@ -104,11 +104,6 @@ $(document).ready(function() {
 		var id_midia = $("#id_midia").val();
 		if(validarDetalhe(id_midia))
 		{
-			var id_usuario = $("#id_usuario").val();
-			var id_ponto = $("#id_ponto").val();
-			var nu_valor_alugado = $("#valor_alugado").text();
-			var id_material = $("#id_material").val();
-
 			if(id_midia == 2){
 				form = $("#form_alugar").get(0);
 				$.ajax({
@@ -119,7 +114,7 @@ $(document).ready(function() {
 					, processData: false
 					, contentType: false
 					, success: function(html) {
-						// redirectTo("appCliente/carrinho.php");
+						redirectTo("appCliente/carrinho.php");
 						swal.fire({
 							position: 'top-right',
 							type: 'success',
@@ -131,20 +126,6 @@ $(document).ready(function() {
 						swal.fire("Erro", data.responseText, "error"); 
 					}
 				});	
-				// var dt_inicial = $("#dt_inicial").val();
-				// var mes = $("#mes").val();
-				
-				// $.ajax({
-				// 	url: 'appCliente/gravar_carrinho.php'
-				// 	, data:	{id_usuario: id_usuario, id_ponto: id_ponto, dt_inicial: dt_inicial, mes: mes, ds_arte: ds_arte, id_midia: id_midia, nu_valor_alugado: nu_valor_alugado, id_material: id_material}
-				// 	, type: 'post'
-				// 	, success: function(html) {
-				// 		redirectTo("appCliente/carrinho.php");	 
-				// 	}
-				// 	, error: function (data) {
-				// 		swal.fire("Erro", data.responseText, "error");
-				// 	}
-				// });	
 				
 			}
 			if(id_midia == 1){
@@ -157,7 +138,7 @@ $(document).ready(function() {
 					, processData: false
 					, contentType: false
 					, success: function(html) {
-						// redirectTo("appCliente/carrinho.php");
+						redirectTo("appCliente/carrinho.php");
 						swal.fire({
 							position: 'top-right',
 							type: 'success',
@@ -171,32 +152,6 @@ $(document).ready(function() {
 				});	
 				
 			}
-			// if(id_midia == 1){
-			// 	var bisemana = new Array();
-			// 	$("input[name='bisemana[]']:checked").each(function () 
-			// 	{
-			// 		bisemana.push( $(this).val());
-			// 	});
-
-			// 	$.ajax({
-			// 		url: 'appCliente/gravar_carrinho.php'
-			// 		, data:	{id_usuario: id_usuario, id_ponto: id_ponto, bisemana: bisemana, id_material: id_material, ds_arte: ds_arte, id_midia: id_midia, nu_valor_alugado: nu_valor_alugado}
-			// 		, type: 'post'
-			// 		, success: function(html) {
-			// 			// redirectTo("appCliente/carrinho.php");
-			// 			swal.fire({
-			// 				position: 'top-right',
-			// 				type: 'success',
-			// 				title: html,
-			// 				showConfirmButton: true
-			// 			});
-			// 		}
-			// 		, error: function (data) {
-			// 			swal.fire("Erro", data.responseText, "error"); 
-			// 		}
-			// 	});	
-				
-			// }
 			
 		}	
 	});
