@@ -227,7 +227,7 @@
 			$id_midia		= $dados['id_midia'];
 			$id_usuario		= $dados['id_usuario'];
 			$id_ponto    	= $dados['id_ponto'];
-			$ds_arte    	= $_FILES['arte'];
+			$ds_arte    	= $dados['ds_arte'];
 			$nu_valor_alugado    	= $dados['nu_valor_alugado'];
 
 

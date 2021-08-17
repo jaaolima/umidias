@@ -106,7 +106,7 @@ $(document).ready(function() {
 		{
 			var id_usuario = $("#id_usuario").val();
 			var id_ponto = $("#id_ponto").val();
-			var ds_arte = $('input[type=file]').val();
+			var ds_arte = $('[name="arte[]"]').val();
 			var nu_valor_alugado = $("#valor_alugado").text();
 			var id_material = $("#id_material").val();
 
