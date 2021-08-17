@@ -110,21 +110,41 @@ $(document).ready(function() {
 			var id_material = $("#id_material").val();
 
 			if(id_midia == 2){
-				
-				var dt_inicial = $("#dt_inicial").val();
-				var mes = $("#mes").val();
-				
+				form = $("#form_alugar").get(0);
 				$.ajax({
 					url: 'appCliente/gravar_carrinho.php'
-					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, dt_inicial: dt_inicial, mes: mes, ds_arte: ds_arte, id_midia: id_midia, nu_valor_alugado: nu_valor_alugado, id_material: id_material}
 					, type: 'post'
+					, data: new FormData(form)
+					, mimeType: 'multipart/form-data'  
+					, processData: false
+					, contentType: false
 					, success: function(html) {
-						redirectTo("appCliente/carrinho.php");	 
+						// redirectTo("appCliente/carrinho.php");
+						swal.fire({
+							position: 'top-right',
+							type: 'success',
+							title: html,
+							showConfirmButton: true
+						});
 					}
 					, error: function (data) {
-						swal.fire("Erro", data.responseText, "error");
+						swal.fire("Erro", data.responseText, "error"); 
 					}
 				});	
+				// var dt_inicial = $("#dt_inicial").val();
+				// var mes = $("#mes").val();
+				
+				// $.ajax({
+				// 	url: 'appCliente/gravar_carrinho.php'
+				// 	, data:	{id_usuario: id_usuario, id_ponto: id_ponto, dt_inicial: dt_inicial, mes: mes, ds_arte: ds_arte, id_midia: id_midia, nu_valor_alugado: nu_valor_alugado, id_material: id_material}
+				// 	, type: 'post'
+				// 	, success: function(html) {
+				// 		redirectTo("appCliente/carrinho.php");	 
+				// 	}
+				// 	, error: function (data) {
+				// 		swal.fire("Erro", data.responseText, "error");
+				// 	}
+				// });	
 				
 			}
 			if(id_midia == 1){
