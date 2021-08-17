@@ -113,14 +113,8 @@ $(document).ready(function() {
 					, mimeType: 'multipart/form-data'  
 					, processData: false
 					, contentType: false
-					, success: function(html) {
+					, success: function() {
 						redirectTo("appCliente/carrinho.php");
-						swal.fire({
-							position: 'top-right',
-							type: 'success',
-							title: html,
-							showConfirmButton: true
-						});
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error"); 
@@ -137,14 +131,8 @@ $(document).ready(function() {
 					, mimeType: 'multipart/form-data'  
 					, processData: false
 					, contentType: false
-					, success: function(html) {
+					, success: function() {
 						redirectTo("appCliente/carrinho.php");
-						swal.fire({
-							position: 'top-right',
-							type: 'success',
-							title: html,
-							showConfirmButton: true
-						});
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error"); 
