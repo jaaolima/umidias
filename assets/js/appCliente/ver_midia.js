@@ -140,7 +140,7 @@ $(document).ready(function() {
 					, data:	{id_usuario: id_usuario, id_ponto: id_ponto, bisemana: bisemana, id_material: id_material, ds_arte: ds_arte, id_midia: id_midia, nu_valor_alugado: nu_valor_alugado}
 					, type: 'post'
 					, success: function() {
-						redirectTo("appCliente/carrinho.php");
+						// redirectTo("appCliente/carrinho.php");
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error"); 
