@@ -310,38 +310,38 @@
 				}
 			}
 
-			// if($id_midia == 2){
-			// 	$dt_inicial    	= $dados['dt_inicial'];
-			// 	$mes    		= $dados['mes'];
+			if($id_midia == 2){
+				$dt_inicial    	= $dados['dt_inicial'];
+				$mes    		= $dados['mes'];
 				
 	
-			// 	$date = new DateTime($dt_inicial);
-			// 	$date->modify('+'.$mes.'months');
-			// 	$dt_final = $date->format('Y-m-d');
+				$date = new DateTime($dt_inicial);
+				$date->modify('+'.$mes.'months');
+				$dt_final = $date->format('Y-m-d');
 			
-			// 	try{
-			// 		$con = Conecta::criarConexao();
-			// 		$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
-			// 					VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1, :nu_valor_alugado)";
+				try{
+					$con = Conecta::criarConexao();
+					$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
+								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1, :nu_valor_alugado)";
 					
-			// 		$stmt = $con->prepare($insert);
+					$stmt = $con->prepare($insert);
 					
-			// 		$params = array(':id_usuario' => $id_usuario, 
-			// 						':id_ponto' => $id_ponto,
-			// 						':dt_inicial' => $dt_inicial,
-			// 						':dt_final' => $dt_final,
-			// 						':ds_arte' => $gravar_caminho_arquivo,
-			// 						':nu_valor_alugado' => $nu_valor_alugado);
+					$params = array(':id_usuario' => $id_usuario, 
+									':id_ponto' => $id_ponto,
+									':dt_inicial' => $dt_inicial,
+									':dt_final' => $dt_final,
+									':ds_arte' => $gravar_caminho_arquivo,
+									':nu_valor_alugado' => $nu_valor_alugado);
 	
-			// 		$stmt->execute($params);
+					$stmt->execute($params);
 					
-			// 	}
-			// 	catch(exception $e)
-			// 	{
-			// 		header('HTTP/1.1 500 Internal Server Error');
-			// 		print "ERRO:".$e->getMessage();		
-			// 	}
-			// }
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
 			
 		}
 		function buscarCarrinho($id_usuario)
