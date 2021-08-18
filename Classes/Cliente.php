@@ -191,18 +191,24 @@
 				$stmt->execute($params);
 
 				//buscar nome arquivo
-				$con = Conecta::criarConexao();
-				$selectarquivo = "select ds_arte from rl_carrinho where id_usuario=:id_usuario";		
-				$stmtarquivo = $con->prepare($selectarquivo); 
-				$paramsarquivo = array(':id_usuario' => $dados["id_usuario"]);
-				$stmtarquivo->execute($paramsarquivo);
-				while($dadosarquivo = $stmtarquivo->fetch()){
-					//excluir arquivo
-					unlink("../". $dadosarquivo["ds_arte"]);
-				}
+				try{
+					$con = Conecta::criarConexao();
+					$selectarquivo = "select ds_arte from rl_carrinho where id_usuario=:id_usuario";		
+					$stmtarquivo = $con->prepare($selectarquivo); 
+					$paramsarquivo = array(':id_usuario' => $dados["id_usuario"]);
+					$stmtarquivo->execute($paramsarquivo);
+					while($dadosarquivo = $stmtarquivo->fetch()){
+						//excluir arquivo
+						unlink("../". $dadosarquivo["ds_arte"]);
+					}
 
-				echo "Carrinho esvaziado";
-				
+					echo "Carrinho esvaziado";
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		 
+				}
 					
 			}
 			catch(exception $e)
