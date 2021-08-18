@@ -403,6 +403,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
 													<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
 													<input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario; ?>"> 
+													<input type="hidden" name="nu_valor_alugado" id="nu_valor_alugado" value="<?php echo $dados["nu_valor"];?>">
 												</div>
 												<div class="separator separator-solid"></div>
 												<div class="my-6 mx-6 d-flex">
@@ -411,7 +412,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<button class="btn btn-primary w-100 d-none" type="button" id="pagamento">Ir para método de Pagamento</button>
 												</div>
 											</div>
-											<input type="hidden" name="nu_valor_alugado" id="nu_valor_alugado" value="">
+											
 										</form>
 									</div>
 
@@ -463,7 +464,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				var local = document.getElementById("valor_alugado");
 				let valor = <?php echo $valor; ?> * totalBisemana;
 				let total = parseInt(valor, 10);
-				$("#nu_valor_total").val() = total;
 				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 				
 			});
@@ -482,7 +482,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				?>
 				let valor = <?php echo $valor ?> * mes.value;
 				let total =  parseInt(valor, 10);
-				$("#nu_valor_total").val() = total;
 				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
 			}
 			<?php endif; ?>
