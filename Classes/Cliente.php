@@ -203,15 +203,28 @@
 
 		public function excluirpontoCarrinho(array $dados)
 		{
+			
+
+
 			try{
 				$con = Conecta::criarConexao(); 
 				
-				$select = "delete from rl_carrinho where id_carrinho=:id_carrinho";
+				$delete = "delete from rl_carrinho where id_carrinho=:id_carrinho";
 				
-				$stmt = $con->prepare($select); 
+				$stmt = $con->prepare($delete); 
 				$params = array(':id_carrinho' => $dados["id_carrinho"]);
 				$stmt->execute($params);
 
+				//buscar nome arquivo
+				$con = Conecta::criarConexao();
+				$select = "select ds_arte from rl_carrinho where id_carrinho=:id_carrinho";		
+				$stmt = $con->prepare($select); 
+				$params = array(':id_carrinho' => $dados["id_carrinho"]);
+				$stmt->execute($params);
+				$dados = $stmt->fetch();
+
+				//excluir arquivo
+				unlink("/var/www/app.unimidias.com.br/". $dados["ds_arte"]);
 				echo "Ponto retirado";
 				
 					
@@ -227,7 +240,7 @@
 			$id_midia		= $dados['id_midia'];
 			$id_usuario		= $dados['id_usuario'];
 			$id_ponto    	= $dados['id_ponto'];
-			$id_material    	= $dados['id_material'];
+			$id_material    = $dados['id_material'];
 			$ds_arte    	= $_FILES['arte'];
 
 			//pegando valor do Material
@@ -248,10 +261,9 @@
 			$type = $ds_arte['type'][0];
 			$tmp = $ds_arte['tmp_name'][0];
 			$size = $ds_arte['size'][0];
-			var_dump($dados["id_material"]);
 
 			//gravar arte
-			$tamanho = 20000000;
+			$tamanho = 20000000; 
 
 			$error = array();
 			$tamanho_mb = $tamanho/1024/1024;

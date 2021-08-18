@@ -53,7 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="my-6 mx-6 d-flex row">
                                 
                                     <?php
-                                        while($dados = $retorno->fetch()){
+                                        while($dados = $retorno->fetch()){ 
                                             
                                             echo "<div class='col-4' >
                                                 <div class='card card-custom card-stretch gutter-b'>
