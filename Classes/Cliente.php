@@ -184,11 +184,11 @@
 			try{
 				$con = Conecta::criarConexao(); 
 				
-				// $select = "delete from rl_carrinho where id_usuario=:id_usuario";
+				$select = "delete from rl_carrinho where id_usuario=:id_usuario";
 				
-				// $stmt = $con->prepare($select); 
-				// $params = array(':id_usuario' => $dados["id_usuario"]);
-				// $stmt->execute($params);
+				$stmt = $con->prepare($select); 
+				$params = array(':id_usuario' => $dados["id_usuario"]);
+				$stmt->execute($params);
 
 				//buscar nome arquivo
 				try{
