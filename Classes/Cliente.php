@@ -190,6 +190,17 @@
 				$params = array(':id_usuario' => $dados["id_usuario"]);
 				$stmt->execute($params);
 
+				//buscar nome arquivo
+				$con = Conecta::criarConexao();
+				$select = "select ds_arte from rl_carrinho where id_usuario=:id_usuario";		
+				$stmt = $con->prepare($select); 
+				$params = array(':id_usuario' => $dados["id_usuario"]);
+				$stmt->execute($params);
+				while($dados = $stmt->fetch()){
+					//excluir arquivo
+					unlink("../". $dados["ds_arte"]);
+				}
+				
 				echo "Carrinho esvaziado";
 				
 					
@@ -209,11 +220,11 @@
 			try{
 				$con = Conecta::criarConexao(); 
 				
-				// $delete = "delete from rl_carrinho where id_carrinho=:id_carrinho";
+				$delete = "delete from rl_carrinho where id_carrinho=:id_carrinho";
 				
-				// $stmt = $con->prepare($delete); 
-				// $params = array(':id_carrinho' => $dados["id_carrinho"]);
-				// $stmt->execute($params);
+				$stmt = $con->prepare($delete); 
+				$params = array(':id_carrinho' => $dados["id_carrinho"]);
+				$stmt->execute($params);
 
 				//buscar nome arquivo
 				$con = Conecta::criarConexao();
