@@ -404,6 +404,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
 													<input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario; ?>"> 
 													<input type="hidden" name="nu_valor_ponto" id="nu_valor_ponto" value="<?php echo $dados["nu_valor"];?>">
+													<input type="hidden" name="nu_valor_material" id="nu_valor_material" value="">
 												</div>
 												<div class="separator separator-solid"></div>
 												<div class="my-6 mx-6 d-flex">
@@ -524,6 +525,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 
 				var local = document.getElementById("valor_alugado");
+				$("#nu_valor_material").val() = valorTotalMaterial;
 				local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 			}
 
