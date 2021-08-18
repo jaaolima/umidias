@@ -524,7 +524,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 
 				var local = document.getElementById("valor_alugado");
-				$("#nu_valor_material").val() = valorTotalMaterial;
 				local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 			}
 
