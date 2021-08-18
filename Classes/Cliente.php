@@ -229,7 +229,18 @@
 			$id_ponto    	= $dados['id_ponto'];
 			$ds_arte    	= $_FILES['arte'];
 
-
+			//pegando valor do Material
+			$con = Conecta::criarConexao();
+			$selectMaterial = "SELECT nu_valor
+						from tb_material 
+						where id_material = :id_material";
+			
+			$stmtMaterial = $con->prepare($selectMaterial);
+			
+			$params = array(':id_material' => $id_material); 
+							
+			$stmtMaterial->execute($params);
+			$dadosMaterial = $stmtMaterial->fetch();
 
 			//arte
 			$name = $ds_arte['name'][0];
@@ -270,8 +281,9 @@
 
 				//total alugado
 				$nu_valor_ponto    	= $dados['nu_valor_ponto'];
-				$Rvirgula = str_replace(",", "", $nu_valor_alugado); 
-				$nu_valor_alugado = str_replace("R$ ", "", $Rvirgula);
+				$Rvirgula = str_replace(",", "", $nu_valor_ponto); 
+				$valor = str_replace("R$ ", "", $Rvirgula);
+				$nu_valor_alugado = $valor + $dadosMaterial["nu_valor"];
 
 				$id_bisemana= '';
 				for ($i=0; $i < count($bisemanas); $i++) { 
@@ -325,10 +337,10 @@
 				$mes    		= $dados['mes'];
 
 				//total alugado
-				$nu_valor_alugado    	= $dados['nu_valor_alugado'];
-				$Rvirgula = str_replace(",", "", $nu_valor_alugado); 
+				$nu_valor_ponto    	= $dados['nu_valor_ponto'];
+				$Rvirgula = str_replace(",", "", $nu_valor_ponto); 
 				$valor = str_replace("R$ ", "", $Rvirgula);
-				$nu_valor_alugado = ($valor * $mes);
+				$nu_valor_alugado = ($valor * $mes) + $dadosMaterial["nu_valor"];
 				
 	
 				$date = new DateTime($dt_inicial);
