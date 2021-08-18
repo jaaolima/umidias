@@ -265,7 +265,11 @@
 			if($id_midia == 1){
 				$id_material    = $dados['id_material'];
 				$bisemanas 		= $dados["bisemana"];
-				$nu_valor_alugado    	= $dados['nu_valor_alugado'];
+
+				//total alugado
+				$nu_valor_ponto    	= $dados['nu_valor_ponto'];
+				$Rvirgula = str_replace(",", "", $nu_valor_alugado); 
+				$nu_valor_alugado = str_replace("R$ ", "", $Rvirgula);
 
 				$id_bisemana= '';
 				for ($i=0; $i < count($bisemanas); $i++) { 
@@ -318,9 +322,11 @@
 				$dt_inicial    	= $dados['dt_inicial'];
 				$mes    		= $dados['mes'];
 
-				//total
+				//total alugado
 				$nu_valor_alugado    	= $dados['nu_valor_alugado'];
-				$total_alugado = ($nu_valor_alugado * $mes);
+				$Rvirgula = str_replace(",", "", $nu_valor_alugado); 
+				$valor = str_replace("R$ ", "", $Rvirgula);
+				$nu_valor_alugado = ($valor * $mes);
 				
 	
 				$date = new DateTime($dt_inicial);
@@ -339,7 +345,7 @@
 									':dt_inicial' => $dt_inicial,
 									':dt_final' => $dt_final,
 									':ds_arte' => $gravar_caminho_arquivo,
-									':nu_valor_alugado' => $total_alugado);
+									':nu_valor_alugado' => $nu_valor_alugado);
 	
 					$stmt->execute($params);
 					
