@@ -192,15 +192,15 @@
 
 				//buscar nome arquivo
 				$con = Conecta::criarConexao();
-				$select = "select ds_arte from rl_carrinho where id_usuario=:id_usuario";		
-				$stmt = $con->prepare($select); 
-				$params = array(':id_usuario' => $dados["id_usuario"]);
-				$stmt->execute($params);
-				while($dados = $stmt->fetch()){
+				$selectarquivo = "select ds_arte from rl_carrinho where id_usuario=:id_usuario";		
+				$stmtarquivo = $con->prepare($selectarquivo); 
+				$paramsarquivo = array(':id_usuario' => $dados["id_usuario"]);
+				$stmtarquivo->execute($paramsarquivo);
+				while($dadosarquivo = $stmtarquivo->fetch()){
 					//excluir arquivo
-					unlink("../". $dados["ds_arte"]);
+					unlink("../". $dadosarquivo["ds_arte"]);
 				}
-				
+
 				echo "Carrinho esvaziado";
 				
 					
