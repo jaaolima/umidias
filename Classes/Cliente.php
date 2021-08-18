@@ -236,6 +236,7 @@
 			$type = $ds_arte['type'][0];
 			$tmp = $ds_arte['tmp_name'][0];
 			$size = $ds_arte['size'][0];
+			var_dump($dados["id_material"]);
 
 			//gravar arte
 			$tamanho = 20000000;
@@ -262,6 +263,7 @@
 			
 			}
 
+			//Outdoor ou Front
 			if($id_midia == 1){
 				$id_material    = $dados['id_material'];
 				$bisemanas 		= $dados["bisemana"];
