@@ -230,10 +230,10 @@
 				$stmt = $con->prepare($select); 
 				$params = array(':id_carrinho' => $dados["id_carrinho"]);
 				$stmt->execute($params);
-				$dados = $stmt->fetch();
+				$dadosarquivo = $stmt->fetch();
 
 				//excluir arquivo
-				unlink("../". $dados["ds_arte"]);
+				unlink("../". $dadosarquivo["ds_arte"]);
 
 				//deletar do banco
 				$con = Conecta::criarConexao(); 
