@@ -227,6 +227,7 @@
 			$id_midia		= $dados['id_midia'];
 			$id_usuario		= $dados['id_usuario'];
 			$id_ponto    	= $dados['id_ponto'];
+			$id_material    	= $dados['id_material'];
 			$ds_arte    	= $_FILES['arte'];
 
 			//pegando valor do Material
