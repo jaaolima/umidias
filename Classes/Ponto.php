@@ -153,7 +153,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -215,7 +215,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -241,7 +241,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -266,7 +266,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -291,7 +291,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -317,7 +317,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto

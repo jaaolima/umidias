@@ -6,6 +6,7 @@
 
 	require_once("../Classes/Ponto.php");
 	require_once("../Classes/Bisemana.php");
+	include("listar_midia.php");
 
 	$ponto = new Ponto();
 	$bisemana = new Bisemana();
@@ -223,20 +224,17 @@ License: You must have a valid license purchased only from themeforest(the above
 				map.setZoom(5);
 			});*/
 
-
+			<?php while($dados = $retorno->fetch()){ ?>
 			map.addMarker({
-				lat: -51.38739,
-				lng: -6.187181,
+				lat: <?php echo $dados["ds_latitude"]; ?>,
+				lng: <?php echo $dados["ds_longitude"]; ?>,
 				title: 'Lima',
 				details: {
 					database_id: 42,
 					author: 'HPNeo'
 				},
-				click: function(e) {
-					if (console.log) console.log(e);
-					alert('You clicked in this marker');
-				}
 			});
+			<?php } ?>
 			/*map.addMarker({
 				lat: -12.042,
 				lng: -77.028333,
