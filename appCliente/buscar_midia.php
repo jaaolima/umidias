@@ -211,7 +211,8 @@ License: You must have a valid license purchased only from themeforest(the above
 			var map = new GMaps({
 				div: '#map',
 				lat: position.coords.latitude,
-				lng: position.coords.longitude
+				lng: position.coords.longitude,
+				zoom: 30
 			});
 
 			/*google.maps.event.addListener(map, 'dblclick', function(event) {
