@@ -269,6 +269,7 @@ var demo3 = function() {
 				lat: e.latLng.lat(),
 				lng: e.latLng.lng(),
 				title: 'Seu ponto',
+                icon: '../assets/media/localizacao.png',
 				infoWindow: {
 					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
 				}

@@ -199,6 +199,7 @@ var demo3 = function() {
 				lat: e.latLng.lat(),
 				lng: e.latLng.lng(),
 				title: 'Seu ponto',
+                icon: '../assets/media/localizacao.png',
 				infoWindow: {
 					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
 				}
@@ -209,44 +210,6 @@ var demo3 = function() {
 		},
 	});
 
-	/*google.maps.event.addListener(map, 'dblclick', function(event) {
-		map.addMarker({
-			lat: event.latLng.lat(),
-			lng: event.latLng.lng(),
-			title: 'Seu ponto',
-			infoWindow: {
-				content: '<span style="color:#000">Aqui está o seu ponto</span>'
-			}
-		});	
-		map.setZoom(5);
- 	});*/
-
-
-	/*
-	map.addMarker({
-		lat: -51.38739,
-		lng: -6.187181,
-		title: 'Lima',
-		details: {
-			database_id: 42,
-			author: 'HPNeo'
-		},
-		click: function(e) {
-			if (console.log) console.log(e);
-			alert('You clicked in this marker');
-		}
-	});
-	map.addMarker({
-		lat: -12.042,
-		lng: -77.028333,
-		title: 'Marker with InfoWindow',
-		infoWindow: {
-			content: '<span style="color:#000">HTML Content!</span>'
-		}
-	});
-	map.setZoom(5);
-
-	console.log(map);*/
 }
 
 
