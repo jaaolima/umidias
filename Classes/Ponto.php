@@ -1344,7 +1344,48 @@
 		{
             $id_ponto	    = $dados['id_ponto'];
 
+
+			//deletar fotos
+			try{
+				$con = Conecta::criarConexao();
+				$selectarquivo = "select ds_foto from rl_ponto_foto where id_ponto=:id_ponto";		
+				$stmtarquivo = $con->prepare($selectarquivo); 
+				$paramsarquivo = array(':id_ponto' => $id_ponto);
+				$stmtarquivo->execute($paramsarquivo);
+				while($dadosarquivo = $stmtarquivo->fetch()){
+					//excluir arquivo
+					unlink("../". $dadosarquivo["ds_foto"]);
+				}
+
+				$delete = "delete from rl_ponto_foto where id_ponto=:id_ponto";
 			
+				$stmt = $con->prepare($delete); 
+				$params = array(':id_ponto' => $id_ponto);
+				$stmt->execute($params);
+
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+				print "ERRO:".$e->getMessage();		 
+			}
+
+			//deletar alugados
+			try{
+
+				$delete = "delete from rl_alugado where id_ponto=:id_ponto";
+			
+				$stmt = $con->prepare($delete); 
+				$params = array(':id_ponto' => $id_ponto);
+				$stmt->execute($params);
+
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+				print "ERRO:".$e->getMessage();		 
+			}
+
 			try{
 				$con = Conecta::criarConexao();
 				$insert = "delete from tb_ponto
@@ -1356,7 +1397,9 @@
                                 
 				$stmt->execute($params);
 				
+				
 				echo "Deletado com sucesso!"; 
+
 				
 			}
 			catch(exception $e)
@@ -1364,6 +1407,7 @@
 				header('HTTP/1.1 500 Internal Server Error');
     			print "ERRO:".$e->getMessage();		
 			} 
+
 		}
 		public function excluirFotoPonto(array $dados)
 		{
