@@ -196,20 +196,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				div: '#map',
 				lat: -15.849511,
 				lng: -48.022440,
-				dblclick: function(e) {
-					map.removeMarkers();
-					map.addMarker({
-						lat: e.latLng.lat(),
-						lng: e.latLng.lng(),
-						title: 'Seu ponto',
-						infoWindow: {
-							content: '<span style="color:#000">Aqui está o seu ponto!</span>'
-						}
-					});	
-					map.setZoom(5);
-					$("#ds_latitude").val(e.latLng.lat());
-					$("#ds_longitude").val(e.latLng.lng());
-				},
 			});
 
 			/*google.maps.event.addListener(map, 'dblclick', function(event) {
@@ -234,7 +220,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					author: 'HPNeo'
 				},
 				infoWindow: {
-					content: '<span style="color:#000">HTML Content!</span>'
+					content: '<span style="color:#000"><?php echo $dados["ds_local"]; ?></span>'
 				}
 			});
 			<?php } ?>
