@@ -6,7 +6,8 @@
 	require_once("../Classes/Ponto.php");
 	$ponto = new Ponto();
 	$retorno = $ponto->listarPonto($_REQUEST);
-    $id_midia = $_REQUEST["id_midia"]; 
+    $id_midia = $_REQUEST["id_midia"];  
+    header("location:buscar_midia?busca=".$_REQUEST);
 	
 ?>
 <div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">

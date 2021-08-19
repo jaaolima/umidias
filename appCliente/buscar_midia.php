@@ -13,6 +13,7 @@
 
 	$id_midia = $_REQUEST["id_midia"];
 
+	$retornoBusca = $ponto->listarPonto($_GET);
 	$optionsLocal = $ponto->listarOptionsLocal($id_midia);
 	$retorno = $bisemana->listarBisemana();
 	
@@ -224,7 +225,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				map.setZoom(5);
 			});*/
 
-			<?php while($dados = $retorno->fetch()){ ?>
+			<?php while($dados = $retornoBusca->fetch()){ ?>
 			map.addMarker({
 				lat: <?php echo $dados["ds_latitude"]; ?>,
 				lng: <?php echo $dados["ds_longitude"]; ?>,
