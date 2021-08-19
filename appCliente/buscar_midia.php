@@ -184,7 +184,14 @@ License: You must have a valid license purchased only from themeforest(the above
 					demo3(position);
 				})
 			}
-			
+			else{
+				x.innerHTML="Seu browser não suporta Geolocalização.";
+				position = {coords: 
+								lat:0,
+								lng:0
+							}
+				demo3(position);
+			}
 			
 		});
 
