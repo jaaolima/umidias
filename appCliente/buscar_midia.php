@@ -181,16 +181,16 @@ License: You must have a valid license purchased only from themeforest(the above
 			if('geolocation' in navigator){
 				navigator.geolocation.getCurrentPosition(function(position){
 					console.log(position);
-					demo3(position);
+					var latitude = position.coords.latitude;
+					var longitude = position.coords.longitude;
+					demo3(latitude, longitude);
 				})
 			}
 			else{
 				x.innerHTML="Seu browser não suporta Geolocalização.";
-				// position = {coords: 
-				// 				lat:0,
-				// 				lng:0
-				// 			}
-				demo3(position);
+				var latitude = -15.7750656;
+				var longitude = -48.0773014;
+				demo3(latitude, longitude);
 			}
 			
 		});
@@ -207,7 +207,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			});
 		});
 
-		var demo3 = function(position) {
+		var demo3 = function(latitude, longitude) {
 			var map = new GMaps({
 				div: '#map',
 				lat: position.coords.latitude,
@@ -235,7 +235,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				icon: '../assets/media/localizacao.png',
 				details: {
 					database_id: 42,
-					author: 'HPNeo'
+					author: 'HPNeo' 
 				},
 				infoWindow: {
 					content: '<span style="color:#000"><?php echo $dados["ds_local"]; ?></span>'
