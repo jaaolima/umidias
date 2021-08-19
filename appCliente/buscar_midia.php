@@ -194,8 +194,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		var demo3 = function() {
 			var map = new GMaps({
 				div: '#map',
-				lat: -15.849511,
-				lng: -48.022440,
+				lat: position.coords.latitude,
+				lng: position.coords.longitude,
 			});
 
 			/*google.maps.event.addListener(map, 'dblclick', function(event) {
@@ -233,7 +233,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		
 		const map = new google.maps.Map(document.getElementById("map"), {
 			zoom: 15,
-			center: { lat: -15.849511, lng: -48.022440 },
+			center: { lat: position.coords.latitude, lng: position.coords.longitude },
 		});
 		
 		google.maps.event.addListener(map, 'dblclick', function(event) {
