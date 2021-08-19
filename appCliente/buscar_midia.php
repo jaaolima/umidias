@@ -181,15 +181,11 @@ License: You must have a valid license purchased only from themeforest(the above
 			if('geolocation' in navigator){
 				navigator.geolocation.getCurrentPosition(function(position){
 					console.log(position);
-					
+					demo3(position);
 				})
-				var objetoCoordenadas = {
-					lat: position.coords.latitude,
-					lng: position.coords.longitude
-				}
 			}
 			
-			demo3();
+			
 		});
 
 		$(function() {
@@ -204,11 +200,11 @@ License: You must have a valid license purchased only from themeforest(the above
 			});
 		});
 
-		var demo3 = function() {
+		var demo3 = function(position) {
 			var map = new GMaps({
 				div: '#map',
-				lat: objetoCoordenadas.lat,
-				lng: objetoCoordenadas.lng,
+				lat: position.coords.latitude,
+				lng: position.coords.longitude
 			});
 
 			/*google.maps.event.addListener(map, 'dblclick', function(event) {
