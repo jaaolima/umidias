@@ -181,11 +181,12 @@ License: You must have a valid license purchased only from themeforest(the above
 			if('geolocation' in navigator){
 				navigator.geolocation.getCurrentPosition(function(position){
 					console.log(position);
-					var objetoCoordenadas = {
-						lat: position.coords.latitude,
-						lng: position.coords.longitude
-					}
+					
 				})
+				var objetoCoordenadas = {
+					lat: position.coords.latitude,
+					lng: position.coords.longitude
+				}
 			}
 			
 			demo3();
