@@ -212,7 +212,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				div: '#map',
 				lat: position.coords.latitude,
 				lng: position.coords.longitude,
-				zoom: 30
+				zoom: 8
 			});
 
 			/*google.maps.event.addListener(map, 'dblclick', function(event) {
