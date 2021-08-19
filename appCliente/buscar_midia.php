@@ -191,7 +191,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			});
 		});
 
-		var demo3 = function() {
+		var demo3 = function(position) {
 			var map = new GMaps({
 				div: '#map',
 				lat: position.coords.latitude,
@@ -229,7 +229,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 		//let marcas = [];
-		function initMap() {
+		function initMap(position) {
 		
 		const map = new google.maps.Map(document.getElementById("map"), {
 			zoom: 15,
