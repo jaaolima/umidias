@@ -178,10 +178,15 @@ License: You must have a valid license purchased only from themeforest(the above
 		// to the base of the flagpole.
 		jQuery(document).ready(function() {  
 			if('geolocation' in navigator){
-				navigator.geolocation.getCurrentPosition(demo3(position))
+				navigator.geolocation.getCurrentPosition()
 			}
+			var objetoCoordenadas = {
+				lat: position.coords.latitude,
+				lng: position.coords.longitude
+			}
+			demo3();
 		});
-		
+
 		$(function() {
 			$( "#calendario" ).datepicker({
 				numberOfMonths: 2,
@@ -197,8 +202,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		var demo3 = function(position) {
 			var map = new GMaps({
 				div: '#map',
-				lat: position.coords.latitude,
-				lng: position.coords.longitude,
+				lat: objetoCoordenadas.lat,
+				lng: objetoCoordenadas.lng,
 			});
 
 			/*google.maps.event.addListener(map, 'dblclick', function(event) {
