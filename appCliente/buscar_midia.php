@@ -6,7 +6,6 @@
 
 	require_once("../Classes/Ponto.php");
 	require_once("../Classes/Bisemana.php");
-	include("listar_midia.php");
 
 	$ponto = new Ponto();
 	$bisemana = new Bisemana();
