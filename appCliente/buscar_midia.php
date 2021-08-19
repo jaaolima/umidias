@@ -13,7 +13,7 @@
 
 	$id_midia = $_REQUEST["id_midia"];
 
-	$retornoBusca = $ponto->listarPonto($_GET);
+	$retornoBusca = $ponto->listarPontoTipo($id_midia);
 	$optionsLocal = $ponto->listarOptionsLocal($id_midia);
 	$retorno = $bisemana->listarBisemana();
 	
