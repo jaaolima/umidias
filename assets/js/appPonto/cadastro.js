@@ -87,7 +87,7 @@ $(document).ready(function() {
 		"mask": "9,99 x 9,99",
 		numericInput: true,
 	});
-	$("#nu_valor").inputmask({
+	$("#nu_valor").inputmask({ 
 		'alias': 'numeric',
 		'groupSeparator': '.',
 		'autoGroup': true,

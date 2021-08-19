@@ -77,11 +77,14 @@ $(document).ready(function() {
 		numericInput: true,
 	});
 	$("#ds_tamanho").inputmask({
-		"mask": "9,99 x 9,99",
+		"mask": "9,99 x 9,99", 
 		numericInput: true,
 	});
-	$("#nu_valor").inputmask({
-		"mask": "9.999"
+	$("#nu_valor").inputmask({ 
+		'alias': 'numeric',
+		'groupSeparator': '.',
+		'autoGroup': true,
+		'prefix': 'R$ ',
 	});
 	
 });
