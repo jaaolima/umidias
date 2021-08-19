@@ -232,7 +232,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				lat: <?php echo $dados["ds_latitude"]; ?>,
 				lng: <?php echo $dados["ds_longitude"]; ?>,
 				title: '<?php echo $dados["ds_local"]; ?>',
-				icon: 'assets/media/localizacao.png'
+				icon: '../assets/media/localizacao.png'
 				details: {
 					database_id: 42,
 					author: 'HPNeo'
