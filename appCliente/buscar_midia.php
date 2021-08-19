@@ -228,24 +228,16 @@ License: You must have a valid license purchased only from themeforest(the above
 			map.addMarker({
 				lat: <?php echo $dados["ds_latitude"]; ?>,
 				lng: <?php echo $dados["ds_longitude"]; ?>,
-				title: 'Lima',
+				title: '<?php echo $dados["ds_local"]; ?>',
 				details: {
 					database_id: 42,
 					author: 'HPNeo'
 				},
-			});
-			<?php } ?>
-			/*map.addMarker({
-				lat: -12.042,
-				lng: -77.028333,
-				title: 'Marker with InfoWindow',
 				infoWindow: {
 					content: '<span style="color:#000">HTML Content!</span>'
 				}
 			});
-			map.setZoom(5);
-
-			console.log(map);*/
+			<?php } ?>
 		}
 
 
