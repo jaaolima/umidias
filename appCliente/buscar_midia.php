@@ -210,8 +210,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		var demo3 = function(latitude, longitude) {
 			var map = new GMaps({
 				div: '#map',
-				lat: position.coords.latitude,
-				lng: position.coords.longitude,
+				lat: latitude,
+				lng: longitude,
 				zoom: 14
 			});
 
