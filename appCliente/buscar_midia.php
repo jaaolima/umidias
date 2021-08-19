@@ -224,7 +224,6 @@ License: You must have a valid license purchased only from themeforest(the above
 			});*/
 
 
-			/*
 			map.addMarker({
 				lat: -51.38739,
 				lng: -6.187181,
@@ -238,7 +237,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					alert('You clicked in this marker');
 				}
 			});
-			map.addMarker({
+			/*map.addMarker({
 				lat: -12.042,
 				lng: -77.028333,
 				title: 'Marker with InfoWindow',
