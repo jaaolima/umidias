@@ -177,9 +177,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 		// to the base of the flagpole.
 		jQuery(document).ready(function() {  
-			if('geolocation' in navigator){
-				navigator.geolocation.getCurrentPosition()
-			}
 			var objetoCoordenadas = {
 				lat: position.coords.latitude,
 				lng: position.coords.longitude
@@ -199,7 +196,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			});
 		});
 
-		var demo3 = function(position) {
+		var demo3 = function() {
 			var map = new GMaps({
 				div: '#map',
 				lat: objetoCoordenadas.lat,
