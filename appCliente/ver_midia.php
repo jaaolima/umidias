@@ -465,6 +465,8 @@ License: You must have a valid license purchased only from themeforest(the above
 				let valor = <?php echo $valor; ?> * totalBisemana;
 				let total = parseInt(valor, 10);
 				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+
+				$("#id_material").value = "";
 				
 			});
 			<?php endif; ?>
