@@ -48,7 +48,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div id="kt_header_mobile" class="header-mobile">
 						<!--begin::Logo-->
 						<a href="index.html">
-							<img alt="Logo" src="assets/media/logos/logo-default.png" class="max-h-30px" />
+							<img alt="Logo" src="assets/media/Logo-Horizontal-02.png" class="max-h-30px" />
 						</a>
 						<!--end::Logo-->
 						<!--begin::Toolbar-->
