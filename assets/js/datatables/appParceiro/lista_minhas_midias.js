@@ -48,7 +48,7 @@ var DatatablesBasicBasic = function() {
                           <i class="la la-edit"></i>
                         </a>
 						<a id="excluir"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-ponto="`+full[0]+`" >
-                          <i class="la la-remove"></i>
+                          <i class="la la-remove"></i> 
                         </a>
 						
                         `;
@@ -72,15 +72,18 @@ var DatatablesBasicBasic = function() {
 	            cancelButtonColor: '#fd397a',
 	            confirmButtonText: 'Sim, posseguir!',
 				cancelButtonText: 'Cancelar'
-	        }).then(function(result) {
+	        }).then(function(result) { 
 	            if (result.value) {
 					$.ajax({
-				        url: 'appPonto/excluir_ponto.php' 
+				        url: 'appPonto/excluir_ponto.php'
 				        , type: 'post'
 				        , data: {id_ponto : id_ponto}
 				        , success: function(html) {
 							swal.fire('Pronto!',html,'success');
 							redirectTo("appPonto/listar_ponto.php");				
+				        }
+						, error: function(html) {
+							swal.fire('O seu ponto ainda tem locação a cumprir!',html,'error');				
 				        }
 				    });
 	                
