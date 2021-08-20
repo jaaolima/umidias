@@ -46,7 +46,7 @@
 					while ($dados = $retorno->fetch())
 					{
 						if($dados["st_status"] === "D"){
-							echo "<tr class='table-active'>
+							echo "<tr class='table-dark'>
 								<td>".$dados['id_ponto']."</td>
 								<td>".$dados['ds_descricao']."</td>
 								<td>".$dados['nu_valor']."</td>
