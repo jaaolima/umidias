@@ -116,6 +116,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									<path d="M9 18L15 12L9 6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 								</svg>
 								<a class="texto-chumbo">Detalhes da mídia</a>
+								<div>
+									<button class="btn btn-outline-dark" id="desativar">Desativar Ponto</button>
+								</div>		
 							</div>
 							<div class="content flex-column-fluid pt-0" id="kt_content">
 								<div class="row">
@@ -207,7 +210,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 			map.addMarker({
 				lat: <?php echo $dadosPonto["ds_latitude"]; ?>,
-				lng: <?php echo $dadosPonto["ds_longitude"]; ?>,
+				lng: <?php echo $dadosPonto["ds_longitude"]; ?>, 
 				title: '<?php echo $dadosPonto["ds_local"]; ?>',
 				icon: '../assets/media/localizacao.png',
 				details: {
