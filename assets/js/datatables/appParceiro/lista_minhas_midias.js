@@ -80,10 +80,10 @@ var DatatablesBasicBasic = function() {
 				        , data: {id_ponto : id_ponto}
 				        , success: function(html) {
 							swal.fire('Pronto!',html,'success');
-							redirectTo("appPonto/listar_ponto.php");				
+							redirectTo("appPonto/listar_minhas_midias.php");				
 				        }
 						, error: function(html) {
-							swal.fire('O seu ponto ainda tem locação a cumprir!',html,'error');				
+							swal.fire('O seu ponto ainda tem locação a cumprir!',html,'error');	 			
 				        }
 				    });
 	                
