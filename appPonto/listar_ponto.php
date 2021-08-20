@@ -55,7 +55,7 @@
 								<td nowrap></td>
 							</tr>";
 						}
-						if($dados["st_status"] === "" || $dados["st_status"] === "A"){
+						if($dados["st_status"] === null || $dados["st_status"] === "A"){
 							echo "<tr>
 								<td>".$dados['id_ponto']."</td>
 								<td>".$dados['ds_descricao']."</td>
