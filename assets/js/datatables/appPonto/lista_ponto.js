@@ -69,7 +69,7 @@ var DatatablesBasicBasic = function() {
 	            cancelButtonColor: '#fd397a',
 	            confirmButtonText: 'Sim, posseguir!',
 				cancelButtonText: 'Cancelar'
-	        }).then(function(result) {
+	        }).then(function(result) { 
 	            if (result.value) {
 					$.ajax({
 				        url: 'appPonto/excluir_ponto.php'
@@ -78,6 +78,9 @@ var DatatablesBasicBasic = function() {
 				        , success: function(html) {
 							swal.fire('Pronto!',html,'success');
 							redirectTo("appPonto/listar_ponto.php");				
+				        }
+						, error: function(html) {
+							swal.fire('Ainda não',html,'error');				
 				        }
 				    });
 	                
