@@ -45,7 +45,8 @@
 				<?php
 					while ($dados = $retorno->fetch())
 					{
-						echo "<tr>
+						if($dados["st_status"] === "D"){
+							echo "<tr class='table-active'>
 								<td>".$dados['id_ponto']."</td>
 								<td>".$dados['ds_descricao']."</td>
 								<td>".$dados['nu_valor']."</td>
@@ -53,6 +54,17 @@
 								<td>".$dados['ds_observacao']."</td>
 								<td nowrap></td>
 							</tr>";
+						}
+						if($dados["st_status"] === "" || $dados["st_status"] === "A"){
+							echo "<tr>
+								<td>".$dados['id_ponto']."</td>
+								<td>".$dados['ds_descricao']."</td>
+								<td>".$dados['nu_valor']."</td>
+								<td>".$dados['ds_tipo']."</td>
+								<td>".$dados['ds_observacao']."</td>
+								<td nowrap></td>
+							</tr>";
+						}
 					}
 				?>
 			</tbody>

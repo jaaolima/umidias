@@ -1441,7 +1441,7 @@
 				$stmt->execute($params);
 				
 				
-				echo "Deletado com sucesso!"; 
+				echo "Desativado com sucesso!"; 
 
 				
 			}
