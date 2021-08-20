@@ -48,6 +48,9 @@ var DatatablesBasicBasic = function() {
 						<a id="excluir"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-ponto="`+full[0]+`" >
                           <i class="la la-remove"></i>
                         </a>
+						<a id="Desativar"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-ponto="`+full[0]+`" >
+                          <i class="la-low-vision"></i>
+                        </a>
                         `;
 					},
 				},
@@ -87,7 +90,37 @@ var DatatablesBasicBasic = function() {
 	            }
 	        });
 			
-		}); 
+		});  
+
+		table.on('click', '#desativar', function() {
+			var id_ponto = $(this).data("ponto");
+			swal.fire({
+	            title: 'Tem certeza?',
+	            text: "Desejar Desativar o Ponto?",
+	            type: 'warning',
+	            showCancelButton: true,
+	            cancelButtonColor: '#fd397a',
+	            confirmButtonText: 'Sim, posseguir!',
+				cancelButtonText: 'Cancelar'
+	        }).then(function(result) { 
+	            if (result.value) {
+					$.ajax({
+				        url: 'appPonto/desativar_ponto.php'
+				        , type: 'post'
+				        , data: {id_ponto : id_ponto}
+				        , success: function(html) {
+							swal.fire('Pronto!',html,'success');
+							redirectTo("appPonto/listar_ponto.php");				
+				        }
+						, error: function(html) {
+							swal.fire('O seu ponto ainda tem locação a cumprir!',html,'error');				
+				        }
+				    });
+	                
+	            }
+	        });
+			
+		});  
 	
 
 		table.on('change', 'tbody tr .m-checkbox', function() {

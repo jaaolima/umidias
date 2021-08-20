@@ -59,7 +59,7 @@
 		</table>
 
 		<!--end: Datatable -->
-	</div>
+	</div> 
 </div>
 
 <script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
