@@ -116,12 +116,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									<path d="M9 18L15 12L9 6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 								</svg>
 								<a class="texto-chumbo">Detalhes da mídia</a>
-								<?php if($dados["st_status"] === null || $dados["st_status"] === "A") : ?>
+								<?php if($dadosPonto["st_status"] === null || $dadosPonto["st_status"] === "A") : ?>
 								<div class="text-right">
 									<button class="btn btn-dark" id="desativar">Desativar Ponto</button>
 								</div>		
 								<?php endif; ?>
-								<?php if($dados["st_status"] === "D") : ?>
+								<?php if($dadosPonto["st_status"] === "D") : ?>
 								<div class="text-right">
 									<button class="btn btn-primary" id="ativar">Ativar Ponto</button>
 								</div>		
