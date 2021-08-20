@@ -242,7 +242,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				}
 			});
 			<?php } ?>
-		}
+		} 
 
 		</script>
 		<!--end::Global Theme Bundle-->

@@ -185,14 +185,27 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
 jQuery(document).ready(function() {
-	demo3();
+	if('geolocation' in navigator){
+        navigator.geolocation.getCurrentPosition(function(position){
+            console.log(position);
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            demo3(latitude, longitude);
+        })
+    }
+    else{
+        x.innerHTML="Seu browser não suporta Geolocalização.";
+        var latitude = -15.7750656;
+        var longitude = -48.0773014;
+        demo3(latitude, longitude);
+    }
 });
-
-var demo3 = function() {
+var demo3 = function(latitude, longitude) {
 	var map = new GMaps({
 		div: '#map',
-		lat: -15.849511,
-		lng: -48.022440,
+        lat: latitude,
+        lng: longitude,
+        zoom: 14,
 		dblclick: function(e) {
 			map.removeMarkers();
 			map.addMarker({
@@ -208,7 +221,7 @@ var demo3 = function() {
 			$("#ds_latitude").val(e.latLng.lat());
 			$("#ds_longitude").val(e.latLng.lng());
 		},
-	});
+	}); 
 
 }
 
