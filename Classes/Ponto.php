@@ -519,7 +519,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, nu_valor_alugado
+				$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, nu_valor_alugado, id_alugado
 							FROM rl_alugado a
 							right join rl_ponto_foto f on a.id_ponto=f.id_ponto
 							right join tb_ponto p on a.id_ponto=p.id_ponto
@@ -1071,22 +1071,22 @@
     			print "ERRO:".$e->getMessage();	
 			}	
 		}
-		function BuscarDadosPontoAlugado($id_ponto) 
+		function BuscarDadosPontoAlugado($id_alugado) 
 		{
 			try{
 				$con = Conecta::criarConexao();
 				
 				
 				$select = "SELECT 
-							a.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, a.id_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado, id_status_midia, s.ds_status, a.ds_arte
+							a.id_ponto, id_alugado, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, a.id_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado, id_status_midia, s.ds_status, ds_arte
 						FROM rl_alugado a
 						right join tb_ponto p on a.id_ponto=p.id_ponto
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
 						left join tb_status_midia s on a.id_status_midia=s.id_status
-						WHERE a.id_ponto = :id_ponto";
+						WHERE a.id_alugado = :id_alugado";
 
 				$stmt = $con->prepare($select);
-			   	$params = array(':id_ponto' => $id_ponto);
+			   	$params = array(':id_alugado' => $id_alugado);
 			   
 			    $stmt->execute($params);
 

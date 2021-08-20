@@ -7,9 +7,10 @@
 	require_once("../Classes/Ponto.php");
 
 	$id_ponto = $_GET["id_ponto"]; 
+	$id_alugado = $_GET["id_alugado"]; 
 	
 	$ponto = new Ponto();
-	$dados = $ponto->BuscarDadosPontoAlugado($id_ponto);
+	$dados = $ponto->BuscarDadosPontoAlugado($id_alugado);
 	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto); 
 
 
