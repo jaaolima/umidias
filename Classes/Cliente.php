@@ -250,7 +250,7 @@
 			catch(exception $e)
 			{
 				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		 
+    			print "ERRO:".$e->getMessage();	 	 
 			}
 		}
 		public function gravarCarrinho(array $dados)
@@ -462,7 +462,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$selectCarrinho = "SELECT c.id_ponto, id_usuario, dt_inicial, dt_final, ds_arte, id_midia, id_bisemana, c.id_material
+				$selectCarrinho = "SELECT c.id_ponto, id_usuario, dt_inicial, dt_final, c.ds_arte, id_midia, id_bisemana, c.id_material, c.nu_valor_alugado
 							FROM rl_carrinho c
 							inner join tb_ponto p on c.id_ponto=p.id_ponto
 							where id_usuario = :id_usuario ";
@@ -479,14 +479,15 @@
 					$dt_inicial	    = $dadosCarrinho['dt_inicial'];
 					$dt_final	    = $dadosCarrinho['dt_final'];
 					$id_material	= $dadosCarrinho['id_material'];
+					$nu_valor_alugado	= $dadosCarrinho['nu_valor_alugado'];
 
 					
 					if($id_midia == 2){
 		
 						try{
 							$con = Conecta::criarConexao();
-							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material)
-										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1)";
+							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
+										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1, :nu_valor_alugado)";
 							
 							$stmt = $con->prepare($insert);
 							 
@@ -494,7 +495,8 @@
 											':id_ponto' => $id_ponto,
 											':dt_inicial' => $dt_inicial,
 											':dt_final' => $dt_final,
-											':ds_arte' => $ds_arte);
+											':ds_arte' => $ds_arte,
+											':nu_valor_alugado' => $nu_valor_alugado);
 											
 							$stmt->execute($params);
 
@@ -510,8 +512,8 @@
 					if($id_midia == 1){
 						try{
 							$con = Conecta::criarConexao();
-							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final,  id_material)
-										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final,  :id_material)";
+							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final,  id_material, ds_arte, nu_valor_alugado)
+										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final,  :id_material, :ds_arte, :nu_valor_alugado)";
 							
 							$stmt = $con->prepare($insert);
 							
@@ -519,46 +521,11 @@
 											':id_ponto' => $id_ponto,
 											':dt_inicial' => $dt_inicial,
 											':dt_final' => $dt_final,
-											':id_material' => $id_material);
+											':id_material' => $id_material,
+											':ds_arte' => $ds_arte,
+											':nu_valor_alugado' => $nu_valor_alugado);
 											
 							$stmt->execute($params);
-
-							//gravar arte
-							// $tamanho = 20000000;
-
-							// $error = array();
-							// $tamanho_mb = $tamanho/1024/1024;
-							
-							// if($size > $tamanho) {
-							// 	$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
-							// }
-
-							// if (count($error) == 0) {
-							// 	// Pega extensão da imagem
-							// 	preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $name, $ext);
-							// 	// Gera um nome único para o arquivo
-							// 	$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
-							// 	// Caminho de onde ficará o arquivo
-							// 	$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_artes/" . $nome_arquivo;
-				
-							// 	$gravar_caminho_arquivo = "docs_artes/" . $nome_arquivo;
-				
-							
-								
-							// 	// Faz o upload da imagem para seu respectivo caminho
-							// 	$moved = move_uploaded_file($tmp,  $caminho_arquivo);
-
-							// 	$insert_arte = "insert into rl_arte(id_ponto, id_usuario,  ds_arte) values (:id_ponto, :id_usuario :ds_arte)";
-
-							// 	$stmt_arte = $con->prepare($insert_arte);
-						
-							// 	$params_arte = array(':id_ponto' => $id_ponto,
-							// 						':id_usuario' => $id_usuario,
-							// 						':ds_arte' => $gravar_caminho_arquivo
-							// 						);
-												
-							// 	$stmt_arte->execute($params_arte);
-							// }
 							
 						}
 						catch(exception $e)
