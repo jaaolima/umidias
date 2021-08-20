@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="d-none d-lg-flex align-items-center mr-3">
 								<!--begin::Logo-->
 								<a href="index.html">
-                                    <img alt="Logo" src="assets/media/Logo-Horizontal-02.png" class="max-h-30px" /> 
+                                    <img alt="Logo" src="assets/media/Logo-Horizontal-02.png" class="max-h-120px" /> 
                                 </a>
 								<!--end::Logo-->
 							</div>
