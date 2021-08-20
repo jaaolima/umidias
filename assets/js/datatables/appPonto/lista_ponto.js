@@ -80,7 +80,7 @@ var DatatablesBasicBasic = function() {
 							redirectTo("appPonto/listar_ponto.php");				
 				        }
 						, error: function(html) {
-							swal.fire('Ainda não',html,'error');				
+							swal.fire('O seu ponto aina tem locação a cumprir!',html,'error');				
 				        }
 				    });
 	                

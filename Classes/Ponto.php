@@ -1423,7 +1423,6 @@
 			}
 			else{
 				header('Content-type: application/json');
-				print "O seu ponto ainda tem locações a cumprir!";
 			}
 
 		}
