@@ -1359,67 +1359,67 @@
 			}
 			if($dadosponto["id_ponto"] == 0){
 				//deletar fotos
-				try{
-					$con = Conecta::criarConexao();
-					$selectarquivo = "select ds_foto from rl_ponto_foto where id_ponto=:id_ponto";		
-					$stmtarquivo = $con->prepare($selectarquivo); 
-					$paramsarquivo = array(':id_ponto' => $id_ponto);
-					$stmtarquivo->execute($paramsarquivo);
-					while($dadosarquivo = $stmtarquivo->fetch()){
-						//excluir arquivo
-						unlink("../". $dadosarquivo["ds_foto"]);
-					}
+				// try{
+				// 	$con = Conecta::criarConexao();
+				// 	$selectarquivo = "select ds_foto from rl_ponto_foto where id_ponto=:id_ponto";		
+				// 	$stmtarquivo = $con->prepare($selectarquivo); 
+				// 	$paramsarquivo = array(':id_ponto' => $id_ponto);
+				// 	$stmtarquivo->execute($paramsarquivo);
+				// 	while($dadosarquivo = $stmtarquivo->fetch()){
+				// 		//excluir arquivo
+				// 		unlink("../". $dadosarquivo["ds_foto"]);
+				// 	}
 
-					$delete = "delete from rl_ponto_foto where id_ponto=:id_ponto"; 
+				// 	$delete = "delete from rl_ponto_foto where id_ponto=:id_ponto"; 
 				
-					$stmt = $con->prepare($delete); 
-					$params = array(':id_ponto' => $id_ponto);
-					$stmt->execute($params);
+				// 	$stmt = $con->prepare($delete); 
+				// 	$params = array(':id_ponto' => $id_ponto);
+				// 	$stmt->execute($params);
 
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		 
-				}
+				// }
+				// catch(exception $e)
+				// {
+				// 	header('HTTP/1.1 500 Internal Server Error');
+				// 	print "ERRO:".$e->getMessage();		 
+				// }
 
-				//deletar alugados
-				try{
+				// //deletar alugados
+				// try{
 
-					$delete = "delete from rl_alugado where id_ponto=:id_ponto";
+				// 	$delete = "delete from rl_alugado where id_ponto=:id_ponto";
 				
-					$stmt = $con->prepare($delete); 
-					$params = array(':id_ponto' => $id_ponto);
-					$stmt->execute($params);
+				// 	$stmt = $con->prepare($delete); 
+				// 	$params = array(':id_ponto' => $id_ponto);
+				// 	$stmt->execute($params);
 
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		 
-				}
+				// }
+				// catch(exception $e)
+				// {
+				// 	header('HTTP/1.1 500 Internal Server Error');
+				// 	print "ERRO:".$e->getMessage();		 
+				// }
 
-				try{
-					$con = Conecta::criarConexao();
-					$insert = "delete from tb_ponto
-								WHERE id_ponto=:id_ponto";
+				// try{
+				// 	$con = Conecta::criarConexao();
+				// 	$insert = "delete from tb_ponto
+				// 				WHERE id_ponto=:id_ponto";
 					
-					$stmt = $con->prepare($insert);
+				// 	$stmt = $con->prepare($insert);
 					
-					$params = array(':id_ponto' => $id_ponto);
+				// 	$params = array(':id_ponto' => $id_ponto);
 									
-					$stmt->execute($params);
+				// 	$stmt->execute($params);
 					
 					
-					echo "Deletado com sucesso!"; 
+				// 	echo "Deletado com sucesso!"; 
 
 					
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
-				} 
+				// }
+				// catch(exception $e)
+				// {
+				// 	header('HTTP/1.1 500 Internal Server Error');
+				// 	print "ERRO:".$e->getMessage();		
+				// } 
 			}
 			else{
 				header('HTTP/1.1 500 Internal Server Error');
