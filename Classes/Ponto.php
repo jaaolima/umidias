@@ -1453,6 +1453,33 @@
 
 
 		}
+		public function ativarPonto(array $dados)
+		{
+            $id_ponto	    = $dados['id_ponto'];
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "update tb_ponto set st_status = 'A'
+							WHERE id_ponto=:id_ponto";
+				
+				$stmt = $con->prepare($insert);
+				
+				$params = array(':id_ponto' => $id_ponto);
+								
+				$stmt->execute($params);
+				
+				
+				echo "Ativado com sucesso!"; 
+
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+				print "ERRO:".$e->getMessage();		
+			} 
+
+
+		}
 		public function excluirFotoPonto(array $dados)
 		{
             $id_ponto_foto	    = $dados['id_ponto_foto'];

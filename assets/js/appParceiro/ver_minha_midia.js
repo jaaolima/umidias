@@ -25,7 +25,34 @@ $(document).ready(function() {
 			}
 		});
 		
-	});     
+	});    
+	
+	$("#ativar").on('click', function() {
+		var id_ponto = $("#id_ponto");
+		swal.fire({
+			title: 'Tem certeza?',
+			text: "Desejar Ativar o Ponto?",
+			type: 'warning',
+			showCancelButton: true,
+			cancelButtonColor: '#fd397a',
+			confirmButtonText: 'Sim, posseguir!',
+			cancelButtonText: 'Cancelar'
+		}).then(function(result) { 
+			if (result.value) {
+				$.ajax({
+					url: 'appPonto/ativar_ponto.php'
+					, type: 'post'
+					, data: {id_ponto : id_ponto}
+					, success: function(html) {
+						swal.fire('Pronto!',html,'success');
+						redirectTo('appParceiro/ver_minha_midia.php?id_ponto='+id_ponto);				
+					}
+				});
+				
+			}
+		});
+		
+	}); 
 
     $("#ver_foto").on("click", function(){
 		$('#carrossel').removeClass("d-none");
