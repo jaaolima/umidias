@@ -11,6 +11,7 @@
 	$ponto = new Ponto();
 	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto); 
     $dadosAlugado = $ponto->BuscarAlugadoPonto($id_ponto);   
+	$dadosPonto = $ponto->BuscarDadosPonto($id_ponto);
 
 
 ?>
@@ -200,21 +201,21 @@ License: You must have a valid license purchased only from themeforest(the above
 		var demo3 = function() {
 			var map = new GMaps({
 				div: '#map',
-				lat: <?php echo $dados["ds_latitude"]; ?>,
-				lng: <?php echo $dados["ds_longitude"]; ?>,
+				lat: <?php echo $dadosPonto["ds_latitude"]; ?>,
+				lng: <?php echo $dadosPonto["ds_longitude"]; ?>,
 			});
 
 			map.addMarker({
-				lat: <?php echo $dados["ds_latitude"]; ?>,
-				lng: <?php echo $dados["ds_longitude"]; ?>,
-				title: '<?php echo $dados["ds_local"]; ?>',
+				lat: <?php echo $dadosPonto["ds_latitude"]; ?>,
+				lng: <?php echo $dadosPonto["ds_longitude"]; ?>,
+				title: '<?php echo $dadosPonto["ds_local"]; ?>',
 				icon: '../assets/media/localizacao.png',
 				details: {
 					database_id: 42,
 					author: 'HPNeo'
 				},
 				infoWindow: {
-					content: '<span style="color:#000"><?php echo $dados["ds_local"]; ?></span>'
+					content: '<span style="color:#000"><?php echo $dadosPonto["ds_local"]; ?></span>'
 				}
 			});
 
