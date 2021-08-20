@@ -48,7 +48,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div id="kt_header_mobile" class="header-mobile">
 						<!--begin::Logo-->
 						<a href="index.html">
-							<img alt="Logo" src="assets/media/Logo-Horizontal-02.png" class="max-h-30px" />
+							<img alt="Logo" src="assets/media/Logo-Horizontal-02.png" class="max-h-30px" /> 
 						</a>
 						<!--end::Logo-->
 						<!--begin::Toolbar-->
@@ -80,9 +80,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--begin::Left-->
 							<div class="d-none d-lg-flex align-items-center mr-3">
 								<!--begin::Logo-->
-								<a href="index.html" class="mr-20">
-									<img alt="Logo" src="assets/media/logos/logo-default.png" class="logo-default max-h-35px" />
-								</a>
+								<a href="index.html">
+                                    <img alt="Logo" src="assets/media/Logo-Horizontal-02.png" class="max-h-30px" /> 
+                                </a>
 								<!--end::Logo-->
 							</div>
 							<!--end::Left-->
