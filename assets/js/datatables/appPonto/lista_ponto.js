@@ -48,7 +48,7 @@ var DatatablesBasicBasic = function() {
 						<a id="excluir"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-ponto="`+full[0]+`" >
                           <i class="la la-remove"></i>
                         </a>
-						<a id="Desativar"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Desativar" data-ponto="`+full[0]+`" >
+						<a id="desativar"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Desativar" data-ponto="`+full[0]+`" >
                           <i class="la-lock"></i>
                         </a>
                         `;
