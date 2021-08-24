@@ -284,30 +284,19 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="content flex-column-fluid" id="kt_content">
 								<!--begin::Dashboard-->
 								<div class="row">
-									<div class="col-xl-12">
-										<!--begin::Tiles Widget 25-->
-										<div class="card card-custom bg-white">
-											<div class="card-header border-0 py-5">
-												<h3 class="card-title align-items-start flex-column">
-													<span class="card-label font-weight-bolder text-dark">Treinos</span>
-												</h3>
-											</div>
-											<div class="owl-carousel owl-theme">
-												<div class="item"><h4>1</h4></div>
-												<div class="item"><h4>2</h4></div>
-												<div class="item"><h4>3</h4></div>
-												<div class="item"><h4>4</h4></div>
-												<div class="item"><h4>5</h4></div>
-												<div class="item"><h4>6</h4></div>
-												<div class="item"><h4>7</h4></div>
-												<div class="item"><h4>8</h4></div>
-												<div class="item"><h4>9</h4></div>
-												<div class="item"><h4>10</h4></div>
-												<div class="item"><h4>11</h4></div>
-												<div class="item"><h4>12</h4></div>
-											</div>
-										</div>
-										<!--end::Tiles Widget 25-->
+									<div class="owl-carousel owl-theme">
+										<div class="item"><h4>1</h4></div>
+										<div class="item"><h4>2</h4></div>
+										<div class="item"><h4>3</h4></div>
+										<div class="item"><h4>4</h4></div>
+										<div class="item"><h4>5</h4></div>
+										<div class="item"><h4>6</h4></div>
+										<div class="item"><h4>7</h4></div>
+										<div class="item"><h4>8</h4></div>
+										<div class="item"><h4>9</h4></div>
+										<div class="item"><h4>10</h4></div>
+										<div class="item"><h4>11</h4></div>
+										<div class="item"><h4>12</h4></div>
 									</div>
 									<div class="col-lg-12">
 										<div class="card card-custom w-100 bgi-no-repeat bgi-size-cover gutter-b bg-white p-8" >
