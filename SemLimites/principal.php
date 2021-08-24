@@ -3711,6 +3711,33 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/js/pages/widgets.js"></script> 
 		<script src="assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
 		<!--end::Page Scripts-->
+		<script>
+			//carousel
+			$(document).ready(function(){
+				$(".owl-carousel").owlCarousel({
+					items:4,
+					nav:true,
+					center:true,
+					loop:true,
+					dots:false,
+					margin:30,
+					// responsive: {
+					// 	0:{
+					// 		items:1
+					// 	},
+					// 	360:{
+					// 		items:3
+					// 	},
+					// 	2000:{
+					// 		items:4
+					// 	}
+					// }
+
+				});
+
+			});
+
+		</script>
 	</body>
 	<!--end::Body-->
 </html>
