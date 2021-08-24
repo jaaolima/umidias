@@ -1810,72 +1810,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							eventLimit: true, // allow "more" link when too many events
 							businessHours: true, // display business hours
 							events: [
-								<?php
-
-
-									while($dadosData = $retornoData->fetch()){
-										
-										$dt_final = date('Y-m-d', strtotime("+1 days",strtotime($dadosData["dt_final"]))); 
-										$hoje = date('Y-m-d');
-										
-										/*if($hoje >= $dadosData["dt_inicial"] && $dadosData["dt_final"] >= $hoje){
-											echo "
-											{
-												start: '".$dadosData["dt_inicial"]."',
-												end: '".$dt_final."',
-												color: '#7E8299' ,
-												rendering: 'background'
-												
-											},";
-										}
-										else{
-											echo "
-											{
-
-												start: '".$dadosData["dt_inicial"]."',
-												end: '".$dt_final."',
-												color: '#FFA800' ,
-												rendering: 'background'
-												
-											},";
-										}*/
-										if($hoje >= $dadosData["dt_inicial"] && $dadosData["dt_final"] >= $hoje){
-											echo "
-											{
-												title: '".$dadosData["ds_empresa"]."',
-												start: '".$dadosData["dt_inicial"]."',
-												description: '".$dadosData["dt_inicial"]."'/'".$dt_final."',
-												className: 'fc-event-success fc-event-solid',
-												end: '".$dt_final."',
-												
-											},";
-										}
-										else{
-											echo "
-											{
-												title: '".$dadosData["ds_empresa"]."',
-												start: '".$dadosData["dt_inicial"]."',
-												description: '".$dadosData["dt_inicial"]."'/'".$dt_final."',
-												end: '".$dt_final."',
-												className: 'fc-event-warning fc-event-solid',
-
-												
-											},";
-										}
-										$hoje = date('Y-m-d');
-										echo "
-										{
-											start: '".$hoje."',
-											color: '#1e8fff8a' ,
-											rendering: 'background'
-											
-										},";
-										
-
-									};
-
-
-								?>
+								
 							],
 							/*eventBackgroundColor: '#46454565' ,
 							eventTextColor: 'white' ,*/
