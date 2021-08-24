@@ -33,7 +33,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
-		<link rel="shortcut icon" href="assets/media/Logo-Horizontal-02.png" />
+		<link rel="shortcut icon" href="assets/media/Logo-vertical-01.png" />
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -48,7 +48,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div id="kt_header_mobile" class="header-mobile">
 						<!--begin::Logo-->
 						<a href="index.html">
-							<img alt="Logo" src="assets/media/Logo-Horizontal-01.png" class="max-h-30px" /> 
+							<img alt="Logo" src="assets/media/Logo-vertical-01.png" class="max-h-30px" /> 
 						</a>
 						<!--end::Logo-->
 						<!--begin::Toolbar-->
@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="d-none d-lg-flex align-items-center mr-3">
 								<!--begin::Logo-->
 								<a href="index.html">
-                                    <img alt="Logo" src="assets/media/Logo-Horizontal-01.png" class="max-h-200px" /> 
+                                    <img alt="Logo" src="assets/media/Logo-vertical-01.png" class="max-h-200px" /> 
                                 </a>
 								<!--end::Logo-->
 							</div>
@@ -1060,7 +1060,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</li>
 									<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
 										<a href="javascript:;" class="menu-link menu-toggle">
-											<span class="menu-text">Pagamento</span>
+											<span class="menu-text">Plano</span>
 										</a>
 									</li>
 									<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
