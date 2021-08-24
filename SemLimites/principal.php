@@ -294,7 +294,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 													<div class="row col-12 mt-4 owl-carousel owl-theme" >
 														<div class='item' >
-															<div class="card card-custom gutter-b" style="height: 250px">
+															<div class="card card-custom gutter-b">
 																<!--begin::Body-->
 																<div class="card-body d-flex flex-column p-0">
 																	<!--begin::Stats-->
@@ -3687,7 +3687,6 @@ License: You must have a valid license purchased only from themeforest(the above
 			//carousel
 			$(document).ready(function(){
 				$(".owl-carousel").owlCarousel({
-					items:4,
 					nav:true,
 					center:true,
 					loop:true,
