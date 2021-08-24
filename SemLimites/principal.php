@@ -294,27 +294,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<div class="card-body">
 												<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
-													<div class="row col-12 mt-4 owl-carousel owl-theme d-block" >
-														<div class='item'>
-															<div class="card card-custom">
-																<p>teste</p>
-															</div>
-														</div>
-														<div class='item'>
-															<div class="card card-custom">
-																<p>teste</p>
-															</div>
-														</div>
-														<div class='item'>
-															<div class="card card-custom">
-																<p>teste</p>
-															</div>
-														</div>
-														<div class='item'>
-															<div class="card card-custom">
-																<p>teste</p>
-															</div>
-														</div>
+													<div class="row col-12 mt-4 owl-carousel owl-theme" >
 													</div>
 												</div>
 											</div>
