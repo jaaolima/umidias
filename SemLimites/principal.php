@@ -677,7 +677,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-lg-8">
+									<div class="col-lg-12">
 										<div class="card card-custom w-100 bgi-no-repeat bgi-size-cover gutter-b bg-white p-8" >
 											<div id="calendario"></div>
 										</div>
