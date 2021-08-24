@@ -1453,7 +1453,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					items:4,
 					nav:true,
 					center:true,
-					// loop:true,
+					loop:true,
 					// dots:false,
 					// margin:30,
 					// responsive: {
