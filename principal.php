@@ -616,7 +616,7 @@
 																	}
 																	
 																?>
-																</tbody>
+																</tbody> 
 															</table>
 															<div class="w-100 mt-6">
 																<a href="appCliente/listar_minhas_midias.php" class="text-primary float-right">Ver todas as mídias</a>
