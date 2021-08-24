@@ -1450,12 +1450,12 @@ License: You must have a valid license purchased only from themeforest(the above
 			//carousel
 			$(document).ready(function(){
 				$(".owl-carousel").owlCarousel({
-					items:4,
-					nav:true,
-					center:true,
-					loop:true,
-					dots:false,
-					margin:30,
+					// items:4,
+					// nav:true,
+					// center:true,
+					// loop:true,
+					// dots:false,
+					// margin:30,
 					// responsive: {
 					// 	0:{
 					// 		items:1
