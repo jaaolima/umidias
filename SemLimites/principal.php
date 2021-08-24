@@ -681,7 +681,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="card card-custom w-100 bgi-no-repeat bgi-size-cover gutter-b bg-white p-8" >
 											<div class="card-header border-0 py-5">
 												<h3 class="card-title align-items-start flex-column">
-													<span class="card-label font-weight-bolder text-dark">Treinos</span>
+													<span class="card-label font-weight-bolder text-dark">Calendário</span>
 												</h3>
 											</div>
 											<div class="card-body">
