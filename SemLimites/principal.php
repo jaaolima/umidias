@@ -3691,7 +3691,6 @@ License: You must have a valid license purchased only from themeforest(the above
 					center:true,
 					loop:true,
 					dots:false,
-					margin:30,
 					// responsive: {
 					// 	0:{
 					// 		items:1
