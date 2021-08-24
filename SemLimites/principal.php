@@ -287,13 +287,30 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="col-xl-12">
 										<!--begin::Tiles Widget 25-->
 										<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
+											<div class="card-header border-0 py-5">
+												<h3 class="card-title align-items-start flex-column">
+													<span class="card-label font-weight-bolder text-dark">Treinos</span>
+												</h3>
+											</div>
 											<div class="card-body">
 												<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
-													<div class="flex-grow-1" style="display: inherit;">
-														<h3  class="titulo-div">Treinos</h3>
-													</div>
 													<div class="row col-12 mt-4 owl-carousel owl-theme" >
-														<div class='item' >
+														<div class='item'>
+															<div class="card card-custom">
+																<p>teste</p>
+															</div>
+														</div>
+														<div class='item'>
+															<div class="card card-custom">
+																<p>teste</p>
+															</div>
+														</div>
+														<div class='item'>
+															<div class="card card-custom">
+																<p>teste</p>
+															</div>
+														</div>
+														<div class='item'>
 															<div class="card card-custom">
 																<p>teste</p>
 															</div>
