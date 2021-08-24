@@ -296,7 +296,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 													<div class="row col-12 mt-4 owl-carousel owl-theme" >
 														<div class="item">
-
+															<div class="card col-4">
+																<p>teste</p>
+															</div>
 														</div>
 													</div>
 												</div>
