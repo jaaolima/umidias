@@ -22,25 +22,25 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label >Séries <span class="text-danger">*</span></label>
-                    <input type="mail" class="form-control" id="ds_email" name="ds_email" />
+                    <input type="number" max="20" class="form-control" id="ds_email" name="ds_email" />
                 </div>
                 <div class="form-group col-md-3">
                     <label >Repetições<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_usuario" name="ds_usuario" />
+                    <input type="number" max="100" class="form-control" id="ds_usuario" name="ds_usuario" />
                 </div> 
             </div> 
             <div class="form-group row"> 
                 <div class="form-group col-md-3">
                     <label >Carga<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_usuario" name="ds_usuario" />
+                    <input type="number" max="1000" class="form-control" id="ds_usuario" name="ds_usuario" />
                 </div> 
                 <div class="form-group col-md-3">
                     <label >Cadência<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_usuario" name="ds_usuario" />
+                    <input type="number"  class="form-control" id="ds_usuario" name="ds_usuario" />
                 </div> 
                 <div class="form-group col-md-3">
                     <label >Intervalo<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_usuario" name="ds_usuario" />
+                    <input type="time" class="form-control" id="ds_usuario" name="ds_usuario" />
                 </div> 
             </div>
         </div>
