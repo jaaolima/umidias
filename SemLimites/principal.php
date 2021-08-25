@@ -251,7 +251,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="menu-submenu menu-submenu-classic menu-submenu-left">
 											<ul class="menu-subnav">
 												<li class="menu-item" aria-haspopup="true">
-													<a href="appProfessor/cadastro_tipo.php" class="menu-link">
+													<a href="appProfessor/listar_tipo.php" class="menu-link">
 														<span class="menu-text">Tipo</span>
 														<span class="menu-desc"></span>
 													</a>
