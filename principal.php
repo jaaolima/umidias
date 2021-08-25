@@ -749,7 +749,7 @@
 		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
 		<!--end::Page Vendors-->
 		<!--begin::Page Scripts(used by this page)-->
-		<script src="assets/js/pages/crud/datatables/basic/basic.js"></script>
+		<script src="assets/js/pages/crud/datatables/basic/basic.js"></script> 
 		<!--end::Page Scripts-->
 		<!--end::Global Theme Bundle-->
 		<!--begin::Page Vendors(used by this page)-->

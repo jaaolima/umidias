@@ -281,7 +281,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<!--end::Subheader-->
-							<div class="content flex-column-fluid" id="kt_content">
+							<div class="content flex-column-fluid" id="conteudo">
 								<!--begin::Dashboard-->
 								<div class="row">
 									<div class="col-lg-12">
