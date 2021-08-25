@@ -222,7 +222,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--begin::Header Nav-->
 								<ul class="menu-nav">
 									<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
-										<a href="javascript:;" class="menu-link menu-toggle">
+										<a href="#" class="menu-link menu-toggle">
 											<span class="menu-text">Dashboard</span>
 										</a>
 									</li>
