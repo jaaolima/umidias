@@ -243,6 +243,34 @@ License: You must have a valid license purchased only from themeforest(the above
 											<span class="menu-desc"></span>
 										</a>
 									</li>
+									<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
+									<a href="javascript:;" class="menu-link menu-toggle">
+											<span class="menu-text">Cadastros</span>
+											<i class="menu-arrow"></i>
+										</a>
+										<div class="menu-submenu menu-submenu-classic menu-submenu-left">
+											<ul class="menu-subnav">
+												<li class="menu-item menu-item-active" aria-haspopup="true">
+													<a href="index.html" class="menu-link">
+														<span class="menu-text">Área</span>
+														<span class="menu-desc"></span>
+													</a>
+												</li>
+												<li class="menu-item" aria-haspopup="true">
+													<a target="_blank" href="" class="menu-link">
+														<span class="menu-text">Tipo</span>
+														<span class="menu-desc"></span>
+													</a>
+												</li>
+												<li class="menu-item" aria-haspopup="true">
+													<a target="_blank" href="" class="menu-link">
+														<span class="menu-text">Treino</span>
+														<span class="menu-desc"></span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
 								</ul>
 								<!--end::Header Nav-->
 							</div>
