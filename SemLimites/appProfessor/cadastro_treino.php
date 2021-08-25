@@ -13,7 +13,7 @@
         </div>
     </div>
     <!--begin::Form-->
-    <form id="form_usuario">
+    <form id="form_treino">
         <div class="card-body">
             <div class="form-group row">
                 <div class="form-group col-md-3">
@@ -40,7 +40,7 @@
                 </div> 
                 <div class="form-group col-md-3">
                     <label >Intervalo<span class="text-danger">*</span></label>
-                    <input type="time" class="form-control" id="nu_intervalo" name="nu_intervalo" />
+                    <input type="time" class="form-control" id="nu_intervalo" name="nu_intervalo" value="00:00" />
                 </div> 
             </div>
         </div>
