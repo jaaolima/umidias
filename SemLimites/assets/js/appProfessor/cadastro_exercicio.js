@@ -2,16 +2,16 @@ $(document).ready(function() {
 	    
 
         $("#cancelar").on("click", function(){
-            $('#form_area').trigger("reset");
-            redirectTo("appProfessor/listar_area.php");
+            $('#form_exercicio').trigger("reset");
+            redirectTo("appProfessor/listar_exercicio.php");
         }); 
     
         $("#salvar").on("click", function(e){ 
             if(validar())
             { 
                 $.ajax({
-                    url: 'appProfessor/gravar_area.php'
-                    , data: $("#form_area").serialize()
+                    url: 'appProfessor/gravar_exercicio.php'
+                    , data: $("#form_exercicio").serialize()
                     , type: 'post'
                     , success: function(html) {
                         swal.fire({
@@ -21,7 +21,7 @@ $(document).ready(function() {
                             showConfirmButton: true
                         });
                         
-                        redirectTo("appUsuario/listar_area.php");
+                        redirectTo("appUsuario/listar_exercicio.php");
                     }
                     , error: function (data) {
                         swal.fire("Erro", data.responseText, "error");
@@ -34,23 +34,23 @@ $(document).ready(function() {
     
     function validar()
     {
-        if($("#ds_area").val() == "")
+        if($("#ds_exercicio").val() == "")
         {
-            $("#ds_area").focus();
+            $("#ds_exercicio").focus();
             swal.fire("Erro", "Preencha a área", "error");
-            $("#ds_area").addClass("is-invalid");
+            $("#ds_exercicio").addClass("is-invalid");
             return false;	
         }
         else
         {
-            $("#ds_area").removeClass("is-invalid");	
-            $("#ds_area").addClass("is-valid");
+            $("#ds_exercicio").removeClass("is-invalid");	
+            $("#ds_exercicio").addClass("is-valid");
         }
     
         if($("#st_status option:selected").val() == "")
         {
             $("#st_status").focus();
-            swal.fire("Erro", "Selecione um area de mídia", "error");
+            swal.fire("Erro", "Selecione um exercício de mídia", "error");
             $("#st_status").addClass("is-invalid");
             return false;		
         }

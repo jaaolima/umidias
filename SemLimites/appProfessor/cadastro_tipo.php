@@ -3,7 +3,7 @@
 <div class="card card-custom">
     <div class="card-header">
         <h3 class="card-title">
-            Cadastro de area
+            Cadastro de Tipo
         </h3>
         <div class="card-toolbar">
             <div class="example-tools justify-content-center">
@@ -13,18 +13,12 @@
         </div>
     </div>
     <!--begin::Form-->
-    <form id="form_area">
+    <form id="form_tipo">
         <div class="card-body">
             <div class="form-group row">
                 <div class="form-group col-md-3">
                     <label>Tipo<span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_tipo" name="ds_tipo">
-                        <option>Selecione..</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-3">
-                    <label>Área<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_area" name="ds_area" />
+                    <input type="text" class="form-control" id="ds_tipo" name="ds_tipo" />
                 </div>
                 <div class="form-group col-md-3">
                     <label>Status<span class="text-danger">*</span></label>

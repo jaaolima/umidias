@@ -3,7 +3,7 @@
 <div class="card card-custom">
     <div class="card-header">
         <h3 class="card-title">
-            Cadastro de area
+            Cadastro de exercício
         </h3>
         <div class="card-toolbar">
             <div class="example-tools justify-content-center">
@@ -13,7 +13,7 @@
         </div>
     </div>
     <!--begin::Form-->
-    <form id="form_area">
+    <form id="form_exercicio">
         <div class="card-body">
             <div class="form-group row">
                 <div class="form-group col-md-3">
@@ -23,8 +23,14 @@
                     </select>
                 </div>
                 <div class="form-group col-md-3">
-                    <label>Área<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_area" name="ds_area" />
+                    <label>Tipo<span class="text-danger">*</span></label>
+                    <select class="form-control" id="ds_area" name="ds_area">
+                        <option>Selecione..</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Exercício<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_exercicio" name="ds_exercicio" />
                 </div>
                 <div class="form-group col-md-3">
                     <label>Status<span class="text-danger">*</span></label>
@@ -43,5 +49,5 @@
     </form>
     <!--end::Form-->
 </div>
-<script src="./assets/js/appProfessor/cadastro_tipo.js" type="text/javascript"></script>
+<script src="./assets/js/appProfessor/cadastro_exercicio.js" type="text/javascript"></script>
 
