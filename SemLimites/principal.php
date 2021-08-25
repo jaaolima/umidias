@@ -237,12 +237,14 @@ License: You must have a valid license purchased only from themeforest(the above
 											<span class="menu-text">Planos</span>
 										</a>
 									</li>
-									<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
-										<a href="appProfessor\cadastro_treino.php" class="menu-link menu-toggle">
+									<a href="appProfessor\cadastro_treino.php" class="menu-link menu-toggle">
+										<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
+											
 											<span class="menu-text">Prescrever treinos</span>
 											<span class="menu-desc"></span>
-										</a>
-									</li>
+										
+										</li>
+									</a>
 								</ul>
 								<!--end::Header Nav-->
 							</div>
