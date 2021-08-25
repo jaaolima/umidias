@@ -30,6 +30,21 @@ $(document).ready(function() {
             }	
         });
     });
+
+    $("#nu_serie").inputmask({
+		"mask": "99",
+		numericInput: true,
+	});
+
+    $("#nu_repeticao").inputmask({
+		"mask": "999",
+		numericInput: true,
+	});
+
+    $("#nu_carga").inputmask({
+		"mask": "9999",
+		numericInput: true,
+	});
     
     function validar()
     {
