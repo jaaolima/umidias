@@ -237,14 +237,12 @@ License: You must have a valid license purchased only from themeforest(the above
 											<span class="menu-text">Planos</span>
 										</a>
 									</li>
-									<a href="appProfessor\cadastro_treino.php" class="menu-link menu-toggle">
-										<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
-											
+									<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
+										<a href="appProfessor\cadastro_treino.php" class="menu-link menu-toggle">
 											<span class="menu-text">Prescrever treinos</span>
 											<span class="menu-desc"></span>
-										
-										</li>
-									</a>
+										</a>
+									</li>
 								</ul>
 								<!--end::Header Nav-->
 							</div>
@@ -385,6 +383,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Page Vendors-->
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/widgets.js"></script> 
+		<script src="assets/js/custom.js"></script>
 		<script src="assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
 		<!--end::Page Scripts-->
 		<script>
