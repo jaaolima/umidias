@@ -21,7 +21,7 @@ $(document).ready(function() {
                             showConfirmButton: true
                         });
                         
-                        redirectTo("appUsuario/listar_tipo.php");
+                        redirectTo("appProfessor/listar_tipo.php");
                     }
                     , error: function (data) {
                         swal.fire("Erro", data.responseText, "error");

@@ -37,5 +37,5 @@
     </form>
     <!--end::Form-->
 </div>
-<script src="./assets/js/appProfessor/cadastro_tipo.js" type="text/javascript"></script>
+<script src="./assets/js/appProfessor/cadastro_tipo.js" type="text/javascript"></script> 
 
