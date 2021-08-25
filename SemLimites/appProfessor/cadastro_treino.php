@@ -22,21 +22,21 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label >Séries <span class="text-danger">*</span></label>
-                    <input type="text" max="20" class="form-control" id="nu_serie" name="nu_serie" />
+                    <input type="number" max="20" class="form-control" id="nu_serie" name="nu_serie" />
                 </div>
                 <div class="form-group col-md-3">
                     <label >Repetições<span class="text-danger">*</span></label>
-                    <input type="text" max="100" class="form-control" id="nu_repeticao" name="nu_repeticao" />
+                    <input type="number" max="100" class="form-control" id="nu_repeticao" name="nu_repeticao" />
                 </div> 
             </div> 
             <div class="form-group row"> 
                 <div class="form-group col-md-3">
                     <label >Carga<span class="text-danger">*</span></label>
-                    <input type="text" max="1000" class="form-control" id="nu_carga" name="nu_carga" />
+                    <input type="number" max="1000" class="form-control" id="nu_carga" name="nu_carga" />
                 </div> 
                 <div class="form-group col-md-3">
                     <label >Cadência<span class="text-danger">*</span></label>
-                    <input type="text"  class="form-control" id="nu_cadencia" name="nu_cadencia" />
+                    <input type="number"  class="form-control" id="nu_cadencia" name="nu_cadencia" />
                 </div> 
                 <div class="form-group col-md-3">
                     <label >Intervalo<span class="text-danger">*</span></label>
