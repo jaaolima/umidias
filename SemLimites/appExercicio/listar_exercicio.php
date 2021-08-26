@@ -62,7 +62,7 @@
 						</div>
 					</div>-->
 					&nbsp;
-					<a href="appArea/cadastro.php" class="btn btn-light-primary font-weight-bolder">
+					<a href="appExercicio/cadastro.php" class="btn btn-light-primary font-weight-bolder">
 						<i class="la la-plus"></i>
 						Cadastrar novo
 					</a>
