@@ -77,6 +77,7 @@
 			<thead>
 				<tr>
                     <th>ID</th>
+                    <th>Tipo</th>
 					<th>Área</th>
 					<th>Status</th>
                     <th></th>
@@ -88,6 +89,7 @@
 					{
                         echo "<tr>
                                 <td>".$dados['id_area']."</td>
+                                <td>".$dados['ds_tipo']."</td>
                                 <td>".$dados['ds_area']."</td>
 								<td>".$dados['st_status']."</td>
 								<td nowrap></td>
