@@ -89,7 +89,7 @@
                         echo "<tr>
                                 <td>".$dados['id_tipo']."</td>
                                 <td>".$dados['ds_tipo']."</td>
-								<td>".$dados['st_status']."</td>
+								<td>".($dados['st_status'] === "A" ? "Ativo" : "Inativo")."</td>
 								<td nowrap></td>
 							</tr>";
 					}
