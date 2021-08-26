@@ -91,7 +91,7 @@
                                 <td>".$dados['id_area']."</td>
                                 <td>".$dados['ds_tipo']."</td>
                                 <td>".$dados['ds_area']."</td>
-								<td>".$dados['st_status']."</td>
+								<td>".($dados['st_status'] === "A" ? "Ativo" : "Inativo")."</td>
 								<td nowrap></td>
 							</tr>";
 					}
