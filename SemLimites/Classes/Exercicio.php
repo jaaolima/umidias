@@ -84,6 +84,29 @@
 			}	
         }
 
+		public function listarTipo() 
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT id_tipo, ds_tipo, st_status
+							FROM tb_tipo";
+				
+				$stmt = $con->prepare($select); 
+				
+				$stmt->execute();
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
+
 		public function ExcluirTipo(array $dados)
 		{
             $id_tipo	    = $dados['id_tipo'];
@@ -110,19 +133,104 @@
 			} 
 		}
 
-        function buscarDadosBisemana($id_bisemana)
+		public function OptionsTipo()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				$select = "SELECT id_tipo, ds_tipo
+							FROM tb_tipo ";
+				$stmt = $con->prepare($select);
+				$stmt->execute();
+
+				$options = "";
+
+				while($dados = $stmt->fetch())
+				{
+						
+					$options.= "<option value='".$dados['id_tipo']."'>".$dados['ds_tipo']."</option>";
+
+				}
+				return $options;
+
+			}
+			catch(exception $e)
+			{
+			header('HTTP/1.1 500 Internal Server Error');
+			print $e->getMessage();
+			}
+		}
+
+		public function gravarArea(array $dados)
+		{
+			$id_tipo	    = $dados['id_tipo'];
+			$ds_area	    = $dados['ds_area'];
+            $st_status	    = $dados['st_status'];
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "INSERT into tb_area (ds_area, id_tipo st_status)
+							VALUES (:ds_area, :id_tipo :st_status)";
+				
+				$stmt = $con->prepare($insert);
+				
+				$params = array(':ds_area' => $ds_area,
+								':id_tipo' => $id_tipo,
+                                ':st_status' => $st_status);
+                                
+				$stmt->execute($params);
+				
+				echo "Dados gravados com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+        }
+
+		public function gravarAlterarArea(array $dados)
+		{
+			$id_area	    = $dados['id_area'];
+			$ds_area	    = $dados['ds_area'];
+            $st_status	    = $dados['st_status'];
+			
+			try{
+				$con = Conecta::criarConexao();
+				$update = "update tb_area set ds_area=:ds_area, st_status=:st_status 
+							where id_area=:id_area";
+				
+				$stmt = $con->prepare($update);
+				
+				$params = array(':ds_area' => $ds_area,
+                                ':st_status' => $st_status,
+								':id_area' => $id_area);
+                                
+				$stmt->execute($params);
+				
+				echo "Dados gravados com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+        }
+
+		function buscarDadosArea($id_area)
 		{
 			try{
 				$con = Conecta::criarConexao();
 				
 				
 				$select = "SELECT 
-							id_bisemana, ds_bisemana
-						FROM tb_bisemana  
-						WHERE id_bisemana = :id_bisemana";
+							id_area, ds_area, st_status
+						FROM tb_area  
+						WHERE id_area = :id_area";
 
 				$stmt = $con->prepare($select);
-			   	$params = array(':id_bisemana' => $id_bisemana);
+			   	$params = array(':id_area' => $id_area);
 			   
 			    $stmt->execute($params);
 
@@ -135,19 +243,43 @@
     			print "ERRO:".$e->getMessage();	
 			}	
         }
-        public function deletarBisemana(array $dados)
+
+		public function listarArea() 
 		{
-            $id_bisemana	    = $dados['id_bisemana'];
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT id_area, ds_area, st_status
+							FROM tb_area";
+				
+				$stmt = $con->prepare($select); 
+				
+				$stmt->execute();
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
+
+		public function ExcluirArea(array $dados)
+		{
+            $id_area	    = $dados['id_area'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "delete from tb_bisemana
-							WHERE id_bisemana=:id_bisemana";
+				$insert = "delete from tb_area
+							WHERE id_area=:id_area";
 				
 				$stmt = $con->prepare($insert);
 				
-                $params = array(':id_bisemana' => $id_bisemana);
+                $params = array(':id_area' => $id_area);
                                 
 				$stmt->execute($params);
 				
@@ -160,108 +292,9 @@
     			print "ERRO:".$e->getMessage();		
 			} 
 		}
-		public function listarOptionsBisemana()
-		{
-			try{
-				$con = Conecta::criarConexao();
-				$select = "SELECT id_bisemana, ds_bisemana
-							FROM tb_bisemana ";
-				$stmt = $con->prepare($select);
-				$stmt->execute();
 
-				$options = "";
 
-				while($dados = $stmt->fetch())
-				{
-						
-					$options.= "<option value='".$dados['id_bisemana']."'>".$dados['ds_bisemana']."</option>";
-
-				}
-				return $options;
-
-			}
-			catch(exception $e)
-			{
-			header('HTTP/1.1 500 Internal Server Error');
-			print $e->getMessage();
-			}
-		}
-		public function listarBisemanaDisponiveis($id_ponto) 
-		{
-			$data = date('Y-m-d');
-			$hoje = str_replace("-", "", $data);
-			try{
-				$con = Conecta::criarConexao();
-				
-				$select = "SELECT id_bisemana, ds_bisemana, dt_final, dt_inicial
-							FROM tb_bisemana b
-							where dt_final > :hoje and dt_inicial not in (select dt_inicial from rl_alugado a where a.id_ponto=:id_ponto)
-							order by dt_inicial";
-				
-				$stmt = $con->prepare($select); 
-				$params = array(':hoje' => $hoje,
-								':id_ponto' => $id_ponto);
-				
-				$stmt->execute($params);
-
-				return $stmt;
-				
-					
-			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			}
-		}
-
-		public function listarTipo() 
-		{
-			try{
-				$con = Conecta::criarConexao();
-				
-				$select = "SELECT id_tipo, ds_tipo, st_status
-							FROM tb_tipo";
-				
-				$stmt = $con->prepare($select); 
-				
-				$stmt->execute();
-
-				return $stmt;
-				
-					
-			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			}
-		}
-
-		public function listarBisemanaID($id_bisemana)
-		{
-			$bisemanas = str_replace(",", " or id_bisemana = ", $id_bisemana);
-			try{
-				$con = Conecta::criarConexao();
-				
-				$select = "SELECT id_bisemana, ds_bisemana, dt_final, dt_inicial
-							FROM tb_bisemana
-							where id_bisemana = ".$bisemanas;
-				
-				$stmt = $con->prepare($select); 
-				
-				$stmt->execute();
-
-				return $stmt;
-				
-					
-			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			}
-		}
+    
 
 
     }

@@ -2,16 +2,16 @@ $(document).ready(function() {
 	    
 
         $("#cancelar").on("click", function(){
-            $('#form_tipo').trigger("reset");
-            redirectTo("appTipo/listar_tipo.php");
+            $('#form_Area').trigger("reset");
+            redirectTo("appArea/listar_Area.php");
         }); 
     
         $("#salvar").on("click", function(e){ 
             if(validar())
             { 
                 $.ajax({
-                    url: 'appTipo/gravar_tipo.php'
-                    , data: $("#form_tipo").serialize()
+                    url: 'appArea/gravar_Area.php'
+                    , data: $("#form_Area").serialize()
                     , type: 'post'
                     , success: function(html) {
                         swal.fire({
@@ -21,7 +21,7 @@ $(document).ready(function() {
                             showConfirmButton: true 
                         });
                         
-                        redirectTo("appTipo/listar_tipo.php");
+                        redirectTo("appArea/listar_Area.php");
                     }
                     , error: function (data) {
                         swal.fire("Erro", data.responseText, "error");
@@ -34,17 +34,17 @@ $(document).ready(function() {
     
     function validar()
     {
-        if($("#ds_tipo").val() == "")
+        if($("#ds_Area").val() == "")
         {
-            $("#ds_tipo").focus();
+            $("#ds_Area").focus();
             swal.fire("Erro", "Preencha a área", "error");
-            $("#ds_tipo").addClass("is-invalid");
+            $("#ds_Area").addClass("is-invalid");
             return false;	
         }
         else
         {
-            $("#ds_tipo").removeClass("is-invalid");	
-            $("#ds_tipo").addClass("is-valid");
+            $("#ds_Area").removeClass("is-invalid");	
+            $("#ds_Area").addClass("is-valid");
         }
     
         if($("#st_status option:selected").val() == "")

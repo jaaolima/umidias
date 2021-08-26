@@ -50,7 +50,7 @@ $(document).ready(function() {
         if($("#st_status option:selected").val() == "")
         {
             $("#st_status").focus();
-            swal.fire("Erro", "Selecione um tipo de mídia", "error");
+            swal.fire("Erro", "Selecione um status", "error");
             $("#st_status").addClass("is-invalid");
             return false;		
         }

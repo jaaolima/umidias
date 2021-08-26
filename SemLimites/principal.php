@@ -257,7 +257,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</a>
 												</li>
 												<li class="menu-item" aria-haspopup="true">
-													<a href="appProfessor/cadastro_area.php" class="menu-link">
+													<a href="appArea/listar_area.php" class="menu-link">
 														<span class="menu-text">Área</span>
 														<span class="menu-desc"></span>
 													</a>

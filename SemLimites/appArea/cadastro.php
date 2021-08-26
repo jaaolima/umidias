@@ -1,4 +1,12 @@
-
+<?php
+	ini_set('display_errors',1);
+	ini_set('display_startup_erros',1);
+    error_reporting(E_ALL);
+    
+    require_once("../Classes/Exercicio.php");
+    $tipo = new Exercicio();
+    $retorno = $tipo->OptionsTipo($_POST);
+?>
 
 <div class="card card-custom">
     <div class="card-header">
@@ -18,7 +26,7 @@
             <div class="form-group row">
                 <div class="form-group col-md-3">
                     <label>Tipo<span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_tipo" name="ds_tipo">
+                    <select class="form-control" id="id_tipo" name="id_tipo">
                         <option>Selecione..</option>
                     </select>
                 </div>
@@ -43,5 +51,5 @@
     </form>
     <!--end::Form-->
 </div>
-<script src="./assets/js/appProfessor/cadastro_tipo.js" type="text/javascript"></script>
+<script src="./assets/js/appArea/cadastro.js" type="text/javascript"></script>
 
