@@ -89,7 +89,7 @@
 					while ($dados = $retorno->fetch())
 					{
                         echo "<tr>
-                                <td>".$dados['id_area']."</td>
+                                <td>".$dados['id_exercicio']."</td>
                                 <td>".$dados['ds_tipo']."</td>
                                 <td>".$dados['ds_area']."</td>
                                 <td>".$dados['ds_exercicio']."</td>
