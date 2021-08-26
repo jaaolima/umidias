@@ -434,7 +434,7 @@
 				$select = "SELECT id_exercicio, ds_exercicio, e.st_status, ds_tipo, ds_area
 							FROM tb_exercicio e
 							left join tb_tipo t on e.id_tipo=t.id_tipo
-							left join tb_area a on e.id_area=t.id_area";
+							left join tb_area a on e.id_area=a.id_area";
 				
 				$stmt = $con->prepare($select); 
 				
