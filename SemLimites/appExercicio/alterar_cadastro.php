@@ -61,6 +61,7 @@
                 </div>
             </div>
         </div>
+        <input type="hidden" value="<?php echo $id_exercicio; ?>" name="id_exercicio" id="id_exercicio">
         <div class="card-footer">
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
             <button type="reset" class="btn btn-secondary" id="cancelar">Cancelar</button>
