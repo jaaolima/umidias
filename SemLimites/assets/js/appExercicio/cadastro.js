@@ -34,7 +34,7 @@ $(document).ready(function() {
     $("#id_tipo").on("change", function() {
 		var id_tipo = $("#id_tipo option:selected").val();
 		$.ajax({
-	        url: 'appParceiro/listar_options_area.php'
+	        url: 'appArea/listar_options_area.php'
 	        , type: 'post'
 	        , data: {id_tipo : id_tipo}
 	        , success: function(html) {
