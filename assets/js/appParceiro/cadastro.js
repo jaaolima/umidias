@@ -18,7 +18,7 @@ $(document).ready(function() {
 		        , type: 'post'
 		        , success: function(html) { 
 		        	swal.fire({
-		                position: 'top-right',
+		                position: 'top-right', 
 		                type: 'success',
 		                title: html,
 		                showConfirmButton: true

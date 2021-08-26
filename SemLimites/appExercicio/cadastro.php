@@ -1,4 +1,12 @@
-
+<?php
+	ini_set('display_errors',1);
+	ini_set('display_startup_erros',1);
+    error_reporting(E_ALL);
+    
+    require_once("../Classes/Exercicio.php");
+    $exercicio = new Exercicio();
+    $optionsTipo = $exercicio->OptionsTipo(null);
+?>
 
 <div class="card card-custom">
     <div class="card-header">
@@ -20,10 +28,13 @@
                     <label>Tipo<span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_tipo" name="ds_tipo">
                         <option>Selecione..</option>
+                        <?php 
+                            echo $optionsTipo;
+                        ?>
                     </select>
                 </div>
                 <div class="form-group col-md-3">
-                    <label>Tipo<span class="text-danger">*</span></label>
+                    <label>Área<span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_area" name="ds_area">
                         <option>Selecione..</option>
                     </select>
@@ -49,5 +60,5 @@
     </form>
     <!--end::Form-->
 </div>
-<script src="./assets/js/appProfessor/cadastro_exercicio.js" type="text/javascript"></script>
+<script src="./assets/js/appExercicio/cadastro.js" type="text/javascript"></script>
 
