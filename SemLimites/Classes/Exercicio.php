@@ -169,7 +169,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				$insert = "INSERT into tb_area (ds_area, id_tipo st_status)
-							VALUES (:ds_area, :id_tipo :st_status)";
+							VALUES (:ds_area, :id_tipo, :st_status)";
 				
 				$stmt = $con->prepare($insert);
 				
