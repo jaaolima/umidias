@@ -45,6 +45,9 @@ var DatatablesBasicBasic = function() {
                          <a href="appTipo/alterar_cadastro.php?id_tipo=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
                           <i class="la la-edit"></i>
                         </a>
+						<a id="excluir" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-tipo="`+full[0]+`" >
+                          <i class="la la-remove"></i>
+                        </a> 
                         `;
 					},
 				},
@@ -76,42 +79,32 @@ var DatatablesBasicBasic = function() {
 			
 		});
 
-		/*table.on('click', '#btn-excluir', function() {
-			var id_aula = $(this).data("aula");
-
-			swal({
+		table.on('click', '#excluir', function() {
+			var id_tipo = $(this).data("tipo");
+			swal.fire({
 	            title: 'Tem certeza?',
-	            text: "Desejar excluir a aula e todas as frequências associadas?",
+	            text: "Desejar excluir o tipo?",
 	            type: 'warning',
 	            showCancelButton: true,
+	            cancelButtonColor: '#fd397a',
 	            confirmButtonText: 'Sim, posseguir!',
 				cancelButtonText: 'Cancelar'
 	        }).then(function(result) {
 	            if (result.value) {
 					$.ajax({
-				        url: 'appDiario/excluir_aula.php'
+				        url: 'appTipo/excluir_tipo.php'
 				        , type: 'post'
-				        , data: {id_aula : id_aula}
+				        , data: {id_tipo : id_tipo}
 				        , success: function(html) {
-							swal('Pronto!',html,'success');
-							$.ajax({
-						        url: 'appDiario/listar_aula.php'
-						        , type: 'post'
-						        , data: $("#busca_aula").serialize()
-						        , success: function(html) {
-						        	$("#lista").html(html);
-						        }
-						        , error: function(xhr, status, error) {
-								  	swal("Erro", xhr.responseText, "error");
-								}
-						    });						
+							swal.fire('Pronto!',html,'success');
+							redirectTo("appTipo/listar_tipo.php");				
 				        }
 				    });
 	                
 	            }
 	        });
 			
-		}); */
+		}); 
 		
 	};
 

@@ -84,6 +84,31 @@
 			}	
         }
 
+		public function ExcluirTipo(array $dados)
+		{
+            $id_tipo	    = $dados['id_tipo'];
+
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "delete from tb_tipo
+							WHERE id_tipo=:id_tipo";
+				
+				$stmt = $con->prepare($insert);
+				
+                $params = array(':id_tipo' => $id_tipo);
+                                
+				$stmt->execute($params);
+				
+				echo "Deletado com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+		}
 
         function buscarDadosBisemana($id_bisemana)
 		{
