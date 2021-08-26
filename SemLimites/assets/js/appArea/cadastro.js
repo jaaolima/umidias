@@ -2,7 +2,7 @@ $(document).ready(function() {
 	    
 
         $("#cancelar").on("click", function(){
-            $('#form_Area').trigger("reset");
+            $('#form_area').trigger("reset");
             redirectTo("appArea/listar_area.php");
         }); 
     
@@ -11,7 +11,7 @@ $(document).ready(function() {
             { 
                 $.ajax({
                     url: 'appArea/gravar_area.php'
-                    , data: $("#form_Area").serialize()
+                    , data: $("#form_area").serialize()
                     , type: 'post'
                     , success: function(html) {
                         swal.fire({
@@ -34,6 +34,20 @@ $(document).ready(function() {
     
     function validar()
     {
+
+        if($("#id_tipo option:selected").val() == "")
+        {
+            $("#id_tipo").focus();
+            swal.fire("Erro", "Selecione o Tipo", "error");
+            $("#id_tipo").addClass("is-invalid");
+            return false;		
+        }
+        else
+        {
+            $("#id_tipo").removeClass("is-invalid");	
+            $("#id_tipo").addClass("is-valid");
+        }
+
         if($("#ds_area").val() == "")
         {
             $("#ds_area").focus();
