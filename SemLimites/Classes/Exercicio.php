@@ -408,7 +408,7 @@
 				
 				
 				$select = "SELECT 
-							id_exercicio, ds_exercicio, st_status, id_tipo
+							id_exercicio, ds_exercicio, st_status, id_tipo, id_area
 						FROM tb_exercicio  
 						WHERE id_exercicio = :id_exercicio";
 
