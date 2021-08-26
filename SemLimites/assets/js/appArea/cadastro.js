@@ -3,14 +3,14 @@ $(document).ready(function() {
 
         $("#cancelar").on("click", function(){
             $('#form_Area').trigger("reset");
-            redirectTo("appArea/listar_Area.php");
+            redirectTo("appArea/listar_area.php");
         }); 
     
         $("#salvar").on("click", function(e){ 
             if(validar())
             { 
                 $.ajax({
-                    url: 'appArea/gravar_Area.php'
+                    url: 'appArea/gravar_area.php'
                     , data: $("#form_Area").serialize()
                     , type: 'post'
                     , success: function(html) {
@@ -21,7 +21,7 @@ $(document).ready(function() {
                             showConfirmButton: true 
                         });
                         
-                        redirectTo("appArea/listar_Area.php");
+                        redirectTo("appArea/listar_area.php");
                     }
                     , error: function (data) {
                         swal.fire("Erro", data.responseText, "error");
@@ -34,17 +34,17 @@ $(document).ready(function() {
     
     function validar()
     {
-        if($("#ds_Area").val() == "")
+        if($("#ds_area").val() == "")
         {
-            $("#ds_Area").focus();
+            $("#ds_area").focus();
             swal.fire("Erro", "Preencha a área", "error");
-            $("#ds_Area").addClass("is-invalid");
+            $("#ds_area").addClass("is-invalid");
             return false;	
         }
         else
         {
-            $("#ds_Area").removeClass("is-invalid");	
-            $("#ds_Area").addClass("is-valid");
+            $("#ds_area").removeClass("is-invalid");	
+            $("#ds_area").addClass("is-valid");
         }
     
         if($("#st_status option:selected").val() == "")
