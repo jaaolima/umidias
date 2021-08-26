@@ -47,8 +47,9 @@ $dados = $exercicio->buscarDadosTipo($id_tipo);
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
             <button type="reset" class="btn btn-secondary" id="cancelar">Cancelar</button>
         </div>
+        <input type="hidden" id="id_tipo" name="id_tipo" value="<?php echo $id_tipo; ?>">
     </form>
     <!--end::Form-->
 </div>
-<script src="./assets/js/appTipo/cadastro.js" type="text/javascript"></script> 
+<script src="./assets/js/appTipo/alterar_cadastro.js" type="text/javascript"></script> 
 

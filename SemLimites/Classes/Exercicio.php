@@ -29,6 +29,35 @@
 			} 
         }
 
+		public function gravarAlterarTipo(array $dados)
+		{
+			$id_tipo	    = $dados['id_tipo'];
+			$ds_tipo	    = $dados['ds_tipo'];
+            $st_status	    = $dados['st_status'];
+			
+			try{
+				$con = Conecta::criarConexao();
+				$update = "update tb_tipo set ds_tipo=:ds_tipo, st_status=:st_status 
+							where id_tipo=:id_tipo";
+				
+				$stmt = $con->prepare($update);
+				
+				$params = array(':ds_tipo' => $ds_tipo,
+                                ':st_status' => $st_status,
+								':id_tipo' => $id_tipo);
+                                
+				$stmt->execute($params);
+				
+				echo "Dados gravados com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+        }
+
 		function buscarDadosTipo($id_tipo)
 		{
 			try{
