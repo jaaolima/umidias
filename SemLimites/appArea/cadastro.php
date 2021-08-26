@@ -4,8 +4,8 @@
     error_reporting(E_ALL);
     
     require_once("../Classes/Exercicio.php");
-    $tipo = new Exercicio();
-    $optionsTipo = $tipo->OptionsTipo(null);
+    $exercicio = new Exercicio();
+    $optionsTipo = $exercicio->OptionsTipo(null);
 ?>
 
 <div class="card card-custom">

@@ -7,8 +7,8 @@
 
     $id_tipo = $_REQUEST['id_tipo'];
     
-    $tipo = new Exercicio();
-    $optionsTipo = $tipo->OptionsTipo($id_tipo);
+    $exercicio = new Exercicio();
+    $optionsTipo = $exercicio->OptionsTipo($id_tipo);
     $dados = $exercicio->buscarDadosArea($id_tipo);
 ?>
 
