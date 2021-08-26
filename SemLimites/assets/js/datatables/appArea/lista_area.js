@@ -45,7 +45,7 @@ var DatatablesBasicBasic = function() {
                          <a href="appArea/alterar_cadastro.php?id_area=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
                           <i class="la la-edit"></i>
                         </a>
-						<a id="excluir" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-tipo="`+full[0]+`" >
+						<a id="excluir" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-area="`+full[0]+`" >
                           <i class="la la-remove"></i>
                         </a> 
                         `;
