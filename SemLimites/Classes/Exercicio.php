@@ -133,7 +133,7 @@
 			} 
 		}
 
-		public function OptionsTipo()
+		public function OptionsTipo($id_tipo)
 		{
 			try{
 				$con = Conecta::criarConexao();
@@ -147,7 +147,14 @@
 				while($dados = $stmt->fetch())
 				{
 						
-					$options.= "<option value='".$dados['id_tipo']."'>".$dados['ds_tipo']."</option>";
+					if($id_tipo == $dados['id_tipo'])
+					{
+						$options.= "<option value='".$dados['id_tipo']."' selected>".$dados['ds_tipo']."</option>";
+					}	
+					else
+					{
+						$options.= "<option value='".$dados['id_tipo']."'>".$dados['ds_tipo']."</option>";	
+					}
 
 				}
 				return $options;
@@ -225,7 +232,7 @@
 				
 				
 				$select = "SELECT 
-							id_area, ds_area, st_status
+							id_area, ds_area, st_status, id_tipo
 						FROM tb_area  
 						WHERE id_area = :id_area";
 

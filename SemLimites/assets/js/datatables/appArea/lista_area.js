@@ -42,7 +42,7 @@ var DatatablesBasicBasic = function() {
 					render: function(data, type, full, meta) {
 						return `
                         
-                         <a href="appArea/alterar_cadastro.php?id_tipo=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
+                         <a href="appArea/alterar_cadastro.php?id_area=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
                           <i class="la la-edit"></i>
                         </a>
 						<a id="excluir" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-tipo="`+full[0]+`" >
@@ -80,10 +80,10 @@ var DatatablesBasicBasic = function() {
 		});
 
 		table.on('click', '#excluir', function() {
-			var id_tipo = $(this).data("tipo");
+			var id_area = $(this).data("area");
 			swal.fire({
 	            title: 'Tem certeza?',
-	            text: "Desejar excluir o tipo?",
+	            text: "Desejar excluir a Área?",
 	            type: 'warning',
 	            showCancelButton: true,
 	            cancelButtonColor: '#fd397a',
@@ -92,9 +92,9 @@ var DatatablesBasicBasic = function() {
 	        }).then(function(result) {
 	            if (result.value) {
 					$.ajax({
-				        url: 'appArea/excluir_tipo.php'
+				        url: 'appArea/excluir_area.php'
 				        , type: 'post'
-				        , data: {id_tipo : id_tipo}
+				        , data: {id_area : id_area}
 				        , success: function(html) {
 							swal.fire('Pronto!',html,'success');
 							redirectTo("appArea/listar_tipo.php");				

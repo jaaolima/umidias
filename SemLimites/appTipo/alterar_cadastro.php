@@ -37,7 +37,7 @@ $dados = $exercicio->buscarDadosTipo($id_tipo);
                     <label>Status<span class="text-danger">*</span></label>
                     <select class="form-control" id="st_status" name="st_status">
                         <option>Selecione..</option>
-                        <option value="A" <?php if($dados["st_status"] === "A") echo "selected"; ?>>Ativo</option>
+                        <option value="A" <?php if($dados["st_status"] === "A") echo "selected"; ?>>Ativo</option> 
                         <option value="I" <?php if($dados["st_status"] === "I") echo "selected"; ?>>Inativo</option>
                     </select>
                 </div>

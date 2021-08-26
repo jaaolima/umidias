@@ -4,8 +4,12 @@
     error_reporting(E_ALL);
     
     require_once("../Classes/Exercicio.php");
+
+    $id_tipo = $_REQUEST['id_tipo'];
+    
     $tipo = new Exercicio();
-    $optionsTipo = $tipo->OptionsTipo(null);
+    $optionsTipo = $tipo->OptionsTipo($id_tipo);
+    $dados = $exercicio->buscarDadosArea($id_tipo);
 ?>
 
 <div class="card card-custom">
@@ -35,14 +39,14 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label>Área<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_area" name="ds_area" />
+                    <input type="text" class="form-control" id="ds_area" name="ds_area" value="<?php echo $dados["ds_area"]; ?>"/>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Status<span class="text-danger">*</span></label>
                     <select class="form-control" id="st_status" name="st_status">
                         <option>Selecione..</option>
-                        <option value="A">Ativo</option>
-                        <option value="I">Inativo</option>
+                        <option value="A" <?php if($dados["st_status"] === "A") echo "selected"; ?>>Ativo</option> 
+                        <option value="I" <?php if($dados["st_status"] === "I") echo "selected"; ?>>Inativo</option>
                     </select>
                 </div>
             </div>
