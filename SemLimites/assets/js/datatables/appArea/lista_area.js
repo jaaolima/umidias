@@ -97,7 +97,7 @@ var DatatablesBasicBasic = function() {
 				        , data: {id_area : id_area}
 				        , success: function(html) {
 							swal.fire('Pronto!',html,'success');
-							redirectTo("appArea/listar_tipo.php");				
+							redirectTo("appArea/listar_area.php");				
 				        }
 				    });
 	                
