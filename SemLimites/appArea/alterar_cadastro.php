@@ -58,5 +58,5 @@
     </form>
     <!--end::Form-->
 </div>
-<script src="./assets/js/appArea/cadastro.js" type="text/javascript"></script>
+<script src="./assets/js/appArea/alterar_cadastro.js" type="text/javascript"></script>
 

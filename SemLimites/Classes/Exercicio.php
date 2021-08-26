@@ -200,16 +200,18 @@
 		{
 			$id_area	    = $dados['id_area'];
 			$ds_area	    = $dados['ds_area'];
+			$id_tipo	    = $dados['id_tipo'];
             $st_status	    = $dados['st_status'];
 			
 			try{
 				$con = Conecta::criarConexao();
-				$update = "update tb_area set ds_area=:ds_area, st_status=:st_status 
+				$update = "update tb_area set ds_area=:ds_area, id_tipo=:id_tipo, st_status=:st_status 
 							where id_area=:id_area";
 				
 				$stmt = $con->prepare($update);
 				
 				$params = array(':ds_area' => $ds_area,
+								':id_tipo' => $id_tipo,
                                 ':st_status' => $st_status,
 								':id_area' => $id_area);
                                 
