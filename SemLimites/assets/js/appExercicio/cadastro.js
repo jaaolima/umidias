@@ -48,7 +48,7 @@ $(document).ready(function() {
     function validar()
     {
 
-        if($("#id_tipo option:selected").val() == "")
+        if($("#id_tipo option:selected").val() === "")
         {
             $("#id_tipo").focus();
             swal.fire("Erro", "Selecione o Tipo", "error");
@@ -61,7 +61,7 @@ $(document).ready(function() {
             $("#id_tipo").addClass("is-valid");
         }
 
-        if($("#id_area option:selected").val() == "")
+        if($("#id_area option:selected").val() === "")
         {
             $("#id_area").focus();
             swal.fire("Erro", "Selecione a área", "error");
@@ -78,7 +78,7 @@ $(document).ready(function() {
         {
             $("#ds_exercicio").focus();
             swal.fire("Erro", "Preencha a área", "error");
-            $("#ds_exercicio").addClass("is-invalid");
+            $("#ds_exercicio").addClass("is-invalid"); 
             return false;	
         }
         else
