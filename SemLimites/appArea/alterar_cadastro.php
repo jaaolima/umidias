@@ -5,11 +5,11 @@
     
     require_once("../Classes/Exercicio.php");
 
-    $id_tipo = $_REQUEST['id_tipo'];
+    $id_area = $_REQUEST['id_area'];
     
     $exercicio = new Exercicio();
-    $optionsTipo = $exercicio->OptionsTipo($id_tipo);
-    $dados = $exercicio->buscarDadosArea($id_tipo);
+    $dados = $exercicio->buscarDadosArea($id_area);
+    $optionsTipo = $exercicio->OptionsTipo($dados["id_tipo"]);
 ?>
 
 <div class="card card-custom">
