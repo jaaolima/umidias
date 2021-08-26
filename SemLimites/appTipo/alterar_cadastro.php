@@ -8,7 +8,7 @@ require_once("../Classes/Exercicio.php");
 
 $id_tipo = $_REQUEST['id_tipo'];
 
-$exercicio = new Usuario();
+$exercicio = new Exercicio();
 $dados = $exercicio->buscarDadosTipo($id_tipo);
 
 
