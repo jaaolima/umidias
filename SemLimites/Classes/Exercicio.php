@@ -374,18 +374,20 @@
 		{
 			$id_exercicio	    = $dados['id_exercicio'];
 			$ds_exercicio	    = $dados['ds_exercicio'];
-			$id_tipo	    = $dados['id_tipo'];
-            $st_status	    = $dados['st_status'];
+			$id_tipo	    	= $dados['id_tipo'];
+			$id_area	    	= $dados['id_area'];
+            $st_status	    	= $dados['st_status'];
 			
 			try{
 				$con = Conecta::criarConexao();
-				$update = "update tb_exercicio set ds_exercicio=:ds_exercicio, id_tipo=:id_tipo, st_status=:st_status 
+				$update = "update tb_exercicio set ds_exercicio=:ds_exercicio, id_tipo=:id_tipo, id_area=:id_area, st_status=:st_status 
 							where id_exercicio=:id_exercicio";
 				
 				$stmt = $con->prepare($update);
 				
 				$params = array(':ds_exercicio' => $ds_exercicio,
 								':id_tipo' => $id_tipo,
+								':id_area' => $id_area,
                                 ':st_status' => $st_status,
 								':id_exercicio' => $id_exercicio);
                                 
