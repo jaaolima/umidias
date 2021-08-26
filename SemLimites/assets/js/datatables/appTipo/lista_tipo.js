@@ -42,7 +42,7 @@ var DatatablesBasicBasic = function() {
 					render: function(data, type, full, meta) {
 						return `
                         
-                         <a href="appTipo/alterar_cadastro.php?id_usuario=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
+                         <a href="appTipo/alterar_cadastro.php?id_tipo=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
                           <i class="la la-edit"></i>
                         </a>
                         `;
