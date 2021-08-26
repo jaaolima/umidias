@@ -55,6 +55,7 @@
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
             <button type="reset" class="btn btn-secondary" id="cancelar">Cancelar</button>
         </div>
+        <input type="hidden" name="id_area" id="id_area" value="<?php echo $id_area; ?>"> 
     </form>
     <!--end::Form-->
 </div>
