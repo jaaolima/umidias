@@ -311,7 +311,8 @@
 							FROM tb_area 
 							where id_tipo=:id_tipo";
 				$stmt = $con->prepare($select);
-				$stmt->execute();
+				$params = array(':id_tipo' => $id_tipo);
+				$stmt->execute($params);
 
 				$options = "";
 
