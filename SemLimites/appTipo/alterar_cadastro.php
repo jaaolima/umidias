@@ -1,6 +1,15 @@
 
 <?php
 
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
+require_once("../Classes/Exercicio.php");
+
+$id_tipo = $_REQUEST['id_tipo'];
+
+$exercicio = new Usuario();
+$dados = $exercicio->buscarDadosTipo($id_tipo);
 
 
 ?>
@@ -22,14 +31,14 @@
             <div class="form-group row">
                 <div class="form-group col-md-3">
                     <label>Tipo<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_tipo" name="ds_tipo" />
+                    <input type="text" class="form-control" id="ds_tipo" name="ds_tipo" value="<?php echo $dados["ds_tipo"]; ?>" />
                 </div>
                 <div class="form-group col-md-3">
                     <label>Status<span class="text-danger">*</span></label>
                     <select class="form-control" id="st_status" name="st_status">
                         <option>Selecione..</option>
-                        <option value="A">Ativo</option>
-                        <option value="I">Inativo</option>
+                        <option value="A" <?php if($dados["st_status"] === "A") echo "selected"; ?>>Ativo</option>
+                        <option value="I" <?php if($dados["st_status"] === "I") echo "selected"; ?>>Inativo</option>
                     </select>
                 </div>
             </div>

@@ -28,6 +28,34 @@
     			print "ERRO:".$e->getMessage();		
 			} 
         }
+
+		function buscarDadosTipo($id_tipo)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				
+				$select = "SELECT 
+							id_tipo, ds_tipo, st_status
+						FROM tb_tipo  
+						WHERE id_tipo = :id_tipo";
+
+				$stmt = $con->prepare($select);
+			   	$params = array(':id_tipo' => $id_tipo);
+			   
+			    $stmt->execute($params);
+
+			    return  $stmt->fetch();
+				
+			}	
+			catch(Exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();	
+			}	
+        }
+
+
         function buscarDadosBisemana($id_bisemana)
 		{
 			try{
