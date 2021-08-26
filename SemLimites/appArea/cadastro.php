@@ -5,7 +5,7 @@
     
     require_once("../Classes/Exercicio.php");
     $tipo = new Exercicio();
-    $retorno = $tipo->OptionsTipo($_POST);
+    $optionsTipo = $tipo->OptionsTipo();
 ?>
 
 <div class="card card-custom">
@@ -28,6 +28,9 @@
                     <label>Tipo<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_tipo" name="id_tipo">
                         <option>Selecione..</option>
+                        <?php 
+                            echo $optionsTipo;
+                        ?>
                     </select>
                 </div>
                 <div class="form-group col-md-3">
