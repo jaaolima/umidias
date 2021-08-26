@@ -258,7 +258,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_area, ds_area, st_status, ds_tipo
+				$select = "SELECT id_area, ds_area, a.st_status, ds_tipo
 							FROM tb_area a
 							left join tb_tipo t on a.id_tipo=t.id_tipo";
 				
