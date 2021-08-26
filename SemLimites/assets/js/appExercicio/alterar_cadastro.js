@@ -10,7 +10,7 @@ $(document).ready(function() {
             if(validar())
             { 
                 $.ajax({
-                    url: 'appExercicio/gravar_exercicio.php'
+                    url: 'appExercicio/gravar_alterar_exercicio.php'
                     , data: $("#form_exercicio").serialize()
                     , type: 'post'
                     , success: function(html) {
