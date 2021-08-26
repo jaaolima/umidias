@@ -431,10 +431,10 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_exercicio, ds_exercicio, a.st_status, ds_tipo, ds_area
-							FROM tb_exercicio a
-							left join tb_tipo t on a.id_tipo=t.id_tipo
-							left join tb_area t on a.id_area=t.id_area";
+				$select = "SELECT id_exercicio, ds_exercicio, e.st_status, ds_tipo, ds_area
+							FROM tb_exercicio e
+							left join tb_tipo t on e.id_tipo=t.id_tipo
+							left join tb_area a on e.id_area=t.id_area";
 				
 				$stmt = $con->prepare($select); 
 				
