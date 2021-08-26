@@ -49,14 +49,14 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label>Exercício<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_exercicio" name="ds_exercicio" />
+                    <input type="text" class="form-control" id="ds_exercicio" name="ds_exercicio" value="<?php echo $dados["ds_exercicio"]; ?>" />
                 </div>
                 <div class="form-group col-md-3">
                     <label>Status<span class="text-danger">*</span></label>
                     <select class="form-control" id="st_status" name="st_status">
                         <option>Selecione..</option>
-                        <option value="A">Ativo</option>
-                        <option value="I">Inativo</option>
+                        <option value="A" <?php if($dados["st_status"] === "A") echo "selected"; ?>>Ativo</option> 
+                        <option value="I" <?php if($dados["st_status"] === "I") echo "selected"; ?>>Inativo</option>
                     </select>
                 </div>
             </div>
