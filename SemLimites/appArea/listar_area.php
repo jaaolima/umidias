@@ -102,4 +102,4 @@
 </div>
 
 <script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-<script src="./assets/js/datatables/appArea/lista_tipo.js" type="text/javascript"></script>
+<script src="./assets/js/datatables/appArea/lista_area.js" type="text/javascript"></script>
