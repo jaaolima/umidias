@@ -26,7 +26,7 @@
             <div class="form-group row">
                 <div class="form-group col-md-3">
                     <label>Tipo<span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_tipo" name="ds_tipo">
+                    <select class="form-control" id="id_tipo" name="id_tipo">
                         <option>Selecione..</option>
                         <?php 
                             echo $optionsTipo;
@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label>Área<span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_area" name="ds_area">
+                    <select class="form-control" id="id_area" name="id_area">
                         <option>Selecione..</option>
                     </select>
                 </div>
