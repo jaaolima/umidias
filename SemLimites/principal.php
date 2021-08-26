@@ -263,7 +263,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</a>
 												</li>
 												<li class="menu-item" aria-haspopup="true">
-													<a href="appExercico/cadastro.php" class="menu-link">
+													<a href="appExercico/listar_exercicio.php" class="menu-link">
 														<span class="menu-text">Exercício</span>
 														<span class="menu-desc"></span>
 													</a>
