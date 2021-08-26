@@ -62,7 +62,7 @@
 						</div>
 					</div>-->
 					&nbsp;
-					<a href="appProfessor/cadastro_tipo.php" class="btn btn-light-primary font-weight-bolder">
+					<a href="appTipo/cadastro.php" class="btn btn-light-primary font-weight-bolder">
 						<i class="la la-plus"></i>
 						Cadastrar novo
 					</a>
@@ -102,4 +102,4 @@
 </div>
 
 <script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-<script src="./assets/js/datatables/appProfessor/listar_tipo.js" type="text/javascript"></script>
+<script src="./assets/js/datatables/appTipo/lista_tipo.js" type="text/javascript"></script>

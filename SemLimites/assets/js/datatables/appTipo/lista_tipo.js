@@ -42,7 +42,7 @@ var DatatablesBasicBasic = function() {
 					render: function(data, type, full, meta) {
 						return `
                         
-                         <a href="appParceiro/alterar_cadastro.php?id_parceiro=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
+                         <a href="appTipo/alterar_cadastro.php?id_usuario=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
                           <i class="la la-edit"></i>
                         </a>
                         `;
@@ -72,7 +72,7 @@ var DatatablesBasicBasic = function() {
 
 		table.on('click', '#btn-editar', function() {
 
-			redirectTo("appPonto/alterar_cadastro");
+			redirectTo("appUsuario/alterar_cadastro");
 			
 		});
 

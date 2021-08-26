@@ -3,14 +3,14 @@ $(document).ready(function() {
 
         $("#cancelar").on("click", function(){
             $('#form_tipo').trigger("reset");
-            redirectTo("appProfessor/listar_tipo.php");
+            redirectTo("appTipo/listar_tipo.php");
         }); 
     
         $("#salvar").on("click", function(e){ 
             if(validar())
             { 
                 $.ajax({
-                    url: 'appProfessor/gravar_tipo.php'
+                    url: 'appTipo/gravar_tipo.php'
                     , data: $("#form_tipo").serialize()
                     , type: 'post'
                     , success: function(html) {
@@ -18,10 +18,10 @@ $(document).ready(function() {
                             position: 'top-right',
                             type: 'success',
                             title: html,
-                            showConfirmButton: true
+                            showConfirmButton: true 
                         });
                         
-                        redirectTo("appProfessor/listar_tipo.php");
+                        redirectTo("appTipo/listar_tipo.php");
                     }
                     , error: function (data) {
                         swal.fire("Erro", data.responseText, "error");

@@ -1,5 +1,9 @@
 
+<?php
 
+
+
+?>
 <div class="card card-custom">
     <div class="card-header">
         <h3 class="card-title">
@@ -37,5 +41,5 @@
     </form>
     <!--end::Form-->
 </div>
-<script src="./assets/js/appProfessor/cadastro_tipo.js" type="text/javascript"></script> 
+<script src="./assets/js/appTipo/cadastro.js" type="text/javascript"></script> 
 
