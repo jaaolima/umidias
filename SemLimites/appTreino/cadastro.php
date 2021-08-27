@@ -48,6 +48,9 @@ $optionsTipo = $exercicio->OptionsTipo(null);
                         <option>Selecione..</option>
                     </select>
                 </div>
+                 
+            </div> 
+            <div class="form-group row"> 
                 <div class="form-group col-md-3">
                     <label >Séries <span class="text-danger">*</span></label>
                     <input type="number" max="20" min="1" class="form-control" id="nu_serie" name="nu_serie" />
@@ -55,8 +58,8 @@ $optionsTipo = $exercicio->OptionsTipo(null);
                 <div class="form-group col-md-3">
                     <label >Repetições<span class="text-danger">*</span></label>
                     <input type="number" max="100" min="1" class="form-control" id="nu_repeticao" name="nu_repeticao" />
-                </div> 
-            </div> 
+                </div>
+            </div>
             <div class="form-group row"> 
                 <div class="form-group col-md-3">
                     <label >Carga<span class="text-danger">*</span></label>
