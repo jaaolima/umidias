@@ -279,6 +279,22 @@ License: You must have a valid license purchased only from themeforest(the above
 														</ul>
 													</div>
 												</li>
+												<li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+													<a href="javascript:;" class="menu-link menu-toggle">
+														<span class="menu-text">Usuários</span>
+														<i class="menu-arrow"></i>
+													</a>
+													<div class="menu-submenu menu-submenu-classic menu-submenu-right">
+														<ul class="menu-subnav">
+															<li class="menu-item" aria-haspopup="true">
+																<a href="appTipo/listar_tipo.php" class="menu-link">
+																	<span class="menu-text">Alunos</span>
+																	<span class="menu-desc"></span> 
+																</a>
+															</li>
+														</ul>
+													</div>
+												</li>
 											</ul>
 										</div>
 									</li>
