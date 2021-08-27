@@ -516,6 +516,50 @@
 			}
 		}
 
+		public function gravarTreino(array $dados)
+		{
+
+			$id_aluno	    = $dados['id_aluno'];
+            $id_tipo	    = $dados['id_tipo'];
+            $id_area	    = $dados['id_area'];
+            $id_exercicio	= $dados['id_exercicio'];
+            $nu_serie	    = $dados['nu_serie'];
+			$nu_repeticao	= $dados['nu_repeticao'];
+			$nu_carga	    = $dados['nu_carga'];
+			$nu_cadencia	= $dados['nu_cadencia'];
+			$nu_intervalo	= $dados['nu_intervalo'];
+
+
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "INSERT into tb_treino (id_aluno, id_tipo, id_area, id_exercicio, nu_serie, nu_repeticao, nu_carga, nu_cadencia, nu_intervalo)
+							VALUES (:id_aluno, :id_tipo, :id_area, :id_exercicio, :nu_serie, :nu_repeticao, :nu_carga, :nu_cadencia, :nu_intervalo)";
+				
+				$stmt = $con->prepare($insert);
+				
+				$params = array(':id_aluno' => $id_aluno,
+								':id_tipo' => $id_tipo,
+								':id_area' => $id_area,
+								':id_exercicio' => $id_exercicio,
+								':nu_serie' => $nu_serie,
+								':nu_repeticao' => $nu_repeticao,
+								':nu_carga' => $nu_carga,
+								':nu_cadencia' => $nu_cadencia,
+                                ':nu_intervalo' => $nu_intervalo);
+                                
+				$stmt->execute($params);
+				
+				echo "Dados gravados com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+        }
+
 
     
 

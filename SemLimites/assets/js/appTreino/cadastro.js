@@ -3,14 +3,14 @@ $(document).ready(function() {
 
         $("#cancelar").on("click", function(){
             $('#form_usuario').trigger("reset");
-            redirectTo("appProfessor/listar_treino.php");
+            redirectTo("appTreino/listar_aluno.php");
         }); 
     
         $("#salvar").on("click", function(e){ 
             if(validar())
             { 
                 $.ajax({
-                    url: 'appProfessor/gravar_treino.php'
+                    url: 'appTreino/gravar_treino.php'
                     , data: $("#form_treino").serialize()
                     , type: 'post'
                     , success: function(html) {
@@ -21,7 +21,7 @@ $(document).ready(function() {
                             showConfirmButton: true
                         });
                         
-                        redirectTo("appUsuario/listar_treino.php");
+                        redirectTo("appUsuario/listar_aluno.php");
                     }
                     , error: function (data) {
                         swal.fire("Erro", data.responseText, "error");
