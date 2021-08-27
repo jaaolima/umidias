@@ -287,7 +287,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<div class="menu-submenu menu-submenu-classic menu-submenu-right">
 														<ul class="menu-subnav">
 															<li class="menu-item" aria-haspopup="true">
-																<a href="appTipo/listar_tipo.php" class="menu-link">
+																<a href="appAluno/listar_aluno.php" class="menu-link">
 																	<span class="menu-text">Alunos</span>
 																	<span class="menu-desc"></span> 
 																</a>
