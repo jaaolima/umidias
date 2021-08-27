@@ -69,7 +69,7 @@
 				
 				
 				$select = "SELECT 
-							id_aluno, ds_nome, ds_email, ds_aluno, id_perfil
+							id_aluno, ds_aluno
 						FROM tb_aluno  
 						WHERE id_aluno = :id_aluno";
 
@@ -92,19 +92,18 @@
 		public function gravarAlterarAluno(array $dados)
 		{
 
-			$ds_nome		= $dados['ds_nome'];
-			$ds_email    	= $dados['ds_email'];
-			$id_aluno    	= $dados['id_aluno'];
+			$ds_aluno		= $dados['ds_aluno'];
+            $id_aluno		= $dados['id_aluno'];
+
 			
 			try{
 				$con = Conecta::criarConexao();
-				$update = "UPDATE tb_aluno set ds_nome = :ds_nome, ds_email = :ds_email
+				$update = "UPDATE tb_aluno set ds_aluno = :ds_aluno
 						WHERE id_aluno = :id_aluno";
 				
 				$stmt = $con->prepare($update);
 				
-				$params = array(':ds_nome' => $ds_nome, 
-								':ds_email' => $ds_email,
+				$params = array(':ds_aluno' => $ds_aluno,
 								':id_aluno'=>$id_aluno);
 				$stmt->execute($params);
 
@@ -118,33 +117,6 @@
     			print "ERRO:".$e->getMessage();		
 			}
 		}
-		function resetarSenhaInicial($ds_email)
-        { //SHA2(nu_matricula, 512)
-
-            try{
-                $con = Conecta::criarConexao();
-                $update = "UPDATE tb_aluno
-                                SET 
-                                    ds_senha = '123456'
-                            WHERE ds_email = :ds_email";
-
-                $stmt = $con->prepare($update);
-                $params = array(
-                                ':ds_email' => $ds_email
-                                );
-
-                $stmt->execute($params);
-
-
-                echo "Senha alterada com sucesso!";
-
-            }
-            catch(exception $e)
-            {
-                header('HTTP/1.1 500 Internal Server Error');
-                print $e->getMessage();	
-            }	
-        }
 
 	}
 
