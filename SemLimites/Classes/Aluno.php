@@ -118,6 +118,32 @@
 			}
 		}
 
+        public function ExcluirAluno(array $dados)
+		{
+            $id_aluno	    = $dados['id_aluno'];
+
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "delete from tb_aluno
+							WHERE id_aluno=:id_aluno";
+				
+				$stmt = $con->prepare($insert);
+				
+                $params = array(':id_aluno' => $id_aluno);
+                                
+				$stmt->execute($params);
+				
+				echo "Deletado com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+		}
+
 	}
 
 ?>
