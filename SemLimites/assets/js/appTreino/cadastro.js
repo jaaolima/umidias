@@ -21,7 +21,7 @@ $(document).ready(function() {
                             showConfirmButton: true
                         });
                         
-                        redirectTo("appUsuario/listar_aluno.php");
+                        redirectTo("appTreino/listar_aluno.php");
                     }
                     , error: function (data) {
                         swal.fire("Erro", data.responseText, "error");
