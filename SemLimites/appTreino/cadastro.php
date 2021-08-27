@@ -1,5 +1,13 @@
 
+<?php 
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
 
+
+$id_aluno = $_REQUEST["id_aluno"];
+
+?>
 <div class="card card-custom">
     <div class="card-header">
         <h3 class="card-title">
@@ -17,8 +25,25 @@
         <div class="card-body">
             <div class="form-group row">
                 <div class="form-group col-md-3">
-                    <label>Exercício <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_exercicio" name="ds_exercicio" />
+                    <label>Tipo<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_tipo" name="id_tipo">
+                        <option>Selecione..</option>
+                        <?php 
+                            echo $optionsTipo;
+                        ?>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Área<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_area" name="id_area">
+                        <option>Selecione..</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Exercício<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_exercicio" name="id_exercicio">
+                        <option>Selecione..</option>
+                    </select>
                 </div>
                 <div class="form-group col-md-3">
                     <label >Séries <span class="text-danger">*</span></label>
@@ -51,5 +76,5 @@
     </form>
     <!--end::Form-->
 </div>
-<script src="./assets/js/appProfessor/cadastro_treino.js" type="text/javascript"></script>
+<script src="./assets/js/appTreino/cadastro.js" type="text/javascript"></script>
 

@@ -31,6 +31,32 @@ $(document).ready(function() {
         });
     });
 
+    $("#id_tipo").on("change", function() {
+		var id_tipo = $("#id_tipo option:selected").val();
+		$.ajax({
+	        url: 'appArea/listar_options_area.php'
+	        , type: 'post'
+	        , data: {id_tipo : id_tipo}
+	        , success: function(html) {
+	        	$("#id_area").empty();
+	        	$("#id_area").append(html);     
+	        }
+	    }); 
+	}); 
+
+    $("#id_area").on("change", function() {
+		var id_area = $("#id_area option:selected").val();
+		$.ajax({
+	        url: 'appExercicio/listar_options_exercicio.php'
+	        , type: 'post'
+	        , data: {id_area : id_area}
+	        , success: function(html) {
+	        	$("#id_exercicio").empty();
+	        	$("#id_exercicio").append(html);     
+	        }
+	    }); 
+	}); 
+
     $("#nu_serie").inputmask({
 		"mask": "99",
 		numericInput: true,

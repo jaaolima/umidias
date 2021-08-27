@@ -61,7 +61,7 @@ $(document).ready(function() {
             $("#id_tipo").addClass("is-valid");
         }
 
-        if($("#id_area option:selected").val() === "")
+        if($("#id_area option:selected").val() === "") 
         {
             $("#id_area").focus();
             swal.fire("Erro", "Selecione a área", "error");

@@ -476,8 +476,44 @@
 			catch(exception $e)
 			{
 				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
+    			print "ERRO:".$e->getMessage();		 
 			} 
+		}
+
+		public function OptionsExercicio($id_area, $id_exercicio)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				$select = "SELECT id_exercicio, ds_exercicio
+							FROM tb_exercicio 
+							where id_area=:id_area";
+				$stmt = $con->prepare($select);
+				$params = array(':id_area' => $id_area);
+				$stmt->execute($params);
+
+				$options = "";
+
+				while($dados = $stmt->fetch())
+				{
+						
+					if($id_exercicio == $dados['id_exercicio'])
+					{
+						$options.= "<option value='".$dados['id_exercicio']."' selected>".$dados['ds_exercicio']."</option>";
+					}	
+					else
+					{
+						$options.= "<option value='".$dados['id_exercicio']."'>".$dados['ds_exercicio']."</option>";	
+					}
+
+				}
+				return $options;
+
+			}
+			catch(exception $e)
+			{
+			header('HTTP/1.1 500 Internal Server Error');
+			print $e->getMessage();
+			}
 		}
 
 
