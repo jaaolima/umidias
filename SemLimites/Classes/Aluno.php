@@ -35,24 +35,16 @@
 		public function gravarAluno(array $dados)
 		{
 		
-			$ds_nome		= $dados['ds_nome'];
-			$ds_email    	= $dados['ds_email'];
-			$ds_aluno 	= $dados['ds_aluno'];
-			$id_perfil 		= $dados['id_perfil'];
-			$ds_senha       =  '123456';
+			$ds_aluno		= $dados['ds_aluno'];
 		
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_aluno (ds_nome, ds_aluno, ds_email, ds_senha, id_perfil)
-							VALUES (:ds_nome, :ds_aluno, :ds_email, :ds_senha, :id_perfil)";
+				$insert = "INSERT into tb_aluno (ds_aluno)
+							VALUES (:ds_aluno)";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_nome' => $ds_nome, 
-								':ds_aluno' => $ds_aluno,
-								':ds_email' => $ds_email,
-								':id_perfil' => $id_perfil,
-								':ds_senha' =>hash("SHA512",$ds_senha));
+				$params = array(':ds_aluno' => $ds_aluno);
 
 				$stmt->execute($params);
 
