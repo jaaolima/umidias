@@ -29,7 +29,7 @@
                     <select class="form-control" id="id_tipo" name="id_tipo">
                         <option>Selecione..</option>
                         <?php 
-                            echo $optionsTipo;
+                            echo $optionsTipo; 
                         ?>
                     </select>
                 </div>
