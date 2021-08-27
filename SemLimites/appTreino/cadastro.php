@@ -79,7 +79,7 @@ $optionsTipo = $exercicio->OptionsTipo(null);
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
             <button type="reset" class="btn btn-secondary" id="cancelar">Cancelar</button>
         </div>
-        <input type="hidden" name="id_aluno" id="id_aluno">
+        <input type="hidden" name="id_aluno" id="id_aluno" value="<?php echo $id_aluno; ?>">
     </form>
     <!--end::Form-->
 </div>
