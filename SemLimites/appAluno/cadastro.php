@@ -36,8 +36,20 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label>Sexo<span class="text-danger">*</span></label>
-                    <input type="radio" class="form-control" id="st_sexo_m" name="st_sexo" />
-                    <input type="radio" class="form-control" id="st_sexo_f" name="st_sexo" />
+                    <div class="col-9 col-form-label">
+                        <div class="radio-inline">
+                            <label class="radio">
+                                <input type="radio" name="st_sexo"/>
+                                <span></span>
+                                Masculino
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="st_sexo"/>
+                                <span></span>
+                                Feminino
+                            </label>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Endereço<span class="text-danger">*</span></label>
