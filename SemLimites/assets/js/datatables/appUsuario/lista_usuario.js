@@ -78,12 +78,12 @@ var DatatablesBasicBasic = function() {
 	        }).then(function(result) {
 	            if (result.value) {
 					$.ajax({
-				        url: 'appPerfil/excluir_usuario.php'
+				        url: 'appUsuario/excluir_usuario.php'
 				        , type: 'post'
 				        , data: {id_usuario : id_usuario}
 				        , success: function(html) {
 							swal.fire('Pronto!',html,'success');
-							redirectTo("appPerfil/listar_usuario.php");				
+							redirectTo("appUsuario/listar_usuario.php");				
 				        }
 				    });
 	                
