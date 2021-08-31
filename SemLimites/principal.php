@@ -292,6 +292,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<span class="menu-desc"></span> 
 																</a>
 															</li>
+															<li class="menu-item" aria-haspopup="true">
+																<a href="appPerfil/listar_perfil.php" class="menu-link">
+																	<span class="menu-text">Perfil</span>
+																	<span class="menu-desc"></span> 
+																</a>
+															</li>
 														</ul>
 													</div>
 												</li>
