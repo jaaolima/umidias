@@ -84,7 +84,7 @@
 				
 				
 				$select = "SELECT 
-							id_usuario, ds_usuario
+							id_usuario, ds_usuario, ds_nome, nu_cpf, ds_email, dt_nascimento, st_sexo, ds_endereco, nu_cep
 						FROM tb_usuario  
 						WHERE id_usuario = :id_usuario";
 
