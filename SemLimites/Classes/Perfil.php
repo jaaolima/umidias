@@ -17,7 +17,7 @@
 				$stmt = $con->prepare($insert);
 				
 				$params = array(':ds_perfil' => $ds_perfil,
-                                ':st_status' => $st_status);
+                                ':st_status' => $st_status); 
                                 
 				$stmt->execute($params);
 				
@@ -133,6 +133,40 @@
 				header('HTTP/1.1 500 Internal Server Error');
     			print "ERRO:".$e->getMessage();		
 			} 
+		}
+
+        public function OptionsPerfil($id_perfil)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				$select = "SELECT id_perfil, ds_perfil
+							FROM tb_perfil ";
+				$stmt = $con->prepare($select);
+				$stmt->execute();
+
+				$options = "";
+
+				while($dados = $stmt->fetch())
+				{
+						
+					if($id_perfil == $dados['id_perfil'])
+					{
+						$options.= "<option value='".$dados['id_perfil']."' selected>".$dados['ds_perfil']."</option>";
+					}	
+					else
+					{
+						$options.= "<option value='".$dados['id_perfil']."'>".$dados['ds_perfil']."</option>";	
+					}
+
+				}
+				return $options;
+
+			}
+			catch(exception $e)
+			{
+			header('HTTP/1.1 500 Internal Server Error');
+			print $e->getMessage();
+			}
 		}
 	}
 

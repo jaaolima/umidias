@@ -45,11 +45,9 @@ $dados = $usuario->buscarDadosUsuario($id_usuario);
                 <div class="form-group col-md-3">
                     <label >Perfil<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_perfil" name="id_perfil">
-                        <option>Selecione..</option>
-                        <option value="3" <?php if ($dados['id_perfil'] == '3') echo "selected" ?>>Administrador</option>
-                        <option value="1" <?php if ($dados['id_perfil'] == '1') echo "selected" ?>>Cliente</option>
-                        <option value="2" <?php if ($dados['id_perfil'] == '2') echo "selected" ?>>Parceiro</option>
-                        <option value="2" <?php if ($dados['id_perfil'] == '4') echo "selected" ?>>Agência</option>
+                        <?php 
+                            echo $optionsPerfil;
+                        ?>
                     </select>
                 </div>             
             </div>

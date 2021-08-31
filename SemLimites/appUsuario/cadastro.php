@@ -1,4 +1,13 @@
 
+<?php
+	ini_set('display_errors',1);
+	ini_set('display_startup_erros',1);
+    error_reporting(E_ALL);
+    
+    require_once("../Classes/Perfil.php");
+    $exercicio = new Perfil();
+    $optionsPerfil = $exercicio->OptionsPerfil(null);
+?>
 
 <div class="card card-custom">
     <div class="card-header">
@@ -35,10 +44,9 @@
                     <label >Perfil<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_perfil" name="id_perfil">
                         <option>Selecione..</option>
-                        <option value="3">Administrador</option>
-                        <option value="1">Cliente</option>
-                        <option value="2">Parceiro</option>
-                        <option value="4">Agência</option>
+                        <?php 
+                            echo $optionsPerfil;
+                        ?>
                     </select>
                 </div>
             </div>
