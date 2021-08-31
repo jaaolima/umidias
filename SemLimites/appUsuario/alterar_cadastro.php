@@ -4,11 +4,14 @@ ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 require_once("../Classes/Usuario.php");
+require_once("../Classes/Perfil.php");
 
 $id_usuario = $_REQUEST['id_usuario'];
 
 $usuario = new Usuario();
-$dados = $usuario->buscarDadosUsuario($id_usuario);
+$exercicio = new Perfil();
+$dados = $usuario->buscarDadosUsuario($id_usuario);    
+$optionsPerfil = $exercicio->OptionsPerfil($dados["id_perfil"]);
 
 ?>
 <div class="card card-custom">
