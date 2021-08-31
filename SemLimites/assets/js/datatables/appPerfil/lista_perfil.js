@@ -42,7 +42,7 @@ var DatatablesBasicBasic = function() {
 					render: function(data, type, full, meta) {
 						return `
                         
-                         <a href="appperfil/alterar_cadastro.php?id_perfil=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
+                         <a href="appPerfil/alterar_cadastro.php?id_perfil=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
                           <i class="la la-edit"></i>
                         </a>
 						<a id="excluir" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-perfil="`+full[0]+`" >
@@ -78,12 +78,12 @@ var DatatablesBasicBasic = function() {
 	        }).then(function(result) {
 	            if (result.value) {
 					$.ajax({
-				        url: 'appperfil/excluir_perfil.php'
+				        url: 'appPerfil/excluir_perfil.php'
 				        , type: 'post'
 				        , data: {id_perfil : id_perfil}
 				        , success: function(html) {
 							swal.fire('Pronto!',html,'success');
-							redirectTo("appperfil/listar_perfil.php");				
+							redirectTo("appPerfil/listar_perfil.php");				
 				        }
 				    });
 	                
