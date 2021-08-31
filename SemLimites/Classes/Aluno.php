@@ -23,7 +23,7 @@
 			catch(exception $e)
 			{
 				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
+    			print "ERRO:".$e->getMessage();	 	
 			}
 		}
  
@@ -39,8 +39,8 @@
 		
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_usuario (ds_usuario)
-							VALUES (:ds_usuario)";
+				$insert = "INSERT into tb_usuario (ds_usuario, id_tipo)
+							VALUES (:ds_usuario, 3)";
 				
 				$stmt = $con->prepare($insert);
 				
