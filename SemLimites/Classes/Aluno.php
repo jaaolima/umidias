@@ -37,21 +37,29 @@
 		
 			$ds_usuario		= $dados['ds_usuario'];
 			$ds_nome		= $dados['ds_nome'];
-			$nu_cpf		= $dados['nu_cpf'];
+			$nu_cpf			= $dados['nu_cpf'];
 			$ds_email		= $dados['ds_email'];
-			$dt_nascimento		= $dados['dt_nascimento'];
-			$ds_usuario		= $dados['ds_usuario'];
-			$ds_usuario		= $dados['ds_usuario'];
-			$ds_usuario		= $dados['ds_usuario'];
+			$dt_nascimento	= $dados['dt_nascimento'];
+			$st_sexo		= $dados['st_sexo'];
+			$ds_endereco	= $dados['ds_endereco'];
+			$nu_cep			= $dados['nu_cep'];
 		
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_usuario (ds_usuario, id_tipo)
-							VALUES (:ds_usuario, 3)";
+				$insert = "INSERT into tb_usuario (ds_usuario, id_perfil, ds_nome, nu_cpf, ds_email, dt_nascimento, st_sexo, ds_endereco, nu_cep)
+							VALUES (:ds_usuario, 3, :ds_nome, :nu_cpf, :ds_email, :dt_nascimento, :st_sexo, :ds_endereco, :nu_cep)";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_usuario' => $ds_usuario);
+				$params = array(':ds_usuario' => $ds_usuario,
+								':ds_nome' => $ds_nome,
+								':nu_cpf' => $nu_cpf,
+								':ds_email' => $ds_email,
+								':dt_nascimento' => $dt_nascimento,
+								':st_sexo' => $st_sexo,
+								':ds_endereco' => $ds_endereco,
+								':nu_cep' => $nu_cep
+							);
 
 				$stmt->execute($params);
 
