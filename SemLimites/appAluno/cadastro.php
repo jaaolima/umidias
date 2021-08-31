@@ -13,12 +13,12 @@
         </div>
     </div>
     <!--begin::Form-->
-    <form id="form_aluno">
+    <form id="form_usuario">
         <div class="card-body">
             <div class="form-group row">
                 <div class="form-group col-md-3">
                     <label>Nome<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_aluno" name="ds_aluno" />
+                    <input type="text" class="form-control" id="ds_usuario" name="ds_usuario" />
                 </div>
             </div>
         </div>

@@ -8,8 +8,8 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_aluno, ds_aluno
-							FROM tb_aluno";
+				$select = "SELECT id_usuario, ds_usuario
+							FROM tb_usuario";
 				
 				$stmt = $con->prepare($select); 
 				
@@ -35,16 +35,16 @@
 		public function gravarAluno(array $dados)
 		{
 		
-			$ds_aluno		= $dados['ds_aluno'];
+			$ds_usuario		= $dados['ds_usuario'];
 		
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_aluno (ds_aluno)
-							VALUES (:ds_aluno)";
+				$insert = "INSERT into tb_usuario (ds_usuario)
+							VALUES (:ds_usuario)";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_aluno' => $ds_aluno);
+				$params = array(':ds_usuario' => $ds_usuario);
 
 				$stmt->execute($params);
 
@@ -62,19 +62,19 @@
 
 		
 
-		function buscarDadosAluno($id_aluno)
+		function buscarDadosAluno($id_usuario)
 		{
 			try{
 				$con = Conecta::criarConexao();
 				
 				
 				$select = "SELECT 
-							id_aluno, ds_aluno
-						FROM tb_aluno  
-						WHERE id_aluno = :id_aluno";
+							id_usuario, ds_usuario
+						FROM tb_usuario  
+						WHERE id_usuario = :id_usuario";
 
 				$stmt = $con->prepare($select);
-			   	$params = array(':id_aluno' => $id_aluno);
+			   	$params = array(':id_usuario' => $id_usuario);
 			   
 			    $stmt->execute($params);
 
@@ -92,19 +92,19 @@
 		public function gravarAlterarAluno(array $dados)
 		{
 
-			$ds_aluno		= $dados['ds_aluno'];
-            $id_aluno		= $dados['id_aluno'];
+			$ds_usuario		= $dados['ds_usuario'];
+            $id_usuario		= $dados['id_usuario'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$update = "UPDATE tb_aluno set ds_aluno = :ds_aluno
-						WHERE id_aluno = :id_aluno";
+				$update = "UPDATE tb_usuario set ds_usuario = :ds_usuario
+						WHERE id_usuario = :id_usuario";
 				
 				$stmt = $con->prepare($update);
 				
-				$params = array(':ds_aluno' => $ds_aluno,
-								':id_aluno'=>$id_aluno);
+				$params = array(':ds_usuario' => $ds_usuario,
+								':id_usuario'=>$id_usuario);
 				$stmt->execute($params);
 
 				
@@ -120,17 +120,17 @@
 
         public function ExcluirAluno(array $dados)
 		{
-            $id_aluno	    = $dados['id_aluno'];
+            $id_usuario	    = $dados['id_usuario'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "delete from tb_aluno
-							WHERE id_aluno=:id_aluno";
+				$insert = "delete from tb_usuario
+							WHERE id_usuario=:id_usuario";
 				
 				$stmt = $con->prepare($insert);
 				
-                $params = array(':id_aluno' => $id_aluno);
+                $params = array(':id_usuario' => $id_usuario);
                                 
 				$stmt->execute($params);
 				

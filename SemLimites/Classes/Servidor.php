@@ -11,7 +11,7 @@
                 $update = "UPDATE tb_usuario
                                 SET 
                                     ds_senha = '123456'
-                            WHERE ds_email = :ds_email";
+                            WHERE ds_email = :ds_email"; 
 
                 $stmt = $con->prepare($update);
                 $params = array(

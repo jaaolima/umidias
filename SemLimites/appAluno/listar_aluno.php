@@ -86,8 +86,8 @@
 					while ($dados = $retorno->fetch())
 					{
                         echo "<tr>
-                                <td>".$dados['id_aluno']."</td>
-                                <td>".$dados['ds_aluno']."</td>
+                                <td>".$dados['id_usuario']."</td>
+                                <td>".$dados['ds_usuario']."</td>
 								<td nowrap></td>
 							</tr>";
 					}

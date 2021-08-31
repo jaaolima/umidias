@@ -2,7 +2,7 @@ $(document).ready(function() {
 	    
 
         $("#cancelar").on("click", function(){
-            $('#form_aluno').trigger("reset");
+            $('#form_usuario').trigger("reset");
             redirectTo("appAluno/listar_aluno.php");
         }); 
     
@@ -11,7 +11,7 @@ $(document).ready(function() {
             { 
                 $.ajax({
                     url: 'appAluno/gravar_aluno.php'
-                    , data: $("#form_aluno").serialize()
+                    , data: $("#form_usuario").serialize()
                     , type: 'post'
                     , success: function(html) {
                         swal.fire({
@@ -34,17 +34,17 @@ $(document).ready(function() {
     
     function validar()
     {
-        if($("#ds_aluno").val() == "")
+        if($("#ds_usuario").val() == "")
         {
-            $("#ds_aluno").focus();
-            swal.fire("Erro", "Preencha a área", "error");
-            $("#ds_aluno").addClass("is-invalid");
+            $("#ds_usuario").focus();
+            swal.fire("Erro", "Preencha o Nome", "error");
+            $("#ds_usuario").addClass("is-invalid");
             return false;	
         }
         else
         {
-            $("#ds_aluno").removeClass("is-invalid");	
-            $("#ds_aluno").addClass("is-valid");
+            $("#ds_usuario").removeClass("is-invalid");	
+            $("#ds_usuario").addClass("is-valid");
         }
     
         return true;
