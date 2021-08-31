@@ -36,6 +36,13 @@
 		{
 		
 			$ds_usuario		= $dados['ds_usuario'];
+			$ds_nome		= $dados['ds_nome'];
+			$nu_cpf		= $dados['nu_cpf'];
+			$ds_email		= $dados['ds_email'];
+			$dt_nascimento		= $dados['dt_nascimento'];
+			$ds_usuario		= $dados['ds_usuario'];
+			$ds_usuario		= $dados['ds_usuario'];
+			$ds_usuario		= $dados['ds_usuario'];
 		
 			try{
 				$con = Conecta::criarConexao();

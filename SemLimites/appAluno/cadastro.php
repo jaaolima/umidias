@@ -17,8 +17,12 @@
         <div class="card-body"> 
             <div class="form-group row">
                 <div class="form-group col-md-3">
-                    <label>Nome<span class="text-danger">*</span></label>
+                    <label>Usuário<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_usuario" name="ds_usuario" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Nome<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_nome" name="ds_nome" />
                 </div>
                 <div class="form-group col-md-3">
                     <label>CPF<span class="text-danger">*</span></label>
@@ -39,12 +43,12 @@
                     <div class="col-9 col-form-label">
                         <div class="radio-inline">
                             <label class="radio">
-                                <input type="radio" name="st_sexo"/>
+                                <input type="radio" id="st_sexo_m" value="M" name="st_sexo"/>
                                 <span></span>
                                 Masculino
                             </label>
                             <label class="radio">
-                                <input type="radio" name="st_sexo"/>
+                                <input type="radio" id="st_sexo_f" value="F" name="st_sexo"/>
                                 <span></span>
                                 Feminino
                             </label>
