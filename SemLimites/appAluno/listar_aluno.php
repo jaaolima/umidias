@@ -88,6 +88,8 @@
                         echo "<tr>
                                 <td>".$dados['id_usuario']."</td>
                                 <td>".$dados['ds_usuario']."</td>
+								<td>".$dados['ds_usuario']."</td>
+								<td>".$dados['ds_email']."</td>
 								<td nowrap></td>
 							</tr>";
 					}

@@ -8,7 +8,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_usuario, ds_usuario
+				$select = "SELECT *
 							FROM tb_usuario";
 				
 				$stmt = $con->prepare($select); 
