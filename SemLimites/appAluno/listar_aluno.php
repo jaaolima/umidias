@@ -78,6 +78,8 @@
 				<tr>
                     <th>ID</th>
                     <th>Aluno</th>
+					<th>Usuário</th>
+					<th>E-mail</th>
                     <th></th>
 				</tr>
 			</thead>
@@ -87,7 +89,7 @@
 					{
                         echo "<tr>
                                 <td>".$dados['id_usuario']."</td>
-                                <td>".$dados['ds_usuario']."</td>
+                                <td>".$dados['ds_nome']."</td>
 								<td>".$dados['ds_usuario']."</td>
 								<td>".$dados['ds_email']."</td>
 								<td nowrap></td>
