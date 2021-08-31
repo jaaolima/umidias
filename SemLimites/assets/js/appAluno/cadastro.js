@@ -92,17 +92,17 @@ $(document).ready(function() {
             $("#ds_email").addClass("is-valid");
         }
 
-        if($("#st_nascimento").val() == "")
+        if($("#dt_nascimento").val() == "")
         {
-            $("#st_nascimento").focus();
+            $("#dt_nascimento").focus();
             swal.fire("Erro", "Preencha a Data de nascimento", "error");
-            $("#st_nascimento").addClass("is-invalid");
+            $("#dt_nascimento").addClass("is-invalid");
             return false;	
         }
         else
         {
-            $("#st_nascimento").removeClass("is-invalid");	
-            $("#st_nascimento").addClass("is-valid");
+            $("#dt_nascimento").removeClass("is-invalid");	
+            $("#dt_nascimento").addClass("is-valid");
         }
 
         var st_sexo = $("input[name='st_sexo']:checked").val();

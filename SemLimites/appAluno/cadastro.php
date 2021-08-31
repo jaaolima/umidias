@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label>E-mail<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_email" name="ds_email" />
+                    <input type="email" class="form-control" id="ds_email" name="ds_email" />
                 </div>
             </div>
             <div class="form-group row">
