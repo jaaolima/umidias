@@ -196,5 +196,6 @@ $(document).ready(function() {
             swal.fire("Erro", "CPF inválido", "error");
             $("#nu_cpf").addClass("is-invalid");
             return false;		
-        }			  
+        }	
+        return true;		  
     }
