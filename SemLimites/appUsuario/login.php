@@ -18,9 +18,8 @@
 	else 
 	{
 		$_SESSION['autenticado']    	= 'validado';
-		$_SESSION['ds_nome']        	= $login['ds_nome'];
+		$_SESSION['ds_nome']        	= $login['ds_nome']; 
 		$_SESSION['id_usuario']			= $login['id_usuario'];
-		$_SESSION['id_parceiro']		= $login['id_parceiro'];
 		$_SESSION['ds_usuario']			= $login['ds_usuario'];
 		$_SESSION['id_perfil']			= $login['id_perfil'];
 		echo "Usuário autenticado";	
