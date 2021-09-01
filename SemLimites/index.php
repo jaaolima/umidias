@@ -49,15 +49,15 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Main-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Login-->
-			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login" style="background-image: url(assets/media/BG.png);background-size: 100%;background-size: cover;">
+			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login" style="background-color: #212322;background-size: 100%;background-size: cover;">
 				<!--begin::Content-->
 				<div class="d-flex flex-column flex-row-fluid position-relative p-7 overflow-hidden">
 					<!--begin::Content body-->
-					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
+					<!-- <div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
 						<div style="max-width: 400px;">
 							<img src="assets/media/Logo-Vertical-01-alterada.png" class="max-h-100px">
 						</div>
-					</div>
+					</div> -->
 					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
 						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white w-100 box-shadow"  style="max-width: 400px;">
 							<!--begin::Signin-->
