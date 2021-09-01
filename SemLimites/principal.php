@@ -11,6 +11,7 @@
 		exit();
 	}
    	$id_usuario = $_SESSION['id_usuario'];
+	$id_perfil = $_SESSION['id_perfil'];
 
 	require_once("Classes/Usuario.php");
 	$usuario = new Usuario();
@@ -129,6 +130,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
 										<div class="navi navi-spacer-x-0 pt-5">
 											<!--begin::Item-->
+											<?php if($id_perfil == 1 || $id_perfil == 3) : ?>
 											<a href="custom/apps/userprofile-1/overview.html" class="navi-item px-8">
 												<div class="navi-link">
 													<div class="navi-icon mr-2">
@@ -140,11 +142,12 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 												</div>
 											</a>
+											<?php endif; ?>
 											<!--end::Item-->
 											<!--begin::Footer-->
 											<div class="navi-separator mt-3"></div>
 											<div class="navi-footer px-8 py-5">
-												<a href="appUsuario/logout.php" class="btn btn-light-primary font-weight-bold">Sair</a>
+												<a href="appUsuario/logout.php" class="btn btn-primary font-weight-bold">Sair</a>
 											</div>
 											<!--end::Footer-->
 										</div>
@@ -171,12 +174,15 @@ License: You must have a valid license purchased only from themeforest(the above
 											<span class="menu-text">Dashboard</span>
 										</a>
 									</li>
+									<?php if($id_perfil == 1 || $id_perfil == 3) : ?>
 									<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
 										<a href="javascript:;" class="menu-link menu-toggle">
 											<span class="menu-text">Meus Treinos</span>
 											<span class="menu-desc"></span>
 										</a>
 									</li>
+									<?php endif; ?>
+									<?php if($id_perfil == 1 || $id_perfil == 2) : ?>
 									<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
 										<a href="appTreino/listar_aluno.php" class="menu-link menu-toggle">
 											<span class="menu-text">Prescrever treinos</span>
@@ -250,6 +256,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</ul>
 										</div>
 									</li>
+									<?php endif; ?>
 									
 								</ul>
 								<!--end::Header Nav-->
