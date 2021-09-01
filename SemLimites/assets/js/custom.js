@@ -30,7 +30,7 @@ $("body").on('click', 'a', function(event){
 
 
   event.preventDefault();
-  redirectTo($(this).attr('href'));
+  redirectTo($(this).attr('href')); 
 });
 
 
@@ -103,156 +103,16 @@ $(document).on('click', function(e) { //Hide menu when clicked outside menu area
 	}
 });
 
-$('.botao-menu').click(function (e)
-	{
-		$('.botao-menu').removeClass('botao-menu-active');
-		$(this).addClass('botao-menu-active');
-
-	});
 
 
-  $('.botao-menu-painel').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-painel').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-painel').addClass('texto-menu-active');
+$('.menu-item').click(function (e)
+{
+  $('menu-item').removeClass("menu-item-open menu-item-here");
+  $(this).addClass("menu-item-open menu-item-here");
 
-	});
+});
 
-  $('.botao-menu-alugar').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-alugar').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-alugar').addClass('texto-menu-active');
-
-	});
-
-  $('.botao-menu-alugadas').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-alugadas').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-alugadas').addClass('texto-menu-active');
-
-
-	});
-
-  $('.botao-menu-gestor').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-gestor').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-gestor').addClass('texto-menu-active');
-
-
-	});
-
-  $('.botao-menu-financeiro').click(function (e) 
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-financeiro').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-financeiro').addClass('texto-menu-active');
-    
-
-
-	});
-
-  $('.botao-menu-usuario').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-usuario').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-usuario').addClass('texto-menu-active');
-
-	});
-
-  $('.botao-menu-categoria').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-categoria').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-categoria').addClass('texto-menu-active');
-
-
-	});
-
-  $('.botao-menu-ponto').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-ponto').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-ponto').addClass('texto-menu-active');
-    
-
-	});
-
-  
-  $('.botao-menu-relatorio').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-relatorio').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-relatorio').addClass('texto-menu-active');
-    
-
-	});
-
-  
-  $('.botao-menu-parceiro').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-parceiro').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-parceiro').addClass('texto-menu-active');
-    
-
-	});
-
-  $('.botao-menu-material').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-material').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-material').addClass('texto-menu-active');
-    
-
-	});
-
-  
-  $('.botao-menu-bisemana').click(function (e)
-	{
-    $('.svg-hover').removeClass('svg-active');
-    $('.svg-bisemana').addClass('svg-active');
-    $('.texto-menu').removeClass('texto-menu-active');
-    $('.texto-menu-bisemana').addClass('texto-menu-active');
-    
-
-	});
-
-
-  $('#nav_toggle').click(function(e){
-    $(this).addClass("d-none")
-    $("#nav_toggle_open").removeClass('d-none')
-    $('.texto-menu').addClass("d-none")
-    $('#navbar').css({"width": "120px"})
-    $("#kt_wrapper").css({"margin-left" : "120px"})
-
-
-  });
-
-  $('#nav_toggle_open').click(function(e){
-    $(this).addClass("d-none")
-    $("#nav_toggle").removeClass('d-none')
-    $('.texto-menu').removeClass('d-none')
-    $('#navbar').css({"width": "265px"})
-    $("#kt_wrapper").css({"margin-left" : "265px"})
-
-
-  });
-
+ 
 
 
 
