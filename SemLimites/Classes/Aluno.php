@@ -9,7 +9,7 @@
 				$con = Conecta::criarConexao();
 				
 				$select = "SELECT *
-							FROM tb_usuario";
+							FROM tb_aluno";
 				
 				$stmt = $con->prepare($select); 
 				
@@ -110,7 +110,7 @@
 				
 				$select = "SELECT 
 							id_usuario, ds_usuario, ds_nome, nu_cpf, ds_email, dt_nascimento, st_sexo, ds_endereco, nu_cep
-						FROM tb_usuario  
+						FROM tb_aluno  
 						WHERE id_usuario = :id_usuario";
 
 				$stmt = $con->prepare($select);
@@ -170,6 +170,7 @@
 					
 					$paramsAluno = array(':ds_nome' => $ds_nome, 
 									':ds_email' => $ds_email,
+									':ds_usuario' => $ds_usuario,
 									':id_usuario'=>$id_usuario);
 					$stmtAluno->execute($paramsAluno);
 	
@@ -199,7 +200,7 @@
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "delete from tb_usuario
+				$insert = "delete from tb_aluno
 							WHERE id_usuario=:id_usuario";
 				
 				$stmt = $con->prepare($insert);
