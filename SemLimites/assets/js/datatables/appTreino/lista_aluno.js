@@ -42,15 +42,15 @@ var DatatablesBasicBasic = function() {
 					render: function(data, type, full, meta) {
 						return `
                         
-                         <a href="appTreino/cadastro.php?id_aluno=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
-                          <i class="la la-edit"></i>
+                         <a href="appTreino/cadastro.php?id_aluno=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Prescrever treino">
+                          <i class="la la-file-medical"></i>
                         </a>
                         `;
 					},
 				},
 				{
 					targets: 0,
-					visible: false
+					visible: false 
 				},
 				
 				
