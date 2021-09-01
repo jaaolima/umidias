@@ -198,7 +198,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<!--begin::Footer-->
 											<div class="navi-separator mt-3"></div>
 											<div class="navi-footer px-8 py-5">
-												<a href="appUsuario/logout.php" target="_blank" class="btn btn-light-primary font-weight-bold">Sair</a>
+												<a href="appUsuario/logout.php" class="btn btn-light-primary font-weight-bold">Sair</a>
 											</div>
 											<!--end::Footer-->
 										</div>
