@@ -144,6 +144,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!--end::Toggle-->
 									<!--begin::Dropdown-->
 									<div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
+										<div class="navi navi-spacer-x-0 pt-5">
 											<!--begin::Item-->
 											<a href="custom/apps/userprofile-1/overview.html" class="navi-item px-8">
 												<div class="navi-link">
