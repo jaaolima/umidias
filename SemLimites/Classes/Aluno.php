@@ -43,29 +43,54 @@
 			$st_sexo		= $dados['st_sexo'];
 			$ds_endereco	= $dados['ds_endereco'];
 			$nu_cep			= $dados['nu_cep'];
+			$ds_senha       =  '123456';
 		
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_usuario (ds_usuario, id_perfil, ds_nome, nu_cpf, ds_email, dt_nascimento, st_sexo, ds_endereco, nu_cep)
-							VALUES (:ds_usuario, 3, :ds_nome, :nu_cpf, :ds_email, :dt_nascimento, :st_sexo, :ds_endereco, :nu_cep)";
+				$insert = "INSERT into tb_usuario (ds_nome, ds_usuario, ds_email, ds_senha, id_perfil)
+							VALUES (:ds_nome, :ds_usuario, :ds_email, :ds_senha, 3)";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_usuario' => $ds_usuario,
-								':ds_nome' => $ds_nome,
-								':nu_cpf' => $nu_cpf,
+				$params = array(':ds_nome' => $ds_nome, 
+								':ds_usuario' => $ds_usuario,
 								':ds_email' => $ds_email,
-								':dt_nascimento' => $dt_nascimento,
-								':st_sexo' => $st_sexo,
-								':ds_endereco' => $ds_endereco,
-								':nu_cep' => $nu_cep
-							);
+								':ds_senha' =>hash("SHA512", $ds_senha));
 
 				$stmt->execute($params);
 
+				try{
+					$con = Conecta::criarConexao();
+					$insertAluno = "INSERT into tb_aluno (ds_usuario, id_perfil, ds_nome, nu_cpf, ds_email, dt_nascimento, st_sexo, ds_endereco, nu_cep)
+								VALUES (:ds_usuario, 3, :ds_nome, :nu_cpf, :ds_email, :dt_nascimento, :st_sexo, :ds_endereco, :nu_cep)";
+					
+					$stmtAluno = $con->prepare($insertAluno);
+					
+					$paramsAluno = array(':ds_usuario' => $ds_usuario,
+									':ds_nome' => $ds_nome,
+									':nu_cpf' => $nu_cpf,
+									':ds_email' => $ds_email,
+									':dt_nascimento' => $dt_nascimento,
+									':st_sexo' => $st_sexo,
+									':ds_endereco' => $ds_endereco,
+									':nu_cep' => $nu_cep
+								);
+	
+					$stmtAluno->execute($paramsAluno);
+	
+	
+					echo "Dados gravados com sucesso!"; 
+					
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+
 
 				
-				echo "Dados gravados com sucesso!"; 
+				
 				
 			}
 			catch(exception $e)
@@ -104,7 +129,7 @@
 		}
 
 
-		public function gravarAlterarAluno(array $dados)
+		public function gravarAlterarAluno(array $dados) 
 		{
 
 			$ds_usuario		= $dados['ds_usuario'];
@@ -120,7 +145,7 @@
 			
 			try{
 				$con = Conecta::criarConexao();
-				$update = "UPDATE tb_usuario set ds_usuario = :ds_usuario, ds_nome = :ds_nome, nu_cpf = :nu_cpf, ds_email = :ds_email, dt_nascimento = :dt_nascimento, st_sexo = :st_sexo, ds_endereco = :ds_endereco, nu_cep = :nu_cep
+				$update = "UPDATE tb_aluno set ds_usuario = :ds_usuario, ds_nome = :ds_nome, nu_cpf = :nu_cpf, ds_email = :ds_email, dt_nascimento = :dt_nascimento, st_sexo = :st_sexo, ds_endereco = :ds_endereco, nu_cep = :nu_cep
 						WHERE id_usuario = :id_usuario";
 				
 				$stmt = $con->prepare($update);
@@ -136,8 +161,28 @@
 								':id_usuario'=>$id_usuario);
 				$stmt->execute($params);
 
-				
-				echo "Dados alterados com sucesso!";
+				try{
+					$con = Conecta::criarConexao();
+					$updateAluno = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email, ds_usuario = :ds_usuario
+							WHERE id_usuario = :id_usuario";
+					
+					$stmtAluno = $con->prepare($updateAluno);
+					
+					$paramsAluno = array(':ds_nome' => $ds_nome, 
+									':ds_email' => $ds_email,
+									':id_usuario'=>$id_usuario);
+					$stmtAluno->execute($paramsAluno);
+	
+					
+					echo "Dados alterados com sucesso!";
+					
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+
 				
 			}
 			catch(exception $e)

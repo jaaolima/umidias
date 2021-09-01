@@ -65,7 +65,7 @@
 			$ds_email    	= $dados['ds_email'];
 			$ds_usuario 	= $dados['ds_usuario'];
 			$id_perfil 		= $dados['id_perfil'];
-			$ds_senha       =  '123456';
+			$ds_senha       =  '123456'; 
 		
 			try{
 				$con = Conecta::criarConexao();
@@ -180,7 +180,7 @@
             }	
         }
 
-		public function ExcluirUsuario(array $dados)
+		public function ExcluirUsuario(array $dados) 
 		{
             $id_usuario	    = $dados['id_usuario'];
 
