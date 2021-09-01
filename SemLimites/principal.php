@@ -13,7 +13,7 @@
    	$id_usuario = $_SESSION['id_usuario'];
 
 	require_once("Classes/Usuario.php");
-	
+	$usuario = new Usuario();
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 
 ?>
