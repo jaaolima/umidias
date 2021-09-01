@@ -59,7 +59,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class=" login-signin">
 								<div class="mx-8 mt-8">
 									<div>
-										<div class="mb-8 justify-content-center">
+										<div class="mb-8 text-center">
 											<h2 class="font-weight-bold texto-preto">Login</h2>
 										</div>
 									</div>
@@ -75,20 +75,20 @@ License: You must have a valid license purchased only from themeforest(the above
 												<input class="form-control rectangle_1 my-4" type="text"  name="ds_usuario" id="ds_usuario" autocomplete="off" placeholder="Usuário ou E-mail"/>
 												<input class="form-control rectangle_1 my-4" type="password"  name="ds_senha" id="ds_senha"  placeholder="Senha"/>
 											</div>
-											<div class="form-group d-flex flex-wrap justify-content-end align-items-center">
+											<!-- <div class="form-group d-flex flex-wrap justify-content-end align-items-center">
 												<a href="javascript:;" class="text-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
-											</div>	
+											</div>	 -->
 											<div class="form-group d-flex flex-wrap justify-content-center align-items-center">	
 												<button type="button" id="entrar" class="btn btn-primary disable font-weight-bold px-30 py-4 text-white" >ENTRAR</button>
 											</div>									
 										</form>
 									</div>
 								</div>
-								<div class="separator separator-solid"></div>
+								<!-- <div class="separator separator-solid"></div>
 								<div class="text-center my-8">
 									<span class="texto-chubo">Ainda não tem uma conta?</span>
 									<a href="javascript:;" class="text-primary" id="kt_login_signup">Registre-se</a>
-								</div>								
+								</div>								 -->
 							</div>
 							
 							<!--end::Signin-->
