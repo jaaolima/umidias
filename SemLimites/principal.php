@@ -128,6 +128,11 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!--end::Toggle-->
 									<!--begin::Dropdown-->
 									<div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
+										<div class="d-flex align-items-center p-8 rounded-top">
+											<!--begin::Text-->
+											<div class="text-dark m-0 flex-grow-1 mr-3 font-size-h5"><?php echo $dadosUsuario["ds_nome"]; ?></div>
+											<!--end::Text-->
+										</div>
 										<div class="navi navi-spacer-x-0 pt-5">
 											<!--begin::Item-->
 											<?php if($id_perfil == 1 || $id_perfil == 3) : ?>
@@ -189,6 +194,8 @@ License: You must have a valid license purchased only from themeforest(the above
 											<span class="menu-desc"></span>
 										</a>
 									</li>
+									<?php endif; ?>
+									<?php if($id_perfil == 1) : ?>
 									<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
 									<a href="javascript:;" class="menu-link menu-toggle">
 											<span class="menu-text">Cadastros</span>
