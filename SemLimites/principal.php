@@ -135,8 +135,8 @@ License: You must have a valid license purchased only from themeforest(the above
 														<i class="flaticon2-hourglass text-primary"></i>
 													</div>
 													<div class="navi-text">
-														<div class="font-weight-bold">My Tasks</div>
-														<div class="text-muted">latest tasks and projects</div>
+														<div class="font-weight-bold">Pagamento</div>
+														<div class="text-muted">Pagamento do Plano</div>
 													</div>
 												</div>
 											</a>
@@ -175,11 +175,6 @@ License: You must have a valid license purchased only from themeforest(the above
 										<a href="javascript:;" class="menu-link menu-toggle">
 											<span class="menu-text">Meus Treinos</span>
 											<span class="menu-desc"></span>
-										</a>
-									</li>
-									<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
-										<a href="javascript:;" class="menu-link menu-toggle">
-											<span class="menu-text">Planos</span>
 										</a>
 									</li>
 									<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
