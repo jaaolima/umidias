@@ -59,9 +59,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class=" login-signin">
 								<div class="mx-8 mt-8">
 									<div>
-										<div class="mb-8">
-											<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
-											<span class="texto-chumbo">Insira seus dados abaixo para continuar</span> 
+										<div class="mb-8 justify-content-center">
+											<h2 class="font-weight-bold texto-preto">Login</h2>
 										</div>
 									</div>
 									<!--<div class="d-none" id="erro-login">
