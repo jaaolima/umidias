@@ -132,7 +132,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<a href="custom/apps/userprofile-1/overview.html" class="navi-item px-8">
 												<div class="navi-link">
 													<div class="navi-icon mr-2">
-														<i class="flaticon2-hourglass text-primary"></i>
+														<i class="fas fa-dollar-sign text-primary"></i>
 													</div>
 													<div class="navi-text">
 														<div class="font-weight-bold">Pagamento</div>
