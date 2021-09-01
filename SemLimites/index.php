@@ -55,10 +55,10 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--begin::Content body-->
 					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
 						<div class="d-block">
-							<div style="max-width: 400px;">
+							<div style="max-width: 400px;" class="text-center">
 								<img src="assets/media/Logo-Vertical-01-alterada.png" class="max-h-100px">
 							</div>
-							<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white w-100 box-shadow"  style="max-width: 400px;">
+							<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white w-100 box-shadow"  style="max-width: 400px;min-width: 400px;">
 								<!--begin::Signin-->
 								<div class=" login-signin">
 									<div class="mx-8 mt-8">
