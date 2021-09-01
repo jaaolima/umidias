@@ -1,4 +1,18 @@
+<?php
+	ini_set('display_errors',1);
+	ini_set('display_startup_erros',1);
+	error_reporting(E_ALL);
+	session_start();
+	setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+	date_default_timezone_set('America/Sao_Paulo');
 
+	if ( $_SESSION['autenticado'] !=='validado') {
+		header("location: index.php");
+		exit();
+	}
+   	$id_usuario = $_SESSION['id_usuario'];
+
+?>
 <!DOCTYPE html>
 <!--
 Template Name: Metronic - Bootstrap 4 HTML, React, Angular 10 & VueJS Admin Dashboard Theme
