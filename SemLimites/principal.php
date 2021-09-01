@@ -278,6 +278,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="main d-flex flex-column flex-row-fluid">
 							<div class="content flex-column-fluid" id="conteudo">
 								<!--begin::Dashboard-->
+								<?php if($id_perfil == 1 || $id_perfil == 2) : ?>
 								<div class="row">
 									<div class="col-lg-12">
 										<div class="card card-custom w-100 bg-white p-8" >
@@ -316,6 +317,10 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
+								</div>
+								<?php endif; ?>
+								<?php if($id_perfil == 1 || $id_perfil == 3) : ?>
+								<div class="row">
 									<div class="col-lg-12">
 										<div class="card card-custom w-100 bgi-no-repeat bgi-size-cover gutter-b bg-white p-8" >
 											<div class="card-header border-0 py-5">
@@ -329,6 +334,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 								</div>
+								<?php endif; ?>
 								<!--end::Row-->
 								<!--end::Dashboard-->
 							</div>
