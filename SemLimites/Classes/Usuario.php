@@ -96,7 +96,7 @@
 
 		
 
-		function buscarDadosUsuario($id_usuario)
+		function buscarDadosUsuario($id_usuario) 
 		{
 			try{
 				$con = Conecta::criarConexao();
@@ -128,17 +128,19 @@
 
 			$ds_nome		= $dados['ds_nome'];
 			$ds_email    	= $dados['ds_email'];
+			$ds_usuario    	= $dados['ds_usuario'];
 			$id_usuario    	= $dados['id_usuario'];
 			
 			try{
 				$con = Conecta::criarConexao();
-				$update = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email
+				$update = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email, ds_usuario = :ds_usuario
 						WHERE id_usuario = :id_usuario";
 				
 				$stmt = $con->prepare($update);
 				
 				$params = array(':ds_nome' => $ds_nome, 
 								':ds_email' => $ds_email,
+								':ds_usuario' => $ds_usuario,
 								':id_usuario'=>$id_usuario);
 				$stmt->execute($params);
 
