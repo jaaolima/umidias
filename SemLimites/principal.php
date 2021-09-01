@@ -195,7 +195,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</a>
 									</li>
 									<?php endif; ?>
-									<?php if($id_perfil == 1 || $id_perfil == 3) : ?>
+									<?php if($id_perfil == 1 || $id_perfil == 2) : ?>
 									<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
 										<a href="javascript:;" class="menu-link menu-toggle">
 											<span class="menu-text">Cadastros</span>
