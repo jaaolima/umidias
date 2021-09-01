@@ -107,7 +107,8 @@ $(document).on('click', function(e) { //Hide menu when clicked outside menu area
 
 $('.menu-item').click(function (e)
 {
-  $('menu-item').removeClass("menu-item-open menu-item-here");
+  $('menu-item').removeClass("menu-item-open");
+  $('menu-item').removeClass("menu-item-here");
   $(this).addClass("menu-item-open menu-item-here");
 
 });
