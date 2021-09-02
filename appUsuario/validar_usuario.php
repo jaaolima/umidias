@@ -8,7 +8,7 @@ $email = $_REQUEST['ds_email'];
 $nome = $_REQUEST['ds_nome'];
 
 // Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
-include "app.unimidias.com.br/assets\media\PHPMailer-master\PHPMailerAutoload.php"; 
+include "../assets\media\PHPMailer-master\PHPMailerAutoload.php"; 
 
 // Inicia a classe PHPMailer 
 $mail = new PHPMailer(); 
