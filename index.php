@@ -111,7 +111,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Senha" name="nu_senha" id="nu_senha" autocomplete="off" />
 									</div>
 									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Confirme a senha" name="nu_senhaconfirmada" autocomplete="off" />
+										<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Confirme a senha" name="nu_senhaconfirmada" id="nu_senhaconfirmada" autocomplete="off" />
 									</div>
 									<div class="form-group">
 										<label class="checkbox mb-0">
