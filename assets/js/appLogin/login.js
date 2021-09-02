@@ -168,38 +168,7 @@ var KTLogin = function() {
 			}
 		);
 
-        $('#kt_login_signup_submit').on('click', function (e) {
-			
-            e.preventDefault();
-
-            validation.validate().then(function(status) {
-		        if (status == 'Valid') {
-                    $.ajax({
-						url: 'appUsuario/validar_usuario.php'
-						, data: $("#form_validate").serialize()
-						, type: 'post'
-						, success: function(html) {
-							_showForm('validate');
-						}
-						, error: function (data) {
-							swal.fire("Erro", data.responseText, "error");
-						}
-					});	
-				} else {
-					swal.fire({
-		                text: "Desculpe, detectamos um erro em seu login.",
-		                icon: "error",
-		                buttonsStyling: false,
-		                confirmButtonText: "Ok, vamos lá!",
-                        customClass: {
-    						confirmButton: "btn font-weight-bold btn-light-primary"
-    					}
-		            }).then(function() {
-						KTUtil.scrollTop();
-					});
-				}
-		    });
-        }); 
+        
 
         // Handle cancel button
         $('#kt_login_signup_cancel').on('click', function (e) {

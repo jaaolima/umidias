@@ -20,7 +20,7 @@ $(document).ready(function() {
 				}
 			});
 		}
-	});	
+	});	 
 
 	/*$("#cancelar").on("click", function(){
 		$('#form_esqueci_senha').trigger("reset");
@@ -71,6 +71,25 @@ $(document).ready(function() {
 	});
 });
 
+$('#kt_login_signup_submit').on('click', function (e) {
+			
+	e.preventDefault();
+	if (validarUsuario()){
+		$.ajax({
+			url: 'appUsuario/validar_usuario.php'
+			, data: $("#form_validate").serialize()
+			, type: 'post'
+			, success: function(html) {
+				_showForm('validate');
+			}
+			, error: function (data) {
+				swal.fire("Erro", data.responseText, "error");
+			}
+		});	
+	}
+	
+}); 
+
 function validar()
 {
 	
@@ -87,6 +106,54 @@ function validar()
 		swal.fire("Erro", "Preencha a senha", "error");
 		return false;	
 	}
+	
+	return true;
+	
+}
+
+function validarUsuario()
+{
+	
+	if ($("#ds_nome").val() == "")
+	{
+		$("#ds_nome").focus();
+		swal.fire("Erro", "Preencha o Nome", "error");
+		return false;	
+	}
+
+	if ($("#ds_email").val() == "")
+	{
+		$("#ds_email").focus();
+		swal.fire("Erro", "Preencha o Email", "error");
+		return false;	
+	}
+	
+	if ($("#ds_senha").val() == "")
+	{
+		$("#ds_senha").focus();
+		swal.fire("Erro", "Preencha a senha", "error");
+		return false;	
+	}
+
+	if ($("#ds_senha_confirma").val() == "")
+	{
+		$("#ds_senha_confirma").focus();
+		swal.fire("Erro", "Confirme a senha", "error");
+		return false;	
+	}
+
+	if($("#ds_senha_confirma").val() !== $("#ds_senha").val()){
+		$("#ds_senha_confirma").focus();
+		swal.fire("Erro", "A senha e sua confirmação não são iguais", "error");
+		return false;
+	}
+
+	// if ($("#termos").val() == "")
+	// {
+	// 	$("#termos").focus();
+	// 	swal.fire("Erro", "Confirme a senha", "error");
+	// 	return false;	
+	// }
 	
 	return true;
 	
