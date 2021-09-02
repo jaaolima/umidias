@@ -139,14 +139,16 @@ function validarUsuario()
 	{
 		$("#ds_senha_confirma").focus();
 		swal.fire("Erro", "Confirme a senha", "error");
-		return false;	
+		
+		if($("#ds_senha_confirma").val() !== $("#ds_senha").val()){
+			$("#ds_senha_confirma").focus();
+			swal.fire("Erro", "A senha e sua confirmação não são iguais", "error");
+			return false;
+		}
+
 	}
 
-	if($("#ds_senha_confirma").val() !== $("#ds_senha").val()){
-		$("#ds_senha_confirma").focus();
-		swal.fire("Erro", "A senha e sua confirmação não são iguais", "error");
-		return false;
-	}
+	
 
 	// if ($("#termos").val() == "")
 	// {
