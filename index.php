@@ -130,34 +130,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--end::Signup-->
 							<!--begin::validation-->
 							<div class=" login-validate m-8">
-								<div class="text-center mb-10 mb-lg-20">
-									<h3 class="font-size-h1">Inscreva-se</h3>
-									<p class="text-muted font-weight-bold">Insira seus dados para criar sua conta</p>
-								</div>
 								<!--begin::Form-->
-								<form class="form" id="form_validate" novalidate="novalidate" id="kt_login_validate_form">
-									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="text" placeholder="Seu nome" name="ds_nome" id="ds_nome" autocomplete="off" />
-									</div>
-									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Email" name="ds_email" id="ds_email" autocomplete="off" />
-									</div>
-									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Senha" name="nu_senha" id="nu_senha" autocomplete="off" />
-									</div>
-									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Confirme a senha" name="nu_senhaconfirmada" autocomplete="off" />
-									</div>
-									<div class="form-group">
-										<label class="checkbox mb-0">
-										<input type="checkbox" name="agree" />
-										<span></span>Eu concordo  
-										<a href="#">termos e Condições</a></label>
-									</div>
-									<div class="form-group d-flex flex-wrap flex-center">
-										<button type="button" id="kt_login_validate_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Enviar</button>
-										<button type="button" id="kt_login_validate_cancel" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancelar</button>
-									</div>
+								<form class="form justify-content-center" id="form_validate" novalidate="novalidate" id="kt_login_validate_form">
+									<img src="assets\media\Ilustração - Email.png" alt="">
+									<h3 class="font-weight-bolder">Confira seu E-mail</h3>
+									<p class="text-gray">Se você possui uma conta, logo receberá um email com o link para resetar a sua senha</p>
+									<button class="btn btn-primary">Voltar para o login</button>
 								</form>
 								<!--end::Form-->
 							</div>
