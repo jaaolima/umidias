@@ -89,7 +89,7 @@ $('#kt_login_signup_submit').on('click', function (e) {
 				_login.addClass('login-validate-on');
 			}
 			, error: function (data) {
-				swal.fire("Erro", data.responseText, "error");
+				swal.fire("Erro", data.responseText, "error"); 
 			}
 		});	
 	}
