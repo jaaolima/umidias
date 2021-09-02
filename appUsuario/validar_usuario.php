@@ -23,7 +23,7 @@ $mail->IsSMTP();
 
 
 // // Usar autenticação SMTP (obrigatório) 
-// $mail->SMTPAuth = true; 
+$mail->SMTPAuth = true; 
 
 // // Usuário do servidor SMTP (endereço de email) 
 // // obs: Use a mesma senha da sua conta de email 
