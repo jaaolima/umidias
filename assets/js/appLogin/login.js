@@ -169,46 +169,36 @@ var KTLogin = function() {
 		);
 
         $('#kt_login_signup_submit').on('click', function (e) {
-			$.ajax({
-		        url: 'appUsuario/validar_usuario.php'
-				, data: $("#form_validate").serialize()
-		        , type: 'post'
-		        , success: function(html) {
-		        	_showForm('validate');
-		        }
-				, error: function (data) {
-					swal.fire("Erro", data.responseText, "error");
-				}
-		    });	
+			
             e.preventDefault();
 
-            // validation.validate().then(function(status) {
-		    //     if (status == 'Valid') {
-            //         swal.fire({
-		    //             text: "All is cool! Now you submit this form",
-		    //             icon: "success",
-		    //             buttonsStyling: false,
-		    //             confirmButtonText: "Ok, got it!",
-            //             customClass: {
-    		// 				confirmButton: "btn font-weight-bold btn-light-primary"
-    		// 			}
-		    //         }).then(function() {
-			// 			KTUtil.scrollTop();
-			// 		});
-			// 	} else {
-			// 		swal.fire({
-		    //             text: "Sorry, looks like there are some errors detected, please try again.",
-		    //             icon: "error",
-		    //             buttonsStyling: false,
-		    //             confirmButtonText: "Ok, got it!",
-            //             customClass: {
-    		// 				confirmButton: "btn font-weight-bold btn-light-primary"
-    		// 			}
-		    //         }).then(function() {
-			// 			KTUtil.scrollTop();
-			// 		});
-			// 	}
-		    // });
+            validation.validate().then(function(status) {
+		        if (status == 'Valid') {
+                    $.ajax({
+						url: 'appUsuario/validar_usuario.php'
+						, data: $("#form_validate").serialize()
+						, type: 'post'
+						, success: function(html) {
+							_showForm('validate');
+						}
+						, error: function (data) {
+							swal.fire("Erro", data.responseText, "error");
+						}
+					});	
+				} else {
+					swal.fire({
+		                text: "Desculpe, detectamos um erro em seu login.",
+		                icon: "error",
+		                buttonsStyling: false,
+		                confirmButtonText: "Ok, vamos lá!",
+                        customClass: {
+    						confirmButton: "btn font-weight-bold btn-light-primary"
+    					}
+		            }).then(function() {
+						KTUtil.scrollTop();
+					});
+				}
+		    });
         }); 
 
         // Handle cancel button
