@@ -24,7 +24,7 @@ $mail->Port = 25;
 
 // // Usar autenticação SMTP (obrigatório) 
 $mail->SMTPAuth = true; 
-
+$mail->SMTPDebug = SMTP::DEBUG_SERVER;
 // Usuário do servidor SMTP (endereço de email) 
 // obs: Use a mesma senha da sua conta de email 
 $mail->Username = 'victorespucoc@gmail.com'; 
