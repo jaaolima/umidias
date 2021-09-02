@@ -20,7 +20,6 @@ $mail->Host = "smtp-relay.sendinblue.com";
 $mail->SMTPAuth = true; 
 $mail->Username = 'victorespucoc@gmail.com'; 
 $mail->Password = '85664147';
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587;
 $mail->IsHTML(true);
 $mail->CharSet = 'UTF-8'; 
