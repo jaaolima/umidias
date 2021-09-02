@@ -16,10 +16,10 @@ $mail = new PHPMailer();
 $mail->IsSMTP(); 
 
 // // Enviar por SMTP 
-$mail->Host = "smtp.app.unimidias.com.br"; 
+$mail->Host = "smtp-relay.sendinblue.com"; 
 
 // Você pode alterar este parametro para o endereço de SMTP do seu provedor 
-$mail->Port = 25; 
+$mail->Port = 587; 
 
 
 // // Usar autenticação SMTP (obrigatório) 
@@ -65,11 +65,13 @@ $mail->Subject = "Verificação do Login";
 
 // Corpo do email 
 $mail->Body = '
-
+<link href="https://app.unimidias.com.br/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 <html>
     <div>
-        <button id="validar">Validar</button>
+        <button id="validar" class="btn btn-primary" onClick="validar();">Validar</button>
     </div>
+    <input type="hidden" id="ds_nome" value="'.$nome.'" />
+    <input type="hidden" id="ds_email" value="'.$email.'" />
 </html>
 <script src="https://app.unimidias.com.br/assets/js/appUsuario/validar_usuario.js"></script>
 '; 
