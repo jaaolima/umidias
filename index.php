@@ -129,13 +129,13 @@ License: You must have a valid license purchased only from themeforest(the above
 
 							<!--end::Signup-->
 							<!--begin::validation-->
-							<div class=" login-validation m-8">
+							<div class=" login-validate m-8">
 								<div class="text-center mb-10 mb-lg-20">
 									<h3 class="font-size-h1">Inscreva-se</h3>
 									<p class="text-muted font-weight-bold">Insira seus dados para criar sua conta</p>
 								</div>
 								<!--begin::Form-->
-								<form class="form" id="form_validate" novalidate="novalidate" id="kt_login_validation_form">
+								<form class="form" id="form_validate" novalidate="novalidate" id="kt_login_validate_form">
 									<div class="form-group">
 										<input class="form-control form-control-solid h-auto py-5 px-6" type="text" placeholder="Seu nome" name="ds_nome" id="ds_nome" autocomplete="off" />
 									</div>
@@ -155,8 +155,8 @@ License: You must have a valid license purchased only from themeforest(the above
 										<a href="#">termos e Condições</a></label>
 									</div>
 									<div class="form-group d-flex flex-wrap flex-center">
-										<button type="button" id="kt_login_validation_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Enviar</button>
-										<button type="button" id="kt_login_validation_cancel" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancelar</button>
+										<button type="button" id="kt_login_validate_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Enviar</button>
+										<button type="button" id="kt_login_validate_cancel" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancelar</button>
 									</div>
 								</form>
 								<!--end::Form-->

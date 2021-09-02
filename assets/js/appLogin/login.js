@@ -103,7 +103,7 @@ var KTLogin = function() {
 		// handle validation
 		$('#kt_login_signup_submit').on('click', function (e) {
             e.preventDefault();
-            _showForm('validation');
+            _showForm('validate');
         });
     }
 
@@ -174,7 +174,7 @@ var KTLogin = function() {
 			// 	, data: $("#form_validate").serialize()
 		    //     , type: 'post'
 		    //     , success: function(html) {
-		    //     	_showForm('validation');
+		    //     	_showForm('validate');
 		    //     }
 			// 	, error: function (data) {
 			// 		swal.fire("Erro", data.responseText, "error");
