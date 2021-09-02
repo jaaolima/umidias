@@ -15,28 +15,28 @@ $mail = new PHPMailer();
 // Método de envio 
 $mail->IsSMTP(); 
 
-// Enviar por SMTP 
-$mail->Host = "victorespucoc@gmail.com"; 
+// // Enviar por SMTP 
+// $mail->Host = "victorespucoc@gmail.com"; 
 
-// Você pode alterar este parametro para o endereço de SMTP do seu provedor 
-$mail->Port = 25; 
+// // Você pode alterar este parametro para o endereço de SMTP do seu provedor 
+// $mail->Port = 25; 
 
 
-// Usar autenticação SMTP (obrigatório) 
-$mail->SMTPAuth = true; 
+// // Usar autenticação SMTP (obrigatório) 
+// $mail->SMTPAuth = true; 
 
-// Usuário do servidor SMTP (endereço de email) 
-// obs: Use a mesma senha da sua conta de email 
-$mail->Username = 'victorespucoc@gmail.com'; 
-$mail->Password = '85664147'; 
+// // Usuário do servidor SMTP (endereço de email) 
+// // obs: Use a mesma senha da sua conta de email 
+// $mail->Username = 'victorespucoc@gmail.com'; 
+// $mail->Password = '85664147'; 
 
-// Configurações de compatibilidade para autenticação em TLS 
-$mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) ); 
+// // Configurações de compatibilidade para autenticação em TLS 
+// $mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) ); 
 
-// Você pode habilitar esta opção caso tenha problemas. Assim pode identificar mensagens de erro. 
-$mail->SMTPDebug = 2; 
+// // Você pode habilitar esta opção caso tenha problemas. Assim pode identificar mensagens de erro. 
+// $mail->SMTPDebug = 2; 
 
-// Define o remetente 
+//Define o remetente 
 // Seu e-mail 
 $mail->From = "victorespucoc@gmail.com"; 
 
