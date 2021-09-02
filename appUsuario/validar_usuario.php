@@ -30,7 +30,7 @@ $mail->From = "smtp-relay.sendinblue.com";
 $mail->FromName = "Unimídias"; 
 
 // Define o(s) destinatário(s) 
-$mail->AddAddress($email, $nome); 
+$mail->AddAddress('victorespucoc@gmail.com', '85664147'); 
 
 
 
