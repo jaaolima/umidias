@@ -11,13 +11,14 @@ var KTLogin = function() {
         _login.removeClass('login-forgot-on');
         _login.removeClass('login-signin-on');
         _login.removeClass('login-signup-on');
+		_login.removeClass('login-validation-on');
 
         _login.addClass(cls);
 
         KTUtil.animateClass(KTUtil.getById(form), 'animate__animated animate__backInUp');
     }
 
-    var _handleSignInForm = function() {
+    var _handleSignInForm = function() { 
         var validation;
 
         // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
@@ -98,6 +99,12 @@ var KTLogin = function() {
             e.preventDefault();
             _showForm('signup');
         });
+
+		// handle validation
+		$('#kt_login_signup_submit').on('click', function (e) {
+            e.preventDefault();
+            _showForm('validation');
+        });
     }
 
     var _handleSignUpForm = function(e) {
@@ -162,35 +169,46 @@ var KTLogin = function() {
 		);
 
         $('#kt_login_signup_submit').on('click', function (e) {
-            e.preventDefault();
+			// $.ajax({
+		    //     url: 'appUsuario/validar_usuario.php'
+			// 	, data: $("#form_validate").serialize()
+		    //     , type: 'post'
+		    //     , success: function(html) {
+		    //     	_showForm('validation');
+		    //     }
+			// 	, error: function (data) {
+			// 		swal.fire("Erro", data.responseText, "error");
+			// 	}
+		    // });	
+            // e.preventDefault();
 
-            validation.validate().then(function(status) {
-		        if (status == 'Valid') {
-                    swal.fire({
-		                text: "All is cool! Now you submit this form",
-		                icon: "success",
-		                buttonsStyling: false,
-		                confirmButtonText: "Ok, got it!",
-                        customClass: {
-    						confirmButton: "btn font-weight-bold btn-light-primary"
-    					}
-		            }).then(function() {
-						KTUtil.scrollTop();
-					});
-				} else {
-					swal.fire({
-		                text: "Sorry, looks like there are some errors detected, please try again.",
-		                icon: "error",
-		                buttonsStyling: false,
-		                confirmButtonText: "Ok, got it!",
-                        customClass: {
-    						confirmButton: "btn font-weight-bold btn-light-primary"
-    					}
-		            }).then(function() {
-						KTUtil.scrollTop();
-					});
-				}
-		    });
+            // validation.validate().then(function(status) {
+		    //     if (status == 'Valid') {
+            //         swal.fire({
+		    //             text: "All is cool! Now you submit this form",
+		    //             icon: "success",
+		    //             buttonsStyling: false,
+		    //             confirmButtonText: "Ok, got it!",
+            //             customClass: {
+    		// 				confirmButton: "btn font-weight-bold btn-light-primary"
+    		// 			}
+		    //         }).then(function() {
+			// 			KTUtil.scrollTop();
+			// 		});
+			// 	} else {
+			// 		swal.fire({
+		    //             text: "Sorry, looks like there are some errors detected, please try again.",
+		    //             icon: "error",
+		    //             buttonsStyling: false,
+		    //             confirmButtonText: "Ok, got it!",
+            //             customClass: {
+    		// 				confirmButton: "btn font-weight-bold btn-light-primary"
+    		// 			}
+		    //         }).then(function() {
+			// 			KTUtil.scrollTop();
+			// 		});
+			// 	}
+		    // });
         }); 
 
         // Handle cancel button

@@ -11,7 +11,7 @@ $("body").on('click', 'a', function(event){
   if ($(this).attr('href') == 'principal.php')
   { 
     location.href='principal.php';
-    return false;
+    return false; 
   }
 
   /*if ($(this).attr('href').startsWith('paciente.php'))
