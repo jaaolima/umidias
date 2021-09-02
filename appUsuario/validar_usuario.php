@@ -45,6 +45,7 @@ if($enviaremail){
 }else{
     $mgm = "ERRO AO ENVIAR E-MAIL!";
     echo $mgm;
+    return false;
 }
     
 ?>
