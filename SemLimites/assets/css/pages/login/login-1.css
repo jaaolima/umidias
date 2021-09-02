@@ -3,6 +3,7 @@
 
 .login.login-1 .login-signin,
 .login.login-1 .login-signup,
+.login.login-1 .login-validate,
 .login.login-1 .login-forgot {
   display: none; }
 
@@ -32,7 +33,7 @@
 
 .login.login-1.login-forgot-on .login-signup {
   display: none; }
-  
+
 .login.login-1.login-forgot-on .login-signin {
   display: none; }
 
