@@ -161,3 +161,17 @@ function validarUsuario()
 	return true;
 	
 }
+
+var _showForm = function(form) {
+	var cls = 'login-' + form + '-on';
+	var form = 'kt_login_' + form + '_form';
+
+	_login.removeClass('login-forgot-on');
+	_login.removeClass('login-signin-on');
+	_login.removeClass('login-signup-on');
+	_login.removeClass('login-validate-on');
+
+	_login.addClass(cls);
+
+	KTUtil.animateClass(KTUtil.getById(form), 'animate__animated animate__backInUp');
+}
