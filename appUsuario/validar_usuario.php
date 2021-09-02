@@ -23,11 +23,7 @@ $mail->Password = '85664147';
 $mail->Port = 587;
 $mail->IsHTML(true);
 $mail->CharSet = 'UTF-8'; 
-
-$mail->From = "smtp-relay.sendinblue.com"; 
-
-// Seu nome 
-$mail->FromName = "Unimídias"; 
+$mail->setFrom("smtp-relay.sendinblue.com", "Unimídias");
 
 // Define o(s) destinatário(s) 
 $mail->AddAddress('victorespucoc@gmail.com', '85664147'); 
