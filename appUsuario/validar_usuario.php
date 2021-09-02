@@ -1,51 +1,87 @@
 <?php 
-
 $email = $_REQUEST['ds_email'];
 
-// Corpo E-mail
-$arquivo = "
-    <style type='text/css'>
-    body {
-    margin:0px;
-    font-family:Verdane;
-    font-size:12px;
-    color: #666666;
-    }
-    a{
-    color: #666666;
-    text-decoration: none;
-    }
-    a:hover {
-    color: #FF0000;
-    text-decoration: none;
-    }
-    </style>
-    <html>
-        <div>
-            <button id='validar'>Validar</button>
-        </div>
-    </html>
-    <script src='https://app.unimidias.com.br/assets/js/appUsuario/validar_usuario.js'></script>
-    ";
+// Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
+include "PHPMailer-master/PHPMailerAutoload.php"; 
 
-// emails para quem será enviado o formulário
-$emailenviar = "victorespucoc@gmail.com";
-$destino = $email;
-$assunto = "Contato pelo Site";
+// Inicia a classe PHPMailer 
+$mail = new PHPMailer(); 
 
-// É necessário indicar que o formato do e-mail é html
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-$headers .= 'From: $nome <$email>';
-//$headers .= "Bcc: $EmailPadrao\r\n";
+// Método de envio 
+$mail->IsSMTP(); 
 
-$enviaremail = mail($destino, $assunto, $arquivo, $headers);
-if($enviaremail){
-    return true;
-}else{
-    $mgm = "ERRO AO ENVIAR E-MAIL!";
-    echo $mgm;
-    return false;
-}
-    
+// Enviar por SMTP 
+$mail->Host = "mail.meusitemodelo.com"; 
+
+// Você pode alterar este parametro para o endereço de SMTP do seu provedor 
+$mail->Port = 25; 
+
+
+// Usar autenticação SMTP (obrigatório) 
+$mail->SMTPAuth = true; 
+
+// Usuário do servidor SMTP (endereço de email) 
+// obs: Use a mesma senha da sua conta de email 
+$mail->Username = 'victorespucoc@gmail.com'; 
+$mail->Password = '85664147'; 
+
+// Configurações de compatibilidade para autenticação em TLS 
+$mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) ); 
+
+// Você pode habilitar esta opção caso tenha problemas. Assim pode identificar mensagens de erro. 
+$mail->SMTPDebug = 2; 
+
+// Define o remetente 
+// Seu e-mail 
+$mail->From = "victorespucoc@gmail.com"; 
+
+// Seu nome 
+$mail->FromName = "Unimídias"; 
+
+// Define o(s) destinatário(s) 
+$mail->AddAddress('victorespucoc@gmail.com', 'Teste'); 
+
+// Opcional: mais de um destinatário
+// $mail->AddAddress('fernando@email.com'); 
+
+// Opcionais: CC e BCC
+// $mail->AddCC('joana@provedor.com', 'Joana'); 
+// $mail->AddBCC('roberto@gmail.com', 'Roberto'); 
+
+// Definir se o e-mail é em formato HTML ou texto plano 
+// Formato HTML . Use "false" para enviar em formato texto simples ou "true" para HTML.
+$mail->IsHTML(true); 
+
+// Charset (opcional) 
+$mail->CharSet = 'UTF-8'; 
+
+// Assunto da mensagem 
+$mail->Subject = "Verificação do Login"; 
+
+// Corpo do email 
+$mail->Body = '
+
+<html>
+    <div>
+        <button id="validar">Validar</button>
+    </div>
+</html>
+<script src="https://app.unimidias.com.br/assets/js/appUsuario/validar_usuario.js"></script>
+'; 
+
+// Opcional: Anexos 
+// $mail->AddAttachment("/home/usuario/public_html/documento.pdf", "documento.pdf"); 
+
+// Envia o e-mail 
+$enviado = $mail->Send(); 
+
+// Exibe uma mensagem de resultado 
+if ($enviado) 
+{ 
+    echo "Seu email foi enviado com sucesso!"; 
+} else { 
+    echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
+} 
+
+
 ?>
