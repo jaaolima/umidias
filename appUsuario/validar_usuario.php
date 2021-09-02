@@ -3,7 +3,7 @@ $email = $_REQUEST['ds_email'];
 $nome = $_REQUEST['ds_nome'];
 
 // Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
-include "assets/media/PHPMailer-master/PHPMailerAutoload.php"; 
+include "./assets/media/PHPMailer-master/PHPMailerAutoload.php"; 
 
 // Inicia a classe PHPMailer 
 $mail = new PHPMailer(); 
@@ -12,7 +12,7 @@ $mail = new PHPMailer();
 $mail->IsSMTP(); 
 
 // Enviar por SMTP 
-$mail->Host = "mail.meusitemodelo.com"; 
+$mail->Host = "victorespucoc@gmail.com"; 
 
 // Você pode alterar este parametro para o endereço de SMTP do seu provedor 
 $mail->Port = 25; 
