@@ -139,13 +139,14 @@ function validarUsuario()
 	{
 		$("#nu_senhaconfirmada").focus();
 		swal.fire("Erro", "Confirme a senha", "error");
-		
-		if($("#nu_senhaconfirmada").val() !== $("#nu_senha").val()){
-			$("#nu_senhaconfirmada").focus();
-			swal.fire("Erro", "A senha e sua confirmação não são iguais", "error");
-			return false;
-		}
+		return false;
 
+	}
+
+	if($("#nu_senhaconfirmada").val() !== $("#nu_senha").val()){
+		$("#nu_senhaconfirmada").focus();
+		swal.fire("Erro", "A senha e sua confirmação não são iguais", "error");
+		return false;
 	}
 
 	
