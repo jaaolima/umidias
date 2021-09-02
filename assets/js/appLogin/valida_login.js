@@ -128,20 +128,20 @@ function validarUsuario()
 		return false;	
 	}
 	
-	if ($("#ds_senha").val() == "")
+	if ($("#nu_senha").val() == "")
 	{
-		$("#ds_senha").focus();
+		$("#nu_senha").focus();
 		swal.fire("Erro", "Preencha a senha", "error");
 		return false;	
 	}
 
-	if ($("#ds_senha_confirma").val() == "")
+	if ($("#nu_senha_confirma").val() == "")
 	{
-		$("#ds_senha_confirma").focus();
+		$("#nu_senha_confirma").focus();
 		swal.fire("Erro", "Confirme a senha", "error");
 		
-		if($("#ds_senha_confirma").val() !== $("#ds_senha").val()){
-			$("#ds_senha_confirma").focus();
+		if($("#nu_senha_confirma").val() !== $("#nu_senha").val()){
+			$("#nu_senha_confirma").focus();
 			swal.fire("Erro", "A senha e sua confirmação não são iguais", "error");
 			return false;
 		}
