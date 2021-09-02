@@ -131,11 +131,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--begin::validation-->
 							<div class=" login-validate m-8">
 								<!--begin::Form-->
-								<form class="form justify-content-center" id="form_validate" novalidate="novalidate" id="kt_login_validate_form">
-									<img src="assets\media\Ilustração - Email.png" alt="">
-									<h3 class="font-weight-bolder">Confira seu E-mail</h3>
-									<p class="text-gray">Se você possui uma conta, logo receberá um email com o link para resetar a sua senha</p>
-									<button class="btn btn-primary">Voltar para o login</button>
+								<form class="form justify-content-center p-4" id="form_validate" novalidate="novalidate" id="kt_login_validate_form">
+									<img src="assets\media\Ilustração - Email.png" alt="" class="my-3">
+									<h3 class="font-weight-bolder my-3">Confira seu E-mail</h3>
+									<p class="text-gray my-3">Se você possui uma conta, logo receberá um email com o link para resetar a sua senha</p>
+									<button class="btn btn-primary my-3">Voltar para o login</button>
 								</form>
 								<!--end::Form-->
 							</div>
