@@ -87,6 +87,7 @@ if ($enviado)
     echo "Seu email foi enviado com sucesso!"; 
 } else { 
     echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
+    return false;
 } 
 
 
