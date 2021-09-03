@@ -190,7 +190,7 @@ function validarUsuario()
 	if($('input[name="termos"]:checked').length == 0)
 	{
 		$("input[name='termos']").focus();
-		swal.fire("Erro", "Precisamos que você aceite os termos", "error");
+		swal.fire("Erro", "Precisamos que você aceite os termos e Condições", "error");
 		return false;	
 	}
 	
