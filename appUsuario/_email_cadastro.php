@@ -31,5 +31,4 @@ Olá, <?php echo $_REQUEST['ds_nome']; ?> <br>
     Valide seu Login
 </p>
 <br>
-<a href="https://app.unimidias.com.br/appUsuario/gravar_usuario.php
-?ds_nome='<?php echo $_REQUEST['ds_nome']; ?>'&ds_email='<?php echo $_REQUEST['ds_email']; ?>'&ds_usuario='<?php echo $_REQUEST['ds_email']; ?>'&id_perfil='1'" id="validar" class="btn btn-primary">Validar</a>
+<a href="https://app.unimidias.com.br/appUsuario/gravar_usuario.php?ds_nome=<?php echo $_REQUEST['ds_nome']; ?>&ds_email=<?php echo $_REQUEST['ds_email']; ?>&ds_usuario=<?php echo $_REQUEST['ds_email']; ?>&id_perfil=1" id="validar" class="btn btn-primary">Validar</a>
