@@ -20,15 +20,15 @@ $mail->Host = "smtp-relay.sendinblue.com";
 $mail->SMTPAuth = true;
 $mail->SMTPDebug = 2;
 $mail->SMTPAutoTLS = false ; 
-$mail->Username = 'victorespucoc@gmail.com'; 
-$mail->Password = '85664147';
+$mail->Username = 'renato.lima@outlook.com'; 
+$mail->Password = 'RZw0z8AXIfvHc73M';
 $mail->Port = 587;
 $mail->IsHTML(true);
 $mail->CharSet = 'UTF-8'; 
 $mail->setFrom("no-reply@ibranutro.com.br", "Ibranutro");
 
 // Define o(s) destinatário(s) 
-$mail->AddAddress('victorespucoc@gmail.com', '85664147'); 
+$mail->AddAddress('victorespucoc@gmail.com', 'Teste'); 
 
 
 
