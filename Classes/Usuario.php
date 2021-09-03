@@ -145,8 +145,8 @@
 				$stmt->execute($params);
 				$dados = $stmt->fetch();
 				if($dados["ds_usuario"] > 0){
+					header('HTTP/1.1 500 Internal Server Error');
 					echo "E-mail já cadastrado";
-					return false;
 				}else{
 					return true;
 				}
