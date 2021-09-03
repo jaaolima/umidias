@@ -94,6 +94,42 @@
 			}
 		}
 
+		public function gravarUsuarioEmail(array $dados)
+		{
+		
+			$ds_nome		= $dados['ds_nome'];
+			$ds_email    	= $dados['ds_email'];
+			$ds_usuario 	= $dados['ds_usuario'];
+			$id_perfil 		= $dados['id_perfil'];
+			$ds_senha       =  '123456';
+		
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "INSERT into tb_usuario (ds_nome, ds_usuario, ds_email, ds_senha, id_perfil)
+							VALUES (:ds_nome, :ds_usuario, :ds_email, :ds_senha, :id_perfil)";
+				
+				$stmt = $con->prepare($insert);
+				
+				$params = array(':ds_nome' => $ds_nome, 
+								':ds_usuario' => $ds_usuario,
+								':ds_email' => $ds_email,
+								':id_perfil' => $id_perfil,
+								':ds_senha' =>hash("SHA512",$ds_senha));
+
+				$stmt->execute($params);
+
+
+				
+				header('../index.php');
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
+
 		
 
 		function buscarDadosUsuario($id_usuario)

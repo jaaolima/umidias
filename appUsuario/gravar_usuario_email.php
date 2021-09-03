@@ -4,5 +4,5 @@
 	error_reporting(E_ALL);
 	require_once("../Classes/Usuario.php");
 	$usuario = new Usuario();
-	$usuario->gravarUsuario($_REQUEST);
+	$usuario->gravarUsuarioEmail($_REQUEST);
 ?> 
