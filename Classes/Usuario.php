@@ -134,12 +134,12 @@
 		
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "select count(ds_usuario) from tb_usuario where ds_usuario=:ds_usuario";
+				$insert = "select count(ds_usuario) as ds_usuario from tb_usuario where ds_usuario=:ds_usuario";
 				
 				$stmt = $con->prepare($insert);
 				
 				$params = array( 
-								':ds_usuario' => $ds_usuario);
+								':ds_usuario' => $ds_email);
 
 				
 				$stmt->execute($params);
