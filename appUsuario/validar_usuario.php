@@ -28,7 +28,7 @@ $mail->CharSet = 'UTF-8';
 $mail->setFrom("no-reply@ibranutro.com.br", "Unimídias");
 
 // Define o(s) destinatário(s) 
-$mail->AddAddress('victorespucoc@gmail.com', 'Teste'); 
+$mail->AddAddress($email, $nome); 
 
 
 
