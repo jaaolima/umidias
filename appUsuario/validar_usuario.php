@@ -17,6 +17,8 @@ $mail->IsSMTP();
 
 // // Enviar por SMTP 
 $mail->Host = "smtp-relay.sendinblue.com"; 
+$mail->SMTPAuth = false ;
+$mail->SMTPAutoTLS = false ; 
 $mail->SMTPAuth = true; 
 $mail->Username = 'victorespucoc@gmail.com'; 
 $mail->Password = '85664147';
