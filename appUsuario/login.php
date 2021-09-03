@@ -13,7 +13,7 @@
 	if (empty($login))
 	{
 	    header('HTTP/1.1 401 Unauthorized', true, 401);
-	    print "Usuário ou senha inválidos";
+	    print "Usuário ou senha inválidos"; 
 	}
 	else 
 	{

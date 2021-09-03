@@ -6,7 +6,7 @@
 		{
 			try{
 				$con = Conecta::criarConexao();
-				//*$ds_senha = hash("SHA512", $ds_senha);
+				$senha = hash("SHA512", $ds_senha);
 				
 				$select = "SELECT 
 							id_usuario, ds_usuario, ds_nome, id_perfil, id_parceiro
@@ -15,7 +15,7 @@
 
 				$stmt = $con->prepare($select);
 			   	$params = array(':ds_usuario' => $ds_usuario,
-			   					':ds_senha' => $ds_senha);
+			   					':ds_senha' => $senha);
 			   
 			    $stmt->execute($params);
  
