@@ -8,7 +8,7 @@
 
 	var_dump($gravar);
     if($gravar){
-        header("../Usuario.php");
+        header("../index.php");
     }
     
 ?> 
