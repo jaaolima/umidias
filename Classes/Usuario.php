@@ -117,10 +117,6 @@
 								':ds_senha' =>$ds_senha);
 
 				$stmt->execute($params);
-
-
-				
-				header('../index.php');
 				
 			}
 			catch(exception $e)
