@@ -108,6 +108,17 @@ $('#kt_login_signup_submit').on('click', function (e) {
 	
 }); 
 
+$('#kt_login_signup_cancel').on('click', function (e) {
+
+	_login = $('#kt_login');
+	_login.removeClass('login-forgot-on');
+	_login.removeClass('login-signin-on');
+	_login.removeClass('login-signup-on');
+	_login.removeClass('login-validate-on');
+
+	_login.addClass('login-signin-on');
+});
+
 function validar()
 {
 	
