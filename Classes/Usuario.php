@@ -105,19 +105,41 @@
 		
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_usuario (ds_nome, ds_usuario, ds_email, ds_senha, id_perfil, dt_usuario)
-							VALUES (:ds_nome, :ds_usuario, :ds_email, :ds_senha, :id_perfil, curdate())";
+				$insert = "select count(ds_usuario) as ds_usuario from tb_usuario where ds_usuario=:ds_usuario";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_nome' => $ds_nome, 
-								':ds_usuario' => $ds_usuario,
-								':ds_email' => $ds_email,
-								':id_perfil' => $id_perfil,
-								':ds_senha' =>$ds_senha);
+				$params = array( 
+								':ds_usuario' => $ds_usuario);
 
+				
 				$stmt->execute($params);
-				return true;
+				$dados = $stmt->fetch();
+				if($dados["ds_usuario"] <= 0){
+					try{
+						$con = Conecta::criarConexao();
+						$insert = "INSERT into tb_usuario (ds_nome, ds_usuario, ds_email, ds_senha, id_perfil, dt_usuario)
+									VALUES (:ds_nome, :ds_usuario, :ds_email, :ds_senha, :id_perfil, curdate())";
+						
+						$stmt = $con->prepare($insert);
+						
+						$params = array(':ds_nome' => $ds_nome, 
+										':ds_usuario' => $ds_usuario,
+										':ds_email' => $ds_email,
+										':id_perfil' => $id_perfil,
+										':ds_senha' =>$ds_senha);
+		
+						$stmt->execute($params);
+						return true;
+						
+					}
+					catch(exception $e)
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					} 
+				}
+				
 				
 			}
 			catch(exception $e)
@@ -125,6 +147,7 @@
 				header('HTTP/1.1 500 Internal Server Error');
     			print "ERRO:".$e->getMessage();		
 			} 
+			
 		}
 
 		public function validarUsuario(array $dados)
