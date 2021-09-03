@@ -34,7 +34,7 @@ $mail->AddAddress($email, $nome);
 $mail->Subject = "Verificação do Login"; 
 
 // Corpo do email 
-$mail->Body = self::renderView(__DIR__ . '/../appUsuario/_email_cadastro.php', $_REQUEST);
+$mail->Body = renderView(__DIR__ . '/../appUsuario/_email_cadastro.php', $_REQUEST);
 
 function renderView($path, array $data = []){
     ob_start();
