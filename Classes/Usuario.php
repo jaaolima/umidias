@@ -117,6 +117,7 @@
 								':ds_senha' =>$ds_senha);
 
 				$stmt->execute($params);
+				return true;
 				
 			}
 			catch(exception $e)

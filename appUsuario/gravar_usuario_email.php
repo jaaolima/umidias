@@ -6,6 +6,7 @@
 	$usuario = new Usuario();
 	$gravar = $usuario->gravarUsuarioEmail($_REQUEST);
 
+	var_dump($gravar);
     if($gravar){
         header("../Usuario.php");
     }
