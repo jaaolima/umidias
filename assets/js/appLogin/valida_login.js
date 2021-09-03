@@ -187,12 +187,12 @@ function validarUsuario()
 
 	
 
-	// if ($("#termos").val() == "")
-	// {
-	// 	$("#termos").focus();
-	// 	swal.fire("Erro", "Confirme a senha", "error");
-	// 	return false;	
-	// }
+	if ($("input[name='termos']").attr("checked") === "checked")
+	{
+		$("input[name='termos']").focus();
+		swal.fire("Erro", "Precisamos que você aceite os termos", "error");
+		return false;	
+	}
 	
 	return true;
 	

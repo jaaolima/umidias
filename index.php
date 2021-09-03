@@ -115,7 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="form-group">
 										<label class="checkbox mb-0">
-										<input type="checkbox" name="agree" />
+										<input type="checkbox" name="termos" id="termos" />
 										<span></span>Eu concordo  
 										<a href="#">termos e Condições</a></label>
 									</div>
