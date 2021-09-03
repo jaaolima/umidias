@@ -30,51 +30,20 @@ $mail->setFrom("no-reply@ibranutro.com.br", "Unimídias");
 // Define o(s) destinatário(s) 
 $mail->AddAddress($email, $nome); 
 
-$mensagem = '
-<link href="https://app.unimidias.com.br/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-<style>
-.btn {
-    display: inline-block;
-    font-weight: normal;
-    color: #3F4254;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 0.65rem 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 16px !important;
-    -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out; }
-</style>
-<html>
-    <div id="validar>
-        <h2>Olá "'.$nome.'", </h2><br>
-        <p>Valide seu Login</p><br>
-        <div>
-            <a href="https://app.unimidias.com.br/appUsuario/gravar_usuario.php?ds_nome="'.$nome.'"&ds_email="'.$email.'"&ds_usuario="'.$email.'"&id_perfil="1" id="validar" class="btn btn-primary">Validar</a>
-        </div>
-        <input type="hidden" id="ds_nome" value="'.$nome.'" />
-        <input type="hidden" id="ds_email" value="'.$email.'" />
-    </div>
-    <div id="efetuado" style="display:none;">
-    </div>
-</html>
-';
-
 // Assunto da mensagem 
 $mail->Subject = "Verificação do Login"; 
 
 // Corpo do email 
-$mail->Body = nl2br($mensagem);
+$mail->Body = self::renderView(__DIR__ . '/../appUsuario/_email_cadastro.php', $_REQUEST);
 
+function renderView($path, array $data = []){
+    ob_start();
+    include $path;
+    $response = ob_get_contents();
+    ob_end_clean();
+
+    return $response;
+}
 // Opcional: Anexos 
 // $mail->AddAttachment("/home/usuario/public_html/documento.pdf", "documento.pdf"); 
 
