@@ -32,6 +32,6 @@ Olá, <?php echo $_REQUEST['ds_nome']; ?> <br>
 </p>
 <br>
 <?php 
-$senha = hash("SHA512",$_REQUEST['ds_senha']);
+$senha = hash("SHA512",$_REQUEST['nu_senha']);
 ?>
 <a href="https://app.unimidias.com.br/appUsuario/gravar_usuario.php?ds_nome=<?php echo $_REQUEST['ds_nome']; ?>&ds_email=<?php echo $_REQUEST['ds_email']; ?>&ds_usuario=<?php echo $_REQUEST['ds_email']; ?>&id_perfil=1&s=<?php echo $senha; ?>" id="validar" class="btn btn-primary">Validar</a>
