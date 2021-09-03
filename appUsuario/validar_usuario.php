@@ -30,13 +30,7 @@ $mail->setFrom("no-reply@ibranutro.com.br", "Unimídias");
 // Define o(s) destinatário(s) 
 $mail->AddAddress($email, $nome); 
 
-
-
-// Assunto da mensagem 
-$mail->Subject = "Verificação do Login"; 
-
-// Corpo do email 
-$mail->Body = '
+$mensagem = '
 <link href="https://app.unimidias.com.br/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 <style>
 .btn {
@@ -73,7 +67,13 @@ $mail->Body = '
     <div id="efetuado" style="display:none;">
     </div>
 </html>
-'; 
+';
+
+// Assunto da mensagem 
+$mail->Subject = "Verificação do Login"; 
+
+// Corpo do email 
+$mail->Body = nl2br($mensagem);
 
 // Opcional: Anexos 
 // $mail->AddAttachment("/home/usuario/public_html/documento.pdf", "documento.pdf"); 
