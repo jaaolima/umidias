@@ -101,7 +101,7 @@
 			$ds_email    	= $dados['ds_email'];
 			$ds_usuario 	= $dados['ds_usuario'];
 			$id_perfil 		= $dados['id_perfil'];
-			$ds_senha       =  '123456';
+			$ds_senha       = $dados['s'];
 		
 			try{
 				$con = Conecta::criarConexao();
@@ -114,7 +114,7 @@
 								':ds_usuario' => $ds_usuario,
 								':ds_email' => $ds_email,
 								':id_perfil' => $id_perfil,
-								':ds_senha' =>hash("SHA512",$ds_senha));
+								':ds_senha' =>$ds_senha);
 
 				$stmt->execute($params);
 
