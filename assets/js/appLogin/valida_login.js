@@ -153,7 +153,7 @@ function validarUsuario()
 		return false;	
 	}
 	var Tamanhosenha = $("#nu_senha").toString();
-	if (Tamanhosenha.value.length < 8)
+	if ($("#nu_senha").value.length < 8)
 	{
 		$("#nu_senha").focus();
 		swal.fire("Erro", "A senha precisa ter 8 dígitos ou mais", "error");
