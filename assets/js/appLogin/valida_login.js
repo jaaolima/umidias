@@ -75,23 +75,35 @@ $('#kt_login_signup_submit').on('click', function (e) {
 			
 	e.preventDefault();
 	if (validarUsuario()){
+
 		$.ajax({
 			url: 'appUsuario/validar_usuario.php'
-			, data: $("#form_validate").serialize()
+			, data: $("#form_validate").serialize() 
 			, type: 'post'
 			, success: function(html) {
-				_login = $('#kt_login');
-				_login.removeClass('login-forgot-on');
-				_login.removeClass('login-signin-on');
-				_login.removeClass('login-signup-on');
-				_login.removeClass('login-validate-on');
-
-				_login.addClass('login-validate-on');
+				$.ajax({
+					url: 'appUsuario/email_usuario.php'
+					, data: $("#form_validate").serialize() 
+					, type: 'post'
+					, success: function(html) {
+						_login = $('#kt_login');
+						_login.removeClass('login-forgot-on');
+						_login.removeClass('login-signin-on');
+						_login.removeClass('login-signup-on');
+						_login.removeClass('login-validate-on');
+		
+						_login.addClass('login-validate-on');
+					}
+					, error: function (data) {
+						swal.fire("Erro", data.responseText, "error"); 
+					}
+				});	
 			}
 			, error: function (data) {
 				swal.fire("Erro", data.responseText, "error"); 
 			}
 		});	
+		
 	}
 	
 }); 
@@ -138,6 +150,13 @@ function validarUsuario()
 	{
 		$("#nu_senha").focus();
 		swal.fire("Erro", "Preencha a senha", "error");
+		return false;	
+	}
+
+	if ($("#nu_senha").length() < 8)
+	{
+		$("#nu_senha").focus();
+		swal.fire("Erro", "A senha precisa ter 8 dígitos ou mais", "error");
 		return false;	
 	}
 
