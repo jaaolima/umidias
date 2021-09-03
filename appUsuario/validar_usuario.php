@@ -25,7 +25,7 @@ $mail->Password = 'RZw0z8AXIfvHc73M';
 $mail->Port = 587;
 $mail->IsHTML(true);
 $mail->CharSet = 'UTF-8'; 
-$mail->setFrom("no-reply@ibranutro.com.br", "Ibranutro");
+$mail->setFrom("no-reply@ibranutro.com.br", "Unimídias");
 
 // Define o(s) destinatário(s) 
 $mail->AddAddress('victorespucoc@gmail.com', 'Teste'); 
@@ -39,13 +39,34 @@ $mail->Subject = "Verificação do Login";
 $mail->Body = '
 <link href="https://app.unimidias.com.br/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 <html>
-    <div>
-        <button id="validar" class="btn btn-primary" onClick="validar();">Validar</button>
+    <div id="validar>
+        <h2>Olá "'.$nome.'", </h2><br>
+        <p>Valide seu Login</p><br>
+        <div>
+            <button id="validar" class="btn btn-primary" onClick="Validar();">Validar</button>
+        </div>
+        <input type="hidden" id="ds_nome" value="'.$nome.'" />
+        <input type="hidden" id="ds_email" value="'.$email.'" />
     </div>
-    <input type="hidden" id="ds_nome" value="'.$nome.'" />
-    <input type="hidden" id="ds_email" value="'.$email.'" />
+    <div id="efetuado" style="display:none;">
+    </div>
 </html>
-<script src="https://app.unimidias.com.br/assets/js/appUsuario/validar_usuario.js"></script>
+<script>
+ds_nome = document.getElementsByName("ds_nome").value();
+ds_email = document.getElementsByName("ds_email").value();
+
+ds_usuario = ds_email;
+id_perfil = 1;
+
+
+function Validar(){
+    redirectTo(`https://app.unimidias.com.br/appUsuario/gravar_usuario.php?ds_nome="`+ds_nome+`"&ds_email="`+ds_email+`"&ds_usuario="`+ds_usuario+`"&id_perfil="`+id_perfil);
+    var element = document.getElementById("efetuado");
+    element.style.display("flex");
+    var validar = document.getElementById("validar");
+    validar.style.display("none");
+}
+</script>
 '; 
 
 // Opcional: Anexos 
