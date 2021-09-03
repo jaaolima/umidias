@@ -8,7 +8,7 @@
 
 	var_dump($gravar);
     if($gravar){
-        header("Location: index.php");
+        header("Location: ../index.php");
     }
     
 ?> 
