@@ -187,7 +187,7 @@ function validarUsuario()
 
 	
 
-	if ($("input[name='termos']").attr("checked") === "checked")
+	if (!$("input[name='termos']").attr("checked") === "checked")
 	{
 		$("input[name='termos']").focus();
 		swal.fire("Erro", "Precisamos que você aceite os termos", "error");
