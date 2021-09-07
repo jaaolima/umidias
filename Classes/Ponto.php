@@ -943,7 +943,7 @@
 				}
 			}
 
-			return array(Ativados($id_parceiro), Desativados($id_parceiro));
+			return array($this->Ativados($id_parceiro), $this->Desativados($id_parceiro));
 		}
 		public function graficoPontoParceiroFront($id_parceiro)
 		{
@@ -995,7 +995,7 @@
 				}
 			}
 
-			return array(Ativados($id_parceiro), Desativados($id_parceiro));
+			return array($this->Ativados($id_parceiro), $this->Desativados($id_parceiro));
 		}
 		function BuscarDadosPonto($id_ponto)
 		{
