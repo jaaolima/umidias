@@ -902,7 +902,7 @@
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto
-								where id_midia = 1 and st_status = 'A' and id_parceiro=:id_parceiro";
+								where id_midia = 1 and (st_status = 'A' or st_status = '') and id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
@@ -952,7 +952,7 @@
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto
-								where id_midia = 1 and st_status = 'A' and id_parceiro=:id_parceiro";
+								where id_midia = 1 and (st_status = 'A' or st_status = '') and id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
