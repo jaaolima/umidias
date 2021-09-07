@@ -900,7 +900,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT count(a.id_ponto) as id_ponto
+					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto
 								where id_midia = 1 and st_status = 'A' and id_parceiro=:id_parceiro";
 					
@@ -922,7 +922,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT count(a.id_ponto) as id_ponto
+					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto
 								where id_midia = 1 and st_status = 'D' and id_parceiro=:id_parceiro";
 					
@@ -950,7 +950,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT count(a.id_ponto) as id_ponto
+					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto
 								where id_midia = 1 and st_status = 'A' and id_parceiro=:id_parceiro";
 					
@@ -972,7 +972,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT count(a.id_ponto) as id_ponto
+					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto
 								where id_midia = 1 and st_status = 'D' and id_parceiro=:id_parceiro";
 					
