@@ -214,6 +214,32 @@
 			}	
 		}
 
+		function buscarDadosUsuarioEmail($ds_email)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				
+				$select = "SELECT 
+							id_usuario, ds_nome, ds_email, ds_usuario, id_perfil
+						FROM tb_usuario  
+						WHERE ds_usuario = :ds_email";
+
+				$stmt = $con->prepare($select);
+			   	$params = array(':ds_email' => $ds_email);
+			   
+			    $stmt->execute($params);
+
+			    return  $stmt->fetch();
+				
+			}	
+			catch(Exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();	
+			}	
+		}
+
 
 		public function gravarAlterarUsuario(array $dados)
 		{

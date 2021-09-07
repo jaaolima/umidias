@@ -11,7 +11,7 @@ $usuario = new Usuario();
 $dados = $usuario->buscarDadosUsuario($id_usuario);
 
 ?>
-<div class="card card-custom">
+<div class="card card-custom"> 
     <div class="card-header">
         <h3 class="card-title">
             Alterar cadastro do Usuário <?php echo $id_usuario ?>

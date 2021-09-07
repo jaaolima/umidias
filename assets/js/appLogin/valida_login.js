@@ -108,8 +108,91 @@ $('#kt_login_signup_submit').on('click', function (e) {
 	
 }); 
 
+$('#kt_login_signup_submit').on('click', function (e) {
+			
+	e.preventDefault();
+	if (validarUsuario()){
+
+		$.ajax({
+			url: 'appUsuario/validar_usuario.php'
+			, data: $("#form_validate").serialize() 
+			, type: 'post'
+			, success: function(html) {
+				$.ajax({
+					url: 'appUsuario/email_usuario.php'
+					, data: $("#form_validate").serialize() 
+					, type: 'post'
+					, success: function(html) {
+						_login = $('#kt_login');
+						_login.removeClass('login-forgot-on');
+						_login.removeClass('login-signin-on');
+						_login.removeClass('login-signup-on');
+						_login.removeClass('login-validate-on');
+		
+						_login.addClass('login-validate-on');
+					}
+					, error: function (data) {
+						swal.fire("Erro", data.responseText, "error"); 
+					}
+				});	
+			}
+			, error: function (data) {
+				swal.fire("Erro", data.responseText, "error"); 
+			}
+		});	
+		
+	}
+	
+}); 
+
 $('#kt_login_signup_cancel').on('click', function (e) {
 
+	_login = $('#kt_login');
+	_login.removeClass('login-forgot-on');
+	_login.removeClass('login-signin-on');
+	_login.removeClass('login-signup-on');
+	_login.removeClass('login-validate-on');
+
+	_login.addClass('login-signin-on');
+});
+
+$('#kt_login_forgot_submit').on('click', function (e) {
+	e.preventDefault();
+	if (validarResetar()){
+
+		$.ajax({
+			url: 'appUsuario/validar_usuario.php'
+			, data: $("#form_esqueci_senha").serialize() 
+			, type: 'post'
+			, success: function(html) {
+				$.ajax({
+					url: 'appUsuario/recuperar_senha_usuario.php'
+					, data: $("#form_esqueci_senha").serialize() 
+					, type: 'post'
+					, success: function(html) {
+						_login = $('#kt_login');
+						_login.removeClass('login-forgot-on');
+						_login.removeClass('login-signin-on');
+						_login.removeClass('login-signup-on');
+						_login.removeClass('login-validate-on');
+		
+						_login.addClass('login-validate-on');
+					}
+					, error: function (data) {
+						swal.fire("Erro", data.responseText, "error"); 
+					}
+				});	
+			}
+			, error: function (data) {
+				swal.fire("Erro", data.responseText, "error"); 
+			}
+		});	
+		
+	}
+});
+
+// Handle cancel button
+$('#kt_login_forgot_cancel').on('click', function (e) {
 	_login = $('#kt_login');
 	_login.removeClass('login-forgot-on');
 	_login.removeClass('login-signin-on');
@@ -192,8 +275,25 @@ function validarUsuario()
 		$("input[name='termos']").focus();
 		swal.fire("Erro", "Precisamos que você aceite os termos e Condições", "error");
 		return false;	
-	}
+	} 
 	
 	return true;
 	
 }
+
+
+function validarResetar()
+{
+
+	if ($("#ds_email").val() == "")
+	{
+		$("#ds_email").focus();
+		swal.fire("Erro", "Preencha o Email", "error");
+		return false;	
+	}
+	
+	
+	return true;
+	
+}
+

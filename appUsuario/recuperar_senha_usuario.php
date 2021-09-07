@@ -2,9 +2,19 @@
 ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
+require_once("../Classes/Usuario.php");
 
 $email = $_REQUEST['ds_email'];
-$nome = $_REQUEST['ds_nome'];
+$usuario = new Usuario();
+$dados = $usuario->buscarDadosUsuarioEmail($email);
+
+
+$nome = $dados['ds_nome'];
+
+$dadosUsuario = [
+    'ds_nome' => $nome,
+    'ds_email' => $email
+];
 
 // Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
 require_once('../assets/media/PHPMailer-master/PHPMailerAutoload.php');
@@ -33,7 +43,7 @@ $mail->AddAddress($email, $nome);
 $mail->Subject = "Verificação do Login"; 
 
 // Corpo do email 
-$mail->Body = renderView(__DIR__ . '/../appUsuario/_email_cadastro.php', $_REQUEST);
+$mail->Body = renderView(__DIR__ . '/../appUsuario/_email_recuperar_senha.php', $dadosUsuario);
 
 function renderView($path, array $data = []){
     ob_start();

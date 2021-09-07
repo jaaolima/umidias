@@ -30,7 +30,7 @@ Olá, <?php echo $_REQUEST['ds_nome']; ?> <br>
 <p>
     Valide seu Login
 </p>
-<br>
+<br> 
 <?php 
 $senha = hash("SHA512",$_REQUEST['nu_senha']);
 ?>
