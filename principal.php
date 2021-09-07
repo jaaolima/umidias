@@ -945,7 +945,7 @@
 								}
 							}
 						},
-						colors: [primary, success, warning]
+						colors: [primary, success]
 					};
 
 					var chart = new ApexCharts(document.querySelector(apexChart), options);
