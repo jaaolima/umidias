@@ -12,7 +12,7 @@
 		
 			for ($i=0; $i<$file_count; $i++) {
 				foreach ($file_keys as $key) {
-					$file_ary[$i][$key] = $file_post[$key][$i];
+					$file_ary[$i][$key] = $file_post[$key][$i]; 
 				}
 			}
 		
@@ -896,7 +896,7 @@
 		public function graficoPontoParceiroOutdoor($id_parceiro)
 		{
 			
-			function Alugados($id_parceiro){	
+			function Ativados($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -919,7 +919,7 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function Pendentes($id_parceiro){	
+			function Desativados($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -943,43 +943,19 @@
 				}
 			}
 
-			function Livres($id_parceiro){	
-				try{
-					$con = Conecta::criarConexao();
-					
-					$select = "SELECT count(a.id_ponto) as id_ponto
-								FROM rl_alugado a
-								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 1 and p.id_parceiro=:id_parceiro and (a.st_status = 'L' or p.id_ponto not in (SELECT id_ponto FROM rl_alugado al where al.id_ponto=p.id_ponto))";
-					
-					$stmt = $con->prepare($select); 
-					$params = array(':id_parceiro' => $id_parceiro);
-					$stmt->execute($params);
-
-					return $stmt->fetch();
-					
-						
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
-				}
-			}
-
-			return array(Alugados($id_parceiro), Pendentes($id_parceiro), livres($id_parceiro));
+			return array(Ativados($id_parceiro), Desativados($id_parceiro));
 		}
 		public function graficoPontoParceiroFront($id_parceiro)
 		{
 			
-			function AlugadosFront($id_parceiro){	
+			function Ativados($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM rl_alugado a
 								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 2 and a.st_status = 'A' and p.id_parceiro=:id_parceiro";
+								where p.id_midia = 1 and a.st_status = 'A' and p.id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
@@ -995,38 +971,14 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function PendentesFront($id_parceiro){	
+			function Desativados($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM rl_alugado a
 								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 2 and a.st_status = 'P' and p.id_parceiro=:id_parceiro";
-					
-					$stmt = $con->prepare($select); 
-					$params = array(':id_parceiro' => $id_parceiro);
-					$stmt->execute($params);
-
-					return $stmt->fetch();
-					
-						
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
-				}
-			}
-
-			function LivresFront($id_parceiro){	
-				try{
-					$con = Conecta::criarConexao();
-					
-					$select = "SELECT count(a.id_ponto) as id_ponto
-								FROM rl_alugado a
-								right join tb_ponto p on a.id_ponto=p.id_ponto
-								where p.id_midia = 2  and p.id_parceiro=:id_parceiro and (a.st_status = 'L' or p.id_ponto not in (SELECT id_ponto FROM rl_alugado al where al.id_ponto=p.id_ponto))";
+								where p.id_midia = 1 and a.st_status = 'P' and p.id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
@@ -1043,7 +995,7 @@
 				}
 			}
 
-			return array(AlugadosFront($id_parceiro), PendentesFront($id_parceiro), livresFront($id_parceiro));
+			return array(Ativados($id_parceiro), Desativados($id_parceiro));
 		}
 		function BuscarDadosPonto($id_ponto)
 		{

@@ -420,7 +420,7 @@
 
 																		}																	
 																	?>
-																</div>
+																</div> 
 															</div>
 														</div>
 													</div>
@@ -905,12 +905,9 @@
 							name: 'Ativos',
 							data: [<?php echo $graficoPontoParceiroOutdoor[0]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[0]["id_ponto"]; ?>]
 						}, {
-							name: 'Pendentes',
+							name: 'Desativados',
 							data: [<?php echo $graficoPontoParceiroOutdoor[1]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[1]["id_ponto"]; ?>]
-						}, {
-							name: 'Livres',
-							data: [<?php echo $graficoPontoParceiroOutdoor[2]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[2]["id_ponto"]; ?>]
-						}],
+						}
 						chart: {
 							type: 'bar',
 							height: 200
