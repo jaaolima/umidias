@@ -150,7 +150,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--begin::Form-->
 								<form class="form_esqueci_senha" novalidate="novalidate" id="form_esqueci_senha">
 									<div class="form-group">
-										<input class="form-control rectangle_1 my-4" type="email" placeholder="Insira aqui seu e-mail ou usuário" name="ds_emai_resetar" id="ds_emai_resetar" autocomplete="off" />
+										<input class="form-control rectangle_1 my-4" type="email" placeholder="Insira aqui seu e-mail ou usuário" name="ds_email_resetar" id="ds_email_resetar" autocomplete="off" />
 									</div>
 									<div class="form-group flex-wrap flex-center text-center">
 										<div>
