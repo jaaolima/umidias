@@ -271,18 +271,19 @@
 			}
 		}
 		function resetarSenhaInicial($ds_email)
-        { //SHA2(nu_matricula, 512)
+        { 
 
             try{
                 $con = Conecta::criarConexao();
                 $update = "UPDATE tb_usuario
                                 SET 
-                                    ds_senha = '123456'
+                                    ds_senha = :ds_senha
                             WHERE ds_usuario = :ds_email";
 
                 $stmt = $con->prepare($update);
                 $params = array(
-                                ':ds_email' => $ds_email
+                                ':ds_email' => $ds_email,
+								':ds_senha' => hash("SHA512",'123456')
                                 );
 
                 $stmt->execute($params);
