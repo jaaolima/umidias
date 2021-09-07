@@ -907,7 +907,7 @@
 						}, {
 							name: 'Desativados',
 							data: [<?php echo $graficoPontoParceiroOutdoor[1]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[1]["id_ponto"]; ?>]
-						}
+						},
 						chart: {
 							type: 'bar',
 							height: 200
