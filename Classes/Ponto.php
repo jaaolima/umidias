@@ -902,7 +902,7 @@
 					
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM tb_ponto
-								where p.id_midia = 1 and p.st_status = 'A' and p.id_parceiro=:id_parceiro";
+								where id_midia = 1 and st_status = 'A' and id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
@@ -924,7 +924,7 @@
 					
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM tb_ponto
-								where p.id_midia = 1 and p.st_status = 'D' and p.id_parceiro=:id_parceiro";
+								where id_midia = 1 and st_status = 'D' and id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
@@ -952,7 +952,7 @@
 					
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM tb_ponto
-								where p.id_midia = 1 and p.st_status = 'A' and p.id_parceiro=:id_parceiro";
+								where id_midia = 1 and st_status = 'A' and id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
@@ -974,7 +974,7 @@
 					
 					$select = "SELECT count(a.id_ponto) as id_ponto
 								FROM tb_ponto
-								where p.id_midia = 1 and p.st_status = 'D' and p.id_parceiro=:id_parceiro";
+								where id_midia = 1 and st_status = 'D' and id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
