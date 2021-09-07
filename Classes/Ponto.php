@@ -943,12 +943,12 @@
 				}
 			}
 
-			return array($this->Ativados($id_parceiro), $this->Desativados($id_parceiro));
+			return array(Ativados($id_parceiro), Desativados($id_parceiro));
 		}
 		public function graficoPontoParceiroFront($id_parceiro)
 		{
 			
-			function Ativados($id_parceiro){	
+			function AtivadosOutdoor($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -971,7 +971,7 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function Desativados($id_parceiro){	
+			function DesativadosOutdoor($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -995,7 +995,7 @@
 				}
 			}
 
-			return array($this->Ativados($id_parceiro), $this->Desativados($id_parceiro));
+			return array(AtivadosOutdoor($id_parceiro), DesativadosOutdoor($id_parceiro));
 		}
 		function BuscarDadosPonto($id_ponto)
 		{
