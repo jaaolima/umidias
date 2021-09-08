@@ -73,13 +73,13 @@
   display: none; }
   
 
-.login.login-1.login-senha-on .login-senha {
-  display: block; }
+.login.login-1.login-senha-on .login-validate {
+  display: none; }
 
 .login.login-1.login-senha-on .login-forgot {
   display: none; }
 .login.login-1.login-senha-on .login-senha {
-    display: none; }
+    display: block; }
     
 
 @media (min-width: 992px) {

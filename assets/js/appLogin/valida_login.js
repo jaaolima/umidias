@@ -45,25 +45,25 @@ $(document).ready(function() {
 		        , data: $("#form_esqueci_senha").serialize()
 		        , success: function(html) {
 		        		
-						$.ajax({
-							url: 'appUsuario/email_alterar_senha.php'
-							, data: $("#form_esqueci_senha").serialize() 
-							, type: 'post'
-							, success: function(html) {
-								_login = $('#kt_login');
-								_login.removeClass('login-forgot-on');
-								_login.removeClass('login-signin-on');
-								_login.removeClass('login-signup-on');
-								_login.removeClass('login-validate-on');
-								_login.removeClass('login-senha-on');
-				
-								_login.addClass('login-senha-on');
+					$.ajax({
+						url: 'appUsuario/email_alterar_senha.php'
+						, data: $("#form_esqueci_senha").serialize() 
+						, type: 'post'
+						, success: function(html) {
+							_login = $('#kt_login');
+							_login.removeClass('login-forgot-on');
+							_login.removeClass('login-signin-on');
+							_login.removeClass('login-signup-on');
+							_login.removeClass('login-validate-on');
+							_login.removeClass('login-senha-on');
+			
+							_login.addClass('login-senha-on');
 
-							}
-							, error: function (data) {
-								swal.fire("Erro", data.responseText, "error"); 
-							}
-						});	
+						}
+						, error: function (data) {
+							swal.fire("Erro", data.responseText, "error"); 
+						}
+					});	
 		            
 		        }
 		        , error: function(xhr, status, error) {
