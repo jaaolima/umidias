@@ -991,7 +991,7 @@
 				}
 			}
 
-			return array(AtivadosOutdoor($id_parceiro), DesativadosOutdoor($id_parceiro));
+			return array(AtivadosFront($id_parceiro), DesativadosFront($id_parceiro));
 		}
 		function BuscarDadosPonto($id_ponto)
 		{
