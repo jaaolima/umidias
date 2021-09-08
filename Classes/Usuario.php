@@ -288,7 +288,7 @@
 
                 $stmt->execute($params);
 
-				return $nova_senha;
+				echo $nova_senha;
 
             }
             catch(exception $e)
