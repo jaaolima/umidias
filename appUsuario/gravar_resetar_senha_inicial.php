@@ -9,5 +9,5 @@
     $usuario 		= new Usuario();
     $ds_email    = $_REQUEST['ds_email_resetar'];
     $dados = $usuario->resetarSenhaInicial($ds_email); 
-    echo $dados;
+    return $dados;
 ?>
