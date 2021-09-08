@@ -6,7 +6,7 @@ Olá, <?php echo $data['ds_nome']; ?> <br>
 
 <p>
     <b>Usuário:</b> <?php echo $data['ds_email']; ?> <br>
-    <b>Nova senha:</b> 123456 <br>
+    <b>Nova senha:</b> <?php echo $data['nova_senha']; ?> <br>
 
 </p>
 

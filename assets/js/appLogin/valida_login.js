@@ -43,11 +43,12 @@ $(document).ready(function() {
 		        url: 'appUsuario/gravar_resetar_senha_inicial.php'
 		        , type: 'post'
 		        , data: $("#form_esqueci_senha").serialize()
-		        , success: function(html) {
+				, async: false
+		        , success: function(data) {
 		        		
 					$.ajax({
 						url: 'appUsuario/email_alterar_senha.php'
-						, data: $("#form_esqueci_senha").serialize() 
+						, data: {'form': $("#form_esqueci_senha").serialize(), 'senha': data}
 						, type: 'post'
 						, success: function(html) {
 							_login = $('#kt_login');

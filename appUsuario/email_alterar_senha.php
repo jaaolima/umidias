@@ -4,14 +4,15 @@ ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 require_once("../Classes/Usuario.php");
 
-$email = $_REQUEST['ds_email_resetar'];
+$email = $_REQUEST['form']['ds_email_resetar'];
 $usuario = new Usuario();
 $dados = $usuario->buscarDadosUsuarioEmail($email);
 
 
 $dadosUsuario = [
     'ds_email' => $email,
-    'ds_nome' => $dados['ds_nome']
+    'ds_nome' => $dados['ds_nome'],
+    'nova_senha' => $_REQUEST['senha']
 ];
 
 // Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
