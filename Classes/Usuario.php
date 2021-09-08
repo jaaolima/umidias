@@ -286,7 +286,7 @@
 								':ds_senha' => hash("SHA512", $nova_senha)
                                 );
 
-                $stmt->execute($params);
+                $stmt->execute($params); 
 
 				echo $nova_senha;
 

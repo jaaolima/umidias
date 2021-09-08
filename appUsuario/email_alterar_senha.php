@@ -5,14 +5,17 @@ error_reporting(E_ALL);
 require_once("../Classes/Usuario.php");
 $email = $_REQUEST['email'];
 $usuario = new Usuario();
-$dados = $usuario->buscarDadosUsuarioEmail($email);
+$dados = $usuario->buscarDadosUsuarioEmail($email); 
+
+//alterar senha e pegar a nova
+$nova_senha = $usuario->resetarSenhaInicial($email); 
 
 
 
 $dadosUsuario = [
     'ds_email' => $email,
     'ds_nome' => $dados['ds_nome'],
-    'nova_senha' => $_REQUEST['senha']
+    'nova_senha' => $nova_senha
 ];
 
 // Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 

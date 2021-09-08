@@ -41,37 +41,24 @@ $(document).ready(function() {
 		{
 			email = $("#ds_email_resetar").val();
 			$.ajax({
-		        url: 'appUsuario/gravar_resetar_senha_inicial.php'
-		        , type: 'post'
-		        , data: $("#form_esqueci_senha").serialize()
-				, async: false
-		        , success: function(data) {
-		        		
-					$.ajax({
-						url: 'appUsuario/email_alterar_senha.php'
-						, data: {email: email, senha: data}
-						, type: 'post'
-						, success: function(html) {
-							_login = $('#kt_login');
-							_login.removeClass('login-forgot-on');
-							_login.removeClass('login-signin-on');
-							_login.removeClass('login-signup-on');
-							_login.removeClass('login-validate-on');
-							_login.removeClass('login-senha-on');
-			
-							_login.addClass('login-senha-on');
+				url: 'appUsuario/email_alterar_senha.php' 
+				, data: {email: email}
+				, type: 'post'
+				, success: function(html) {
+					_login = $('#kt_login');
+					_login.removeClass('login-forgot-on');
+					_login.removeClass('login-signin-on');
+					_login.removeClass('login-signup-on');
+					_login.removeClass('login-validate-on');
+					_login.removeClass('login-senha-on');
+	
+					_login.addClass('login-senha-on');
 
-						}
-						, error: function (data) {
-							swal.fire("Erro", data.responseText, "error"); 
-						}
-					});	
-		            
-		        }
-		        , error: function(xhr, status, error) {
-				  	swal("Erro", xhr.responseText, "error");
 				}
-		    });
+				, error: function (data) {
+					swal.fire("Erro", data.responseText, "error"); 
+				}
+			});	
 			
 		}
 

@@ -32,7 +32,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Page-->
 			<div class="d-flex flex-row flex-column-fluid page">
-				<!--begin::Wrapper-->
+				<!--begin::Wrapper--> 
 				<div class="d-flex flex-column flex-row-fluid wrapper " id="kt_wrapper">
 					<div class="row">
                         <div class="col-8">
