@@ -40,7 +40,6 @@ $(document).ready(function() {
 		else
 		{
 			email = $("#ds_email_resetar").val();
-			console.log(email);
 			$.ajax({
 		        url: 'appUsuario/gravar_resetar_senha_inicial.php'
 		        , type: 'post'
