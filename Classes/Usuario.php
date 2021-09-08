@@ -272,7 +272,7 @@
 		}
 		function resetarSenhaInicial($ds_email)
         { 
-			$nova_senha = gerar_senha(8, true, true, true, false);
+			$nova_senha = $this->gerar_senha(8, true, true, true, false);
             try{
                 $con = Conecta::criarConexao();
                 $update = "UPDATE tb_usuario
