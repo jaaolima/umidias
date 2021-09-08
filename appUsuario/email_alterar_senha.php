@@ -8,11 +8,10 @@ $email = $_REQUEST['ds_email_resetar'];
 $usuario = new Usuario();
 $dados = $usuario->buscarDadosUsuarioEmail($email);
 
-$nome = $dados['ds_nome'];
 
 $dadosUsuario = [
     'ds_email' => $email,
-    'ds_nome' => $nome 
+    'ds_nome' => $dados['ds_nome']
 ];
 
 // Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
