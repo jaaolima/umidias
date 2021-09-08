@@ -29,7 +29,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<meta charset="utf-8" />
 		<title>List 4 Columns | Keenthemes</title>
 		<meta name="description" content="User 4 columns listing" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> 
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
@@ -146,7 +146,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <span class="texto-chumbo">Senha</span>
                                                 </div>                                                
                                                 <div class="col-6">
-                                                    <a href="" class="text-primary">Resetar senha</a>
+													<span class="texto-negrito">********</span>
                                                 </div>
                                             </div>
                                             <div class="separator separator-solid"></div>
@@ -235,9 +235,20 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 													<input class="border-0 w-100" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario ?>">
 												</div>	
-												<div class="my-6 d-flex">                                           
-													<a href="" class="text-primary">Resetar senha</a>
-												</div>
+												<div class="row">
+													<div class=" d-flex col-6">
+														<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+															<legend class="legend-border mb-0">Senha</legend>
+															<input class="border-0 w-100" type="text " style="height: 27px;" name="ds_senha" id="ds_senha" value="********">
+														</fieldset>                                               
+													</div>
+													<div class=" d-flex col-6" id="confirmar" style="display:none;">
+														<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+															<legend class="legend-border mb-0">Confirmar senha</legend>
+															<input class="border-0 w-100" type="text " style="height: 27px;" name="ds_senha_confirmada" id="ds_senha_confirmada">
+														</fieldset>                                               
+													</div>
+												</div>	
 											</form>                                                                                
                                         </div>
                                     </div>
