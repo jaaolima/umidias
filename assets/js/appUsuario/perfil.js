@@ -5,7 +5,7 @@ $(document).ready(function(){
         $("#editar").removeClass("d-none");
     });
 
-    $("#ds_senha").change(function(){
+    $("#ds_senha").on("keyup", function(e){ 
 
         $("#confirmar").removeClass("d-none");
         $("#confirmar").addClass("d-flex");
