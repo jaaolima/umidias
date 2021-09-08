@@ -152,10 +152,8 @@
 			
 		}
 
-		public function validarUsuario(array $dados)
+		public function validarUsuario($ds_email)
 		{
-		
-			$ds_email    	= $dados['ds_email'];
 		
 			try{
 				$con = Conecta::criarConexao();
