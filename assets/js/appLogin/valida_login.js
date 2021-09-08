@@ -53,7 +53,7 @@ $(document).ready(function() {
 							_login = $('#kt_login');
 							_login.removeClass('login-forgot-on');
 							_login.removeClass('login-signin-on');
-							_login.removeClass('login-signup-on');
+							_login.removeClass('login-signup-on'); 
 							_login.removeClass('login-validate-on');
 							_login.removeClass('login-senha-on');
 			

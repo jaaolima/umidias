@@ -305,31 +305,60 @@
 
 			$ds_nome		= $dados['ds_nome'];
 			$ds_email    	= $dados['ds_email'];
-			$ds_senha    	= $dados['ds_senha'];
 			$id_usuario    	= $dados['id_usuario'];
-			
-			try{
-				$con = Conecta::criarConexao();
-				$update = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email, ds_senha = :ds_senha
-						WHERE id_usuario = :id_usuario";
-				
-				$stmt = $con->prepare($update);
-				
-				$params = array(':ds_nome' => $ds_nome, 
-								':ds_email' => $ds_email,
-								':ds_senha' => $ds_senha,
-								':id_usuario'=>$id_usuario);
-				$stmt->execute($params);
+			if($dados['ds_senha'] !== "********"){
+				$ds_senha    	= hash("SHA512", $dados['ds_senha']);
 
-				
-				echo "Dados alterados com sucesso!";
-				
+				try{
+					$con = Conecta::criarConexao();
+					$update = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email, ds_senha = :ds_senha
+							WHERE id_usuario = :id_usuario";
+					
+					$stmt = $con->prepare($update);
+					
+					$params = array(':ds_nome' => $ds_nome, 
+									':ds_email' => $ds_email,
+									':ds_senha' => $ds_senha,
+									':id_usuario'=>$id_usuario);
+					$stmt->execute($params);
+	
+					
+					echo "Dados alterados com sucesso!";
+					
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
 			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
+			else{
+				try{
+					$con = Conecta::criarConexao();
+					$update = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email
+							WHERE id_usuario = :id_usuario";
+					
+					$stmt = $con->prepare($update);
+					
+					$params = array(':ds_nome' => $ds_nome, 
+									':ds_email' => $ds_email,
+									':id_usuario'=>$id_usuario);
+					$stmt->execute($params);
+	
+					
+					echo "Dados alterados com sucesso!";
+					
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
 			}
+			
+			
+			
+			
 		}
 
 		function resetarSenhaInicial($ds_email)

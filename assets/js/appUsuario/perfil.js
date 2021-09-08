@@ -112,7 +112,15 @@ function validar()
 		{
 			$("#ds_senha_confirmada").removeClass("is-invalid");	
 			$("#ds_senha_confirmada").addClass("is-valid");
-		}		
+		}	
+		
+		var Tamanhosenha = $("#nu_senha").val().toString();
+		if (Tamanhosenha.length < 8)
+		{
+			$("#nu_senha").focus();
+			swal.fire("Erro", "A senha precisa ter 8 dígitos ou mais", "error");
+			return false;	
+		}
 	}
 
 
