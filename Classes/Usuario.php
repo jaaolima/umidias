@@ -183,9 +183,9 @@
 			} 
 		}
 
-		public function validarUsuarioExistente($ds_email)
+		public function validarUsuarioExistente($dados)
 		{
-		
+			$ds_email = $dados['email'];
 			try{
 				$con = Conecta::criarConexao();
 				$insert = "select count(ds_usuario) as ds_usuario from tb_usuario where ds_usuario=:ds_usuario";
