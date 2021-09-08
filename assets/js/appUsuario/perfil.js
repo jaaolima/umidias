@@ -101,6 +101,14 @@ function validar()
 
 	if($("#ds_senha").val() !== "********")
 	{
+		var Tamanhosenha = $("#nu_senha").val().toString();
+		if (Tamanhosenha.length < 8)
+		{
+			$("#nu_senha").focus();
+			swal.fire("Erro", "A senha precisa ter 8 dígitos ou mais", "error");
+			return false;	
+		}
+		
 		if($("#ds_senha_confirmada").val() == "")
 		{
 			$("#ds_senha_confirmada").focus();
@@ -114,13 +122,13 @@ function validar()
 			$("#ds_senha_confirmada").addClass("is-valid");
 		}	
 		
-		var Tamanhosenha = $("#nu_senha").val().toString();
-		if (Tamanhosenha.length < 8)
-		{
-			$("#nu_senha").focus();
-			swal.fire("Erro", "A senha precisa ter 8 dígitos ou mais", "error");
-			return false;	
+		
+		if($("#nu_senhaconfirmada").val() !== $("#nu_senha").val()){
+			$("#nu_senhaconfirmada").focus();
+			swal.fire("Erro", "A senha e sua confirmação não são iguais", "error");
+			return false;
 		}
+	
 	}
 
 
