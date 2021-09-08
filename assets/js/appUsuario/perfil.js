@@ -21,7 +21,7 @@ $(document).ready(function(){
 		if(validar())
 		{ 
 			$.ajax({
-		        url: 'appUsuario/gravar_alterar_usuario.php'
+		        url: 'appUsuario/gravar_alterar_perfil.php'
 				, data: $("#form_usuario").serialize() 
 		        , type: 'post'
 		        , success: function(html) {
@@ -86,17 +86,33 @@ function validar()
 		$("#ds_usuario").addClass("is-valid");
 	}
 
-	if($("#id_perfil").val() == "")
+	if($("#ds_senha").val() == "")
 	{
-		$("#id_perfil").focus();
+		$("#ds_senha").focus();
 		swal.fire("Erro", "Preencha a senha", "error");
-		$("#id_perfil").addClass("is-invalid");
+		$("#ds_senha").addClass("is-invalid");
 		return false;		
 	}
 	else
 	{
-		$("#id_perfil").removeClass("is-invalid");	
-		$("#id_perfil").addClass("is-valid");
+		$("#ds_senha").removeClass("is-invalid");	
+		$("#ds_senha").addClass("is-valid");
+	}
+
+	if($("#ds_senha").val() !== "********")
+	{
+		if($("#ds_senha_confirmada").val() == "")
+		{
+			$("#ds_senha_confirmada").focus();
+			swal.fire("Erro", "Confirme a senha", "error");
+			$("#ds_senha_confirmada").addClass("is-invalid");
+			return false;		
+		}
+		else
+		{
+			$("#ds_senha_confirmada").removeClass("is-invalid");	
+			$("#ds_senha_confirmada").addClass("is-valid");
+		}		
 	}
 
 
