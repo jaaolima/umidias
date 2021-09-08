@@ -305,7 +305,7 @@
 			$mi = "abcdefghijklmnopqrstuvyxwz"; // $mi contem as letras minusculas
 			$nu = "0123456789"; // $nu contem os números
 			$si = "!@#$%¨&*()_+="; // $si contem os símbolos
-		  
+			$senha = '';
 			if ($maiusculas){
 				  // se $maiusculas for "true", a variável $ma é embaralhada e adicionada para a variável $senha
 				  $senha .= str_shuffle($ma);
