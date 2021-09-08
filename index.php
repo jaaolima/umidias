@@ -136,7 +136,18 @@ License: You must have a valid license purchased only from themeforest(the above
 									<h3 class="font-weight-bolder my-3">Confira seu E-mail</h3>
 									<p class="text-gray my-3">Se você possui uma conta, logo receberá um email para a corfirmação do seu login!</p>
 									<button class="btn btn-primary my-3" id="voltar">Voltar para o login</button>
-								</form>
+								</form> 
+								<!--end::Form-->
+							</div>
+
+							<div class=" login-senha m-8">
+								<!--begin::Form-->
+								<form class="form text-center p-4" id="form_senha" novalidate="novalidate" id="kt_login_senha_form">
+									<img src="assets\media\Ilustração - Email.png" alt="" class="my-3">
+									<h3 class="font-weight-bolder my-3">Confira seu E-mail</h3>
+									<p class="text-gray my-3">Se você possui uma conta, logo receberá um email com sua nova senha!</p>
+									<button class="btn btn-primary my-3" id="voltar">Voltar para o login</button>
+								</form> 
 								<!--end::Form-->
 							</div>
 

@@ -4,6 +4,7 @@
 .login.login-1 .login-signin,
 .login.login-1 .login-signup,
 .login.login-1 .login-validate,
+.login.login-1 .login-senha,
 .login.login-1 .login-forgot {
   display: none; }
 
@@ -18,6 +19,8 @@
 
 .login.login-1.login-signin-on .login-validate {
     display: none; }
+.login.login-1.login-signin-on .login-senha {
+  display: none; }
 
 .login.login-1.login-signup-on .login-signup {
   display: block; }
@@ -29,7 +32,8 @@
   display: none; }
 .login.login-1.login-signup-on .login-validate {
   display: none; }
-  
+  .login.login-1.login-signup-on .login-senha {
+    display: none; }
 
 .login.login-1.login-forgot-on .login-signup {
   display: none; }
@@ -42,7 +46,8 @@
 
 .login.login-1.login-forgot-on .login-validate {
     display: none; }
-
+    .login.login-1.login-forgot-on .login-senha {
+      display: none; }
 
 .login.login-1.login-validate-on .login-signup {
   display: none; }
@@ -56,7 +61,26 @@
 
 .login.login-1.login-validate-on .login-forgot {
   display: none; }
+.login.login-1.login-validate-on .login-senha {
+    display: none; }
+
+
+
+.login.login-1.login-senha-on .login-signup {
+  display: none; }
+
+.login.login-1.login-senha-on .login-signin {
+  display: none; }
   
+
+.login.login-1.login-senha-on .login-senha {
+  display: block; }
+
+.login.login-1.login-senha-on .login-forgot {
+  display: none; }
+.login.login-1.login-senha-on .login-senha {
+    display: none; }
+    
 
 @media (min-width: 992px) {
   .login.login-1 .login-aside {

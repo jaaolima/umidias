@@ -278,7 +278,7 @@
                 $update = "UPDATE tb_usuario
                                 SET 
                                     ds_senha = :ds_senha
-                            WHERE ds_usuario = :ds_email";
+                            WHERE ds_usuario = :ds_email"; 
 
                 $stmt = $con->prepare($update);
                 $params = array(

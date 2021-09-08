@@ -225,7 +225,7 @@ var KTLogin = function() {
         init: function() {
             _login = $('#kt_login');
 
-            _handleSignInForm();
+            _handleSignInForm(); 
             _handleSignUpForm();
             _handleForgotForm();
 			_handleValidateForm();

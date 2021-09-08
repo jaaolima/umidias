@@ -35,7 +35,7 @@ $(document).ready(function() {
 		{
 			$("#ds_email_resetar").focus();
 			//swal("Erro", "Preencha o Email", "error");
-			alert('preencha o email');
+			alert('preencha o email'); 
 		}
 		else
 		{
@@ -44,21 +44,26 @@ $(document).ready(function() {
 		        , type: 'post'
 		        , data: $("#form_esqueci_senha").serialize()
 		        , success: function(html) {
-		        	/*swal({
-		                position: 'top-right',
-		                type: 'success',
-		                title: html,
-		                showConfirmButton: true
-					});*/
-					alert(html);
-					$('#form_esqueci_senha').trigger("reset");
-					
-					/*var login = $('#m_login');
-					login.removeClass('m-login--forget-password');
-					login.removeClass('m-login--signup');
+		        		
+						$.ajax({
+							url: 'appUsuario/email_alterar_senha.php'
+							, data: $("#form_validate").serialize() 
+							, type: 'post'
+							, success: function(html) {
+								_login = $('#kt_login');
+								_login.removeClass('login-forgot-on');
+								_login.removeClass('login-signin-on');
+								_login.removeClass('login-signup-on');
+								_login.removeClass('login-validate-on');
+								_login.removeClass('login-senha-on');
+				
+								_login.addClass('login-senha-on');
 
-					login.addClass('m-login--signin');
-					mUtil.animateClass(login.find('.m-login__signin')[0], 'flipInX animated');*/
+							}
+							, error: function (data) {
+								swal.fire("Erro", data.responseText, "error"); 
+							}
+						});	
 		            
 		        }
 		        , error: function(xhr, status, error) {
