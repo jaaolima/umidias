@@ -288,8 +288,6 @@
 
                 $stmt->execute($params);
 
-
-                echo "Senha alterada com sucesso!";
 				return $nova_senha;
 
             }
