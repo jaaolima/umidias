@@ -32,7 +32,7 @@ $(document).ready(function(){
 		                showConfirmButton: true
 		            });
 		            
-					redirectTo("appCliente/perfil.php");
+					redirectTo("appUsuario/perfil.php");
 		        }
 				, error: function (data) {
 					swal.fire("Erro", data.responseText, "error");
