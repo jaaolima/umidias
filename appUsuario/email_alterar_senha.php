@@ -35,7 +35,7 @@ $mail->CharSet = 'UTF-8';
 $mail->setFrom("no-reply@ibranutro.com.br", "Unimídias");
 
 // Define o(s) destinatário(s) 
-$mail->AddAddress($email, $nome); 
+$mail->AddAddress($email, $dadosUsuario['ds_nome']); 
 
 // Assunto da mensagem 
 $mail->Subject = "Verificação do Login"; 
