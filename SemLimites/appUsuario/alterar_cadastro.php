@@ -17,7 +17,7 @@ $optionsPerfil = $exercicio->OptionsPerfil($dados["id_perfil"]);
 <div class="card card-custom">
     <div class="card-header">
         <h3 class="card-title">
-            Alterar cadastro do Usuário <?php echo $id_usuario ?>
+            Alterar cadastro
         </h3>
         <div class="card-toolbar">
             <div class="example-tools justify-content-center">
