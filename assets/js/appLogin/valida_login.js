@@ -39,7 +39,7 @@ $(document).ready(function() {
 		}
 		else
 		{
-			email = $("#form_esqueci_senha").serialize()['ds_email_resetar'];
+			email = $("#ds_email_resetar").val();
 			console.log(email);
 			$.ajax({
 		        url: 'appUsuario/gravar_resetar_senha_inicial.php'
