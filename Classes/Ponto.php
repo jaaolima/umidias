@@ -946,13 +946,13 @@
 		public function graficoPontoParceiroFront($id_parceiro)
 		{
 			
-			function AtivadosOutdoor($id_parceiro){	
+			function AtivadosFront($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto
-								where id_midia = 1 and st_status = 'A' and id_parceiro=:id_parceiro";
+								where id_midia = 2 and st_status = 'A' and id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
@@ -968,13 +968,13 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function DesativadosOutdoor($id_parceiro){	
+			function DesativadosFront($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto
-								where id_midia = 1 and st_status = 'D' and id_parceiro=:id_parceiro";
+								where id_midia = 2 and st_status = 'D' and id_parceiro=:id_parceiro";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
