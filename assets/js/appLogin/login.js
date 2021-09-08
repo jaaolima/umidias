@@ -12,6 +12,7 @@ var KTLogin = function() {
         _login.removeClass('login-signin-on');
         _login.removeClass('login-signup-on');
 		_login.removeClass('login-validate-on');
+        _login.removeClass('login-senha-on');
 
         _login.addClass(cls);
 
@@ -189,6 +190,16 @@ var KTLogin = function() {
         });
     }
 
+    var _handleSenhaForm = function(e) {
+
+        // Handle cancel button
+        $('#voltar').on('click', function (e) {
+            e.preventDefault();
+
+            _showForm('signin');
+        });
+    }
+
     var _handleForgotForm = function(e) {
         var validation;
 
@@ -229,6 +240,7 @@ var KTLogin = function() {
             _handleSignUpForm();
             _handleForgotForm();
 			_handleValidateForm();
+            _handleSenhaForm();
         }
     };
 }();
