@@ -5,7 +5,13 @@ $(document).ready(function(){
         $("#editar").removeClass("d-none");
     });
 
-    $("#botao_voltar").on("click", function(){
+    $("#ds_senha").change(function(){
+
+        $("#confirmar").removeClass("d-none");
+        $("#confirmar").addClass("d-flex");
+    })
+
+	$("#botao_voltar").on("click", function(){
 
         $("#editar").addClass("d-none");
         $("#perfil").removeClass("d-none");
@@ -16,7 +22,7 @@ $(document).ready(function(){
 		{ 
 			$.ajax({
 		        url: 'appUsuario/gravar_alterar_usuario.php'
-				, data: $("#form_usuario").serialize()
+				, data: $("#form_usuario").serialize() 
 		        , type: 'post'
 		        , success: function(html) {
 		        	swal.fire({

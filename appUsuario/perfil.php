@@ -242,7 +242,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															<input class="border-0 w-100" type="text " style="height: 27px;" name="ds_senha" id="ds_senha" value="********">
 														</fieldset>                                               
 													</div>
-													<div class=" d-flex col-6" id="confirmar" style="display:none;">
+													<div class="col-6" id="confirmar" style="display:none;">
 														<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">Confirmar senha</legend>
 															<input class="border-0 w-100" type="text " style="height: 27px;" name="ds_senha_confirmada" id="ds_senha_confirmada">
@@ -279,7 +279,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
 		<script src="assets/js/scripts.bundle2.min.js"></script>
-		<script src="assets/js/appCliente/perfil.js"></script>
+		<script src="assets/js/appUsuario/perfil.js"></script>
 		<script src="assets/js/pages/crud/file-upload/dropzonejs.js"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
