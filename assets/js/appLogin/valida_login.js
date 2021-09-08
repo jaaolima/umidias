@@ -41,7 +41,7 @@ $(document).ready(function() {
 		{
 			email = $("#ds_email_resetar").val();
 			$.ajax({
-				url: 'appUsuario/validar_usuario.php'
+				url: 'appUsuario/validar_usuario_existente.php'
 				, data: {email: email}
 				, type: 'post'
 				, success: function(html) {

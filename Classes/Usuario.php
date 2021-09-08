@@ -183,6 +183,38 @@
 			} 
 		}
 
+		public function validarUsuarioExistente($ds_email)
+		{
+		
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "select count(ds_usuario) as ds_usuario from tb_usuario where ds_usuario=:ds_usuario";
+				
+				$stmt = $con->prepare($insert);
+				
+				$params = array( 
+								':ds_usuario' => $ds_email);
+
+				
+				$stmt->execute($params);
+				$dados = $stmt->fetch();
+				if($dados["ds_usuario"] > 0){
+					return true;
+				}else{
+					
+					header('HTTP/1.1 500 Internal Server Error');
+					echo "Não existe esse E-mail cadastrado";
+				}
+				
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+		}
+
 
 		
 
