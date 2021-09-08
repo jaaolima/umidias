@@ -76,42 +76,6 @@ $(document).ready(function() {
 	});
 });
 
-$('#kt_login_signup_submit').on('click', function (e) {
-			
-	e.preventDefault();
-	if (validarUsuario()){
-
-		$.ajax({
-			url: 'appUsuario/validar_usuario.php'
-			, data: $("#form_validate").serialize() 
-			, type: 'post'
-			, success: function(html) {
-				$.ajax({
-					url: 'appUsuario/email_usuario.php'
-					, data: $("#form_validate").serialize() 
-					, type: 'post'
-					, success: function(html) {
-						_login = $('#kt_login');
-						_login.removeClass('login-forgot-on');
-						_login.removeClass('login-signin-on');
-						_login.removeClass('login-signup-on');
-						_login.removeClass('login-validate-on');
-		
-						_login.addClass('login-validate-on');
-					}
-					, error: function (data) {
-						swal.fire("Erro", data.responseText, "error"); 
-					}
-				});	
-			}
-			, error: function (data) {
-				swal.fire("Erro", data.responseText, "error"); 
-			}
-		});	
-		
-	}
-	
-}); 
 
 $('#kt_login_signup_submit').on('click', function (e) {
 			
