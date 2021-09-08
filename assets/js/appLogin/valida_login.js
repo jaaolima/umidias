@@ -48,7 +48,7 @@ $(document).ready(function() {
 		        		
 					$.ajax({
 						url: 'appUsuario/email_alterar_senha.php'
-						, data: {'form': $("#form_esqueci_senha").serialize(), 'senha': data}
+						, data: $("#form_esqueci_senha").serialize() /*{'form': $("#form_esqueci_senha").serialize(), 'senha': data}*/
 						, type: 'post'
 						, success: function(html) {
 							_login = $('#kt_login');
