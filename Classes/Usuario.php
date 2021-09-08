@@ -192,8 +192,7 @@
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array( 
-								':ds_usuario' => $ds_email);
+				$params = array( ':ds_usuario' => $ds_email);
 
 				
 				$stmt->execute($params);
