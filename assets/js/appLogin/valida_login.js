@@ -39,6 +39,7 @@ $(document).ready(function() {
 		}
 		else
 		{
+			form = $("#form_esqueci_senha").serialize();
 			$.ajax({
 		        url: 'appUsuario/gravar_resetar_senha_inicial.php'
 		        , type: 'post'
@@ -48,7 +49,7 @@ $(document).ready(function() {
 		        		
 					$.ajax({
 						url: 'appUsuario/email_alterar_senha.php'
-						, data: $("#form_esqueci_senha").serialize() /*{'form': $("#form_esqueci_senha").serialize(), 'senha': data}*/
+						, data: {'form': form, 'senha': data}
 						, type: 'post'
 						, success: function(html) {
 							_login = $('#kt_login');
