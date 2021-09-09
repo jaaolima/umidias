@@ -231,7 +231,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<div class=" d-flex col-6" >
 														<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">CPF</legend>
-															<input class="border-0 w-100" style="height: 27px;" type="text" value="<?php echo $dadosUsuario['nu_cpf'] ?>">
+															<input class="border-0 w-100" style="height: 27px;" type="text" name="nu_cpf" id="nu_cpf" value="<?php echo $dadosUsuario['nu_cpf'] ?>">
 														</fieldset>                                                 
 													</div>
 													<input class="border-0 w-100" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario ?>">
