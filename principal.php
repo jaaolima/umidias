@@ -107,7 +107,7 @@
 						</div>	
 					</div>	
 					<div class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
-						<span class="symbol-label"><?php echo $dados['ds_nome'][0]; ?></span>
+						<span class="symbol-label"><?php echo $dadosUsuario['ds_nome'][0]; ?></span>
 					</div>			
 					<!-- <span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
 						<img src="assets/media/maria.jpg" class="symbol-label"alt="">
