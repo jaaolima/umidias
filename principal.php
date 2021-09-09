@@ -34,8 +34,6 @@
 	$meusPontos = $ponto->listarMeusPontos($id_usuario);
 	$dadosTotalMidias = $ponto->dadosTotalMidias();
 	$meusPontosAlugadosParceiro = $ponto->listarMeusPontosAlugadosParceiro($id_parceiro);
-
-	$retornoMidias = $ponto->listarPontoProximos();
 	$dadosTotalContratadas = $ponto->dadosTotalContratadas();
 	$dadosTotalPendentes = $ponto->dadosTotalPendentes();
 	$dadosTotalReservadas = $ponto->dadosTotalReservadas();
@@ -770,7 +768,11 @@
 			if('geolocation' in navigator){
 				navigator.geolocation.getCurrentPosition(function(position){
 					latitude = position.coords.latitude;
-					console.log(latitude);
+					longitude = position.coords.longitude;
+
+					<?php 
+						$retornoMidias = $ponto->listarPontoProximos('<script>document.write(latitude)', '<script>document.write(longitude)');
+					?>
 				})
 			}
 
