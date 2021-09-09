@@ -108,16 +108,28 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--begin::Form-->
 								<form class="form" id="form_validate" novalidate="novalidate" id="kt_login_signup_form">
 									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="text" placeholder="Seu nome" name="ds_nome" id="ds_nome" autocomplete="off" />
+										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+											<legend class="legend-border mb-0">Nome</legend>
+											<input class="border-0 w-100" type="text " style="height: 27px;"   placeholder="Seu nome" name="ds_nome" id="ds_nome" autocomplete="off" >
+										</fieldset> 
 									</div>
 									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="email" placeholder="Email" name="ds_email" id="ds_email" autocomplete="off"/>
+										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+											<legend class="legend-border mb-0">Email</legend>
+											<input class="border-0 w-100" type="email" style="height: 27px;" placeholder="Email" name="ds_email" id="ds_email" autocomplete="off">
+										</fieldset> 
 									</div>
 									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Senha" name="nu_senha" id="nu_senha" autocomplete="off"/>
+										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+											<legend class="legend-border mb-0">Senha</legend>
+											<input class="border-0 w-100" type="password" style="height: 27px;" placeholder="Senha" name="nu_senha" id="nu_senha" autocomplete="off">
+										</fieldset> 
 									</div>
 									<div class="form-group">
-										<input class="form-control form-control-solid h-auto py-5 px-6" type="password" placeholder="Confirme a senha" name="nu_senhaconfirmada" id="nu_senhaconfirmada" autocomplete="off" />
+										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+											<legend class="legend-border mb-0">Confirmar senha</legend>
+											<input class="border-0 w-100" type="password" style="height: 27px;"  placeholder="Confirme a senha" name="nu_senhaconfirmada" id="nu_senhaconfirmada" autocomplete="off" >
+										</fieldset> 
 									</div>
 									<div class="form-group">
 										<label class="checkbox mb-0">
