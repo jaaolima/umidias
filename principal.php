@@ -105,10 +105,13 @@
 							<div class="dropdown-divider mx-5"></div>
 							<a class="dropdown-item texto-vermelho" href="appUsuario/logout.php">Sair</a>
 						</div>	
-					</div>										
-					<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
+					</div>	
+					<div class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
+						<span class="symbol-label"><?php echo $dados['ds_nome'][0]; ?></span>
+					</div>			
+					<!-- <span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
 						<img src="assets/media/maria.jpg" class="symbol-label"alt="">
-					</span>		
+					</span>		 -->
 																
 				</div>
 			</div>	
@@ -728,7 +731,7 @@
 							<!--end::Content-->
 						</div>
 						<!--begin::Content Wrapper-->
-					</div>
+					</div> 
 					<!--end::Container-->
 				</div>
 				<!--end::Wrapper-->
