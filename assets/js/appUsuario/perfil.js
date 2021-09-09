@@ -101,14 +101,14 @@ function validar()
 
 	if($("#ds_senha").val() !== "********")
 	{
-		var Tamanhosenha = $("#nu_senha").val().toString();
+		var Tamanhosenha = $("#ds_senha").val().toString();
 		if (Tamanhosenha.length < 8)
 		{
-			$("#nu_senha").focus();
+			$("#ds_senha").focus();
 			swal.fire("Erro", "A senha precisa ter 8 dígitos ou mais", "error");
 			return false;	
 		}
-		
+
 		if($("#ds_senha_confirmada").val() == "")
 		{
 			$("#ds_senha_confirmada").focus();
