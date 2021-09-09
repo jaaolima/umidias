@@ -377,10 +377,10 @@
 				
 				$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, t.ds_tipo,
 							(6371 * acos(
-							cos( radians(-30.053831) )
+							cos( radians(-15.8267546) )
 							* cos( radians( ds_latitude ) )
-							* cos( radians( ds_longitude ) - radians(-51.191810) )
-							+ sin( radians(-30.053831) )
+							* cos( radians( ds_longitude ) - radians(-48.0450407) )
+							+ sin( radians(-15.8267546) )
 							* sin( radians( ds_latitude ) ) 
 							)
 							) AS distancia
