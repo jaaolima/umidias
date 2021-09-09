@@ -486,7 +486,7 @@
 																	<?php
 																		 while($dados = $retornoMidias->fetch()){
 																			echo "<div class='item' >
-																					<div class='card card-custom card-2' style='height: 500px;'>
+																					<div class='card card-custom card-2' style='height: max;'>
 																						<!--begin::Body-->
 																						<div class='card-body text-center' style='padding: 0px !important'>
 																							<!--begin::User-->
