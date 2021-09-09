@@ -77,7 +77,10 @@ License: You must have a valid license purchased only from themeforest(the above
 													<legend class="legend-border mb-0">E-mail</legend>
 													<input class="border-0 w-100" type="text " style="height: 27px;"  name="ds_usuario" id="ds_usuario" autocomplete="off" placeholder="E-mail ou Usuário">
 												</fieldset> 
-												<input class="form-control rectangle_1 my-4" type="password"  name="ds_senha" id="ds_senha"  placeholder="Senha"/>
+												<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+													<legend class="legend-border mb-0">E-mail</legend>
+													<input class="border-0 w-100" style="height: 27px;"  type="password"  name="ds_senha" id="ds_senha"  placeholder="Senha">
+												</fieldset> 
 											</div>
 											<div class="form-group d-flex flex-wrap justify-content-end align-items-center">
 												<a href="javascript:;" class="text-primary my-3 mr-2" id="kt_login_forgot">Esqueceu a senha?</a>
