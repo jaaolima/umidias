@@ -17,6 +17,11 @@ $(document).ready(function(){
         $("#perfil").removeClass("d-none");
     })
 
+	$("#nu_cpf").inputmask({
+		"mask": "999.999.999-99",
+		autoUnmask: true,
+	});
+
     $("#salvar").on("click", function(e){ 
 		if(validar())
 		{ 
