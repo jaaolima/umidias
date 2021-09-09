@@ -507,7 +507,7 @@
 																										<a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$dados['id_midia']."'class='text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_local']."</a>
 																									</div>	
 																								</div>																								
-																								<div class='my-6'>
+																								<div class='my-6' style' text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 2;overflow: hidden;'>
 																									<p class='texto-chumbo font-size-h6'>".$dados['ds_descricao']."</p>
 																								</div>													
 																							</div>
@@ -520,7 +520,7 @@
 																										<path d='M25 34.6001V44.2001' stroke='#333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
 																									</svg>
 																									</div>
-																									<div class='ml-2'>
+																									<div class='ml-2' >
 																										<span class='text-dark font-weight-bold text-dark font-size-h4'>Tipo</span><br>
 																										<p class='texto-chumbo font-size-h6'>".$dados['ds_tipo']."</p>
 																									</div>													
