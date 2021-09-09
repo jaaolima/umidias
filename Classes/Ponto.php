@@ -375,13 +375,23 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, t.ds_tipo
+				$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, t.ds_tipo,
+							(6371 * acos(
+							cos( radians(-30.053831) )
+							* cos( radians( ds_latitude ) )
+							* cos( radians( ds_longitude ) - radians(-51.191810) )
+							+ sin( radians(-30.053831) )
+							* sin( radians( ds_latitude ) ) 
+							)
+							) AS distancia
 							FROM tb_ponto p
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 							where f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
 							and p.id_ponto not in (select id_ponto from rl_alugado where :hoje between dt_inicial and dt_final)
-							limit 10";
+							HAVING distancia < 25
+							ORDER BY distancia ASC
+							LIMIT 5";
 				
 				$stmt = $con->prepare($select); 
 				$params = array(':hoje' => $data);
@@ -918,7 +928,7 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function Desativados($id_parceiro){	
+			function Desativados($id_parceiro){	 
 				try{
 					$con = Conecta::criarConexao();
 					

@@ -769,7 +769,8 @@
 			//localizacao
 			if('geolocation' in navigator){
 				navigator.geolocation.getCurrentPosition(function(position){
-					console.log(position);
+					latitude = position.coords.latitude;
+					console.log(latitude);
 				})
 			}
 

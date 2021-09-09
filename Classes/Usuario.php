@@ -350,7 +350,7 @@
 					$stmt->execute($params);
 	
 					
-					echo "Dados alterados com sucesso!";
+					echo "Dados alterados com sucesso!"; 
 					
 				}
 				catch(exception $e)
