@@ -239,13 +239,13 @@ License: You must have a valid license purchased only from themeforest(the above
 													<div class=" d-flex col-6">
 														<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">Senha</legend>
-															<input class="border-0 w-100" type="text " style="height: 27px;" name="ds_senha" id="ds_senha" value="********">
+															<input class="border-0 w-100" type="password" style="height: 27px;" name="ds_senha" id="ds_senha" value="********">
 														</fieldset>                                               
 													</div>
 													<div class="col-6" id="confirmar" style="display:none;">
 														<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">Confirmar senha</legend>
-															<input class="border-0 w-100" type="text " style="height: 27px;" name="ds_senha_confirmada" id="ds_senha_confirmada">
+															<input class="border-0 w-100" type="password" style="height: 27px;" name="ds_senha_confirmada" id="ds_senha_confirmada">
 														</fieldset>                                               
 													</div>
 												</div>	
