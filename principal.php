@@ -34,8 +34,8 @@
 	$meusPontos = $ponto->listarMeusPontos($id_usuario);
 	$dadosTotalMidias = $ponto->dadosTotalMidias();
 	$meusPontosAlugadosParceiro = $ponto->listarMeusPontosAlugadosParceiro($id_parceiro);
-	$latitude = '<script>document.write(latitude)</script>';
-	$longitude = '<script>document.write(longitude)</script>';
+	$latitude = '<script>document.write(this.latitude)</script>';
+	$longitude = '<script>document.write(this.longitude)</script>';
 	$retornoMidias = $ponto->listarPontoProximos($latitude, $longitude);
 	$dadosTotalContratadas = $ponto->dadosTotalContratadas();
 	$dadosTotalPendentes = $ponto->dadosTotalPendentes();
