@@ -369,7 +369,7 @@
 			
 		
 		}
-		public function listarPontoProximos()  
+		public function listarPontoProximos($latitude, $longitude)  
 		{
 			$data = date('Y-m-d');
 			try{
