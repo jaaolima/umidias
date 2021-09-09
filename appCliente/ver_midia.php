@@ -78,7 +78,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="d-flex flex-column flex-row-fluid wrapper " id="kt_wrapper">
 					<div class="form-group row"> 
 						<div class="form-group col-md-12 position-relative">
-							<div id="map" class="rounded"></div>
+							<div id="map" class="rounded"></div> 
 							<div id="carrossel"  class="carousel slide d-none"  data-ride="carousel"  >
 								<div class="carousel-inner">
 									<?php
