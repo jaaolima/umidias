@@ -137,7 +137,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <span class="texto-chumbo">CPF</span>
                                                 </div>                                                
                                                 <div class="col-6">
-                                                    <span class="texto-negrito">00000000000</span>
+                                                    <span class="texto-negrito"><?php echo $dadosUsuario['nu_cpf'] ?></span>
                                                 </div>
                                             </div>
                                             <div class="separator separator-solid"></div>
@@ -231,7 +231,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<div class=" d-flex col-6" >
 														<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">CPF</legend>
-															<input class="border-0 w-100" style="height: 27px;" type="text">
+															<input class="border-0 w-100" style="height: 27px;" type="text" value="<?php echo $dadosUsuario['nu_cpf'] ?>">
 														</fieldset>                                                 
 													</div>
 													<input class="border-0 w-100" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario ?>">

@@ -226,7 +226,7 @@
 				
 				
 				$select = "SELECT 
-							id_usuario, ds_nome, ds_email, ds_usuario, id_perfil
+							id_usuario, ds_nome, ds_email, ds_usuario, id_perfil, nu_cpf
 						FROM tb_usuario  
 						WHERE id_usuario = :id_usuario";
 
@@ -307,19 +307,21 @@
 
 			$ds_nome		= $dados['ds_nome'];
 			$ds_email    	= $dados['ds_email'];
+			$nu_cpf    		= $dados['nu_cpf'];
 			$id_usuario    	= $dados['id_usuario'];
 			if($dados['ds_senha'] !== "********"){
 				$ds_senha    	= hash("SHA512", $dados['ds_senha']);
 
 				try{
 					$con = Conecta::criarConexao();
-					$update = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email, ds_senha = :ds_senha
+					$update = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email, nu_cpf = :nu_cpf , ds_senha = :ds_senha
 							WHERE id_usuario = :id_usuario";
 					
 					$stmt = $con->prepare($update);
 					
 					$params = array(':ds_nome' => $ds_nome, 
 									':ds_email' => $ds_email,
+									':nu_cpf' => $nu_cpf,
 									':ds_senha' => $ds_senha,
 									':id_usuario'=>$id_usuario);
 					$stmt->execute($params);
