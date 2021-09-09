@@ -78,7 +78,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<input class="border-0 w-100" type="text " style="height: 27px;"  name="ds_usuario" id="ds_usuario" autocomplete="off" placeholder="E-mail ou Usuário">
 												</fieldset> 
 												<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
-													<legend class="legend-border mb-0">E-mail</legend>
+													<legend class="legend-border mb-0">Senha</legend>
 													<input class="border-0 w-100" style="height: 27px;"  type="password"  name="ds_senha" id="ds_senha"  placeholder="Senha">
 												</fieldset> 
 											</div>
