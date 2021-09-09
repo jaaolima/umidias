@@ -371,6 +371,7 @@
 		}
 		public function listarPontoProximos($latitude, $longitude)  
 		{
+			echo $longitude;
 			$data = date('Y-m-d');
 			try{
 				$con = Conecta::criarConexao();
