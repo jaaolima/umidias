@@ -23,6 +23,7 @@ $(document).ready(function(){
 	});
 
     $("#salvar").on("click", function(e){ 
+		var cpf = $("#nu_cpf").val();
 		if(validar() && validarCPF(cpf))
 		{ 
 			$.ajax({
