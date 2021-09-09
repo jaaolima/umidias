@@ -483,6 +483,8 @@
 																	<h3  class="titulo-div">Mídias próximas à Você</h3>
 																</div>
 																<div class="row col-12 mt-4 owl-carousel owl-theme" >
+																	<button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>
+																	<button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
 																	<?php
 																		 while($dados = $retornoMidias->fetch()){
 																			echo "<div class='item' >
@@ -777,7 +779,6 @@
 			$(document).ready(function(){
 				$(".owl-carousel").owlCarousel({
 					items:4,
-					nav:true,
 					center:true,
 					loop:true,
 					dots:false,
