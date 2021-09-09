@@ -181,7 +181,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="form-group">
 										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 											<legend class="legend-border mb-0">Email</legend>
-											<input class="border-0 w-100" type="password" style="height: 27px;"  name="ds_email_resetar" id="ds_email_resetar" autocomplete="off"  >
+											<input class="border-0 w-100" type="email" style="height: 27px;"  name="ds_email_resetar" id="ds_email_resetar" autocomplete="off"  >
 										</fieldset> 
 									</div>
 									<div class="form-group flex-wrap flex-center text-center">
