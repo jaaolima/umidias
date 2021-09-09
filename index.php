@@ -75,11 +75,11 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="form-group" >
 												<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 													<legend class="legend-border mb-0">E-mail</legend>
-													<input class="border-0 w-100" type="text " style="height: 27px;"  name="ds_usuario" id="ds_usuario" autocomplete="off" placeholder="E-mail ou Usuário">
+													<input class="border-0 w-100" type="text " style="height: 27px;"  name="ds_usuario" id="ds_usuario" autocomplete="off">
 												</fieldset> 
 												<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 													<legend class="legend-border mb-0">Senha</legend>
-													<input class="border-0 w-100" style="height: 27px;"  type="password"  name="ds_senha" id="ds_senha"  placeholder="Senha">
+													<input class="border-0 w-100" style="height: 27px;"  type="password"  name="ds_senha" id="ds_senha" >
 												</fieldset> 
 											</div>
 											<div class="form-group d-flex flex-wrap justify-content-end align-items-center">
@@ -110,25 +110,25 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="form-group">
 										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 											<legend class="legend-border mb-0">Nome</legend>
-											<input class="border-0 w-100" type="text " style="height: 27px;"   placeholder="Seu nome" name="ds_nome" id="ds_nome" autocomplete="off" >
+											<input class="border-0 w-100" type="text " style="height: 27px;" name="ds_nome" id="ds_nome" autocomplete="off" >
 										</fieldset> 
 									</div>
 									<div class="form-group">
 										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 											<legend class="legend-border mb-0">Email</legend>
-											<input class="border-0 w-100" type="email" style="height: 27px;" placeholder="Email" name="ds_email" id="ds_email" autocomplete="off">
+											<input class="border-0 w-100" type="email" style="height: 27px;" name="ds_email" id="ds_email" autocomplete="off">
 										</fieldset> 
 									</div>
 									<div class="form-group">
 										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 											<legend class="legend-border mb-0">Senha</legend>
-											<input class="border-0 w-100" type="password" style="height: 27px;" placeholder="Senha" name="nu_senha" id="nu_senha" autocomplete="off">
+											<input class="border-0 w-100" type="password" style="height: 27px;" name="nu_senha" id="nu_senha" autocomplete="off">
 										</fieldset> 
 									</div>
 									<div class="form-group">
 										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 											<legend class="legend-border mb-0">Confirmar senha</legend>
-											<input class="border-0 w-100" type="password" style="height: 27px;"  placeholder="Confirme a senha" name="nu_senhaconfirmada" id="nu_senhaconfirmada" autocomplete="off" >
+											<input class="border-0 w-100" type="password" style="height: 27px;"  name="nu_senhaconfirmada" id="nu_senhaconfirmada" autocomplete="off" >
 										</fieldset> 
 									</div>
 									<div class="form-group">
@@ -179,7 +179,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--begin::Form-->
 								<form class="form_esqueci_senha" novalidate="novalidate" id="form_esqueci_senha">
 									<div class="form-group">
-										<input class="form-control rectangle_1 my-4" type="email" placeholder="Insira aqui seu e-mail ou usuário" name="ds_email_resetar" id="ds_email_resetar" autocomplete="off" />
+										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+											<legend class="legend-border mb-0">Email</legend>
+											<input class="border-0 w-100" type="password" style="height: 27px;"  name="ds_email_resetar" id="ds_email_resetar" autocomplete="off"  >
+										</fieldset> 
 									</div>
 									<div class="form-group flex-wrap flex-center text-center">
 										<div>
