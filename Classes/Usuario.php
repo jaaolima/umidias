@@ -351,7 +351,6 @@
 	
 					
 					echo "Dados alterados com sucesso!";
-					echo "senha não gravada";
 					
 				}
 				catch(exception $e)
