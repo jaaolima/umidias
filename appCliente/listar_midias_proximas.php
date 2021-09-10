@@ -67,26 +67,3 @@ echo "<div class='item' >
     </div> ";
 }																	
 ?>
-<script src="../assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
-<script>
-    //carousel
-    $(".owl-carousel").owlCarousel({
-        items:4,
-        center:true,
-        loop:true,
-        dots:false,
-        margin:30,
-        // responsive: {
-        // 	0:{
-        // 		items:1
-        // 	},
-        // 	360:{
-        // 		items:3
-        // 	},
-        // 	2000:{
-        // 		items:4
-        // 	}
-        // }
-
-    });
-</script>

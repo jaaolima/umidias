@@ -898,7 +898,7 @@
 			});
 
 		</script>
-		<!-- <script src="../assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
+		<script src="../assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
 		<script>
 			//carousel
 			$(".owl-carousel").owlCarousel({
@@ -919,7 +919,7 @@
 				// 	}
 				// }
 
-			}); -->
+			});
 		</script>
 		
 
