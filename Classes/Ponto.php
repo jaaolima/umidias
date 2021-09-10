@@ -187,7 +187,7 @@
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 								where p.id_midia=:id_midia 
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
-								and p.id_ponto not in (select id_ponto from rl_alugado where ':dt_inicial' between dt_inicial and dt_final)";
+								and p.id_ponto not in (select id_ponto,if(min(dt_final) >= CURDATE(), min(dt_inicial), (select min(dt_inicial) from tb_alugado al where dt_final >= CURDATE() and al.id_ponto=p.id_ponto )) as dt_inicial, if(min(dt_final) >= CURDATE(), min(dt_final), (select min(dt_final) from tb_alugado al where dt_final >= CURDATE() and al.id_ponto=p.id_ponto )) as dt_final from rl_alugado where ':dt_inicial' between dt_inicial and dt_final)";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia,
@@ -396,7 +396,7 @@
 				$stmt = $con->prepare($select); 
 				$params = array(':hoje' => $data,
 								':latitude' => $latitude,
-								':longitude' => $longitude);
+								':longitude' => $longitude); 
 				$stmt->execute($params);
 
 				return $stmt;

@@ -722,7 +722,7 @@
 							swal.fire("Erro", data.responseText, "error");
 						}
 					});	
-				})
+				}) 
 			}
 
 
