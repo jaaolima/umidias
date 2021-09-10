@@ -31,10 +31,10 @@ echo "<div class='item' >
                             </svg>
                         </div>
                         <div class='ml-2'>
-                            <a style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;' href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$dados['id_midia']."'class='text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_local']."</a>
+                            <a style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;' href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$dados['id_midia']."'class='text-dark font-weight-bold text-dark font-size-h4 m-0'>".$dados['ds_local']."</a>
                         </div>	
                     </div>																								
-                    <div class='my-3' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 2;overflow: hidden;'>
+                    <div class='my-3' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>
                         <p class='texto-chumbo font-size-h6 m-0'>".$dados['ds_descricao']."</p>
                     </div>													
                 </div>
