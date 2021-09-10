@@ -50,7 +50,7 @@ $(document).ready(function() {
             , type: 'post'
             , success: function(html) {
                 $("#lista").html(html);
-                $("#lista").slideDown(); 
+                $("#lista").slideDown();  
             }
             , error: function (data) {
                 $("#lista").slideUp();
