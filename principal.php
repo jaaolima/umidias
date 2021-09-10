@@ -484,7 +484,7 @@
 																</div>
 																<div class="row col-12 mt-4 " id="midias_proximas"></div>
 																<div class="row col-12 mt-4 justify-content-center text-center" id="aceitar_localizacao" style="display:none;">
-																	<p>Precisamos da sua localização para procurar</p>	
+																	<p>Precisamos da sua localização para procurar</p><br>	
 																	<button class="btn btn-primary">Aceitar</button>
 																</div>
 															</div>
@@ -714,6 +714,7 @@
 					latitude = position.coords.latitude;
 					longitude = position.coords.longitude;
 
+
 					$.ajax({
 						url: 'appCliente/listar_midias_proximas.php'
 						, data: {latitude, longitude}
@@ -730,7 +731,7 @@
 				}) 
 			}
 			else{
-				$('#aceitar_localizacao').show();
+				alert("I'm sorry, but geolocation services are not supported by your browser.");
 			}
 
 

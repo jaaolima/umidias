@@ -30,8 +30,8 @@ echo "<div class='item' >
                                 <path d='M12.3636 12.8183C13.7192 12.8183 14.8181 11.7193 14.8181 10.3637C14.8181 9.00812 13.7192 7.90918 12.3636 7.90918C11.008 7.90918 9.90906 9.00812 9.90906 10.3637C9.90906 11.7193 11.008 12.8183 12.3636 12.8183Z' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
                             </svg>
                         </div>
-                        <div class='ml-2'>
-                            <a title='".$dados['ds_local']."' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;' href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$dados['id_midia']."'class='text-dark font-weight-bold text-dark font-size-h4 m-0'>".$dados['ds_local']."</a>
+                        <div class='ml-2' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'> 
+                            <a title='".$dados['ds_local']."'  href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$dados['id_midia']."'class='text-dark font-weight-bold text-dark font-size-h4 m-0'>".$dados['ds_local']."</a>
                         </div>	
                     </div>																								
                     <div class='my-3' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>
