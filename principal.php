@@ -482,8 +482,7 @@
 																<div class="flex-grow-1" style="display: inherit;">
 																	<h3  class="titulo-div">Mídias próximas à Você</h3>
 																</div>
-																<div class="row col-12 mt-4 owl-carousel owl-theme" id="midias_proximas">
-																</div>
+																<div class="row col-12 mt-4 " id="midias_proximas"></div>
 															</div>
 														</div>
 													</div>
@@ -726,27 +725,6 @@
 				})
 			}
 
-			 //carousel
-			 $(".owl-carousel").owlCarousel({
-				items:4,
-				center:true,
-				loop:true,
-				dots:false,
-				margin:30,
-				// responsive: {
-				// 	0:{
-				// 		items:1
-				// 	},
-				// 	360:{
-				// 		items:3
-				// 	},
-				// 	2000:{
-				// 		items:4
-				// 	}
-				// }
-
-			});
-			
 
 			const primary = '#6993FF';
 			const success = '#1BC5BD';

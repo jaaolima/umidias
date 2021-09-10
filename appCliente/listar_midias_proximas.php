@@ -8,6 +8,9 @@ require_once("../Classes/Ponto.php");
 $ponto = new Ponto();
 
 $retornoMidias = $ponto->listarPontoProximos($_REQUEST['latitude'], $_REQUEST['longitude']);
+?>
+<div class="owl-carousel owl-theme" >
+<?php
 while($dados = $retornoMidias->fetch()){
 echo "<div class='item' >
         <div class='card card-custom card-2'>
@@ -67,4 +70,31 @@ echo "<div class='item' >
     </div> ";
 }																	
 ?>
+</div>
+<script>
+    $(document).ready(function(){
+        //carousel
+        $(".owl-carousel").owlCarousel({
+            items:4,
+            center:true,
+            loop:true,
+            dots:false,
+            margin:30,
+            // responsive: {
+            // 	0:{
+            // 		items:1
+            // 	},
+            // 	360:{
+            // 		items:3
+            // 	},
+            // 	2000:{
+            // 		items:4
+            // 	}
+            // }
+
+        });
+    })
+    
+</script>
+
 <script src="../assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
