@@ -4,9 +4,9 @@ $(document).ready(function() {
             onSelect: function(dateText, inst) { 
                var dateAsString = dateText; //the first parameter of this function
                var dateAsObject = $(this).datepicker( 'getDate' ); //the getDate method
+               console.log(dateAsString, dateAsObject)
             }
          });
-        console.log(dateAsString, dateAsObject)
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php' 
