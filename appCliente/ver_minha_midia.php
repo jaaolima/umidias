@@ -6,8 +6,8 @@
 	session_start();
 	require_once("../Classes/Ponto.php");
 
-	$id_ponto = $_GET["id_ponto"]; 
-	$id_alugado = $_GET["id_alugado"]; 
+	$id_ponto = $_REQUEST["id_ponto"]; 
+	$id_alugado = $_REQUEST["id_alugado"]; 
 	
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPontoAlugado($id_alugado);
@@ -35,7 +35,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<title>List Option - 2 | Keenthemes</title>
 		<meta name="description" content="List option - 2 example" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<link rel="canonical" href="https://keenthemes.com/metronic" />
+		<link rel="canonical" href="https://keenthemes.com/metronic" /> 
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
