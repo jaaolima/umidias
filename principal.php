@@ -483,6 +483,10 @@
 																	<h3  class="titulo-div">Mídias próximas à Você</h3>
 																</div>
 																<div class="row col-12 mt-4 " id="midias_proximas"></div>
+																<div class="row col-12 mt-4 justify-content-center text-center" id="aceitar_localizacao" style="display:none;">
+																	<p>Precisamos da sua localização para procurar</p>	
+																	<button class="btn btn-primary">Aceitar</button>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -717,12 +721,16 @@
 						, success: function(html) {
 							$("#midias_proximas").html(html);
 							$("#midias_proximas").slideDown(); 
+							$('#aceitar_localizacao').hide();
 						}
 						, error: function (data) {
 							swal.fire("Erro", data.responseText, "error");
 						}
 					});	
 				}) 
+			}
+			else{
+				$('#aceitar_localizacao').show();
 			}
 
 
