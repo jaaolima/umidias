@@ -377,10 +377,10 @@
 				
 				$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, t.ds_tipo,
 							(6371 * acos(
-							cos( radians(-15.8267546) )
+							cos( radians(:latitude) )
 							* cos( radians( ds_latitude ) )
-							* cos( radians( ds_longitude ) - radians(-48.0450407) )
-							+ sin( radians(-15.8267546) )
+							* cos( radians( ds_longitude ) - radians(:longitude) )
+							+ sin( radians(:latitude) )
 							* sin( radians( ds_latitude ) ) 
 							)
 							) AS distancia
@@ -394,7 +394,9 @@
 							LIMIT 5";
 				
 				$stmt = $con->prepare($select); 
-				$params = array(':hoje' => $data);
+				$params = array(':hoje' => $data,
+								':latitude' => $latitude,
+								':longitude' => $longitude);
 				$stmt->execute($params);
 
 				return $stmt;
