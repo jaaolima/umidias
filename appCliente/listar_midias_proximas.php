@@ -74,26 +74,24 @@ $retornoMidias = $ponto->listarPontoProximos($_REQUEST['latitude'], $_REQUEST['l
 </div>
 <script src="assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
 <script>
-    $(document).ready(function(){
-        //carousel
-        $(".owl-carousel").owlCarousel({
-            items:4,
-            center:true,
-            loop:true,
-            dots:false,
-            margin:30,
-            // responsive: {
-            // 	0:{
-            // 		items:1
-            // 	},
-            // 	360:{
-            // 		items:3
-            // 	},
-            // 	2000:{
-            // 		items:4
-            // 	}
-            // }
+    //carousel
+    $(".owl-carousel").owlCarousel({
+        items:4,
+        center:true,
+        loop:true,
+        dots:false,
+        margin:30,
+        // responsive: {
+        // 	0:{
+        // 		items:1
+        // 	},
+        // 	360:{
+        // 		items:3
+        // 	},
+        // 	2000:{
+        // 		items:4
+        // 	}
+        // }
 
-        });
     });
 </script>
