@@ -35,7 +35,7 @@ echo "<div class='item' >
                         </div>	
                     </div>																								
                     <div class='my-3' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>
-                        <p class='texto-chumbo font-size-h6'>".$dados['ds_descricao']."</p>
+                        <p class='texto-chumbo font-size-h6 m-0'>".$dados['ds_descricao']."</p>
                     </div>													
                 </div>
                 <div class='my-4 mx-15 text-left'>
