@@ -67,7 +67,6 @@ echo "<div class='item' >
     </div> ";
 }																	
 ?>
-</div>
 <script src="../assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
 <script>
     //carousel
