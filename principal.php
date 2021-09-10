@@ -708,8 +708,12 @@
 		<!-- <script src="assets/js/scripts.bundle2.min.js"></script> -->
 		<script>
 			
-			//carousel
-			$(".owl-carousel").owlCarousel({
+			
+
+			
+			$(document).ready(function(){
+				//carousel
+				$(".owl-carousel").owlCarousel({
 					items:4,
 					center:true,
 					loop:true,
@@ -729,8 +733,6 @@
 
 				});
 
-			
-			$(document).ready(function(){
 				//localizacao
 				if('geolocation' in navigator){
 					navigator.geolocation.getCurrentPosition(function(position){
