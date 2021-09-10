@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	$("#aplicar").on("click", function(e){ 
-        $("#datepicker").datepicker({
-            onSelect: function(dateText, inst) { 
-               var dateAsString = dateText; //the first parameter of this function
-               var dateAsObject = $(this).datepicker( 'getDate' ); //the getDate method
-               console.log(dateAsString, dateAsObject)
-            }
-         });
+        var jsDate = $('#calendario').datepicker('getDate');
+        if (jsDate !== null) { // if any date selected in datepicker
+            jsDate instanceof Date; // -> true
+            jsDate.getDate();
+            jsDate.getMonth();
+            jsDate.getFullYear();
+        }
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php' 
