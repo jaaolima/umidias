@@ -744,14 +744,14 @@
 					const apexChart = "#grafico_midia";
 					var options = {
 						series: [{
-							name: 'Contratadas',
+							name: 'Livres',
 							data: [<?php echo $dadosTotalContratadas[0]["id_ponto"]; ?>,<?php echo $dadosTotalContratadas[1]["id_ponto"]; ?>, <?php echo $dadosTotalContratadas[2]["id_ponto"]; ?>]
 						}, {
 							name: 'Pendentes',
 							data: [<?php echo $dadosTotalPendentes[0]["id_ponto"]; ?>,<?php echo $dadosTotalPendentes[1]["id_ponto"]; ?>, <?php echo $dadosTotalPendentes[2]["id_ponto"]; ?>]
 						},
 						{
-							name: 'Reservadas',
+							name: 'Ativos',
 							data: [<?php echo $dadosTotalReservadas[0]["id_ponto"]; ?>,<?php echo $dadosTotalReservadas[1]["id_ponto"]; ?>, <?php echo $dadosTotalReservadas[2]["id_ponto"]; ?>]
 						}],
 						chart: {
