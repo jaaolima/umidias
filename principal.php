@@ -482,7 +482,8 @@
 																<div class="flex-grow-1" style="display: inherit;">
 																	<h3  class="titulo-div">Mídias próximas à Você</h3>
 																</div>
-																<div id="midias_proximas"></div>
+																<div class="row col-12 mt-4 owl-carousel owl-theme" id="midias_proximas">
+																</div>
 															</div>
 														</div>
 													</div>
