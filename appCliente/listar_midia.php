@@ -29,7 +29,7 @@
                 <!--begin::Column-->
                 <?php 
                     while($dados = $retorno->fetch()){
-                        echo "<div class='col-4' >
+                        echo "<div class='col-4 mb-8' >
                                 <div class='card card-custom'>
                                     <!--begin::Body-->
                                     <div class='card-body text-center' style='padding: 0px !important'>
