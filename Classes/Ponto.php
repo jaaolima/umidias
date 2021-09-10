@@ -178,33 +178,33 @@
 			$id_busca = $dados["id_busca"];
 			if($id_busca === "data"){
 				$dt_inicial = $dados["date"];
-				echo $dt_inicial;
-				try{
-					$con = Conecta::criarConexao();
+				var_dump($dt_inicial);
+				// try{
+				// 	$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, p.st_status, ds_observacao, ds_local, (select min(ds_foto) from rl_ponto_foto f where p.id_ponto=f.id_ponto) as ds_foto, t.ds_tipo, ds_latitude, ds_longitude
-					FROM tb_ponto p
-					inner join tb_tipo_midia t on p.id_midia=t.id_midia
-					right join rl_ponto_foto f on p.id_ponto=f.id_ponto
-					where p.id_midia=:id_midia
-					and p.id_ponto not in (select al.id_ponto from rl_alugado al 
-					where al.id_ponto=p.id_ponto and al.dt_final >= :dt_inicial and :dt_inicial between al.dt_final and al.dt_inicial)";
+				// 	$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, p.st_status, ds_observacao, ds_local, (select min(ds_foto) from rl_ponto_foto f where p.id_ponto=f.id_ponto) as ds_foto, t.ds_tipo, ds_latitude, ds_longitude
+				// 	FROM tb_ponto p
+				// 	inner join tb_tipo_midia t on p.id_midia=t.id_midia
+				// 	right join rl_ponto_foto f on p.id_ponto=f.id_ponto
+				// 	where p.id_midia=:id_midia
+				// 	and p.id_ponto not in (select al.id_ponto from rl_alugado al 
+				// 	where al.id_ponto=p.id_ponto and al.dt_final >= :dt_inicial and :dt_inicial between al.dt_final and al.dt_inicial)";
 					
-					$stmt = $con->prepare($select); 
-					$params = array(':id_midia' => $id_midia,
-									':dt_inicial' => $dt_inicial);
+				// 	$stmt = $con->prepare($select); 
+				// 	$params = array(':id_midia' => $id_midia,
+				// 					':dt_inicial' => $dt_inicial);
 					
-					$stmt->execute($params);
+				// 	$stmt->execute($params);
 	
-					return $stmt;
+				// 	return $stmt;
 					
 						
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
-				}
+				// }
+				// catch(exception $e)
+				// {
+				// 	header('HTTP/1.1 500 Internal Server Error');
+				// 	print "ERRO:".$e->getMessage();		
+				// }
 			}
 			if($id_busca === "bisemana"){
 				$bisemana = $dados["bisemana"];
