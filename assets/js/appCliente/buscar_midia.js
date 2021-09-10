@@ -7,6 +7,7 @@ $(document).ready(function() {
             jsDate.getMonth();
             jsDate.getFullYear();
         }
+        console.log(jsDate);
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php' 
