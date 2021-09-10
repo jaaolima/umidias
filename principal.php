@@ -707,29 +707,32 @@
 		<script src="assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
 		<!-- <script src="assets/js/scripts.bundle2.min.js"></script> -->
 		<script>
-			//localizacao
-			if('geolocation' in navigator){
-				navigator.geolocation.getCurrentPosition(function(position){
-					latitude = position.coords.latitude;
-					longitude = position.coords.longitude;
+			
+			
 
-					$.ajax({
-						url: 'appCliente/listar_midias_proximas.php'
-						, data: {latitude, longitude}
-						, type: 'post'
-						, success: function(html) {
-							$("#midias_proximas").html(html);
-                			$("#midias_proximas").slideDown(); 
-						}
-						, error: function (data) {
-							swal.fire("Erro", data.responseText, "error");
-						}
-					});	
-				})
-			}
-
-			//carousel
+			
 			$(document).ready(function(){
+				//localizacao
+				if('geolocation' in navigator){
+					navigator.geolocation.getCurrentPosition(function(position){
+						latitude = position.coords.latitude;
+						longitude = position.coords.longitude;
+
+						$.ajax({
+							url: 'appCliente/listar_midias_proximas.php'
+							, data: {latitude, longitude}
+							, type: 'post'
+							, success: function(html) {
+								$("#midias_proximas").html(html);
+								$("#midias_proximas").slideDown(); 
+							}
+							, error: function (data) {
+								swal.fire("Erro", data.responseText, "error");
+							}
+						});	
+					})
+				}
+				//carousel
 				$(".owl-carousel").owlCarousel({
 					items:4,
 					center:true,
