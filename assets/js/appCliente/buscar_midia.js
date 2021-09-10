@@ -1,13 +1,7 @@
 $(document).ready(function() {
 	$("#aplicar").on("click", function(e){ 
-        var jsDate = $('#calendario').datepicker('getDate');
-        if (jsDate !== null) { // if any date selected in datepicker
-            jsDate instanceof Date; // -> true
-            jsDate.getDate();
-            jsDate.getMonth();
-            jsDate.getFullYear();
-        }
-        console.log(jsDate);
+        var date = $("#date").dtpicker({ dateFormat: 'dd,MM,yyyy' }).val()
+        console.log(date);
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php' 
