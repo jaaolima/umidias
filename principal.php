@@ -482,30 +482,7 @@
 																<div class="flex-grow-1" style="display: inherit;">
 																	<h3  class="titulo-div">Mídias próximas à Você</h3>
 																</div>
-																<div class="row col-12 mt-4 owl-carousel owl-theme" id="midias_proximas">
-																	<script>
-																		//localizacao
-																		if('geolocation' in navigator){
-																			navigator.geolocation.getCurrentPosition(function(position){
-																				latitude = position.coords.latitude;
-																				longitude = position.coords.longitude;
-
-																				$.ajax({
-																					url: 'appCliente/listar_midias_proximas.php'
-																					, data: {latitude, longitude}
-																					, type: 'post'
-																					, success: function(html) {
-																						$("#midias_proximas").html(html);
-																						$("#midias_proximas").slideDown(); 
-																					}
-																					, error: function (data) {
-																						swal.fire("Erro", data.responseText, "error");
-																					}
-																				});	
-																			})
-																		}
-																	</script>
-																</div>
+																<div id="midias_proximas"></div>
 															</div>
 														</div>
 													</div>
@@ -725,32 +702,29 @@
 		<script src="assets/js/custom.js"></script>
 		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM&callback=initialize"></script>
 		<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
-		<script src="assets\plugins\owlCarousel\dist\owl.carousel.min.js"></script>
+
 		<!-- <script src="assets/js/scripts.bundle2.min.js"></script> -->
 		<script>
-			
-			$(document).ready(function(){
-				//carousel
-				$(".owl-carousel").owlCarousel({
-					items:4,
-					center:true,
-					loop:true,
-					dots:false,
-					margin:30,
-					// responsive: {
-					// 	0:{
-					// 		items:1
-					// 	},
-					// 	360:{
-					// 		items:3
-					// 	},
-					// 	2000:{
-					// 		items:4
-					// 	}
-					// }
+			if('geolocation' in navigator){
+				navigator.geolocation.getCurrentPosition(function(position){
+					latitude = position.coords.latitude;
+					longitude = position.coords.longitude;
 
-				});
-			});
+					$.ajax({
+						url: 'appCliente/listar_midias_proximas.php'
+						, data: {latitude, longitude}
+						, type: 'post'
+						, success: function(html) {
+							$("#midias_proximas").html(html);
+							$("#midias_proximas").slideDown(); 
+						}
+						, error: function (data) {
+							swal.fire("Erro", data.responseText, "error");
+						}
+					});	
+				})
+			}
+			
 
 			const primary = '#6993FF';
 			const success = '#1BC5BD';
