@@ -29,7 +29,7 @@
                         while($retornoTotal->fetch()){
                             $total++;
                         } 
-                        echo $total;
+                        echo $total . ' resultados';
                     ?>
                 </p> 
             </div>
