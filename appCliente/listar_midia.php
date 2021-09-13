@@ -23,7 +23,12 @@
         <div class="content flex-column-fluid" id="kt_content"> 
             <div class="mb-8">
                 <h1 class="h1-titulo">Encontre seu outdoor</h1>
-                <p class="texto-fraco"><?php echo count($retornoTotal->fetch()); ?></p> 
+                <p class="texto-fraco">
+                    <?php 
+                        $dadosTotal = $retornoTotal->fetch();
+                        echo count($dadosTotal['id_ponto']); 
+                    ?>
+                </p> 
             </div>
             <!--begin::Row-->
             <div class="row">
