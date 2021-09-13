@@ -26,7 +26,7 @@
                 <p class="texto-fraco">
                     <?php 
                         $dadosTotal = $retornoTotal->fetch();
-                        echo count($dadosTotal['id_ponto']); 
+                        echo count($dadosTotal); 
                     ?>
                 </p> 
             </div>
