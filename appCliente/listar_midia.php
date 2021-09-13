@@ -6,6 +6,7 @@
 	require_once("../Classes/Ponto.php");
 	$ponto = new Ponto();
 	$retorno = $ponto->listarPonto($_REQUEST);
+    $retornoTotal = $ponto->listarPonto($_REQUEST);
     $id_midia = $_REQUEST["id_midia"];  
 	
 ?>
@@ -22,7 +23,7 @@
         <div class="content flex-column-fluid" id="kt_content"> 
             <div class="mb-8">
                 <h1 class="h1-titulo">Encontre seu outdoor</h1>
-                <p class="texto-fraco"><?php echo count($retorno->fetch()); ?></p> 
+                <p class="texto-fraco"><?php echo count($retornoTotal->fetch()); ?></p> 
             </div>
             <!--begin::Row-->
             <div class="row">
