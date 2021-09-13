@@ -25,9 +25,11 @@
                 <h1 class="h1-titulo">Encontre seu outdoor</h1>
                 <p class="texto-fraco">
                     <?php 
-                        $dadosTotal = $retornoTotal->fetch();
-                        var_dump($dadosTotal);
-                        // echo count($dadosTotal); 
+                        $total = 0;
+                        while($retornoTotal->fetch()){
+                            $total++;
+                        } 
+                        echo $total;
                     ?>
                 </p> 
             </div>
