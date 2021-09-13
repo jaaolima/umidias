@@ -26,7 +26,7 @@
                 <p class="texto-fraco">
                     <?php 
                         $dadosTotal = $retornoTotal->fetch();
-                        echo $dadosTotal;
+                        var_dump($dadosTotal);
                         // echo count($dadosTotal); 
                     ?>
                 </p> 
