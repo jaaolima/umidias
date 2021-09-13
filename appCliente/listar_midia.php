@@ -22,7 +22,7 @@
         <div class="content flex-column-fluid" id="kt_content"> 
             <div class="mb-8">
                 <h1 class="h1-titulo">Encontre seu outdoor</h1>
-                <p class="texto-fraco">6 resultados</p> 
+                <p class="texto-fraco"><?php echo count($retorno->fetch()); ?></p> 
             </div>
             <!--begin::Row-->
             <div class="row">
