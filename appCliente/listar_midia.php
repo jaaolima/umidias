@@ -82,7 +82,7 @@
                                                     <a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$id_midia."'class='m-0 text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_local']."</a>
                                                 </div>	
                                             </div>																								
-                                            <div class='my-6' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;>
+                                            <div class='my-6' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>
                                                 <p class='texto-chumbo font-size-h6 m-0'>".$dados['ds_descricao']."</p>
                                             </div>													
                                         </div>
