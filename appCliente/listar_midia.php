@@ -26,7 +26,8 @@
                 <p class="texto-fraco">
                     <?php 
                         $dadosTotal = $retornoTotal->fetch();
-                        echo count($dadosTotal); 
+                        echo $dadosTotal;
+                        // echo count($dadosTotal); 
                     ?>
                 </p> 
             </div>
