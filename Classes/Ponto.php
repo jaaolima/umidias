@@ -177,7 +177,7 @@
 			$id_midia = $dados["id_midia"];
 			$id_busca = $dados["id_busca"];
 			if($id_busca === "data"){
-				echo $dados['date'];
+				var_dump($dados["date"]);
 				// $dt_inicial = date('Y-m-d', $dados["date"]);
 				// var_dump($dt_inicial);
 				// try{
