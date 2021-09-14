@@ -1,13 +1,9 @@
 $(document).ready(function() {
 	$("#aplicar").on("click", function(e){ 
         var date = $("#calendario").datepicker('getDate');
-        let options = {     
-            day: ('2-digit'), 
-            month: ('2-digit'),
-            year: ('numeric'),
-        } 
         dataUS = date.toLocaleDateString('pt-br');
         dataFinal = dateToEN(dataUS);
+        console.log(dataFinal);
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php' 
