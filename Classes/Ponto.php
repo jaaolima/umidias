@@ -225,8 +225,8 @@
 		
 						$dados = $stmtBisemana->fetch();
 
-						$dataInicial = str_replace($dados["dt_inicial"]);
-						$dataFinal = str_replace($dados["dt_final"]);
+						$dataInicial = str_replace('-', '', $dados["dt_inicial"]);
+						$dataFinal = str_replace('-', '',$dados["dt_final"]);
 
 						// if($bisemana[$i] == count($bisemana)){
 						// 	$datasBisemana .= " or ".$dados["dt_inicial"]." and ".$dados["dt_final"];
