@@ -30,7 +30,7 @@ var DatatablesBasicBasic = function() {
 		    },
 
 			//== Order settings
-			order: [[0, 'asc']],
+			order: [[0, 'desc']],
 
 
 			columnDefs: [
