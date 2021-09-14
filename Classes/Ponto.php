@@ -225,14 +225,17 @@
 		
 						$dados = $stmtBisemana->fetch();
 
+						$dataInicial = str_replace($dados["dt_inicial"]);
+						$dataFinal = str_replace($dados["dt_final"]);
+
 						// if($bisemana[$i] == count($bisemana)){
 						// 	$datasBisemana .= " or ".$dados["dt_inicial"]." and ".$dados["dt_final"];
 						// }
 						if($bisemana[$i] == $bisemana[0]){
-							$datasBisemana .= "(dt_inicial between ".$dados["dt_inicial"]." and ".$dados["dt_final"].")";
+							$datasBisemana .= "(dt_inicial = ".$dataInicial." and dt_final = ".$dataFinal.")";
 						}
 						else{
-							$datasBisemana .= " and (dt_inicial between ".$dados["dt_inicial"]." and ".$dados["dt_final"].")";
+							$datasBisemana .= " and (dt_inicial = ".$dataInicial." and dt_final = ".$dataFinal.")";
 						}
 					}
 					catch(exception $e)
