@@ -1,6 +1,10 @@
 $(document).ready(function() {
 	$("#aplicar").on("click", function(e){ 
-        var date = $("#calendario").datepicker({ dateFormat: 'dd,MM,yyyy' }).val();
+        var date = $("#calendario"); 
+        date.datepicker({
+            dateFormat: 'yyyy-mm-dd'
+            });
+        });
         
         console.log(date);
         var id_midia = $("#id_midia").val();
