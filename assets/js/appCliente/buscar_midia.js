@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$("#aplicar").on("click", function(e){ 
         var date = $("#calendario").datepicker('getDate'); 
-        dataFinal = toDate(date);
+        dataFinal = date.toLocaleDateString('en-US');
         console.log(dataFinal);
         var id_midia = $("#id_midia").val();
         $.ajax({
@@ -131,10 +131,6 @@ $(document).ready(function() {
     });	
 });
 
-function toDate(dateStr) {
-    var parts = dateStr.split("/");
-    return new Date(parts[2], parts[1] - 1, parts[0]);
-}
 
 var DatatablesBasicBasic = function() {
 
