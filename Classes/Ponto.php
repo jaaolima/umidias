@@ -177,7 +177,7 @@
 			$id_midia = $dados["id_midia"];
 			$id_busca = $dados["id_busca"];
 			if($id_busca === "data"){
-				$dt_inicial = $dados["date"];
+				$dt_inicial = date($dados["date"]);
 				var_dump($dt_inicial);
 				// try{
 				// 	$con = Conecta::criarConexao();
