@@ -8,7 +8,6 @@ $(document).ready(function() {
         } 
         dataUS = date.toLocaleDateString('pt-br');
         dataFinal = dateToEN(dataUS);
-        console.log(dataFinal);
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php' 
