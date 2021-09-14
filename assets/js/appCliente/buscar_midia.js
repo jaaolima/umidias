@@ -1,6 +1,11 @@
 $(document).ready(function() {
 	$("#aplicar").on("click", function(e){ 
-        var date = $("#calendario").datepicker('getDate'); 
+        var date = $("#calendario").datepicker('getDate');
+        let options = {     
+            day: ('2-digit'), 
+            month: ('2-digit'),
+            year: ('numeric'),
+        } 
         dataFinal = date.toLocaleDateString('en-US');
         console.log(dataFinal);
         var id_midia = $("#id_midia").val();
