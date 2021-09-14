@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	$("#aplicar").on("click", function(e){ 
-        var date = $("#calendario").datepicker( 'getDate' ); 
+        var date = $("#calendario").datepicker('getDate'); 
         
-        console.log(parse(date));
+        console.log(Date.parse(date));
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php' 
