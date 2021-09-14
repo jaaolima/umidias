@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$("#aplicar").on("click", function(e){ 
         var date = $("#calendario").datepicker('getDate'); 
         
-        console.log(Date.parse(date));
+        console.log(date);
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php' 
