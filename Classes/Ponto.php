@@ -188,7 +188,7 @@
 				// 	right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 				// 	where p.id_midia=:id_midia
 				// 	and p.id_ponto not in (select al.id_ponto from rl_alugado al 
-				// 	where al.id_ponto=p.id_ponto and al.dt_final >= :dt_inicial and :dt_inicial between al.dt_final and al.dt_inicial)";
+				// 	where al.id_ponto=p.id_ponto and al.dt_final >= :dt_inicial and :dt_inicial between al.dt_inicial and al.dt_final)";
 					
 				// 	$stmt = $con->prepare($select); 
 				// 	$params = array(':id_midia' => $id_midia,
@@ -498,7 +498,7 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			if($tp_busca === ""){
+			if($tp_busca === ""){ 
 				try{
 					$con = Conecta::criarConexao();
 					

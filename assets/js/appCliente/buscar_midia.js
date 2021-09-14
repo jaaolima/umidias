@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$("#aplicar").on("click", function(e){ 
-        var date = $("#date").dtpicker({ dateFormat: 'dd,MM,yyyy' }).val()
+        var date = $("#date").datepicker({ dateFormat: 'dd,MM,yyyy' }).val()
         console.log(date);
         var id_midia = $("#id_midia").val();
         $.ajax({
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 	});
 
-    $("#busca").on("keyup", function(e){ 
+    $("#busca").on("keyup", function(e){  
         var id_midia = $("#id_midia").val();
         var busca = $("#busca").val();
         $.ajax({
