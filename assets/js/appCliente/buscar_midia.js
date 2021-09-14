@@ -6,7 +6,8 @@ $(document).ready(function() {
             month: ('2-digit'),
             year: ('numeric'),
         } 
-        dataFinal = date.toLocaleDateString('en-US').format('YYYY-MM-DD');
+        dataUS = date.toLocaleDateString('en-US');
+        dataFinal = dataUS.format('YYYY-MM-DD');
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php' 
