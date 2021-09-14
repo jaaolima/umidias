@@ -156,18 +156,16 @@
 		}
 		public function listarBisemanaDisponiveis($id_ponto) 
 		{
-			$data = date('Y-m-d');
-			$hoje = str_replace("-", "", $data);
 			try{
 				$con = Conecta::criarConexao();
 				
 				$select = "SELECT id_bisemana, ds_bisemana, dt_final, dt_inicial
 							FROM tb_bisemana b
-							where dt_final > :hoje and dt_inicial not in (select dt_inicial from rl_alugado a where a.id_ponto=:id_ponto)
+							where dt_final > curdate() and dt_inicial not in (select dt_inicial from rl_alugado a where a.id_ponto=:id_ponto)
 							order by dt_inicial";
 				
 				$stmt = $con->prepare($select); 
-				$params = array(':hoje' => $hoje,
+				$params = array(
 								':id_ponto' => $id_ponto);
 				
 				$stmt->execute($params);
