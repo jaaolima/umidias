@@ -6,8 +6,8 @@ $(document).ready(function() {
             month: ('2-digit'),
             year: ('numeric'),
         } 
-        dataUS = date.toLocaleDateString('en-US');
-        dataFinal = dataUS.format('YYYY-MM-DD');
+        dataUS = date.toLocaleDateString('pt-br');
+        dataFinal = dateToEN(dataUS);
         console.log(dataFinal);
         var id_midia = $("#id_midia").val();
         $.ajax({
@@ -137,6 +137,10 @@ $(document).ready(function() {
     });	
 });
 
+function dateToEN(date)
+{	
+	return date.split('/').reverse().join('-');
+}
 
 var DatatablesBasicBasic = function() {
 
