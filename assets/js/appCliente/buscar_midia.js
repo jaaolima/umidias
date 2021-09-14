@@ -7,11 +7,10 @@ $(document).ready(function() {
             year: ('numeric'),
         } 
         dataFinal = date.toLocaleDateString('en-US');
-        console.log(dataFinal);
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php' 
-            , data: {date: date, id_midia: id_midia, id_busca: 'data'}
+            , data: {date: dataFinal, id_midia: id_midia, id_busca: 'data'}
             , type: 'post'
             , success: function(html) {
                 $("#lista").html(html);
