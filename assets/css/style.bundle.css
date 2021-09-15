@@ -500,7 +500,18 @@ button:hover .svg-editar{
 
   }
 .gm-control-active{
-  border: 1px solid #B721FF !important;
+    background-color: white !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: rgb(183, 33, 255) !important;
+    border-image: initial !important;
+    border-radius: 16px !important;
+}
+.gmnoprint > div{
+  background-color: none !important;
+}
+.gmnoprint > div > div{
+  background-color: none !important;
 }
 .botao-menu-active {
   display: flex !important;
