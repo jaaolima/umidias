@@ -499,6 +499,9 @@ button:hover .svg-editar{
   color: #333333;
 
   }
+.gm-control-active{
+  border: 1px solid #B721FF;
+}
 .botao-menu-active {
   display: flex !important;
   flex-direction: row !important;
