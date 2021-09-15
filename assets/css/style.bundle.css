@@ -508,10 +508,10 @@ button:hover .svg-editar{
     border-radius: 16px !important;
 }
 .gmnoprint > div{
-  background-color: none !important;
+  background-color: transparent !important;
 }
 .gmnoprint > div > div{
-  background-color: none !important;
+  background-color: transparent !important;
 }
 .botao-menu-active {
   display: flex !important;
