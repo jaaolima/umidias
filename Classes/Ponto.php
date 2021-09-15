@@ -177,6 +177,7 @@
 			$id_midia = $dados["id_midia"];
 			$id_busca = $dados["id_busca"];
 			if($id_busca === "data"){
+				$dt_inicial = str_replace('-', '', $dados['data']);
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -190,7 +191,7 @@
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia,
-									':dt_inicial' => $dados['data']);
+									':dt_inicial' => $dt_inicial);
 					
 					$stmt->execute($params);
 	
