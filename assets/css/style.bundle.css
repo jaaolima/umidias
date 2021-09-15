@@ -500,7 +500,7 @@ button:hover .svg-editar{
 
   }
 .gm-control-active{
-  border: 1px solid #B721FF;
+  border: 1px solid #B721FF !important;
 }
 .botao-menu-active {
   display: flex !important;
