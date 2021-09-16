@@ -12,7 +12,7 @@ $(document).ready(function(){
 		        	swal.fire({
 		                position: 'top-right',
 		                type: 'success',
-		                title: html,
+		                title: 'Email Enviado com sucesso!',
 		                showConfirmButton: true
 		            });
 		            $("#form_usuario").reset();
