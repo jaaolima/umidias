@@ -18,7 +18,7 @@ if($id_perfil == 2){
     $id_parceiro = $_SESSION['id_parceiro'];
 }
 
-$optionsUF = $parceiro->listaroptionsUF(null); 
+$optionsUF = $Parceiro->listaroptionsUF(null); 
 $optionscategoria = $Categoria->listaroptionscategoria(null);
 $optionsmaterial = $Material->listaroptionsmaterial(null);
 $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
