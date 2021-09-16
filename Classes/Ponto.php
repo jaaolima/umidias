@@ -1217,17 +1217,17 @@
 				
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_ponto set id_parceiro = :id_parceiro, ds_descricao = :ds_descricao, id_esatdo = :id_esatdo, id_cidade = :id_cidade, ds_bairro = :ds_bairro, ds_sentido = :ds_sentido, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, ds_observacao = :ds_observacao, id_material = :id_material, id_periodo = :id_periodo, ds_tamanho = :ds_tamanho
+				$insert = "UPDATE tb_ponto set id_parceiro = :id_parceiro, ds_descricao = :ds_descricao, id_estado = :id_estado, id_cidade = :id_cidade, ds_bairro = :ds_bairro, ds_sentido = :ds_sentido, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, ds_observacao = :ds_observacao, id_material = :id_material, id_periodo = :id_periodo, ds_tamanho = :ds_tamanho
 							   WHERE id_ponto = :id_ponto";
 				
 				$stmt = $con->prepare($insert);
 				
 				$params = array(':id_parceiro' => $id_parceiro,
+								':ds_descricao' => $ds_descricao,
 								':id_estado' => $id_estado,
 								':id_cidade' => $id_cidade,
-								':ds_descricao' => $ds_descricao,
-								':ds_sentido' => $ds_sentido,
 								':ds_bairro' => $ds_bairro,
+								':ds_sentido' => $ds_sentido,
 								':ds_latitude' => $ds_latitude,
 								':ds_longitude' => $ds_longitude,
 								':nu_valor' => $nu_valor,
