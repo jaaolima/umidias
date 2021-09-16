@@ -359,7 +359,7 @@
 																							</clipPath>
 																							</defs>
 																						</svg>
-																						<span>".$dados["ds_local"]."</span>	
+																						<span>".$dados["ds_bairro"]."</span>	
 																					</div>
 																				</div>
 																			</div>
@@ -544,7 +544,7 @@
 																									</clipPath>
 																									</defs>
 																								</svg>
-																								<span>".$dados["ds_local"]."</span>	
+																								<span>".$dados["ds_bairro"]."</span>	
 																							</div>
 																						</div>
 																					</div>

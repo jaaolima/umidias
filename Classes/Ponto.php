@@ -1230,7 +1230,7 @@
 								':ds_sentido' => $ds_sentido,
 								':ds_latitude' => $ds_latitude,
 								':ds_longitude' => $ds_longitude,
-								':nu_valor' => $nu_valor,
+								':nu_valor' => $nu_valor, 
 								':id_midia' =>$id_midia,
 								':ds_observacao' => $ds_observacao,
 								':id_material' => $id_material,

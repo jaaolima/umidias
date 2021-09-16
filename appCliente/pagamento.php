@@ -143,7 +143,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="my-6 mx-6 ">
                                     <div class="mb-12">
                                         <h4 class="texto-negrito">Local </h4>
-                                        <span><?php echo $dados["ds_local"]; ?></span>
+                                        <span><?php echo $dados["ds_bairro"]; ?></span>
                                     </div>
                                     <div class="my-12">
                                         <h4 class="texto-negrito">Latitude Longitude</h4>

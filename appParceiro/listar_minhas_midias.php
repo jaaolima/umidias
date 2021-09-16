@@ -101,7 +101,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																					</clipPath>
 																					</defs>
 																				</svg>
-																				<span>".$dados["ds_local"]."</span>	
+																				<span>".$dados["ds_bairro"]."</span>	
 																			</div>
 																		</div>
 																	</div>

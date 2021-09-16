@@ -31,7 +31,7 @@ echo "<div class='item' >
                             </svg>
                         </div>
                         <div class='ml-2' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'> 
-                            <a title='".$dados['ds_local']."'  href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$dados['id_midia']."'class='text-dark font-weight-bold text-dark font-size-h4 m-0'>".$dados['ds_local']."</a>
+                            <a title='".$dados['ds_bairro']."'  href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$dados['id_midia']."'class='text-dark font-weight-bold text-dark font-size-h4 m-0'>".$dados['ds_bairro']."</a>
                         </div>	
                     </div>																								
                     <div class='my-3' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>

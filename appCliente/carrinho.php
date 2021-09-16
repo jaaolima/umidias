@@ -84,7 +84,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     </svg>
                                                                 </div>
                                                                 <div class='ml-2'>
-                                                                    <a class='text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_local']."</a>
+                                                                    <a class='text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_bairro']."</a>
                                                                 </div>	
                                                             </div>																																			
                                                         </div>

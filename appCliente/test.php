@@ -130,7 +130,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="col-7 col-sm-6">
 										<div class="mb-8">
 											<div class="mb-12">
-												<h1 class="h1-titulo"><?php echo $dados["ds_local"]; ?></h1>
+												<h1 class="h1-titulo"><?php echo $dados["ds_sentido"] .' - '. $dados['ds_bairro']; ?></h1>
 												<span>St.Central - Taguatinga, Brasilia - DF, 40297-400</span>
 											</div>
 											<div class="my-12">
