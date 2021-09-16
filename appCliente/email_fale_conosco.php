@@ -31,11 +31,12 @@ $mail->setFrom("no-reply@ibranutro.com.br", "Unimídias");
 $mail->AddAddress('victorespucoc@gmail.com', 'reclamação Unimidias');  
 
 // Assunto da mensagem 
-$mail->Subject = "Rclamação"; 
+$mail->Subject = "Reclamação"; 
 
 // Corpo do email 
 $mail->Body = "<h1>RECLAMAÇÃO</h1> 
 <p>DE: ".$nome. "</p><br>
+<p>EMAIL: ".$email. "</p><br>
 <p>MENSAGEM:".$mensagem."</p>";
 
 function renderView($path, array $data = []){
