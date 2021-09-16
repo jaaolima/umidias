@@ -157,7 +157,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
+				$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 							FROM tb_ponto p
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -188,7 +188,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, p.st_status, ds_observacao, ds_local, (select min(ds_foto) from rl_ponto_foto f where p.id_ponto=f.id_ponto) as ds_foto, t.ds_tipo, ds_latitude, ds_longitude
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, p.st_status, ds_observacao, ds_bairro, (select min(ds_foto) from rl_ponto_foto f where p.id_ponto=f.id_ponto) as ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 					FROM tb_ponto p
 					inner join tb_tipo_midia t on p.id_midia=t.id_midia
 					right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -253,7 +253,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -279,7 +279,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -304,7 +304,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -329,7 +329,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -355,11 +355,11 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
+					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
-								where p.id_midia=:id_midia and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto) and ds_local like '%".$busca."%'";
+								where p.id_midia=:id_midia and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto) and ds_bairro like '%".$busca."%'";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia);
@@ -385,7 +385,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, f.ds_foto, t.ds_tipo, t.ds_tipo,
+				$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, t.ds_tipo,
 							(6371 * acos(
 							cos( radians(:latitude) )
 							* cos( radians( ds_latitude ) )
@@ -427,9 +427,11 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_local, ds_foto, t.ds_tipo
+				$select = "SELECT id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, ds_foto, t.ds_tipo, ds_sentido, e.ds_uf, c.ds_nome
 							FROM tb_ponto p
-							inner join tb_tipo_midia t on p.id_midia=t.id_midia";
+							inner join tb_tipo_midia t on p.id_midia=t.id_midia
+							inner join cidade c on p.id_cidade=c.id_cidade
+							inner join estado e on p.id_estado=e.id_estado";
 				
 				$stmt = $con->prepare($select); 
 				
@@ -454,13 +456,13 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
+					$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_bairro, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
 								FROM rl_alugado a
 								right join rl_ponto_foto f on a.id_ponto=f.id_ponto
 								right join tb_ponto p on a.id_ponto=p.id_ponto
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								where p.id_midia = :id_midia
-								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto) and ds_local like '%".$busca."%'";
+								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto) and ds_bairro like '%".$busca."%'";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia);
@@ -483,7 +485,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
+					$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_bairro, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
 								FROM rl_alugado a
 								right join rl_ponto_foto f on a.id_ponto=f.id_ponto
 								right join tb_ponto p on a.id_ponto=p.id_ponto
@@ -511,7 +513,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
+					$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_bairro, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
 								FROM rl_alugado a
 								right join rl_ponto_foto f on a.id_ponto=f.id_ponto
 								right join tb_ponto p on a.id_ponto=p.id_ponto
@@ -541,7 +543,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, nu_valor_alugado, id_alugado
+				$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_bairro, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, nu_valor_alugado, id_alugado
 							FROM rl_alugado a
 							right join rl_ponto_foto f on a.id_ponto=f.id_ponto
 							right join tb_ponto p on a.id_ponto=p.id_ponto
@@ -569,7 +571,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT p.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, f.ds_foto, ds_descricao, nu_valor, ds_observacao, id_parceiro
+				$select = "SELECT p.id_ponto, nu_valor, t.id_midia, ds_bairro, t.ds_tipo, f.ds_foto, ds_descricao, nu_valor, ds_observacao, id_parceiro
 							FROM tb_ponto p
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
@@ -596,7 +598,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT p.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, f.ds_foto, ds_descricao,  ds_observacao, u.ds_nome, a.dt_inicial, a.dt_final, id_status_midia, s.ds_status
+				$select = "SELECT p.id_ponto, nu_valor, t.id_midia, ds_bairro, t.ds_tipo, f.ds_foto, ds_descricao,  ds_observacao, u.ds_nome, a.dt_inicial, a.dt_final, id_status_midia, s.ds_status
 							FROM rl_alugado a
 							right join tb_ponto p on a.id_ponto=p.id_ponto
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -629,7 +631,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT p.id_ponto, nu_valor, t.id_midia, ds_local, t.ds_tipo, f.ds_foto
+				$select = "SELECT p.id_ponto, nu_valor, t.id_midia, ds_bairro, t.ds_tipo, f.ds_foto
 							FROM tb_ponto p
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
@@ -1022,7 +1024,7 @@
 				
 				
 				$select = "SELECT 
-							p.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, id_material, id_periodo, id_parceiro, nu_valor, st_status
+							p.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_bairro, ds_tamanho,  p.id_midia, id_material, id_periodo, id_parceiro, nu_valor, st_status
 						FROM tb_ponto p
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
 						WHERE p.id_ponto = :id_ponto";
@@ -1048,7 +1050,7 @@
 				
 				
 				$select = "SELECT 
-							a.id_ponto, id_alugado, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, a.id_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado, id_status_midia, s.ds_status, ds_arte
+							a.id_ponto, id_alugado, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_bairro, ds_tamanho,  p.id_midia, a.id_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado, id_status_midia, s.ds_status, ds_arte
 						FROM rl_alugado a
 						right join tb_ponto p on a.id_ponto=p.id_ponto
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
@@ -1076,7 +1078,7 @@
 				
 				
 				$select = "SELECT 
-							a.id_ponto, ds_descricao, ds_latitude, ds_longitude, p.nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, m.ds_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado
+							a.id_ponto, ds_descricao, ds_latitude, ds_longitude, p.nu_valor, ds_tipo, ds_observacao, ds_bairro, ds_tamanho,  p.id_midia, m.ds_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado
 						FROM rl_alugado a
 						right join tb_ponto p on a.id_ponto=p.id_ponto
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
@@ -1103,7 +1105,7 @@
 				$con = Conecta::criarConexao();
 				
 				
-				$select = "SELECT a.id_alugado, a.id_ponto, ds_descricao, p.ds_latitude, p.ds_longitude, nu_valor, ds_tipo, ds_observacao, p.ds_local, ds_tamanho,  p.id_midia, a.id_material, id_periodo, p.id_parceiro, dt_inicial, dt_final, ds_nome, s.ds_status, id_status_midia
+				$select = "SELECT a.id_alugado, a.id_ponto, ds_descricao, p.ds_latitude, p.ds_longitude, nu_valor, ds_tipo, ds_observacao, p.ds_bairro, ds_tamanho,  p.id_midia, a.id_material, id_periodo, p.id_parceiro, dt_inicial, dt_final, ds_nome, s.ds_status, id_status_midia
 						FROM rl_alugado a
 						right join tb_ponto p on a.id_ponto=p.id_ponto
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
@@ -1131,7 +1133,7 @@
 				$con = Conecta::criarConexao();
 				
 				
-				$select = "SELECT a.id_alugado, a.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_local, ds_tamanho,  p.id_midia, a.id_material, id_periodo, p.id_parceiro, dt_inicial, dt_final, ds_nome, f.ds_foto, s.ds_status, id_status_midia
+				$select = "SELECT a.id_alugado, a.id_ponto, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_bairro, ds_tamanho,  p.id_midia, a.id_material, id_periodo, p.id_parceiro, dt_inicial, dt_final, ds_nome, f.ds_foto, s.ds_status, id_status_midia
 						FROM rl_alugado a
 						right join tb_ponto p on a.id_ponto=p.id_ponto
 						right join rl_ponto_foto f on p.id_ponto=f.id_ponto
@@ -1160,7 +1162,7 @@
 		{
 			$id_ponto	        	= $dados['id_ponto'];
 			$id_parceiro	        = $dados['id_parceiro'];
-			$ds_local	        	= $dados['ds_local'];
+			$ds_bairro	        	= $dados['ds_bairro'];
 			$ds_descricao	        = $dados['ds_descricao'];
 
 			$ds_foto = NULL;
@@ -1212,14 +1214,14 @@
 				
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_ponto set id_parceiro = :id_parceiro, ds_descricao = :ds_descricao, ds_local = :ds_local, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, ds_observacao = :ds_observacao, id_material = :id_material, id_periodo = :id_periodo, ds_tamanho = :ds_tamanho
+				$insert = "UPDATE tb_ponto set id_parceiro = :id_parceiro, ds_descricao = :ds_descricao, ds_bairro = :ds_bairro, ds_latitude = :ds_latitude, ds_longitude = :ds_longitude, nu_valor = :nu_valor, id_midia= :id_midia, ds_observacao = :ds_observacao, id_material = :id_material, id_periodo = :id_periodo, ds_tamanho = :ds_tamanho
 							   WHERE id_ponto = :id_ponto";
 				
 				$stmt = $con->prepare($insert);
 				
 				$params = array(':id_parceiro' => $id_parceiro,
 								':ds_descricao' => $ds_descricao,
-								':ds_local' => $ds_local,
+								':ds_bairro' => $ds_bairro,
 								':ds_latitude' => $ds_latitude,
 								':ds_longitude' => $ds_longitude,
 								':nu_valor' => $nu_valor,
@@ -1479,7 +1481,7 @@
 		{
 			try{
 				$con = Conecta::criarConexao();
-				$select = "SELECT ds_local
+				$select = "SELECT ds_bairro
 							FROM tb_ponto 
 							where id_midia = :id_midia";
 				$stmt = $con->prepare($select);
@@ -1490,7 +1492,7 @@
 
 				while($dados = $stmt->fetch())
 				{
-					$options.= "<option>".$dados['ds_local']."</option>";
+					$options.= "<option>".$dados['ds_bairro']."</option>";
 
 				}
 				return $options;
