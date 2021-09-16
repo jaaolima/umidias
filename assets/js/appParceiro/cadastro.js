@@ -14,7 +14,7 @@ $(document).ready(function() {
 		{ 
 			$.ajax({
 		        url: 'appParceiro/gravar_parceiro.php'
-				, data: $("#form_usuario").serialize() 
+				, data: $("#form_usuario").serialize()  
 		        , type: 'post'
 		        , success: function(html) { 
 		        	swal.fire({

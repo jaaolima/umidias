@@ -7,7 +7,7 @@
     $parceiro = new Parceiro(); 
   
 
-	$optionsUF = $parceiro->listaroptionsUF(null);
+	$optionsUF = $parceiro->listaroptionsUF(null); 
 	
 
 ?>

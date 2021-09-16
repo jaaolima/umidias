@@ -12,7 +12,7 @@
 			$nu_cep             = $dados['nu_cep'];
             $id_estado         	= $dados['id_estado'];
             $id_cidade       	= $dados['id_cidade'];
-            $ds_bairro          = $dados['ds_bairro'];
+            $ds_bairro          = $dados['ds_bairro']; 
             $ds_responsavel     = $dados['ds_responsavel'];
             $ds_email          	= $dados['ds_email'];
             $nu_telefone        = $dados['nu_telefone'];

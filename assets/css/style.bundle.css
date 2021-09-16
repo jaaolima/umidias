@@ -501,7 +501,7 @@ button:hover .svg-editar{
   }
 .gm-control-active{
     background-color: white !important;
-    border-width: 2px !important;
+    border-width: 1px !important;
     border-style: solid !important;
     border-color: rgb(183, 33, 255) !important;
     border-image: initial !important;

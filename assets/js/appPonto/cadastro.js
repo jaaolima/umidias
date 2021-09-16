@@ -11,7 +11,7 @@ $(document).ready(function() {
 			{ 	var form = $("#form_usuario").get(0); 
 				$.ajax({
 					url: 'appPonto/gravar_ponto.php'
-					, data: $("#form_usuario").serialize()
+					, data: $("#form_usuario").serialize() 
 					, type: 'post'
 					, data: new FormData(form)
 					, mimeType: 'multipart/form-data'
@@ -38,6 +38,20 @@ $(document).ready(function() {
 			redirectTo("appPonto/listar_ponto.php");
 		}); 
 	}
+	
+	$("#id_estado").on("change", function() {
+		var id_estado = $("#id_estado option:selected").val();
+		$.ajax({
+	        url: 'appParceiro/listar_options_cidade.php'
+	        , type: 'post'
+	        , data: {id_estado : id_estado}
+	        , success: function(html) {
+	        	$("#id_cidade").empty();
+	        	$("#id_cidade").append(html);     
+	        }
+	    }); 
+	}); 
+
 	if(id_perfil == 2){
 		$("#salvar").on("click", function(e){
 			var form = $("#form_usuario").get(0); 

@@ -18,6 +18,7 @@ if($id_perfil == 2){
     $id_parceiro = $_SESSION['id_parceiro'];
 }
 
+$optionsUF = $parceiro->listaroptionsUF(null); 
 $optionscategoria = $Categoria->listaroptionscategoria(null);
 $optionsmaterial = $Material->listaroptionsmaterial(null);
 $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
@@ -52,7 +53,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
         <input type="hidden" id="id_perfil" name="id_perfil" value="<?php echo $id_perfil; ?>">
         <div class="card-body">
             <div class="form-group row">
-                <?php if($id_perfil == 3  ) :   ?>
+                <?php if($id_perfil == 3  ) :   ?> 
                 <div class="form-group col-6">
                     <label>Parceiro <span class="text-danger">*</span></label>
                     <select class="form-control" id="id_parceiro" name="id_parceiro">
@@ -66,14 +67,35 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                 <?php if($id_perfil == 2  ) :   ?>
                   <input type="hidden" name="id_parceiro" id="id_parceiro" value="<?php echo $id_parceiro;?>">
                 <?php endif ; ?>
-                <div class="form-group col-6">
-                    <label>Região <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_local" name="ds_local"/>
+            </div>
+            <div class="form-group row">
+                <div class="form-group col-3">
+                    <label>UF<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_estado" name="id_estado">
+                        <option value="">Selecione...</option>
+                        <?php 
+                            echo $optionsUF;
+                        ?>
+                    </select>
+                </div>
+                <div class="form-group col-3">
+                    <label>Cidade<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_cidade" name="id_cidade">
+                        <option value="">Selecione...</option>
+                    </select>
+                </div>
+                <div class="form-group col-3">
+                    <label>Local <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_local" name="ds_local" placeholder="Ex. QNN 8"/>
+                </div>
+                <div class="form-group col-3">
+                    <label>Sentido <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_sentido" name="ds_sentido" placeholder="Ex. Taguantinga"/>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="form-group col-6">
-                    <label>Selecione os arquivos</label>
+                    <label>Selecione os arquivos da Foto</label>
                     <input type="file" class="form-control" id="fotos" name="fotos[]" multiple />  
                 </div>
             </div>
