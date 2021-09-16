@@ -131,7 +131,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="col-7 col-sm-6">
 										<div class="mb-8">
 											<div class="mb-12">
-												<h1 class="h1-titulo"><?php echo $dados["ds_sentido"] .' - '. $dados['ds_bairro']; ?></h1>
+												<h1 class="h1-titulo"><?php echo $dados['ds_bairro']; ?></h1>
 												<span><?php echo $dados["ds_sentido"] .' - '. $dados['ds_bairro'] .', '. $dados['ds_nome'] . ' - '. $dados['ds_uf']; ?></span>
 											</div>
 											<div class="my-12">
@@ -548,14 +548,14 @@ License: You must have a valid license purchased only from themeforest(the above
 			map.addMarker({
 				lat: <?php echo $dados["ds_latitude"]; ?>,
 				lng: <?php echo $dados["ds_longitude"]; ?>,
-				title: '<?php echo $dados["ds_sentido"] .' - '. $dados['ds_bairro']; ?>',
+				title: '<?php echo $dados['ds_bairro']; ?>',
 				icon: '../assets/media/localizacao.png',
 				details: {
 					database_id: 42,
 					author: 'HPNeo'
 				},
 				infoWindow: {
-					content: '<span style="color:#000"><?php echo $dados["ds_sentido"] .' - '. $dados['ds_bairro']; ?></span>'
+					content: '<span style="color:#000"><?php echo $dados['ds_bairro']; ?></span>'
 				}
 			});
 
