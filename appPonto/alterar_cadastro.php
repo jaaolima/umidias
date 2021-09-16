@@ -21,10 +21,11 @@ $dados = $ponto->buscarDadosPonto($id_ponto);
 $dadosFoto = $ponto->BuscarFotoPonto($id_ponto);
 $dadosFotoExcluir = $ponto->BuscarFotoPonto($id_ponto);
 $id_categoria = $dados["id_midia"];
-$id_material = $dados["id_material"];
+$id_material = $dados["id_material"]; 
 $id_parceiro = $dados["id_parceiro"];
 
-
+$optionsUF = $Parceiro->listaroptionsUF($dados['id_estado']);
+$optionsCidade = $Parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_cidade']);
 $optionscategoria = $Categoria->listaroptionscategoria($id_categoria);
 $optionsmaterial = $Material->listaroptionsmaterial($id_material);
 $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
@@ -78,14 +79,37 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                   <input type="hidden" name="id_parceiro" id="id_parceiro" value="<?php echo $dados['id_parceiro'];?>">
                 <?php endif ; ?>
                 <div class="form-group col-4">
-                    <label>Região <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_local" name="ds_local" value="<?php echo $dados['ds_local']?>"/>
-                </div>
-                <div class="form-group col-4">
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_descricao']?>"/>
                 </div>
-                
+            </div>
+            <div class="form-group row">
+                <div class="form-group col-3">
+                    <label>UF<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_estado" name="id_estado">
+                        <option value="">Selecione...</option>
+                        <?php 
+                            echo $optionsUF;
+                        ?>
+                    </select>
+                </div>
+                <div class="form-group col-3">
+                    <label>Município<span class="text-danger">*</span></label>
+                    <select class="form-control" id="id_cidade" name="id_cidade">
+                        <option value="">Selecione...</option>
+                        <?php 
+                            echo $optionsCidade;
+                        ?>
+                    </select>
+                </div>
+                <div class="form-group col-3">
+                    <label>Bairro <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_bairro" name="ds_bairro"  value="<?php echo $dados['ds_bairro']?>"/>
+                </div>
+                <div class="form-group col-3">
+                    <label>Sentido <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_sentido" name="ds_sentido" placeholder="Ex. Ceilândia"  value="<?php echo $dados['ds_sentido']?>"/>
+                </div>
             </div>
             <div class="form-group row">
                 <div id="carrossel" style='height:300px;' class="carousel slide col-6" data-ride="carousel">
