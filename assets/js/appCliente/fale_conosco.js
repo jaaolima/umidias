@@ -15,7 +15,9 @@ $(document).ready(function(){
 		                title: 'Email Enviado com sucesso!',
 		                showConfirmButton: true
 		            });
-		            $("#form_usuario").reset();
+		            $('#form_usuario').each (function(){
+                        this.reset();
+                    });
 		        }
 				, error: function (data) {
 					swal.fire("Erro", data.responseText, "error");
