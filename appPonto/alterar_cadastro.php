@@ -307,14 +307,14 @@ var demo3 = function() {
     map.addMarker({
         lat: <?php echo $dados["ds_latitude"]; ?>,
         lng: <?php echo $dados["ds_longitude"]; ?>,
-        title: '<?php echo $dados["ds_local"]; ?>',
+        title: '<?php echo $dados["ds_bairro"]; ?>',
         icon: '../assets/media/localizacao.png',
         details: {
             database_id: 42,
             author: 'HPNeo'
         },
         infoWindow: {
-            content: '<span style="color:#000"><?php echo $dados["ds_local"]; ?></span>'
+            content: '<span style="color:#000"><?php echo $dados["ds_bairro"]; ?></span>'
         }
     });
 
