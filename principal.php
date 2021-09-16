@@ -261,8 +261,8 @@
 								<?php endif ;?> 
 							</ul>
 							<div class="position-fixed bottom-0 ml-8 mb-6">
-								<a  href="principal.php" class="btn ml-2 text-left d-flex">
-								<i class="flaticon-chat-1 icon-xl"></i>
+								<a  href="appCliente/fale_conosco.php" class="btn ml-2 text-left d-flex">
+									<i class="flaticon-chat-1 icon-xl text-primary"></i>
 									<p class="menu-text texto-menu text-primary ml-2">Fale conosco</p>
 								</a>
 							</div>							
