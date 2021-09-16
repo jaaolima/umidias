@@ -22,7 +22,10 @@
         public function gravarPonto(array $dados)
 		{
 			$id_parceiro	        = $dados['id_parceiro'];
-			$ds_local	        	= $dados['ds_local'];
+			$id_estado	        	= $dados['id_estado'];
+			$id_cidade	        	= $dados['id_cidade'];
+			$ds_bairro	        	= $dados['ds_bairro'];
+			$ds_sentido	        	= $dados['ds_sentido'];
 			$ds_descricao	        = $dados['ds_descricao'];
 			$ds_foto                = $this->reArrayFiles($_FILES['fotos']);
 			$ds_latitude    	    = $dados['ds_latitude'];
@@ -70,8 +73,8 @@
 				
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_ponto (id_parceiro, ds_descricao, ds_latitude, ds_longitude, nu_valor, id_midia, ds_local, ds_observacao, id_material, id_periodo, ds_tamanho, dt_ponto)
-							VALUES (:id_parceiro, :ds_descricao, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_local, :ds_observacao, :id_material, :id_periodo, :ds_tamanho, :dt_ponto)";
+				$insert = "INSERT into tb_ponto (id_parceiro, ds_descricao, ds_latitude, ds_longitude, nu_valor, id_midia, ds_bairro, ds_observacao, id_material, id_periodo, ds_tamanho, dt_ponto, id_estado, id_cidade, ds_sentido)
+							VALUES (:id_parceiro, :ds_descricao, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_bairro, :ds_observacao, :id_material, :id_periodo, :ds_tamanho, :dt_ponto, :id_estado, :id_cidade, :ds_sentido)";
 				
 				$stmt = $con->prepare($insert);
 				
@@ -81,12 +84,16 @@
 								':ds_longitude' => $ds_longitude,
 								':nu_valor' => $nu_valor,
 								':id_midia' =>$id_midia,
-								':ds_local' => $ds_local,
+								':ds_bairro' => $ds_bairro,
 								':ds_observacao' => $ds_observacao,
 								':id_material' => $id_material,
 								':id_periodo' => $id_periodo,
 								':ds_tamanho' => $ds_tamanho,
-								':dt_ponto' => $dt_ponto);
+								':dt_ponto' => $dt_ponto,
+								':id_estado' => $id_estado,
+								':id_cidade' => $id_cidade,
+								':ds_sentido' => $ds_sentido
+							);
 								
 				$stmt->execute($params);
 
@@ -172,7 +179,7 @@
 				print "ERRO:".$e->getMessage();		
 			}
 		}
-		public function listarPonto(array $dados)  
+		public function listarPonto(array $dados)   
 		{
 			$id_midia = $dados["id_midia"];
 			$id_busca = $dados["id_busca"];

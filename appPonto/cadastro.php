@@ -79,18 +79,18 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                     </select>
                 </div>
                 <div class="form-group col-3">
-                    <label>Cidade<span class="text-danger">*</span></label>
+                    <label>Município<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_cidade" name="id_cidade">
                         <option value="">Selecione...</option>
                     </select>
                 </div>
                 <div class="form-group col-3">
-                    <label>Local <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_local" name="ds_local" placeholder="Ex. QNN 8"/>
+                    <label>Bairro <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_bairro" name="ds_bairro"/>
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_sentido" name="ds_sentido" placeholder="Ex. Taguantinga"/>
+                    <input type="text" class="form-control" id="ds_sentido" name="ds_sentido" placeholder="Ex. Ceilândia"/>
                 </div>
             </div>
             <div class="form-group row">

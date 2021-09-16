@@ -43,7 +43,7 @@ $(document).ready(function() {
 	        	$("#id_cidade").empty();
 	        	$("#id_cidade").append(html);     
 	        }
-	    }); 
+	    });  
 	}); 
 
 	$('#cpf').hide();
@@ -184,30 +184,30 @@ function validar()
 		$("#nu_cep").addClass("is-valid");
 	}
 
-	if($("#id_uf option:selected").val() == "")
+	if($("#id_estado option:selected").val() == "")
 	{
-		$("#id_uf").focus();
+		$("#id_estado").focus();
 		swal.fire("Erro", "Selecione a UF", "error");
-		$("#id_uf").addClass("is-invalid");
+		$("#id_estado").addClass("is-invalid");
 		return false;		
 	}
 	else
 	{
-		$("#id_uf").removeClass("is-invalid");	
-		$("#id_uf").addClass("is-valid");
+		$("#id_estado").removeClass("is-invalid");	
+		$("#id_estado").addClass("is-valid");
 	}
 	
-	if($("#id_municipio option:selected").val() == "")
+	if($("#id_cidade option:selected").val() == "")
 	{
-		$("#id_municipio").focus();
+		$("#id_cidade").focus();
 		swal.fire("Erro", "Selecione o Municipio", "error");
-		$("#id_municipio").addClass("is-invalid");
+		$("#id_cidade").addClass("is-invalid");
 		return false;		
 	}
 	else
 	{
-		$("#id_municipio").removeClass("is-invalid");	
-		$("#id_municipio").addClass("is-valid");
+		$("#id_cidade").removeClass("is-invalid");	
+		$("#id_cidade").addClass("is-valid");
 	}
 	
 	if($("#ds_bairro").val() == "")

@@ -38,7 +38,7 @@ $(document).ready(function() {
 			redirectTo("appPonto/listar_ponto.php");
 		}); 
 	}
-	
+
 	$("#id_estado").on("change", function() {
 		var id_estado = $("#id_estado option:selected").val();
 		$.ajax({
@@ -159,18 +159,57 @@ function validar()
 		$("#id_parceiro").removeClass("is-invalid");	
 		$("#id_parceiro").addClass("is-valid");
 	}
-	
-	if($("#ds_local").val() == "")
+
+	if($("#id_estado option:selected").val() == "")
 	{
-		$("#ds_local").focus();
+		$("#id_estado").focus();
+		swal.fire("Erro", "Selecione a UF", "error");
+		$("#id_estado").addClass("is-invalid");
+		return false;		
+	}
+	else
+	{
+		$("#id_estado").removeClass("is-invalid");	
+		$("#id_estado").addClass("is-valid");
+	}
+	
+	if($("#id_cidade option:selected").val() == "")
+	{
+		$("#id_cidade").focus();
+		swal.fire("Erro", "Selecione o Municipio", "error");
+		$("#id_cidade").addClass("is-invalid");
+		return false;		
+	}
+	else
+	{
+		$("#id_cidade").removeClass("is-invalid");	
+		$("#id_cidade").addClass("is-valid");
+	}
+	
+	if($("#ds_bairro").val() == "")
+	{
+		$("#ds_bairro").focus();
 		swal.fire("Erro", "Preencha o local", "error");
-		$("#ds_local").addClass("is-invalid");
+		$("#ds_bairro").addClass("is-invalid");
 		return false;	
 	}
 	else
 	{
-		$("#ds_local").removeClass("is-invalid");	
-		$("#ds_local").addClass("is-valid");
+		$("#ds_bairro").removeClass("is-invalid");	
+		$("#ds_bairro").addClass("is-valid");
+	}
+
+	if($("#ds_sentido").val() == "")
+	{
+		$("#ds_sentido").focus();
+		swal.fire("Erro", "Preencha o local", "error");
+		$("#ds_sentido").addClass("is-invalid");
+		return false;	
+	}
+	else
+	{
+		$("#ds_sentido").removeClass("is-invalid");	
+		$("#ds_sentido").addClass("is-valid");
 	}
 	
 	if($("#fotos").val() == "")
