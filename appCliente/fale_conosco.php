@@ -59,14 +59,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="card card-custom card-stretch  h-auto">
                                         <div class="p-10">
                                             <div class="my-6">
-                                                <h4 class="font-weight-bolder">Envie uma mensagem</h4>
+                                                <h4 class="font-weight-bolder">Envie uma mensagem por Email</h4>
                                             </div>
 											<form id="form_usuario">
 												<div class="row">
                                                     <div class=" d-flex col-6" >
 														<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">Nome</legend>
-															<input class="border-0 w-100" style="height: 27px;" type="text" name="nu_cpf" id="nu_cpf">
+															<input class="border-0 w-100" style="height: 27px;" type="text" name="ds_nome" id="ds_nome">
 														</fieldset>                                                 
 													</div>
 													<div class=" d-flex col-6">
@@ -88,8 +88,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                     </div>
 									<div class="text-right py-8">
-										<a href="#" id="botao_voltar">Cancelar</a>
-										<button id="salvar" class="btn btn-primary ml-10">Salvar alterações</button>
+										<button id="enviar" class="btn btn-primary ml-10">Enviar</button>
 									</div>
 								</div>
 							</div>

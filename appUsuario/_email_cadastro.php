@@ -58,5 +58,5 @@ color: #ffffff;
   background-color: #B721FF;
   border-color: #B721FF;
   -webkit-box-shadow: none;
-  box-shadow: none;"
+  box-shadow: none;" 
    href="https://app.unimidias.com.br/appUsuario/gravar_usuario_email.php?ds_nome=<?php echo $_REQUEST['ds_nome']; ?>&ds_email=<?php echo $_REQUEST['ds_email']; ?>&ds_usuario=<?php echo $_REQUEST['ds_email']; ?>&id_perfil=1&s=<?php echo $senha; ?>&nu_cpf=<?php echo $_REQUEST['nu_cpf']; ?>" id="validar" class="btn btn-primary">Validar</a>
