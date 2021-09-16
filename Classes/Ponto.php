@@ -430,8 +430,8 @@
 				$select = "SELECT id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, ds_foto, t.ds_tipo, ds_sentido, e.ds_uf, c.ds_nome
 							FROM tb_ponto p
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
-							inner join cidade c on p.id_cidade=c.id_cidade
-							inner join estado e on p.id_estado=e.id_estado";
+							inner join cidades c on p.id_cidade=c.id_cidade
+							inner join estados e on p.id_estado=e.id_estado";
 				
 				$stmt = $con->prepare($select); 
 				
