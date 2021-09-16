@@ -78,10 +78,6 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 <?php if($id_perfil == 2  ) :   ?>
                   <input type="hidden" name="id_parceiro" id="id_parceiro" value="<?php echo $dados['id_parceiro'];?>">
                 <?php endif ; ?>
-                <div class="form-group col-4">
-                    <label>Descrição <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_descricao']?>"/>
-                </div>
             </div>
             <div class="form-group row">
                 <div class="form-group col-3">
