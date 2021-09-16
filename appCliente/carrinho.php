@@ -9,6 +9,7 @@
 
 	$cliente = new Cliente();
 	$retorno = $cliente->BuscarCarrinho($id_usuario);
+    $retornoTotal = $cliente->BuscarCarrinho($id_usuario);
     /*$id_midia = $dados["id_midia"];
     if($id_midia == 1){
         $bisemana = $_GET["bisemana"];
@@ -141,9 +142,17 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="mb-12">
                                         <a href="appCliente/listar_tipo.php" class="btn btn-primary w-100">Adicionar mais mídias</a>
                                     </div>
+                                    <?php 
+                                        $total = 0;
+                                        while($retornoTotal->fetch()){
+                                            $total++;
+                                        } 
+                                        if($total > 0) :
+                                    ?>
                                     <div class="mb-12">
                                         <a class="btn btn-primary w-100" href="appCliente/pagamento_carrinho.php">Ir para método de pagamento</a>
                                     </div>
+                                    <?php endif; ?>
                                     <div class="mb-12">
                                         <button class="btn btn-outline-primary w-100 mr-4" type="button" id="esvaziar">Esvaziar carrinho</button>
                                     </div>
