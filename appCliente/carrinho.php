@@ -152,10 +152,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="mb-12">
                                         <a class="btn btn-primary w-100" href="appCliente/pagamento_carrinho.php">Ir para método de pagamento</a>
                                     </div>
-                                    <?php endif; ?>
                                     <div class="mb-12">
                                         <button class="btn btn-outline-primary w-100 mr-4" type="button" id="esvaziar">Esvaziar carrinho</button>
                                     </div>
+                                    <?php endif; ?>
                                 </div>
                                 
                             </div>
