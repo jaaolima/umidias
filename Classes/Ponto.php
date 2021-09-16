@@ -1052,11 +1052,13 @@
 				
 				
 				$select = "SELECT 
-							a.id_ponto, id_alugado, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_bairro, ds_tamanho,  p.id_midia, a.id_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado, id_status_midia, s.ds_status, ds_arte
+							a.id_ponto, id_alugado, ds_descricao, ds_latitude, ds_longitude, nu_valor, ds_tipo, ds_observacao, ds_bairro, ds_tamanho,  p.id_midia, a.id_material, id_periodo, id_parceiro, dt_inicial, dt_final, nu_valor_alugado, id_status_midia, s.ds_status, ds_arte, st_status, e.ds_uf, c.ds_nome, ds_sentido
 						FROM rl_alugado a
 						right join tb_ponto p on a.id_ponto=p.id_ponto
 						inner join tb_tipo_midia t on p.id_midia=t.id_midia
 						left join tb_status_midia s on a.id_status_midia=s.id_status
+						left join cidades c on p.id_cidade=c.id_cidade
+						left join estados e on p.id_estado=e.id_estado
 						WHERE a.id_alugado = :id_alugado";
 
 				$stmt = $con->prepare($select);
