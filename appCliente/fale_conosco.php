@@ -55,7 +55,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<h1 class="h1-titulo">Fale conosco</h1>
 							</div>
 							<div class="row">
-                                <div class="col-xl-12 d-none" id="editar" >
+                                <div class="col-xl-12 " id="editar" >
                                     <div class="card card-custom card-stretch  h-auto">
                                         <div class="p-10">
                                             <div class="my-6">
