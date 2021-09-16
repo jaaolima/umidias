@@ -132,7 +132,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="mb-8">
 											<div class="mb-12">
 												<h1 class="h1-titulo"><?php echo $dados['ds_bairro']; ?></h1>
-												<span><?php echo $dados["ds_sentido"] .' - '. $dados['ds_bairro'] .', '. $dados['ds_nome'] . ' - '. $dados['ds_uf']; ?></span>
+												<span><?php echo $dados['ds_bairro'] .', '. $dados['ds_nome'] . ' - '. $dados['ds_uf']; ?></span>
 											</div>
 											<div class="my-12">
 												<h4 class="texto-negrito">Descrição </h4>
