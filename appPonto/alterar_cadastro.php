@@ -61,7 +61,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
     <!--begin::Form-->
     <form id="form_usuario">
         <input type="hidden" id="id_perfil" name="id_perfil" value="<?php echo $id_perfil; ?>">
-        <input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto?>">
+        <input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto?>"> 
         <div class="card-body">
             <div class="form-group row">
                 <?php if($id_perfil == 3  ) :   ?>
