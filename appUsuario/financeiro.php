@@ -58,6 +58,9 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="main d-flex flex-column flex-row-fluid">
 							<div class="mb-8 ">
 								<h1 class="h1-titulo">Financeiro</h1>
+								<div>
+									<div id="chart"></div>
+								</div>
 							</div>
 							<div class="row">
 								<div class="col-6">
@@ -96,7 +99,31 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/js/scripts.bundle.js"></script>
 		<script src="assets/js/scripts.bundle2.min.js"></script>
 		<script src="assets/js/appUsuario/perfil.js"></script>
-		<script src="assets/js/pages/crud/file-upload/dropzonejs.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
+			function drawChart() {
+
+				var data = google.visualization.arrayToDataTable([
+				['Task', 'Hours per Day'],
+				['Work',     11],
+				['Eat',      2],
+				['Commute',  2],
+				['Watch TV', 2],
+				['Sleep',    7]
+				]);
+
+				var options = {
+				title: 'My Daily Activities'
+				};
+
+				var chart = new google.visualization.PieChart(document.getElementById('chart'));
+
+				chart.draw(data, options);
+			}
+		</script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
