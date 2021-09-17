@@ -133,10 +133,14 @@ License: You must have a valid license purchased only from themeforest(the above
 						}	
 					?>
 				]);
+				
+				var options = {
+					title: 'My Daily Activities'
+				};
 
 				var chart = new google.visualization.PieChart(document.getElementById('chart'));
 
-				chart.draw(data);
+				chart.draw(data, options);
 			}
 		</script>
 		<!--end::Global Theme Bundle-->
