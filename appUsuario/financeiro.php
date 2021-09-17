@@ -4,10 +4,14 @@
 	error_reporting(E_ALL);
 	session_start();
 	require_once("../Classes/Usuario.php");
+	require_once("../Classes/Midia.php");
 	
 	$id_usuario = $_SESSION['id_usuario'];
 	$usuario = new Usuario();
+	$midia = new Midia();
+
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
+	$retorno = $midia->listarTipoMidia($_POST);
 
 ?>
 <!DOCTYPE html>
@@ -108,17 +112,18 @@ License: You must have a valid license purchased only from themeforest(the above
 			function drawChart() {
 
 				var data = google.visualization.arrayToDataTable([
-				['Task', 'Hours per Day'],
-				['Work',     11],
-				['Eat',      2],
-				['Commute',  2],
-				['Watch TV', 2],
-				['Sleep',    7]
+					['Tipo', 'Total'],
+					<?php 
+						while($dados = $retorno->fetch()){
+							$retornoFinanca = $usuario->buscarFinancasPonto($id_usuario, $dados['id_midia']);
+							$valorTotal = 0;
+							while($dadosRetorno = $retornoFinanca->fetch()){
+								$valorTotal += $dadosRetorno['nu_valor_alugado'];
+							}
+							echo "[".$dados['ds_tipo'].", ".$valorTotal."],";
+						}	
+					?>
 				]);
-
-				var options = {
-				title: 'My Daily Activities'
-				};
 
 				var chart = new google.visualization.PieChart(document.getElementById('chart'));
 

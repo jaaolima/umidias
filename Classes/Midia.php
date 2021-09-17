@@ -25,7 +25,7 @@
 			}
         }
 
-		public function listarTipoMidia(array $dados)
+		public function listarTipoMidia(array $dados) 
 		{
 			try{
 				$con = Conecta::criarConexao();

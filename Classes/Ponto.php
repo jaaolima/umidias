@@ -1048,7 +1048,7 @@
 		function BuscarDadosPontoAlugado($id_alugado) 
 		{
 			try{
-				$con = Conecta::criarConexao();
+				$con = Conecta::criarConexao(); 
 				
 				
 				$select = "SELECT 
