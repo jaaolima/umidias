@@ -108,10 +108,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/js/appUsuario/perfil.js"></script>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript">
-			$(document).ready(function(){
-				google.charts.load('current', {'packages':['corechart']});
-				google.charts.setOnLoadCallback(drawChart);
-			})
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
 			
 
 			function drawChart() {
@@ -137,7 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 				var chart = new google.visualization.PieChart(document.getElementById('chart'));
 
-				chart.draw(data, options);
+				chart.draw(data);
 			}
 		</script>
 		<!--end::Global Theme Bundle-->
