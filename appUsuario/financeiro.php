@@ -57,7 +57,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
 							<div class="mb-8 ">
-								<h1 class="h1-titulo">Financeiro</h1>
+								<h1 class="titulo-div">Financeiro</h1>
 								<div>
 									<div id="chart"></div>
 								</div>
