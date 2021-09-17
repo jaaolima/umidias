@@ -84,8 +84,6 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
                                 </div>
-							</div>
-							<div class="row">
 								<div class="col-xl-12">
 									<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
 										<div class="my-6">
@@ -155,10 +153,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 								</div>
-
-							</div>
-
-							
+							</div>	
 							<!--end::Content-->
 						</div>
 						<!--begin::Content Wrapper-->
