@@ -578,7 +578,7 @@
 							right join tb_ponto p on a.id_ponto=p.id_ponto
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
 							where id_usuario=:id_usuario
-							and st_status = 'A'
+							and a.st_status = 'A'
 							and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto)";
 				
 				$stmt = $con->prepare($select); 
