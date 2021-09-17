@@ -1075,6 +1075,34 @@
     			print "ERRO:".$e->getMessage();	
 			}	
 		}
+
+		function BuscarFinancasPonto($id_usuario, $id_midia) 
+		{
+			try{
+				$con = Conecta::criarConexao(); 
+				
+				
+				$select = "SELECT 
+							a.id_ponto, nu_valor_alugado
+						FROM rl_alugado a
+						right join tb_ponto p on a.id_ponto = p.id_ponto
+						WHERE a.id_usuario = :id_usuario and p.id_midia=:id_midia";
+
+				$stmt = $con->prepare($select);
+			   	$params = array(':id_usuario' => $id_usuario,
+								':id_midia' => $id_midia);
+			   
+			    $stmt->execute($params);
+
+				
+			}	
+			catch(Exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();	
+			}	
+		}
+
 		function BuscarDadosAlugado($id_alugado)
 		{
 			try{
