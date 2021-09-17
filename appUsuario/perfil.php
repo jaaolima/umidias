@@ -257,7 +257,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<a href="#" id="botao_voltar">Cancelar</a>
 										<button id="salvar" class="btn btn-primary ml-10">Salvar alterações</button>
 									</div>
-								</div>
+								</div> 
 								
 							</div>
 							<!--end::Content-->
