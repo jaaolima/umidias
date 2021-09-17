@@ -1086,7 +1086,7 @@
 							a.id_ponto, nu_valor_alugado
 						FROM rl_alugado a
 						right join tb_ponto p on a.id_ponto = p.id_ponto
-						WHERE p.id_usuario = :id_usuario and p.id_midia=:id_midia";
+						WHERE a.id_usuario = :id_usuario and p.id_midia=:id_midia";
 
 				$stmt = $con->prepare($select);
 			   	$params = array(':id_usuario' => $id_usuario,
