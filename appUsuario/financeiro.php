@@ -117,9 +117,9 @@ License: You must have a valid license purchased only from themeforest(the above
 					['Tipo', 'Total'],
 					<?php 
 						while($dados = $retorno->fetch()){
-							$retornoFinanca.$dados['id_midia'] = $ponto->buscarFinancasPonto($id_usuario, $dados['id_midia']);
+							$retornoFinanca = $ponto->buscarFinancasPonto($id_usuario, $dados['id_midia']);
 							$valorTotal = 0;
-							while($dadosRetorno = $retornoFinanca.$dados['id_midia']->fetch()){
+							while($dadosRetorno = $retornoFinanca->fetch()){
 								$valorTotal += $dadosRetorno['nu_valor_alugado'];
 							}
 							echo "[".$dados['ds_tipo'].", ".$valorTotal."],";
