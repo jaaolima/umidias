@@ -1094,6 +1094,8 @@
 			   
 			    $stmt->execute($params);
 
+				return $stmt;
+
 				
 			}	
 			catch(Exception $e)
