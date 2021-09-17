@@ -116,7 +116,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			function drawChart() {
 
 				var data = google.visualization.arrayToDataTable([
-					['Tipo', 'Total']
+					['Tipo', 'Total em R$']
 					<?php 
 						while($dados = $retorno->fetch()){
 							$retornoFinanca = $ponto->buscarFinancasPonto($id_usuario, $dados['id_midia']);
