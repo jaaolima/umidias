@@ -108,8 +108,11 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/js/appUsuario/perfil.js"></script>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript">
-			google.charts.load('current', {'packages':['corechart']});
-			google.charts.setOnLoadCallback(drawChart);
+			$(document).ready(function(){
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+			})
+			
 
 			function drawChart() {
 
