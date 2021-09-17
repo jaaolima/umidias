@@ -116,14 +116,14 @@ License: You must have a valid license purchased only from themeforest(the above
 				var data = google.visualization.arrayToDataTable([
 					['Tipo', 'Total'],
 					<?php 
-						while($dados = $retorno->fetch()){
-							$retornoFinanca = $ponto->buscarFinancasPonto($id_usuario, $dados['id_midia']);
-							$valorTotal = 0;
-							while($dadosRetorno = $retornoFinanca->fetch()){
-								$valorTotal += $dadosRetorno['nu_valor_alugado'];
-							}
-							echo "['".$dados['ds_tipo']."', 'R$ ".$valorTotal."'],";
-						}	
+						// while($dados = $retorno->fetch()){
+						// 	$retornoFinanca = $ponto->buscarFinancasPonto($id_usuario, $dados['id_midia']);
+						// 	$valorTotal = 0;
+						// 	while($dadosRetorno = $retornoFinanca->fetch()){
+						// 		$valorTotal += $dadosRetorno['nu_valor_alugado'];
+						// 	}
+						// 	echo "['".$dados['ds_tipo']."', 'R$ ".$valorTotal."'],";
+						// }	
 					?>
 				]);
 
