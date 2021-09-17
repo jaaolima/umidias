@@ -4,11 +4,13 @@
 	error_reporting(E_ALL);
 	session_start();
 	require_once("../Classes/Usuario.php");
+	require_once("../Classes/Ponto.php");
 	require_once("../Classes/Midia.php");
 	
 	$id_usuario = $_SESSION['id_usuario'];
 	$usuario = new Usuario();
 	$midia = new Midia();
+	$ponto = new Ponto();
 
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 	$retorno = $midia->listarTipoMidia($_POST);
@@ -115,7 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					['Tipo', 'Total'],
 					<?php 
 						while($dados = $retorno->fetch()){
-							$retornoFinanca = $usuario->buscarFinancasPonto($id_usuario, $dados['id_midia']);
+							$retornoFinanca = $ponto->buscarFinancasPonto($id_usuario, $dados['id_midia']);
 							$valorTotal = 0;
 							while($dadosRetorno = $retornoFinanca->fetch()){
 								$valorTotal += $dadosRetorno['nu_valor_alugado'];
