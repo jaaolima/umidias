@@ -115,6 +115,11 @@ License: You must have a valid license purchased only from themeforest(the above
 
 				var data = google.visualization.arrayToDataTable([
 					['Tipo', 'Total'],
+					['Work',     11],
+					['Eat',      2],
+					['Commute',  2],
+					['Watch TV', 2],
+					['Sleep',    7]
 					<?php 
 						// while($dados = $retorno->fetch()){
 						// 	$retornoFinanca = $ponto->buscarFinancasPonto($id_usuario, $dados['id_midia']);
