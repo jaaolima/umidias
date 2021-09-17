@@ -130,7 +130,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				]);
 
 				var options = {
-					title: 'My Daily Activities'
+					title: 'Quantidade investida em R$'
 				};
 
 				var chart = new google.visualization.PieChart(document.getElementById('chart'));
