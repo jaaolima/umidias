@@ -58,15 +58,16 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="main d-flex flex-column flex-row-fluid">
 							<div class="mb-8 ">
 								<h1 class="h1-titulo">Financeiro</h1>
-								<div>
-									<div id="chart"></div>
-								</div>
+								
 							</div>
 							<div class="row">
 								<div class="col-6">
 									<div class="card card-custom card-stretch p-10">
 										<div class="my-6">
 											<h4 class="titulo-div">Suas finanças</h4>
+										</div>
+										<div>
+											<div id="chart"></div>
 										</div>
 									</div>
                                 </div>
