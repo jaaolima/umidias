@@ -116,12 +116,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			function drawChart() {
 
 				var data = google.visualization.arrayToDataTable([
-					['Tipo', 'Total'],
-					['Work',     11],
-					['Eat',      2],
-					['Commute',  2],
-					['Watch TV', 2],
-					['Sleep',    7]
+					['Tipo', 'Total']
 					<?php 
 						while($dados = $retorno->fetch()){
 							$retornoFinanca = $ponto->buscarFinancasPonto($id_usuario, $dados['id_midia']);
@@ -129,11 +124,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							while($dadosRetorno = $retornoFinanca->fetch()){
 								$valorTotal += $dadosRetorno['nu_valor_alugado'];
 							}
-							echo "['".$dados['ds_tipo']."', 'R$ ".$valorTotal."'],";
+							echo ",['".$dados['ds_tipo']."', 'R$ ".$valorTotal."']";
 						}	
 					?>
 				]);
-				
+
 				var options = {
 					title: 'My Daily Activities'
 				};
