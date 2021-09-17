@@ -124,7 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							while($dadosRetorno = $retornoFinanca->fetch()){
 								$valorTotal += $dadosRetorno['nu_valor_alugado'];
 							}
-							echo ",['".$dados['ds_tipo']."', 'R$ ".$valorTotal."']";
+							echo ",['".$dados['ds_tipo']."', ".$valorTotal."]";
 						}	
 					?>
 				]);
