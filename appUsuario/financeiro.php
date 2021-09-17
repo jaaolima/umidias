@@ -121,14 +121,14 @@ License: You must have a valid license purchased only from themeforest(the above
 					['Watch TV', 2],
 					['Sleep',    7]
 					<?php 
-						// while($dados = $retorno->fetch()){
-						// 	$retornoFinanca = $ponto->buscarFinancasPonto($id_usuario, $dados['id_midia']);
-						// 	$valorTotal = 0;
-						// 	while($dadosRetorno = $retornoFinanca->fetch()){
-						// 		$valorTotal += $dadosRetorno['nu_valor_alugado'];
-						// 	}
-						// 	echo "['".$dados['ds_tipo']."', 'R$ ".$valorTotal."'],";
-						// }	
+						while($dados = $retorno->fetch()){
+							$retornoFinanca = $ponto->buscarFinancasPonto($id_usuario, $dados['id_midia']);
+							$valorTotal = 0;
+							while($dadosRetorno = $retornoFinanca->fetch()){
+								$valorTotal += $dadosRetorno['nu_valor_alugado'];
+							}
+							echo "['".$dados['ds_tipo']."', 'R$ ".$valorTotal."'],";
+						}	
 					?>
 				]);
 
