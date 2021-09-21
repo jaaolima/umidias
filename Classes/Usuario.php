@@ -481,7 +481,7 @@
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "delete from tb_usuario
+				$insert = "delete ds_foto from tb_usuario
 							WHERE id_usuario=:id_usuario";
 				
 				$stmt = $con->prepare($insert);
