@@ -111,7 +111,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<button class="btn btn-outline-primary mb-4" id="salvarFoto" type="button">
 																		Escolher foto
 																	</button>
-																	<a class="text-pimary">Cancelar</a>
+																	<a class="text-pimary" id="fecharModal">Cancelar</a>
 																	<input type="hidden" name="id_usuario" value="<?php echo $id_usuario; ?>">
 																</form>
 															</div>

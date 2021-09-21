@@ -17,6 +17,11 @@ $(document).ready(function(){
         $("#perfil").removeClass("d-none"); 
     })
 
+	$("#modalFechar").on("click", function(){
+		$('#Foto').modal('hide'); 
+    })
+
+
 	$("#nu_cpf").inputmask({
 		"mask": "999.999.999-99",
 		autoUnmask: true,
@@ -60,6 +65,7 @@ $(document).ready(function(){
 					, processData: false
 					, contentType: false
 					, success: function(html) { 
+						$('#Foto').modal('hide');
 						swal.fire({ 
 							position: 'top-right',
 							type: 'success',
