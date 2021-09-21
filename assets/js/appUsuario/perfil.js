@@ -14,7 +14,7 @@ $(document).ready(function(){
 	$("#botao_voltar").on("click", function(){
 
         $("#editar").addClass("d-none");
-        $("#perfil").removeClass("d-none");
+        $("#perfil").removeClass("d-none"); 
     })
 
 	$("#nu_cpf").inputmask({
@@ -44,6 +44,35 @@ $(document).ready(function(){
 					swal.fire("Erro", data.responseText, "error");
 				}
 		    });		
+		}	
+	});
+
+	$("#salvarFoto").on("click", function(e){ 
+		if(validarFoto())
+		{ 
+			var form = $("#form_foto").get(0);  
+				$.ajax({
+					url: 'appUsuario/alterar_foto.php'
+					, data: $("#form_foto").serialize()
+					, type: 'post'
+					, data: new FormData(form)
+					, mimeType: 'multipart/form-data'
+					, processData: false
+					, contentType: false
+					, success: function(html) { 
+						// swal.fire({ 
+						// 	position: 'top-right',
+						// 	type: 'success',
+						// 	title: html,
+						// 	showConfirmButton: true
+						// });
+						
+						redirectTo("appUsuario/perfil.php");
+					}
+					, error: function (data) {
+						swal.fire("Erro", data.responseText, "error");
+					}
+				});			
 		}	
 	});
 

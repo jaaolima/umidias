@@ -2,7 +2,7 @@
 	require_once("Conecta.php");
 
 	class Usuario{
-		function validaLogin($ds_usuario, $ds_senha)
+		function validaLogin($ds_usuario, $ds_senha) 
 		{
 			try{
 				$con = Conecta::criarConexao();
@@ -421,7 +421,59 @@
 		  
 			  // retorna a senha embaralhada com "str_shuffle" com o tamanho definido pela variável $tamanho
 			  return substr(str_shuffle($senha),0,$tamanho);
-		  }
+		}
+
+		public function gravarAlterarFoto(array $dados)
+		{
+
+			$ds_foto		= $_FILES['ds_foto'];
+			$id_usuario		= $dados['id_usuario'];
+
+			// $nome = $ds_foto['name'][0];
+			// $tipo = $ds_foto['type'][0];
+			// $tmp = $ds_foto['tmp_name'][0];
+			// $tamanho = $ds_foto['size'][0];
+
+			// //gravar foto
+			// $tamanho = 20000000;
+
+			// $error = array();
+			// $tamanho_mb = $tamanho/1024/1024;
+
+			// // Pega extensão da imagem
+			// preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $nome, $ext);
+			// // Gera um nome único para o arquivo
+			// $nome_arquivo = md5(uniqid(time())) . "arquivo.". $ext[1];
+			// // Caminho de onde ficará o arquivo
+			// $caminho_arquivo = "/var/www/app.unimidias.com.br/docs_usuario/" . $nome_arquivo;
+
+			// $gravar_caminho_arquivo = "docs_usuario/" . $nome_arquivo;
+			
+
+			// // Faz o upload da imagem para seu respectivo caminho
+			// $moved = move_uploaded_file($tmp,  $caminho_arquivo);
+
+			try{
+				$con = Conecta::criarConexao();
+				$update = "UPDATE tb_usuario set ds_foto = :ds_foto
+						WHERE id_usuario = :id_usuario";
+				
+				$stmt = $con->prepare($update);
+				
+				$params = array(':ds_foto' => $ds_foto['name'][0],
+								':id_usuario'=>$id_usuario);
+				$stmt->execute($params);
+
+				
+				echo "Dados alterados com sucesso!";
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
 
 	}
 

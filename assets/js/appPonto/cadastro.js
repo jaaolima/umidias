@@ -57,7 +57,7 @@ $(document).ready(function() {
 			var form = $("#form_usuario").get(0); 
 			
 			if(validar() )
-			{ 	var form = $("#form_usuario").get(0); 
+			{ 	var form = $("#form_usuario").get(0);  
 				$.ajax({
 					url: 'appPonto/gravar_ponto.php'
 					, data: $("#form_usuario").serialize()

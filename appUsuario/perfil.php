@@ -106,11 +106,14 @@ License: You must have a valid license purchased only from themeforest(the above
 																<p class="texto-fraco">ou</p>
 															</div> -->
 															<div class="my4 w-100"style="display:inline-grid;">
-																<input type="file" name="" class="mb-4">
-																<button class="btn btn-outline-primary mb-4" data-action="change" data-toggle="tooltip">
-																	Escolher foto
-																</button>
-																<a class="text-pimary">Cancelar</a>
+																<form name="form_foto">
+																	<input type="file" name="ds_foto" id="ds_foto" class="mb-4">
+																	<button class="btn btn-outline-primary mb-4" id="salvarFoto">
+																		Escolher foto
+																	</button>
+																	<a class="text-pimary">Cancelar</a>
+																	<input type="hidden" name="id_usuario" value="<?php echo $id_usuario; ?>">
+																</form>
 															</div>
 														
 														</div>
