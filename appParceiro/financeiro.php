@@ -17,7 +17,6 @@
 	$retorno = $midia->listarTipoMidia($_POST);
 
 ?>
-<!DOCTYPE html>
 <!--
 Template Name: Metronic - Bootstrap 4 HTML, React, Angular 10 & VueJS Admin Dashboard Theme
 Author: KeenThemes
