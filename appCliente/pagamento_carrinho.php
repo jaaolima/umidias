@@ -174,7 +174,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         while($dados = $totalCarrinho->fetch()){
                                             $Rvirgula = str_replace(",", "", $dados["nu_valor_alugado"]); 
                                             $valor = str_replace("R$ ", "", $Rvirgula);
-                                            $total .= $valor;
+                                            $total += $valor;
                                         }
                                     ?>
                                     <h3 class="font-weight-bolder">Total</h3>
