@@ -75,22 +75,22 @@ echo "<div class='item' >
     $(document).ready(function(){
         //carousel
         $(".owl-carousel").owlCarousel({
-            items:3,
+            items:4,
             center:true,
             loop:true,
             dots:false,
             margin:30,
-            // responsive: {
-            // 	0:{
-            // 		items:1
-            // 	},
-            // 	360:{
-            // 		items:3
-            // 	},
-            // 	2000:{
-            // 		items:4
-            // 	}
-            // }
+            responsive: {
+            	0:{
+            		items:1
+            	},
+            	360:{
+            		items:3
+            	},
+            	2000:{
+            		items:4
+            	}
+            }
 
         });
     })
