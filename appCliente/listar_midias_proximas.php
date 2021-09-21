@@ -75,7 +75,7 @@ echo "<div class='item' >
     $(document).ready(function(){
         //carousel
         $(".owl-carousel").owlCarousel({
-            items:4,
+            items:3,
             center:true,
             loop:true,
             dots:false,
