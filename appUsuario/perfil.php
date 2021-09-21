@@ -106,9 +106,9 @@ License: You must have a valid license purchased only from themeforest(the above
 																<p class="texto-fraco">ou</p>
 															</div> -->
 															<div class="my4 w-100"style="display:inline-grid;">
-																<form name="form_foto" class="d-grid">
+																<form name="form_foto" style="display:grid;">
 																	<input type="file" name="ds_foto" id="ds_foto" class="mb-4">
-																	<button class="btn btn-outline-primary mb-4" id="salvarFoto">
+																	<button class="btn btn-outline-primary mb-4" id="salvarFoto" type="button">
 																		Escolher foto
 																	</button>
 																	<a class="text-pimary">Cancelar</a>
