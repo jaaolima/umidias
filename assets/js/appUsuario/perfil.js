@@ -60,12 +60,12 @@ $(document).ready(function(){
 					, processData: false
 					, contentType: false
 					, success: function(html) { 
-						// swal.fire({ 
-						// 	position: 'top-right',
-						// 	type: 'success',
-						// 	title: html,
-						// 	showConfirmButton: true
-						// });
+						swal.fire({ 
+							position: 'top-right',
+							type: 'success',
+							title: html,
+							showConfirmButton: true
+						});
 						
 						redirectTo("appUsuario/perfil.php");
 					}
