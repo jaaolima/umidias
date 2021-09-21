@@ -1564,7 +1564,7 @@
 				
 				$stmt = $con->prepare($insert);
 				
-                $params = array(':id_ponto_foto' => $id_ponto_foto);
+                $params = array(':id_ponto_foto' => $id_ponto_foto); 
                                 
 				$stmt->execute($params);
 				
