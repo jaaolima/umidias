@@ -74,7 +74,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                     <select class="form-control" id="id_estado" name="id_estado">
                         <option value="">Selecione...</option>
                         <?php 
-                            echo $optionsUF;
+                            echo $optionsUF; 
                         ?>
                     </select>
                 </div>

@@ -172,6 +172,25 @@ function validar()
 	return true;
 }
 
+function validarFoto()
+{
+	if($("#ds_foto").val() == "")
+	{
+		$("#ds_foto").focus();
+		swal.fire("Erro", "Adicione uma foto", "error");
+		$("#ds_foto").addClass("is-invalid");
+		return false;	
+	}
+	else
+	{
+		$("#ds_foto").removeClass("is-invalid");	
+		$("#ds_foto").addClass("is-valid");
+	}
+	
+
+	return true;
+}
+
 function validarCPF(cpf) {	
 
 	cpf = cpf.replace(/[^\d]+/g,'');
