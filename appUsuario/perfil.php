@@ -89,7 +89,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															<div class="my-4">
 																<h3 class="texto-negrito">Trocar imagem do perfil</h3>
 															</div>
-															<div class="dropzone dropzone-default text-center" id="kt_dropzone_1">
+															<!-- <div class="dropzone dropzone-default text-center" id="kt_dropzone_1">
 																<div class="dropzone-msg dz-message needsclick">
 																	<div class="my-4 dropzone-msg-desc" >
 																		<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,9 +104,12 @@ License: You must have a valid license purchased only from themeforest(the above
 															</div>
 															<div class="my-4">
 																<p class="texto-fraco">ou</p>
-															</div>
+															</div> -->
 															<div class="my4 w-100"style="display:inline-grid;">
-																<button class="btn btn-outline-primary mb-4">Escolher foto</button>
+																<button class="btn btn-outline-primary mb-4">
+																	<input type="file">
+																	Escolher foto
+																</button>
 																<a class="text-pimary">Cancelar</a>
 															</div>
 														
@@ -184,36 +187,6 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>														       																									 
 												 </div>               										
                                             </div>
-											<div class="modal fade" id="Foto">
-												<div class="modal-dialog modal-sm" role="document">
-													<div class="modal-content">
-														<div class="modal-body text-center">
-															<div class="my-4">
-																<h3 class="texto-negrito">Trocar imagem do perfil</h3>
-															</div>
-															<form action="/file-upload" id="my-awesome-dropzone" class="my-4 dropzone dropzone-default text-center" >
-																<div class="my-4">
-																	<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="#B721FF"/>
-																		<path d="M56.6101 36.641H43.0101V23.041C43.0101 22.1923 42.673 21.3783 42.0728 20.7781C41.4727 20.178 40.6587 19.8408 39.8099 19.8408C38.9612 19.8408 38.1472 20.178 37.547 20.7781C36.9469 21.3783 36.6097 22.1923 36.6097 23.041V36.641H23.0098C22.161 36.641 21.347 36.9781 20.7469 37.5783C20.1467 38.1785 19.8096 38.9924 19.8096 39.8412C19.8096 40.6899 20.1467 41.5039 20.7469 42.1041C21.347 42.7042 22.161 43.0414 23.0098 43.0414H36.6097V56.6413C36.6097 57.4901 36.9469 58.3041 37.547 58.9042C38.1472 59.5044 38.9612 59.8415 39.8099 59.8415C40.6587 59.8415 41.4727 59.5044 42.0728 58.9042C42.673 58.3041 43.0101 57.4901 43.0101 56.6413V43.0414H56.6101C57.4588 43.0414 58.2728 42.7042 58.873 42.1041C59.4731 41.5039 59.8103 40.6899 59.8103 39.8412C59.8103 38.9924 59.4731 38.1785 58.873 37.5783C58.2728 36.9781 57.4588 36.641 56.6101 36.641Z" fill="white"/>
-																	</svg>
-																</div>
-																<div>
-																	<p class="texto-chumbo">Arraste e solte a sua imagem aqui</p>
-																</div>
-															</form>
-															<div class="my-4">
-																<p class="texto-fraco">ou</p>
-															</div>
-															<div class="my4 w-100"style="display:inline-grid;">
-																<button class="btn btn-outline-primary mb-4">Escolher foto</button>
-																<a class="text-pimary">Cancelar</a>
-															</div>
-														
-														</div>
-													</div>
-												</div>
-											</div>
 											<form id="form_usuario">
 												<div class=" d-flex">
 													<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
@@ -257,7 +230,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<a href="#" id="botao_voltar">Cancelar</a>
 										<button id="salvar" class="btn btn-primary ml-10">Salvar alterações</button>
 									</div>
-								</div> 
+								</div>  
 								
 							</div>
 							<!--end::Content-->
