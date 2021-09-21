@@ -35,7 +35,7 @@ $(document).ready(function(){
 			if (result.value) {
 				$.ajax({
 					url: 'appUsuario/excluir_foto_usuario.php'
-					, data: id_usuario
+					, data: {id_usuario}
 					, type: 'post'
 					, success: function(html) { 
 						$('#Foto').modal('hide');

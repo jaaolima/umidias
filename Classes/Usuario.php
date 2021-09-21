@@ -475,9 +475,9 @@
 			}
 		}
 
-		public function excluirFotoUsuario($id_usuario)
+		public function excluirFotoUsuario(array $dados)
 		{
-
+			$id_usuario = $dados['id_usuario'];
 			
 			try{
 				$con = Conecta::criarConexao();
