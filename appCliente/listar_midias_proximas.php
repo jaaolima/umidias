@@ -87,7 +87,7 @@ echo "<div class='item' >
             	360:{
             		items:3
             	},
-            	2000:{
+            	1000:{
             		items:4
             	}
             }
