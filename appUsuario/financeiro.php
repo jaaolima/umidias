@@ -58,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		</div>
 		<div class="row">
 			<div class="col-6">
-				<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center p-10">
+				<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white p-10">
 					<div class="my-6">
 						<h4 class="titulo-div">Suas finanças</h4>
 					</div>
@@ -68,7 +68,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 			</div>
 			<div class="col-6">
-				<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center p-10">
+				<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white p-10">
 					<div class="my-6">
 						<h4 class="titulo-div">Métodos de pagamento</h4>
 					</div>
@@ -77,7 +77,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center p-10"  >
+				<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white p-10"  >
 					<div class="my-6">
 						<h4 class="titulo-div">Pagamentos Pendentes</h4>
 					</div>
