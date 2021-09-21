@@ -167,7 +167,7 @@
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-financeiro btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
-									<a href="appUsuario/financeiro.php" class="btn rounded mx-2 text-left ">
+									<a href="appCliente/financeiro.php" class="btn rounded mx-2 text-left ">
 									<i class="flaticon-coins icon-xl svg-hover svg-financeiro"></i>
  
 										<span class="menu-text texto-menu texto-menu-financeiro"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
@@ -194,7 +194,7 @@
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-financeiro btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
-									<a href="#" class="btn rounded mx-2 text-left ">
+									<a href="appParceiro/financeiro.php" class="btn rounded mx-2 text-left ">
 									<i class="flaticon-coins icon-xl svg-hover svg-financeiro"></i>
  
 										<span class="menu-text texto-menu texto-menu-financeiro"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
@@ -210,7 +210,7 @@
 									</a>
 								</li>
 								<li class="menu-item my-4 botao-menu botao-menu-financeiro btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
-									<a href="appUsuario/financeiro.php" class="btn rounded mx-2 text-left ">
+									<a href="appParceiro/financeiro.php" class="btn rounded mx-2 text-left ">
 										<i class="flaticon-coins icon-xl svg-hover svg-financeiro"></i>
  
 										<span class="menu-text texto-menu texto-menu-financeiro"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financeiro</font></font></span>
