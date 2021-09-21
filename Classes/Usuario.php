@@ -429,10 +429,10 @@
 			$ds_foto		= $_FILES['ds_foto'];
 			$id_usuario		= $dados['id_usuario'];
 
-			// $nome = $ds_foto['name'][0];
-			// $tipo = $ds_foto['type'][0];
-			// $tmp = $ds_foto['tmp_name'][0];
-			// $tamanho = $ds_foto['size'][0];
+			// $nome = $ds_foto['name'];
+			// $tipo = $ds_foto['type'];
+			// $tmp = $ds_foto['tmp_name'];
+			// $tamanho = $ds_foto['size'];
 
 			// //gravar foto
 			// $tamanho = 20000000;
@@ -460,7 +460,7 @@
 				
 				$stmt = $con->prepare($update);
 				
-				$params = array(':ds_foto' => $ds_foto['name'][0],
+				$params = array(':ds_foto' => $ds_foto['name'],
 								':id_usuario'=>$id_usuario);
 				$stmt->execute($params);
 
