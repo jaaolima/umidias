@@ -8,6 +8,7 @@
 	require_once("../Classes/Midia.php");
 	
 	$id_usuario = $_SESSION['id_usuario'];
+    $id_parceiro = $_SESSION['id_parceiro'];
 	$usuario = new Usuario();
 	$midia = new Midia();
 	$ponto = new Ponto();
@@ -169,7 +170,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						['Tipo', 'Total em R$']
 						<?php 
 							while($dados = $retorno->fetch()){
-								$retornoFinanca = $ponto->buscarFinancasPonto($id_usuario, $dados['id_midia']);
+								$retornoFinanca = $ponto->buscarFinancasPonto($id_parceiro, $dados['id_midia']);
 								$valorTotal = 0;
 								while($dadosRetorno = $retornoFinanca->fetch()){
 									$valorTotal += $dadosRetorno['nu_valor_alugado'];
@@ -180,7 +181,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					]);
 
 					var options = {
-						title: 'Quantidade investida em R$'
+						title: 'Quantidade recebida em R$'
 					};
 
 					var chart = new google.visualization.PieChart(document.getElementById('chart'));
