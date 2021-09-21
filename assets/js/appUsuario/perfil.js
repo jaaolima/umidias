@@ -17,7 +17,7 @@ $(document).ready(function(){
         $("#perfil").removeClass("d-none"); 
     })
 
-	$("#modalFechar").on("click", function(){
+	$("#fecharModal").on("click", function(){
 		$('#Foto').modal('hide'); 
     })
 
