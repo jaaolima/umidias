@@ -106,10 +106,10 @@ License: You must have a valid license purchased only from themeforest(the above
 																<p class="texto-fraco">ou</p>
 															</div> -->
 															<div class="my4 w-100"style="display:inline-grid;">
-																<label class="btn btn-outline-primary mb-4" data-action="change" data-toggle="tooltip">
+																<input type="file" name="" class="mb-4">
+																<button class="btn btn-outline-primary mb-4" data-action="change" data-toggle="tooltip">
 																	Escolher foto
-																	<input type="file" name="profile_avatar" style="width: 0 !important;height: 0 !important;overflow: hidden;opacity: 0;">
-																</label>
+																</button>
 																<a class="text-pimary">Cancelar</a>
 															</div>
 														
