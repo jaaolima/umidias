@@ -75,8 +75,8 @@ echo "<div class='item' >
     $(document).ready(function(){
         //carousel
         $(".owl-carousel").owlCarousel({
-            autoplay:false
-            autoplayTimeout:8000
+            autoplay:false,
+            autoplayTimeout:8000,
             loop:false,
             stagePadding: 50,
             items:4,
