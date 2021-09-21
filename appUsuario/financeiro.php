@@ -74,7 +74,9 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-12">
+		</div>
+		<div class="row">
+			<div class="col-12">
 				<div class="card card-custom bg-white card-stretch p-10"  >
 					<div class="my-6">
 						<h4 class="titulo-div">Pagamentos Pendentes</h4>
