@@ -66,13 +66,6 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 				</div>
 			</div>
-			<div class="col-6">
-				<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white p-10">
-					<div class="my-6">
-						<h4 class="titulo-div">Métodos de pagamento</h4>
-					</div>
-				</div>
-			</div>
 		</div>
 		<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
 		<!--begin::Global Config(global config for global JS scripts)-->
