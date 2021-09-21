@@ -170,7 +170,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						['Tipo', 'Total em R$']
 						<?php 
 							while($dados = $retorno->fetch()){
-								$retornoFinanca = $ponto->buscarFinancasPonto($id_parceiro, $dados['id_midia']);
+								$retornoFinanca = $ponto->buscarFinancasPontoParceiro($id_parceiro, $dados['id_midia']);
 								$valorTotal = 0;
 								while($dadosRetorno = $retornoFinanca->fetch()){
 									$valorTotal += $dadosRetorno['nu_valor_alugado'];
