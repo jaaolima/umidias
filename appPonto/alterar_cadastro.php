@@ -18,7 +18,7 @@ $Categoria = new Categoria();
 $ponto = new Ponto();
 
 $dados = $ponto->buscarDadosPonto($id_ponto);
-$dadosFoto = $ponto->BuscarFotoPonto($id_ponto);
+$dadosFoto = $ponto->BuscarFotoPonto($id_ponto); 
 $dadosFotoExcluir = $ponto->BuscarFotoPonto($id_ponto);
 $id_categoria = $dados["id_midia"];
 $id_material = $dados["id_material"]; 

@@ -78,7 +78,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</a>
 													<div class="dropdown-menu">
 														<a class="dropdown-item" href="#" data-toggle="modal" data-target="#Foto">Trocar foto</a>
-														<a class="dropdown-item" href="#">Excluir foto</a>
+														<a class="dropdown-item" href="#" id='excluirFoto'>Excluir foto</a>
 													</div>														       																									 
 												 </div>               										
                                             </div>

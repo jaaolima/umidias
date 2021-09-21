@@ -21,6 +21,43 @@ $(document).ready(function(){
 		$('#Foto').modal('hide'); 
     })
 
+	$('#excluirFoto').on('click', function(e){  
+		id_usuario = $("#id_usuario").val();  
+		swal.fire({
+			title: 'Tem certeza?',
+			text: 'Desejar excluir essa Foto?',
+			type: 'warning',
+			showCancelButton: true,
+			cancelButtonColor: '#fd397a',
+			confirmButtonText: 'Sim, posseguir!',
+			cancelButtonText: 'Cancelar'
+		}).then(function(result) {
+			if (result.value) {
+				$.ajax({
+					url: 'appUsuario/excluir_foto_usuario.php'
+					, data: id_usuario
+					, type: 'post'
+					, success: function(html) { 
+						$('#Foto').modal('hide');
+						swal.fire({ 
+							position: 'top-right',
+							type: 'success',
+							title: html,
+							showConfirmButton: true
+						});
+						
+						redirectTo('appUsuario/perfil.php');
+					}
+					, error: function (data) {
+						swal.fire('Erro', data.responseText, 'error');
+					}
+				});
+				
+			}
+		});
+				
+	})
+
 
 	$("#nu_cpf").inputmask({
 		"mask": "999.999.999-99",
