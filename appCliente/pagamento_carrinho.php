@@ -10,7 +10,7 @@
 	$cliente = new Cliente();
 
 	$retorno = $cliente->BuscarCarrinho($id_usuario);
-    $totalCarrinho = $cliente->BuscarTotalCarrinho($id_usuario);
+    $totalCarrinho = $cliente->BuscarCarrinho($id_usuario);
 
 ?>
 <!DOCTYPE html>
@@ -160,7 +160,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </td>
                                                         <td>".$dados["ds_tipo"]."</td>
                                                         <td>".$dados["ds_material"]."</td>
-                                                        <td>".$dados["nu_valor_alugado"]."</td>
+                                                        <td>R$ ".$dados["nu_valor_alugado"]."</td>
                                                     </tr>";
                                             }
                                             
@@ -170,15 +170,15 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="my-6 mx-6 text-right">
                                     <?php 
-                                        // $total = 0;
-                                        // while($dados = $totalCarrinho->fetch()){
-                                        //     $Rvirgula = str_replace(",", "", $dados["nu_valor_alugado"]); 
-                                        //     $valor = str_replace("R$ ", "", $Rvirgula);
-                                        //     $total .= $valor;
-                                        // }
+                                        $total = 0;
+                                        while($dados = $totalCarrinho->fetch()){
+                                            $Rvirgula = str_replace(",", "", $dados["nu_valor_alugado"]); 
+                                            $valor = str_replace("R$ ", "", $Rvirgula);
+                                            $total .= $valor;
+                                        }
                                     ?>
                                     <h3 class="font-weight-bolder">Total</h3>
-                                    <div id="valor_alugado"><h2><?php /*echo $total;*/ ?></h2></div>
+                                    <div id="valor_alugado"><h2><?php echo 'R$ '. $total; ?></h2></div>
                                 </div>
 
                             </div>
