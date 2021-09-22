@@ -313,7 +313,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </div>
                                                         <div class="col-6">
                                                             <label >Meses de locação:<span class="text-danger">*</span></label>
-                                                            <select name="mes" id="mes" class="form-control">
+                                                            <!-- <select name="mes" id="mes" class="form-control">
                                                                 <option value="">Selecione...</option>
                                                                 <option value="1">1 mês</option>
                                                                 <option value="2">2 meses</option>
@@ -327,7 +327,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 <option value="10">10 meses</option>
                                                                 <option value="11">11 meses</option>
                                                                 <option value="12">12 meses</option>
-                                                            </select>
+                                                            </select> -->
+															<input type="text" class="form-control" name="dt_final" id="dt_final">
 															<label id="data_final"></label>
                                                         </div>
                                                 
@@ -551,6 +552,21 @@ License: You must have a valid license purchased only from themeforest(the above
 			// Private functions
 			var demos = function () {
 				$('#dt_inicial').datepicker({
+					format: 'dd/mm/yyyy',
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows,
+					dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+					dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+					dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+					monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+					monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+					nextText: 'Próximo',
+					prevText: 'Anterior'
+				});
+				
+				$('#dt_final').datepicker({
 					format: 'dd/mm/yyyy',
 					rtl: KTUtil.isRTL(),
 					todayHighlight: true,
