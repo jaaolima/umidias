@@ -551,7 +551,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			// Private functions
 			var demos = function () {
 				$('#dt_inicial').datepicker({
-					format: 'd/m/Y',
+					format: 'dd/mm/yyyy',
 					rtl: KTUtil.isRTL(),
 					todayHighlight: true,
 					orientation: "bottom left",
