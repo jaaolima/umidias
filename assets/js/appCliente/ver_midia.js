@@ -109,6 +109,7 @@ $(document).ready(function() {
 			}
 		}
 		dt_inicial = $("#dt_inicial").val();
+		console.log(dt_inicial);
 		$('#dt_final').datepicker({
 			format: 'dd/mm/yyyy',
 			minDate: dt_inicial,
