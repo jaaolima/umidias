@@ -93,7 +93,7 @@ $(document).ready(function() {
 		
 	});
 
-	$("#mes").onblur(function(e){
+	$("#mes").on("change", function(e){
 		dt_inicial = $("#dt_inicial").val();
 		meses = $("#mes").val();
 
