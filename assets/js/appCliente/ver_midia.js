@@ -112,7 +112,7 @@ $(document).ready(function() {
 		console.log(dt_inicial);
 		$('#dt_final').datepicker({
 			format: 'dd/mm/yyyy',
-			minDate: new Date(dt_inicial),
+			minDate: new Date(2021, 9 - 1, 22 ),
 			rtl: KTUtil.isRTL(),
 			todayHighlight: true,
 			orientation: "bottom left",
