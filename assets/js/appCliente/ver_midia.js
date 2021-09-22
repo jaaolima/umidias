@@ -111,7 +111,7 @@ $(document).ready(function() {
 		dt_inicial = $("#dt_inicial").val();
 		$('#dt_final').datepicker({
 			format: 'dd/mm/yyyy',
-			minDate: new Date(dt_inicial),
+			minDate: dt_inicial,
 			rtl: KTUtil.isRTL(),
 			todayHighlight: true,
 			orientation: "bottom left",
