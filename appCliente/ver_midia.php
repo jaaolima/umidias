@@ -310,7 +310,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <div class="col-6">
                                                             <label >Data de Inicio:<span class="text-danger">*</span></label>
                                                             <!-- <input type="date" class="form-control" name="dt_inicial" id="dt_inicial" min="<?php echo date('Y-m-d'); ?>"> -->
-															<div id="kt_datepicker_6"></div>
+															<div id="dt_inicio"></div>
                                                         </div>
                                                         <div class="col-6">
                                                             <label >Meses de locação:<span class="text-danger">*</span></label>
@@ -451,28 +451,13 @@ License: You must have a valid license purchased only from themeforest(the above
 		jQuery(document).ready(function() {
 			demo3();
 
-			$('#kt_datepicker_6').datepicker({
+			$('#dt_inicio').datepicker({
 				rtl: KTUtil.isRTL(),
 				todayHighlight: true,
-				locale: 'pt-br',
-  				format: 'DD/MM/YYYY',
+				orientation: "bottom left",
 				templates: arrows
 			});
 
-			$('#kt_datepicker_6').datetimepicker({
-				locale: 'pt-br',
-				format: 'DD/MM/YYYY'
-			});
-
-			$('#kt_datepicker_6').datetimepicker({
-				locale: 'pt-br',
-				format: 'DD/MM/YYYY',
-				useCurrent: false
-			});
-
-			$("#kt_datepicker_6").on("dp.change", function (e) {
-				$('#kt_datepicker_6').data("DateTimePicker").maxDate(e.date.add(90,'days'));
-			});
 
 			//calculo outdoor
 			
