@@ -454,7 +454,24 @@ License: You must have a valid license purchased only from themeforest(the above
 			$('#kt_datepicker_6').datepicker({
 				rtl: KTUtil.isRTL(),
 				todayHighlight: true,
+				locale: 'pt-br',
+  				format: 'DD/MM/YYYY',
 				templates: arrows
+			});
+
+			$('#kt_datepicker_6').datetimepicker({
+				locale: 'pt-br',
+				format: 'DD/MM/YYYY'
+			});
+
+			$('#kt_datepicker_6').datetimepicker({
+				locale: 'pt-br',
+				format: 'DD/MM/YYYY',
+				useCurrent: false
+			});
+
+			$("#kt_datepicker_6").on("dp.change", function (e) {
+				$('#kt_datepicker_6').data("DateTimePicker").maxDate(e.date.add(90,'days'));
 			});
 
 			//calculo outdoor
