@@ -364,8 +364,11 @@
 			}
 
 			if($id_midia == 2){
-				$dt_inicial    	= $dados['dt_inicial'];
-				$mes    		= $dados['mes'];
+				$inicial    	= $dados['dt_inicial'];
+				$final    		= $dados['dt_final'];
+
+				$dt_final = $final->format('Y-m-d');
+				$dt_inicial = $inicial->format('Y-m-d');
 
 				//total alugado
 				$nu_valor_ponto    	= $dados['nu_valor_ponto'];
@@ -374,9 +377,9 @@
 				$nu_valor_alugado = ($valor * $mes) + $dadosMaterial["nu_valor"];
 				
 	
-				$date = new DateTime($dt_inicial);
-				$date->modify('+'.$mes.'months');
-				$dt_final = $date->format('Y-m-d');
+				// $date = new DateTime($dt_inicial);
+				// $date->modify('+'.$mes.'months');
+				
 			
 				try{
 					$con = Conecta::criarConexao();
