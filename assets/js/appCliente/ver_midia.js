@@ -108,7 +108,7 @@ $(document).ready(function() {
 				rightArrow: '<i class="la la-angle-right"></i>'
 			}
 		}
-		dt_inicial = $("#dt_inicial").val();
+		dt_inicial = new Date($("#dt_inicial").val());
 		console.log(dt_inicial);
 		$('#dt_final').datepicker({
 			format: 'dd/mm/yyyy',
