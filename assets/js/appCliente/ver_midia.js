@@ -10,7 +10,7 @@ var DatatablesBasicBasic = function() {
 			
 
 			//== DOM Layout settings
-			dom: `f<'row'<'col-sm-12'tr>>
+			dom: `f<'row'<'col-sm-12'tr>> 
 			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
 
 			lengthMenu: [5, 10, 25, 50],
@@ -91,6 +91,14 @@ $(document).ready(function() {
 			$('#ver_midia').hide(); 
 		}
 		
+	});
+
+	$("#mes").onblur(function(e){
+		dt_inicial = $("#dt_inicial").val();
+		meses = $("#mes").val();
+
+		dt_final = dt_inicial.setMonth(dt_inicial.getMonth()+mes);
+		$("#data_final").innerHTML("A data Final é "+dt_final);
 	});
 
 	$("#voltar").on("click", function(e){
