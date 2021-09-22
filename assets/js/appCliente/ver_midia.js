@@ -94,7 +94,7 @@ $(document).ready(function() {
 	});
 
 	$("#mes").on("change", function(e){
-		dt_inicial = $("#dt_inicial").val();
+		dt_inicial = new Date($("#dt_inicial").val());
 		meses = $("#mes").val();
 
 		dt_final = dt_inicial.addMonths(mes);
