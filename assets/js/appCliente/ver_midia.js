@@ -95,12 +95,9 @@ $(document).ready(function() {
 
 	$("#mes").on("change", function(e){
 		dt_inicial = new Date($("#dt_inicial").val());
-		console.log('daata inicial:'+ dt_inicial);
 		meses = parseInt($("#mes").val());
-		console.log('meses:'+ meses);
 
-		dt_finalMinesimos = dt_inicial.setMonth(dt_inicial.getMonth()+meses);
-		dt_final = dt_finalMinesimos.toLocaleDateString('pt-br');
+		dt_final = dt_inicial.getDate()+ "-" +(dt_finalMinesimos.getMonth() + meses) + "-" +dt_finalMinesimos.getFullYear();
 		$("#data_final").html("A data Final é "+dt_final);
 	});
 
