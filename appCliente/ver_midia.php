@@ -451,10 +451,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		jQuery(document).ready(function() {
 			demo3();
 
-			$("#dt_inicial").on("dp.change", function (date) {
-				console.log($("#dt_inicial").val());
-			});
-
 			//calculo outdoor
 			<?php if($id_midia == 1) : ?>
 				
