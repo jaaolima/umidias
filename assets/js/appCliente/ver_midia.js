@@ -108,7 +108,7 @@ $(document).ready(function() {
 				rightArrow: '<i class="la la-angle-right"></i>'
 			}
 		}
-		dt_inicial = new Date('2021-22-09');
+		dt_inicial = new Date(2021-22-09);
 		console.log(dt_inicial);
 		$('#dt_final').datepicker({
 			format: 'dd/mm/yyyy',
