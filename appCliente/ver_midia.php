@@ -539,13 +539,13 @@ License: You must have a valid license purchased only from themeforest(the above
 			var arrows;
 			if (KTUtil.isRTL()) {
 				arrows = {
-					leftArrow: '&lt;i class="la la-angle-right"&gt;&lt;/i&gt;',
-					rightArrow: '&lt;i class="la la-angle-left"&gt;&lt;/i&gt;'
+					leftArrow: '<i class="la la-angle-right"&gt;</i>;',
+					rightArrow: '<i class="la la-angle-left">;</i>;'
 				}
 			} else {
 				arrows = {
-					leftArrow: '&lt;i class="la la-angle-left"&gt;&lt;/i&gt;',
-					rightArrow: '&lt;i class="la la-angle-right"&gt;&lt;/i&gt;'
+					leftArrow: '<i class="la la-angle-left">;</i>;',
+					rightArrow: '<i class="la la-angle-right">;</i>;'
 				}
 			}
 
