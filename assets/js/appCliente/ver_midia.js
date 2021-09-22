@@ -226,18 +226,31 @@ function validarAlugar(id_midia){
 			$("#dt_inicial").removeClass("is-invalid");	
 			$("#dt_inicial").addClass("is-valid");
 		}
-		if($("#mes option:selected").val() == "")
+
+		if($("#dt_final").val() == "")
 		{
-			$("#mes").focus();
-			swal.fire("Erro", "Selecione a quantidade de meses", "error");
-			$("#mes").addClass("is-invalid");
+			$("#dt_final").focus();
+			swal.fire("Erro", "Adicione a data Final", "error");
+			$("#dt_final").addClass("is-invalid");
 			return false;	
 		}
 		else
 		{
-			$("#mes").removeClass("is-invalid");	
-			$("#mes").addClass("is-valid");
+			$("#dt_final").removeClass("is-invalid");	
+			$("#dt_final").addClass("is-valid");
 		}
+		// if($("#mes option:selected").val() == "")
+		// {
+		// 	$("#mes").focus();
+		// 	swal.fire("Erro", "Selecione a quantidade de meses", "error");
+		// 	$("#mes").addClass("is-invalid");
+		// 	return false;	
+		// }
+		// else
+		// {
+		// 	$("#mes").removeClass("is-invalid");	
+		// 	$("#mes").addClass("is-valid");
+		// }
 	}
 	if(id_midia == 1){
 		if ($('input[name="bisemana[]"]:checked').length == 0)
