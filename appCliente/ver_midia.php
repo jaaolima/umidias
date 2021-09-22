@@ -310,7 +310,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <div class="col-6">
                                                             <label >Data de Inicio:<span class="text-danger">*</span></label>
                                                             <!-- <input type="date" class="form-control" name="dt_inicial" id="dt_inicial" min="<?php echo date('Y-m-d'); ?>"> -->
-															<input type="text" id="dt_inicial" class="form-group">
+															<input type="text" id="dt_inicial" class="form-control">
                                                         </div>
                                                         <div class="col-6">
                                                             <label >Meses de locação:<span class="text-danger">*</span></label>
@@ -451,8 +451,11 @@ License: You must have a valid license purchased only from themeforest(the above
 		jQuery(document).ready(function() {
 			demo3();
 
+			$("#dt_inicial").on("dp.change", function (date) {
+				console.log($("#dt_inicial").val());
+			});
+
 			//calculo outdoor
-			
 			<?php if($id_midia == 1) : ?>
 				
 			$("input[name='bisemana[]']").on("click", function(){
