@@ -311,7 +311,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             <label >Data de Inicio:<span class="text-danger">*</span></label>
                                                             <input type="text" class="form-control" name="dt_inicial" id="dt_inicial">
                                                         </div>
-                                                        <div class="col-6">
+                                                        <div class="col-6" id="div_dt_final" style="display:none;">
                                                             <label >Meses de locação:<span class="text-danger">*</span></label>
                                                             <!-- <select name="mes" id="mes" class="form-control">
                                                                 <option value="">Selecione...</option>
@@ -328,7 +328,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 <option value="11">11 meses</option>
                                                                 <option value="12">12 meses</option>
                                                             </select> -->
-															<input type="text" class="form-control" name="dt_final" id="dt_final" style="display:none;">
+															<input type="text" class="form-control" name="dt_final" id="dt_final" >
 															<label id="data_final"></label>
                                                         </div>
                                                 
