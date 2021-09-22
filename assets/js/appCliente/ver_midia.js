@@ -97,7 +97,7 @@ $(document).ready(function() {
 		dt_inicial = new Date($("#dt_inicial").val());
 		meses = parseInt($("#mes").val());
 
-		dt_final = dt_inicial.getDate()+ "-" +(dt_finalMinesimos.getMonth() + meses) + "-" +dt_finalMinesimos.getFullYear();
+		dt_final = dt_inicial.getDate()+ "-" +(dt_inicial.getMonth() + meses) + "-" +dt_inicial.getFullYear();
 		$("#data_final").html("A data Final é "+dt_final);
 	});
 
