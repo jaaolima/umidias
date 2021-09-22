@@ -108,9 +108,10 @@ $(document).ready(function() {
 				rightArrow: '<i class="la la-angle-right"></i>'
 			}
 		}
-
+		dt_inicial = this.val();
 		$('#dt_final').datepicker({
 			format: 'dd/mm/yyyy',
+			minDate: new Date(dt_inicial),
 			rtl: KTUtil.isRTL(),
 			todayHighlight: true,
 			orientation: "bottom left",
