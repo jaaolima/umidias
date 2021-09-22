@@ -443,6 +443,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/js/scripts.bundle.js"></script>
 		<script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 		<script src="assets/js/appCliente/ver_midia.js"></script>
+		<script src="assets/js/pages/crud/forms/widgets/bootstrap-datepicker.js"></script>
 		<script>
 			// The following example creates complex markers to indicate beaches near
 		// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond 
