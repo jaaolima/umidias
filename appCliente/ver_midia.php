@@ -451,14 +451,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		jQuery(document).ready(function() {
 			demo3();
 
-			$('#dt_inicial').datepicker({
-				rtl: KTUtil.isRTL(),
-				todayHighlight: true,
-				orientation: "bottom left",
-				templates: arrows
-			});
-
-
 			//calculo outdoor
 			
 			<?php if($id_midia == 1) : ?>
@@ -541,12 +533,44 @@ License: You must have a valid license purchased only from themeforest(the above
 			}
 
 		})
-		
 
-		
-		
+		var KTBootstrapDatepicker = function () {
 
-		
+			var arrows;
+			if (KTUtil.isRTL()) {
+				arrows = {
+					leftArrow: '&lt;i class="la la-angle-right"&gt;&lt;/i&gt;',
+					rightArrow: '&lt;i class="la la-angle-left"&gt;&lt;/i&gt;'
+				}
+			} else {
+				arrows = {
+					leftArrow: '&lt;i class="la la-angle-left"&gt;&lt;/i&gt;',
+					rightArrow: '&lt;i class="la la-angle-right"&gt;&lt;/i&gt;'
+				}
+			}
+
+			// Private functions
+			var demos = function () {
+				$('#dt_inicial').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
+			}
+
+			return {
+				// public functions
+				init: function() {
+					demos();
+				}
+			};
+		}();
+
+		jQuery(document).ready(function() {
+			KTBootstrapDatepicker.init();
+		});
+
 		var demo3 = function() {
 			var map = new GMaps({
 				div: '#map',
