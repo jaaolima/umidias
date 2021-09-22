@@ -99,7 +99,8 @@ $(document).ready(function() {
 		meses = parseInt($("#mes").val());
 		console.log('meses:'+ meses);
 
-		dt_final = dt_inicial.setMonth(dt_inicial.getMonth()+meses).toLocaleDateString('pt-br');
+		dt_finalMinesimos = dt_inicial.setMonth(dt_inicial.getMonth()+meses);
+		dt_final = dt_final.toLocaleDateString('pt-br');
 		$("#data_final").html("A data Final é "+dt_final);
 	});
 
