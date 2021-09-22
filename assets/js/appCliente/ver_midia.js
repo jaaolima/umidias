@@ -108,11 +108,11 @@ $(document).ready(function() {
 				rightArrow: '<i class="la la-angle-right"></i>'
 			}
 		}
-		dt_inicial = new Date($("#dt_inicial").val().split('/').reverse().join(','));
+		dt_inicial = $("#dt_inicial").val().split('/').reverse().join(',');
 		console.log(dt_inicial);
 		$('#dt_final').datepicker({
 			format: 'dd/mm/yyyy',
-			minDate: dt_inicial,
+			minDate: new Date(dt_inicial),
 			rtl: KTUtil.isRTL(),
 			todayHighlight: true,
 			orientation: "bottom left",
