@@ -555,7 +555,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				$('#dt_inicial').datepicker({
 					format: 'dd/mm/yyyy',
 					rtl: KTUtil.isRTL(),
-					minDate: new Date(),
+					minDate: '0',
 					todayHighlight: true,
 					orientation: "bottom left",
 					templates: arrows,
