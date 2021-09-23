@@ -508,7 +508,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			});
 		
 			$('#datefilter').on('apply.daterangepicker', function(ev, picker) {
-				$(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+				$(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
 			});
 		
 			$('#datefilter').on('cancel.daterangepicker', function(ev, picker) {
