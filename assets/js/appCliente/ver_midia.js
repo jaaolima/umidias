@@ -109,9 +109,36 @@ $(document).ready(function() {
 			}
 		}
 
-		$('#sandbox-container .input-daterange').datepicker({
+		$('.input-daterange').datepicker({
 			startDate: "d",
-			language: "pt-BR"
+			language: "pt-BR",
+			autoclose: true,
+			beforeShowDay: function(date){
+				  if (date.getMonth() == (new Date()).getMonth())
+					switch (date.getDate()){
+					  case 4:
+						return {
+						  tooltip: 'Example tooltip',
+						  classes: 'active'
+						};
+					  case 8:
+						return false;
+					  case 12:
+						return "green";
+				  }
+				},
+			beforeShowMonth: function(date){
+				  if (date.getMonth() == 8) {
+					return false;
+				  }
+				},
+			beforeShowYear: function(date){
+				  if (date.getFullYear() == 2007) {
+					return false;
+				  }
+				},
+			datesDisabled: ['09/06/2021', '09/21/2021'],
+			toggleActive: true
 		});
 		
 		dt_inicial = $("#dt_inicial").val().split('/').reverse().join(',');
