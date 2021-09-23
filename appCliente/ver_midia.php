@@ -551,23 +551,23 @@ License: You must have a valid license purchased only from themeforest(the above
 			<?php endif; ?>
 
 			//calculo front
-			// <?php if($id_midia == 2) : ?>	
-			// var mes = document.getElementById("mes");
-			// var local = document.getElementById("valor_alugado");
+			<?php /* if($id_midia == 2) : ?>	
+			var mes = document.getElementById("mes");
+			var local = document.getElementById("valor_alugado");
 
-			// mes.onblur = function(){
-			// 	<?php
-			// 		$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
-			// 		$Rrs = str_replace("R$ ", "", $Rvirgula);
-			// 		$valor = $Rrs; 
-			// 	?>
-			// 	let valor = <?php echo $valor ?> * mes.value;
-			// 	let total =  parseInt(valor, 10);
-			// 	local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
+			mes.onblur = function(){
+				<?php
+					$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+					$Rrs = str_replace("R$ ", "", $Rvirgula);
+					$valor = $Rrs; 
+				?>
+				let valor = <?php echo $valor ?> * mes.value;
+				let total =  parseInt(valor, 10);
+				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
 
-			// 	$("#id_material").val('').change();
-			// }
-			// <?php endif; ?>
+				$("#id_material").val('').change();
+			}
+			<?php endif; */?>
 
 
 			//calculo material
@@ -596,16 +596,16 @@ License: You must have a valid license purchased only from themeforest(the above
 					local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 				<?php endif;?>
 
-				// <?php if($id_midia == 2) : ?>
-				// 	<?php
-				// 		$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
-				// 		$Rrs = str_replace("R$ ", "", $Rvirgula);
-				// 		$valor = $Rrs; 
-				// 	?>
-				// 	let valor = <?php echo $valor ?> * mes.value;
-				// 	let total =  parseInt(valor, 10);
-				// 	valor_alugado = total + valorTotalMaterial
-				// <?php endif;?>
+				<?php /* if($id_midia == 2) : ?>
+					<?php
+						$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+						$Rrs = str_replace("R$ ", "", $Rvirgula);
+						$valor = $Rrs; 
+					?>
+					let valor = <?php echo $valor ?> * mes.value;
+					let total =  parseInt(valor, 10);
+					valor_alugado = total + valorTotalMaterial
+				<?php endif; */ ?>
 
 				
 
