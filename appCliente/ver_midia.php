@@ -462,6 +462,59 @@ License: You must have a valid license purchased only from themeforest(the above
 		jQuery(document).ready(function() {
 			demo3();
 
+			//datapicker
+			$('#datefilter').daterangepicker({
+				autoUpdateInput: false,
+				minDate: new Date(),
+				// ranges: {
+				// 	'1 mês': [moment(), moment()],
+				// 	'2 meses': [moment().add(), moment()],
+				// 	'3 meses': [moment(), moment()],
+				// },
+				"locale": {
+					"format": "DD/MM/YYYY",
+					"separator": " - ",
+					"applyLabel": "Aplicar",
+					"cancelLabel": "Cancelar",
+					"fromLabel": "De",
+					"toLabel": "Para",
+					"customRangeLabel": "Custumizar",
+					"weekLabel": "S",
+					"daysOfWeek": [
+						"Dom",
+						"Seg",
+						"Ter",
+						"Qua",
+						"Qui",
+						"Sex",
+						"Sab"
+					],
+					"monthNames": [
+						"Janeiro",
+						"Fervereiro",
+						"Março",
+						"Abril",
+						"Maio",
+						"Junho",
+						"Julho",
+						"Agosto",
+						"Setembro",
+						"Outubro",
+						"Novembro",
+						"Dezembro"
+					],
+					"firstDay": 1
+				},
+			});
+		
+			$('#datefilter').on('apply.daterangepicker', function(ev, picker) {
+				$(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+			});
+		
+			$('#datefilter').on('cancel.daterangepicker', function(ev, picker) {
+				$(this).val('');
+			});
+
 			//calculo outdoor
 			<?php if($id_midia == 1) : ?>
 				

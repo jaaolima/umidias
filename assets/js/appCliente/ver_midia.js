@@ -93,57 +93,7 @@ $(document).ready(function() {
 		
 	});
 
-	$('#datefilter').daterangepicker({
-		autoUpdateInput: false,
-		minDate: new Date(),
-		// ranges: {
-		// 	'1 mês': [moment(), moment()],
-		// 	'2 meses': [moment().add(), moment()],
-		// 	'3 meses': [moment(), moment()],
-		// },
-		"locale": {
-			"format": "DD/MM/YYYY",
-			"separator": " - ",
-			"applyLabel": "Aplicar",
-			"cancelLabel": "Cancelar",
-			"fromLabel": "De",
-			"toLabel": "Para",
-			"customRangeLabel": "Custumizar",
-			"weekLabel": "S",
-			"daysOfWeek": [
-				"Dom",
-				"Seg",
-				"Ter",
-				"Qua",
-				"Qui",
-				"Sex",
-				"Sab"
-			],
-			"monthNames": [
-				"Janeiro",
-				"Fervereiro",
-				"Março",
-				"Abril",
-				"Maio",
-				"Junho",
-				"Julho",
-				"Agosto",
-				"Setembro",
-				"Outubro",
-				"Novembro",
-				"Dezembro"
-			],
-			"firstDay": 1
-		},
-	});
-  
-	$('#datefilter').on('apply.daterangepicker', function(ev, picker) {
-		$(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-	});
-  
-	$('#datefilter').on('cancel.daterangepicker', function(ev, picker) {
-		$(this).val('');
-	});
+	
 
 	// $("#dt_inicial").on("change", function(e){
 	// 	$("#div_dt_final").show();
