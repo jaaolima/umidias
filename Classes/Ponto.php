@@ -1788,7 +1788,7 @@
 			   
 			    $stmt->execute($params);
 
-			    return  $stmt->fetch();
+			    return  $stmt;
 				
 			}	
 			catch(Exception $e)
