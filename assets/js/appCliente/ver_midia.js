@@ -110,7 +110,8 @@ $(document).ready(function() {
 		}
 
 		$('#sandbox-container .input-daterange').datepicker({
-			clearBtn: true
+			startDate: "d",
+			language: "pt-BR"
 		});
 		
 		dt_inicial = $("#dt_inicial").val().split('/').reverse().join(',');
