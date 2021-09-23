@@ -466,7 +466,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					$dateEnd =  new DateTime($dadosProximo['dt_final']);
 					while($dateStart <= $dateEnd){
 						$dateRange[] = $dateStart->format('Y-m-d');
-						$dateStart = $dateStart->modify('+1day');
+						$dateStart = $dateStart->modify('+1day'); 
 					}
 				}
 				echo json_encode($dateRange); 
