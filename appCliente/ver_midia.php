@@ -474,7 +474,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						}
 					?>
 					chaves[] = <?php echo json_encode($dateRange); ?>; 
-					if (chaves.indexOf(date) > -1) {
+					if (chaves.indexOf(date.format('YYYY-M-D')) > -1) {
 						return false;
 					} else {
 						return true;
@@ -493,7 +493,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				// 	'3 meses': [moment(), moment()],
 				// },
 				"locale": {
-					"format": "YYYY/MM/DD",
+					"format": "DD/MM/YYYY",
 					"separator": " - ",
 					"applyLabel": "Aplicar",
 					"cancelLabel": "Cancelar",
