@@ -465,7 +465,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<?php 
 						while($dadosProximo = $ProximosAlugados->fetch()){
 							$dateRange = array();
-							$dateStart = $dadosProximo['dt_inicial'];
+							$dateStart = new Date($dadosProximo['dt_inicial']);
 							$dateEnd = $dadosProximo['dt_final'];
 							while($dateStart <= $dateEnd){
 								$dateRange[] = $dateStart->format('Y-m-d');
