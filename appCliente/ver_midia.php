@@ -328,7 +328,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 <option value="11">11 meses</option>
                                                                 <option value="12">12 meses</option>
                                                             </select> -->
-															<input type="text" class="form-control" name="dt_final" id="dt_final" >
+															<input type="text" class="form-control" name="dt_final" id="dt_final" autocomplete="off">
 															<label id="data_final"></label>
                                                         </div>
                                                 
@@ -555,6 +555,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				$('#dt_inicial').datepicker({
 					format: 'dd/mm/yyyy',
 					rtl: KTUtil.isRTL(),
+					minDate: new Date(),
 					todayHighlight: true,
 					orientation: "bottom left",
 					templates: arrows,
