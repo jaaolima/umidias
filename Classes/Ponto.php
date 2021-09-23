@@ -1779,7 +1779,7 @@
 				
 				
 				$select = "SELECT dt_inicial, dt_final
-						FROM tb_alugado a
+						FROM rl_alugado a
 						WHERE a.id_ponto = :id_ponto 
 						and dt_inicial >= curdate()";
 
