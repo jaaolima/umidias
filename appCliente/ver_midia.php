@@ -309,7 +309,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="d-flex my-6 mx-6" >
                                                         <div class="col-6">
                                                             <label >Data de Inicio:<span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" name="dt_inicial" id="dt_inicial">
+                                                            <input type="text" class="form-control" name="dt_inicial" id="dt_inicial" autocomplete="off">
                                                         </div>
                                                         <div class="col-6" id="div_dt_final" style="display:none;">
                                                             <label >Meses de locação:<span class="text-danger">*</span></label>
