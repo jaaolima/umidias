@@ -15,6 +15,7 @@
 	$bisemana = new Bisemana();
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
+	$ProximosAlugados = $ponto->BuscarProximosAlugados($id_ponto);
 	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto);
     $retorno = $bisemana->listarBisemanaDisponiveis($id_ponto);
     $optionsMaterial = $material->listarOptionsMaterialMidia($dados["id_material"]);   
@@ -460,12 +461,26 @@ License: You must have a valid license purchased only from themeforest(the above
 			//datapicker
 			$('#datefilter').daterangepicker({
 				autoUpdateInput: false,
-				"minSpan": {
-					"days": 29
+				isInvalidDate: function(date){
+					<?php 
+						while($dadosProximo = $ProximosAlugados->fetch()){
+							$dateRange = array();
+							$dateStart = $dadosProximo['dt_inicial'];
+							$dateEnd = $dadosProximo['dt_final'];
+							while($dateStart <= $dateEnd){
+								$dateRange[] = $dateStart;
+								$dateStart = $dateStart->modify('+1day');
+							}
+							var_dump($dateRange);
+						}
+					?>
 				},
-				"maxSpan": {
-					"days": 31
-				}
+				// "minSpan": {
+				// 	"days": 29
+				// },
+				// "maxSpan": {
+				// 	"days": 31
+				// }
 				minDate: new Date(),
 				// ranges: {
 				// 	'1 mês': [moment(), moment()],
