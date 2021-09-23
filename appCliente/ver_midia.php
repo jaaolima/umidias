@@ -485,7 +485,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			//datapicker
 			$('#datefilter').daterangepicker({
 				autoUpdateInput: false,
-				isInvalidDate: [25/09/2021],
+				isInvalidDate: ["25/09/2021"],
 				
 				minDate: new Date(),
 				// ranges: {
