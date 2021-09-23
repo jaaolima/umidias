@@ -1772,7 +1772,7 @@
 			}
         }
 
-		function BuscarDadosProximoAlugado($id_ponto)
+		function BuscarProximosAlugados($id_ponto)
 		{
 			try{
 				$con = Conecta::criarConexao();
@@ -1780,8 +1780,8 @@
 				
 				$select = "SELECT dt_inicial, dt_final
 						FROM tb_alugado a
-						WHERE p.id_ponto = :id_ponto 
-						and dt_inicial";
+						WHERE a.id_ponto = :id_ponto 
+						and dt_inicial => curdate()";
 
 				$stmt = $con->prepare($select);
 			   	$params = array(':id_ponto' => $id_ponto);
