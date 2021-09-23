@@ -95,9 +95,40 @@ $(document).ready(function() {
 
 	$('#datefilter').daterangepicker({
 		autoUpdateInput: false,
-		locale: {
-			cancelLabel: 'Clear'
-		}
+		"locale": {
+			"format": "DD/MM/YYYY",
+			"separator": " / ",
+			"applyLabel": "Aplicar",
+			"cancelLabel": "Cancelar",
+			"fromLabel": "De",
+			"toLabel": "Para",
+			"customRangeLabel": "Custumizar",
+			"weekLabel": "S",
+			"daysOfWeek": [
+				"Dom",
+				"Seg",
+				"Ter",
+				"Qua",
+				"Qui",
+				"Sex",
+				"Sab"
+			],
+			"monthNames": [
+				"Janeiro",
+				"Fervereiro",
+				"Março",
+				"Abril",
+				"Maio",
+				"Junho",
+				"Julho",
+				"Agosto",
+				"Setembro",
+				"Outubro",
+				"Novembro",
+				"Dezembro"
+			],
+			"firstDay": 1
+		},
 	});
   
 	$('#datefilter').on('apply.daterangepicker', function(ev, picker) {
