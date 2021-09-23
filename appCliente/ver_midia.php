@@ -487,7 +487,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				autoUpdateInput: false,
 				isInvalidDate: function(date){
 					console.log(date)
-					if(date == "0923/2021"){
+					if(date.format('YYYY-M-D') == '2021-09-25'){
 						return true;
 					}
 				},
