@@ -1781,7 +1781,7 @@
 				$select = "SELECT dt_inicial, dt_final
 						FROM tb_alugado a
 						WHERE a.id_ponto = :id_ponto 
-						and dt_inicial => curdate()";
+						and dt_inicial >= curdate()";
 
 				$stmt = $con->prepare($select);
 			   	$params = array(':id_ponto' => $id_ponto);
