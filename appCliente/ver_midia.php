@@ -481,7 +481,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					// }
 				},
 				
-				minDate: new Date(),
+				minDate: new Date(), 
 				// ranges: {
 				// 	'1 mês': [moment(), moment()],
 				// 	'2 meses': [moment().add(), moment()],
