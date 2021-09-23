@@ -308,11 +308,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Aluguel</h3>
                                                     </div>
                                                     <div class="d-flex my-6 mx-6" >
-														<!-- <div class="input-daterange input-group" id="datepicker">
-															<input type="text" class="input-sm form-control" name="start" />
-															<span class="input-group-addon">Até</span>
-															<input type="text" class="input-sm form-control" name="end" />
-														</div> -->
                                                         <div class="col-6">
                                                             <label >Data de Inicio:<span class="text-danger">*</span></label>
                                                             <input type="text" class="form-control" id="datefilter" name="dt_inicial" id="dt_inicial" autocomplete="off">
@@ -465,6 +460,9 @@ License: You must have a valid license purchased only from themeforest(the above
 			//datapicker
 			$('#datefilter').daterangepicker({
 				autoUpdateInput: false,
+				"maxSpan": {
+					"days": 30
+				},
 				minDate: new Date(),
 				// ranges: {
 				// 	'1 mês': [moment(), moment()],

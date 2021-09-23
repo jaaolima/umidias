@@ -1554,7 +1554,7 @@
 		}
 		public function excluirFotoPonto(array $dados)
 		{
-            $id_ponto_foto	    = $dados['id_ponto_foto'];
+            $id_ponto_foto	    = $dados['id_ponto_foto']; 
 
 			
 			try{
@@ -1768,8 +1768,35 @@
 						print "ERRO:".$e->getMessage();		
 					} 	
 				}
+				
 			}
         }
+
+		function BuscarDadosProximoAlugado($id_ponto)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				
+				$select = "SELECT dt_inicial, dt_final
+						FROM tb_alugado a
+						WHERE p.id_ponto = :id_ponto 
+						and dt_inicial";
+
+				$stmt = $con->prepare($select);
+			   	$params = array(':id_ponto' => $id_ponto);
+			   
+			    $stmt->execute($params);
+
+			    return  $stmt->fetch();
+				
+			}	
+			catch(Exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();	
+			}	
+		}
 		
 	}	
 
