@@ -180,30 +180,17 @@ $(document).ready(function() {
 
 function validarAlugar(id_midia){
 	if(id_midia == 2){
-		if($("#dt_inicial").val() == "")
+		if($("#dt_inicial_final").val() == "")
 		{
-			$("#dt_inicial").focus();
-			swal.fire("Erro", "Adicione uma data Inicial", "error");
-			$("#dt_inicial").addClass("is-invalid");
+			$("#dt_inicial_final").focus();
+			swal.fire("Erro", "Adicione uma data", "error");
+			$("#dt_inicial_final").addClass("is-invalid");
 			return false;	
 		}
 		else
 		{
-			$("#dt_inicial").removeClass("is-invalid");	
-			$("#dt_inicial").addClass("is-valid");
-		}
-
-		if($("#dt_final").val() == "")
-		{
-			$("#dt_final").focus();
-			swal.fire("Erro", "Adicione a data Final", "error");
-			$("#dt_final").addClass("is-invalid");
-			return false;	
-		}
-		else
-		{
-			$("#dt_final").removeClass("is-invalid");	
-			$("#dt_final").addClass("is-valid");
+			$("#dt_inicial_final").removeClass("is-invalid");	
+			$("#dt_inicial_final").addClass("is-valid");
 		}
 		// if($("#mes option:selected").val() == "")
 		// {
