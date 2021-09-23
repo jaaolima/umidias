@@ -226,7 +226,7 @@
 				
 				
 				$select = "SELECT 
-							id_usuario, ds_nome, ds_email, ds_usuario, id_perfil, nu_cpf
+							id_usuario, ds_nome, ds_email, ds_usuario, id_perfil, nu_cpf, ds_foto
 						FROM tb_usuario  
 						WHERE id_usuario = :id_usuario";
 
