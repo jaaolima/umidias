@@ -461,7 +461,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			//datapicker
 			$('#datefilter').daterangepicker({
 				autoUpdateInput: false,
-				isInvalidDate: [2021-09-25]
+				isInvalidDate: [2021-09-25],
 				// function(date){
 				// 	<?php 
 				// 		while($dadosProximo = $ProximosAlugados->fetch()){
