@@ -108,6 +108,11 @@ $(document).ready(function() {
 				rightArrow: '<i class="la la-angle-right"></i>'
 			}
 		}
+
+		$('#sandbox-container .input-daterange').datepicker({
+			clearBtn: true
+		});
+		
 		dt_inicial = $("#dt_inicial").val().split('/').reverse().join(',');
 		console.log(dt_inicial);
 		$('#dt_final').datepicker({

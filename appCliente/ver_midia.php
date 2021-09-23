@@ -307,13 +307,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Aluguel</h3>
                                                     </div>
                                                     <div class="d-flex my-6 mx-6" >
-                                                        <div class="col-6">
+														<div class="input-daterange" id="datepicker">
+															<input type="text" class="input-small" name="start" />
+															<span class="add-on">Até</span>
+															<input type="text" class="input-small" name="end" />
+														</div>
+                                                        <!-- <div class="col-6">
                                                             <label >Data de Inicio:<span class="text-danger">*</span></label>
                                                             <input type="text" class="form-control" name="dt_inicial" id="dt_inicial" autocomplete="off">
                                                         </div>
                                                         <div class="col-6" id="div_dt_final" style="display:none;">
                                                             <label >Meses de locação:<span class="text-danger">*</span></label>
-                                                            <!-- <select name="mes" id="mes" class="form-control">
+                                                            <select name="mes" id="mes" class="form-control">
                                                                 <option value="">Selecione...</option>
                                                                 <option value="1">1 mês</option>
                                                                 <option value="2">2 meses</option>
@@ -327,10 +332,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 <option value="10">10 meses</option>
                                                                 <option value="11">11 meses</option>
                                                                 <option value="12">12 meses</option>
-                                                            </select> -->
+                                                            </select>
 															<input type="text" class="form-control" name="dt_final" id="dt_final" autocomplete="off">
 															<label id="data_final"></label>
-                                                        </div>
+                                                        </div> -->
                                                 
                                                     </div>
                                                     <div class="separator separator-solid"></div>
