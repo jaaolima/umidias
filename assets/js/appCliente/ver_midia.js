@@ -95,15 +95,15 @@ $(document).ready(function() {
 
 	$('#datefilter').daterangepicker({
 		autoUpdateInput: false,
-		startDate: "d",
-		ranges: {
-			'1 mês': [moment(), moment()],
-			'2 meses': [moment(), moment()],
-			'3 meses': [moment(), moment()],
-		},
+		minDate: "d",
+		// ranges: {
+		// 	'1 mês': [moment(), moment()],
+		// 	'2 meses': [moment().add(), moment()],
+		// 	'3 meses': [moment(), moment()],
+		// },
 		"locale": {
 			"format": "DD/MM/YYYY",
-			"separator": " / ",
+			"separator": " - ",
 			"applyLabel": "Aplicar",
 			"cancelLabel": "Cancelar",
 			"fromLabel": "De",
