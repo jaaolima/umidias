@@ -112,7 +112,7 @@ $(document).ready(function() {
 		console.log(dt_inicial);
 		$('#dt_final').datepicker({
 			format: 'dd/mm/yyyy',
-			minDate: new Date(2021, 9 - 1, 22 ),
+			startDate: new Date(dt_inicial),
 			rtl: KTUtil.isRTL(),
 			todayHighlight: true,
 			orientation: "bottom left",
@@ -243,7 +243,7 @@ function validarAlugar(id_midia){
 		// {
 		// 	$("#mes").focus();
 		// 	swal.fire("Erro", "Selecione a quantidade de meses", "error");
-		// 	$("#mes").addClass("is-invalid");
+		// 	$("#mes").addClass("is-invalid"); 
 		// 	return false;	
 		// }
 		// else
