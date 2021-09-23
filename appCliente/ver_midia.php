@@ -458,7 +458,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		// to the base of the flagpole.
 		jQuery(document).ready(function() {
 			demo3();
-			var chaves = new array();
 			chaves = <?php
 				$dateRange = array();
 				while($dadosProximo = $ProximosAlugados->fetch()){
