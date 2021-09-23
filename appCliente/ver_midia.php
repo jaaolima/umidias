@@ -436,30 +436,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			</div>
 			<!--end::Page-->
 		</div>
-		<!-- // function(date){
-		// 	<?php 
-		// 		while($dadosProximo = $ProximosAlugados->fetch()){
-		// 			$dateRange = array();
-		// 			$dateStart = new DateTime($dadosProximo['dt_inicial']);
-		// 			$dateEnd =  new DateTime($dadosProximo['dt_final']);
-		// 			while($dateStart <= $dateEnd){
-		// 				$dateRange[] = $dateStart->format('Y-m-d');
-		// 				$dateStart = $dateStart->modify('+1day');
-		// 			}
-		// 		}
-		// 	?>
-		// 	chaves[] = <?php echo json_encode($dateRange); ?>; 
-		// 	data = date.format('YYYY-M-D');
-		// 	if (chaves.indexOf(data) < -1) {
-		// 		return true;
-		// 	}
-		// },
-		// "minSpan": {
-		// 	"days": 29
-		// },
-		// "maxSpan": {
-		// 	"days": 31
-		// } -->
+		
 		<!--end::Main-->
 		<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
 		<!--begin::Global Config(global config for global JS scripts)-->
@@ -482,12 +459,24 @@ License: You must have a valid license purchased only from themeforest(the above
 		jQuery(document).ready(function() {
 			demo3();
 
+			<?php 
+				while($dadosProximo = $ProximosAlugados->fetch()){
+					$dateRange = array();
+					$dateStart = new DateTime($dadosProximo['dt_inicial']);
+					$dateEnd =  new DateTime($dadosProximo['dt_final']);
+					while($dateStart <= $dateEnd){
+						$dateRange[] = $dateStart->format('Y-m-d');
+						$dateStart = $dateStart->modify('+1day');
+					}
+				}
+			?>
+			chaves[] = <?php echo json_encode($dateRange); ?>
+			console.log(chaves);
 			//datapicker
 			$('#datefilter').daterangepicker({
 				autoUpdateInput: false,
 				isInvalidDate: function(date){
-					console.log(date.format('YYYY-M-D'))
-					if(date.format('YYYY-MM-DD') == '2021-09-25'){
+					if(chaves.indexOf(date.format('YYYY-MM-DD')) > -1){
 						return true;
 					}
 				},
