@@ -95,6 +95,7 @@ $(document).ready(function() {
 
 	$('#datefilter').daterangepicker({
 		autoUpdateInput: false,
+		startDate: "d",
 		"locale": {
 			"format": "DD/MM/YYYY",
 			"separator": " / ",
