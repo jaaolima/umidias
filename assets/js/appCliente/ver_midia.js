@@ -109,7 +109,7 @@ $(document).ready(function() {
 			}
 		}
 
-		$('.input-daterange').datepicker({
+		$('.datepicker').datepicker({
 			startDate: "d",
 			language: "pt-BR",
 			autoclose: true,
