@@ -429,29 +429,29 @@
 			$ds_foto		= $_FILES['ds_foto'];
 			$id_usuario		= $dados['id_usuario'];
 
-			// $nome = $ds_foto['name'];
-			// $tipo = $ds_foto['type'];
-			// $tmp = $ds_foto['tmp_name'];
-			// $tamanho = $ds_foto['size'];
+			$nome = $ds_foto['name'];
+			$tipo = $ds_foto['type'];
+			$tmp = $ds_foto['tmp_name'];
+			$tamanho = $ds_foto['size'];
 
-			// //gravar foto
-			// $tamanho = 20000000;
+			//gravar foto
+			$tamanho = 20000000;
 
-			// $error = array();
-			// $tamanho_mb = $tamanho/1024/1024;
+			$error = array();
+			$tamanho_mb = $tamanho/1024/1024;
 
-			// // Pega extensão da imagem
-			// preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $nome, $ext);
-			// // Gera um nome único para o arquivo
-			// $nome_arquivo = md5(uniqid(time())) . "arquivo.". $ext[1];
-			// // Caminho de onde ficará o arquivo
-			// $caminho_arquivo = "/var/www/app.unimidias.com.br/docs_usuario/" . $nome_arquivo;
+			// Pega extensão da imagem
+			preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $nome, $ext);
+			// Gera um nome único para o arquivo
+			$nome_arquivo = md5(uniqid(time())) . "arquivo.". $ext[1];
+			// Caminho de onde ficará o arquivo
+			$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_usuario/" . $nome_arquivo;
 
-			// $gravar_caminho_arquivo = "docs_usuario/" . $nome_arquivo;
+			$gravar_caminho_arquivo = "docs_usuario/" . $nome_arquivo;
 			
 
-			// // Faz o upload da imagem para seu respectivo caminho
-			// $moved = move_uploaded_file($tmp,  $caminho_arquivo);
+			// Faz o upload da imagem para seu respectivo caminho
+			$moved = move_uploaded_file($tmp,  $caminho_arquivo);
 
 			try{
 				$con = Conecta::criarConexao();
@@ -460,7 +460,7 @@
 				
 				$stmt = $con->prepare($update);
 				
-				$params = array(':ds_foto' => $ds_foto['name'],
+				$params = array(':ds_foto' => $gravar_caminho_arquivo,
 								':id_usuario'=>$id_usuario);
 				$stmt->execute($params);
 
@@ -475,7 +475,7 @@
 			}
 		}
 
-		public function excluirFotoUsuario(array $dados)
+		public function excluirFotoUsuario(array $dados) 
 		{
 			$id_usuario = $dados['id_usuario'];
 			
