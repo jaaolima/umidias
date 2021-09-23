@@ -70,14 +70,11 @@ License: You must have a valid license purchased only from themeforest(the above
 											 	<div class="dropdown">
 													<a class="dropdown symbol symbol-circle symbol-80 symbol-light-success overlay" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
 														<?php if($dadosUsuario['ds_foto'] === null) :  ?>	
-														<div class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
-															<span class="symbol-label"><?php echo $dadosUsuario['ds_nome'][0]; ?></span>
-														</div>			
+															<span class="symbol-label"><?php echo $dadosUsuario['ds_nome'][0]; ?></span>			
 														<?php else : ?>
-														<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
-															<img src="<?php echo $dadosUsuario["ds_foto"]; ?>" class="symbol-label"alt="">
-														</span>		
-														<?php endif; ?>	
+															<img src="<?php echo $dadosUsuario["ds_foto"]; ?>" class="symbol-label"alt="">		
+														<?php endif; ?>
+														<span class="symbol-label"><?php echo $dadosUsuario['ds_nome'][0]; ?></span>	
 														<span class=" dropdown overlay-layer symbol-circle " >
 															<svg class="symbol-circle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M19.8107 18.3107C20.092 18.0294 20.25 17.6478 20.25 17.25V9C20.25 8.60218 20.092 8.22064 19.8107 7.93934C19.5294 7.65804 19.1478 7.5 18.75 7.5H15.75L14.25 5.25H9.75L8.25 7.5H5.25C4.85218 7.5 4.47064 7.65804 4.18934 7.93934C3.90804 8.22064 3.75 8.60218 3.75 9V17.25C3.75 17.6478 3.90804 18.0294 4.18934 18.3107C4.47064 18.592 4.85218 18.75 5.25 18.75H18.75C19.1478 18.75 19.5294 18.592 19.8107 18.3107ZM15 12.75C15 14.4069 13.6569 15.75 12 15.75C10.3431 15.75 9 14.4069 9 12.75C9 11.0931 10.3431 9.75 12 9.75C13.6569 9.75 15 11.0931 15 12.75Z" fill="white"/>
