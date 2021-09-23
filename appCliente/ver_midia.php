@@ -474,9 +474,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						}
 					?>
 					chaves[] = <?php echo json_encode($dateRange); ?>; 
-					if (chaves.indexOf(date.format('YYYY-M-D')) > -1) {
-						return false;
-					} else {
+					data = date.format('YYYY-M-D');
+					if (chaves.indexOf(data) < -1) {
 						return true;
 					}
 				},
