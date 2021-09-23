@@ -475,11 +475,11 @@ License: You must have a valid license purchased only from themeforest(the above
 			//datapicker
 			$('#datefilter').daterangepicker({
 				autoUpdateInput: false,
-				isInvalidDate: function(date){ 
-					if(chaves.indexOf(date.format('YYYY-MM-DD')) > -1){ 
-						return true;
-					}
-				},
+				// isInvalidDate: function(date){ 
+				// 	if(chaves.indexOf(date.format('YYYY-MM-DD')) > -1){ 
+				// 		return true;
+				// 	}
+				// },
 				
 				minDate: new Date(), 
 				// ranges: {
