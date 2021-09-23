@@ -81,7 +81,7 @@
 		<header class="position-fixed w-100 bg-white" style="z-index:2;">
 			<div class="navbar py-3 border-bottom">
 				<!--begin::Logo-->
-				<a href="#" class="brand-logo ml-8">
+				<a href="principal.php" class="brand-logo ml-8">
 					<img alt="Logo" src="assets/media/Uni_midia_logo.png" class="logo-default max-h-35px"  />
 				</a>
 				<!--end::Logo-->
