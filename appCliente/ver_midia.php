@@ -53,6 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 		<style>
 			#map {
@@ -307,11 +308,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Aluguel</h3>
                                                     </div>
                                                     <div class="d-flex my-6 mx-6" >
-														<div class="input-daterange input-group" id="datepicker">
+														<!-- <div class="input-daterange input-group" id="datepicker">
 															<input type="text" class="input-sm form-control" name="start" />
 															<span class="input-group-addon">Até</span>
 															<input type="text" class="input-sm form-control" name="end" />
-														</div>
+														</div> -->
+														<input type="text" name="datefilter" value="" />
                                                         <!-- <div class="col-6">
                                                             <label >Data de Inicio:<span class="text-danger">*</span></label>
                                                             <input type="text" class="form-control" name="dt_inicial" id="dt_inicial" autocomplete="off">
@@ -450,6 +452,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/js/scripts.bundle.js"></script>
 		<script src="./assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 		<script src="assets/js/appCliente/ver_midia.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 		
 		<script>
 			// The following example creates complex markers to indicate beaches near
