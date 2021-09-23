@@ -459,9 +459,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		jQuery(document).ready(function() {
 			demo3();
 
-			chaves[] = <?php
+			chaves = <?php
+				$dateRange = array();
 				while($dadosProximo = $ProximosAlugados->fetch()){
-					$dateRange = array();
 					$dateStart = new DateTime($dadosProximo['dt_inicial']);
 					$dateEnd =  new DateTime($dadosProximo['dt_final']);
 					while($dateStart <= $dateEnd){
