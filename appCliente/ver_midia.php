@@ -470,7 +470,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					}
 				}
 			?>
-			chaves[] = <?php echo json_encode($dateRange); ?>
+			chaves = <?php echo json_encode($dateRange); ?>
 			console.log(chaves);
 			//datapicker
 			$('#datefilter').daterangepicker({
