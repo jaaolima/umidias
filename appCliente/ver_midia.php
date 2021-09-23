@@ -470,15 +470,15 @@ License: You must have a valid license purchased only from themeforest(the above
 					}
 				}
 			?>
-			chaves = <?php echo json_encode($dateRange); ?>
+			chaves[] = <?php echo json_encode($dateRange); ?>
 			console.log(chaves);
 			//datapicker
 			$('#datefilter').daterangepicker({
 				autoUpdateInput: false,
 				isInvalidDate: function(date){
-					if(chaves.indexOf(date.format('YYYY-MM-DD')) > -1){
-						return true;
-					}
+					// if(chaves.indexOf(date.format('YYYY-MM-DD')) > -1){
+					// 	return true;
+					// }
 				},
 				
 				minDate: new Date(),
