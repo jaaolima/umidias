@@ -460,9 +460,12 @@ License: You must have a valid license purchased only from themeforest(the above
 			//datapicker
 			$('#datefilter').daterangepicker({
 				autoUpdateInput: false,
-				"maxSpan": {
-					"days": 30
+				"minSpan": {
+					"days": 29
 				},
+				"maxSpan": {
+					"days": 31
+				}
 				minDate: new Date(),
 				// ranges: {
 				// 	'1 mês': [moment(), moment()],
