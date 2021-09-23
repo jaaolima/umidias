@@ -473,7 +473,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							}
 						}
 					?>
-					chaves[] = <?php echo $dateRange; ?>; 
+					chaves[] = <?php echo json_encode($dateRange); ?>; 
 					if (chaves.indexOf(date) > -1) {
 						return false;
 					} else {
