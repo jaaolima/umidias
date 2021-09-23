@@ -468,7 +468,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							$dateStart = $dadosProximo['dt_inicial'];
 							$dateEnd = $dadosProximo['dt_final'];
 							while($dateStart <= $dateEnd){
-								$dateRange[] = $dateStart;
+								$dateRange[] = $dateStart->format('Y-m-d');
 								$dateStart = $dateStart->modify('+1day');
 							}
 							var_dump($dateRange);
