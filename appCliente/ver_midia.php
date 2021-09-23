@@ -313,12 +313,11 @@ License: You must have a valid license purchased only from themeforest(the above
 															<span class="input-group-addon">Até</span>
 															<input type="text" class="input-sm form-control" name="end" />
 														</div> -->
-														<input type="text" name="datefilter" value="" />
-                                                        <!-- <div class="col-6">
+                                                        <div class="col-6">
                                                             <label >Data de Inicio:<span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" name="dt_inicial" id="dt_inicial" autocomplete="off">
+                                                            <input type="text" class="form-control" id="datefilter" name="dt_inicial" id="dt_inicial" autocomplete="off">
                                                         </div>
-                                                        <div class="col-6" id="div_dt_final" style="display:none;">
+                                                        <!--<div class="col-6" id="div_dt_final" style="display:none;">
                                                             <label >Meses de locação:<span class="text-danger">*</span></label>
                                                             <select name="mes" id="mes" class="form-control">
                                                                 <option value="">Selecione...</option>
