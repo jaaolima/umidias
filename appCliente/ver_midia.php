@@ -471,9 +471,14 @@ License: You must have a valid license purchased only from themeforest(the above
 								$dateRange[] = $dateStart->format('Y-m-d');
 								$dateStart = $dateStart->modify('+1day');
 							}
-							var_dump($dateRange);
 						}
 					?>
+					chaves[] = <?php echo $dateRange; ?>; 
+					if (chaves.indexOf(date) > -1) {
+						return false;
+					} else {
+						return true;
+					}
 				},
 				// "minSpan": {
 				// 	"days": 29
@@ -488,7 +493,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				// 	'3 meses': [moment(), moment()],
 				// },
 				"locale": {
-					"format": "DD/MM/YYYY",
+					"format": "YYYY/MM/DD",
 					"separator": " - ",
 					"applyLabel": "Aplicar",
 					"cancelLabel": "Cancelar",
