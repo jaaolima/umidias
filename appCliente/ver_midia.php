@@ -591,6 +591,9 @@ License: You must have a valid license purchased only from themeforest(the above
 					let valor = <?php echo $valor; ?> * totalBisemana;
 					let total = parseInt(valor, 10);
 					valor_alugado = total + valorTotalMaterial
+
+					var local = document.getElementById("valor_alugado");
+					local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 				<?php endif;?>
 
 				// <?php if($id_midia == 2) : ?>
@@ -606,8 +609,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 				
 
-				var local = document.getElementById("valor_alugado");
-				local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+				
 			}
 
 		})
