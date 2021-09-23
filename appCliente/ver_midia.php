@@ -311,7 +311,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="d-flex my-6 mx-6" >
                                                         <div class="col-6">
                                                             <label >Data:<span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" id="datefilter" name="dt_inicial_final" id="dt_inicial_final" autocomplete="off" readonly>
+                                                            <input type="text" class="form-control" id="dt_inicial_final" name="dt_inicial_final" id="dt_inicial_final" autocomplete="off" readonly>
                                                         </div>
                                                         <!--<div class="col-6" id="div_dt_final" style="display:none;">
                                                             <label >Meses de locação:<span class="text-danger">*</span></label>
@@ -472,7 +472,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			?>
 
 			//datapicker
-			$('#datefilter').daterangepicker({
+			$('#dt_inicial_final').daterangepicker({
 				autoUpdateInput: false,
 				isInvalidDate: function(date){ 
 					if(chaves.indexOf(date.format('YYYY-MM-DD')) > -1){ 
@@ -522,11 +522,11 @@ License: You must have a valid license purchased only from themeforest(the above
 				},
 			});
 		
-			$('#datefilter').on('apply.daterangepicker', function(ev, picker) {
+			$('#dt_inicial_final').on('apply.daterangepicker', function(ev, picker) {
 				$(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
 			});
 		
-			$('#datefilter').on('cancel.daterangepicker', function(ev, picker) {
+			$('#dt_inicial_final').on('cancel.daterangepicker', function(ev, picker) {
 				$(this).val('');
 			});
 
