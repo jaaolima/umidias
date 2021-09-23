@@ -490,7 +490,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				"locale": {
 					"format": "DD/MM/YYYY",
 					"separator": " - ",
-					"applyLabel": "Aplicar",
+					"applyLabel": "Aplicar", 
 					"cancelLabel": "Cancelar",
 					"fromLabel": "De",
 					"toLabel": "Para",
