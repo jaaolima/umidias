@@ -459,7 +459,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		jQuery(document).ready(function() {
 			demo3();
 
-			<?php 
+			chaves[] = <?php
 				while($dadosProximo = $ProximosAlugados->fetch()){
 					$dateRange = array();
 					$dateStart = new DateTime($dadosProximo['dt_inicial']);
@@ -469,8 +469,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						$dateStart = $dateStart->modify('+1day');
 					}
 				}
+				echo json_encode($dateRange); 
 			?>
-			chaves[] = <?php echo json_encode($dateRange); ?>
 			console.log(chaves);
 			//datapicker
 			$('#datefilter').daterangepicker({
