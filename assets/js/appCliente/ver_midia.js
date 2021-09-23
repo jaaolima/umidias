@@ -95,7 +95,7 @@ $(document).ready(function() {
 
 	$('#datefilter').daterangepicker({
 		autoUpdateInput: false,
-		minDate: "d",
+		minDate: new Date(),
 		// ranges: {
 		// 	'1 mês': [moment(), moment()],
 		// 	'2 meses': [moment().add(), moment()],
