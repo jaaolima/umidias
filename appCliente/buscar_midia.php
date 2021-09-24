@@ -264,7 +264,8 @@ License: You must have a valid license purchased only from themeforest(the above
 				infoWindow: {
 					content: contentString,
 					maxWidth: 200,
-				}
+				},
+				id: <?php echo $dados["id_ponto"]; ?>,
 			});
 			<?php } ?>
 		} 
