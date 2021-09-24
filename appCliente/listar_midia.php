@@ -111,7 +111,7 @@
                                                 </div>													
                                             </div>
                                             
-                                        </div>
+                                        </div> 
                                         <div class='separator separator-solid'></div>
                                         <div class='my-8 mx-4 text-right'>
                                             <a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$id_midia."' class='text-primary'>Ver detalhes
