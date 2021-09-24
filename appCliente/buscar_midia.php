@@ -227,7 +227,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			});*/
 
 			<?php while($dados = $retornoBusca->fetch()){ ?>
-			const contentString =
+			var contentString =
 				'<div id="content">' +
 					'<div id="siteNotice">' +
 						"</div>" +
