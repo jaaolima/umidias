@@ -231,7 +231,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				'<div id="content">' +
 					'<div id="siteNotice">' +
 						"</div>" +
-							"<img class='img-fluid w-100 rounded-top' src='<?php echo $dados["ds_foto"]; ?>' alt='image'/>"
+							"<img class='img-fluid w-100 rounded-top' src='<?php echo $dados["ds_foto"]; ?>' style='height:20px;' alt='image'/>"
 							'<h1"><?php echo $dados['ds_bairro']; ?></h1>' +
 						'<div id="bodyContent">' +
 					"</div>" +
