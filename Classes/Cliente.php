@@ -375,7 +375,7 @@
 				$nu_valor_ponto    	= $dados['nu_valor_ponto'];
 				$Rvirgula = str_replace(",", "", $nu_valor_ponto); 
 				$valor = str_replace("R$ ", "", $Rvirgula);
-				$nu_valor_alugado = ($valor * $mes) + $dadosMaterial["nu_valor"];
+				$nu_valor_alugado = ($valor) + $dadosMaterial["nu_valor"];
 				
 	
 				// $date = new DateTime($dt_inicial);
