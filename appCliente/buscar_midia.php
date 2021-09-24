@@ -249,7 +249,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								"<p class='texto-chumbo font-size-h6 m-0'><?php echo $dados['ds_descricao'];?></p>"+
 							"</div>"+
 						"</div>"+
-
 					"</div>"+
 				"</div>";
 			
