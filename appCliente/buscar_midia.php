@@ -157,7 +157,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--end::Footer-->
 				</div>
 				<!--end::Wrapper-->
-			</div>
+			</div> 
 			<!--end::Page-->
 		</div>
 		<input type="hidden" value="<?php echo $id_midia?>" id="id_midia"> 
@@ -227,6 +227,15 @@ License: You must have a valid license purchased only from themeforest(the above
 			});*/
 
 			<?php while($dados = $retornoBusca->fetch()){ ?>
+			const contentString =
+				'<div id="content">' +
+					'<div id="siteNotice">' +
+						"</div>" +
+							"<img class='img-fluid w-100 rounded-top' src='<?php echo $dados["ds_foto"]; ?>' alt='image'/>"
+							'<h1"><?php echo $dados['ds_bairro']; ?></h1>' +
+						'<div id="bodyContent">' +
+					"</div>" +
+				"</div>";
 			map.addMarker({
 				lat: <?php echo $dados["ds_latitude"]; ?>,
 				lng: <?php echo $dados["ds_longitude"]; ?>,
@@ -237,7 +246,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					author: 'HPNeo' 
 				},
 				infoWindow: {
-					content: '<span style="color:#000"><?php echo $dados['ds_bairro']; ?></span>'
+					content: contentString
 				}
 			});
 			<?php } ?>
