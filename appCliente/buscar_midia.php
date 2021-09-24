@@ -242,11 +242,11 @@ License: You must have a valid license purchased only from themeforest(the above
 									"</svg>"+
 								"</div>"+
 								"<div class='ml-2'  style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>"+
-									"<a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$id_midia."'class='m-0 text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_bairro']."</a>"+
+									"<a href='appCliente/ver_midia.php?id_ponto='<?php echo $dados['id_ponto'];?>'&id_midia='<?php echo $id_midia;?>'class='m-0 text-dark font-weight-bold text-dark font-size-h4'>'<?php echo $dados['ds_bairro'];?></a>"+
 								"</div>"+
 							"</div>"+
 							"<div class='my-6' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>"+
-								"<p class='texto-chumbo font-size-h6 m-0'>".$dados['ds_descricao']."</p>"+
+								"<p class='texto-chumbo font-size-h6 m-0'>'<?php echo $dados['ds_descricao'];?></p>"+
 							"</div>"+
 						"</div>"+
 					"</div>"+
