@@ -241,14 +241,15 @@ License: You must have a valid license purchased only from themeforest(the above
 										"<path d='M12.3636 12.8183C13.7192 12.8183 14.8181 11.7193 14.8181 10.3637C14.8181 9.00812 13.7192 7.90918 12.3636 7.90918C11.008 7.90918 9.90906 9.00812 9.90906 10.3637C9.90906 11.7193 11.008 12.8183 12.3636 12.8183Z' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>"+
 									"</svg>"+
 								"</div>"+
-								"<div class='ml-2'  style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>"+
+								"<div class='ml-2'  style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 2;overflow: hidden;'>"+
 									"<a href='appCliente/ver_midia.php?id_ponto='<?php echo $dados['id_ponto'];?>'&id_midia='<?php echo $id_midia;?>'class='m-0 text-dark font-weight-bold text-dark font-size-h4'><?php echo $dados['ds_bairro'];?></a>"+
 								"</div>"+
 							"</div>"+
-							"<div class='my-6' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>"+
+							"<div class='my-6' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 2;overflow: hidden;'>"+
 								"<p class='texto-chumbo font-size-h6 m-0'><?php echo $dados['ds_descricao'];?></p>"+
 							"</div>"+
 						"</div>"+
+
 					"</div>"+
 				"</div>";
 			
