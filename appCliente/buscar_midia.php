@@ -250,17 +250,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							"</div>"+
 						"</div>"+
 					"</div>"+
-				"</div>"+
+				"</div>";
 			
-			// var contentString =
-			// 	'<div id="content">' +
-			// 			'<div id="siteNotice">' +
-			// 			"</div>" +
-			// 				"<img class='img-fluid w-100 rounded-top' src='<?php echo $dados["ds_foto"]; ?>' style='height:60px;' alt='image'/>"+
-			// 				'<h1"><?php echo $dados['ds_bairro']; ?></h1>' +
-			// 			'<div id="bodyContent">' +
-			// 			"</div>" +
-			// 	"</div>";
 			map.addMarker({
 				lat: <?php echo $dados["ds_latitude"]; ?>,
 				lng: <?php echo $dados["ds_longitude"]; ?>,
