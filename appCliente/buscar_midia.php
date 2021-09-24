@@ -242,7 +242,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									"</svg>"+
 								"</div>"+
 								"<div class='ml-2'  style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 2;overflow: hidden;'>"+
-									"<a href='appCliente/ver_midia.php?id_ponto="<?php echo $dados['id_ponto'];?>"&id_midia="<?php echo $id_midia;?>"' class='m-0 text-dark font-weight-bold text-dark font-size-h4'><?php echo $dados['ds_bairro'];?></a>"+
+									"<a href='appCliente/ver_midia.php?id_ponto=<?php echo $dados['id_ponto'];?>&id_midia=<?php echo $id_midia;?>' class='m-0 text-dark font-weight-bold text-dark font-size-h4'><?php echo $dados['ds_bairro'];?></a>"+
 								"</div>"+
 							"</div>"+
 							"<div class='my-6' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 2;overflow: hidden;'>"+
@@ -251,7 +251,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						"</div>"+
 						"<div class='separator separator-solid'></div>"+
 						"<div class='mt-2 text-right'>"+
-							"<a href='appCliente/ver_midia.php?id_ponto="<?php echo $dados['id_ponto'];?>"&id_midia="<?php echo $id_midia;?>"' class='text-primary'>Ver detalhes"+
+							"<a href='appCliente/ver_midia.php?id_ponto=<?php echo $dados['id_ponto'];?>&id_midia=<?php echo $id_midia;?>' class='text-primary'>Ver detalhes"+
 								"<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>"+
 									"<path d='M5 12H19' stroke='#B721FF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>"+
 									"<path d='M12 5L19 12L12 19' stroke='#B721FF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>"+
