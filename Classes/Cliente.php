@@ -365,8 +365,8 @@
 
 			if($id_midia == 2){
 				$datas = explode(" - ", $dados['dt_inicial_final']);
-				$inicial    	= new Datetime($datas[0]);
-				$final    		= new Datetime($datas[1]);
+				$inicial    	= date($datas[0]);
+				$final    		= date($datas[1]);
 
 				$dt_final = $final->format('Y-m-d');
 				$dt_inicial = $inicial->format('Y-m-d');
