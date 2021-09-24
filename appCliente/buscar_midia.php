@@ -262,7 +262,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					author: 'HPNeo' 
 				},
 				infoWindow: {
-					content: contentString
+					content: contentString,
 					maxWidth: 200,
 				}
 			});
