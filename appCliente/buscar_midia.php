@@ -227,15 +227,40 @@ License: You must have a valid license purchased only from themeforest(the above
 			});*/
 
 			<?php while($dados = $retornoBusca->fetch()){ ?>
-			var contentString =
-				'<div id="content">' +
-					'<div id="siteNotice">' +
-						"</div>" +
-							"<img class='img-fluid w-100 rounded-top' src='<?php echo $dados["ds_foto"]; ?>' style='height:60px;' alt='image'/>"
-							'<h1"><?php echo $dados['ds_bairro']; ?></h1>' +
-						'<div id="bodyContent">' +
-					"</div>" +
-				"</div>";
+			var contentString = 
+				"<div class='card card-custom'>"+
+					"<div class='card-body text-center' style='padding: 0px !important'>"+
+						"<div class='position-relative' >"+
+							"<img class='img-fluid w-100 rounded-top' src='<?php echo $dados["ds_foto"]; ?>' style='height:60px;' alt='image'/>"+
+						"</div>"+
+						"<div class='my-8 mx-15 text-left'>"+
+							"<div class='d-flex ml-n8'>"+
+								"<div class='mt-1'>"+
+									"<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>"+
+										"<path d='M19.7273 10.3636C19.7273 16.0909 12.3636 21 12.3636 21C12.3636 21 5 16.0909 5 10.3636C5 8.41068 5.77581 6.53771 7.15676 5.15676C8.53771 3.77581 10.4107 3 12.3636 3C14.3166 3 16.1896 3.77581 17.5705 5.15676C18.9515 6.53771 19.7273 8.41068 19.7273 10.3636Z' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>"+
+										"<path d='M12.3636 12.8183C13.7192 12.8183 14.8181 11.7193 14.8181 10.3637C14.8181 9.00812 13.7192 7.90918 12.3636 7.90918C11.008 7.90918 9.90906 9.00812 9.90906 10.3637C9.90906 11.7193 11.008 12.8183 12.3636 12.8183Z' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>"+
+									"</svg>"+
+								"</div>"+
+								"<div class='ml-2'  style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>"+
+									"<a href='appCliente/ver_midia.php?id_ponto=".$dados['id_ponto']."&id_midia=".$id_midia."'class='m-0 text-dark font-weight-bold text-dark font-size-h4'>".$dados['ds_bairro']."</a>"+
+								"</div>"+
+							"</div>"+
+							"<div class='my-6' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>"+
+								"<p class='texto-chumbo font-size-h6 m-0'>".$dados['ds_descricao']."</p>"+
+							"</div>"+
+						"</div>"+
+					"</div>"+
+				"</div>"+
+			
+			// var contentString =
+			// 	'<div id="content">' +
+			// 			'<div id="siteNotice">' +
+			// 			"</div>" +
+			// 				"<img class='img-fluid w-100 rounded-top' src='<?php echo $dados["ds_foto"]; ?>' style='height:60px;' alt='image'/>"+
+			// 				'<h1"><?php echo $dados['ds_bairro']; ?></h1>' +
+			// 			'<div id="bodyContent">' +
+			// 			"</div>" +
+			// 	"</div>";
 			map.addMarker({
 				lat: <?php echo $dados["ds_latitude"]; ?>,
 				lng: <?php echo $dados["ds_longitude"]; ?>,
@@ -247,6 +272,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				},
 				infoWindow: {
 					content: contentString
+					maxWidth: 200,
 				}
 			});
 			<?php } ?>
