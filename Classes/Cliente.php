@@ -365,11 +365,8 @@
 
 			if($id_midia == 2){
 				$datas = explode(" - ", $dados['dt_inicial_final']);
-				$inicial    	= date($datas[0]);
-				$final    		= date($datas[1]);
-
-				$dt_final = $final->format('Y-m-d');
-				$dt_inicial = $inicial->format('Y-m-d');
+				$dt_final    	= date('Y-m-d', $datas[0]);
+				$dt_inicial    		= date('Y-m-d', $datas[1]);
 
 				//total alugado
 				$nu_valor_ponto    	= $dados['nu_valor_ponto'];
