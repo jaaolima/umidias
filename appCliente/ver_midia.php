@@ -676,9 +676,6 @@ License: You must have a valid license purchased only from themeforest(the above
 					database_id: 42,
 					author: 'HPNeo'
 				},
-				infoWindow: {
-					content: '<span style="color:#000"><?php echo $dados['ds_bairro']; ?></span>'
-				}
 			});
 
 
