@@ -73,7 +73,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="form-group col-md-12 position-relative">
 							<div id="map" class="rounded"></div>
 							<div style="top:10px;left:80px;" class="position-absolute col-4">
-								<input type="text" id="busca" class="form-control" placeholder="Pesquise a região" style="border: 0;border-radius: 16px;" list="datalist">
+								<input type="text" id="busca" class="form-control" placeholder="Pesquise a região" style="border: 0;border-radius: 16px;" list="datalist" autocomplete="off">
 								<datalist id="datalist">
 									<?php echo $optionsLocal; ?>
 								</datalist>
