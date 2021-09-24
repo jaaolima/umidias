@@ -233,7 +233,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						"<div class='position-relative' >"+
 							"<img class='img-fluid w-100 rounded-top' src='<?php echo $dados["ds_foto"]; ?>' style='height:60px;' alt='image'/>"+
 						"</div>"+
-						"<div class='my-8 mx-15 text-left'>"+
+						"<div class='text-left'>"+
 							"<div class='d-flex ml-n8'>"+
 								"<div class='mt-1'>"+
 									"<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>"+
@@ -242,11 +242,11 @@ License: You must have a valid license purchased only from themeforest(the above
 									"</svg>"+
 								"</div>"+
 								"<div class='ml-2'  style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>"+
-									"<a href='appCliente/ver_midia.php?id_ponto='<?php echo $dados['id_ponto'];?>'&id_midia='<?php echo $id_midia;?>'class='m-0 text-dark font-weight-bold text-dark font-size-h4'>'<?php echo $dados['ds_bairro'];?></a>"+
+									"<a href='appCliente/ver_midia.php?id_ponto='<?php echo $dados['id_ponto'];?>'&id_midia='<?php echo $id_midia;?>'class='m-0 text-dark font-weight-bold text-dark font-size-h4'><?php echo $dados['ds_bairro'];?></a>"+
 								"</div>"+
 							"</div>"+
 							"<div class='my-6' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'>"+
-								"<p class='texto-chumbo font-size-h6 m-0'>'<?php echo $dados['ds_descricao'];?></p>"+
+								"<p class='texto-chumbo font-size-h6 m-0'><?php echo $dados['ds_descricao'];?></p>"+
 							"</div>"+
 						"</div>"+
 					"</div>"+
