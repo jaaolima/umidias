@@ -365,10 +365,9 @@
 
 			if($id_midia == 2){
 				$datas = explode(" - ", $dados['dt_inicial_final']);
-				var_dump($datas);
 
-				$dt_inicial    	= date('Y-m-d', $datas[0]);
-				$dt_final    		= date('Y-m-d', $datas[1]);
+				$dt_inicial = implode('-', array_reverse(explode('/', $datas[0])));
+				$dt_final = implode('-', array_reverse(explode('/', $datas[1])));
 
 				var_dump($dt_final);var_dump($dt_inicial);
 
