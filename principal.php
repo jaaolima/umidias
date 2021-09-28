@@ -735,7 +735,7 @@
 					});	
 				}, function(error){
 					console.log(error);
-					if(error[code] = 1){
+					if(error['code'] == 1){
 						console.log("precisamos de sua localização");
 					}
 				}) 
