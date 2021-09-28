@@ -733,10 +733,9 @@
 							swal.fire("Erro", data.responseText, "error"); 
 						}
 					});	
+				}, function(error){
+					console.log(error);
 				}) 
-			}
-			else{
-				console.log("ops");
 			}
 
 
