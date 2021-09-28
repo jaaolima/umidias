@@ -370,7 +370,7 @@
 																		<td>".$dados['ds_descricao']."</td>
 																		<td>".$dataInicial."</td>
 																		<td>".$dataFinal."</td>
-																		<td><span class='label ".$corStatus." label-pill label-inline mr-2'>".$dados['ds_status']."</span></td>
+																		<td><span class='label ".$corStatus." label-pill label-inline mr-2'><a>".$dados['ds_status']."</a></span></td>
 																	</tr>";
 															}
 															
