@@ -743,7 +743,7 @@
 				}
 			}
 
-			$("#button_aceitar_localizacao").on("click", geolocalizacao());
+			
 			
 
 
@@ -916,6 +916,8 @@
 			jQuery(document).ready(function () {
 				KTApexChartsDemo.init();
 				geolocalizacao();
+				
+				$("#button_aceitar_localizacao").on("click", geolocalizacao());
 			});
 
 		</script>
