@@ -152,7 +152,7 @@
 			
 		}
 
-		public function listarPontoTipo($id_midia)  
+		public function listarPontoTipo($id_midia)   
 		{
 			try{
 				$con = Conecta::criarConexao();

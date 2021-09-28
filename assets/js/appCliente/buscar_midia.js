@@ -27,6 +27,7 @@ $(document).ready(function() {
         {
             bisemana.push( $(this).val());
         });
+        console.log(bisemana);
         var id_midia = $("#id_midia").val();
         $.ajax({
             url: 'appCliente/listar_midia.php'
@@ -130,7 +131,7 @@ $(document).ready(function() {
             swal("Erro", data.responseText, "error");
         }
     });	
-});
+}); 
 
 function dateToEN(date)
 {	
