@@ -714,32 +714,34 @@
 
 		<!-- <script src="assets/js/scripts.bundle2.min.js"></script> -->
 		<script>
-			if('geolocation' in navigator){
-				navigator.geolocation.getCurrentPosition(function(position){
-					latitude = position.coords.latitude;
-					longitude = position.coords.longitude;
+			function geolocalizacao(){
+				if('geolocation' in navigator){
+					navigator.geolocation.getCurrentPosition(function(position){
+						latitude = position.coords.latitude;
+						longitude = position.coords.longitude;
 
 
-					$.ajax({
-						url: 'appCliente/listar_midias_proximas.php'
-						, data: {latitude, longitude}
-						, type: 'post'
-						, success: function(html) {
-							$("#midias_proximas").html(html);
-							$("#midias_proximas").slideDown(); 
-							$('#aceitar_localizacao').hide();
+						$.ajax({
+							url: 'appCliente/listar_midias_proximas.php'
+							, data: {latitude, longitude}
+							, type: 'post'
+							, success: function(html) {
+								$("#midias_proximas").html(html);
+								$("#midias_proximas").slideDown(); 
+								$('#aceitar_localizacao').hide();
+							}
+							, error: function (data) {
+								swal.fire("Erro", data.responseText, "error"); 
+							}
+						});	
+					}, function(error){
+						if(error['code'] == 1){
+							$("#aceitar_localizacao").show();
 						}
-						, error: function (data) {
-							swal.fire("Erro", data.responseText, "error"); 
-						}
-					});	
-				}, function(error){
-					console.log(error);
-					if(error['code'] == 1){
-						console.log("precisamos de sua localização");
-					}
-				}) 
+					}) 
+				}
 			}
+			
 
 
 			const primary = '#6993FF';
