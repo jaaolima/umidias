@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     </td>
                                                                     <td>".$dataInicial."</td>
                                                                     <td>".$dataFinal."</td>
-                                                                    <td><span class='label ".$corStatus." label-pill label-inline mr-2'>".$dados['ds_status']."</span></td>
+                                                                    <td><span class='label ".$corStatus." label-pill label-inline mr-2 py-6'>".$dados['ds_status']."</span></td>
                                                                     <td nowrap></td>
                                                                 </tr>";
                                                         }
