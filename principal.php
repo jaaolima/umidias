@@ -488,7 +488,7 @@
 																<div class="row col-12 mt-4 " id="midias_proximas"></div>
 																<div class="row col-12 mt-4 justify-content-center text-center d-none" id="aceitar_localizacao">
 																	<h3>Precisamos da sua localização para procurar</h3><br>	
-																	<button class="btn btn-primary" >Aceitar</button>
+																	<button class="btn btn-primary" onClick="geolocalizacao()">Aceitar</button>
 																</div>
 															</div>
 														</div>
