@@ -486,7 +486,7 @@
 																	<h3  class="titulo-div">Mídias próximas à Você</h3>
 																</div>
 																<div class="row col-12 mt-4 " id="midias_proximas"></div>
-																<div class="row col-12 mt-4 justify-content-center text-center d-block" id="aceitar_localizacao" style="display:none;">
+																<div class="row col-12 mt-4 justify-content-center text-center d-none" id="aceitar_localizacao">
 																	<h3>Precisamos da sua localização para procurar</h3><br>	
 																	<button class="btn btn-primary" >Aceitar</button>
 																</div>
@@ -728,7 +728,7 @@
 							, success: function(html) {
 								$("#midias_proximas").html(html);
 								$("#midias_proximas").slideDown(); 
-								$('#aceitar_localizacao').hide();
+								$("#aceitar_localizacao").addClass("d-none");
 							}
 							, error: function (data) {
 								swal.fire("Erro", data.responseText, "error"); 
@@ -736,7 +736,8 @@
 						});	
 					}, function(error){
 						if(error['code'] == 1){
-							$("#aceitar_localizacao").show();
+							$("#aceitar_localizacao").removeClass("d-none");
+							$("#aceitar_localizacao").addClass("d-block");
 						}
 					}) 
 				}
