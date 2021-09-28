@@ -216,64 +216,93 @@
 				$bisemana = $dados["bisemana"];
 				$id_midia = $dados["id_midia"];
 				$datasBisemana = "";
-				for ($i=0; $i < count($bisemana); $i++) { 
+
+				if($bisemana !== []){
+					for ($i=0; $i < count($bisemana); $i++) { 
+						try{
+							$con = Conecta::criarConexao();
+	
+							$selectBisemana = "SELECT dt_inicial, dt_final
+									from tb_bisemana
+									where id_bisemana = :id_bisemana";
+						
+							$stmtBisemana = $con->prepare($selectBisemana); 
+							$params = array(':id_bisemana' => $bisemana[$i]);
+							
+							$stmtBisemana->execute($params);
+			
+							$dados = $stmtBisemana->fetch();
+	
+							$dataInicial = str_replace('-', '', $dados["dt_inicial"]);
+							$dataFinal = str_replace('-', '',$dados["dt_final"]);
+	
+							// if($bisemana[$i] == count($bisemana)){
+							// 	$datasBisemana .= " or ".$dados["dt_inicial"]." and ".$dados["dt_final"];
+							// }
+							if($bisemana[$i] == $bisemana[0]){
+								$datasBisemana .= "(dt_inicial = ".$dataInicial." and dt_final = ".$dataFinal.")";
+							}
+							else{
+								$datasBisemana .= " or (dt_inicial = ".$dataInicial." and dt_final = ".$dataFinal.")";
+							}
+						}
+						catch(exception $e)
+						{
+							header('HTTP/1.1 500 Internal Server Error');
+							print "ERRO:".$e->getMessage();		
+						}	
+					}
 					try{
 						$con = Conecta::criarConexao();
-
-						$selectBisemana = "SELECT dt_inicial, dt_final
-								from tb_bisemana
-								where id_bisemana = :id_bisemana";
-					
-						$stmtBisemana = $con->prepare($selectBisemana); 
-						$params = array(':id_bisemana' => $bisemana[$i]);
 						
-						$stmtBisemana->execute($params);
+						$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
+									FROM tb_ponto p
+									inner join tb_tipo_midia t on p.id_midia=t.id_midia
+									right join rl_ponto_foto f on p.id_ponto=f.id_ponto
+									where p.id_midia=:id_midia 
+									and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
+									and p.id_ponto not in (select id_ponto from rl_alugado where  ".$datasBisemana.")";
+						
+						$stmt = $con->prepare($select); 
+						$params = array(':id_midia' => $id_midia);
+						$stmt->execute($params);
 		
-						$dados = $stmtBisemana->fetch();
-
-						$dataInicial = str_replace('-', '', $dados["dt_inicial"]);
-						$dataFinal = str_replace('-', '',$dados["dt_final"]);
-
-						// if($bisemana[$i] == count($bisemana)){
-						// 	$datasBisemana .= " or ".$dados["dt_inicial"]." and ".$dados["dt_final"];
-						// }
-						if($bisemana[$i] == $bisemana[0]){
-							$datasBisemana .= "(dt_inicial = ".$dataInicial." and dt_final = ".$dataFinal.")";
-						}
-						else{
-							$datasBisemana .= " or (dt_inicial = ".$dataInicial." and dt_final = ".$dataFinal.")";
-						}
+						return $stmt;
+						
+							
 					}
 					catch(exception $e)
 					{
 						header('HTTP/1.1 500 Internal Server Error');
 						print "ERRO:".$e->getMessage();		
-					}	
-				}
-				try{
-					$con = Conecta::criarConexao();
-					
-					$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
-								FROM tb_ponto p
-								inner join tb_tipo_midia t on p.id_midia=t.id_midia
-								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
-								where p.id_midia=:id_midia 
-								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
-								and p.id_ponto not in (select id_ponto from rl_alugado where  ".$datasBisemana.")";
-					
-					$stmt = $con->prepare($select); 
-					$params = array(':id_midia' => $id_midia);
-					$stmt->execute($params);
-	
-					return $stmt;
-					
+					}
+				}else{
+					try{
+						$con = Conecta::criarConexao();
 						
+						$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, ds_latitude, ds_longitude
+									FROM tb_ponto p
+									inner join tb_tipo_midia t on p.id_midia=t.id_midia
+									right join rl_ponto_foto f on p.id_ponto=f.id_ponto
+									where p.id_midia=:id_midia 
+									and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
+									and p.id_ponto not in (select id_ponto from rl_alugado)";
+						
+						$stmt = $con->prepare($select); 
+						$params = array(':id_midia' => $id_midia);
+						$stmt->execute($params);
+		
+						return $stmt;
+						
+							
+					}
+					catch(exception $e)
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					}
 				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
-				}
+				
 			}
 			if($id_busca === ""){
 				try{
