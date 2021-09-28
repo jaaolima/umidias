@@ -370,7 +370,7 @@
 																		<td>".$dados['ds_descricao']."</td>
 																		<td>".$dataInicial."</td>
 																		<td>".$dataFinal."</td>
-																		<td><span style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;'> class='label ".$corStatus." label-pill label-inline mr-2'>".$dados['ds_status']."</span></td>
+																		<td><span style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;' class='label ".$corStatus." label-pill label-inline mr-2'>".$dados['ds_status']."</span></td>
 																	</tr>";
 															}
 															
