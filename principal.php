@@ -736,7 +736,7 @@
 				}) 
 			}
 			else{
-				alert("I'm sorry, but geolocation services are not supported by your browser.");
+				console.log("ops");
 			}
 
 
