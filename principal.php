@@ -486,9 +486,9 @@
 																	<h3  class="titulo-div">Mídias próximas à Você</h3>
 																</div>
 																<div class="row col-12 mt-4 " id="midias_proximas"></div>
-																<div class="row col-12 mt-4 justify-content-center text-center" id="aceitar_localizacao" style="display:none;">
-																	<p>Precisamos da sua localização para procurar</p><br>	
-																	<button class="btn btn-primary">Aceitar</button>
+																<div class="row col-12 mt-4 justify-content-center text-center d-block" id="aceitar_localizacao" style="display:none;">
+																	<h3>Precisamos da sua localização para procurar</h3><br>	
+																	<button class="btn btn-primary" >Aceitar</button>
 																</div>
 															</div>
 														</div>
