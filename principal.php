@@ -488,7 +488,7 @@
 																<div class="row col-12 mt-4 " id="midias_proximas"></div>
 																<div class="row col-12 mt-4 justify-content-center text-center d-none" id="aceitar_localizacao">
 																	<h3>Precisamos da sua localização para procurar</h3><br>	
-																	<button class="btn btn-primary" id="button_aceitar_localizacao" >Aceitar</button>
+																	<button class="btn btn-primary" type="button" id="button_aceitar_localizacao" >Aceitar</button>
 																</div>
 															</div>
 														</div>
@@ -916,7 +916,7 @@
 			jQuery(document).ready(function () {
 				KTApexChartsDemo.init();
 				geolocalizacao();
-				
+
 				$("#button_aceitar_localizacao").on("click", geolocalizacao());
 			});
 
