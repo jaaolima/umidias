@@ -477,7 +477,7 @@
 													</div>
 													<!--end::Tiles Widget 25-->
 												</div>
-												<div class="col-xl-12">
+												<div class="col-xl-12"> 
 													<!--begin::Tiles Widget 25-->
 													<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
 														<div class="card-body">
