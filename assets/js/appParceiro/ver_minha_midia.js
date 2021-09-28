@@ -10,12 +10,13 @@ $(document).ready(function() {
 			cancelButtonColor: '#fd397a',
 			confirmButtonText: 'Sim, posseguir!',
 			cancelButtonText: 'Cancelar'
-		}).then(function(result) { 
+		}).then(function(result) {
+			console.log(result);  
 			if (result.value) {
 				$.ajax({
 					url: 'appPonto/desativar_ponto.php'
 					, type: 'post'
-					, data: {id_ponto : id_ponto}
+					, data: {id_ponto: id_ponto}
 					, success: function(html) {
 						swal.fire('Pronto!',html,'success');
 						redirectTo('appParceiro/ver_minha_midia.php?id_ponto='+id_ponto);				

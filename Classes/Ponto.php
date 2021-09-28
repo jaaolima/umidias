@@ -1501,7 +1501,7 @@
 		}
 		public function desativarPonto(array $dados)
 		{
-            $id_ponto	    = $dados['id_ponto'];
+            $id_ponto	    = $dados['id_ponto']; 
 			try{
 				$con = Conecta::criarConexao();
 				$insert = "update tb_ponto set st_status = 'D'
