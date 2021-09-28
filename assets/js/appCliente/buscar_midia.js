@@ -1,26 +1,23 @@
 $(document).ready(function() {
 	$("#aplicar").on("click", function(e){ 
-        if(validarAplicarData()){
-            var date = $("#calendario").datepicker('getDate');
-            dataUS = date.toLocaleDateString('pt-br');
-            dataFinal = dateToEN(dataUS);
-            console.log(dataFinal);
-            var id_midia = $("#id_midia").val();
-            $.ajax({
-                url: 'appCliente/listar_midia.php' 
-                , data: {data: dataFinal, id_midia: id_midia, id_busca: 'data'}
-                , type: 'post'
-                , success: function(html) {
-                    $("#lista").html(html);
-                    $("#lista").slideDown();  
-                }
-                , error: function (data) {
-                    $("#lista").slideUp();
-                    swal("Erro", data.responseText, "error");
-                }
-            });	
-        }
-        
+        var date = $("#calendario").datepicker('getDate');
+        dataUS = date.toLocaleDateString('pt-br');
+        dataFinal = dateToEN(dataUS);
+        console.log(dataFinal);
+        var id_midia = $("#id_midia").val();
+        $.ajax({
+            url: 'appCliente/listar_midia.php' 
+            , data: {data: dataFinal, id_midia: id_midia, id_busca: 'data'}
+            , type: 'post'
+            , success: function(html) {
+                $("#lista").html(html);
+                $("#lista").slideDown();  
+            }
+            , error: function (data) {
+                $("#lista").slideUp();
+                swal("Erro", data.responseText, "error");
+            }
+        });	
 
 	});
 
@@ -160,18 +157,19 @@ function validarAplicarBisemana()
 	return true;
 }
 
-function validarAplicarData()
+function validarAplicarBisemana()
 {
-    var date = $("#calendario").datepicker('getDate');
-    console.log(date);
-
-	// var bisemana = $("input[name='bisemana']:checked").val();
+	var bisemana = $("input[name='bisemana']:checked").val();
  
-    // if(!bisemana) 
-    // {
-    //     swal.fire("Erro", "Escolha uma Bisemana", "error");
-    //     return false;	
-    // }
+    if(!bisemana) 
+    {
+        swal.fire("Erro", "Escolha uma Bisemana", "error");
+        return false;	
+    }
+
+	
+	
+	
 
 	return true;
 }
