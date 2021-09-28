@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var id_perfil = $("#id_perfil").val();
 	if(id_perfil == 3){
 		$("#salvar").on("click", function(e){
-			var form = $("#form_usuario").get(0); 
+			var form = $("#form_usuario").get(0);  
 			
 			if(validar() )
 			{ 	var form = $("#form_usuario").get(0); 
@@ -202,7 +202,7 @@ function validar()
 	if($("#ds_sentido").val() == "")
 	{
 		$("#ds_sentido").focus();
-		swal.fire("Erro", "Preencha o local", "error");
+		swal.fire("Erro", "Preencha o sentido", "error");
 		$("#ds_sentido").addClass("is-invalid");
 		return false;	
 	}

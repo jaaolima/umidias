@@ -98,7 +98,7 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                     <label>Selecione os arquivos da Foto</label>
                     <input type="file" class="form-control" id="fotos" name="fotos[]" multiple />  
                 </div>
-            </div>
+            </div> 
             <div class="form-group row">
                 <!--<div class="form-group col-4">
                     <label class="">Fotos da Mídia<span class="text-danger">*</span></label>
