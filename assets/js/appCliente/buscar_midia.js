@@ -22,26 +22,28 @@ $(document).ready(function() {
 	});
 
     $("#aplicarBisemana").on("click", function(e){ 
-        var bisemana = new Array();
-        $("input[name='bisemana[]']:checked").each(function ()
-        {
-            bisemana.push( $(this).val());
-        });
-        console.log(bisemana);
-        var id_midia = $("#id_midia").val();
-        $.ajax({
-            url: 'appCliente/listar_midia.php'
-            , data: {bisemana: bisemana, id_midia: id_midia, id_busca: 'bisemana'}
-            , type: 'post'
-            , success: function(html) {
-                $("#lista").html(html);
-                $("#lista").slideDown(); 
-            }
-            , error: function (data) {
-                $("#lista").slideUp();
-                swal("Erro", data.responseText, "error");
-            }
-        });	
+        if(validarAplicarBisemana()){
+            var bisemana = new Array();
+            $("input[name='bisemana[]']:checked").each(function ()
+            {
+                bisemana.push( $(this).val());
+            });
+            console.log(bisemana);
+            var id_midia = $("#id_midia").val();
+            $.ajax({
+                url: 'appCliente/listar_midia.php'
+                , data: {bisemana: bisemana, id_midia: id_midia, id_busca: 'bisemana'}
+                , type: 'post'
+                , success: function(html) {
+                    $("#lista").html(html);
+                    $("#lista").slideDown(); 
+                }
+                , error: function (data) {
+                    $("#lista").slideUp();
+                    swal("Erro", data.responseText, "error");
+                }
+            });	
+        }
 
 	});
 
@@ -136,6 +138,23 @@ $(document).ready(function() {
 function dateToEN(date)
 {	
 	return date.split('/').reverse().join('-');
+}
+
+function validarAplicarBisemana()
+{
+	var bisemana = $("input[name='bisemana']:checked").val();
+ 
+    if(!bisemana) 
+    {
+        swal.fire("Erro", "Escolha uma Bisemana", "error");
+        return false;	
+    }
+
+	
+	
+	
+
+	return true;
 }
 
 var DatatablesBasicBasic = function() {
