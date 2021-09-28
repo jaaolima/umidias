@@ -913,6 +913,7 @@
 			}();
 			jQuery(document).ready(function () {
 				KTApexChartsDemo.init();
+				geolocalizacao();
 			});
 
 		</script>
