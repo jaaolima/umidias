@@ -66,13 +66,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class=" d-flex col-6" >
 														<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">Nome</legend>
-															<input class="border-0 w-100" style="height: 27px;" type="text" name="ds_nome" id="ds_nome">
+															<input class="border-0 w-100 form-control rounded-0" style="height: 27px;" type="text" name="ds_nome" id="ds_nome">
 														</fieldset>                                                 
 													</div>
 													<div class=" d-flex col-6">
 														<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">E-mail</legend>
-															<input class="border-0 w-100" type="text " style="height: 27px;" name="ds_email" id="ds_email">
+															<input class="border-0 w-100 form-control rounded-0" type="text " style="height: 27px;" name="ds_email" id="ds_email">
 														</fieldset>                                               
 													</div>
 												</div>	
@@ -80,7 +80,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<div class=" d-flex col-12">
 														<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">Mensagem</legend>
-                                                            <textarea class="border-0 w-100" style="height: 27px;" name="ds_mensagem" id="ds_mensagem" cols="30" rows="5"></textarea>
+                                                            <textarea class="border-0 w-100 form-control rounded-0" style="height: 27px;" name="ds_mensagem" id="ds_mensagem" cols="30" rows="5"></textarea>
 														</fieldset>                                               
 													</div>
 												</div>	
