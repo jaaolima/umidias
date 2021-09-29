@@ -12,8 +12,7 @@ $(document).ready(function() {
 			cancelButtonText: 'Cancelar'
 		}).then(function(result) { 
 			if(result.value){
-				console.log(result.value); 
-				jQuery.ajax({
+				$.ajax({
 					url: 'appPonto/desativar_ponto.php'
 					, type: 'post'
 					, data: {id_ponto: id_ponto}
