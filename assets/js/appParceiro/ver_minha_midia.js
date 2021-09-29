@@ -12,7 +12,7 @@ $(document).ready(function() {
 			cancelButtonText: 'Cancelar'
 		}).then(function(result) { 
 			console.log(result.value);  
-			if (result.value == true) {
+			if(result.value){
 				$.ajax({
 					url: 'appPonto/desativar_ponto.php'
 					, type: 'post'
@@ -20,6 +20,9 @@ $(document).ready(function() {
 					, success: function(html) {
 						swal.fire('Pronto!',html,'success');
 						redirectTo('appParceiro/ver_minha_midia.php?id_ponto='+id_ponto);				
+					}
+					, error: function (data) {
+						swal.fire("Erro", data.responseText, "error");
 					}
 				});
 				
