@@ -310,8 +310,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </div>
                                                     <div class="d-flex my-6 mx-6" >
                                                         <div class="col-6">
-                                                            <label >Data:<span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" id="dt_inicial_final" name="dt_inicial_final" id="dt_inicial_final" autocomplete="off" readonly>
+															<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+																<legend class="legend-border mb-0">Data</legend>
+																<input type="text" class="border-0 w-100 form-control rounded-0" id="dt_inicial_final" name="dt_inicial_final" id="dt_inicial_final" autocomplete="off" readonly>
+															</fieldset>  
                                                         </div>
                                                         <!--<div class="col-6" id="div_dt_final" style="display:none;">
                                                             <label >Meses de locação:<span class="text-danger">*</span></label>
