@@ -10,8 +10,8 @@ $(document).ready(function() {
 			cancelButtonColor: '#fd397a',
 			confirmButtonText: 'Sim, posseguir!',
 			cancelButtonText: 'Cancelar'
-		}).then(function(result) {
-			console.log(result);  
+		}).then(function(result) { 
+			console.log(result.value);  
 			if (result.value == true) {
 				$.ajax({
 					url: 'appPonto/desativar_ponto.php'

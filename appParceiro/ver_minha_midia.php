@@ -125,7 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="text-right">
 									<button class="btn btn-primary" id="ativar">Ativar Ponto</button>
 								</div>		
-								<?php endif; ?>
+								<?php endif; ?> 
 							</div>
 							<div class="content flex-column-fluid pt-0" id="kt_content">
 								<div class="row">
