@@ -23,6 +23,7 @@ $(document).ready(function() {
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error");
 					}
+					, async: false
 				});
 				
 			}
