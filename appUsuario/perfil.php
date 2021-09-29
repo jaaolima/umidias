@@ -202,35 +202,35 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class=" d-flex">
 													<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 														<legend class="legend-border mb-0">Nome Completo</legend>
-														<input class="border-0 w-100" style="height: 27px;" name="ds_nome" type="text" id="ds_nome"value="<?php echo $dadosUsuario['ds_nome'] ?>">
+														<input class="border-0 w-100 form-control rounded-0" style="height: 27px;" name="ds_nome" type="text" id="ds_nome"value="<?php echo $dadosUsuario['ds_nome'] ?>">
 													</fieldset> 
 												</div> 
 												<div class="row">
 													<div class=" d-flex col-6">
 														<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">E-mail</legend>
-															<input class="border-0 w-100" type="text " style="height: 27px;" name="ds_email" id="ds_email" value="<?php echo $dadosUsuario['ds_email'] ?>">
+															<input class="border-0 w-100 form-control rounded-0" type="text " style="height: 27px;" name="ds_email" id="ds_email" value="<?php echo $dadosUsuario['ds_email'] ?>">
 														</fieldset>                                               
 													</div>
 													<div class=" d-flex col-6" >
 														<fieldset class="fieldset-border w-100"  style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">CPF</legend>
-															<input class="border-0 w-100" style="height: 27px;" type="text" name="nu_cpf" id="nu_cpf" value="<?php echo $dadosUsuario['nu_cpf'] ?>">
+															<input class="border-0 w-100 form-control rounded-0" style="height: 27px;" type="text" name="nu_cpf" id="nu_cpf" value="<?php echo $dadosUsuario['nu_cpf'] ?>">
 														</fieldset>                                                 
 													</div>
-													<input class="border-0 w-100" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario ?>">
+													<input class="border-0 w-100 form-control rounded-0" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario ?>">
 												</div>	
 												<div class="row">
 													<div class=" d-flex col-6">
 														<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">Senha</legend>
-															<input class="border-0 w-100" type="password" style="height: 27px;" name="ds_senha" id="ds_senha" value="********">
+															<input class="border-0 w-100 form-control rounded-0" type="password" style="height: 27px;" name="ds_senha" id="ds_senha" value="********">
 														</fieldset>                                               
 													</div>
 													<div class="col-6" id="confirmar" style="display:none;">
 														<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 															<legend class="legend-border mb-0">Confirmar senha</legend>
-															<input class="border-0 w-100" type="password" style="height: 27px;" name="ds_senha_confirmada" id="ds_senha_confirmada">
+															<input class="border-0 w-100 form-control rounded-0" type="password" style="height: 27px;" name="ds_senha_confirmada" id="ds_senha_confirmada">
 														</fieldset>                                               
 													</div>
 												</div>	
