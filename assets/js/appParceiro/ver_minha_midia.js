@@ -13,7 +13,7 @@ $(document).ready(function() {
 		}).then(function(result) { 
 			if(result.value){
 				console.log(result.value); 
-				$.ajax({
+				jQuery.ajax({
 					url: 'appPonto/desativar_ponto.php'
 					, type: 'post'
 					, data: {id_ponto: id_ponto}
