@@ -11,8 +11,8 @@ $(document).ready(function() {
 			confirmButtonText: 'Sim, posseguir!',
 			cancelButtonText: 'Cancelar'
 		}).then(function(result) { 
-			console.log(result.value);  
 			if(result.value){
+				console.log(result.value); 
 				$.ajax({
 					url: 'appPonto/desativar_ponto.php'
 					, type: 'post'
