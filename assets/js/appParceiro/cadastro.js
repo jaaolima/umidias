@@ -93,7 +93,7 @@ function validar()
 	if($("#ds_usuario").val() == "")
 	{
 		$("#ds_usuario").focus();
-		swal.fire("Erro", "Preencha o nome da empresa", "error");
+		swal.fire("Erro", "Preencha o usuario", "error");
 		$("#ds_usuario").addClass("is-invalid");
 		return false;	
 	}

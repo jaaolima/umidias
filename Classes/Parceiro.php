@@ -26,7 +26,7 @@
 				if($this->validarCPF($nu_cpf)){
 					try{
 						$con = Conecta::criarConexao();
-						$insert = "INSERT into tb_parceiro (ds_nomeempresa, ds_usuario nu_cpf,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota, dt_parceiro)
+						$insert = "INSERT into tb_parceiro (ds_nomeempresa, ds_usuario, nu_cpf,  ds_logradouro, nu_numerolog, nu_cep, id_estado, id_cidade, ds_bairro, ds_responsavel, ds_email, nu_telefone, id_regime, nu_aliquota, dt_parceiro)
 									VALUES (:ds_nomeempresa, :ds_usuario, :nu_cpf, :ds_logradouro, :nu_numerolog, :nu_cep, :id_estado , :id_cidade, :ds_bairro, :ds_responsavel, :ds_email, :nu_telefone, :id_regime, :nu_aliquota, :dt_parceiro)";
 						
 						$stmt = $con->prepare($insert);
