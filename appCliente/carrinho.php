@@ -51,6 +51,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="separator separator-solid"></div>
                                 <input type="hidden" id="id_usuario" value="<?php echo $id_usuario; ?>">
+                                <embed src="../assets/media/teste.pdf" width="100px" height="200px" />
                                 <div class="my-6 mx-6 d-flex row">
                                 
                                     <?php
@@ -135,7 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="col-4">
                             <div class="card card-custom card-stretch gutter-b box-shadow">
                                 <div class="my-6 mx-6">
-                                    <h3>Ações:</h3>
+                                    <h3>Ações:</h3> 
                                 </div>
                                 <div class="separator separator-solid"></div>
                                 <div class="my-6 mx-6 ">
