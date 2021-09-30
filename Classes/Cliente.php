@@ -475,91 +475,90 @@
 				$paramsCarrinho = array(':id_usuario' => $id_usuario);
 				$stmtCarrinho->execute($paramsCarrinho);
 
-				$this->ConverterImagem();
-				// while($dadosCarrinho = $stmtCarrinho->fetch()){
-				// 	$id_usuario	    = $dadosCarrinho['id_usuario'];
-				// 	$id_ponto	    = $dadosCarrinho['id_ponto'];
-				// 	$ds_arte	    = $dadosCarrinho['ds_arte'];
-				// 	$id_midia	    = $dadosCarrinho['id_midia'];
-				// 	$dt_inicial	    = $dadosCarrinho['dt_inicial'];
-				// 	$dt_final	    = $dadosCarrinho['dt_final'];
-				// 	$id_material	= $dadosCarrinho['id_material'];
-				// 	$nu_valor_alugado	= $dadosCarrinho['nu_valor_alugado'];
+				while($dadosCarrinho = $stmtCarrinho->fetch()){
+					$id_usuario	    = $dadosCarrinho['id_usuario'];
+					$id_ponto	    = $dadosCarrinho['id_ponto'];
+					$ds_arte	    = $dadosCarrinho['ds_arte'];
+					$id_midia	    = $dadosCarrinho['id_midia'];
+					$dt_inicial	    = $dadosCarrinho['dt_inicial'];
+					$dt_final	    = $dadosCarrinho['dt_final'];
+					$id_material	= $dadosCarrinho['id_material'];
+					$nu_valor_alugado	= $dadosCarrinho['nu_valor_alugado'];
 
 					
 					
-				// 	if($id_midia == 2){
+					if($id_midia == 2){
 		
-				// 		try{
-				// 			$con = Conecta::criarConexao();
-				// 			$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
-				// 						VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1, :nu_valor_alugado)";
+						try{
+							$con = Conecta::criarConexao();
+							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
+										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1, :nu_valor_alugado)";
 							
-				// 			$stmt = $con->prepare($insert);
+							$stmt = $con->prepare($insert);
 							 
-				// 			$params = array(':id_usuario' => $id_usuario,
-				// 							':id_ponto' => $id_ponto,
-				// 							':dt_inicial' => $dt_inicial,
-				// 							':dt_final' => $dt_final,
-				// 							':ds_arte' => $ds_arte,
-				// 							':nu_valor_alugado' => $nu_valor_alugado);
+							$params = array(':id_usuario' => $id_usuario,
+											':id_ponto' => $id_ponto,
+											':dt_inicial' => $dt_inicial,
+											':dt_final' => $dt_final,
+											':ds_arte' => $ds_arte,
+											':nu_valor_alugado' => $nu_valor_alugado);
 											
-				// 			$stmt->execute($params);
+							$stmt->execute($params);
 
 							
 							
-				// 		}
-				// 		catch(exception $e)
-				// 		{
-				// 			header('HTTP/1.1 500 Internal Server Error');
-				// 			print "ERRO:".$e->getMessage();		
-				// 		}
-				// 	}
-				// 	if($id_midia == 1){
-				// 		try{
-				// 			$con = Conecta::criarConexao();
-				// 			$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final,  id_material, ds_arte, nu_valor_alugado)
-				// 						VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final,  :id_material, :ds_arte, :nu_valor_alugado)";
+						}
+						catch(exception $e)
+						{
+							header('HTTP/1.1 500 Internal Server Error');
+							print "ERRO:".$e->getMessage();		
+						}
+					}
+					if($id_midia == 1){
+						try{
+							$con = Conecta::criarConexao();
+							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final,  id_material, ds_arte, nu_valor_alugado)
+										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final,  :id_material, :ds_arte, :nu_valor_alugado)";
 							
-				// 			$stmt = $con->prepare($insert);
+							$stmt = $con->prepare($insert);
 							
-				// 			$params = array(':id_usuario' => $id_usuario,
-				// 							':id_ponto' => $id_ponto,
-				// 							':dt_inicial' => $dt_inicial,
-				// 							':dt_final' => $dt_final,
-				// 							':id_material' => $id_material,
-				// 							':ds_arte' => $ds_arte,
-				// 							':nu_valor_alugado' => $nu_valor_alugado);
+							$params = array(':id_usuario' => $id_usuario,
+											':id_ponto' => $id_ponto,
+											':dt_inicial' => $dt_inicial,
+											':dt_final' => $dt_final,
+											':id_material' => $id_material,
+											':ds_arte' => $ds_arte,
+											':nu_valor_alugado' => $nu_valor_alugado);
 											
-				// 			$stmt->execute($params);
+							$stmt->execute($params);
 							
-				// 		}
-				// 		catch(exception $e)
-				// 		{
-				// 			header('HTTP/1.1 500 Internal Server Error');
-				// 			print "ERRO:".$e->getMessage();		
-				// 		}
-				// 	}
-				// }
+						}
+						catch(exception $e)
+						{
+							header('HTTP/1.1 500 Internal Server Error');
+							print "ERRO:".$e->getMessage();		
+						}
+					}
+				}
 				
-				// try{
-				// 	$con = Conecta::criarConexao(); 
+				try{
+					$con = Conecta::criarConexao(); 
 					
-				// 	$delete = "delete from rl_carrinho where id_usuario=:id_usuario";
+					$delete = "delete from rl_carrinho where id_usuario=:id_usuario";
 					
-				// 	$stmtDelete = $con->prepare($delete); 
-				// 	$paramsDelete = array(':id_usuario' => $id_usuario);
-				// 	$stmtDelete->execute($paramsDelete);
+					$stmtDelete = $con->prepare($delete); 
+					$paramsDelete = array(':id_usuario' => $id_usuario);
+					$stmtDelete->execute($paramsDelete);
 	
-				// 	echo "Carrinho esvaziado";
+					echo "Carrinho esvaziado";
 					
 						
-				// }
-				// catch(exception $e)
-				// {
-				// 	header('HTTP/1.1 500 Internal Server Error');
-				// 	print "ERRO:".$e->getMessage();		 
-				// }
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		 
+				}
 			}
 			catch(exception $e)
 			{

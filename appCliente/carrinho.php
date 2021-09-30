@@ -51,14 +51,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="separator separator-solid"></div>
                                 <input type="hidden" id="id_usuario" value="<?php echo $id_usuario; ?>">
-                                <embed src="../assets/media/teste.pdf" width="100px" height="200px" />
                                 <div class="my-6 mx-6 d-flex row">
                                 
                                     <?php
                                         while($dados = $retorno->fetch()){ 
-                                            // $imagick = new Imagick();
-                                            // $imagick->readImage('../'.$dados["ds_arte"]);
-                                            // $imagick->writeImages('../'.$dados["ds_arte"], false);
                                             echo "<div class='col-4' >
                                                 <div class='card card-custom card-stretch gutter-b'>
                                                     <!--begin::Body-->
