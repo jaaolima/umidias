@@ -56,12 +56,12 @@ $(document).ready(function() {
 	});
 
     $("#valor_inicial").inputmask({
-		"mask": "9.999",
+		"mask": "9,999",
 		numericInput: true,
 	});
 
     $("#valor_final").inputmask({
-		"mask": "9.999", 
+		"mask": "9,999", 
 		numericInput: true,
 	});
 
