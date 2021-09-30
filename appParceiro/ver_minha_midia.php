@@ -189,6 +189,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			</div>
 			<!--end::Page-->
 		</div>
+		<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
 		<!--end::Main-->
 		<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
 		<!--begin::Global Config(global config for global JS scripts)-->
