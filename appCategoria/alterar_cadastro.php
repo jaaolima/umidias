@@ -29,7 +29,7 @@ $dados = $categoria->buscarDadosCategoria($id_midia);
             <div class="form-group row">
                 <div class="form-group col-md-6">
                     <label>Nome <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_nome" name="ds_nome" value="<?php echo $dados['ds_nome']?>"/>
+                    <input type="text" class="form-control" id="ds_tipo" name="ds_tipo" value="<?php echo $dados['ds_tipo']?>"/>
                 </div>
             </div>       
         </div>

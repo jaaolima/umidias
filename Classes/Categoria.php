@@ -37,7 +37,7 @@
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_tipo' => $ds_tipo,);
+				$params = array(':ds_tipo' => $ds_tipo);
                                 
 				$stmt->execute($params);
 				
