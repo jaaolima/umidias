@@ -14,7 +14,7 @@
 				
 				$stmt->execute();
 
-				return $stmt;
+				return $stmt; 
 				
 					
 			}
@@ -136,6 +136,31 @@
 			print $e->getMessage();
 			}
 		}
+
+		public function excluirCategoria(array $dados) 
+		{
+			$id_categoria = $dados['id_categoria'];
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "delete from tb_categoria
+							WHERE id_categoria=:id_categoria";
+				
+				$stmt = $con->prepare($insert);
+				
+                $params = array(':id_categoria' => $id_categoria);
+                                
+				$stmt->execute($params);
+				
+				echo "Deletado com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+		} 
 
 
     }
