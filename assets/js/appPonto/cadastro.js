@@ -230,7 +230,7 @@ function validar()
 		$("#ds_latitude").focus();
 		swal.fire("Erro", "Preencha a Latitude", "error");
 		$("#ds_latitude").addClass("is-invalid");
-		return false;	
+		return false;	 
 	}
 	else
 	{

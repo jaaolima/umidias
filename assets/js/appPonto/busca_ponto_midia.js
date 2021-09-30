@@ -55,14 +55,18 @@ $(document).ready(function() {
 				
 	});
 
-    $("#valor_inicial").inputmask({
-		"mask": "9,999",
-		numericInput: true,
+    $("#valor_inicial").inputmask({ 
+		'alias': 'numeric',
+		'groupSeparator': '.',
+		'autoGroup': true,
+		'prefix': 'R$ ',
 	});
 
-    $("#valor_final").inputmask({
-		"mask": "9,999", 
-		numericInput: true,
+    $("#valor_final").inputmask({ 
+		'alias': 'numeric',
+		'groupSeparator': '.',
+		'autoGroup': true,
+		'prefix': 'R$ ',
 	});
 
     $("#buscar_regiao").on('click', function(){
