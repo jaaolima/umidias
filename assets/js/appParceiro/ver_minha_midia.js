@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 	$("#desativar").on('click', function() {
-		var id_ponto = $("#id_ponto");
+		var id_ponto = $("#id_ponto").val();
 		swal.fire({
 			title: 'Tem certeza?',
 			text: "Desejar Desativar o Ponto?",
@@ -31,7 +31,7 @@ $(document).ready(function() {
 	});    
 	
 	$("#ativar").on('click', function() {
-		var id_ponto = $("#id_ponto");
+		var id_ponto = $("#id_ponto").val();
 		swal.fire({
 			title: 'Tem certeza?',
 			text: "Desejar Ativar o Ponto?",
