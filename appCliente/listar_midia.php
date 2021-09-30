@@ -22,7 +22,7 @@
         </div>
         <div class="content flex-column-fluid" id="kt_content"> 
             <div class="mb-8">
-                <h1 class="h1-titulo">Encontre seu outdoor</h1>
+                <h1 class="h1-titulo">Encontre sua mídia</h1>
                 <p class="texto-fraco">
                     <?php 
                         $total = 0;
