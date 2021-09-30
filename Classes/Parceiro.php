@@ -588,6 +588,31 @@
 			
 		}
 
+		public function excluirParceiro(array $dados) 
+		{
+			$id_parceiro = $dados['id_parceiro'];
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "delete from tb_parceiro
+							WHERE id_parceiro=:id_parceiro";
+				
+				$stmt = $con->prepare($insert);
+				
+                $params = array(':id_parceiro' => $id_parceiro);
+                                
+				$stmt->execute($params);
+				
+				echo "Deletado com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+		}
+
     }
 
 
