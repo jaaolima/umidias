@@ -474,7 +474,7 @@
 				$stmtCarrinho = $con->prepare($selectCarrinho); 
 				$paramsCarrinho = array(':id_usuario' => $id_usuario);
 				$stmtCarrinho->execute($paramsCarrinho);
-				
+
 				ConverterImagem();
 				// while($dadosCarrinho = $stmtCarrinho->fetch()){
 				// 	$id_usuario	    = $dadosCarrinho['id_usuario'];
@@ -573,14 +573,16 @@
         }
 
 		public function ConverterImagem(){
-			$im = new imagick('../assets/media/teste.pdf'); 
-			$im->setImageColorspace(255); 
-			$im->setResolution(300, 300);
-			$im->setCompressionQuality(95); 
-			$im->setImageFormat('jpeg'); 
-			$im->writeImage('thumb.jpg'); 
-			$im->clear(); 
-			$im->destroy();
+			// $im = new imagick('../assets/media/teste.pdf'); 
+			// $im->setImageColorspace(255); 
+			// $im->setResolution(300, 300);
+			// $im->setCompressionQuality(95); 
+			// $im->setImageFormat('jpeg'); 
+			// $im->writeImage('thumb.jpg'); 
+			// $im->clear(); 
+			// $im->destroy();
+
+			echo "chegou";
 		}
 
 
