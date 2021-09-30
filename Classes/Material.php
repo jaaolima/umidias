@@ -199,7 +199,7 @@
 				echo "Deletado com sucesso!"; 
 				
 			}
-			catch(exception $e)
+			catch(exception $e) 
 			{
 				header('HTTP/1.1 500 Internal Server Error');
     			print "ERRO:".$e->getMessage();		
