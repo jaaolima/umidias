@@ -517,6 +517,7 @@
 																		<th>Tipo de Mídia</th> 
 																		<th>Data inicial</th>
 																		<th>Data final</th>
+																		<th>Status</th>
 																		<th>Valor contratado</th>
 																		<th></th>
 																	</tr>
@@ -527,6 +528,9 @@
 																	while($dados = $meusPontos->fetch()){
 																		$dataInicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
 																		$dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
+																		$corStatus = "label-warning";
+																		if($dados["id_status_midia"] == 5){ $corStatus =  "label-success"; }
+
 																		echo "<tr>
 																				<td>
 																					<div class='d-flex'>
@@ -554,6 +558,7 @@
 																				</td>
 																				<td class='py-8'>".$dataInicial."</td> 
 																				<td class='py-8'>".$dataFinal."</td>
+																				<td class='py-8'><span class='label ".$corStatus." label-pill label-inline mr-2 py-6'>".$dados['ds_status']."</span></td>
 																				<td class='py-8'>R$ ".$dados["nu_valor_alugado"]."</td>
 																				<td class='py-8'><a href='appCliente/ver_minha_midia.php?id_ponto=".$dados["id_ponto"]."&id_alugado=".$dados["id_alugado"]."'>
 																					<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -738,7 +743,7 @@
 						if(error['code'] == 1){
 							$("#aceitar_localizacao").removeClass("d-none");
 							$("#aceitar_localizacao").addClass("d-block");
-						}
+						} 
 					}) 
 				}
 			}
