@@ -6,7 +6,7 @@ var DatatablesBasicBasic = function() {
 		// begin first table
 		table.DataTable({
 			responsive: true,
-			retrieve: true,
+			retrieve: true, 
 			
 
 			//== DOM Layout settings
@@ -45,6 +45,9 @@ var DatatablesBasicBasic = function() {
                          <a href="appMaterial/alterar_cadastro.php?id_material=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
                           <i class="la la-edit"></i>
                         </a>
+						<a id="excluir"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-bisemana="`+full[0]+`" >
+							<i class="la la-remove"></i>
+						</a> 
                         `;
 					},
 				},
