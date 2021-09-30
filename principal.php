@@ -682,9 +682,6 @@
 				</div>
 				<!--end::Wrapper-->
 			</div>
-			<div id="loading" class="bg-white opacity-1 page"> 
-				<p>teste</p>
-			</div>
 			<!--end::Page-->
 		</div>
 		<!--end::Main-->
@@ -745,15 +742,6 @@
 					}) 
 				}
 			}
-
-
-			$(window).load(function() {
-				document.getElementById("loading").style.display = "none";
-			})
-
-			
-			
-
 
 			const primary = '#6993FF';
 			const success = '#1BC5BD';
