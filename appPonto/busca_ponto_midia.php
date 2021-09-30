@@ -10,7 +10,7 @@
 	<div class="card-body">
         <div class="form-group col-md-12">
             <label>Tipo de busca</label>
-            <div class="radio-inline">
+            <div class="radio-inline"> 
                 <label class="radio">
                     <label class="mr-2" for="buscar_regiao">Região</label>
                     <input type="radio" id="buscar_regiao" name="tp_busca" value="1" checked="checked">

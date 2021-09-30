@@ -32,7 +32,7 @@
 	<div class="card-body">
         <table class="table table-striped- table-bordered table-hover table-checkable" id="table_usuario">
             <thead>
-                <tr>
+                <tr> 
                     <th>Tipo de Mídia</th> 
                     <th>Data inicial</th>
                     <th>Data final</th>
