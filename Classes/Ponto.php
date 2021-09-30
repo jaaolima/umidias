@@ -593,6 +593,7 @@
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
 							where id_usuario=:id_usuario
 							and a.st_status = 'A'
+							and a.id_status_midia = 1
 							and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto)";
 				
 				$stmt = $con->prepare($select); 
