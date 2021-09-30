@@ -45,7 +45,7 @@ var DatatablesBasicBasic = function() {
                          <a href="appMaterial/alterar_cadastro.php?id_material=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Cadastro">
                           <i class="la la-edit"></i>
                         </a>
-						<a id="excluir"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-bisemana="`+full[0]+`" >
+						<a id="excluir"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-material="`+full[0]+`" >
 							<i class="la la-remove"></i>
 						</a> 
                         `;
@@ -58,6 +58,33 @@ var DatatablesBasicBasic = function() {
 				
 				
 			],
+		});
+
+		table.on('click', '#excluir', function() {
+			var id_material = $(this).data("material");
+			swal.fire({
+	            title: 'Tem certeza?',
+	            text: "Desejar excluir a Material?",
+	            type: 'warning',
+	            showCancelButton: true,
+	            cancelButtonColor: '#fd397a',
+	            confirmButtonText: 'Sim, posseguir!',
+				cancelButtonText: 'Cancelar'
+	        }).then(function(result) {
+	            if (result.value) {
+					$.ajax({
+				        url: 'appMaterial/excluir_material.php'
+				        , type: 'post'
+				        , data: {id_material : id_material}
+				        , success: function(html) {
+							swal.fire('Pronto!',html,'success');
+							redirectTo("appMaterial/listar_material.php");				
+				        }
+				    });
+	                
+	            }
+	        });
+			
 		});
 	
 

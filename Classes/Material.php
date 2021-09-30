@@ -181,6 +181,31 @@
 			}
 		}
 
+		public function excluirMaterial(array $dados) 
+		{
+			$id_material = $dados['id_material'];
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "delete from tb_material
+							WHERE id_material=:id_material";
+				
+				$stmt = $con->prepare($insert);
+				
+                $params = array(':id_material' => $id_material);
+                                
+				$stmt->execute($params);
+				
+				echo "Deletado com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+		}
+
 
     }
 ?>        
