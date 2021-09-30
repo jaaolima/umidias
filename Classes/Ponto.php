@@ -193,6 +193,7 @@
 					inner join tb_tipo_midia t on p.id_midia=t.id_midia
 					right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 					where p.id_midia=:id_midia
+					and p.st_status = 'A'
 					and p.id_ponto not in (select al.id_ponto from rl_alugado al 
 					where al.id_ponto=p.id_ponto and al.dt_final >= :dt_inicial and :dt_inicial between al.dt_inicial and al.dt_final)";
 					
@@ -259,6 +260,7 @@
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 								where p.id_midia=:id_midia 
+								and p.st_status = 'A'
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
 								and p.id_ponto not in (select id_ponto from rl_alugado where  ".$datasBisemana.")";
 					
@@ -284,7 +286,9 @@
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
-								where p.id_midia=:id_midia and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
+								where p.id_midia=:id_midia 
+								and p.st_status = 'A'
+								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia);
@@ -309,7 +313,9 @@
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
-								where p.id_midia=:id_midia and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
+								where p.id_midia=:id_midia 
+								and p.st_status = 'A'
+								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia);
@@ -334,7 +340,9 @@
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
-								where p.id_midia=:id_midia and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
+								where p.id_midia=:id_midia 
+								and p.st_status = 'A'
+								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia);
@@ -360,7 +368,9 @@
 								FROM tb_ponto p
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								right join rl_ponto_foto f on p.id_ponto=f.id_ponto
-								where p.id_midia=:id_midia and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto) and ds_bairro like '%".$busca."%'";
+								where p.id_midia=:id_midia 
+								and p.st_status = 'A'
+								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto) and ds_bairro like '%".$busca."%'";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia);
