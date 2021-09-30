@@ -463,6 +463,7 @@
 								right join tb_ponto p on a.id_ponto=p.id_ponto
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								where p.id_midia = :id_midia
+								and p.st_status = 'A'
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto) and ds_bairro like '%".$busca."%'";
 					
 					$stmt = $con->prepare($select); 
@@ -492,6 +493,7 @@
 								right join tb_ponto p on a.id_ponto=p.id_ponto
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								where p.id_midia = :id_midia
+								and p.st_status = 'A'
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto)
 								and nu_valor between ".$valor_inicial." and ".$valor_final." ";
 					
@@ -520,6 +522,7 @@
 								right join tb_ponto p on a.id_ponto=p.id_ponto
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								where p.id_midia = :id_midia
+								and p.st_status = 'A'
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto)";
 					
 					$stmt = $con->prepare($select); 
