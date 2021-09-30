@@ -80,14 +80,15 @@ License: You must have a valid license purchased only from themeforest(the above
 											<?php
 												
 												while($dados = $meusPontos->fetch()){
+													
 													$status = "";
 													switch ($dados['st_status']) {
 														case 'D':
-															$status = "Desativado";
+															$status = "<span class='label label-gray label-pill label-inline mr-2 py-6'>Desativado</span>";
 															break;
 														
 														case 'A':
-															$status = "Ativo";
+															$status = "<span class='label label-success label-pill label-inline mr-2 py-6'>Ativo</span>";
 															break;
 													}
 													echo "<tr>
