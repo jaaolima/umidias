@@ -475,7 +475,7 @@
 				$paramsCarrinho = array(':id_usuario' => $id_usuario);
 				$stmtCarrinho->execute($paramsCarrinho);
 
-				ConverterImagem();
+				$this->ConverterImagem();
 				// while($dadosCarrinho = $stmtCarrinho->fetch()){
 				// 	$id_usuario	    = $dadosCarrinho['id_usuario'];
 				// 	$id_ponto	    = $dadosCarrinho['id_ponto'];
