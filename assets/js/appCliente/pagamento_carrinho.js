@@ -32,7 +32,7 @@ $(document).ready(function() {
             , data: {id_usuario: id_usuario}
             , type: 'post'
             , success: function(html) {      
-                redirectTo("appCliente/listar_minhas_midias.php"); 
+                // redirectTo("appCliente/listar_minhas_midias.php"); 
             } 
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");
