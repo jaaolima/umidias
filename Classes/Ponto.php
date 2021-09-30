@@ -493,8 +493,10 @@
 				}
 			}
 			if($tp_busca === "valor"){
-				$valor_inicial = $dados["valor_inicial"];
+				$valor_inicial = str_replace("R$ ", "", $dados["valor_inicial"]);
 				$valor_final = $dados["valor_final"];
+
+
 
 				echo $valor_inicial;
 				// try{
