@@ -185,8 +185,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					demo3(latitude, longitude);
 				}, function(error){
 					if(error['code'] == 1){
-						var latitude = -15.7750656;
-						var longitude = -48.0773014;
+						var latitude = -15.8387805;
+						var longitude = -48.1546066;
 						demo3(latitude, longitude);
 					}
 				})
