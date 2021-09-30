@@ -144,7 +144,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				$insert = "delete from tb_tipo_midia
-							WHERE id_categoria=:id_categoria";
+							WHERE id_midia=:id_categoria";
 				
 				$stmt = $con->prepare($insert);
 				
