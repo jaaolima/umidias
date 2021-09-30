@@ -493,9 +493,10 @@
 				}
 			}
 			if($tp_busca === "valor"){
-				$valor_inicial = str_replace("R$ ", "", $dados["valor_inicial"]);
-				$valor_final =  str_replace("R$ ", "", $dados["valor_final"]);
+				$valor_inicial = str_replace(",", "", str_replace("R$ ", "", $dados["valor_inicial"]));
+				$valor_final =  str_replace(",", "", str_replace("R$ ", "", $dados["valor_final"]));
 
+				echo $valor_inicial;
 				try{
 					$con = Conecta::criarConexao();
 					
