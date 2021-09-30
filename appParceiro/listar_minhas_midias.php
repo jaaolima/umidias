@@ -72,7 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<th>Descrição</th>
 												<th>Valor</th>
 												<th>Tipo de Mídia</th>
-												<th>Observações</th>
+												<th>Status</th>
 												<th>Ações</th> 
 											</tr>
 										</thead> 
@@ -80,6 +80,16 @@ License: You must have a valid license purchased only from themeforest(the above
 											<?php
 												
 												while($dados = $meusPontos->fetch()){
+													$status = "";
+													switch ($dados['st_status']) {
+														case 'D':
+															$status = "Desativado";
+															break;
+														
+														case 'A':
+															$status = "Ativo";
+															break;
+													}
 													echo "<tr>
 																<td>".$dados['id_ponto']."</td>
 																<td>
@@ -105,11 +115,11 @@ License: You must have a valid license purchased only from themeforest(the above
 																			</div>
 																		</div>
 																	</div>
-																</td>
+																</td> 
 																<td>".$dados['ds_descricao']."</td>
 																<td>".$dados['nu_valor']."</td>
 																<td>".$dados['ds_tipo']."</td>
-																<td>".$dados['ds_observacao']."</td>
+																<td>".$status."</td>
 																<td nowrap></td> 
 															</tr>";
 												}
