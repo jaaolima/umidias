@@ -187,7 +187,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					if(error['code'] == 1){
 						var latitude = -15.8387805;
 						var longitude = -48.1546066;
-						demo3(latitude, longitude);
+						var zoom = 12;
+						demo3(latitude, longitude, zoom);
 					}
 				})
 			}
@@ -209,12 +210,12 @@ License: You must have a valid license purchased only from themeforest(the above
 			});
 		});
 
-		var demo3 = function(latitude, longitude) {
+		var demo3 = function(latitude, longitude, zoom = 14) {
 			var map = new GMaps({
 				div: '#map',
 				lat: latitude,
 				lng: longitude,
-				zoom: 14
+				zoom: zoom
 			});
 
 			/*google.maps.event.addListener(map, 'dblclick', function(event) {
