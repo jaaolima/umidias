@@ -469,7 +469,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_bairro, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
+					$select = "SELECT a.id_ponto, nu_valor_alugado, t.id_midia, ds_bairro, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
 								FROM rl_alugado a
 								right join rl_ponto_foto f on a.id_ponto=f.id_ponto
 								right join tb_ponto p on a.id_ponto=p.id_ponto
@@ -500,14 +500,14 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_bairro, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
+					$select = "SELECT a.id_ponto, nu_valor_alugado, t.id_midia, ds_bairro, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
 								FROM rl_alugado a
 								right join rl_ponto_foto f on a.id_ponto=f.id_ponto
 								right join tb_ponto p on a.id_ponto=p.id_ponto
 								inner join tb_tipo_midia t on p.id_midia=t.id_midia
 								where p.id_midia = :id_midia
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto)
-								and nu_valor between ".$valor_inicial." and ".$valor_final." ";
+								and nu_valor_alugado between ".$valor_inicial." and ".$valor_final." ";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_midia' => $id_midia);
@@ -528,7 +528,7 @@
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT a.id_ponto, nu_valor, t.id_midia, ds_bairro, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
+					$select = "SELECT a.id_ponto, nu_valor_alugado, t.id_midia, ds_bairro, t.ds_tipo, dt_inicial, dt_final, f.ds_foto, a.id_alugado
 								FROM rl_alugado a
 								right join rl_ponto_foto f on a.id_ponto=f.id_ponto
 								right join tb_ponto p on a.id_ponto=p.id_ponto
