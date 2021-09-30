@@ -139,7 +139,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php endif; ?>
 									<?php if($dados["id_status_midia"] == 3) : ?>
 									<div class="text-center" style="font-size:20px;">
-										<span class="font-weight-bolder">><?php echo $dados["ds_status"]; ?></span>
+										<span class="font-weight-bolder"><?php echo $dados["ds_status"]; ?></span>
 										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
 											<div class='progress-bar bg-danger' role='Progresso' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
 										</div>
