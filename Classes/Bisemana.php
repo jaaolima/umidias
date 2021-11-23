@@ -231,6 +231,30 @@
     			print "ERRO:".$e->getMessage();		
 			}
 		}
+		public function listarTodasBisemanaPonto()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT id_bisemana, ds_bisemana, dt_inicial, dt_final
+							FROM tb_bisemana
+							where dt_inicial > curdate()";
+				
+				$stmt = $con->prepare($select); 
+				
+				
+				$stmt->execute();
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+        }
 
 
     }
