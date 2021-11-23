@@ -196,37 +196,40 @@ $optionsbisemana = $Bisemana->listarTodasBisemana();
                 </div>
             </div>   
             <div class="form-group row">
-                <label>Bisemanas disponíveis<span class="text-danger">*</span></label>
-                <table  class="table table-hover" id="table_bisemana">
-                    <thead>
-                        <tr>
-                            <th>ID bisemanas</th>
-                            <th>Data Inicial</th>
-                            <th>Data Final</th>
-                            <th>Bisemanas Disponiveis</th>
-                            <th>Selecione</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                            while ($dadosBisemana = $optionsbisemana->fetch())
-                            {
+                <div class="col-6">
+                    <label>Bisemanas disponíveis<span class="text-danger">*</span></label>
+                    <table  class="table table-hover" id="table_bisemana">
+                        <thead>
+                            <tr>
+                                <th>ID bisemanas</th>
+                                <th>Data Inicial</th>
+                                <th>Data Final</th>
+                                <th>Bisemanas Disponiveis</th>
+                                <th>Selecione</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                while ($dadosBisemana = $optionsbisemana->fetch())
+                                {
 
-                                $dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
-                                $dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
+                                    $dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
+                                    $dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
 
 
-                                echo "<tr>
-                                        <td>".$dadosBisemana['id_bisemana']."</td>
-                                        <td>".$dt_inicial."</td>
-                                        <td>".$dt_final."</td>
-                                        <td>".$dadosBisemana['ds_bisemana']."</td>
-                                        <td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox' selected></td>
-                                    </tr>";
-                            }
-                        ?>
-                    </tbody>
-                </table>
+                                    echo "<tr>
+                                            <td>".$dadosBisemana['id_bisemana']."</td>
+                                            <td>".$dt_inicial."</td>
+                                            <td>".$dt_final."</td>
+                                            <td>".$dadosBisemana['ds_bisemana']."</td>
+                                            <td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox' selected></td>
+                                        </tr>";
+                                }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+                
             </div>
         </div>
         <div class="card-footer">
