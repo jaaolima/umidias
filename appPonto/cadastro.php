@@ -5,11 +5,13 @@ error_reporting(E_ALL);
 require_once("../Classes/Categoria.php");
 require_once("../Classes/Material.php");
 require_once("../Classes/Parceiro.php");
+require_once("../Classes/Bisemena.php");
 session_start();
 
 $Categoria = new Categoria(); 
 $Parceiro = new Parceiro(); 
 $Material = new Material(); 
+$Bisemana = new Bisemana(); 
 
 $id_perfil = $_SESSION['id_perfil'];
 
@@ -22,6 +24,7 @@ $optionsUF = $Parceiro->listaroptionsUF(null);
 $optionscategoria = $Categoria->listaroptionscategoria(null);
 $optionsmaterial = $Material->listaroptionsmaterial(null);
 $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
+$optionsbisemana = $Parceiro->listarTodasBisemana(null);
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <!--<script
@@ -192,6 +195,38 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div>
             </div>   
+            <div class="form-group row">
+                <table  class="table table-hover" id="table_bisemana">
+                    <thead>
+                        <tr>
+                            <th>ID bisemanas</th>
+                            <th>Data Inicial</th>
+                            <th>Data Final</th>
+                            <th>Bisemanas Disponiveis</th>
+                            <th>Selecione</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            while ($dadosBisemana = $optionsbisemana->fetch())
+                            {
+
+                                $dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
+                                $dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
+
+
+                                echo "<tr>
+                                        <td>".$dadosBisemana['id_bisemana']."</td>
+                                        <td>".$dt_inicial."</td>
+                                        <td>".$dt_final."</td>
+                                        <td>".$dadosBisemana['ds_bisemana']."</td>
+                                        <td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox' selected></td>
+                                    </tr>";
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>

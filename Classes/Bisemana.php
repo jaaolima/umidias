@@ -111,7 +111,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				$insert = "delete from tb_bisemana
-							WHERE id_bisemana=:id_bisemana";
+							WHERE id_bisemana=:id_bisemana"; 
 				
 				$stmt = $con->prepare($insert);
 				
