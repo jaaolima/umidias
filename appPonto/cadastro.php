@@ -222,7 +222,7 @@ $optionsbisemana = $Bisemana->listarTodasBisemana();
                                             <td>".$dt_inicial."</td>
                                             <td>".$dt_final."</td>
                                             <td>".$dadosBisemana['ds_bisemana']."</td>
-                                            <td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox' selected></td>
+                                            <td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox' checked></td>
                                         </tr>";
                                 }
                             ?>
