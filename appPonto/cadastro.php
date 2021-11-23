@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 require_once("../Classes/Categoria.php");
 require_once("../Classes/Material.php");
 require_once("../Classes/Parceiro.php");
-require_once("../Classes/Bisemena.php");
+require_once("../Classes/Bisemana.php");
 session_start();
 
 $Categoria = new Categoria(); 
