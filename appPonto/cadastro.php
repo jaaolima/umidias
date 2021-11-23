@@ -24,7 +24,7 @@ $optionsUF = $Parceiro->listaroptionsUF(null);
 $optionscategoria = $Categoria->listaroptionscategoria(null);
 $optionsmaterial = $Material->listaroptionsmaterial(null);
 $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
-$optionsbisemana = $Bisemana->listarTodasBisemana(null);
+$optionsbisemana = $Bisemana->listarTodasBisemana();
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <!--<script
@@ -196,6 +196,7 @@ $optionsbisemana = $Bisemana->listarTodasBisemana(null);
                 </div>
             </div>   
             <div class="form-group row">
+                <label>Bisemanas disponíveis<span class="text-danger">*</span></label>
                 <table  class="table table-hover" id="table_bisemana">
                     <thead>
                         <tr>

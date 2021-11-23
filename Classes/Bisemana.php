@@ -1,7 +1,7 @@
 <?php
 	require_once("../Classes/Conecta.php");
     class Bisemana{
-        public function listarTodasBisemana(array $dados)
+        public function listarTodasBisemana()
 		{
 			try{
 				$con = Conecta::criarConexao();
