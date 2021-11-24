@@ -73,77 +73,77 @@
 				
 			try{
 				$con = Conecta::criarConexao();
-				// $insert = "INSERT into tb_ponto (id_parceiro, ds_descricao, ds_latitude, ds_longitude, nu_valor, id_midia, ds_bairro, ds_observacao, id_material, id_periodo, ds_tamanho, dt_ponto, id_estado, id_cidade, ds_sentido)
-				// 			VALUES (:id_parceiro, :ds_descricao, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_bairro, :ds_observacao, :id_material, :id_periodo, :ds_tamanho, :dt_ponto, :id_estado, :id_cidade, :ds_sentido)";
+				$insert = "INSERT into tb_ponto (id_parceiro, ds_descricao, ds_latitude, ds_longitude, nu_valor, id_midia, ds_bairro, ds_observacao, id_material, id_periodo, ds_tamanho, dt_ponto, id_estado, id_cidade, ds_sentido)
+							VALUES (:id_parceiro, :ds_descricao, :ds_latitude, :ds_longitude, :nu_valor, :id_midia, :ds_bairro, :ds_observacao, :id_material, :id_periodo, :ds_tamanho, :dt_ponto, :id_estado, :id_cidade, :ds_sentido)";
 				
-				// $stmt = $con->prepare($insert);
+				$stmt = $con->prepare($insert);
 				
-				// $params = array(':id_parceiro' => $id_parceiro,
-				// 				':ds_descricao' => $ds_descricao,
-				// 				':ds_latitude' => $ds_latitude,
-				// 				':ds_longitude' => $ds_longitude,
-				// 				':nu_valor' => $nu_valor,
-				// 				':id_midia' =>$id_midia,
-				// 				':ds_bairro' => $ds_bairro,
-				// 				':ds_observacao' => $ds_observacao,
-				// 				':id_material' => $id_material,
-				// 				':id_periodo' => $id_periodo,
-				// 				':ds_tamanho' => $ds_tamanho,
-				// 				':dt_ponto' => $dt_ponto,
-				// 				':id_estado' => $id_estado,
-				// 				':id_cidade' => $id_cidade,
-				// 				':ds_sentido' => $ds_sentido
-				// 			);
+				$params = array(':id_parceiro' => $id_parceiro,
+								':ds_descricao' => $ds_descricao,
+								':ds_latitude' => $ds_latitude,
+								':ds_longitude' => $ds_longitude,
+								':nu_valor' => $nu_valor,
+								':id_midia' =>$id_midia,
+								':ds_bairro' => $ds_bairro,
+								':ds_observacao' => $ds_observacao,
+								':id_material' => $id_material,
+								':id_periodo' => $id_periodo,
+								':ds_tamanho' => $ds_tamanho,
+								':dt_ponto' => $dt_ponto,
+								':id_estado' => $id_estado,
+								':id_cidade' => $id_cidade,
+								':ds_sentido' => $ds_sentido
+							);
 								
-				// $stmt->execute($params);
+				$stmt->execute($params);
 
-				// $id_ponto = $con->lastInsertId();
+				$id_ponto = $con->lastInsertId();
 
-				// foreach($ds_foto as $key => $foto)
-				// {
-				// 	$tamanho = 20000000;
+				foreach($ds_foto as $key => $foto)
+				{
+					$tamanho = 20000000;
 
-				// 	$error = array();
-				// 	$tamanho_mb = $tamanho/1024/1024;
+					$error = array();
+					$tamanho_mb = $tamanho/1024/1024;
 					
-				// 	if($foto["size"] > $tamanho) {
-				// 		$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
-				// 	}
+					if($foto["size"] > $tamanho) {
+						$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
+					}
 
-				// 	if (count($error) == 0) {
-				// 		// Pega extensão da imagem
-				// 		preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $foto["name"], $ext);
-				// 		// Gera um nome único para o arquivo
-				// 		$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
-				// 		// Caminho de onde ficará o arquivo
-				// 		$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_pontos/" . $nome_arquivo;
+					if (count($error) == 0) {
+						// Pega extensão da imagem
+						preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $foto["name"], $ext);
+						// Gera um nome único para o arquivo
+						$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
+						// Caminho de onde ficará o arquivo
+						$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_pontos/" . $nome_arquivo;
 		
-				// 		$gravar_caminho_arquivo = "docs_pontos/" . $nome_arquivo;
+						$gravar_caminho_arquivo = "docs_pontos/" . $nome_arquivo;
 		
 					
 						
-				// 		// Faz o upload da imagem para seu respectivo caminho
-				// 		$moved = move_uploaded_file($foto["tmp_name"],  $caminho_arquivo);
+						// Faz o upload da imagem para seu respectivo caminho
+						$moved = move_uploaded_file($foto["tmp_name"],  $caminho_arquivo);
 
-				// 		$insert_foto = "insert into rl_ponto_foto(id_ponto, ds_foto) values (:id_ponto, :ds_foto)";
+						$insert_foto = "insert into rl_ponto_foto(id_ponto, ds_foto) values (:id_ponto, :ds_foto)";
 
-				// 		$stmt_foto = $con->prepare($insert_foto);
+						$stmt_foto = $con->prepare($insert_foto);
 				
-				// 		$params_foto = array(':id_ponto' => $id_ponto,
-				// 						':ds_foto' => $gravar_caminho_arquivo
-				// 						);
+						$params_foto = array(':id_ponto' => $id_ponto,
+										':ds_foto' => $gravar_caminho_arquivo
+										);
 										
-				// 		$stmt_foto->execute($params_foto);
+						$stmt_foto->execute($params_foto);
 
-				// 	}
-				// }
+					}
+				}
 
-				var_dump($dados['bisemana']);
-				// if(isset($dados['id_bisemana'])){
-				// 	$listaCheckboxBisemana = $dados['id_bisemana'];
+				// if(isset($dados['bisemana'])){
+				// 	$listaCheckboxBisemana = $dados['bisemana'];
 	
 				// 	$id_bisemana= '';
 	
+				// 	var_dump()
 				// 	for ($i=0; $i < count($listaCheckboxBisemana); $i++) { 
 						
 				// 		if($listaCheckboxBisemana[0] == $listaCheckboxBisemana[$i]){
@@ -160,7 +160,7 @@
 				// 	$id_bisemana = NULL;
 				// };
 
-				
+			
 				echo "Dados gravados com sucesso!"; 
 				
 			}
