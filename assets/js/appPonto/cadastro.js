@@ -25,7 +25,7 @@ $(document).ready(function() {
 							showConfirmButton: true
 						});
 						
-						redirectTo("appPonto/listar_ponto.php");
+						// redirectTo("appPonto/listar_ponto.php");
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error");
@@ -40,7 +40,7 @@ $(document).ready(function() {
 	}
 
 	$("#id_estado").on("change", function() {
-		var id_estado = $("#id_estado option:selected").val();
+		var id_estado = $("#id_estado option:selected").val(); 
 		$.ajax({
 	        url: 'appParceiro/listar_options_cidade.php'
 	        , type: 'post'
