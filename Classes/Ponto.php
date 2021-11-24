@@ -142,6 +142,8 @@
 					$listaCheckbox = $dados['id_bisemana'];
 	
 					$id_bisemana= '';
+
+					var_dump($listaCheckbox);
 	
 					for ($i=0; $i < count($listaCheckbox); $i++) { 
 						
