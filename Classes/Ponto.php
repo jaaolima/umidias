@@ -138,7 +138,7 @@
 				// 	}
 				// }
 
-				var_dump($dados['bisemana[]']);
+				var_dump($dados['bisemana']);
 				// if(isset($dados['id_bisemana'])){
 				// 	$listaCheckboxBisemana = $dados['id_bisemana'];
 	
