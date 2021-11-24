@@ -161,7 +161,7 @@
 
 				echo $id_bisemana;
 				
-				echo "Dados gravados com sucesso!"; 
+				
 				
 			}
 			catch(exception $e)
