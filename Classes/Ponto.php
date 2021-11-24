@@ -138,30 +138,30 @@
 				// 	}
 				// }
 
-				if(isset($dados['id_bisemana'])){
-					$listaCheckboxBisemana = $dados['id_bisemana'];
+				var_dump($dados['id_bisemana']);
+				// if(isset($dados['id_bisemana'])){
+				// 	$listaCheckboxBisemana = $dados['id_bisemana'];
 	
-					$id_bisemana= '';
+				// 	$id_bisemana= '';
 	
-					for ($i=0; $i < count($listaCheckboxBisemana); $i++) { 
+				// 	for ($i=0; $i < count($listaCheckboxBisemana); $i++) { 
 						
-						if($listaCheckboxBisemana[0] == $listaCheckboxBisemana[$i]){
-							$id_bisemana .= $listaCheckboxBisemana[$i];
-						}
-						else{
-							$id_bisemana .= "," . $listaCheckboxBisemana[$i];
-						}
+				// 		if($listaCheckboxBisemana[0] == $listaCheckboxBisemana[$i]){
+				// 			$id_bisemana .= $listaCheckboxBisemana[$i];
+				// 		}
+				// 		else{
+				// 			$id_bisemana .= "," . $listaCheckboxBisemana[$i];
+				// 		}
 						
-					}
+				// 	}
 					
-				}
-				else{
-					$id_bisemana = NULL;
-				};
+				// }
+				// else{
+				// 	$id_bisemana = NULL;
+				// };
 
-				echo $id_bisemana;
 				
-				
+				echo "Dados gravados com sucesso!"; 
 				
 			}
 			catch(exception $e)
