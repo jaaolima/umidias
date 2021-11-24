@@ -139,19 +139,17 @@
 				// }
 
 				if(isset($dados['id_bisemana'])){
-					$listaCheckbox = $dados['id_bisemana'];
+					$listaCheckboxBisemana = $dados['id_bisemana'];
 	
 					$id_bisemana= '';
-
-					var_dump($listaCheckbox);
 	
-					for ($i=0; $i < count($listaCheckbox); $i++) { 
+					for ($i=0; $i < count($listaCheckboxBisemana); $i++) { 
 						
-						if($listaCheckbox[0] == $listaCheckbox[$i]){
-							$id_bisemana .= $listaCheckbox[$i];
+						if($listaCheckboxBisemana[0] == $listaCheckboxBisemana[$i]){
+							$id_bisemana .= $listaCheckboxBisemana[$i];
 						}
 						else{
-							$id_bisemana .= "," . $listaCheckbox[$i];
+							$id_bisemana .= "," . $listaCheckboxBisemana[$i];
 						}
 						
 					}
@@ -160,6 +158,8 @@
 				else{
 					$id_bisemana = NULL;
 				};
+
+				echo $id_bisemana;
 				
 				echo "Dados gravados com sucesso!"; 
 				
