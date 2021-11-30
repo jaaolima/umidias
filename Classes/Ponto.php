@@ -143,7 +143,6 @@
 	
 				// 	$id_bisemana= '';
 	
-				// 	var_dump()
 				// 	for ($i=0; $i < count($listaCheckboxBisemana); $i++) { 
 						
 				// 		if($listaCheckboxBisemana[0] == $listaCheckboxBisemana[$i]){

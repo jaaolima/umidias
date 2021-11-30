@@ -195,7 +195,7 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div>
             </div>   
-            <div class="form-group row">
+            <!-- <div class="form-group row">
                 <div class="col-6">
                     <label>Bisemanas disponíveis<span class="text-danger">*</span></label>
                     <table  class="table table-hover" id="table_bisemana">
@@ -230,7 +230,7 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
                     </table>
                 </div>
                 
-            </div>
+            </div> -->
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
