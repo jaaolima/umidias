@@ -267,7 +267,7 @@ var demo3 = function(latitude, longitude) {
 		div: '#map',
         lat: latitude,
         lng: longitude,
-        zoom: 14,
+        zoom: 12,
 		dblclick: function(e) {
 			map.removeMarkers();
 			map.addMarker({
