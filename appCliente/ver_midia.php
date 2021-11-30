@@ -11,7 +11,7 @@
 	$id_midia = $_REQUEST["id_midia"]; 
 	$id_usuario = $_SESSION['id_usuario'];
 
-	$material = new material();
+	$material = new material(); 
 	$bisemana = new Bisemana();
 	$ponto = new Ponto();
 	$dados = $ponto->BuscarDadosPonto($id_ponto);
