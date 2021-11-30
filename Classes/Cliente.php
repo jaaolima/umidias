@@ -547,7 +547,7 @@
 					$delete = "delete from rl_carrinho where id_usuario=:id_usuario";
 					
 					$stmtDelete = $con->prepare($delete); 
-					$paramsDelete = array(':id_usuario' => $id_usuario);
+					$paramsDelete = array(':id_usuario' => $id_usuario); 
 					$stmtDelete->execute($paramsDelete);
 	
 					echo "Carrinho esvaziado";

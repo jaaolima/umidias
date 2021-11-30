@@ -112,7 +112,7 @@
 
 					if (count($error) == 0) {
 						// Pega extensão da imagem
-						preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $foto["name"], $ext);
+						preg_match("/\.(gif|bmp|png|jpg|jpeg|doc|docx|pdf){1}$/i", $foto["name"], $ext); 
 						// Gera um nome único para o arquivo
 						$nome_arquivo = md5(uniqid(time())) . "arquivo".$id_ponto.".". $ext[1];
 						// Caminho de onde ficará o arquivo
@@ -138,26 +138,54 @@
 					}
 				}
 
-				// if(isset($dados['bisemana'])){
-				// 	$listaCheckboxBisemana = $dados['bisemana'];
+				//adicionar bisemanas indisponiveis
+				if(isset($dados['bisemana'])){
+					$listaCheckboxBisemana = $dados['bisemana'];
 	
-				// 	$id_bisemana= '';
+					$id_bisemana= '';
 	
-				// 	for ($i=0; $i < count($listaCheckboxBisemana); $i++) { 
+					for ($i=0; $i < count($listaCheckboxBisemana); $i++) { 
+
+						try{
+							$con = Conecta::criarConexao();
+	
+							//pesquisar datas bisemanas por fora
+							$selectBisemana = "SELECT dt_inicial, dt_final
+									from tb_bisemana
+									where id_bisemana = :id_bisemana";
 						
-				// 		if($listaCheckboxBisemana[0] == $listaCheckboxBisemana[$i]){
-				// 			$id_bisemana .= $listaCheckboxBisemana[$i];
-				// 		}
-				// 		else{
-				// 			$id_bisemana .= "," . $listaCheckboxBisemana[$i];
-				// 		}
-						
-				// 	}
+							$stmtBisemana = $con->prepare($selectBisemana); 
+							$params = array(':id_bisemana' => $bisemana[$i]);
+							
+							$stmtBisemana->execute($params);
+			
+							$dados = $stmtBisemana->fetch();
+
+							//inserir alugado por fora
+							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final)
+										VALUES (0, :id_ponto, :dt_inicial, :dt_final)";
+							
+							$stmt = $con->prepare($insert);
+							
+							$params = array(
+											':id_ponto' => $id_ponto,
+											':dt_inicial' => $dados["dt_inicial"],
+											':dt_final' => $dados["dt_final"]);
+											
+							$stmt->execute($params);
+	
+						}
+						catch(exception $e)
+						{
+							header('HTTP/1.1 500 Internal Server Error');
+							print "ERRO:".$e->getMessage();		
+						}		
+					}
 					
-				//
-				// else{
-				// 	$id_bisemana = NULL;
-				// };
+				}
+				else{
+					$id_bisemana = NULL;
+				};
 
 			
 				echo "Dados gravados com sucesso!"; 

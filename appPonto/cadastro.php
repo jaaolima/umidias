@@ -195,9 +195,9 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div>
             </div>   
-            <!-- <div class="form-group row">
+            <div class="form-group row">
                 <div class="col-6">
-                    <label>Bisemanas disponíveis<span class="text-danger">*</span></label>
+                    <label>Bisemanas Indiponíveis<span class="text-danger">*</span></label>
                     <table  class="table table-hover" id="table_bisemana">
                         <thead>
                             <tr>
@@ -222,7 +222,7 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
                                             <td>".$dt_inicial."</td>
                                             <td>".$dt_final."</td>
                                             <td>".$dadosBisemana['ds_bisemana']."</td>
-                                            <td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox' checked></td>
+                                            <td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox'></td>
                                         </tr>";
                                 }
                             ?>
@@ -230,7 +230,7 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
                     </table>
                 </div>
                 
-            </div> -->
+            </div>
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
