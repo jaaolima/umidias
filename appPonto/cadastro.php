@@ -246,20 +246,21 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
 jQuery(document).ready(function() {
-	if('geolocation' in navigator){
-        navigator.geolocation.getCurrentPosition(function(position){
-            console.log(position);
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-            demo3(latitude, longitude);
-        })
-    }
-    else{
-        x.innerHTML="Seu browser não suporta Geolocalização.";
-        var latitude = -15.7750656;
-        var longitude = -48.0773014;
-        demo3(latitude, longitude);
-    }
+	// if('geolocation' in navigator){
+    //     navigator.geolocation.getCurrentPosition(function(position){
+    //         console.log(position);
+    //         var latitude = position.coords.latitude;
+    //         var longitude = position.coords.longitude;
+    //         demo3(latitude, longitude);
+    //     })
+    // }
+    // else{
+    //     x.innerHTML="Seu browser não suporta Geolocalização.";
+    //     var latitude = -15.7750656;
+    //     var longitude = -48.0773014;
+    //     demo3(latitude, longitude);
+    // }
+    demo3(-15.7750656, -48.0773014);
 });
 var demo3 = function(latitude, longitude) {
 	var map = new GMaps({
