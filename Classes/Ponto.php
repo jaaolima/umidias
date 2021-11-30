@@ -155,7 +155,7 @@
 									where id_bisemana = :id_bisemana";
 						
 							$stmtBisemana = $con->prepare($selectBisemana); 
-							$params = array(':id_bisemana' => $bisemana[$i]);
+							$params = array(':id_bisemana' => $listaCheckboxBisemana[$i]);
 							
 							$stmtBisemana->execute($params);
 			
