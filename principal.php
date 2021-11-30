@@ -16,6 +16,10 @@
 		header("location: index.php");
 		exit();
 	}
+	if(!isset($_SESSION['id_usuario'])){
+		header("location: index.php");
+		exit();
+	}
    	$id_usuario = $_SESSION['id_usuario'];
 	$id_parceiro = $_SESSION['id_parceiro'];
 
