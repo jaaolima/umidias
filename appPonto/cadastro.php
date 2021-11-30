@@ -241,6 +241,8 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
 </div>
 
 <script src="./assets/js/appPonto/cadastro.js" type="text/javascript"></script>
+<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM&callback=initialize"></script>
+<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
 <script>
     // The following example creates complex markers to indicate beaches near
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond

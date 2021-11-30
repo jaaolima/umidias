@@ -513,7 +513,7 @@
 														<div class="row m-0 col-12" >											
 															<table class="table table-hover">
 																<thead>
-																	<tr>
+																	<tr> 
 																		<th>Tipo de Mídia</th> 
 																		<th>Data inicial</th>
 																		<th>Data final</th>
