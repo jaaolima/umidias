@@ -7,7 +7,8 @@
 				$con = Conecta::criarConexao();
 				
 				$select = "SELECT id_bisemana, ds_bisemana, dt_inicial, dt_final
-							FROM tb_bisemana";
+							FROM tb_bisemana
+							order by dt_inicial";
 				
 				$stmt = $con->prepare($select); 
 				
