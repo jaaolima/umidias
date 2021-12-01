@@ -4,7 +4,7 @@ var DatatablesBasicBasic = function() {
 		var table = $('#table_usuario');
 
 		// begin first table
-		table.DataTable({
+		table.DataTable({ 
 			responsive: true,
 			retrieve: true, 
 			
@@ -29,8 +29,8 @@ var DatatablesBasicBasic = function() {
 			    "oPaginate": { "sFirst": "Primeira", "sLast": "Última", "sNext": ">", "sPrevious": "<" }
 		    },
 
-			//== Order settings
-			order: [[1, 'asc']],
+			// //== Order settings
+			// order: [[1, 'asc']],
 
 
 			columnDefs: [
@@ -102,5 +102,5 @@ var DatatablesBasicBasic = function() {
 }();
 
 jQuery(document).ready(function() {
-	DatatablesBasicBasic.init();
+	DatatablesBasicBasic.init(); 
 });
