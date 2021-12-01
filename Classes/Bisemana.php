@@ -8,7 +8,7 @@
 				
 				$select = "SELECT id_bisemana, ds_bisemana, dt_inicial, dt_final
 							FROM tb_bisemana
-							order by dt_inicial";
+							order by id_bisemana";
 				
 				$stmt = $con->prepare($select); 
 				
