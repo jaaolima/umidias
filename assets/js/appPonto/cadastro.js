@@ -25,7 +25,7 @@ $(document).ready(function() {
 							showConfirmButton: true
 						});
 						
-						// redirectTo("appPonto/listar_ponto.php");
+						redirectTo("appPonto/listar_ponto.php");
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error");
@@ -74,7 +74,7 @@ $(document).ready(function() {
 							showConfirmButton: true
 						});
 						
-						// redirectTo("appParceiro/listar_minhas_midias.php");
+						redirectTo("appParceiro/listar_minhas_midias.php");
 					}
 					, error: function (data) {
 						swal.fire("Erro", data.responseText, "error");

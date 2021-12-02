@@ -83,6 +83,12 @@ $(document).ready(function() {
 			redirectTo("appParceiro/listar_minhas_midias.php");
 		});
 	}
+
+	id_midia = $("#id_midia").val();
+	if(id_midia == 2){
+		$('#material').hide(); 
+		$('#periodo').hide();
+	}
      
 
 	
