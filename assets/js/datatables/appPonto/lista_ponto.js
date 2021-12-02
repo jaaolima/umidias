@@ -75,7 +75,7 @@ var DatatablesBasicBasic = function() {
 	        }).then(function(result) { 
 	            if (result.value) {
 					$.ajax({
-				        url: 'appPonto/excluir_ponto.php'
+				        url: 'appPonto/excluir_ponto.php' 
 				        , type: 'post'
 				        , data: {id_ponto : id_ponto}
 				        , success: function(html) {

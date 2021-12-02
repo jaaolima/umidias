@@ -246,6 +246,7 @@ $(document).ready(function() {
                                 url: 'appPonto/excluir_foto_ponto.php'
                                 , data: {
                                     id_ponto_foto: ".$excluirFoto["id_ponto_foto"].",
+                                    id_ponto : ".$id_ponto.",
                                 }
                                 , type: 'post'
                                 , success: function(html) { 
@@ -259,7 +260,7 @@ $(document).ready(function() {
                                     redirectTo('appPonto/alterar_cadastro.php?id_ponto=".$id_ponto."');
                                 }
                                 , error: function (data) {
-                                    swal.fire('Erro', data.responseText, 'error');
+                                    swal.fire('O seu ponto não pode ficar sem foto. Adicione uma e depois exclua essa!',html,'error');
                                 }
                             });
                             

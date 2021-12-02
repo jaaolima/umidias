@@ -1623,27 +1623,52 @@
 		public function excluirFotoPonto(array $dados)
 		{
             $id_ponto_foto	    = $dados['id_ponto_foto']; 
+			$id_ponto	    = $dados['id_ponto']; 
 
-			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "delete from rl_ponto_foto
-							WHERE id_ponto_foto=:id_ponto_foto";
-				
-				$stmt = $con->prepare($insert);
-				
-                $params = array(':id_ponto_foto' => $id_ponto_foto); 
-                                
+				$select = "SELECT id_ponto_foto
+							FROM rl_ponto_foto
+							where id_ponto = :id_ponto";
+				$stmt = $con->prepare($select);
+				$params = array(':id_ponto' => $id_ponto);
 				$stmt->execute($params);
+				$dadosfoto = $stmt->fetch();
+
+				if($dadosfoto["id_ponto"] == 1){
+					try{
+						$con = Conecta::criarConexao();
+						$insert = "delete from rl_ponto_foto
+									WHERE id_ponto_foto=:id_ponto_foto";
+						
+						$stmt = $con->prepare($insert);
+						
+						$params = array(':id_ponto_foto' => $id_ponto_foto); 
+										
+						$stmt->execute($params);
+						
+						echo "Deletado com sucesso!"; 
+						
+					}
+					catch(exception $e)
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					} 
+				}
+				else{
+					header('Content-type: application/json');
+				}
 				
-				echo "Deletado com sucesso!"; 
-				
+
 			}
 			catch(exception $e)
 			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			} 
+			header('HTTP/1.1 500 Internal Server Error');
+			print $e->getMessage();
+			}
+			
+			
 		}
 		public function listarOptionsLocal($id_midia)
 		{
