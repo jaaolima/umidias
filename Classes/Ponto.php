@@ -1366,7 +1366,7 @@
 			}
 			$id_periodo	        = $dados['id_periodo'];
 			if($id_midia == 2){
-				$id_periodo = 2;
+				$id_periodo = 1;
 			}
 			$ds_tamanho	        = $dados['ds_tamanho'];
 			if($ds_tamanho === "outro"){
