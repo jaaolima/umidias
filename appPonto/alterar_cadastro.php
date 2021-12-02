@@ -259,8 +259,8 @@ $(document).ready(function() {
                                     
                                     redirectTo('appPonto/alterar_cadastro.php?id_ponto=".$id_ponto."');
                                 }
-                                , error: function (data) {
-                                    swal.fire('O seu ponto não pode ficar sem foto. Adicione uma e depois exclua essa!',html,'error');
+                                , error: function () {
+                                    swal.fire('O seu ponto não pode ficar sem foto. ', Adicione uma e depois exclua essa!,'error');
                                 }
                             });
                             
