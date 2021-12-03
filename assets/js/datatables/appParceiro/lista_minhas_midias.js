@@ -85,6 +85,12 @@ var DatatablesBasicBasic = function() {
 	        });
 			
 		}); 
+
+		table.on('click', '#ver_midia', function() {
+			var id_ponto = $(this).data("ponto");
+			redirectTo("appParceiro/ver_minha_midia.php?id_ponto="+id_ponto);	
+			
+		}); 
 	
 
 		table.on('change', 'tbody tr .m-checkbox', function() {
