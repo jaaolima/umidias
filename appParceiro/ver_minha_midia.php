@@ -137,6 +137,29 @@ License: You must have a valid license purchased only from themeforest(the above
                             
 							<div class="content flex-column-fluid pt-0" id="kt_content">
 								<div class="row">
+									<div class="col-7 col-sm-6">
+										<div class="mb-8">
+											<div class="mb-12">
+												<h1 class="h1-titulo"><?php echo $dadosPonto['ds_bairro']; ?></h1>
+												<span><?php echo $dadosPonto['ds_bairro'] .', '. $dadosPonto['ds_nome'] . ' - '. $dadosPonto['ds_uf']; ?></span>
+											</div>
+											<div class="my-12">
+												<h4 class="texto-negrito">Descrição </h4>
+												<span><?php echo $dadosPonto["ds_descricao"]; ?></span>
+											</div>
+											<div class="my-12">
+												<h4 class="texto-negrito">Tamanho</h4>
+												<span><?php echo $dadosPonto["ds_tamanho"]; ?></span>
+											</div>
+											<div class="my-12">
+												<h4 class="texto-negrito">Latitude e Longitude</h4>
+												<span><?php echo $dadosPonto["ds_latitude"] . " " . $dadosPonto["ds_longitude"];?></span>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="row">
                                     <div class="col-8">
                                         <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
                                             <div class="card-body">

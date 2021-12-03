@@ -18,7 +18,7 @@
 	$ProximosAlugados = $ponto->BuscarProximosAlugados($id_ponto);
 	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto);
     $retorno = $bisemana->listarBisemanaDisponiveis($id_ponto);
-    $optionsMaterial = $material->listarOptionsMaterialMidia($dados["id_material"]);   
+    $optionsMaterial = $material->listarOptionsMaterialMidia($dados["id_material"]);    
 
 
 ?>
