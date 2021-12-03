@@ -36,11 +36,6 @@ var DatatablesBasicBasic = function() {
 			columnDefs: [
 
 				{
-					targets: -1,
-					title: 'Ações',
-					orderable: false
-				},
-				{
 					targets: 0,
 					visible: false
 				},
