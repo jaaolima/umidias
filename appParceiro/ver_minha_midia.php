@@ -110,7 +110,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
-							<div class="p-0 my-2 p-0 my-2 ">
+							<div class="p-0 my-2 p-0 my-2 d-flex " style="justify-content: space-between;">
 								<div class="font-weight-bold font-size-sm">								
 									<a href="appParceiro/listar_minhas_midias.php" class="texto-chumbo">Minhas mídias</a>
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</svg>
 									<a class="texto-chumbo">Detalhes da mídia</a>
 								</div>
-								<div class="font-weight-bold font-size-sm">								
+								<div class="font-weight-bold font-size-sm d-flex">								
 									<?php if($dadosPonto["st_status"] === null || $dadosPonto["st_status"] === "A") : ?>
 									<div class="text-right">
 										<button class="btn btn-dark" id="desativar">Desativar</button>
