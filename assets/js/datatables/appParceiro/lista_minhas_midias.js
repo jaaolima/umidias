@@ -65,7 +65,7 @@ var DatatablesBasicBasic = function() {
 		table.on('click', '#excluir', function() {
 			var id_ponto = $(this).data("ponto");
 			swal.fire({
-	            title: 'Tem certeza?',
+	            title: 'Tem certeza?', 
 	            text: "Desejar excluir o Ponto?",
 	            type: 'warning',
 	            showCancelButton: true,
