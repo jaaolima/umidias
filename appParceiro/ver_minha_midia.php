@@ -119,7 +119,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<a class="texto-chumbo">Detalhes da mídia</a>
 								</div>
 								<div class="font-weight-bold font-size-sm d-flex">	
-									<div class="text-right ml-4">
+									<div class="text-right mr-4">
 										<a href="appPonto/alterar_cadastro.php?id_ponto=<?php echo $id_ponto; ?>" class="btn btn-outline-primary">Alterar</a>
 									</div>							
 									<?php if($dadosPonto["st_status"] === null || $dadosPonto["st_status"] === "A") : ?>
