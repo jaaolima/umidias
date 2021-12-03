@@ -130,7 +130,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>		
 									<?php endif; ?> 
 									<div class="text-right ml-4">
-										<a href="./appPonto/alterar_ponto.php?id_ponto=<?php echo $id_ponto; ?>" class="btn btn-outline-primary">Alterar</a>
+										<a href="appPonto/alterar_cadastro.php?id_ponto=<?php echo $id_ponto; ?>" class="btn btn-outline-primary">Alterar</a>
 									</div>
 								</div>
 							</div>
