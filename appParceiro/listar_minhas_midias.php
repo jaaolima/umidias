@@ -91,8 +91,8 @@ License: You must have a valid license purchased only from themeforest(the above
 															$status = "<span class='label label-success label-pill label-inline mr-2 py-6'>Ativo</span>";
 															break;
 													}
-													echo "<tr>
-															<a href='appParceiro/ver_minha_midia.php?id_ponto?".$dados["id_ponto"]."'>
+													echo "<a href='appParceiro/ver_minha_midia.php?id_ponto?".$dados["id_ponto"]."'>
+															<tr>
 																<td>".$dados['id_ponto']."</td>
 																<td>
 																	<div class='d-flex'>
@@ -123,8 +123,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																<td>".$dados['ds_tipo']."</td>
 																<td>".$status."</td>
 																<td nowrap></td> 
-															</a>
-														</tr>";
+															</tr>
+														</a>";
 												}
 												
 											?>
