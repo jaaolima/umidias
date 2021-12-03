@@ -114,7 +114,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																					</div>
 																				</td> 
 																				<td class='py-8'>".$dataInicial."</td> 
-																				<td class='py-8'>".$dataFinal."</td>
+																				<td class='py-8'>".$dataFinal."</td> 
 																				<td class='py-8'><span class='label ".$corStatus." label-pill label-inline mr-2 py-6'>".$dados['ds_status']."</span></td>
 																				<td class='py-8'>R$ ".$dados["nu_valor_alugado"]."</td> 
 																				<td class='py-8'><a href='appCliente/ver_minha_midia.php?id_ponto=".$dados["id_ponto"]."&id_alugado=".$dados["id_alugado"]."'>

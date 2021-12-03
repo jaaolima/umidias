@@ -48,41 +48,13 @@ var DatatablesBasicBasic = function() {
 				
 			],
 		});
-		table.on('click', '#excluir', function() {
-			var id_ponto = $(this).data("ponto");
-			swal.fire({
-	            title: 'Tem certeza?', 
-	            text: "Desejar excluir o Ponto?",
-	            type: 'warning',
-	            showCancelButton: true,
-	            cancelButtonColor: '#fd397a',
-	            confirmButtonText: 'Sim, posseguir!',
-				cancelButtonText: 'Cancelar'
-	        }).then(function(result) { 
-	            if (result.value) {
-					$.ajax({
-				        url: 'appPonto/excluir_ponto.php'
-				        , type: 'post'
-				        , data: {id_ponto : id_ponto}
-				        , success: function(html) {
-							swal.fire('Pronto!',html,'success');
-							redirectTo("appParceiro/listar_minhas_midias.php");				
-				        }
-						, error: function(html) {
-							swal.fire('O seu ponto ainda tem locação a cumprir!',html,'error');	 			
-				        }
-				    });
-	                
-	            }
-	        });
-			
-		}); 
+		 
 
-		table.on('click', '#ver_midia', function() {
-			var id_ponto = $(this).data("ponto");
-			redirectTo("appParceiro/ver_minha_midia.php?id_ponto="+id_ponto);	
+		// table.on('click', '#ver_midia', function() {
+		// 	var id_ponto = $(this).data("ponto");
+		// 	redirectTo("appParceiro/ver_minha_midia.php?id_ponto="+id_ponto);	
 			
-		}); 
+		// }); 
 	
 
 		table.on('change', 'tbody tr .m-checkbox', function() {
