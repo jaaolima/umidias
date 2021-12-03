@@ -118,7 +118,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									</svg>
 									<a class="texto-chumbo">Detalhes da mídia</a>
 								</div>
-								<div class="font-weight-bold font-size-sm d-flex">								
+								<div class="font-weight-bold font-size-sm d-flex">	
+									<div class="text-right ml-4">
+										<a href="appPonto/alterar_cadastro.php?id_ponto=<?php echo $id_ponto; ?>" class="btn btn-outline-primary">Alterar</a>
+									</div>							
 									<?php if($dadosPonto["st_status"] === null || $dadosPonto["st_status"] === "A") : ?>
 									<div class="text-right">
 										<button class="btn btn-outline-primary" id="desativar">Desativar</button>
@@ -129,9 +132,6 @@ License: You must have a valid license purchased only from themeforest(the above
 										<button class="btn btn-primary" id="ativar">Ativar</button>
 									</div>		
 									<?php endif; ?> 
-									<div class="text-right ml-4">
-										<a href="appPonto/alterar_cadastro.php?id_ponto=<?php echo $id_ponto; ?>" class="btn btn-outline-primary">Alterar</a>
-									</div>
 									<div class="text-right ml-4">
 										<a id="excluir" class="btn btn-primary">Excluir</a>
 									</div>
