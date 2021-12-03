@@ -110,13 +110,15 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
-                            <div class="font-weight-bold p-0 my-2 font-size-sm pl-13">								
-								<a href="appParceiro/listar_minhas_midias.php" class="texto-chumbo">Minhas mídias</a>
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M9 18L15 12L9 6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-								<a class="texto-chumbo">Detalhes da mídia</a>
-								<div class="d-flex"> 
+							<div class="p-0 my-2 p-0 my-2 ">
+								<div class="font-weight-bold font-size-sm">								
+									<a href="appParceiro/listar_minhas_midias.php" class="texto-chumbo">Minhas mídias</a>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9 18L15 12L9 6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									<a class="texto-chumbo">Detalhes da mídia</a>
+								</div>
+								<div class="font-weight-bold font-size-sm">								
 									<?php if($dadosPonto["st_status"] === null || $dadosPonto["st_status"] === "A") : ?>
 									<div class="text-right">
 										<button class="btn btn-dark" id="desativar">Desativar</button>
@@ -131,8 +133,8 @@ License: You must have a valid license purchased only from themeforest(the above
 										<a href="../appPonto/alterar_ponto.php?id_ponto=<?php echo $id_ponto; ?>" class="btn btn-dark" id="alterar">Alterar</a>
 									</div>
 								</div>
-									
 							</div>
+                            
 							<div class="content flex-column-fluid pt-0" id="kt_content">
 								<div class="row">
                                     <div class="col-8">
