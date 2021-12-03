@@ -121,7 +121,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="font-weight-bold font-size-sm d-flex">								
 									<?php if($dadosPonto["st_status"] === null || $dadosPonto["st_status"] === "A") : ?>
 									<div class="text-right">
-										<button class="btn btn-dark" id="desativar">Desativar</button>
+										<button class="btn btn-outline-primary" id="desativar">Desativar</button>
 									</div>		
 									<?php endif; ?>
 									<?php if($dadosPonto["st_status"] === "D") : ?>
@@ -129,8 +129,8 @@ License: You must have a valid license purchased only from themeforest(the above
 										<button class="btn btn-primary" id="ativar">Ativar</button>
 									</div>		
 									<?php endif; ?> 
-									<div class="text-right">
-										<a href="../appPonto/alterar_ponto.php?id_ponto=<?php echo $id_ponto; ?>" class="btn btn-dark" id="alterar">Alterar</a>
+									<div class="text-right ml-4">
+										<a href="../appPonto/alterar_ponto.php?id_ponto=<?php echo $id_ponto; ?>" class="btn btn-outline-primary" id="alterar">Alterar</a>
 									</div>
 								</div>
 							</div>
