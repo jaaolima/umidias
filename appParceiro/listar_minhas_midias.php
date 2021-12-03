@@ -92,7 +92,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															break;
 													}
 													echo "
-															<tr id='ver_midia' data-ponto=".$dados["id_ponto"]." style='cursor:pointer;'>
+															<tr>
 																<td>".$dados['id_ponto']."</td>
 																<td>
 																	<div class='d-flex'>
