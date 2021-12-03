@@ -44,9 +44,6 @@ var DatatablesBasicBasic = function() {
                         <a href="appParceiro/ver_minha_midia.php?id_ponto=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Visualizar Mídia">
                           <i class="la la-chart-bar"></i>
                         </a>
-                         <a href="appPonto/alterar_cadastro.php?id_ponto=`+full[0]+`"" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Alterar Cadastro">
-                          <i class="la la-edit"></i>
-                        </a>
 						<a id="excluir"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-ponto="`+full[0]+`" >
                           <i class="la la-remove"></i> 
                         </a>
