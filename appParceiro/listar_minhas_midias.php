@@ -73,7 +73,6 @@ License: You must have a valid license purchased only from themeforest(the above
 												<th>Valor</th>
 												<th>Tipo de Mídia</th>
 												<th>Status</th>
-												<th>Ações</th> 
 											</tr>
 										</thead>  
 										<tbody>
@@ -121,8 +120,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<td>".$dados['ds_descricao']."</td>
 																<td>".$dados['nu_valor']."</td>
 																<td>".$dados['ds_tipo']."</td>
-																<td>".$status."</td>
-																<td nowrap></td> 
+																<td>".$status."</td> 
 															</tr>
 														";
 												}

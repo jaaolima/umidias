@@ -132,6 +132,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="text-right ml-4">
 										<a href="appPonto/alterar_cadastro.php?id_ponto=<?php echo $id_ponto; ?>" class="btn btn-outline-primary">Alterar</a>
 									</div>
+									<div class="text-right ml-4">
+										<a id="excluir" class="btn btn-primary">Excluir</a>
+									</div>
 								</div>
 							</div>
                             

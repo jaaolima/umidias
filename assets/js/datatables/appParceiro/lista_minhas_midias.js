@@ -38,15 +38,7 @@ var DatatablesBasicBasic = function() {
 				{
 					targets: -1,
 					title: 'Ações',
-					orderable: false,
-					render: function(data, type, full, meta) {
-						return `
-						<a id="excluir"class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Deletar" data-ponto="`+full[0]+`" >
-                          <i class="la la-remove"></i> 
-                        </a>
-						
-                        `;
-					},
+					orderable: false
 				},
 				{
 					targets: 0,
