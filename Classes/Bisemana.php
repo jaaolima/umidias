@@ -182,6 +182,33 @@
 			}
 		}
 
+		public function listarMesDisponiveis($id_ponto) 
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT id_mes, ds_mes, dt_final, dt_inicial
+							FROM tb_mes m
+							where dt_final > curdate() and dt_inicial not in (select dt_inicial from rl_alugado a where a.id_ponto=:id_ponto)
+							order by id_mes";
+				
+				$stmt = $con->prepare($select); 
+				$params = array(
+								':id_ponto' => $id_ponto);
+				
+				$stmt->execute($params);
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+		}
+
 		public function listarBisemana() 
 		{
 			$hoje = date('Y/m/d');

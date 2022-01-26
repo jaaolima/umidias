@@ -18,6 +18,7 @@
 	$ProximosAlugados = $ponto->BuscarProximosAlugados($id_ponto);
 	$dadosFoto = $ponto->BuscarFotoPonto($id_ponto);
     $retorno = $bisemana->listarBisemanaDisponiveis($id_ponto);
+	$retornoMes = $bisemana->listarMesDisponiveis($id_ponto);
     $optionsMaterial = $material->listarOptionsMaterialMidia($dados["id_material"]);    
 
 
@@ -309,32 +310,36 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Aluguel</h3>
                                                     </div>
                                                     <div class="d-flex my-6 mx-6" >
-                                                        <div class="col-6">
-															<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
-																<legend class="legend-border mb-0">Data</legend>
-																<input type="text" class="border-0 w-100 form-control rounded-0" id="dt_inicial_final" name="dt_inicial_final" id="dt_inicial_final" autocomplete="off" readonly>
-															</fieldset>  
-                                                        </div>
-                                                        <!--<div class="col-6" id="div_dt_final" style="display:none;">
-                                                            <label >Meses de locação:<span class="text-danger">*</span></label>
-                                                            <select name="mes" id="mes" class="form-control">
-                                                                <option value="">Selecione...</option>
-                                                                <option value="1">1 mês</option>
-                                                                <option value="2">2 meses</option>
-                                                                <option value="3">3 meses</option>
-                                                                <option value="4">4 meses</option> 
-                                                                <option value="5">5 meses</option>
-                                                                <option value="6">6 meses</option>
-                                                                <option value="7">7 meses</option>
-                                                                <option value="8">8 meses</option>
-                                                                <option value="9">9 meses</option>
-                                                                <option value="10">10 meses</option>
-                                                                <option value="11">11 meses</option>
-                                                                <option value="12">12 meses</option>
-                                                            </select>
-															<input type="text" class="form-control" name="dt_final" id="dt_final" autocomplete="off">
-															<label id="data_final"></label>
-                                                        </div> -->
+														<table  class="table table-hover" id="table_mes">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID mes</th>
+                                                                    <th>Data Inicial</th>
+                                                                    <th>Data Final</th>
+                                                                    <th>Mês</th>
+                                                                    <th>Selecione</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <?php
+                                                                    while ($dadosMes = $retornoMes->fetch())
+                                                                    {
+
+                                                                        $dt_inicial = date('d/m/Y', strtotime($dadosMes["dt_inicial"]));
+                                                                        $dt_final = date('d/m/Y', strtotime($dadosMes["dt_final"]));
+
+
+                                                                        echo "<tr>
+                                                                                <td>".$dadosMes['id_mes']."</td>
+                                                                                <td>".$dt_inicial."</td>
+                                                                                <td>".$dt_final."</td>
+                                                                                <td>".$dadosMes['ds_mes']."</td>
+                                                                                <td><input name='mes[]' id='".$dadosMes["id_mes"]."' value='".$dadosMes['id_mes']."' type='checkbox'></td>
+                                                                            </tr>";
+                                                                    }
+                                                                ?>
+                                                            </tbody>
+                                                        </table>
                                                 
                                                     </div>
                                                     <div class="separator separator-solid"></div>
@@ -551,25 +556,25 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 			});
 			<?php endif; ?>
-
 			//calculo front
-			<?php /* if($id_midia == 2) : ?>	
-			var mes = document.getElementById("mes");
-			var local = document.getElementById("valor_alugado");
-
-			mes.onblur = function(){
+			<?php if($id_midia == 2) : ?>
+				
+			$("input[name='mes[]']").on("click", function(){
 				<?php
 					$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
 					$Rrs = str_replace("R$ ", "", $Rvirgula);
 					$valor = $Rrs; 
 				?>
-				let valor = <?php echo $valor ?> * mes.value;
-				let total =  parseInt(valor, 10);
-				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>"; 
+				var totalmes = $("input[name='mes[]']:checked").length;
+				var local = document.getElementById("valor_alugado");
+				let valor = <?php echo $valor; ?> * totalmes;
+				let total = parseInt(valor, 10);
+				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 
 				$("#id_material").val('').change();
-			}
-			<?php endif; */?>
+				
+			});
+			<?php endif; ?>
 
 
 			//calculo material
@@ -598,16 +603,20 @@ License: You must have a valid license purchased only from themeforest(the above
 					local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 				<?php endif;?>
 
-				<?php /* if($id_midia == 2) : ?>
+				<?php if($id_midia == 2) : ?>
 					<?php
 						$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
 						$Rrs = str_replace("R$ ", "", $Rvirgula);
 						$valor = $Rrs; 
 					?>
-					let valor = <?php echo $valor ?> * mes.value;
-					let total =  parseInt(valor, 10);
+					var totalmes = $("input[name='mes[]']:checked").length;
+					let valor = <?php echo $valor; ?> * totalmes;
+					let total = parseInt(valor, 10);
 					valor_alugado = total + valorTotalMaterial
-				<?php endif; */ ?>
+
+					var local = document.getElementById("valor_alugado");
+					local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+				<?php endif;?>
 
 				
 
