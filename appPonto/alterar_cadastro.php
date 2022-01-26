@@ -100,11 +100,17 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                 </div>
                 <div class="form-group col-3">
                     <label>Bairro <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_bairro" name="ds_bairro"  value="<?php echo $dados['ds_bairro']?>"/>
+                    <select class="form-control" id="ds_bairro" name="ds_bairro">
+                        <option value="">Selecione...</option>
+                        <option value="1" <?php if($dados['ds_bairro'] == 1) echo "selected" ?>>Ceilândia</option>
+                    </select>
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_sentido" name="ds_sentido" placeholder="Ex. Ceilândia"  value="<?php echo $dados['ds_sentido']?>"/>
+                    <select class="form-control" id="ds_sentido" name="ds_sentido">
+                        <option value="">Selecione...</option>
+                        <option value="1" <?php if($dados['ds_sentido'] == 1) echo "selected" ?>>Ceilândia</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
@@ -210,10 +216,10 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_descricao']?>"/>
                 </div>
-                <div class="form-group col-4">
+                <!-- <div class="form-group col-4">
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao" value="<?php echo $dados['ds_observacao']?>"></textarea>
-                </div>  
+                </div>   -->
             </div>      
         </div>
         <div class="card-footer">

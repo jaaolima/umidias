@@ -90,7 +90,7 @@ $(document).ready(function() {
 	id_midia = $("#id_midia").val();
 	if(id_midia == 2){
 		$('#material').hide(); 
-		$('#periodo').hide();
+		$('#periodo').hide(); 
 	}
 	
 	$("#ds_outro_tamanho").inputmask({

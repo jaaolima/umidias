@@ -89,11 +89,17 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
                 </div>
                 <div class="form-group col-3">
                     <label>Bairro <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_bairro" name="ds_bairro"/>
+                    <select class="form-control" id="ds_bairro" name="ds_bairro">
+                        <option value="">Selecione...</option>
+                        <option value="1">Ceilândia</option>
+                    </select>
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_sentido" name="ds_sentido" placeholder="Ex. Ceilândia"/>
+                    <select class="form-control" id="ds_sentido" name="ds_sentido">
+                        <option value="">Selecione...</option>
+                        <option value="1">Ceilândia</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
@@ -190,10 +196,10 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
                 </div>
-                <div class="form-group col-4">
+                <!-- <div class="form-group col-4">
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
-                </div>
+                </div> -->
             </div>   
             <div class="form-group row">
                 <div class="col-6">
