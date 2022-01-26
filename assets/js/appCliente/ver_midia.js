@@ -198,13 +198,24 @@ $(document).ready(function() {
 		var id_midia = $("#id_midia").val();
 		if(validarDetalhe(id_midia))
 		{
+			// if(id_midia == 2){
+			// 	var id_ponto = $("#id_ponto").val();
+			// 	var dt_inicial = $("#dt_inicial").val();
+			// 	var mes = $("#mes").val();
+			// 	var id_material = $("#id_material").val();
+			// 	var ds_arte = $('input[type=file]')[0].files
+			// 	redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&ds_arte="+ds_arte+"&mes="+mes+"&id_material="+id_material);	
+			// }
 			if(id_midia == 2){
 				var id_ponto = $("#id_ponto").val();
-				var dt_inicial = $("#dt_inicial").val();
-				var mes = $("#mes").val();
+				var mes = new Array();
+				$("input[name='mes[]']:checked").each(function ()
+				{
+					mes.push( $(this).val());
+				});
 				var id_material = $("#id_material").val();
 				var ds_arte = $('input[type=file]')[0].files
-				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&dt_inicial="+dt_inicial+"&ds_arte="+ds_arte+"&mes="+mes+"&id_material="+id_material);	
+				redirectTo("appCliente/pagamento.php?id_ponto="+id_ponto+"&mes="+mes+"&ds_arte="+ds_arte+"&id_material="+id_material);
 			}
 			if(id_midia == 1){
 				var id_ponto = $("#id_ponto").val();
@@ -230,38 +241,32 @@ $(document).ready(function() {
 
 function validarAlugar(id_midia){
 	if(id_midia == 2){
-		if($("#dt_inicial_final").val() == "")
-		{
-			$("#dt_inicial_final").focus();
-			swal.fire("Erro", "Adicione uma data", "error");
-			$("#dt_inicial_final").addClass("is-invalid");
-			return false;	
-		}
-		else
-		{
-			$("#dt_inicial_final").removeClass("is-invalid");	
-			$("#dt_inicial_final").addClass("is-valid");
-		}
-		// if($("#mes option:selected").val() == "")
+		// if($("#dt_inicial_final").val() == "")
 		// {
-		// 	$("#mes").focus();
-		// 	swal.fire("Erro", "Selecione a quantidade de meses", "error");
-		// 	$("#mes").addClass("is-invalid"); 
+		// 	$("#dt_inicial_final").focus();
+		// 	swal.fire("Erro", "Adicione uma data", "error");
+		// 	$("#dt_inicial_final").addClass("is-invalid");
 		// 	return false;	
 		// }
 		// else
 		// {
-		// 	$("#mes").removeClass("is-invalid");	
-		// 	$("#mes").addClass("is-valid");
+		// 	$("#dt_inicial_final").removeClass("is-invalid");	
+		// 	$("#dt_inicial_final").addClass("is-valid");
 		// }
+		if ($('input[name="mes[]"]:checked').length == 0)
+		{
+			$("input[name='mes[]']").focus();
+			swal.fire("Aviso", "Selecione pelo menos um mês", "warning");      
+			return false;	
+		}
 	}
 	if(id_midia == 1){
 		if ($('input[name="bisemana[]"]:checked').length == 0)
-	{
-		$("input[name='bisemana[]']").focus();
-		swal.fire("Aviso", "Selecione uma das opções", "warning");      
-		return false;	
-	}
+		{
+			$("input[name='bisemana[]']").focus();
+			swal.fire("Aviso", "Selecione pelo menos uma bisemana", "warning");      
+			return false;	
+		}
 		
 	}
 	if($("#id_material option:selected").val() == "")
