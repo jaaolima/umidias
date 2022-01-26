@@ -134,7 +134,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="font-weight-bold">Pagamento chegou!</span></br>
 										<span class="font-weight-bolder"><?php echo $dados["ds_status"]; ?></span> 
 										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
-											<div class='progress-bar bg-danger' role='Progresso' style='width: 25%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+											<div class='progress-bar bg-warning' role='Progresso' style='width: 25%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
 										</div> 
 									</div>
 									<?php endif; ?>
@@ -142,7 +142,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="text-center" style="font-size:20px;">
 										<span class="font-weight-bolder">Mídia sendo preparada!</span>
 										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
-											<div class='progress-bar bg-danger' role='Progresso' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+											<div class='progress-bar bg-warning' role='Progresso' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
 										</div>
 									</div>
 									<?php endif; ?>
@@ -150,7 +150,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="text-center" style="font-size:20px;">
 										<span class="font-weight-bolder"><?php echo $dados["ds_status"]; ?></span>
 										<div class='progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px'>
-											<div class='progress-bar bg-danger' role='Progresso' style='width: 75%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+											<div class='progress-bar bg-warning' role='Progresso' style='width: 75%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
 										</div>
 									</div>
 									<?php endif; ?>
