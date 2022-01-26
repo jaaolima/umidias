@@ -202,6 +202,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div> -->
             </div>   
+            <?php if($id_midia == 1) : ?>
             <div class="form-group row" id="bisemanas_indisponiveis" style="display:none;">
                 <div class="col-6">
                     <label>Bisemanas Indiponíveis</label>
@@ -274,6 +275,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 </div>
                 
             </div>
+            <?php endif; ?>
             <?php if($id_midia == 2) : ?>
                 <div class="form-group row" id="meses_indisponiveis">
                     <div class="col-6">
