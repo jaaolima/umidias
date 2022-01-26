@@ -109,7 +109,7 @@ $(document).ready(function() {
 	});
 	
 });
-$('[name="id_midia"]').change(function(){
+$('[name="id_midia"]').change(function(){ 
 	if($(this).val() == 1){
 		$('#material').show();
 		return;
