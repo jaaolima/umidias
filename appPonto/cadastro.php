@@ -25,7 +25,7 @@ $optionscategoria = $Categoria->listaroptionscategoria(null);
 $optionsmaterial = $Material->listaroptionsmaterial(null);
 $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
 $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
-$optionsmes = $Bisemana->listarTodosMesPonto();
+$optionsMes = $Bisemana->listarTodosMesPonto();
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <!--<script
