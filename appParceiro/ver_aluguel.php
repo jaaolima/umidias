@@ -55,7 +55,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Aguardando Confirmação</span>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Confirme essa locação!</span>
                         <button class="btn-sm ml-2 btn btn-primary">Confirmar</button>
                     </div>
                     <!--end::Content-->
@@ -78,7 +78,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material sendo preparado</span>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material enviado para gráfica</span>
                     </div>
                     <!--end::Content-->
                 </div>
@@ -86,7 +86,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
                 <!--end::Item-->
 
                 <!--begin::Item-->
-                <?php if( $id_status == 4 || $id_status == 5) : ?>
+                <?php if($id_status == 4 || $id_status == 5) : ?>
                 <div class="timeline-item align-items-start">
                     <!--begin::Label-->
                     <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg">...</div>
@@ -100,13 +100,13 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Colocando na Rua!</span>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material enviado!</span>
                     </div>
                     <!--end::Content-->
                 </div>
                 <?php endif; ?>
                 <!--begin::Item-->
-                <?php if( $id_status == 5) : ?>
+                <?php if( $id_status == 5|| $id_status == 6|| $id_status == 7) : ?>
                 <div class="timeline-item align-items-start">
                     <!--begin::Label-->
                     <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg">...</div>
@@ -120,7 +120,45 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Ativo</span>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material chegou! Avise quando sair pra colagem.</span>
+                    </div>
+                    <!--end::Content-->
+                </div>
+                <?php endif; ?>
+                <?php if( $id_status == 6|| $id_status == 7) : ?>
+                <div class="timeline-item align-items-start">
+                    <!--begin::Label-->
+                    <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg">...</div>
+                    <!--end::Label-->
+
+                    <!--begin::Badge-->
+                    <div class="timeline-badge">
+                        <i class="fa fa-genderless text-warning icon-xl"></i>
+                    </div>
+                    <!--end::Badge-->
+
+                    <!--begin::Content-->
+                    <div class="timeline-content d-flex">
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Saiu pra colagem! Avise quando estiver veiculada.</span>
+                    </div>
+                    <!--end::Content-->
+                </div>
+                <?php endif; ?>
+                <?php if( $id_status == 7) : ?>
+                <div class="timeline-item align-items-start">
+                    <!--begin::Label-->
+                    <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg">...</div>
+                    <!--end::Label-->
+
+                    <!--begin::Badge-->
+                    <div class="timeline-badge">
+                        <i class="fa fa-genderless text-warning icon-xl"></i>
+                    </div>
+                    <!--end::Badge-->
+
+                    <!--begin::Content-->
+                    <div class="timeline-content d-flex">
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Mídia veiculada</span>
                     </div>
                     <!--end::Content-->
                 </div>
