@@ -56,7 +56,9 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
                         <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Confirme essa locação!</span>
-                        <button class="btn-sm ml-2 btn btn-primary">Confirmar</button>
+                        <?php if($id_status == 2) : ?>
+                            <button class="btn-sm ml-2 btn btn-primary">Confirmar</button>
+                        <?php endif; ?>
                     </div>
                     <!--end::Content-->
                 </div>
@@ -100,7 +102,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material enviado!</span>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material indo até você!</span>
                     </div>
                     <!--end::Content-->
                 </div>
@@ -121,6 +123,9 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
                         <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material chegou! Avise quando sair pra colagem.</span>
+                        <?php if($id_status == 5) : ?>
+                            <button class="btn-sm ml-2 btn btn-primary">Saiu!</button>
+                        <?php endif; ?>
                     </div>
                     <!--end::Content-->
                 </div>
@@ -140,6 +145,9 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
                         <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Saiu pra colagem! Avise quando estiver veiculada.</span>
+                        <?php if($id_status == 6) : ?>
+                            <button class="btn-sm ml-2 btn btn-primary">Mídia veiculada!</button>
+                        <?php endif; ?>
                     </div>
                     <!--end::Content-->
                 </div>
