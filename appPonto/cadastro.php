@@ -192,16 +192,16 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
                 </div>
             </div>
             <div class="form-group row">
-                <div class="form-group col-6">
+                <!-- <div class="form-group col-6">
                     <label>Descrição <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
-                </div>
+                </div> -->
                 <!-- <div class="form-group col-4">
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div> -->
             </div>   
-            <div class="form-group row">
+            <div class="form-group row" id="bisemanas_indisponiveis" style="display:none;">
                 <div class="col-6">
                     <label>Bisemanas Indiponíveis<span class="text-danger">*</span></label>
                     <table  class="table table-hover" id="table_bisemana">
@@ -234,6 +234,12 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
                             ?>
                         </tbody>
                     </table>
+                </div>
+                
+            </div>
+            <div class="form-group row" id="meses_indisponiveis" style="display:none;">
+                <div class="col-6">
+                    <label>Meses Indiponíveis<span class="text-danger">*</span></label>
                 </div>
                 
             </div>

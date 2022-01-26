@@ -307,18 +307,18 @@ function validar()
 
 	
 
-	if($("#ds_descricao").val() == "")
-	{
-		$("#ds_descricao").focus();
-		swal.fire("Erro", "Preencha a Descrição", "error");
-		$("#ds_descricao").addClass("is-invalid");
-		return false;	
-	}
-	else
-	{
-		$("#ds_descricao").removeClass("is-invalid");	
-		$("#ds_descricao").addClass("is-valid");
-	}
+	// if($("#ds_descricao").val() == "")
+	// {
+	// 	$("#ds_descricao").focus();
+	// 	swal.fire("Erro", "Preencha a Descrição", "error");
+	// 	$("#ds_descricao").addClass("is-invalid");
+	// 	return false;	
+	// }
+	// else
+	// {
+	// 	$("#ds_descricao").removeClass("is-invalid");	
+	// 	$("#ds_descricao").addClass("is-valid");
+	// }
 
 	return true;
 }

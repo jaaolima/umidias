@@ -52,6 +52,18 @@ $(document).ready(function() {
 	    }); 
 	}); 
 
+	$("#id_periodo").on("change", function() {
+		if($(this).val() == 1){
+			$("#bisemanas_indisponiveis").show();
+			$("#meses_indisponiveis").hide();
+		}
+		if($(this).val() == 2){
+			$("#bisemanas_indisponiveis").hide();
+			$("#meses_indisponiveis").show();
+		}
+		
+	});
+
 	if(id_perfil == 2){
 		$("#salvar").on("click", function(e){
 			var form = $("#form_usuario").get(0); 
@@ -320,18 +332,18 @@ function validar()
 
 	
 
-	if($("#ds_descricao").val() == "")
-	{
-		$("#ds_descricao").focus();
-		swal.fire("Erro", "Preencha a Descrição", "error");
-		$("#ds_descricao").addClass("is-invalid");
-		return false;	
-	}
-	else
-	{
-		$("#ds_descricao").removeClass("is-invalid");	
-		$("#ds_descricao").addClass("is-valid");
-	}
+	// if($("#ds_descricao").val() == "")
+	// {
+	// 	$("#ds_descricao").focus();
+	// 	swal.fire("Erro", "Preencha a Descrição", "error");
+	// 	$("#ds_descricao").addClass("is-invalid");
+	// 	return false;	
+	// }
+	// else
+	// {
+	// 	$("#ds_descricao").removeClass("is-invalid");	
+	// 	$("#ds_descricao").addClass("is-valid");
+	// }
 
 	return true;
 }
