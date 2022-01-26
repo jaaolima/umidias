@@ -362,49 +362,105 @@
 					} 	
 				}
 			}
-
 			if($id_midia == 2){
-				$datas = explode(" - ", $dados['dt_inicial_final']);
-
-				$dt_inicial = implode('-', array_reverse(explode('/', $datas[0])));
-				$dt_final = implode('-', array_reverse(explode('/', $datas[1])));
-
-				var_dump($dt_final);var_dump($dt_inicial);
+				$id_material    = $dados['id_material'];
+				$meses 			= $dados["mes"];
 
 				//total alugado
 				$nu_valor_ponto    	= $dados['nu_valor_ponto'];
 				$Rvirgula = str_replace(",", "", $nu_valor_ponto); 
 				$valor = str_replace("R$ ", "", $Rvirgula);
-				$nu_valor_alugado = ($valor) + $dadosMaterial["nu_valor"];
-				
-	
-				// $date = new DateTime($dt_inicial);
-				// $date->modify('+'.$mes.'months');
-				
-			
-				try{
-					$con = Conecta::criarConexao();
-					$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
-								VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1, :nu_valor_alugado)";
+				$nu_valor_alugado = $valor + $dadosMaterial["nu_valor"];
+
+				$id_mes= '';
+				for ($i=0; $i < count($meses); $i++) { 
 					
-					$stmt = $con->prepare($insert);
-					
-					$params = array(':id_usuario' => $id_usuario, 
-									':id_ponto' => $id_ponto,
-									':dt_inicial' => $dt_inicial,
-									':dt_final' => $dt_final,
-									':ds_arte' => $gravar_caminho_arquivo,
-									':nu_valor_alugado' => $nu_valor_alugado);
-	
-					$stmt->execute($params);
-					
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
+						$id_mes = $meses[$i];
+						$con = Conecta::criarConexao();
+						$selectmes = "SELECT dt_inicial, dt_final 
+									from tb_mes 
+									where id_mes = :id_mes";
+						
+						$stmtmes = $con->prepare($selectmes);
+						
+						$params = array(':id_mes' => $id_mes); 
+										
+						$stmtmes->execute($params);
+						$dadosmes = $stmtmes->fetch();
+						$dt_inicial = $dadosmes["dt_inicial"];
+						$dt_final = $dadosmes["dt_final"];
+
+
+					try{
+						$con = Conecta::criarConexao();
+						$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
+									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material, :nu_valor_alugado)";
+						
+						$stmt = $con->prepare($insert);
+						
+						$params = array(':id_usuario' => $id_usuario,
+										':id_ponto' => $id_ponto,
+										':dt_inicial' => $dt_inicial,
+										':dt_final' => $dt_final,
+										':ds_arte' => $gravar_caminho_arquivo,
+										':id_material' => $id_material,
+										':nu_valor_alugado' => $nu_valor_alugado);
+										
+						$stmt->execute($params);
+
+						
+
+					}
+					catch(exception $e) 
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					} 	
 				}
 			}
+
+			// if($id_midia == 2){
+			// 	$datas = explode(" - ", $dados['dt_inicial_final']);
+
+			// 	$dt_inicial = implode('-', array_reverse(explode('/', $datas[0])));
+			// 	$dt_final = implode('-', array_reverse(explode('/', $datas[1])));
+
+			// 	var_dump($dt_final);var_dump($dt_inicial);
+
+			// 	//total alugado
+			// 	$nu_valor_ponto    	= $dados['nu_valor_ponto'];
+			// 	$Rvirgula = str_replace(",", "", $nu_valor_ponto); 
+			// 	$valor = str_replace("R$ ", "", $Rvirgula);
+			// 	$nu_valor_alugado = ($valor) + $dadosMaterial["nu_valor"];
+				
+	
+			// 	// $date = new DateTime($dt_inicial);
+			// 	// $date->modify('+'.$mes.'months');
+				
+			
+			// 	try{
+			// 		$con = Conecta::criarConexao();
+			// 		$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
+			// 					VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1, :nu_valor_alugado)";
+					
+			// 		$stmt = $con->prepare($insert);
+					
+			// 		$params = array(':id_usuario' => $id_usuario, 
+			// 						':id_ponto' => $id_ponto,
+			// 						':dt_inicial' => $dt_inicial,
+			// 						':dt_final' => $dt_final,
+			// 						':ds_arte' => $gravar_caminho_arquivo,
+			// 						':nu_valor_alugado' => $nu_valor_alugado);
+	
+			// 		$stmt->execute($params);
+					
+			// 	}
+			// 	catch(exception $e)
+			// 	{
+			// 		header('HTTP/1.1 500 Internal Server Error');
+			// 		print "ERRO:".$e->getMessage();		
+			// 	}
+			// }
 			
 		}
 		function buscarCarrinho($id_usuario)
