@@ -102,14 +102,14 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                     <label>Bairro <span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_bairro" name="ds_bairro">
                         <option value="">Selecione...</option>
-                        <option value="1" <?php if($dados['ds_bairro'] == 1) echo "selected" ?>>Ceilândia</option>
+                        <option value="Ceilândia" <?php if($dados['ds_bairro'] == "Ceilândia") echo "selected" ?>>Ceilândia</option>
                     </select>
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_sentido" name="ds_sentido">
                         <option value="">Selecione...</option>
-                        <option value="1" <?php if($dados['ds_sentido'] == 1) echo "selected" ?>>Ceilândia</option>
+                        <option value="Ceilândia" <?php if($dados['ds_sentido'] == "Ceilândia") echo "selected" ?>>Ceilândia</option>
                     </select>
                 </div>
             </div>

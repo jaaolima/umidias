@@ -91,14 +91,14 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
                     <label>Bairro <span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_bairro" name="ds_bairro">
                         <option value="">Selecione...</option>
-                        <option value="1">Ceilândia</option>
+                        <option value="Ceilândia">Ceilândia</option>
                     </select>
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_sentido" name="ds_sentido">
                         <option value="">Selecione...</option>
-                        <option value="1">Ceilândia</option>
+                        <option value="Ceilândia">Ceilândia</option>
                     </select>
                 </div>
             </div>
