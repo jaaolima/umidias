@@ -536,26 +536,26 @@
 																		$status = "";
 																		switch ($dados["id_status_midia"]) {
 																			case 1:
-																				$status = "Aguardando pagamento";
+																				$status = "Aguardando pagamento!";
 																				$corStatus = "label-danger";
 																				break;
 																			
 																			case 2:
-																				$status = "Aguardando confirmação";
+																				$status = "Aguardando confirmação!";
 																				$corStatus = "label-warning";
 																				break;
 																			case 3:
 																			case 4:
 																			case 5:
-																				$status = "Mídia sendo preparada";
+																				$status = "Mídia sendo preparada!";
 																				$corStatus = "label-warning";
 																				break;
 																			case 6:
-																				$status = "Saiu pra colagem";
+																				$status = "Saiu pra colagem!";
 																				$corStatus = "label-warning";
 																				break;
 																			case 7:
-																				$status = "Mídia veiculada";
+																				$status = "Mídia veiculada!";
 																				$corStatus = "label-success";
 																				break;
 																				
