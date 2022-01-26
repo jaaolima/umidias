@@ -204,7 +204,7 @@ $optionsmes = $Bisemana->listarTodosMesPonto();
             </div>   
             <div class="form-group row" id="bisemanas_indisponiveis" style="display:none;">
                 <div class="col-6">
-                    <label>Bisemanas Indiponíveis<span class="text-danger">*</span></label>
+                    <label>Bisemanas Indiponíveis</label>
                     <table  class="table table-hover" id="table_bisemana">
                         <thead>
                             <tr>
@@ -238,9 +238,9 @@ $optionsmes = $Bisemana->listarTodosMesPonto();
                 </div>
                 
             </div>
-            <div class="form-group row" id="meses_indisponiveis" style="display:none;">
+            <!-- <div class="form-group row" id="meses_indisponiveis" style="display:none;">
                 <div class="col-6">
-                    <label>Meses Indiponíveis<span class="text-danger">*</span></label>
+                    <label>Meses Indiponíveis</label>
                     <table  class="table table-hover" id="table_mes">
                         <thead>
                             <tr>
@@ -273,7 +273,7 @@ $optionsmes = $Bisemana->listarTodosMesPonto();
                     </table>
                 </div>
                 
-            </div>
+            </div> -->
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
