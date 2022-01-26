@@ -284,6 +284,31 @@
 			}
         }
 
+		public function listarTodosMesPonto()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT id_mes, ds_mes, dt_inicial, dt_final
+							FROM tb_mes
+							where dt_inicial > curdate()";
+				
+				$stmt = $con->prepare($select); 
+				
+				
+				$stmt->execute();
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+        }
+
 
     }
 ?>        

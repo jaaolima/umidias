@@ -25,6 +25,7 @@ $optionscategoria = $Categoria->listaroptionscategoria(null);
 $optionsmaterial = $Material->listaroptionsmaterial(null);
 $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
 $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
+$optionsmes = $Bisemana->listarTodosMesPonto();
 ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <!--<script
@@ -107,7 +108,7 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
                     <label>Selecione os arquivos da Foto</label>
                     <input type="file" class="form-control" id="fotos" name="fotos[]" multiple />  
                 </div>
-            </div> 
+            </div>  
             <div class="form-group row">
                 <!--<div class="form-group col-4">
                     <label class="">Fotos da Mídia<span class="text-danger">*</span></label>
@@ -240,6 +241,36 @@ $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
             <div class="form-group row" id="meses_indisponiveis" style="display:none;">
                 <div class="col-6">
                     <label>Meses Indiponíveis<span class="text-danger">*</span></label>
+                    <table  class="table table-hover" id="table_mes">
+                        <thead>
+                            <tr>
+                                <th>ID mes</th>
+                                <th>Data Inicial</th>
+                                <th>Data Final</th>
+                                <th>Meses Disponiveis</th>
+                                <th>Selecione</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                while ($dadosMes = $optionsMes->fetch())
+                                {
+
+                                    $dt_inicial = date('d/m/Y', strtotime($dadosMes["dt_inicial"]));
+                                    $dt_final = date('d/m/Y', strtotime($dadosMes["dt_final"]));
+
+
+                                    echo "<tr>
+                                            <td>".$dadosMes['id_mes']."</td>
+                                            <td>".$dt_inicial."</td>
+                                            <td>".$dt_final."</td>
+                                            <td>".$dadosMes['ds_mes']."</td>
+                                            <td><input name='mes[]' id='".$dadosMes["id_mes"]."' value='".$dadosMes['id_mes']."' type='checkbox'></td>
+                                        </tr>";
+                                }
+                            ?>
+                        </tbody>
+                    </table>
                 </div>
                 
             </div>

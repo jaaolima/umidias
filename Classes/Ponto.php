@@ -136,54 +136,107 @@
 					}
 				}
 
-				//adicionar bisemanas indisponiveis
-				if(isset($dados['bisemana'])){
-					$listaCheckboxBisemana = $dados['bisemana'];
-	
-					$id_bisemana= '';
-	
-					for ($i=0; $i < count($listaCheckboxBisemana); $i++) { 
+				if($id_periodo == 1){
+					//adicionar bisemanas indisponiveis
+					if(isset($dados['bisemana'])){
+						$listaCheckboxBisemana = $dados['bisemana'];
+		
+						$id_bisemana= '';
+		
+						for ($i=0; $i < count($listaCheckboxBisemana); $i++) { 
 
-						try{
-							$con = Conecta::criarConexao();
-	
-							//pesquisar datas bisemanas por fora
-							$selectBisemana = "SELECT dt_inicial, dt_final
-									from tb_bisemana
-									where id_bisemana = :id_bisemana";
-						
-							$stmtBisemana = $con->prepare($selectBisemana); 
-							$params = array(':id_bisemana' => $listaCheckboxBisemana[$i]);
+							try{
+								$con = Conecta::criarConexao();
+		
+								//pesquisar datas bisemanas por fora
+								$selectBisemana = "SELECT dt_inicial, dt_final
+										from tb_bisemana
+										where id_bisemana = :id_bisemana";
 							
-							$stmtBisemana->execute($params);
-			
-							$dados = $stmtBisemana->fetch();
+								$stmtBisemana = $con->prepare($selectBisemana); 
+								$params = array(':id_bisemana' => $listaCheckboxBisemana[$i]);
+								
+								$stmtBisemana->execute($params);
+				
+								$dados = $stmtBisemana->fetch();
 
-							//inserir alugado por fora
-							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final)
-										VALUES (0, :id_ponto, :dt_inicial, :dt_final)";
-							
-							$stmt = $con->prepare($insert);
-							
-							$params = array(
-											':id_ponto' => $id_ponto,
-											':dt_inicial' => $dados["dt_inicial"],
-											':dt_final' => $dados["dt_final"]);
-											
-							$stmt->execute($params);
-	
+								//inserir alugado por fora
+								$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final)
+											VALUES (0, :id_ponto, :dt_inicial, :dt_final)";
+								
+								$stmt = $con->prepare($insert);
+								
+								$params = array(
+												':id_ponto' => $id_ponto,
+												':dt_inicial' => $dados["dt_inicial"],
+												':dt_final' => $dados["dt_final"]);
+												
+								$stmt->execute($params);
+		
+							}
+							catch(exception $e)
+							{
+								header('HTTP/1.1 500 Internal Server Error');
+								print "ERRO:".$e->getMessage();		
+							}		
 						}
-						catch(exception $e)
-						{
-							header('HTTP/1.1 500 Internal Server Error');
-							print "ERRO:".$e->getMessage();		
-						}		
+						
 					}
-					
+					else{
+						$id_bisemana = NULL;
+					};
 				}
-				else{
-					$id_bisemana = NULL;
-				};
+				if($id_periodo == 2){
+					//adicionar meses indisponiveis
+					if(isset($dados['mes'])){
+						$listaCheckboxmes = $dados['mes'];
+		
+						$id_mes= '';
+		
+						for ($i=0; $i < count($listaCheckboxmes); $i++) { 
+
+							try{
+								$con = Conecta::criarConexao();
+		
+								//pesquisar datas meses por fora
+								$selectmes = "SELECT dt_inicial, dt_final
+										from tb_mes
+										where id_mes = :id_mes";
+							
+								$stmtmes = $con->prepare($selectmes); 
+								$params = array(':id_mes' => $listaCheckboxmes[$i]);
+								
+								$stmtmes->execute($params);
+				
+								$dados = $stmtmes->fetch();
+
+								//inserir alugado por fora
+								$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final)
+											VALUES (0, :id_ponto, :dt_inicial, :dt_final)";
+								
+								$stmt = $con->prepare($insert);
+								
+								$params = array(
+												':id_ponto' => $id_ponto,
+												':dt_inicial' => $dados["dt_inicial"],
+												':dt_final' => $dados["dt_final"]);
+												
+								$stmt->execute($params);
+		
+							}
+							catch(exception $e)
+							{
+								header('HTTP/1.1 500 Internal Server Error');
+								print "ERRO:".$e->getMessage();		
+							}		
+						}
+						
+					}
+					else{
+						$id_mes = NULL;
+					};
+				}
+				
 
 			
 				echo "Dados gravados com sucesso!"; 
