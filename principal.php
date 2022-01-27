@@ -910,53 +910,6 @@
 						},
 						colors: [primary]
 					};
-					// var options = {
-					// 	series: [{
-					// 		name: 'Ativos',
-					// 		data: [<?php echo $graficoPontoParceiroOutdoor[0]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[0]["id_ponto"]; ?>]
-					// 	}, {
-					// 		name: 'Desativados',
-					// 		data: [<?php echo $graficoPontoParceiroOutdoor[1]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[1]["id_ponto"]; ?>]
-					// 	}],
-					// 	chart: {
-					// 		type: 'bar',
-					// 		height: 200
-					// 	},
-					// 	plotOptions: {
-					// 		bar: {
-					// 			horizontal: false,
-					// 			columnWidth: '55%',
-					// 			endingShape: 'rounded'
-					// 		},
-					// 	},
-					// 	dataLabels: {
-					// 		enabled: false
-					// 	},
-					// 	stroke: {
-					// 		show: true,
-					// 		width: 2,
-					// 		colors: ['transparent']
-					// 	},
-					// 	xaxis: {
-					// 		categories: ['Outdoor', 'Front-light'],
-					// 	},
-					// 	yaxis: {
-					// 		title: {
-					// 			text: 'Pontos'
-					// 		}
-					// 	},
-					// 	fill: {
-					// 		opacity: 1
-					// 	},
-					// 	tooltip: {
-					// 		y: {
-					// 			formatter: function (val) {
-					// 				return val + " Pontos"
-					// 			}
-					// 		}
-					// 	},
-					// 	colors: [primary, success]
-					// };
 
 					var chart = new ApexCharts(document.querySelector(apexChart), options);
 					chart.render();
