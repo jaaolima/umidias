@@ -47,8 +47,7 @@
 	$dadosTotalCliente = $cliente->dadosTotalCliente();
 	$dadosTodasMidias = $ponto->listarTodasMidias();
 
-	$graficoPontoParceiroOutdoor = $ponto->graficoPontoParceiroOutdoor($id_parceiro);
-	$graficoPontoParceiroFront = $ponto->graficoPontoParceiroFront($id_parceiro);
+	$graficoPontoParceiroAlugados= $ponto->graficoPontoParceiroAlugados($id_parceiro);
 ?>
 <!DOCTYPE html> 
 
@@ -884,51 +883,80 @@
 					const apexChart = "#grafico_parceiro_midia"; 
 					var options = {
 						series: [{
-							name: 'Ativos',
-							data: [<?php echo $graficoPontoParceiroOutdoor[0]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[0]["id_ponto"]; ?>]
-						}, {
-							name: 'Desativados',
-							data: [<?php echo $graficoPontoParceiroOutdoor[1]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[1]["id_ponto"]; ?>]
+							name: "Desktops",
+							data: [<?php echo $graficoPontoParceiroAlugados[0]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[1]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[2]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[3]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[4]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[5]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[6]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[7]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[8]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[9]["id_alugado"]; ?>,<?php echo $graficoPontoParceiroAlugados[10]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[11]["id_alugado"]; ?>]
 						}],
 						chart: {
-							type: 'bar',
-							height: 200
+							height: 350,
+							type: 'line',
+							zoom: {
+								enabled: false
+							}
 						},
-						plotOptions: {
-							bar: {
-								horizontal: false,
-								columnWidth: '55%',
-								endingShape: 'rounded'
-							},
-						},
-						dataLabels: {
+						dataLabels: { 	
 							enabled: false
 						},
 						stroke: {
-							show: true,
-							width: 2,
-							colors: ['transparent']
+							curve: 'straight'
+						},
+						grid: {
+							row: {
+								colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+								opacity: 0.5
+							},
 						},
 						xaxis: {
-							categories: ['Outdoor', 'Front-light'],
+							categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Out', 'Nov', 'Dec'],
 						},
-						yaxis: {
-							title: {
-								text: 'Pontos'
-							}
-						},
-						fill: {
-							opacity: 1
-						},
-						tooltip: {
-							y: {
-								formatter: function (val) {
-									return val + " Pontos"
-								}
-							}
-						},
-						colors: [primary, success]
+						colors: [primary]
 					};
+					// var options = {
+					// 	series: [{
+					// 		name: 'Ativos',
+					// 		data: [<?php echo $graficoPontoParceiroOutdoor[0]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[0]["id_ponto"]; ?>]
+					// 	}, {
+					// 		name: 'Desativados',
+					// 		data: [<?php echo $graficoPontoParceiroOutdoor[1]["id_ponto"]; ?>, <?php echo $graficoPontoParceiroFront[1]["id_ponto"]; ?>]
+					// 	}],
+					// 	chart: {
+					// 		type: 'bar',
+					// 		height: 200
+					// 	},
+					// 	plotOptions: {
+					// 		bar: {
+					// 			horizontal: false,
+					// 			columnWidth: '55%',
+					// 			endingShape: 'rounded'
+					// 		},
+					// 	},
+					// 	dataLabels: {
+					// 		enabled: false
+					// 	},
+					// 	stroke: {
+					// 		show: true,
+					// 		width: 2,
+					// 		colors: ['transparent']
+					// 	},
+					// 	xaxis: {
+					// 		categories: ['Outdoor', 'Front-light'],
+					// 	},
+					// 	yaxis: {
+					// 		title: {
+					// 			text: 'Pontos'
+					// 		}
+					// 	},
+					// 	fill: {
+					// 		opacity: 1
+					// 	},
+					// 	tooltip: {
+					// 		y: {
+					// 			formatter: function (val) {
+					// 				return val + " Pontos"
+					// 			}
+					// 		}
+					// 	},
+					// 	colors: [primary, success]
+					// };
 
 					var chart = new ApexCharts(document.querySelector(apexChart), options);
 					chart.render();

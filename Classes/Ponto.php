@@ -1065,38 +1065,18 @@
 
 			return array(mesReservados(), semanaReservados(), atualReservados());
 		}
-		public function graficoPontoParceiroOutdoor($id_parceiro)
+		public function graficoPontoParceiroAlugados($id_parceiro)
 		{
 			
-			function Ativados($id_parceiro){	
+			function Janeiro($id_parceiro){	
 				try{
 					$con = Conecta::criarConexao();
 					
-					$select = "SELECT count(id_ponto) as id_ponto
-								FROM tb_ponto
-								where id_midia = 1 and st_status = 'A' and id_parceiro=:id_parceiro";
-					
-					$stmt = $con->prepare($select); 
-					$params = array(':id_parceiro' => $id_parceiro);
-					$stmt->execute($params);
-
-					return $stmt->fetch();
-					
-						
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
-				}
-			}
-			function Desativados($id_parceiro){	 
-				try{
-					$con = Conecta::criarConexao();
-					
-					$select = "SELECT count(id_ponto) as id_ponto
-								FROM tb_ponto
-								where id_midia = 1 and st_status = 'D' and id_parceiro=:id_parceiro";
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 1
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':id_parceiro' => $id_parceiro);
@@ -1113,7 +1093,287 @@
 				}
 			}
 
-			return array(Ativados($id_parceiro), Desativados($id_parceiro));
+			function Fervereiro($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 2
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			function Março($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 3
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			function Abril($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 4
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+
+			function Maio($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 5
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+
+			function Junho($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 6
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			function Julho($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 7
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			function Agosto($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 8
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			function Setembro($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 9
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			function Outubro($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 10
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+			function Novembro($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 11
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+
+			function Dezembro($id_parceiro){	
+				try{
+					$con = Conecta::criarConexao();
+					
+					$select = "SELECT count(id_alugado) as id_alugado
+								FROM rl_alugado
+								where month(dt_inicial) = 12
+								and year(dt_inicial) = year(now())
+								and id_usuario <> 0";
+					
+					$stmt = $con->prepare($select); 
+					$params = array(':id_parceiro' => $id_parceiro);
+					$stmt->execute($params);
+
+					return $stmt->fetch();
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		
+				}
+			}
+
+
+
+			return array(Janeiro($id_parceiro), Fervereiro($id_parceiro), Março($id_parceiro), Abril($id_parceiro), Maio($id_parceiro), Junho($id_parceiro), Julho($id_parceiro), Agosto($id_parceiro), Setembro($id_parceiro), Outubro($id_parceiro), Novembro($id_parceiro), Dezembro($id_parceiro));
 		}
 		public function graficoPontoParceiroFront($id_parceiro)
 		{

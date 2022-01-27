@@ -71,7 +71,7 @@ var KTApexChartsDemo = function () {
 				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
 			},
 			colors: [primary]
-		};
+		}; 
 
 		var chart = new ApexCharts(document.querySelector(apexChart), options);
 		chart.render();
