@@ -205,7 +205,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
             <?php if($id_midia == 1) : ?>
             <div class="form-group row" id="bisemanas_indisponiveis" style="display:none;">
                 <div class="col-6">
-                    <label>Bisemanas Indiponíveis</label>
+                    <label>Bisemanas Indiponíveis (Opcional)</label>
                     <table  class="table table-hover" id="table_bisemana">
                         <thead>
                             <tr>
@@ -241,7 +241,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
             </div>
             <div class="form-group row" id="meses_indisponiveis" style="display:none;">
                 <div class="col-6">
-                    <label>Meses Indiponíveis</label>
+                    <label>Meses Indiponíveis (Opcional)</label>
                     <table  class="table table-hover" id="table_mes">
                         <thead>
                             <tr>
@@ -279,7 +279,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
             <?php if($id_midia == 2) : ?>
                 <div class="form-group row" id="meses_indisponiveis">
                     <div class="col-6">
-                        <label>Meses Indiponíveis</label>
+                        <label>Meses Indiponíveis (Opcional)</label>
                         <table  class="table table-hover" id="table_mes">
                             <thead>
                                 <tr>
