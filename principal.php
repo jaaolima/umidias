@@ -312,7 +312,7 @@
 											<div class="card-body d-flex ">
 												<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 													<div class="flex-grow-1" style="display: inherit;">
-														<h3 class="card-title titulo-div">Status das mídias:</h3>
+														<h3 class="card-title titulo-div">Locações Mensais:</h3>
 													</div>
 													<div class="position-relative w-100">
 														<div id="grafico_parceiro_midia"></div>
@@ -883,11 +883,11 @@
 					const apexChart = "#grafico_parceiro_midia"; 
 					var options = {
 						series: [{
-							name: "Desktops",
+							name: "Locações",
 							data: [<?php echo $graficoPontoParceiroAlugados[0]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[1]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[2]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[3]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[4]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[5]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[6]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[7]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[8]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[9]["id_alugado"]; ?>,<?php echo $graficoPontoParceiroAlugados[10]["id_alugado"]; ?>, <?php echo $graficoPontoParceiroAlugados[11]["id_alugado"]; ?>]
 						}],
 						chart: {
-							height: 350,
+							height: 300,
 							type: 'line',
 							zoom: {
 								enabled: false
