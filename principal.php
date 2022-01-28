@@ -20,7 +20,7 @@
 	// 	header("location: index.php");
 	// 	exit();
 	// }
-	if(!isset($_SESSION['id_usuario'])) {
+	if(!isset($_SESSION['id_usuario'])){
 		$_SESSION["id_usuario"] = 0;
 		$_SESSION["id_perfil"] = 1;
 	}
@@ -29,7 +29,7 @@
 	if($_SESSION["id_perfil"] != 2){
 		$id_parceiro = NULL;
 	}else{
-		$id_parceiro = $_SESSION["id_parceiro"]
+		$id_parceiro = $_SESSION["id_parceiro"];
 	}
 
 	$midia = new Midia();
