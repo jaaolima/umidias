@@ -5,16 +5,18 @@ error_reporting(E_ALL);
 require_once("../Classes/Categoria.php");
 require_once("../Classes/Material.php");
 require_once("../Classes/Parceiro.php");
+require_once("../Classes/Bairro.php");
 require_once("../Classes/Ponto.php");
 session_start();
 $id_ponto = $_REQUEST['id_ponto'];
 $id_perfil = $_SESSION['id_perfil'];
-$id_usuario = $_SESSION['id_usuario'];
+$id_usuario = $_SESSION['id_usuario']; 
 
 $Categoria = new Categoria(); 
 $Parceiro = new Parceiro(); 
 $Material = new Material();
 $Categoria = new Categoria(); 
+$Bairro = new Bairro(); 
 $ponto = new Ponto();
 
 $dados = $ponto->buscarDadosPonto($id_ponto);
@@ -23,12 +25,15 @@ $dadosFotoExcluir = $ponto->BuscarFotoPonto($id_ponto);
 $id_categoria = $dados["id_midia"];
 $id_material = $dados["id_material"]; 
 $id_parceiro = $dados["id_parceiro"];
+$ds_bairro = $dados["ds_bairro"];
 
 $optionsUF = $Parceiro->listaroptionsUF($dados['id_estado']);
 $optionsCidade = $Parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_cidade']);
 $optionscategoria = $Categoria->listaroptionscategoria($id_categoria);
 $optionsmaterial = $Material->listaroptionsmaterial($id_material);
 $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
+$optionsBairro = $Bairro->listaroptionsBairro($ds_bairro);
+$optionSentido = $Bairro->listaroptionsBairro($ds_sentido);
 
 
 
@@ -102,14 +107,18 @@ $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
                     <label>Bairro <span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_bairro" name="ds_bairro">
                         <option value="">Selecione...</option>
-                        <option value="Ceilândia" <?php if($dados['ds_bairro'] == "Ceilândia") echo "selected" ?>>Ceilândia</option>
+                        <?php
+                            echo $optionsBairro; 
+                        ?>
                     </select>
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_sentido" name="ds_sentido">
                         <option value="">Selecione...</option>
-                        <option value="Ceilândia" <?php if($dados['ds_sentido'] == "Ceilândia") echo "selected" ?>>Ceilândia</option>
+                        <?php
+                            echo $optionsSentido; 
+                        ?>
                     </select>
                 </div>
             </div>
