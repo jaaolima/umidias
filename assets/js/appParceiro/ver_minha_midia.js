@@ -28,10 +28,10 @@ $(document).ready(function() {
 			}
 		});
 		
-	});   
+	});    
 	
 	$("#excluir").on('click', function() {
-		var id_ponto = $(this).data("ponto");
+		var id_ponto = $("#id_ponto").val();
 		swal.fire({
 			title: 'Tem certeza?', 
 			text: "Desejar excluir o Ponto?",

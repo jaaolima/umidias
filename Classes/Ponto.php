@@ -1789,7 +1789,7 @@
 		}
 		public function deletarPonto(array $dados)
 		{
-            $id_ponto	    = $dados['id_ponto'];
+            $id_ponto	    = $dados['id_ponto']; 
 			try{
 				$con = Conecta::criarConexao();
 				$selectponto = "select count(id_ponto) as id_ponto from rl_alugado where dt_final>curdate() and id_ponto = :id_ponto and id_usuario <> 0";		
