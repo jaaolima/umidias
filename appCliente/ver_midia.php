@@ -477,7 +477,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		// to the base of the flagpole.
 		jQuery(document).ready(function() {
 			$("#entrar_login").on("click", function(){
-				redirectTo("index.php");
+				redirectTo("https://app.unimidias.com.br/index.php");
 			})
 			demo3();
 			chaves = <?php
