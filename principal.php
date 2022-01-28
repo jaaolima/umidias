@@ -28,7 +28,7 @@
 	$id_usuario = $_SESSION["id_usuario"];
 
 
-	if($_SESSION['id_parceiro'] == ""){
+	if($_SESSION["id_parceiro"] == ""){
 		$id_parceiro = NULL;
 	}
 
