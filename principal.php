@@ -125,7 +125,7 @@
 						</span>		
 						<?php endif; ?>
 					<?php else: ?>
-						<a href="https://app.unimidias.com.br/index.php" class="btn btn-primary">
+						<a href="index.php" class="btn btn-primary">
 							Entrar
 						</a>
 					<?php endif; ?>											
