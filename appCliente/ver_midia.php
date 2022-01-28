@@ -276,7 +276,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </div>
 													<?php else : ?>
 													<div class="my-6 mx-6">
-                                                        <a href="index.php" class="btn btn-primary w-100">Entrar em uma conta</a>
+                                                        <a href="login.php" class="btn btn-primary w-100">Entrar em uma conta</a>
                                                     </div>
 													<?php endif ;?>	
                                                 </div>
@@ -403,7 +403,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </div>
 													<?php else : ?>
 													<div class="my-6 mx-6">
-                                                        <a href="index.php" class="btn btn-primary w-100">Entrar em uma conta</a>
+                                                        <a href="login.php" class="btn btn-primary w-100">Entrar em uma conta</a>
                                                     </div>
 													<?php endif ;?>	
                                                 </div>

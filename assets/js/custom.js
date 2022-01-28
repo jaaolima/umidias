@@ -8,16 +8,16 @@ $("body").on('click', 'a', function(event){
     location.href='appUsuario/logout.php';
     return false;
   }
-  if ($(this).attr('href') == 'principal.php')
+  if ($(this).attr('href') == 'index.php')
   { 
-    location.href='principal.php';
+    location.href='index.php';
     return false; 
   }
 
-  if ($(this).attr('href').startsWith('index.php'))
+  if ($(this).attr('href').startsWith('login.php'))
   {
     var url = new URL($(this).attr('href').val());
-    location.href='index.php';
+    location.href='login.php';
     return false;
   }
 
