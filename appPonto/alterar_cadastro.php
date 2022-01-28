@@ -34,7 +34,7 @@ $optionscategoria = $Categoria->listaroptionscategoria($id_categoria);
 $optionsmaterial = $Material->listaroptionsmaterial($id_material);
 $optionsparceiro = $Parceiro->listaroptionsparceiro($id_parceiro);
 $optionsBairro = $Bairro->listaroptionsBairro($ds_bairro);
-$optionSentido = $Bairro->listaroptionsBairro($ds_sentido);
+$optionsSentido = $Bairro->listaroptionsBairro($ds_sentido);
 
 
 
