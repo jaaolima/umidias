@@ -93,7 +93,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 </div>
                 <div class="form-group col-3">
                     <label>Bairro <span class="text-danger">*</span></label>
-                    <select class="form-control" data-live-search="true" data-live-search-style="startsWith" id="ds_bairro" name="ds_bairro"> 
+                    <select class="selectpicker" data-live-search="true" data-live-search-style="startsWith" id="ds_bairro" name="ds_bairro"> 
                         <option value="">Selecione...</option>
                         <?php
                             echo $optionsBairro; 
@@ -102,7 +102,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
-                    <select class="form-control" data-live-search="true" data-live-search-style="startsWith" id="ds_sentido" name="ds_sentido">
+                    <select class="selectpicker" data-live-search="true" data-live-search-style="startsWith" id="ds_sentido" name="ds_sentido">
                         <option value="">Selecione...</option>
                         <?php
                             echo $optionsBairro; 
