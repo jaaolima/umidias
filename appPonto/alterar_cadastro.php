@@ -26,6 +26,7 @@ $id_categoria = $dados["id_midia"];
 $id_material = $dados["id_material"]; 
 $id_parceiro = $dados["id_parceiro"];
 $ds_bairro = $dados["ds_bairro"];
+$ds_sentido = $dados["ds_sentido"];
 
 $optionsUF = $Parceiro->listaroptionsUF($dados['id_estado']);
 $optionsCidade = $Parceiro->listarOptionsCidade($dados['id_estado'], $dados['id_cidade']);
