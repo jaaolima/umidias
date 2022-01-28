@@ -20,9 +20,9 @@
 	// 	header("location: index.php");
 	// 	exit();
 	// }
-	if($_SESSION['autenticado'] !=='validado') {
-		$_SESSION["id_usuario"] == 0;
-		$_SESSION["id_perfil"] == 1;
+	if(!isset($_SESSION['id_usuario'])) {
+		$_SESSION["id_usuario"] = 0;
+		$_SESSION["id_perfil"] = 1;
 	}
 	$id_usuario == $_SESSION["id_usuario"];
 
