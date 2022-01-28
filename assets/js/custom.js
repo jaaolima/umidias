@@ -35,7 +35,7 @@ $("body").on('click', 'a', function(event){
 
 
 
-function redirectTo(url, successCallback){
+function redirectTo(url, successCallback){ 
   $.ajax({
     url: url,
     type: 'GET',
