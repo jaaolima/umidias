@@ -13,7 +13,7 @@ $(document).ready(function() {
 				, type:'post'
 				, data:{ ds_usuario : ds_usuario, ds_senha : ds_senha}
 				, success: function(xhr) {
-					$(location).attr('href', 'principal.php');  
+					$(location).attr('href', 'index.php');  
 				},
 				error: function(data){
 					swal.fire("Erro", data.responseText, "error");	

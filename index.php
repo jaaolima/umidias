@@ -89,7 +89,7 @@
 		<header class="position-fixed w-100 bg-white" style="z-index:2;">
 			<div class="navbar py-3 border-bottom">
 				<!--begin::Logo-->
-				<a href="principal.php" class="brand-logo ml-8">
+				<a href="index.php" class="brand-logo ml-8">
 					<img alt="Logo" src="assets/media/Uni_midia_logo.png" class="logo-default max-h-35px"  />
 				</a>
 				<!--end::Logo-->
@@ -163,7 +163,7 @@
 							
 							<ul class="menu-nav nav-pills">
 								<li class="menu-item my-4 botao-menu botao-menu-dashboard botao-menu-active btn ml-5" style="width:max-content;"  aria-haspopup="true">
-									<a href="principal.php" class="btn rounded mx-2 text-left  ">
+									<a href="index.php" class="btn rounded mx-2 text-left  ">
 										<i class="flaticon-home-2 icon-xl svg-hover svg-painel svg-active"></i>
 
 										<span class="menu-text texto-menu-active texto-menu texto-menu-dashboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Painel de Controle</font></font></span>
