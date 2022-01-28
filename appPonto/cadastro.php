@@ -93,7 +93,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 </div>
                 <div class="form-group col-3">
                     <label>Bairro <span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_bairro" name="ds_bairro" data-live-search="true"> 
+                    <select class="form-control js-example-basic-multiple" id="ds_bairro" name="ds_bairro" data-live-search="true"> 
                         <option value="">Selecione...</option>
                         <?php
                             echo $optionsBairro; 
@@ -102,7 +102,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_sentido" name="ds_sentido" data-live-search="true">
+                    <select class="form-control js-example-basic-multiple" id="ds_sentido" name="ds_sentido" data-live-search="true">
                         <option value="">Selecione...</option>
                         <?php
                             echo $optionsBairro; 
@@ -329,27 +329,16 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
     </form>
     <!--end::Form-->
 </div>
-
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="./assets/js/appPonto/cadastro.js" type="text/javascript"></script>
 <script>
     // The following example creates complex markers to indicate beaches near
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
 jQuery(document).ready(function() {
-	// if('geolocation' in navigator){
-    //     navigator.geolocation.getCurrentPosition(function(position){
-    //         console.log(position);
-    //         var latitude = position.coords.latitude;
-    //         var longitude = position.coords.longitude;
-    //         demo3(latitude, longitude);
-    //     })
-    // }
-    // else{
-    //     x.innerHTML="Seu browser não suporta Geolocalização.";
-    //     var latitude = -15.7750656;
-    //     var longitude = -48.0773014;
-    //     demo3(latitude, longitude);
-    // }
+    $('.ds_bairro').select2();
+    $('.ds_sentido').select2();
     demo3(-15.7750656, -48.0773014);
 });
 var demo3 = function(latitude, longitude) {
