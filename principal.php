@@ -21,7 +21,7 @@
 	// 	exit();
 	// }
 	if(!isset($_SESSION['id_usuario'])){
-		$_SESSION["id_usuario"] = 0;
+		$_SESSION["id_usuario"] = null;
 		$_SESSION["id_perfil"] = 1;
 	}
 	$id_usuario = $_SESSION["id_usuario"];
@@ -94,7 +94,7 @@
 				</a>
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
-					<?php if($id_usuario != 0) :  ?>
+					<?php if($id_usuario != null) :  ?>
 						<?php if($_SESSION['id_perfil'] == 1) :   ?>
 						<a href="appCliente/carrinho.php" class="mr-4">
 							<i class="flaticon-shopping-basket icon-xl svg-shop"></i>
