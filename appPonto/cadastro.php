@@ -93,7 +93,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 </div>
                 <div class="form-group col-3">
                     <label>Bairro <span class="text-danger">*</span></label>
-                    <select class="form-control js-example-basic-multiple" id="ds_bairro" name="ds_bairro" multiple="multiple"> 
+                    <select class="form-control" data-live-search="true" data-live-search-style="startsWith" id="ds_bairro" name="ds_bairro"> 
                         <option value="">Selecione...</option>
                         <?php
                             echo $optionsBairro; 
@@ -102,7 +102,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
-                    <select class="form-control js-example-basic-multiple" id="ds_sentido" name="ds_sentido" multiple="multiple">
+                    <select class="form-control" data-live-search="true" data-live-search-style="startsWith" id="ds_sentido" name="ds_sentido">
                         <option value="">Selecione...</option>
                         <?php
                             echo $optionsBairro; 
@@ -329,16 +329,12 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
     </form>
     <!--end::Form-->
 </div>
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="./assets/js/appPonto/cadastro.js" type="text/javascript"></script>
 <script>
     // The following example creates complex markers to indicate beaches near
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
 jQuery(document).ready(function() {
-    $('.ds_bairro').select2();
-    $('.ds_sentido').select2();
     demo3(-15.7750656, -48.0773014);
 });
 var demo3 = function(latitude, longitude) {
