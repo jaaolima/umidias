@@ -12,14 +12,14 @@
 	require_once("Classes/Parceiro.php");
 	require_once("Classes/Cliente.php");
 
-	if ( $_SESSION['autenticado'] !=='validado') {
-		header("location: index.php");
-		exit();
-	}
-	if(!isset($_SESSION['id_usuario'])){
-		header("location: index.php");
-		exit();
-	}
+	// if ( $_SESSION['autenticado'] !=='validado') {
+	// 	header("location: index.php");
+	// 	exit();
+	// }
+	// if(!isset($_SESSION['id_usuario'])){
+	// 	header("location: index.php");
+	// 	exit();
+	// }
    	$id_usuario = $_SESSION['id_usuario'];
 	$id_parceiro = $_SESSION['id_parceiro'];
 
