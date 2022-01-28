@@ -1,15 +1,17 @@
 <?php 
 ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
-error_reporting(E_ALL);
+error_reporting(E_ALL); 
 require_once("../Classes/Categoria.php");
 require_once("../Classes/Material.php");
 require_once("../Classes/Parceiro.php");
+require_once("../Classes/Bairro.php");
 require_once("../Classes/Bisemana.php");
 session_start();
 
 $Categoria = new Categoria(); 
 $Parceiro = new Parceiro(); 
+$Bairro = new Bairro(); 
 $Material = new Material(); 
 $Bisemana = new Bisemana(); 
 
@@ -24,6 +26,7 @@ $optionsUF = $Parceiro->listaroptionsUF(null);
 $optionscategoria = $Categoria->listaroptionscategoria(null);
 $optionsmaterial = $Material->listaroptionsmaterial(null);
 $optionsparceiro = $Parceiro->listaroptionsparceiro(null);
+$optionsBairro = $Bairro->listaroptionsBairro(null);
 $optionsbisemana = $Bisemana->listarTodasBisemanaPonto();
 $optionsMes = $Bisemana->listarTodosMesPonto();
 ?>
@@ -92,14 +95,18 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                     <label>Bairro <span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_bairro" name="ds_bairro">
                         <option value="">Selecione...</option>
-                        <option value="Ceilândia">Ceilândia</option>
+                        <?php
+                            echo $optionsBairro; 
+                        ?>
                     </select>
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
                     <select class="form-control" id="ds_sentido" name="ds_sentido">
                         <option value="">Selecione...</option>
-                        <option value="Ceilândia">Ceilândia</option>
+                        <?php
+                            echo $optionsBairro; 
+                        ?>
                     </select>
                 </div>
             </div>
