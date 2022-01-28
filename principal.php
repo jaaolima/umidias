@@ -26,7 +26,7 @@
 		$_SESSION["id_parceiro"] = 0;
 	}
 	$id_usuario = $_SESSION["id_usuario"];
-	$id_parceiro = $_SESSION["id_parceiro"];
+	// $id_parceiro = $_SESSION["id_parceiro"];
 
 
 	// if($_SESSION["id_parceiro"] == ""){
