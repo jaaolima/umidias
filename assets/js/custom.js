@@ -14,14 +14,12 @@ $("body").on('click', 'a', function(event){
     return false; 
   }
 
-  /*if ($(this).attr('href').startsWith('paciente.php'))
+  if ($(this).attr('href').startsWith('index.php'))
   {
     var url = new URL($(this).attr('href').val());
-    var id_paciente = url.searchParams.get("id_paciente");
-    var ds_nome = url.searchParams.get("id_paciente");
-    location.href='paciente.php?id_paciente='+id_paciente+'&ds_nome='+ds_nome;
+    location.href='index.php';
     return false;
-  }*/
+  }
 
   if ($(this).attr('href').startsWith('#kt_portlet_base_demo') )
   {
