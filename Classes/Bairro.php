@@ -1,7 +1,7 @@
 <?php
 	require_once("../Classes/Conecta.php");
     class Bairro{
-        public function listarOptionsBairro($id_bairro)
+        public function listarOptionsBairro($ds_bairro)
 		{
 			try{
 				$con = Conecta::criarConexao();
@@ -14,10 +14,10 @@
 
 				while($dados = $stmt->fetch())
 				{
-					if($dados["id_bairro"] == $id_bairro){
-                        $options.= "<option value='".$dados['id_bairro']."' selected>".$dados['ds_bairro']."</option>";
+					if($dados["ds_bairro"] == $ds_bairro){
+                        $options.= "<option value='".$dados['ds_bairro']."' selected>".$dados['ds_bairro']."</option>";
                     }else{
-                        $options.= "<option value='".$dados['id_bairro']."'>".$dados['ds_bairro']."</option>";
+                        $options.= "<option value='".$dados['ds_bairro']."'>".$dados['ds_bairro']."</option>";
                     }	
 					
 
