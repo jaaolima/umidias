@@ -23,14 +23,15 @@
 	if(!isset($_SESSION['id_usuario'])) {
 		$_SESSION["id_usuario"] = 0;
 		$_SESSION["id_perfil"] = 1;
+		$_SESSION["id_parceiro"] = "";
 	}
-	$id_usuario == $_SESSION["id_usuario"];
+	$id_usuario = $_SESSION["id_usuario"];
 
-	// $id_parceiro = $_SESSION['id_parceiro'];
+	$id_parceiro = $_SESSION['id_parceiro'];
 
-	// if($id_parceiro == ""){
-	// 	$id_parceiro = NULL;
-	// }
+	if($id_parceiro == ""){
+		$id_parceiro = NULL;
+	}
 
 	$midia = new Midia();
 	$usuario = new Usuario();
