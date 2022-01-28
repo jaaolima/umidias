@@ -21,6 +21,12 @@
 	// 	exit();
 	// }
    	$id_usuario = $_SESSION['id_usuario'];
+	if($id_usuario == ""){
+		$_SESSION["id_usuario"] == 0;
+		$_SESSION["id_perfil"] == 1;
+		$id_usuario == $_SESSION["id_usuario"];
+	}
+	
 	$id_parceiro = $_SESSION['id_parceiro'];
 
 	if($id_parceiro == ""){
