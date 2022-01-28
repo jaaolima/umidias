@@ -397,9 +397,15 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Total</h3>
                                                         <div id="valor_alugado"><h2>R$ 0,00</h2></div>
                                                     </div>
+                                                    <?php if($_SESSION['id_usuario'] != 0) : ?>
                                                     <div class="my-6 mx-6">
                                                         <button id="alugar" type="button"class="btn btn-primary w-100">Alugar Mídia</button>
                                                     </div>
+													<?php else : ?>
+													<div class="my-6 mx-6">
+                                                        <a href="https://app.unimidias.com.br/index.php" class="btn btn-primary w-100">Entrar em uma conta</a>
+                                                    </div>
+													<?php endif ;?>	
                                                 </div>
                                             <?php endif ;?>
 											<div class="card card-custom card-stretch gutter-b box-shadow" id="alugar_midia" style="display: none;">
