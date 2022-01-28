@@ -23,7 +23,7 @@
 	if(!isset($_SESSION['id_usuario'])) {
 		$_SESSION["id_usuario"] = 0;
 		$_SESSION["id_perfil"] = 1;
-		$_SESSION["id_parceiro"] = "";
+		$_SESSION["id_parceiro"] = '';
 	}
 	$id_usuario = $_SESSION["id_usuario"];
 
@@ -95,36 +95,37 @@
 				</a>
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
-					<?php if($_SESSION['id_perfil'] == 1) :   ?>
-					<a href="appCliente/carrinho.php" class="mr-4">
-						<i class="flaticon-shopping-basket icon-xl svg-shop"></i>
-					</a>
-					<?php endif; ?>
-					<div><p class="mb-0 mt-1 ml-2 texto-chumbo">Olá, <?php echo $dadosUsuario['ds_nome'];?>!</p></div>
-					<div class="dropdown">
-						<div  class="mr-2" data-toggle="dropdown" aria-expanded="false">
-							<a href="#" class="btn-dropdown">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M6 9L12 15L18 9" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</a>	 
+					<?php if($id_usuario != 0) :  ?>
+						<?php if($_SESSION['id_perfil'] == 1) :   ?>
+						<a href="appCliente/carrinho.php" class="mr-4">
+							<i class="flaticon-shopping-basket icon-xl svg-shop"></i>
+						</a>
+						<?php endif; ?>
+						<div><p class="mb-0 mt-1 ml-2 texto-chumbo">Olá, <?php echo $dadosUsuario['ds_nome'];?>!</p></div>
+						<div class="dropdown">
+							<div  class="mr-2" data-toggle="dropdown" aria-expanded="false">
+								<a href="#" class="btn-dropdown">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 9L12 15L18 9" stroke="#B721FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>	 
+							</div>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="appUsuario/perfil.php">Minha conta</a>
+								<div class="dropdown-divider mx-5"></div>
+								<a class="dropdown-item texto-vermelho" href="appUsuario/logout.php">Sair</a>
+							</div>	
 						</div>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="appUsuario/perfil.php">Minha conta</a>
-							<div class="dropdown-divider mx-5"></div>
-							<a class="dropdown-item texto-vermelho" href="appUsuario/logout.php">Sair</a>
-						</div>	
-					</div>
-					<?php if($dadosUsuario['ds_foto'] === null) :  ?>	
-					<div class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
-						<span class="symbol-label"><?php echo $dadosUsuario['ds_nome'][0]; ?></span>
-					</div>			
-					<?php else : ?>
-					<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
-						<img src="<?php echo $dadosUsuario["ds_foto"]; ?>" class="symbol-label"alt="">
-					</span>		
-					<?php endif; ?>
-																
+						<?php if($dadosUsuario['ds_foto'] === null) :  ?>	
+						<div class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
+							<span class="symbol-label"><?php echo $dadosUsuario['ds_nome'][0]; ?></span>
+						</div>			
+						<?php else : ?>
+						<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
+							<img src="<?php echo $dadosUsuario["ds_foto"]; ?>" class="symbol-label"alt="">
+						</span>		
+						<?php endif; ?>
+					<?php endif; ?>											
 				</div>
 			</div>	
 		</header>	
