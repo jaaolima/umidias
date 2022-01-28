@@ -276,7 +276,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </div>
 													<?php else : ?>
 													<div class="my-6 mx-6">
-                                                        <a href="https://app.unimidias.com.br/index.php" class="btn btn-primary w-100">Entrar em uma conta</a>
+                                                        <a href="index.php" class="btn btn-primary w-100">Entrar em uma conta</a>
                                                     </div>
 													<?php endif ;?>	
                                                 </div>
@@ -403,7 +403,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </div>
 													<?php else : ?>
 													<div class="my-6 mx-6">
-                                                        <button id="entrar_login" class="btn btn-primary w-100">Entrar em uma conta</button>
+                                                        <a href="index.php" class="btn btn-primary w-100">Entrar em uma conta</a>
                                                     </div>
 													<?php endif ;?>	
                                                 </div>
@@ -476,9 +476,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond 
 		// to the base of the flagpole.
 		jQuery(document).ready(function() {
-			$("#entrar_login").on("click", function(){
-				redirectTo("https://app.unimidias.com.br/index.php");
-			})
 			demo3();
 			chaves = <?php
 				$dateRange = array();
