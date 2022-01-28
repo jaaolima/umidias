@@ -514,7 +514,7 @@
 								</div>
 								<!--end::Row-->
 								<!--begin::Row-->
-								<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 4 ) :  ?>
+								<?php if($_SESSION['id_perfil'] == 1 || $_SESSION['id_perfil'] == 4 || $id_usuario != 0) :  ?>
 									<div class="row">
 										<div class="col-xl-12">
 											<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
