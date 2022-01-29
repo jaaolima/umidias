@@ -356,7 +356,7 @@
 																$dataInicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
 																$dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
 																$corStatus = "label-warning";
-																if($dados["id_status_midia"] == 5){ $corStatus =  "label-success"; }
+																if($dados["id_status_midia"] == 7){ $corStatus =  "label-success"; }
 																echo "<tr>
 																		<td>
 																			<div class='d-flex'>

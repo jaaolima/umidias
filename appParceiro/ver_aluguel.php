@@ -160,7 +160,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Badge-->
                     <div class="timeline-badge">
-                        <i class="fa fa-genderless text-warning icon-xl"></i>
+                        <i class="fa fa-genderless text-success icon-xl"></i>
                     </div>
                     <!--end::Badge-->
 
