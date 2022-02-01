@@ -19,7 +19,7 @@ var KTGoogleChartsDemo = function() {
         // COLUMN CHART
         var data = new google.visualization.DataTable();
         data.addColumn('timeofday', 'Time of Day');
-        data.addColumn('number', 'Motivation Level');
+        data.addColumn('number', 'Motivation Level'); 
         data.addColumn('number', 'Energy Level');
 
         data.addRows([
