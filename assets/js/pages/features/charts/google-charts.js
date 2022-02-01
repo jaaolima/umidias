@@ -13,7 +13,7 @@ var KTGoogleChartsDemo = function() {
         google.setOnLoadCallback(function() {
             KTGoogleChartsDemo.runDemos();
         });
-    }
+    } 
 
     var demoColumnCharts = function() {
         // COLUMN CHART

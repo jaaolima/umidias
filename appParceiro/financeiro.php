@@ -14,7 +14,7 @@
 	$ponto = new Ponto();
 
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
-	$retorno = $midia->listarTipoMidia($_POST); 
+	$retorno = $midia->listarTipoMidia($_POST);
 
 ?>
 <!--
@@ -74,96 +74,76 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Global Theme Bundle(used by all pages)-->
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
+		<script src="assets/js/scripts.bundle2.min.js"></script>
 		<script src="assets/js/appUsuario/perfil.js"></script>
-
-		<script src="//www.amcharts.com/lib/3/amcharts.js"></script>
-		<script src="//www.amcharts.com/lib/3/serial.js"></script>
-		<script src="//www.amcharts.com/lib/3/radar.js"></script>
-		<script src="//www.amcharts.com/lib/3/pie.js"></script>
-		<script src="//www.amcharts.com/lib/3/plugins/tools/polarScatter/polarScatter.min.js"></script>
-		<script src="//www.amcharts.com/lib/3/plugins/animate/animate.min.js"></script>
-		<script src="//www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-		<script src="//www.amcharts.com/lib/3/themes/light.js"></script>
 		<script type="text/javascript">
 			
 
 			
-			var KTamChartsChartsDemo = function() {
+			jQuery(document).ready(function () {
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+				function drawChart() {
 
+					var data = new google.visualization.DataTable();
+					data.addColumn('number', 'Mês anterior');
+					data.addColumn('number', 'Esse Mês');
 
-				var demo3 = function() {
-					var chart = AmCharts.makeChart("kt_amcharts_3", {
-						"theme": "light",
-						"type": "serial",
-						"dataProvider": [{
-							"country": "USA",
-							"year2004": 3.5,
-							"year2005": 4.2
-						}, {
-							"country": "UK",
-							"year2004": 1.7,
-							"year2005": 3.1
-						}, {
-							"country": "Canada",
-							"year2004": 2.8,
-							"year2005": 2.9
-						}, {
-							"country": "Japan",
-							"year2004": 2.6,
-							"year2005": 2.3
-						}, {
-							"country": "France",
-							"year2004": 1.4,
-							"year2005": 2.1
-						}, {
-							"country": "Brazil",
-							"year2004": 2.6,
-							"year2005": 4.9
-						}],
-						"valueAxes": [{
-							"unit": "%",
-							"position": "left",
-							"title": "GDP growth rate",
-						}],
-						"startDuration": 1,
-						"graphs": [{
-							"balloonText": "GDP grow in [[category]] (2004): <b>[[value]]</b>",
-							"fillAlphas": 0.9,
-							"lineAlpha": 0.2,
-							"title": "2004",
-							"type": "column",
-							"valueField": "year2004"
-						}, {
-							"balloonText": "GDP grow in [[category]] (2005): <b>[[value]]</b>",
-							"fillAlphas": 0.9,
-							"lineAlpha": 0.2,
-							"title": "2005",
-							"type": "column",
-							"clustered": false,
-							"columnWidth": 0.5,
-							"valueField": "year2005"
-						}],
-						"plotAreaFillAlphas": 0.1,
-						"categoryField": "country",
-						"categoryAxis": {
-							"gridPosition": "start"
+					data.addRows([
+						[{
+							v: [8, 0, 0],
+							f: '8 am'
+						}, 1, .25],
+						[{
+							v: [9, 0, 0],
+							f: '9 am'
+						}, 2, .5],
+						[{
+							v: [10, 0, 0],
+							f: '10 am'
+						}, 3, 1],
+						[{
+							v: [11, 0, 0],
+							f: '11 am'
+						}, 4, 2.25],
+						[{
+							v: [12, 0, 0],
+							f: '12 pm'
+						}, 5, 2.25],
+						[{
+							v: [13, 0, 0],
+							f: '1 pm'
+						}, 6, 3],
+						[{
+							v: [14, 0, 0],
+							f: '2 pm'
+						}, 7, 4],
+						[{
+							v: [15, 0, 0],
+							f: '3 pm'
+						}, 8, 5.25],
+						[{
+							v: [16, 0, 0],
+							f: '4 pm'
+						}, 9, 7.5],
+						[{
+							v: [17, 0, 0],
+							f: '5 pm'
+						}, 10, 10],
+					]);
+
+					var options = {
+						title: 'Aluguel de mídias',
+						focusTarget: 'categoria',
+						vAxis: {
+							title: 'Escala'
 						},
-						"export": {
-							"enabled": true
-						}
+						colors: ['#6e4ff5', '#fe3995']
+					};
 
-					});
+					var chart = new google.visualization.ColumnChart(document.getElementById('chart'));
+					chart.draw(data, options);
 				}
-				return {
-					// public functions
-					init: function() {
-						demo3();
-					}
-				};
-
-				jQuery(document).ready(function() {
-					KTamChartsChartsDemo.init();
-				});
 			});
 			
 			
