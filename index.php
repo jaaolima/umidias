@@ -942,7 +942,7 @@
 			}();
 			jQuery(document).ready(function () {
 				<?php if(isset($_REQUEST['id_ponto'])) : ?>
-					window.location.replace("appCliente/ver_midia?id_ponto="<?php echo $id_ponto; ?>"&id_midia="<?php echo $id_midia; ?>);
+					window.location.replace("appCliente/ver_midia?id_ponto="<?php echo $_REQUEST["id_ponto"]; ?>"&id_midia="<?php echo $_REQUEST["id_midia"]; ?>);
 				<?php endif; ?>
 				KTApexChartsDemo.init();
 				geolocalizacao();
