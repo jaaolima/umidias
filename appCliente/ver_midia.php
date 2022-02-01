@@ -592,7 +592,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			//calculo material
 			var material = document.getElementById("id_material");
 			var Totalmaterial = document.getElementById("valor_material");
-			material.onblur = function(){
+			material.on("change", function(){
 				//adicionar na div material
 				let valorMaterial = $(this).find(':selected').attr('valor')
 				let valorTotalMaterial =  parseInt(valorMaterial, 10);
@@ -633,7 +633,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 
 				
-			}
+			});
 
 		})
 
