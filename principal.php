@@ -103,6 +103,18 @@
                                                 <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
                                                     <div class="card-body">
                                                         <div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+                                                            <h3 class="font-weight-bolder">Alugue com a Unimídias</h3><br>
+                                                            <h5 class="font-weight-bold">Todas as mídias de Brasília em um só lugar</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end::Tiles Widget 25-->
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <!--begin::Tiles Widget 25-->
+                                                <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
+                                                    <div class="card-body">
+                                                        <div class="d-flex py-5 flex-column align-items-start flex-grow-1">
                                                             <div class="flex-grow-1" style="display: inherit;">
                                                                 <h3  id="titulo_midias_proximas" class="titulo-div">Mídias próximas à Você</h3>
                                                             </div>
