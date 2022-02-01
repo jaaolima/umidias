@@ -75,7 +75,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
 		<script src="assets/js/appUsuario/perfil.js"></script>
-		
+
 		<script src="//www.amcharts.com/lib/3/amcharts.js"></script>
 		<script src="//www.amcharts.com/lib/3/serial.js"></script>
 		<script src="//www.amcharts.com/lib/3/radar.js"></script>
@@ -160,10 +160,9 @@ License: You must have a valid license purchased only from themeforest(the above
 						demo3();
 					}
 				};
-				}();
 
 				jQuery(document).ready(function() {
-				KTamChartsChartsDemo.init();
+					KTamChartsChartsDemo.init();
 				});
 			});
 			
