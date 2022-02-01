@@ -82,33 +82,6 @@ License: You must have a valid license purchased only from themeforest(the above
 
 			
 			jQuery(document).ready(function () {
-				google.charts.load('current', {'packages':['corechart']});
-				google.charts.setOnLoadCallback(drawChart);
-				function drawChart() {
-
-					var data = google.visualization.arrayToDataTable([
-						['Tipo', 'Total em R$']
-						<?php 
-							while($dados = $retorno->fetch()){
-								$retornoFinanca = $ponto->buscarFinancasPontoParceiro($id_parceiro, $dados['id_midia']);
-								$valorTotal = 0;
-								while($dadosRetorno = $retornoFinanca->fetch()){
-									$valorTotal += $dadosRetorno['nu_valor_alugado'];
-								}
-								echo ",['".$dados['ds_tipo']."', ".$valorTotal."]";
-							}	
-						?>
-					]);
-
-					var options = {
-						title: 'Quantidade recebida em R$'
-					};
-
-					var chart = new google.visualization.PieChart(document.getElementById('chart'));
-
-					chart.draw(data, options);
-				}
-
 				var demo3 = function() {
 					var chart = AmCharts.makeChart("chart", {
 						"theme": "light",
