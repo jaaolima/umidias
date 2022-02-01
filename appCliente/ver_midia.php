@@ -272,7 +272,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </div>
 													<?php if($_SESSION['id_usuario'] != 0) : ?>
                                                     <div class="my-6 mx-6">
-                                                        <button id="alugar" type="button"class="btn btn-primary w-100">Alugar Mídia</button>
+                                                        <button id="alugar" type="button"class="btn btn-primary w-100">Prosseguir</button>
                                                     </div>
 													<?php else : ?>
 													<div class="my-6 mx-6">
@@ -399,7 +399,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </div>
                                                     <?php if($_SESSION['id_usuario'] != 0) : ?>
                                                     <div class="my-6 mx-6">
-                                                        <button id="alugar" type="button"class="btn btn-primary w-100">Alugar Mídia</button>
+                                                        <button id="alugar" type="button"class="btn btn-primary w-100">Prosseguir</button>
                                                     </div>
 													<?php else : ?>
 													<div class="my-6 mx-6">
