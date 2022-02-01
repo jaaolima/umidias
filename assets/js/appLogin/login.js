@@ -1,7 +1,7 @@
 "use strict";
 
 // Class Definition
-var KTLogin = function() {
+var KTLogin = function() { 
     var _login;
 
     var _showForm = function(form) {

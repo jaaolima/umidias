@@ -22,6 +22,29 @@ $(document).ready(function() {
 		}
 	});	 
 
+	$("#entrar_ponto").on("click", function(e){
+		e.preventDefault();
+		if (validar())
+		{
+			var ds_usuario 	= $('#ds_usuario').val();
+			var ds_senha    = $('#ds_senha').val();
+			var id_ponto    = $('#id_ponto').val();
+			var id_midia    = $('#id_midia').val();
+			
+			$.ajax({
+				url: 'appUsuario/login.php'
+				, type:'post'
+				, data:{ ds_usuario : ds_usuario, ds_senha : ds_senha}
+				, success: function(xhr) {
+					$(location).attr('href', 'appCliente/ver_ponto.php?id_ponto'+id_ponto+"&id_midia"+id_midia);  
+				},
+				error: function(data){
+					swal.fire("Erro", data.responseText, "error");	
+				}
+			});
+		}
+	});	
+
 	$("#nu_cpf").inputmask({
 		"mask": "999.999.999-99",
 		autoUnmask: true,
