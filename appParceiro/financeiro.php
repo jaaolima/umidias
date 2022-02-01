@@ -134,9 +134,17 @@ License: You must have a valid license purchased only from themeforest(the above
 
 					var options = {
 						title: 'Aluguel de mídias',
-						focusTarget: 'categoria',
+						focusTarget: 'category',
+						hAxis: {
+							title: 'Time of Day',
+							format: 'h:mm a',
+							viewWindow: {
+								min: [7, 30, 0],
+								max: [17, 30, 0]
+							},
+						},
 						vAxis: {
-							title: 'Escala'
+							title: 'Rating (scale of 1-10)'
 						},
 						colors: ['#6e4ff5', '#fe3995']
 					};
