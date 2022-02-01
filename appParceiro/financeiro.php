@@ -74,9 +74,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Global Theme Bundle(used by all pages)-->
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
-		<script src="assets/js/scripts.bundle2.min.js"></script>
 		<script src="assets/js/appUsuario/perfil.js"></script>
-		<script src="assets/js/pages/features/charts/amcharts/charts.js"></script>
+
 		<script type="text/javascript">
 			
 
@@ -156,7 +155,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				}();
 
 				jQuery(document).ready(function() {
-					KTamChartsChartsDemo.init();
+				KTamChartsChartsDemo.init();
 				});
 			});
 			
