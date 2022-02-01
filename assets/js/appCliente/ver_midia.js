@@ -11,7 +11,7 @@ var DatatablesBasicBasic = function() {
 
 			//== DOM Layout settings
 			dom: `f<'row'<'col-sm-12'tr>> 
-			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'p>>`,
+			<'row'<'col-sm-12 col-md-5'><'col-sm-12 col-md-7 dataTables_pager'p>>`,
 
 			lengthMenu: [5, 10, 25, 50],
 
@@ -57,7 +57,7 @@ var DatatablesBasicBasic = function() {
 
 			//== DOM Layout settings
 			dom: `f<'row'<'col-sm-12'tr>> 
-			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'p>>`,
+			<'row'<'col-sm-12 col-md-5'><'col-sm-12 col-md-7 dataTables_pager'p>>`,
 
 			lengthMenu: [5, 10, 25, 50],
 
