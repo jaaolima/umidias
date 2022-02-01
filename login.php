@@ -6,6 +6,8 @@ if ( $_SESSION['autenticado'] ==='validado') {
 	exit(); 
 }
 
+$id_ponto = $_REQUEST["id_ponto"];
+$id_midia = $_REQUEST["id_midia"];
 ?>
 <!DOCTYPE html>
 <!--
@@ -60,8 +62,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="mx-8 mt-8">
 									<div>
 										<div class="mb-8"> 
-											<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
-											<span class="texto-chumbo">Insira seus dados abaixo para continuar</span> 
+											<?php if(isset($id_ponto)) : ?>
+												<h4 class="font-weight-bold texto-preto">Antes de Tudo...</h4>
+												<span class="texto-chumbo">Entre ou crie uma conta para alugar suas mídias!</span> 
+											<?php else:?>
+												<h4 class="font-weight-bold texto-preto">Bem-vindo de volta!</h4>
+												<span class="texto-chumbo">Insira seus dados abaixo para continuar</span >
+											<?php endif; ?>
 										</div>
 									</div>
 									<!--<div class="d-none" id="erro-login">
