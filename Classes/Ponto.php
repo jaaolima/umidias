@@ -536,6 +536,41 @@
 
 		
 		}
+		public function listarPontoQuentes($latitude, $longitude)  
+		{
+			$data = date('Y-m-d');
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, t.ds_tipo, count(a.id_alugado) as qtd
+							FROM tb_ponto p
+							inner join tb_tipo_midia t on p.id_midia=t.id_midia
+							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
+							left join rl_alugado a on p.id_ponto=a.id_ponto
+							where f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
+							and p.st_status = 'A'
+							order by qtd
+							LIMIT 5";
+				
+				$stmt = $con->prepare($select); 
+				$params = array(':hoje' => $data,
+								':latitude' => $latitude,
+								':longitude' => $longitude); 
+				$stmt->execute($params);
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+				print "ERRO:".$e->getMessage();		
+			}
+
+
+		
+		}
 		public function listarTodosPonto()
 		{
 			try{

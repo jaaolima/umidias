@@ -72,7 +72,7 @@
 			<div class="d-flex flex-row flex-column-fluid page">
 				
 				<!--begin::Wrapper-->
-				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper" style="margin-left: 265px; margin-top: 56px; transition:0.5s !important;">
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper" style=" margin-top: 56px; transition:0.5s !important;">
 					
 					<!--begin::Container-->
 					<div class="d-flex flex-row flex-column-fluid ">
@@ -94,9 +94,6 @@
 									</div>
 									<!--end::Header Menu-->
 								</div>
-								<div class="mb-8 ">
-									<h1 class="h1-titulo">Painel de Controle</h1>
-								</div>
 								<!--begin::Row-->
 								<div class="row">
 									<div class="col-xl-12">
@@ -107,7 +104,7 @@
                                                     <div class="card-body">
                                                         <div class="d-flex py-5 flex-column align-items-start flex-grow-1">
                                                             <div class="flex-grow-1" style="display: inherit;">
-                                                                <h3  class="titulo-div">Mídias próximas à Você</h3>
+                                                                <h3  id="titulo_midias_proximas" class="titulo-div">Mídias próximas à Você</h3>
                                                             </div>
                                                             <div class="row col-12 mt-4 " id="midias_proximas"></div>
                                                             <div class="row col-12 mt-4 justify-content-center text-center d-none" id="aceitar_localizacao">
@@ -230,8 +227,20 @@
 						});	
 					}, function(error){
 						if(error['code'] == 1){
-							$("#aceitar_localizacao").removeClass("d-none");
-							$("#aceitar_localizacao").addClass("d-block");
+                            $("#titulo_midias_proximas").innerHTML("Mídias interessantes para Você");
+							$.ajax({
+                                url: 'appCliente/listar_midias_quentes.php'
+                                , data: {latitude, longitude}
+                                , type: 'post'
+                                , success: function(html) {
+                                    $("#midias_proximas").html(html);
+                                    $("#midias_proximas").slideDown(); 
+                                    $("#aceitar_localizacao").addClass("d-none");
+                                }
+                                , error: function (data) {
+                                    swal.fire("Erro", data.responseText, "error"); 
+                                }
+                            });	
 						} 
 					}) 
 				}
