@@ -17,7 +17,7 @@
 	$ponto = new Ponto();
 	$parceiro = new Parceiro();
 	$cliente = new Cliente();
-    $_SESSION["id_usuario"] = 0;
+    $_SESSION["deslogado"] = 'sim';
 
     $retorno = $midia->listarTipoMidia($_POST);
 ?>

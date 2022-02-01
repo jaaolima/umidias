@@ -9,7 +9,10 @@
 
 	$id_ponto = $_REQUEST["id_ponto"]; 
 	$id_midia = $_REQUEST["id_midia"]; 
-	$id_usuario = $_SESSION['id_usuario'];
+	if(!isset($_SESSION["deslogado"])){
+		$id_usuario = $_SESSION['id_usuario'];
+	}
+	
 
 	$material = new material(); 
 	$bisemana = new Bisemana();
@@ -270,7 +273,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Total</h3>
                                                         <div id="valor_alugado"><h2>R$ 0,00</h2></div>
                                                     </div>
-													<?php if($_SESSION['id_usuario'] != 0) : ?>
+													<?php if(!isset($_SESSION['deslogado'])) : ?>
                                                     <div class="my-6 mx-6">
                                                         <button id="alugar" type="button"class="btn btn-primary w-100">Prosseguir</button>
                                                     </div>
@@ -397,7 +400,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Total</h3>
                                                         <div id="valor_alugado"><h2>R$ 0,00</h2></div>
                                                     </div>
-                                                    <?php if($_SESSION['id_usuario'] != 0) : ?>
+                                                    <?php if(!isset($_SESSION['deslogado'])) : ?>
                                                     <div class="my-6 mx-6">
                                                         <button id="alugar" type="button"class="btn btn-primary w-100">Prosseguir</button>
                                                     </div>
