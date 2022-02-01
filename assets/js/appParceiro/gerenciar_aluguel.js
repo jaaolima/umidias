@@ -6,13 +6,20 @@ var DatatablesBasicBasic = function() {
 		// begin first table
 		table.DataTable({
 			responsive: true,
-			retrieve: true,
+			retrieve: true, 
+			buttons: [
+				{
+					extend: 'pdfHtml5',
+					text: 'Exportar Relatório'
+				}
+				
+	        ], 
 			
 
 			//== DOM Layout settings
-			dom: `f<'row'<'col-sm-12'tr>>
+			dom: `Bf<'row'<'col-sm-12'tr>>
 			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
-
+			
 			lengthMenu: [5, 10, 25, 50],
 
 			pageLength: 5,
