@@ -592,7 +592,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			//calculo material
 			var material = document.getElementById("id_material");
 			var Totalmaterial = document.getElementById("valor_material");
-			material.on("change", function(){
+			material.on("click", function(){
 				//adicionar na div material
 				let valorMaterial = $(this).find(':selected').attr('valor')
 				let valorTotalMaterial =  parseInt(valorMaterial, 10);
