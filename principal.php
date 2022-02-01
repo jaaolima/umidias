@@ -102,9 +102,9 @@
                                                 <!--begin::Tiles Widget 25-->
                                                 <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
                                                     <div class="card-body">
-                                                        <div class="d-flex py-5 flex-column align-items-start flex-grow-1">
-                                                            <h3 class="font-weight-bolder">Alugue com a Unimídias</h3><br>
-                                                            <h5 class="font-weight-bold">Todas as mídias de Brasília em um só lugar</h1>
+                                                        <div class="justify_content-center text-center">
+                                                            <h1 class="font-weight-bolder m-0">Alugue com a Unimídias</h1><br>
+                                                            <h5 class="font-weight-bold">Todas as mídias de Brasília em um só lugar</h5>
                                                         </div>
                                                     </div>
                                                 </div>
