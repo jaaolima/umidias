@@ -245,6 +245,10 @@
 					}) 
 				}
 			}
+            jQuery(document).ready(function () {
+				geolocalizacao();
+
+			});
 
 		</script>
 		<!--end::Page Scripts-->

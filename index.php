@@ -125,7 +125,7 @@
 							<img src="<?php echo $dadosUsuario["ds_foto"]; ?>" class="symbol-label"alt="">
 						</span>		
 						<?php endif; ?>
-					<?php else: ?>
+					<?php else: ?> 
 						<a href="login.php" class="btn btn-primary">
 							Entrar
 						</a>

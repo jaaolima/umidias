@@ -536,9 +536,8 @@
 
 		
 		}
-		public function listarPontoQuentes($latitude, $longitude)  
+		public function listarPontoQuentes()  
 		{
-			$data = date('Y-m-d');
 			try{
 				$con = Conecta::criarConexao();
 				
@@ -553,10 +552,7 @@
 							LIMIT 5";
 				
 				$stmt = $con->prepare($select); 
-				$params = array(':hoje' => $data,
-								':latitude' => $latitude,
-								':longitude' => $longitude); 
-				$stmt->execute($params);
+				$stmt->execute();
 
 				return $stmt;
 				
