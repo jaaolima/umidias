@@ -759,7 +759,7 @@
 		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM&callback=initialize"></script>
 		<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script src="assets/js/pages/features/charts/amcharts/charts.js"></script>
+		
 		
 
 		<!-- <script src="assets/js/scripts.bundle2.min.js"></script> -->
