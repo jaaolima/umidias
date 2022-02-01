@@ -97,7 +97,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<button type="button" id="entrar_ponto" class="btn btn-primary disable font-weight-bold px-30 py-4 text-white" >ENTRAR</button>
 												</div>	
 												<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
-												<input type="hidden" name="id_midia" id="id_midia" alue="<?php echo $id_ponto; ?>">
+												<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
 											<?php else: ?>
 											<div class="form-group d-flex flex-wrap justify-content-center align-items-center">	
 												<button type="button" id="entrar" class="btn btn-primary disable font-weight-bold px-30 py-4 text-white" >ENTRAR</button>
