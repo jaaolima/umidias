@@ -18,6 +18,7 @@
 	$parceiro = new Parceiro();
 	$cliente = new Cliente();
 
+    $retorno = $midia->listarTipoMidia($_POST);
 ?>
 <!DOCTYPE html> 
 
