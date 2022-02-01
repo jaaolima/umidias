@@ -95,8 +95,7 @@
 				</a>
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
-					<?php if($id_usuario != 0) :  ?>
-						<?php if($_SESSION['id_perfil'] == 1) :   ?>
+					<?php if($_SESSION['id_perfil'] == 1) :   ?>
 						<a href="appCliente/carrinho.php" class="mr-4">
 							<i class="flaticon-shopping-basket icon-xl svg-shop"></i>
 						</a>
@@ -124,12 +123,7 @@
 						<span class="symbol symbol-lg-35 symbol-circle symbol-25 symbol-light-success">
 							<img src="<?php echo $dadosUsuario["ds_foto"]; ?>" class="symbol-label"alt="">
 						</span>		
-						<?php endif; ?>
-					<?php else: ?> 
-						<a href="login.php" class="btn btn-primary">
-							Entrar
-						</a>
-					<?php endif; ?>											
+					<?php endif; ?>										
 				</div>
 			</div>	
 		</header>	
