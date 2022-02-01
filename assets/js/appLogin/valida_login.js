@@ -36,7 +36,7 @@ $(document).ready(function() {
 				, type:'post'
 				, data:{ ds_usuario : ds_usuario, ds_senha : ds_senha}
 				, success: function(xhr) {
-					$(location).attr('href', 'appCliente/ver_ponto.php?id_ponto'+id_ponto+"&id_midia"+id_midia);  
+					$(location).attr('href', 'appCliente/ver_ponto.php?id_ponto='+id_ponto+"&id_midia="+id_midia);  
 				},
 				error: function(data){
 					swal.fire("Erro", data.responseText, "error");	
