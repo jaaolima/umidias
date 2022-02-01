@@ -19,7 +19,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
             </div>							
             <div class="timeline timeline-6 mt-3">
                 <!--begin::Item-->
-                <?php if($id_status == 1 || $id_status == 2 || $id_status == 3 || $id_status == 4 || $id_status == 5|| $id_status == 6|| $id_status == 7) : ?>
+                <?php if($id_status == 1 || $id_status == 2 || $id_status == 3 || $id_status == 4 || $id_status == 5 || $id_status == 6 || $id_status == 7) : ?>
                 <div class="timeline-item align-items-start">
                     <!--begin::Label-->
                     <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg">...</div>
@@ -41,7 +41,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
                 <!--end::Item-->
 
                 <!--begin::Item-->
-                <?php if($id_status == 2 || $id_status == 3 || $id_status == 4 || $id_status == 5|| $id_status == 6|| $id_status == 7) : ?>
+                <?php if($id_status == 2 || $id_status == 3 || $id_status == 4 || $id_status == 5 || $id_status == 6 || $id_status == 7) : ?>
                 <div class="timeline-item align-items-start">
                     <!--begin::Label-->
                     <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg">...</div>
@@ -66,7 +66,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
                 <!--end::Item-->
 
                 <!--begin::Item-->
-                <?php if($id_status == 3 || $id_status == 4 || $id_status == 5|| $id_status == 6|| $id_status == 7) : ?>
+                <?php if($id_status == 3 || $id_status == 4 || $id_status == 5 || $id_status == 6 || $id_status == 7) : ?>
                 <div class="timeline-item align-items-start">
                     <!--begin::Label-->
                     <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg">...</div>
@@ -88,7 +88,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
                 <!--end::Item-->
 
                 <!--begin::Item-->
-                <?php if($id_status == 4 || $id_status == 5|| $id_status == 6|| $id_status == 7) : ?>
+                <?php if($id_status == 4 || $id_status == 5 || $id_status == 6 || $id_status == 7) : ?>
                 <div class="timeline-item align-items-start">
                     <!--begin::Label-->
                     <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg">...</div>
@@ -108,7 +108,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
                 </div>
                 <?php endif; ?>
                 <!--begin::Item-->
-                <?php if( $id_status == 5|| $id_status == 6|| $id_status == 7) : ?>
+                <?php if( $id_status == 5 || $id_status == 6 || $id_status == 7) : ?>
                 <div class="timeline-item align-items-start">
                     <!--begin::Label-->
                     <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg">...</div>
@@ -122,7 +122,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material chegou! Avise quando sair pra colagem.</span>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material chegou! Avise quando sair para colagem.</span>
                         <?php if($id_status == 5) : ?>
                             <button class="btn-sm ml-2 btn btn-primary">Saiu!</button>
                         <?php endif; ?>
@@ -130,7 +130,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
                     <!--end::Content-->
                 </div>
                 <?php endif; ?>
-                <?php if( $id_status == 6|| $id_status == 7) : ?>
+                <?php if( $id_status == 6 || $id_status == 7) : ?>
                 <div class="timeline-item align-items-start">
                     <!--begin::Label-->
                     <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg">...</div>
