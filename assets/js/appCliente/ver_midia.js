@@ -25,7 +25,6 @@ var DatatablesBasicBasic = function() {
 			    "sLengthMenu": "<span>Mostrar:</span> _MENU_",
 			    "sInfo": "<span>Mostrando </span>_START_ até _END_ de _TOTAL_",
 			    "sZeroRecords": "Não existem dados cadastrados",
-			    "sInfoEmpty": "<span>Mostrando </span>0 até 0 de 0",
 			    "oPaginate": { "sFirst": "Primeira", "sLast": "Última", "sNext": ">", "sPrevious": "<" }
 		    },
 
@@ -73,7 +72,6 @@ var DatatablesBasicBasic = function() {
 			    "sLengthMenu": "<span>Mostrar:</span> _MENU_",
 			    "sInfo": "<span>Mostrando </span>_START_ até _END_ de _TOTAL_",
 			    "sZeroRecords": "Não existem dados cadastrados",
-			    "sInfoEmpty": "<span>Mostrando </span>0 até 0 de 0",
 			    "oPaginate": { "sFirst": "Primeira", "sLast": "Última", "sNext": ">", "sPrevious": "<" }
 		    },
 
