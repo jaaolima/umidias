@@ -56,7 +56,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--begin::Wrapper-->
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 						
-					<div class="d-flex flex-row flex-column-fluid ">
+					<div class="d-flex flex-row flex-column-fluid "> 
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
                             <div class="row">

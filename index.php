@@ -22,8 +22,8 @@
 	// }
 
 	if(!isset($_SESSION['id_usuario'])){
-		$_SESSION["id_usuario"] = 0;
-		$_SESSION["id_perfil"] = 1;
+		header("location: principal.php");
+		exit();
 	}
 	$id_usuario = $_SESSION["id_usuario"];
 
