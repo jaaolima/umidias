@@ -189,7 +189,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Datas Diponíveis</h3>
                                                     </div>
                                                     <div class=" my-6 mx-6">
-                                                        <table  class="table table-hover" id="table_bisemana">
+                                                        <table  class="table table-hover w-100" id="table_bisemana">
                                                             <thead>
                                                                 <tr>
                                                                     <th>ID bisemanas</th>
@@ -316,7 +316,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Datas Diponíveis</h3>
                                                     </div>
                                                     <div class="d-flex my-6 mx-6" >
-														<table  class="table table-hover" id="table_mes">
+														<table  class="table table-hover w-100" id="table_mes">
                                                             <thead>
                                                                 <tr>
                                                                     <th>ID mes</th>
