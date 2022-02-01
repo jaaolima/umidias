@@ -227,10 +227,9 @@
 						});	
 					}, function(error){
 						if(error['code'] == 1){
-                            $("#titulo_midias_proximas").innerHTML("Mídias interessantes para Você");
+                            $("#titulo_midias_proximas").html("Mídias interessantes para Você");
 							$.ajax({
                                 url: 'appCliente/listar_midias_quentes.php'
-                                , data: {latitude, longitude}
                                 , type: 'post'
                                 , success: function(html) {
                                     $("#midias_proximas").html(html);
