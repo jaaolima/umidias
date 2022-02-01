@@ -81,9 +81,11 @@ License: You must have a valid license purchased only from themeforest(the above
 			
 
 			
-			jQuery(document).ready(function () {
+			var KTamChartsChartsDemo = function() {
+
+
 				var demo3 = function() {
-					var chart = AmCharts.makeChart("chart", {
+					var chart = AmCharts.makeChart("kt_amcharts_3", {
 						"theme": "light",
 						"type": "serial",
 						"dataProvider": [{
@@ -145,13 +147,17 @@ License: You must have a valid license purchased only from themeforest(the above
 
 					});
 				}
-
 				return {
 					// public functions
 					init: function() {
 						demo3();
 					}
 				};
+				}();
+
+				jQuery(document).ready(function() {
+					KTamChartsChartsDemo.init();
+				});
 			});
 			
 			
