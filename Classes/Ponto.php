@@ -512,7 +512,6 @@
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
 							where f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
 							and p.st_status = 'A'
-							and p.id_ponto not in (select id_ponto from rl_alugado where :hoje between dt_inicial and dt_final)
 							HAVING distancia < 25
 							ORDER BY distancia ASC
 							LIMIT 5";
@@ -541,7 +540,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, t.ds_tipo, count(a.id_alugado) as qtd
+				$select = "SELECT p.id_ponto, ds_descricao, nu_valor, p.id_midia, p.st_status, ds_observacao, ds_bairro, f.ds_foto, t.ds_tipo, t.ds_tipo, count(a.id_alugado) as qtd
 							FROM tb_ponto p
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
 							right join rl_ponto_foto f on p.id_ponto=f.id_ponto
