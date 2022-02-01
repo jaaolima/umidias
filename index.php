@@ -21,7 +21,7 @@
 	// 	exit();
 	// }
 
-	if(!isset($_SESSION['id_usuario']) || $_SESSION["id_usuario"] = 0){
+	if(!isset($_SESSION['id_usuario'])){
 		header("location: principal.php");
 		exit();
 	}
