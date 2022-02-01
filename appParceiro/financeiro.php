@@ -76,8 +76,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/js/scripts.bundle.js"></script>
 		<script src="assets/js/scripts.bundle2.min.js"></script>
 		<script src="assets/js/appUsuario/perfil.js"></script>
-		<script type="text/javascript">
 		<script src="//www.google.com/jsapi"></script>
+		<script type="text/javascript">
 			
 
 			
@@ -134,7 +134,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					]);
 
 					var options = {
-						title: 'Aluguel de mídias',
+						title: 'Aluguel de',
 						focusTarget: 'category',
 						hAxis: {
 							title: 'Time of Day',
