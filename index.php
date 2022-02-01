@@ -20,7 +20,7 @@
 	// 	header("location: login.php");
 	// 	exit();
 	// }
-	if(!isset($_REQUEST['id_ponto'])){
+	if(isset($_REQUEST['id_ponto'])){
 		header("location: appCliente/ver_midia.php?id_ponto=".$_REQUEST["id_ponto"]."&id_midia=".$_REQUEST["id_midia"]);
 	}
 	if(!isset($_SESSION['id_usuario'])){
