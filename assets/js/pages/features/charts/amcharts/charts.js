@@ -169,7 +169,7 @@ var KTamChartsChartsDemo = function() {
             }
         });
     }
-
+ 
     var demo3 = function() {
         var chart = AmCharts.makeChart("kt_amcharts_3", {
             "theme": "light",
