@@ -24,7 +24,7 @@
 
 // $dompdf = new Dompdf($options); 
 
-phpinfo();
+get_loaded_extensions();
 
 // $pagina = '
 // <!DOCTYPE html>
