@@ -86,7 +86,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					var data = google.visualization.arrayToDataTable([
 						['', 'Outdoor', 'Front-light'],
 						['Mês passado', 1000, 400],
-						['Esse mês', <?php echo $dadosMes[0]; ?>, <?php echo $dadosMes[1]; ?>
+						['Esse mês', <?php echo $dadosMes[0]; ?>, <?php echo $dadosMes[1]; ?>]
 					]);
 
 					var options = {
