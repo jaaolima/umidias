@@ -82,6 +82,7 @@ $retornoMidias = $ponto->listarPontoProximos($_REQUEST['latitude'], $_REQUEST['l
         $(window).on( 'load', function() {
             $('#loading').hide();
             $('#carrossel').show();
+            console.log("foi");
         });
 
         //carousel
