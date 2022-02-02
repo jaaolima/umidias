@@ -230,9 +230,9 @@
 							, data: {latitude, longitude}
 							, type: 'post'
 							, success: function(html) {
-								$("#midias_proximas").html(html);
-								$("#midias_proximas").slideDown(); 
-								$("#aceitar_localizacao").addClass("d-none");
+								// $("#midias_proximas").html(html);
+								// $("#midias_proximas").slideDown(); 
+								// $("#aceitar_localizacao").addClass("d-none");
 							}
 							, error: function (data) {
 								swal.fire("Erro", data.responseText, "error"); 
