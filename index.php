@@ -91,7 +91,7 @@
 			<div class="navbar py-3 border-bottom">
 				<!--begin::Logo-->
 				<a href="index.php" class="brand-logo ml-8">
-					<img alt="Logo" src="assets/media/Uni_midia_logo.png" class="logo-default max-h-35px"  />
+					<img alt="Logo" src="assets/media/Uni_midia_logo.png" class="logo-default max-h-35px"  /> 
 				</a>
 				<!--end::Logo-->
 				<div class=" w-auto btn-clean d-flex align-items-center px-2" id="kt_quick_user_toggle">
@@ -495,7 +495,11 @@
 																<div class="flex-grow-1" style="display: inherit;">
 																	<h3 id="titulo_midias_proximas" class="titulo-div">Mídias próximas à Você</h3>
 																</div>
-																<div class="row col-12 mt-4 " id="midias_proximas"></div>
+																<div class="row col-12 mt-4 " id="midias_proximas">
+																	<div class="row col-12 my-4 text-center justify-content-center">
+																		<div class="spinner spinner-primary spinner-lg"></div>
+																	</div>
+																</div>
 																<div class="row col-12 mt-4 justify-content-center text-center d-none" id="aceitar_localizacao">
 																	<h3>Precisamos da sua localização para procurar as mídias próximas à você!</h3><br>	
 																	<!-- <button class="btn btn-primary" type="button" id="button_aceitar_localizacao">Aceitar</button> -->
