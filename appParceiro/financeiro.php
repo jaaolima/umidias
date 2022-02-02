@@ -73,10 +73,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Global Config-->
 		<!--begin::Global Theme Bundle(used by all pages)-->
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-		<script src="assets/js/scripts.bundle.js"></script>
-		<script src="assets/js/scripts.bundle2.min.js"></script>
-		<script src="assets/js/appUsuario/perfil.js"></script>
-		<script src="//www.google.com/jsapi"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript">
 			
 
