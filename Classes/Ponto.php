@@ -1632,7 +1632,7 @@
 				}	
 			}
 
-			return(outdoor($id_parceiro), Front($id_parceiro));
+			return array(outdoor($id_parceiro), Front($id_parceiro));
 			
 		}
 
