@@ -62,6 +62,9 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="row">
                                 <div class="col-8">
                                     <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
+										<div>
+											<button class="btn btn-primary" id="exportar">Exportar relatório</button>
+										</div>
                                         <div class="card-body">											
                                             <table class="table table-hover" id="table_ponto">
                                                 <thead>
