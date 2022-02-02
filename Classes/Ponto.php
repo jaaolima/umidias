@@ -1638,7 +1638,7 @@
 
 		function buscarDadosMesPassado($id_parceiro) 
 		{
-			function outdoor($id_parceiro){
+			function outdoorPassado($id_parceiro){
 				try{
 					$con = Conecta::criarConexao(); 
 					
@@ -1668,7 +1668,7 @@
 				}	
 			}
 
-			function Front($id_parceiro){
+			function FrontPassado($id_parceiro){
 				try{
 					$con = Conecta::criarConexao(); 
 					
@@ -1698,7 +1698,7 @@
 				}	
 			}
 
-			return array(outdoor($id_parceiro), Front($id_parceiro));
+			return array(outdoorPassado($id_parceiro), FrontPassado($id_parceiro));
 			
 		}
 
