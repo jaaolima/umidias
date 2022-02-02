@@ -1572,7 +1572,7 @@
 
 		function buscarDadosDesseMes($id_parceiro) 
 		{
-			function outdoor(){
+			function outdoor($id_parceiro){
 				try{
 					$con = Conecta::criarConexao(); 
 					
@@ -1602,7 +1602,7 @@
 				}	
 			}
 
-			function Front(){
+			function Front($id_parceiro){
 				try{
 					$con = Conecta::criarConexao(); 
 					
