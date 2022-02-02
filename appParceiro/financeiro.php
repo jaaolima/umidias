@@ -16,6 +16,7 @@
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 	$retorno = $midia->listarTipoMidia($_POST);
 	$dadosMes = $ponto->buscarDadosDesseMes($id_parceiro);
+	$dadosMesPassado = $ponto->buscarDadosMesPassado($id_parceiro);
 
 ?>
 <!--
@@ -85,8 +86,8 @@ License: You must have a valid license purchased only from themeforest(the above
 				function drawMaterial() {
 					var data = google.visualization.arrayToDataTable([
 						['', 'Outdoor', 'Front-light'],
-						['Mês passado', 1000, 400],
-						['Esse mês', <?php echo $dadosMes[0]; ?>, <?php echo $dadosMes[1]; ?>]
+						['Mês passado', <?php echo $dadosMesPassado[0]; ?>, <?php echo $dadosMesPassado[1]; ?>],
+						['Esse mês',<?php echo $dadosMes[0]; ?>, <?php echo $dadosMes[1]; ?>]
 					]);
 
 					var options = {

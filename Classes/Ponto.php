@@ -1583,7 +1583,7 @@
 							right join tb_ponto p on a.id_ponto = p.id_ponto
 							WHERE p.id_parceiro = :id_parceiro 
 							and month(dt_inicial) = month(now())
-							and a.st_status = 7
+							and a.id_status_midia = 7
 							and p.id_midia = 1";
 	
 					$stmt = $con->prepare($select);
@@ -1613,7 +1613,73 @@
 							right join tb_ponto p on a.id_ponto = p.id_ponto
 							WHERE p.id_parceiro = :id_parceiro 
 							and month(dt_inicial) = month(now())
-							and a.st_status = 7
+							and a.id_status_midia = 7
+							and p.id_midia = 2";
+	
+					$stmt = $con->prepare($select);
+					   $params = array(':id_parceiro' => $id_parceiro);
+				   
+					$stmt->execute($params);
+					$dados = $stmt->fetch();
+					return $dados["qtd"];
+	
+					
+				}	
+				catch(Exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();	
+				}	
+			}
+
+			return array(outdoor($id_parceiro), Front($id_parceiro));
+			
+		}
+
+		function buscarDadosMesPassado($id_parceiro) 
+		{
+			function outdoor($id_parceiro){
+				try{
+					$con = Conecta::criarConexao(); 
+					
+					
+					$select = "SELECT 
+								count(id_alugado) as qtd
+							FROM rl_alugado a
+							right join tb_ponto p on a.id_ponto = p.id_ponto
+							WHERE p.id_parceiro = :id_parceiro 
+							and month(dt_inicial) = MONTH(NOW())-1;
+							and a.id_status_midia = 7
+							and p.id_midia = 2";
+	
+					$stmt = $con->prepare($select);
+					   $params = array(':id_parceiro' => $id_parceiro);
+				   
+					$stmt->execute($params);
+					$dados = $stmt->fetch();
+					return $dados["qtd"];
+	
+					
+				}	
+				catch(Exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();	
+				}	
+			}
+
+			function Front($id_parceiro){
+				try{
+					$con = Conecta::criarConexao(); 
+					
+					
+					$select = "SELECT 
+								count(id_alugado) as qtd
+							FROM rl_alugado a
+							right join tb_ponto p on a.id_ponto = p.id_ponto
+							WHERE p.id_parceiro = :id_parceiro 
+							and month(dt_inicial) = MONTH(NOW())-1;
+							and a.id_status_midia = 7
 							and p.id_midia = 2";
 	
 					$stmt = $con->prepare($select);
