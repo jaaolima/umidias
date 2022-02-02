@@ -9,7 +9,10 @@ $ponto = new Ponto();
 
 $retornoMidias = $ponto->listarPontoQuentes();
 ?>
-<div class="owl-carousel owl-theme" >
+<div id="loading" class="justify-content-center text-center" style="margin:20px;">
+    <div class="spinner spinner-primary spinner-lg"></div>
+</div>
+<div class="owl-carousel owl-theme" id="carrossel" style="display:none;">
 <?php
 while($dados = $retornoMidias->fetch()){
 echo "<div class='item' >
@@ -72,6 +75,10 @@ echo "<div class='item' >
 ?>
 </div>
 <script>
+    $(window).load(function() {
+        $('#loading').hide();
+        $("#carrossel").show();
+    });
     $(document).ready(function(){
         //carousel
         $(".owl-carousel").owlCarousel({
