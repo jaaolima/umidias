@@ -770,7 +770,7 @@
 							, data: {latitude, longitude}
 							, type: 'post'
 							, success: function(html) {
-								$("#midias_proximas").html(html);
+								$("#midias_proximas").html(html); 
 								$("#midias_proximas").slideDown(); 
 								$("#aceitar_localizacao").addClass("d-none");
 							}
