@@ -1648,7 +1648,7 @@
 							FROM rl_alugado a
 							right join tb_ponto p on a.id_ponto = p.id_ponto
 							WHERE p.id_parceiro = :id_parceiro 
-							and month(dt_inicial) = MONTH(NOW())-1;
+							and month(dt_inicial) = MONTH(NOW())-1
 							and a.id_status_midia = 7
 							and p.id_midia = 2";
 	
@@ -1678,7 +1678,7 @@
 							FROM rl_alugado a
 							right join tb_ponto p on a.id_ponto = p.id_ponto
 							WHERE p.id_parceiro = :id_parceiro 
-							and month(dt_inicial) = MONTH(NOW())-1;
+							and month(dt_inicial) = MONTH(NOW())-1
 							and a.id_status_midia = 7
 							and p.id_midia = 2";
 	
