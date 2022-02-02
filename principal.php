@@ -120,8 +120,8 @@
                                                                 <h3  id="titulo_midias_proximas" class="titulo-div">Mídias próximas à Você</h3>
                                                             </div>
                                                             <div class="row col-12 mt-4 " id="midias_proximas">
-                                                                <div class="row col-12 my-4 text-center">
-                                                                    <div class="spinner spinner-primary"></div>
+                                                                <div class="row col-12 my-4 text-center justify-content-center">
+                                                                    <div class="spinner spinner-primary spinner-lg"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -230,9 +230,9 @@
 							, data: {latitude, longitude}
 							, type: 'post'
 							, success: function(html) {
-								// $("#midias_proximas").html(html);
-								// $("#midias_proximas").slideDown(); 
-								// $("#aceitar_localizacao").addClass("d-none");
+								$("#midias_proximas").html(html);
+								$("#midias_proximas").slideDown(); 
+								$("#aceitar_localizacao").addClass("d-none");
 							}
 							, error: function (data) {
 								swal.fire("Erro", data.responseText, "error"); 
