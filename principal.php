@@ -119,7 +119,11 @@
                                                             <div class="flex-grow-1" style="display: inherit;">
                                                                 <h3  id="titulo_midias_proximas" class="titulo-div">Mídias próximas à Você</h3>
                                                             </div>
-                                                            <div class="row col-12 mt-4 " id="midias_proximas"><div class="spinner spinner-primary mr-15"></div></div>
+                                                            <div class="row col-12 mt-4 " id="midias_proximas">
+                                                                <div class="m-5 justify-content-center text-center">
+                                                                    <div class="spinner spinner-primary mr-15"></div>
+                                                                </div>
+                                                            </div>
                                                             <div class="row col-12 mt-4 justify-content-center text-center d-none" id="aceitar_localizacao">
                                                                 <h3>Precisamos da sua localização para procurar as mídias próximas à você!</h3><br>	
                                                                 <!-- <button class="btn btn-primary" type="button" id="button_aceitar_localizacao">Aceitar</button> -->
