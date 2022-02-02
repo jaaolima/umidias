@@ -119,7 +119,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Saiu pra colagem! <?php if($id_status == 6) : ?>Avise quando estiver veiculada.<?php endif; ?></span>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Saiu para colagem! <?php if($id_status == 6) : ?>Avise quando estiver veiculada.<?php endif; ?></span>
                         <?php if($id_status == 6) : ?>
                             <button class="btn-sm ml-2 btn btn-primary">Mídia veiculada!</button>
                         <?php endif; ?>
