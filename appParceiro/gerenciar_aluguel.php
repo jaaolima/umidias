@@ -62,7 +62,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="row">
                                 <div class="col-8">
                                     <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white"  >
-										<div class="card-head">
+										<div class="card-header p-4">
 											<button class="btn btn-primary" id="exportar">Exportar relatório</button>
 										</div>
                                         <div class="card-body">											
