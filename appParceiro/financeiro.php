@@ -82,8 +82,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
 			
 			jQuery(document).ready(function () {
-				google.charts.load('current', {'packages':['corechart']});
-				google.charts.setOnLoadCallback(drawChart);
+				google.charts.load('current', {packages: ['corechart', 'bar']});
+				google.charts.setOnLoadCallback(drawMaterial);
 				function drawMaterial() {
 					var data = new google.visualization.DataTable();
 					data.addColumn('timeofday', 'Time of Day');
