@@ -10,10 +10,8 @@ var DatatablesBasicBasic = function() {
 			
 
 			//== DOM Layout settings
-			dom: `f<'row'<'col-sm-12'tr>>
-			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
-
-			lengthMenu: [5, 10, 25, 50],
+			dom: `f<'row'<'col-sm-12'tr>> 
+			<'row'<'col-sm-12 col-md-5'><'col-sm-12 col-md-7 dataTables_pager'p>>`,
 
 			pageLength: 10,
 
@@ -23,9 +21,7 @@ var DatatablesBasicBasic = function() {
 			"oLanguage": {
 			    "sSearch": "<span>Pesquisar:</span> _INPUT_",
 			    "sLengthMenu": "<span>Mostrar:</span> _MENU_",
-			    "sInfo": "<span>Mostrando </span>_START_ até _END_ de _TOTAL_",
 			    "sZeroRecords": "Não existem dados cadastrados",
-			    "sInfoEmpty": "<span>Mostrando </span>0 até 0 de 0",
 			    "oPaginate": { "sFirst": "Primeira", "sLast": "Última", "sNext": ">", "sPrevious": "<" }
 		    },
 
