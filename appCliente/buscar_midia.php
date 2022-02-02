@@ -238,7 +238,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							"<img class='img-fluid w-100 rounded-top' src='<?php echo $dados["ds_foto"]; ?>' style='height:60px;' alt='image'/>"+
 						"</div>"+
 						"<div class='text-left'>"+
-							"<div class='d-flex ml-n8'>"+
+							"<div class='d-flex ml-n8 mt-2'>"+
 								"<div class='mt-1'>"+
 									"<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>"+
 										"<path d='M19.7273 10.3636C19.7273 16.0909 12.3636 21 12.3636 21C12.3636 21 5 16.0909 5 10.3636C5 8.41068 5.77581 6.53771 7.15676 5.15676C8.53771 3.77581 10.4107 3 12.3636 3C14.3166 3 16.1896 3.77581 17.5705 5.15676C18.9515 6.53771 19.7273 8.41068 19.7273 10.3636Z' stroke='#57616A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>"+
@@ -249,7 +249,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									"<a href='appCliente/ver_midia.php?id_ponto=<?php echo $dados['id_ponto'];?>&id_midia=<?php echo $id_midia;?>' class='m-0 text-dark font-weight-bold text-dark font-size-h4'><?php echo $dados['ds_bairro'];?></a>"+
 								"</div>"+
 							"</div>"+
-							"<div class='my-6' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 2;overflow: hidden;'>"+
+							"<div class='mb-6' style='text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 2;overflow: hidden;'>"+
 								"<p class='texto-chumbo font-size-h6 m-0'><?php echo $dados['ds_descricao'];?></p>"+
 							"</div>"+
 						"</div>"+
