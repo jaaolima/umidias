@@ -9,7 +9,7 @@ $ponto = new Ponto();
 
 $retornoMidias = $ponto->listarPontoProximos($_REQUEST['latitude'], $_REQUEST['longitude']);
 ?>
-<div id="loading">
+<div id="loading" class="justify-content-center text-center" style="margin:20px;">
     <div class="spinner spinner-primary spinner-lg"></div>
 </div>
 <div class="owl-carousel owl-theme" id="carrossel" style="display:none;">
