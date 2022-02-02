@@ -1,28 +1,28 @@
 <?php 
 
-ini_set('display_errors',1);
-ini_set('display_startup_erros',1);
-error_reporting(E_ALL);
-session_start();
+// ini_set('display_errors',1);
+// ini_set('display_startup_erros',1);
+// error_reporting(E_ALL);
+// session_start();
 
-require_once("../Classes/Ponto.php");
-require_once '../assets/plugins/dompdf/autoload.inc.php';
+// require_once("../Classes/Ponto.php");
+// require_once '../assets/plugins/dompdf/autoload.inc.php';
 
-$id_parceiro = $_SESSION['id_parceiro'];
+// $id_parceiro = $_SESSION['id_parceiro'];
 
-$ponto = new Ponto();
+// $ponto = new Ponto();
 
-$dadosAlugado = $ponto->BuscarAlugado($id_parceiro); 
+// $dadosAlugado = $ponto->BuscarAlugado($id_parceiro); 
 
-use Dompdf\Dompdf;
+// use Dompdf\Dompdf;
 
-use Dompdf\Options;
+// use Dompdf\Options;
 
-$options = new Options();
-$options->setChroot(__DIR__);
-$options->setIsRemoteEnabled(true);
+// $options = new Options();
+// $options->setChroot(__DIR__);
+// $options->setIsRemoteEnabled(true);
 
-$dompdf = new Dompdf($options); 
+// $dompdf = new Dompdf($options); 
 
 phpinfo();
 
