@@ -83,9 +83,9 @@ License: You must have a valid license purchased only from themeforest(the above
 				google.charts.setOnLoadCallback(drawMaterial);
 				function drawMaterial() {
 					var data = google.visualization.arrayToDataTable([
-						['', 'Esse mês', 'Mês passado'],
-						['Esse mês', 1000, 400],
-						['Mês passado', 1170, 460]
+						['', 'Mês passado', 'Esse mês'],
+						['Mês passado', 1000, 400],
+						['Esse mês', 1170, 460]
 					]);
 
 					var options = {
