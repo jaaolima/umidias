@@ -1570,6 +1570,72 @@
 			}	
 		}
 
+		function buscarDadosDesseMes($id_parceiro) 
+		{
+			function outdoor(){
+				try{
+					$con = Conecta::criarConexao(); 
+					
+					
+					$select = "SELECT 
+								count(id_alugado) as qtd
+							FROM rl_alugado a
+							right join tb_ponto p on a.id_ponto = p.id_ponto
+							WHERE p.id_parceiro = :id_parceiro 
+							and month(dt_inicial) = month(now())
+							and a.st_status = 7
+							and p.id_midia = 1";
+	
+					$stmt = $con->prepare($select);
+					   $params = array(':id_parceiro' => $id_parceiro);
+				   
+					$stmt->execute($params);
+	
+					return $stmt;
+	
+					
+				}	
+				catch(Exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();	
+				}	
+			}
+
+			function Front(){
+				try{
+					$con = Conecta::criarConexao(); 
+					
+					
+					$select = "SELECT 
+								count(id_alugado) as qtd
+							FROM rl_alugado a
+							right join tb_ponto p on a.id_ponto = p.id_ponto
+							WHERE p.id_parceiro = :id_parceiro 
+							and month(dt_inicial) = month(now())
+							and a.st_status = 7
+							and p.id_midia = 2";
+	
+					$stmt = $con->prepare($select);
+					   $params = array(':id_parceiro' => $id_parceiro);
+				   
+					$stmt->execute($params);
+	
+					return $stmt;
+	
+					
+				}	
+				catch(Exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();	
+				}	
+			}
+
+			return(outdoor($id_parceiro), Front($id_parceiro));
+			
+		}
+
 		function BuscarDadosAlugado($id_alugado)
 		{
 			try{

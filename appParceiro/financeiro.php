@@ -15,6 +15,7 @@
 
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
 	$retorno = $midia->listarTipoMidia($_POST);
+	$dadosMes = $ponto->buscarDadosDesseMes($id_parceiro);
 
 ?>
 <!--
@@ -83,9 +84,9 @@ License: You must have a valid license purchased only from themeforest(the above
 				google.charts.setOnLoadCallback(drawMaterial);
 				function drawMaterial() {
 					var data = google.visualization.arrayToDataTable([
-						['', 'Mês passado', 'Esse mês'],
+						['', 'Outdoor', 'Front-light'],
 						['Mês passado', 1000, 400],
-						['Esse mês', 1170, 460]
+						['Esse mês', $dadosMes[0], $dadosMes[1]]
 					]);
 
 					var options = {
