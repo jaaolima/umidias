@@ -9,10 +9,7 @@ $ponto = new Ponto();
 
 $retornoMidias = $ponto->listarPontoProximos($_REQUEST['latitude'], $_REQUEST['longitude']);
 ?>
-<div id="loading" class="justify-content-center text-center" style="margin:20px;">
-    <div class="spinner spinner-primary spinner-lg"></div>
-</div>
-<div class="owl-carousel owl-theme" id="carrossel">
+<div class="owl-carousel owl-theme">
 <?php
 while($dados = $retornoMidias->fetch()){ 
 echo "<div class='item' >
@@ -75,10 +72,6 @@ echo "<div class='item' >
 ?>
 </div>
 <script>
-    $(window).load(function() {
-        $('#loading').hide();
-        $("#carrossel").show();
-    });
     $(document).ready(function(){
         //carousel
         $(".owl-carousel").owlCarousel({
