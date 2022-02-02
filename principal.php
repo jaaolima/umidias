@@ -120,7 +120,7 @@
                                                                 <h3  id="titulo_midias_proximas" class="titulo-div">Mídias próximas à Você</h3>
                                                             </div>
                                                             <div class="row col-12 mt-4 " id="midias_proximas">
-                                                                <div class="m-5 justify-content-center text-center">
+                                                                <div class="w-100 my-4 text-center">
                                                                     <div class="spinner spinner-primary mr-15"></div>
                                                                 </div>
                                                             </div>
