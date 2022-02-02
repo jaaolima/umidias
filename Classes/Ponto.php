@@ -1590,8 +1590,8 @@
 					   $params = array(':id_parceiro' => $id_parceiro);
 				   
 					$stmt->execute($params);
-	
-					return $stmt;
+					$dados = $stmt->fetch();
+					return $dados["qtd"];
 	
 					
 				}	
@@ -1620,8 +1620,8 @@
 					   $params = array(':id_parceiro' => $id_parceiro);
 				   
 					$stmt->execute($params);
-	
-					return $stmt;
+					$dados = $stmt->fetch();
+					return $dados["qtd"];
 	
 					
 				}	
