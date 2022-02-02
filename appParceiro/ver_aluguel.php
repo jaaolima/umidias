@@ -33,32 +33,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Aguardando Pagamento</span>
-                    </div>
-                    <!--end::Content-->
-                </div>
-                <?php endif; ?>
-                <!--end::Item-->
-
-                <!--begin::Item-->
-                <?php if($id_status == 2 || $id_status == 3 || $id_status == 4 || $id_status == 5 || $id_status == 6 || $id_status == 7) : ?>
-                <div class="timeline-item align-items-start">
-                    <!--begin::Label-->
-                    <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg">...</div>
-                    <!--end::Label-->
-
-                    <!--begin::Badge-->
-                    <div class="timeline-badge">
-                        <i class="fa fa-genderless text-warning icon-xl"></i>
-                    </div>
-                    <!--end::Badge-->
-
-                    <!--begin::Content-->
-                    <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Confirme essa locação!</span>
-                        <?php if($id_status == 2) : ?>
-                            <button class="btn-sm ml-2 btn btn-primary">Confirmar</button>
-                        <?php endif; ?>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Aguardando Pagamento!</span>
                     </div>
                     <!--end::Content-->
                 </div>
@@ -80,7 +55,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material enviado para gráfica</span>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material sendo preparada pela gráfica!</span>
                     </div>
                     <!--end::Content-->
                 </div>
@@ -166,7 +141,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Mídia veiculada</span>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Mídia veiculada!</span>
                     </div>
                     <!--end::Content-->
                 </div>
