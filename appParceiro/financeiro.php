@@ -115,7 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						}
 					};
 
-					var materialChart = new google.charts.Bar(document.getElementById('charts'));
+					var materialChart = new google.charts.Bar(document.getElementById('chart'));
 					materialChart.draw(data, options);
 				}
 			});
