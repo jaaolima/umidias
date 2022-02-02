@@ -122,7 +122,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material chegou! Avise quando sair para colagem.</span>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Material chegou! <?php if($id_status == 5) : ?>Avise quando sair para colagem.<?php endif; ?></span>
                         <?php if($id_status == 5) : ?>
                             <button class="btn-sm ml-2 btn btn-primary">Saiu!</button>
                         <?php endif; ?>
@@ -144,7 +144,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
 
                     <!--begin::Content-->
                     <div class="timeline-content d-flex">
-                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Saiu pra colagem! Avise quando estiver veiculada.</span>
+                        <span class="font-weight-bolder text-dark-75 pl-3 font-size-lg">Saiu pra colagem! <?php if($id_status == 6) : ?>Avise quando estiver veiculada.<?php endif; ?></span>
                         <?php if($id_status == 6) : ?>
                             <button class="btn-sm ml-2 btn btn-primary">Mídia veiculada!</button>
                         <?php endif; ?>
