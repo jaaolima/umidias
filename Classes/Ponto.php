@@ -1614,7 +1614,7 @@
 							WHERE p.id_parceiro = :id_parceiro 
 							and month(dt_inicial) = month(now())
 							and a.id_status_midia = 7
-							and p.id_midia = 1";
+							and p.id_midia = 2";
 	
 					$stmt = $con->prepare($select);
 					   $params = array(':id_parceiro' => $id_parceiro);
@@ -1650,7 +1650,7 @@
 							WHERE p.id_parceiro = :id_parceiro 
 							and month(dt_inicial) = MONTH(NOW())-1
 							and a.id_status_midia = 7
-							and p.id_midia = 2";
+							and p.id_midia = 1";
 	
 					$stmt = $con->prepare($select);
 					   $params = array(':id_parceiro' => $id_parceiro);
