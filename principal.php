@@ -4,13 +4,18 @@
 	error_reporting(E_ALL);
 	session_start();
 	setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
-	date_default_timezone_set('America/Sao_Paulo');
+	date_default_timezone_set('America/Sao_Paulo'); 
 
 	require_once("Classes/Midia.php");
 	require_once("Classes/Usuario.php");
 	require_once("Classes/Ponto.php");
 	require_once("Classes/Parceiro.php");
 	require_once("Classes/Cliente.php");
+
+	if(isset($_SESSION['id_usuario'])){
+		header("location: index.php");
+		exit();
+	}
 
 	$midia = new Midia();
 	$usuario = new Usuario();
