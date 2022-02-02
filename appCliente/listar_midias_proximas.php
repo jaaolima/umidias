@@ -9,9 +9,6 @@ $ponto = new Ponto();
 
 $retornoMidias = $ponto->listarPontoProximos($_REQUEST['latitude'], $_REQUEST['longitude']);
 ?>
-<div id="loading" style="margin:20px;">
-    <div class="spinner spinner-primary mr-15"></div>
-</div>
 <div id="carrossel" style="display:none;">
     <div class="owl-carousel owl-theme">
     <?php
@@ -78,16 +75,6 @@ $retornoMidias = $ponto->listarPontoProximos($_REQUEST['latitude'], $_REQUEST['l
 </div>
 
 <script>
-    // $(window).on( 'load', function() {
-    //     $('#loading').hide();
-    //     $('#carrossel').show();
-    //     console.log("foi");
-    // });
-    jQuery.fn.load = function(){ $(window).on("load", function() {
-        $('#loading').hide();
-        $('#carrossel').show();
-        console.log("foi");
-    }) };
     $(document).ready(function(){
         
 
