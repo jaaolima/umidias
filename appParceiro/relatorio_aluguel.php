@@ -24,7 +24,6 @@ $options->setIsRemoteEnabled(true);
 
 $dompdf = new Dompdf($options); 
 
-var_dump(get_loaded_extensions());
 
 $pagina = '
 <!DOCTYPE html>
