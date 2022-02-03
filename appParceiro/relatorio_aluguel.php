@@ -32,7 +32,7 @@ $pagina = '
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Relatório Liberação Nutricão</title>
+        <title>Relatório de alugueis</title>
         <link href="./assets/css/demo1/style.bundle.css" rel="stylesheet" type="text/css" />
     </head>
     <style>
@@ -60,7 +60,7 @@ $pagina = '
                 <h1>Relatório de alugueis</h1>
             </div>
             <div style="text-align: right; ">
-                <img src="../assets/media/Uni_midia_logo.png" width="70px">
+                <img src="./assets/media/Uni_midia_logo.png" width="70px">
             </div>
         </div>
         <table class="table table-striped- table-bordered table-hover table-checkable">
