@@ -106,7 +106,7 @@ $pagina .= '
 ';
 
 $dompdf->loadHtml($pagina);
-$dompdf->setPaper('A4', 'landscape');
+$dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
 
 header('Content-type: application/pdf; charset=utf-8');
