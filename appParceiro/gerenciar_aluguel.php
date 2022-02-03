@@ -71,7 +71,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <tr>
 														<th>ID status</th>
 														<th>ID alugado</th>
-                                                        <th>Mídia</th>
+                                                        <th>Mídia</th> 
                                                         <th>Data inicial</th>
                                                         <th>Data Final</th>
                                                         <th>Status</th>

@@ -1602,7 +1602,7 @@
 				}	
 			}
 
-			function Front($id_parceiro){
+			function Front($id_parceiro){ 
 				try{
 					$con = Conecta::criarConexao(); 
 					
@@ -1773,7 +1773,7 @@
 						left join tb_status_midia s on a.id_status_midia=s.id_status
 						WHERE p.id_parceiro = :id_parceiro
 						and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto)
-						order by dt_inicial";
+						order by id_status_midia, dt_inicial";
 
 				$stmt = $con->prepare($select);
 			   	$params = array(':id_parceiro' => $id_parceiro);
