@@ -24,8 +24,7 @@ var DatatablesBasicBasic = function() {
 			    "oPaginate": { "sFirst": "Primeira", "sLast": "Última", "sNext": ">", "sPrevious": "<" }
 		    },
 
-			//== Order settings
-			order: [[1, 'asc']],
+			//== Order settings 
 
 
 			columnDefs: [
