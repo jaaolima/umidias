@@ -109,7 +109,7 @@
                                                 <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
                                                     <div class="card-body">
                                                         <div class="justify_content-center text-center">
-                                                            <h1 class="font-weight-bolder m-0">Alugue com a Unimídias</h1><br>
+                                                            <h1 class="font-weight-bolder m-0" style="font-size:35px;font-weight:700 !important;">Alugue com a Unimídias</h1><br>
                                                             <h5 class="font-weight-bold">Todas as mídias de Brasília em um só lugar</h5>
                                                         </div>
                                                     </div>
