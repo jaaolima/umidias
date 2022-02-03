@@ -278,8 +278,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <button id="alugar" type="button"class="btn btn-primary w-100">Prosseguir</button>
                                                     </div>
 													<?php else : ?>
-													<div class="my-6 mx-6">
-                                                        <a href="login.php?id_ponto=<?php echo $id_ponto; ?>&id_midia=<?php echo $id_midia;?>" class="btn btn-primary w-100">Prosseguir</a>
+													<div class="my-6 mx-6" >
+                                                        <a href="javascript:;" id="login" class="btn btn-primary w-100">Prosseguir</a>
                                                     </div>
 													<?php endif ;?>	
                                                 </div>
@@ -406,7 +406,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     </div>
 													<?php else : ?>
 													<div class="my-6 mx-6">
-                                                        <a href="login.php?id_ponto=<?php echo $id_ponto; ?>&id_midia=<?php echo $id_midia;?>" class="btn btn-primary w-100">Prosseguir</a>
+                                                        <a href="javascript:;" id="login" class="btn btn-primary w-100">Prosseguir</a>
                                                     </div>
 													<?php endif ;?>	
                                                 </div>

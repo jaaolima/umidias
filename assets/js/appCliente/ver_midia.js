@@ -145,6 +145,14 @@ $(document).ready(function() {
 		$('#alugar_midia').hide();
 			
 	});
+
+
+	$("#login").on("click", function(e){
+		var id_ponto = $("#id_ponto").val();
+		var id_midia = $("#id_midia").val();
+		redirectTo("login.php?id_ponto="+id_ponto+"&id_midia="+id_midia+"")
+			
+	});
 	
 	$("#carrinho").on("click", function(e){
 		var id_midia = $("#id_midia").val();
