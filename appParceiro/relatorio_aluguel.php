@@ -114,54 +114,54 @@ echo $dompdf->output();
 
 
 
-enviar documento destino para download
-$dompdf->stream("dompdf_out.pdf");
+// enviar documento destino para download
+// $dompdf->stream("dompdf_out.pdf");
 
-exit(0);
-
-
-
-
-$pdf = $dompdf->output();
-$dompdf->stream();
-header('Content-type: application/pdf; charset=utf-8');
-echo $pdf;
+// exit(0);
 
 
 
 
-$dompdf->stream(
-    "saida.pdf", /* Nome do arquivo de saída */
-    array(
-        "Attachment" => false /* Para download, altere para true */
-    )
-);
-
-
-
-$filename = 'relatorio_neonatal.pdf';
-$str = $dompdf->output();
-$length = mb_strlen($str, '8bit');
-return $res->withHeader('Cache-Control', 'private')->withHeader('Content-type', 'application/pdf')->withHeader('Content-Length', $length)->withHeader('Content-Disposition', 'attachment;  filename=' . $filename)->withHeader('Accept-Ranges', $length)->write($str);
+// $pdf = $dompdf->output();
+// $dompdf->stream();
+// header('Content-type: application/pdf; charset=utf-8');
+// echo $pdf;
 
 
 
 
-$out = $dompdf->output();
-echo $out;
+// $dompdf->stream(
+//     "saida.pdf", /* Nome do arquivo de saída */
+//     array(
+//         "Attachment" => false /* Para download, altere para true */
+//     )
+// );
 
 
 
-$dompdf->stream("relatorio.pdf", array(true));
+// $filename = 'relatorio_neonatal.pdf';
+// $str = $dompdf->output();
+// $length = mb_strlen($str, '8bit');
+// return $res->withHeader('Cache-Control', 'private')->withHeader('Content-type', 'application/pdf')->withHeader('Content-Length', $length)->withHeader('Content-Disposition', 'attachment;  filename=' . $filename)->withHeader('Accept-Ranges', $length)->write($str);
 
 
 
 
-$dompdf->stream("",array("Attachment" => false));
+// $out = $dompdf->output();
+// echo $out;
+
+
+
+// $dompdf->stream("relatorio.pdf", array(true));
 
 
 
 
-var_dump(get_loaded_extensions());
+// $dompdf->stream("",array("Attachment" => false));
+
+
+
+
+// var_dump(get_loaded_extensions());
 
 ?>
