@@ -782,6 +782,7 @@
 							inner join tb_usuario u on a.id_usuario=u.id_usuario
 							left join tb_status_midia s on a.id_status_midia=s.id_status
 							where p.id_parceiro=:id_parceiro
+							and id_status_midia <> 7
 							and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where p.id_ponto = pf.id_ponto)
 							order by a.dt_inicial
 							limit 3

@@ -37,7 +37,7 @@
 	$usuario = new Usuario();
 	$ponto = new Ponto();
 	$parceiro = new Parceiro();
-	$cliente = new Cliente();
+	$cliente = new Cliente(); 
 
 	$retorno = $midia->listarTipoMidia($_POST);
 	$dadosUsuario = $usuario->buscarDadosUsuario($id_usuario);
