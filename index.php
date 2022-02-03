@@ -956,7 +956,9 @@
 			}();
 			jQuery(document).ready(function () {
 				<?php if(isset($_REQUEST['id_ponto'])) : ?>
-					redirectTo("appCliente/ver_midia.php?id_ponto=<?php echo $_REQUEST["id_ponto"]; ?>&id_midia=<?php echo $_REQUEST["id_midia"]; ?>");
+					<?php if($_SESSION["id_perfil"] != 2) : ?>
+						redirectTo("appCliente/ver_midia.php?id_ponto=<?php echo $_REQUEST["id_ponto"]; ?>&id_midia=<?php echo $_REQUEST["id_midia"]; ?>");
+					<?php endif: ?>
 				<?php endif; ?>
 				KTApexChartsDemo.init();
 				geolocalizacao();
