@@ -140,7 +140,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             
 							<div class="content flex-column-fluid pt-0" id="kt_content">
 								<div class="row">
-									<div class="col-7 col-sm-6">
+									<div class="col-7 col-sm-6"> 
 										<div class="mb-8">
 											<div class="mb-12">
 												<h1 class="h1-titulo"><?php echo $dadosPonto['ds_bairro']; ?></h1>
@@ -187,7 +187,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																$dataInicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
 																$dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
 																$corStatus = "label-warning";
-																if($dados["id_status_midia"] == 5){ $corStatus =  "label-success"; }
+																if($dados["id_status_midia"] == 7){ $corStatus =  "label-success"; }
                                                                 echo "<tr>
 																			<td>".$dados['id_status_midia']."</td>
                                                                             <td>".$dados['id_alugado']."</td>

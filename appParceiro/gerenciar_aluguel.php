@@ -75,7 +75,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <th>Data inicial</th>
                                                         <th>Data Final</th>
                                                         <th>Status</th>
-                                                        <th>Ações</th>
+                                                        <th>Ações</th> 
                                                     </tr>
                                                 </thead> 
                                                 <tbody> 
