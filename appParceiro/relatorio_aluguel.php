@@ -24,93 +24,92 @@ $options->setIsRemoteEnabled(true);
 
 $dompdf = new Dompdf($options); 
 
-var_dump(gd_info());
-// $pagina = '
-// <!DOCTYPE html>
-// <html lang="en">
-//     <head>
-//         <meta charset="UTF-8">
-//         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-//         <title>Relatório de alugueis</title>
-//         <link href="./assets/css/demo1/style.bundle.css" rel="stylesheet" type="text/css" />
-//     </head>
-//     <style>
-//         body{
-//             font-size: 8px;
-//             font-family:Verdana, Arial, Helvetica, sans-serif;
-//         }
-//         table, td, th {
-//             border: 1px solid black;
-//         }
+$pagina = '
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Relatório de alugueis</title>
+        <link href="./assets/css/demo1/style.bundle.css" rel="stylesheet" type="text/css" />
+    </head>
+    <style>
+        body{
+            font-size: 8px;
+            font-family:Verdana, Arial, Helvetica, sans-serif;
+        }
+        table, td, th {
+            border: 1px solid black;
+        }
         
-//         table {
-//             width: 100%;
-//             border-collapse: collapse;
-//         }
-//         .titulo{
-//             font-weight: 700;
-//         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .titulo{
+            font-weight: 700;
+        }
                   
-//         @page { margin: 5px; }
-//     </style>
-//     <body>
-//         <div style="display:flex; align-items: center;">
-//             <div style=" text-align: center;margin-bottom: -40px;">
-//                 <h1>Relatório de alugueis</h1>
-//             </div>
-//             <div style="text-align: right; ">
-//                 <img src="../assets/media/Uni_midia_logo.png" width="70px">
-//             </div>
-//         </div>
-//         <table class="table table-striped- table-bordered table-hover table-checkable">
-//             <tbody> 
-//                 <tr>
-//                     <th>Mídia</th>
-//                     <th>Data inicial</th>
-//                     <th>Data Final</th>
-//                     <th>Status</th>
-//                 </tr>
-//                 ';
+        @page { margin: 5px; }
+    </style>
+    <body>
+        <div style="display:flex; align-items: center;">
+            <div style=" text-align: center;margin-bottom: -40px;">
+                <h1>Relatório de alugueis</h1>
+            </div>
+            <div style="text-align: right; ">
+                <img src="../assets/media/Uni_midia_logo.png" width="70px">
+            </div>
+        </div>
+        <table class="table table-striped- table-bordered table-hover table-checkable">
+            <tbody> 
+                <tr>
+                    <th>Mídia</th>
+                    <th>Data inicial</th>
+                    <th>Data Final</th>
+                    <th>Status</th>
+                </tr>
+                ';
 
 
 
-//                 while($dados = $dadosAlugado->fetch()){
-//                     $dataInicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
-//                     $dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
-//                     $corStatus = "label-warning";
-//                     if($dados["id_status_midia"] == 7){ $corStatus =  "label-success"; }
-//                     $pagina .= "<tr>
-//                             <td>
-//                                 <div class='d-flex'>
-//                                     <div class='d-flex'>
-//                                         <span class='symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success'>
-//                                             <img class='symbol-label img-fluid' src='".$dados["ds_foto"]."'>
-//                                         </span>
-//                                         <div class='ml-3 mt-2'>
-//                                             <span>".$dados['ds_descricao']."</span>	
-//                                         </div>
-//                                     </div>
-//                                 </div>
-//                             </td>
-//                             <td>".$dataInicial."</td>
-//                             <td>".$dataFinal."</td>
-//                             <td><span class='label ".$corStatus." label-pill label-inline mr-2 py-6'>".$dados['ds_status']."</span></td>
-//                         </tr>";
-//                 }
+                while($dados = $dadosAlugado->fetch()){
+                    $dataInicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
+                    $dataFinal = date('d/m/Y', strtotime($dados["dt_final"]));
+                    $corStatus = "label-warning";
+                    if($dados["id_status_midia"] == 7){ $corStatus =  "label-success"; }
+                    $pagina .= "<tr>
+                            <td>
+                                <div class='d-flex'>
+                                    <div class='d-flex'>
+                                        <span class='symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success'>
+                                            <img class='symbol-label img-fluid' src='".$dados["ds_foto"]."'>
+                                        </span>
+                                        <div class='ml-3 mt-2'>
+                                            <span>".$dados['ds_descricao']."</span>	
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>".$dataInicial."</td>
+                            <td>".$dataFinal."</td>
+                            <td><span class='label ".$corStatus." label-pill label-inline mr-2 py-6'>".$dados['ds_status']."</span></td>
+                        </tr>";
+                }
 
-// $pagina .= '
-//             </tbody>
-//         </table>
-//     </body>
-// ';
+$pagina .= '
+            </tbody>
+        </table>
+    </body>
+';
 
-// $dompdf->loadHtml($pagina);
-// $dompdf->setPaper('A4', 'portrait');
-// $dompdf->render();
+$dompdf->loadHtml($pagina);
+$dompdf->setPaper('A4', 'portrait');
+$dompdf->render();
 
-// header('Content-type: application/pdf; charset=utf-8');
-// echo $dompdf->output();
+header('Content-type: application/pdf; charset=utf-8');
+echo $dompdf->output();
 
 
 
