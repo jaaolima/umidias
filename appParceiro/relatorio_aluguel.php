@@ -60,7 +60,7 @@ $pagina = '
                 <h1>Relatório de alugueis</h1>
             </div>
             <div style="text-align: right; ">
-                <img src="./assets/media/Uni_midia_logo.png" width="70px">
+                <img src="../../assets/media/Uni_midia_logo.png" width="70px">
             </div>
         </div>
         <table class="table table-striped- table-bordered table-hover table-checkable">
