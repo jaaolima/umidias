@@ -71,6 +71,19 @@ $pagina = '
             .symbol.symbol-light-success .symbol-label {
                 background-color: #C9F7F5;
                 color: #1bc55f; }
+            .d-flex {
+                display: -webkit-box !important;
+                display: -ms-flexbox !important;
+                display: flex !important; }
+            .table td {
+                padding: 0.75rem;
+                vertical-align: top;
+                border-top: 1px solid #EBEDF3; }
+                .table thead th {
+                vertical-align: bottom;
+                border-bottom: 2px solid #EBEDF3; }
+                .table tbody + tbody {
+                border-top: 2px solid #EBEDF3; }
     </style>
     <body>
         <div style="display:flex; align-items: center; margin-bottom: 10px;">
