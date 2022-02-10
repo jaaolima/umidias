@@ -8,7 +8,7 @@
 	require_once("../Classes/Midia.php");
 	
 	$id_usuario = $_SESSION['id_usuario'];
-    $id_parceiro = $_SESSION['id_parceiro'];
+    $id_parceiro = $_SESSION['id_parceiro']; 
 	$usuario = new Usuario();
 	$midia = new Midia();
 	$ponto = new Ponto();

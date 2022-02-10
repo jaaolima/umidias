@@ -104,7 +104,7 @@
 					$error = array();
 					$tamanho_mb = $tamanho/1024/1024;
 					
-					if($foto["size"] > $tamanho) {
+					if($foto["size"] > $tamanho) { 
 						$error[1] = "O arquivo deve ter no máximo ".number_format($tamanho_mb)." mb";
 					}
 
