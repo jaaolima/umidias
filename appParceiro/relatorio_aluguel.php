@@ -90,6 +90,93 @@ $pagina = '
             .mt-2,
             .my-2 {
                   margin-top: 0.5rem !important; }
+            .symbol .symbol-label {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            font-weight: 500;
+            line-height: 0;
+            color: #3F4254;
+            background-color: #F3F6F9;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 0.42rem; }
+            .symbol .symbol-badge {
+            position: absolute;
+            border: 2px solid #ffffff;
+            border-radius: 100%;
+            top: 0;
+            right: 0; }
+            .symbol > img {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            border-radius: 0.42rem; }
+            .symbol.symbol-circle {
+            border-radius: 50%; }
+            .symbol.symbol-circle > img {
+                border-radius: 50%; }
+            .symbol.symbol-circle .symbol-label {
+                border-radius: 50%; }
+            .symbol.symbol-primary .symbol-label {
+            background-color: #B721FF;
+            color: #FFFFFF; }
+            .symbol.symbol-light-primary .symbol-label {
+            background-color: #EEE5FF;
+            color: #B721FF; }
+            .symbol.symbol-secondary .symbol-label {
+            background-color: #E4E6EF;
+            color: #3F4254; }
+            .symbol.symbol-light-secondary .symbol-label {
+            background-color: #EBEDF3;
+            color: #E4E6EF; }
+            .symbol.symbol-success .symbol-label {
+            background-color: #1bc55f;
+            color: #ffffff; }
+            .symbol.symbol-light-success .symbol-label {
+            background-color: #C9F7F5;
+            color: #1bc55f; }
+            .symbol.symbol-info .symbol-label {
+            background-color: #6993FF;
+            color: #FFFFFF; }
+            .symbol.symbol-light-info .symbol-label {
+            background-color: #E1E9FF;
+            color: #6993FF; }
+            .symbol.symbol-warning .symbol-label {
+            background-color: #FFA800;
+            color: #ffffff; }
+            .symbol.symbol-light-warning .symbol-label {
+            background-color: #FFF4DE;
+            color: #FFA800; }
+            .symbol.symbol-danger .symbol-label {
+            background-color: #F64E60;
+            color: #ffffff; }
+            .symbol.symbol-light-danger .symbol-label {
+            background-color: #FFE2E5;
+            color: #F64E60; }
+            .symbol.symbol-light .symbol-label {
+            background-color: #F3F6F9;
+            color: #7E8299; }
+            .symbol.symbol-light-light .symbol-label {
+            background-color: #F3F6F9;
+            color: #F3F6F9; }
+            .symbol.symbol-dark .symbol-label {
+            background-color: #181C32;
+            color: #ffffff; }
+            .symbol.symbol-light-dark .symbol-label {
+            background-color: #D1D3E0;
+            color: #181C32; }
+            .symbol.symbol-white .symbol-label {
+            background-color: #ffffff;
+            color: #3F4254; }
+            .symbol.symbol-light-white .symbol-label {
 
     </style>
     <body>
