@@ -33,6 +33,8 @@
 		$id_parceiro = $_SESSION["id_parceiro"];
 	}
 
+	$_SESSION["deslogado"] = 'não';  
+
 	$midia = new Midia();
 	$usuario = new Usuario();
 	$ponto = new Ponto();
