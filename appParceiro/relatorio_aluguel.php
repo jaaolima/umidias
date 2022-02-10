@@ -121,13 +121,11 @@ $pagina = '
                     $pagina .= "<tr>
                             <td>
                                 <div class='d-flex'>
-                                    <div class='d-flex'>
-                                        <span class='symbol symbol-lg-50 symbol-circle symbol-light-success' style='margin-top:10px;'>
-                                            <img class='symbol-label img-fluid' src='https://app.unimidias.com.br/".$dados["ds_foto"]."'>
-                                        </span>
-                                        <div class='ml-3 mt-2'>
-                                            <span>".$dados['ds_descricao']."</span>	
-                                        </div>
+                                    <span class='symbol symbol-lg-50 symbol-circle symbol-light-success' style='margin-top:10px;'>
+                                        <img class='symbol-label img-fluid' src='https://app.unimidias.com.br/".$dados["ds_foto"]."'>
+                                    </span>
+                                    <div class='ml-3'>
+                                        <span>".$dados['ds_descricao']."</span>	
                                     </div>
                                 </div>
                             </td>
