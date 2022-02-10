@@ -273,7 +273,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Total</h3>
                                                         <div id="valor_alugado"><h2>R$ 0,00</h2></div>
                                                     </div>
-													<?php if(!isset($_SESSION['deslogado'])) : ?>
+													<?php if($_SESSION['deslogado'] != 'sim') : ?>
                                                     <div class="my-6 mx-6">
                                                         <button id="alugar" type="button"class="btn btn-primary w-100">Prosseguir</button>
                                                     </div>
@@ -324,7 +324,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 <tr>
                                                                     <th>ID mes</th>
                                                                     <th>Data Inicial</th>
-                                                                    <th>Data Final</th>
+                                                                    <th>Data Final</th> 
                                                                     <th>Mês</th>
                                                                     <th>Selecione</th>
                                                                 </tr>
@@ -400,7 +400,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Total</h3>
                                                         <div id="valor_alugado"><h2>R$ 0,00</h2></div>
                                                     </div>
-                                                    <?php if(!isset($_SESSION['deslogado'])) : ?>
+                                                    <?php if($_SESSION['deslogado'] != 'sim') : ?>
                                                     <div class="my-6 mx-6">
                                                         <button id="alugar" type="button"class="btn btn-primary w-100">Prosseguir</button>
                                                     </div>
