@@ -79,11 +79,18 @@ $pagina = '
                 padding: 0.75rem;
                 vertical-align: top;
                 border-top: 1px solid #EBEDF3; }
-                .table thead th {
+            .table thead th {
                 vertical-align: bottom;
                 border-bottom: 2px solid #EBEDF3; }
-                .table tbody + tbody {
+            .table tbody + tbody {
                 border-top: 2px solid #EBEDF3; }
+            .ml-3,
+            .mx-3 {
+                margin-left: 0.75rem !important; }
+            .mt-2,
+            .my-2 {
+                  margin-top: 0.5rem !important; }
+
     </style>
     <body>
         <div style="display:flex; align-items: center; margin-bottom: 10px;">
@@ -115,7 +122,7 @@ $pagina = '
                             <td>
                                 <div class='d-flex'>
                                     <div class='d-flex'>
-                                        <span class='symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success ' style='margin-top:10px;'>
+                                        <span class='symbol symbol-lg-50 symbol-circle symbol-light-success' style='margin-top:10px;'>
                                             <img class='symbol-label img-fluid' src='https://app.unimidias.com.br/".$dados["ds_foto"]."'>
                                         </span>
                                         <div class='ml-3 mt-2'>
