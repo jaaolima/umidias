@@ -124,7 +124,7 @@ $pagina = '
                                     <span class='symbol symbol-lg-50 symbol-circle symbol-light-success' style='margin-top:10px;'>
                                         <img class='symbol-label img-fluid' src='https://app.unimidias.com.br/".$dados["ds_foto"]."'>
                                     </span>
-                                    <div class='ml-3' style='margin-left:15px; margin-top: 5px; '>
+                                    <div class='ml-3' style='margin-left:40px; margin-top: 5px; '>
                                         <span>".$dados['ds_descricao']."</span>	
                                     </div>
                                 </div>
