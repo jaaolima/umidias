@@ -73,7 +73,7 @@ $pagina = '
                 color: #1bc55f; }
     </style>
     <body>
-        <div style="display:flex; align-items: center;">
+        <div style="display:flex; align-items: center; margin-bottom: 10px;">
             <div style=" text-align: center;margin-bottom: -40px;">
                 <h1>Relatório de alugueis</h1>
             </div>
