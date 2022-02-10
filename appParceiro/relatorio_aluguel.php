@@ -84,7 +84,7 @@ $pagina = '
                                 <div class='d-flex'>
                                     <div class='d-flex'>
                                         <span class='symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success'>
-                                            <img class='symbol-label img-fluid' src='../../".$dados["ds_foto"]."'>
+                                            <img class='symbol-label img-fluid' src='https://app.unimidias.com.br/".$dados["ds_foto"]."'>
                                         </span>
                                         <div class='ml-3 mt-2'>
                                             <span>".$dados['ds_descricao']."</span>	
