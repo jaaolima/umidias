@@ -52,6 +52,25 @@ $pagina = '
         }
                   
         @page { margin: 5px; }
+        .symbol {
+            display: inline-block;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            position: relative;
+            border-radius: 0.42rem; }
+            .symbol.symbol-lg-50 > img {
+                width: 100%;
+                max-width: 50px;
+                height: 50px; }
+            .symbol.symbol-lg-50.symbol-circle .symbol-badge {
+                top: -1.75px;
+                right: -1.75px; }
+            .symbol.symbol-lg-50.symbol-circle .symbol-badge.symbol-badge-bottom {
+                top: auto;
+                bottom: -1.75px; }
+            .symbol.symbol-light-success .symbol-label {
+                background-color: #C9F7F5;
+                color: #1bc55f; }
     </style>
     <body>
         <div style="display:flex; align-items: center;">
