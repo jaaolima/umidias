@@ -32,7 +32,7 @@ $pagina = '
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Relatório de alugueis</title>
-        <link href="./assets/css/demo1/style.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="https://app.unimidias.com.br/assets/css/demo1/style.bundle.css" rel="stylesheet" type="text/css" />
     </head>
     <style>
         body{
