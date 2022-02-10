@@ -78,7 +78,7 @@ $pagina = '
                 <h1>Relatório de alugueis</h1>
             </div>
             <div style="text-align: right; ">
-                <img src="../assets/media/Uni_midia_logo.png" width="70px">
+                <img src="https://app.unimidias.com.br/assets/media/Uni_midia_logo.png" width="70px">
             </div>
         </div>
         <table class="table table-striped- table-bordered table-hover table-checkable">
@@ -102,7 +102,7 @@ $pagina = '
                             <td>
                                 <div class='d-flex'>
                                     <div class='d-flex'>
-                                        <span class='symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success'>
+                                        <span class='symbol symbol-lg-50 symbol-circle symbol-40 symbol-light-success ' style='margin-top:10px;'>
                                             <img class='symbol-label img-fluid' src='https://app.unimidias.com.br/".$dados["ds_foto"]."'>
                                         </span>
                                         <div class='ml-3 mt-2'>
