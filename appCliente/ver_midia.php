@@ -9,7 +9,7 @@
 
 	$id_ponto = $_REQUEST["id_ponto"]; 
 	$id_midia = $_REQUEST["id_midia"]; 
-	if(!isset($_SESSION["deslogado"])){
+	if($_SESSION['deslogado'] != 'sim'){ 
 		$id_usuario = $_SESSION['id_usuario'];
 	}
 	
