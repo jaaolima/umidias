@@ -96,6 +96,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="d-flex">
                                         <i class="far fa-credit-card icon-lg mr-2"></i>
                                         <h3>Pagamento em cartão de credito:</h3>
+                                        <div class="separator separator-solid"></div>
                                         <form id="form-checkout" >
                                             <input type="text" name="cardNumber" id="form-checkout__cardNumber" />
                                             <input type="text" name="cardExpirationDate" id="form-checkout__cardExpirationDate" />
@@ -123,6 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </g>
                                         </svg>   
                                         <h3>Pagamento em pix:</h3>
+                                        <div class="separator separator-solid"></div>
                                         <img src={`data:image/jpeg;base64,${qr_code_base64}`/>
                                         <label for="copiar">Copiar Hash:</label>
                                         <input type="text" id="copiar"  value={qr_code}/>   
