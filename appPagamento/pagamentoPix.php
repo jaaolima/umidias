@@ -12,7 +12,7 @@
      "email" => "test@test.com",
      "first_name" => "Test",
      "last_name" => "User",
-     "identification" => array(
+     "identification" => array( 
          "type" => "CPF",
          "number" => "19119119100"
       ),

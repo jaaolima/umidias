@@ -26,7 +26,7 @@ Purchase: https://1.envato.market/EA4JP
 Renew Support: https://1.envato.market/EA4JP
 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 -->
-<html lang="en">
+<html lang="en"> 
 	<body id="kt_body" class="header-fixed subheader-enabled page-loading">
 		<!--begin::Main-->
 		<div class="d-flex flex-column flex-root">
@@ -96,6 +96,19 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="d-flex">
                                         <i class="far fa-credit-card icon-lg mr-2"></i>
                                         <h3>Pagamento em cartão de credito:</h3>
+                                        <form id="form-checkout" >
+                                            <input type="text" name="cardNumber" id="form-checkout__cardNumber" />
+                                            <input type="text" name="cardExpirationDate" id="form-checkout__cardExpirationDate" />
+                                            <input type="text" name="cardholderName" id="form-checkout__cardholderName"/>
+                                            <input type="email" name="cardholderEmail" id="form-checkout__cardholderEmail"/>
+                                            <input type="text" name="securityCode" id="form-checkout__securityCode" />
+                                            <select name="issuer" id="form-checkout__issuer"></select>
+                                            <select name="identificationType" id="form-checkout__identificationType"></select>
+                                            <input type="text" name="identificationNumber" id="form-checkout__identificationNumber"/>
+                                            <select name="installments" id="form-checkout__installments"></select>
+                                            <button type="submit" id="form-checkout__submit">Pagar</button>
+                                            <progress value="0" class="progress-bar">Carregando...</progress>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -110,6 +123,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </g>
                                         </svg>   
                                         <h3>Pagamento em pix:</h3>
+                                        <img src={`data:image/jpeg;base64,${qr_code_base64}`/>
+                                        <label for="copiar">Copiar Hash:</label>
+                                        <input type="text" id="copiar"  value={qr_code}/>   
                                     </div>
                                 </div>
                             </div>
@@ -190,10 +206,112 @@ License: You must have a valid license purchased only from themeforest(the above
 			</div>
 			<!--end::Page-->
 		</div>
+        <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $id_usuario;?>">
+        <script src="https://sdk.mercadopago.com/js/v2"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
 		<script src="assets/js/appCliente/pagamento_carrinho.js"></script> 
+        <script>
+            const mp = new MercadoPago('YOUR_PUBLIC_KEY');
+            // Step #3
+            const cardForm = mp.cardForm({
+                amount: "100.5",
+                autoMount: true,
+                form: {
+                    id: "form-checkout",
+                    cardholderName: {
+                    id: "form-checkout__cardholderName",
+                    placeholder: "Titular do cartão",
+                    },
+                    cardholderEmail: {
+                    id: "form-checkout__cardholderEmail",
+                    placeholder: "E-mail",
+                    },
+                    cardNumber: {
+                    id: "form-checkout__cardNumber",
+                    placeholder: "Número do cartão",
+                    },
+                    cardExpirationDate: {
+                    id: "form-checkout__cardExpirationDate",
+                    placeholder: "Data de vencimento (MM/YYYY)",
+                    },
+                    securityCode: {
+                    id: "form-checkout__securityCode",
+                    placeholder: "Código de segurança",
+                    },
+                    installments: {
+                    id: "form-checkout__installments",
+                    placeholder: "Parcelas",
+                    },
+                    identificationType: {
+                    id: "form-checkout__identificationType",
+                    placeholder: "Tipo de documento",
+                    },
+                    identificationNumber: {
+                    id: "form-checkout__identificationNumber",
+                    placeholder: "Número do documento",
+                    },
+                    issuer: {
+                    id: "form-checkout__issuer",
+                    placeholder: "Banco emissor",
+                    },
+                },
+                callbacks: {
+                    onFormMounted: error => {
+                    if (error) return console.warn("Form Mounted handling error: ", error);
+                    console.log("Form mounted");
+                    },
+                    onSubmit: event => {
+                    event.preventDefault();
+
+                    const {
+                        paymentMethodId: payment_method_id,
+                        issuerId: issuer_id,
+                        cardholderEmail: email,
+                        amount,
+                        token,
+                        installments,
+                        identificationNumber,
+                        identificationType,
+                    } = cardForm.getCardFormData();
+
+                    fetch("/process_payment", {
+                        method: "POST",
+                        headers: {
+                        "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                        token,
+                        issuer_id,
+                        payment_method_id,
+                        transaction_amount: Number(amount),
+                        installments: Number(installments),
+                        description: "Descrição do produto",
+                        payer: {
+                            email,
+                            identification: {
+                            type: identificationType,
+                            number: identificationNumber,
+                            },
+                        },
+                        }),
+                    });
+                    },
+                    onFetching: (resource) => {
+                    console.log("Fetching resource: ", resource);
+
+                    // Animate progress bar
+                    const progressBar = document.querySelector(".progress-bar");
+                    progressBar.removeAttribute("value");
+
+                    return () => {
+                        progressBar.setAttribute("value", "0");
+                    };
+                    }
+                },
+            });
+        </script>
 		<!--end::Global Theme Bundle-->
-        <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $id_usuario;?>">
+        
 	</body>
 	<!--end::Body-->
 </html>
