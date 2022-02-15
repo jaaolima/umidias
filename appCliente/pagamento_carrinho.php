@@ -143,7 +143,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <select name="installments" id="form-checkout__installments" class="form-control"></select>
                                                     </div>
                                                 </div>
-                                                <button type="submit" id="form-checkout__submit">Pagar</button>
+                                                <button type="submit" id="form-checkout__submit" class="btn btn-primary">Pagar</button>
                                                 <progress value="0" class="progress-bar">Carregando...</progress>
                                             </div>
                                            
