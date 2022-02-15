@@ -95,22 +95,49 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="my-6 mx-6">
                                     <div class="d-flex">
                                         <i class="far fa-credit-card icon-lg mr-2"></i>
-                                        <h3>Pagamento em cartão de credito:</h3>
+                                        <h3>Pagamento em cartão de crédito:</h3>
                                     </div>
                                     <div class="separator separator-solid"></div>
                                     <div>
                                         <form id="form-checkout" >
-                                            <input type="text" name="cardNumber" id="form-checkout__cardNumber" />
-                                            <input type="text" name="cardExpirationDate" id="form-checkout__cardExpirationDate" />
-                                            <input type="text" name="cardholderName" id="form-checkout__cardholderName"/>
-                                            <input type="email" name="cardholderEmail" id="form-checkout__cardholderEmail"/>
-                                            <input type="text" name="securityCode" id="form-checkout__securityCode" />
-                                            <select name="issuer" id="form-checkout__issuer"></select>
-                                            <select name="identificationType" id="form-checkout__identificationType"></select>
-                                            <input type="text" name="identificationNumber" id="form-checkout__identificationNumber"/>
-                                            <select name="installments" id="form-checkout__installments"></select>
-                                            <button type="submit" id="form-checkout__submit">Pagar</button>
-                                            <progress value="0" class="progress-bar">Carregando...</progress>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <input type="text" name="cardNumber" id="form-checkout__cardNumber" />
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <input type="text" name="cardExpirationDate" id="form-checkout__cardExpirationDate" />
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <input type="text" name="cardholderName" id="form-checkout__cardholderName"/>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <input type="email" name="cardholderEmail" id="form-checkout__cardholderEmail"/>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <input type="text" name="securityCode" id="form-checkout__securityCode" />
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <select name="issuer" id="form-checkout__issuer"></select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <select name="identificationType" id="form-checkout__identificationType"></select>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <input type="text" name="identificationNumber" id="form-checkout__identificationNumber"/>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <select name="installments" id="form-checkout__installments"></select>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" id="form-checkout__submit">Pagar</button>
+                                                <progress value="0" class="progress-bar">Carregando...</progress>
+                                            </div>
+                                           
                                         </form>
                                     </div>
                                 </div>
