@@ -103,34 +103,43 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class="form-group">
                                                 <div class="row">
                                                     <div class="col-4">
+                                                        <label>Número do cartão</label>
                                                         <input type="text" name="cardNumber" id="form-checkout__cardNumber" class="form-control"/>
                                                     </div>
                                                     <div class="col-4">
+                                                        <label>Data de Expiração</label>
                                                         <input type="text" name="cardExpirationDate" id="form-checkout__cardExpirationDate" class="form-control"/>
                                                     </div>
                                                     <div class="col-4">
+                                                        <label>Nome do cartão</label>
                                                         <input type="text" name="cardholderName" id="form-checkout__cardholderName" class="form-control"/>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-4">
+                                                        <label>Email</label>
                                                         <input type="email" name="cardholderEmail" id="form-checkout__cardholderEmail" class="form-control"/>
                                                     </div>
                                                     <div class="col-4">
+                                                        <label>Código de segurança</label>
                                                         <input type="text" name="securityCode" id="form-checkout__securityCode" class="form-control"/>
                                                     </div>
                                                     <div class="col-4">
+                                                        <label>Emissor</label>
                                                         <select name="issuer" id="form-checkout__issuer" class="form-control"></select>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-4">
+                                                        <label>Tipo de identificação</label>
                                                         <select name="identificationType" id="form-checkout__identificationType" class="form-control"></select>
                                                     </div>
                                                     <div class="col-4">
+                                                        <label>Número de identificação</label>
                                                         <input type="text" name="identificationNumber" id="form-checkout__identificationNumber" class="form-control"/>
                                                     </div>
                                                     <div class="col-4">
+                                                        <label>Parcelas</label>
                                                         <select name="installments" id="form-checkout__installments" class="form-control"></select>
                                                     </div>
                                                 </div>
