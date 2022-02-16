@@ -566,7 +566,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				var local = document.getElementById("valor_alugado");
 				let valor = <?php echo $valor; ?> * totalBisemana;
 				let total = parseInt(valor, 10);
-				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +",00</h2>";
+				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 
 				$("#id_material").val('').change();
 				
@@ -586,7 +586,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				var local = document.getElementById("valor_alugado");
 				let valor = <?php echo $valor; ?> * totalmes;
 				let total = parseInt(valor, 10) + ",00";
-				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +",00</h2>";
+				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 
 				$("#id_material").val('').change();
 				
