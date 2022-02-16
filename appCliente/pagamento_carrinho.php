@@ -183,7 +183,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="separator separator-solid"></div>
                                 <div class="my-6 mx-6 ">
-                                    <table class="table table-hover">
+                                    <table class="table table-hover"> 
                                         <thead>
                                             <tr>
                                                 <th>Mídias</th>
@@ -221,7 +221,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </td>
                                                         <td>".$dados["ds_tipo"]."</td>
                                                         <td>".$dados["ds_material"]."</td>
-                                                        <td>R$ ".$dados["nu_valor_alugado"]."</td>
+                                                        <td>".$dados["nu_valor_alugado"]."</td>
                                                     </tr>";
                                             }
                                             
@@ -233,13 +233,15 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <?php 
                                         $total = 0;
                                         while($dados = $totalCarrinho->fetch()){
-                                            $Rvirgula = str_replace(",", "", $dados["nu_valor_alugado"]); 
-                                            $valor = str_replace("R$ ", "", $Rvirgula);
+                                            $Rvirgula = str_replace(".", "", $dadosPonto["nu_valor"]); 
+                                            $Rzero = str_replace(",00", "", $Rvirgula); 
+                                            $Rrs = str_replace("R$ ", "", $Rzero);
+                                            $valor = $Rrs; 
                                             $total += $valor;
                                         }
                                     ?>
                                     <h3 class="font-weight-bolder">Total</h3>
-                                    <div id="valor_alugado"><h2><?php echo 'R$ '. $total; ?></h2></div>
+                                    <div id="valor_alugado"><h2><?php echo 'R$ '. number_format($total,2,",","."); ?></h2></div>
                                 </div>
 
                             </div>
