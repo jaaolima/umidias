@@ -324,7 +324,6 @@
 				$bisemanas 		= $dados["bisemana"];
 
 				//total alugado
-				$nu_valor_ponto    	= $dados['nu_valor_ponto'];
 				$Rvirgula = str_replace(".", "", $dadosPonto["nu_valor"]); 
 				$Rzero = str_replace(",00", "", $Rvirgula); 
 				$Rrs = str_replace("R$ ", "", $Rzero);
@@ -385,7 +384,6 @@
 				$meses 			= $dados["mes"];
 
 				//total alugado
-				$nu_valor_ponto    	= $dados['nu_valor_ponto'];
 				$Rvirgula = str_replace(".", "", $dadosPonto["nu_valor"]); 
 				$Rzero = str_replace(",00", "", $Rvirgula); 
 				$Rrs = str_replace("R$ ", "", $Rzero);
