@@ -264,14 +264,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><div id="valor_material">R$ 0.00</div></span>
+                                                                <span class="font-weight-bolder text-right"><div id="valor_material">R$ 0,00</div></span>
                                                             </div>
                                                         </div>										
                                                     </div>
                                                     <div class="separator separator-solid"></div>
                                                     <div class="my-6 mx-6 text-right">
                                                         <h3 class="font-weight-bolder">Total</h3>
-                                                        <div id="valor_alugado"><h2>R$ 0.00</h2></div>
+                                                        <div id="valor_alugado"><h2>R$ 0,00</h2></div>
                                                     </div>
 													<?php if($_SESSION['deslogado'] != 'sim') : ?>
                                                     <div class="my-6 mx-6">
@@ -391,14 +391,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-																<span class="font-weight-bolder text-right"><div id="valor_material">R$ 0.00</div></span>
+																<span class="font-weight-bolder text-right"><div id="valor_material">R$ 0,00</div></span>
                                                             </div>
                                                         </div>										
                                                     </div>
                                                     <div class="separator separator-solid"></div>
                                                     <div class="my-6 mx-6 text-right">
                                                         <h3 class="font-weight-bolder">Total</h3>
-                                                        <div id="valor_alugado"><h2>R$ 0.00</h2></div>
+                                                        <div id="valor_alugado"><h2>R$ 0,00</h2></div>
                                                     </div>
                                                     <?php if($_SESSION['deslogado'] != 'sim') : ?>
                                                     <div class="my-6 mx-6">
@@ -558,14 +558,14 @@ License: You must have a valid license purchased only from themeforest(the above
 			$("input[name='bisemana[]']").on("click", function(){
 				<?php
 					$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
-					$Rzero = str_replace(".00", "", $Rvirgula); 
+					$Rzero = str_replace(",00", "", $Rvirgula); 
 					$Rrs = str_replace("R$ ", "", $Rzero);
 					$valor = $Rrs; 
 				?>
 				var totalBisemana = $("input[name='bisemana[]']:checked").length;
 				var local = document.getElementById("valor_alugado");
 				let valor = <?php echo $valor; ?> * totalBisemana;
-				let total = parseInt(valor, 10) + ".00";
+				let total = parseInt(valor, 10) + ",00";
 				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 
 				$("#id_material").val('').change();
@@ -578,14 +578,14 @@ License: You must have a valid license purchased only from themeforest(the above
 			$("input[name='mes[]']").on("click", function(){
 				<?php
 					$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
-					$Rzero = str_replace(".00", "", $Rvirgula); 
+					$Rzero = str_replace(",00", "", $Rvirgula); 
 					$Rrs = str_replace("R$ ", "", $Rzero);;
 					$valor = $Rrs; 
 				?>
 				var totalmes = $("input[name='mes[]']:checked").length;
 				var local = document.getElementById("valor_alugado");
 				let valor = <?php echo $valor; ?> * totalmes;
-				let total = parseInt(valor, 10) + ".00";
+				let total = parseInt(valor, 10) + ",00";
 				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 
 				$("#id_material").val('').change();
@@ -607,8 +607,9 @@ License: You must have a valid license purchased only from themeforest(the above
 				<?php if($id_midia == 1) : ?>
 					<?php
 						$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
-						$Rrs = str_replace("R$ ", "", $Rvirgula);
-						$valor = $Rrs; 
+						$Rzero = str_replace(",00", "", $Rvirgula); 
+						$Rrs = str_replace("R$ ", "", $Rzero);;
+						$valor = $Rrs;  
 					?>
 					var totalBisemana = $("input[name='bisemana[]']:checked").length;
 					let valor = <?php echo $valor; ?> * totalBisemana;
@@ -622,8 +623,9 @@ License: You must have a valid license purchased only from themeforest(the above
 				<?php if($id_midia == 2) : ?>
 					<?php
 						$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
-						$Rrs = str_replace("R$ ", "", $Rvirgula);
-						$valor = $Rrs; 
+						$Rzero = str_replace(",00", "", $Rvirgula); 
+						$Rrs = str_replace("R$ ", "", $Rzero);;
+						$valor = $Rrs;  
 					?>
 					var totalmes = $("input[name='mes[]']:checked").length;
 					let valor = <?php echo $valor; ?> * totalmes;
