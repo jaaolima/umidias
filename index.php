@@ -54,6 +54,7 @@
 	$dadosTotalParceiros = $parceiro->dadosTotalParceiros();
 	$dadosTotalCliente = $cliente->dadosTotalCliente();
 	$dadosTodasMidias = $ponto->listarTodasMidias();
+	$totalCarrinho = $cliente->BuscarQuantidadeCarrinho();
 
 	$graficoPontoParceiroAlugados= $ponto->graficoPontoParceiroAlugados($id_parceiro);
 ?>
@@ -100,7 +101,9 @@
 					<?php if($_SESSION['id_perfil'] == 1) :   ?>
 						<a href="appCliente/carrinho.php" class="mr-4">
 							<i class="flaticon-shopping-basket icon-xl svg-shop"></i>
-							<span class="label label-sm label-success mb-3"></span>
+							<?php if($totalCarrinho > 0 ) : ?>
+								<span class="label label-sm label-success mb-2" style="margin-left:-4px;"><?php echo $totalCarrinho; ?></span>
+							<?php endif; ?>
 						</a>
 						<?php endif; ?>
 						<div><p class="mb-0 mt-1 ml-2 texto-chumbo">Olá, <?php echo $dadosUsuario['ds_nome'];?>!</p></div>

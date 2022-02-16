@@ -535,6 +535,32 @@
     			print "ERRO:".$e->getMessage();	
 			}	
 		}
+
+		function buscarTotalCarrinho($id_usuario)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				
+				$select = "SELECT  count(id_carrinho) as qtd
+						FROM rl_carrinho
+						WHERE id_usuario = :id_usuario"; 
+
+				$stmt = $con->prepare($select);
+			   	$params = array(':id_usuario' => $id_usuario); 
+			   
+			    $stmt->execute($params);
+
+				$dados = $stmt->fetch();
+			    return $dados["qtd"];
+				
+			}	
+			catch(Exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();	
+			}	
+		}
 		public function alugarCarrinho(array $dados)
 		{
 			$id_usuario = $dados["id_usuario"];
