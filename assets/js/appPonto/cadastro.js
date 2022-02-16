@@ -115,10 +115,10 @@ $(document).ready(function() {
 	});
 	$("#nu_valor").inputmask({  
 		'alias': 'numeric',
-		'groupSeparator': ',',
+		'groupSeparator': '.',
 		'autoGroup': true,
 		'digits': 2,
-		'radixPoint': ".",
+		'radixPoint': ",",
 		'digitsOptional': false,
 		'allowMinus': false,
 		'prefix': 'R$ ',
