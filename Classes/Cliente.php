@@ -536,7 +536,7 @@
 			}	
 		}
 
-		function buscarTotalCarrinho($id_usuario)
+		function buscarQuantidadeCarrinho($id_usuario)
 		{
 			try{
 				$con = Conecta::criarConexao();
