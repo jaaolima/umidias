@@ -233,7 +233,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <?php 
                                         $total = 0;
                                         while($dados = $totalCarrinho->fetch()){
-                                            $Rvirgula = str_replace(".", "", $dadosPonto["nu_valor"]); 
+                                            $Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
                                             $Rzero = str_replace(",00", "", $Rvirgula); 
                                             $Rrs = str_replace("R$ ", "", $Rzero);
                                             $valor = $Rrs; 
