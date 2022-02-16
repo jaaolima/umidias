@@ -565,8 +565,8 @@ License: You must have a valid license purchased only from themeforest(the above
 				var totalBisemana = $("input[name='bisemana[]']:checked").length;
 				var local = document.getElementById("valor_alugado");
 				let valor = <?php echo $valor; ?> * totalBisemana;
-				let total = parseInt(valor, 10) + ",00";
-				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+				let total = parseInt(valor, 10);
+				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +",00</h2>";
 
 				$("#id_material").val('').change();
 				
@@ -579,14 +579,14 @@ License: You must have a valid license purchased only from themeforest(the above
 				<?php
 					$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
 					$Rzero = str_replace(",00", "", $Rvirgula); 
-					$Rrs = str_replace("R$ ", "", $Rzero);;
+					$Rrs = str_replace("R$ ", "", $Rzero);
 					$valor = $Rrs; 
 				?>
 				var totalmes = $("input[name='mes[]']:checked").length;
 				var local = document.getElementById("valor_alugado");
 				let valor = <?php echo $valor; ?> * totalmes;
 				let total = parseInt(valor, 10) + ",00";
-				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +",00</h2>";
 
 				$("#id_material").val('').change();
 				
