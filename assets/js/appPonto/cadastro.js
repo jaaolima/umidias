@@ -36,7 +36,7 @@ $(document).ready(function() {
 		$("#cancelar").on("click", function(){
 			$('#form_usuario').trigger("reset");
 			redirectTo("appPonto/listar_ponto.php");
-		}); 
+		});  
 	}
 
 	$("#id_estado").on("change", function() {
@@ -115,9 +115,14 @@ $(document).ready(function() {
 	});
 	$("#nu_valor").inputmask({  
 		'alias': 'numeric',
-		'groupSeparator': '.',
+		'groupSeparator': ',',
 		'autoGroup': true,
+		'digits': 2,
+		'radixPoint': ".",
+		'digitsOptional': false,
+		'allowMinus': false,
 		'prefix': 'R$ ',
+		'placeholder': ''
 	});
 	
 });
