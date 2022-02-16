@@ -557,7 +557,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 			$("input[name='bisemana[]']").on("click", function(){
 				<?php
-					$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+					$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
 					$Rzero = str_replace(",00", "", $Rvirgula); 
 					$Rrs = str_replace("R$ ", "", $Rzero);
 					$valor = $Rrs; 
@@ -577,7 +577,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 			$("input[name='mes[]']").on("click", function(){
 				<?php
-					$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+					$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
 					$Rzero = str_replace(",00", "", $Rvirgula); 
 					$Rrs = str_replace("R$ ", "", $Rzero);;
 					$valor = $Rrs; 
@@ -606,7 +606,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				//adicionar na div total
 				<?php if($id_midia == 1) : ?>
 					<?php
-						$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+						$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
 						$Rzero = str_replace(",00", "", $Rvirgula); 
 						$Rrs = str_replace("R$ ", "", $Rzero);;
 						$valor = $Rrs;  
@@ -622,7 +622,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 				<?php if($id_midia == 2) : ?>
 					<?php
-						$Rvirgula = str_replace(",", "", $dados["nu_valor"]); 
+						$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
 						$Rzero = str_replace(",00", "", $Rvirgula); 
 						$Rrs = str_replace("R$ ", "", $Rzero);;
 						$valor = $Rrs;  
