@@ -264,14 +264,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><div id="valor_material">R$ 0,00</div></span>
+                                                                <span class="font-weight-bolder text-right"><div id="valor_material">R$ 0.00</div></span>
                                                             </div>
                                                         </div>										
                                                     </div>
                                                     <div class="separator separator-solid"></div>
                                                     <div class="my-6 mx-6 text-right">
                                                         <h3 class="font-weight-bolder">Total</h3>
-                                                        <div id="valor_alugado"><h2>R$ 0,00</h2></div>
+                                                        <div id="valor_alugado"><h2>R$ 0.00</h2></div>
                                                     </div>
 													<?php if($_SESSION['deslogado'] != 'sim') : ?>
                                                     <div class="my-6 mx-6">
@@ -391,14 +391,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-																<span class="font-weight-bolder text-right"><div id="valor_material">R$ 0,00</div></span>
+																<span class="font-weight-bolder text-right"><div id="valor_material">R$ 0.00</div></span>
                                                             </div>
                                                         </div>										
                                                     </div>
                                                     <div class="separator separator-solid"></div>
                                                     <div class="my-6 mx-6 text-right">
                                                         <h3 class="font-weight-bolder">Total</h3>
-                                                        <div id="valor_alugado"><h2>R$ 0,00</h2></div>
+                                                        <div id="valor_alugado"><h2>R$ 0.00</h2></div>
                                                     </div>
                                                     <?php if($_SESSION['deslogado'] != 'sim') : ?>
                                                     <div class="my-6 mx-6">
