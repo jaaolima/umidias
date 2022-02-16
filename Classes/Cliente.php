@@ -24,7 +24,7 @@
     			print "ERRO:".$e->getMessage();		
 			}
         }
-        public function gravarCliente(array $dados)
+        public function gravarCliente(array $dados) 
 		{
 
 			$ds_descricao	    = $dados['ds_descricao'];
@@ -274,6 +274,19 @@
 			$stmtMaterial->execute($params);
 			$dadosMaterial = $stmtMaterial->fetch();
 
+			//pegando valor do Ponto
+			$con = Conecta::criarConexao();
+			$selectPonto = "SELECT nu_valor
+						from tb_ponto 
+						where id_ponto = :id_ponto";
+			
+			$stmtPonto = $con->prepare($selectPonto);
+			
+			$params = array(':id_ponto' => $id_ponto); 
+							
+			$stmtPonto->execute($params);
+			$dadosPonto = $stmtPonto->fetch();
+
 			//arte
 			$name = $ds_arte['name'][0];
 			$type = $ds_arte['type'][0];
@@ -312,9 +325,14 @@
 
 				//total alugado
 				$nu_valor_ponto    	= $dados['nu_valor_ponto'];
-				$Rvirgula = str_replace(",", "", $nu_valor_ponto); 
-				$valor = str_replace("R$ ", "", $Rvirgula);
+				$Rvirgula = str_replace(".", "", $dadosPonto["nu_valor"]); 
+				$Rzero = str_replace(",00", "", $Rvirgula); 
+				$Rrs = str_replace("R$ ", "", $Rzero);
+				$valor = $Rrs; 
+
 				$nu_valor_alugado = $valor + $dadosMaterial["nu_valor"];
+
+				$nu_valor_alugado = "R$ " . number_format($nu_valor_alugado,2,",",".");
 
 				$id_bisemana= '';
 				for ($i=0; $i < count($bisemanas); $i++) { 
@@ -368,9 +386,13 @@
 
 				//total alugado
 				$nu_valor_ponto    	= $dados['nu_valor_ponto'];
-				$Rvirgula = str_replace(",", "", $nu_valor_ponto); 
-				$valor = str_replace("R$ ", "", $Rvirgula);
+				$Rvirgula = str_replace(".", "", $dadosPonto["nu_valor"]); 
+				$Rzero = str_replace(",00", "", $Rvirgula); 
+				$Rrs = str_replace("R$ ", "", $Rzero);
+				$valor = $Rrs; 
 				$nu_valor_alugado = $valor + $dadosMaterial["nu_valor"];
+
+				$nu_valor_alugado = "R$ " . number_format($nu_valor_alugado,2,",",".");
 
 				$id_mes= '';
 				for ($i=0; $i < count($meses); $i++) { 

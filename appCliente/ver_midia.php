@@ -429,7 +429,6 @@ License: You must have a valid license purchased only from themeforest(the above
 													<input type="hidden" name="id_midia" id="id_midia" value="<?php echo $id_midia; ?>">
 													<input type="hidden" name="id_ponto" id="id_ponto" value="<?php echo $id_ponto; ?>">
 													<input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario; ?>"> 
-													<input type="hidden" name="nu_valor_ponto" id="nu_valor_ponto" value="<?php echo $dados["nu_valor"];?>">
 												</div>
 												<div class="separator separator-solid"></div>
 												<div class="my-6 mx-6 d-flex">
