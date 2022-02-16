@@ -161,7 +161,7 @@ $dadosAlugado = $ponto->BuscarDadosAlugado($id_alugado);
             <div class="row">
                 <div class="col-6">
                     <label>Valor</label>
-                    <input class="ml-2 form-control" readonly="readonly" value="R$ <?php echo $dadosAlugado["nu_valor_alugado"] ?>">
+                    <input class="ml-2 form-control" readonly="readonly" value="<?php echo $dadosAlugado["nu_valor_alugado"] ?>">
                 </div>
                 <div class="col-6">
                     <label>Material</label>
