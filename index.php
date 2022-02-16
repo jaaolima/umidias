@@ -54,7 +54,7 @@
 	$dadosTotalParceiros = $parceiro->dadosTotalParceiros();
 	$dadosTotalCliente = $cliente->dadosTotalCliente();
 	$dadosTodasMidias = $ponto->listarTodasMidias();
-	$totalCarrinho = $cliente->BuscarQuantidadeCarrinho();
+	$totalCarrinho = $cliente->BuscarQuantidadeCarrinho($id_usuario);
 
 	$graficoPontoParceiroAlugados= $ponto->graficoPontoParceiroAlugados($id_parceiro);
 ?>
