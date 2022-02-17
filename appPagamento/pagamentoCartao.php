@@ -1,32 +1,57 @@
 <?php
+    ini_set('display_errors',1);
+    ini_set('display_startup_erros',1);
+    error_reporting(E_ALL);
     require_once 'vendor/autoload.php';
 
     MercadoPago\SDK::setAccessToken("YOUR_ACCESS_TOKEN");
 
-    $payment = new MercadoPago\Payment();
-    $payment->transaction_amount = (float)$_POST['transactionAmount'];
-    $payment->token = $_POST['token'];
-    $payment->description = $_POST['description'];
-    $payment->installments = (int)$_POST['installments'];
-    $payment->payment_method_id = $_POST['paymentMethodId'];
-    $payment->issuer_id = (int)$_POST['issuer'];
+    $preference = new MercadoPago\Preference();
 
-    $payer = new MercadoPago\Payer();
-    $payer->email = $_POST['cardholderEmail'];
-    $payer->identification = array(
-        "type" => $_POST['identificationType'],
-        "number" => $_POST['identificationNumber']
-    );
-    $payer->first_name = $_POST['cardholderName'];
-    $payment->payer = $payer;
+    $item = new MercadoPago\Item();
+    $item->title = 'Titulo do item'; //titulo
+    $item->quantity = 1; //quantidade
+    $item->unit_price = (double)75.00; //preço
+    $preference->items = array($item);
 
-    $payment->save();
+    $preference->back_urls = array(
+        "success" => 'https://app.unimidias.com.br/',
+        "faiture" => 'https://app.unimidias.com.br/',
+        "pending" => 'https://app.unimidias.com.br/'
+    ); //links para cada situação
 
-    $response = array(
-        'status' => $payment->status,
-        'status_detail' => $payment->status_detail,
-        'id' => $payment->id
-    );
-    echo json_encode($response);
+    $preference->notification_url = 'https://app.unimidias.com.br/'; //link para receber que o pagamento foi aprovado
+    $preference->external_reference = 0; //id da compra para mandar pro mercado pago
+    $preference->save();
+
+    $link = $preference->init_point;
+
+    echo $link;
+
+    // $payment = new MercadoPago\Payment();
+    // $payment->transaction_amount = (float)$_POST['transactionAmount'];
+    // $payment->token = $_POST['token'];
+    // $payment->description = $_POST['description'];
+    // $payment->installments = (int)$_POST['installments'];
+    // $payment->payment_method_id = $_POST['paymentMethodId'];
+    // $payment->issuer_id = (int)$_POST['issuer']; 
+
+    // $payer = new MercadoPago\Payer();
+    // $payer->email = $_POST['cardholderEmail'];
+    // $payer->identification = array(
+    //     "type" => $_POST['identificationType'],
+    //     "number" => $_POST['identificationNumber']
+    // );
+    // $payer->first_name = $_POST['cardholderName'];
+    // $payment->payer = $payer;
+
+    // $payment->save();
+
+    // $response = array(
+    //     'status' => $payment->status,
+    //     'status_detail' => $payment->status_detail,
+    //     'id' => $payment->id
+    // );
+    // echo json_encode($response);
 
 ?>
