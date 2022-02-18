@@ -23,6 +23,12 @@ curl_setopt_array($curl, array(
 $payments_info = json_decode(curl_exec($curl), true);
 curl_close($curl);
 
+session_start();
+require_once("../Classes/Cliente.php");
+$id_usuario = $_SESSION["id_usuario"];
+$cliente = new Cliente();
+$cliente->AlugarCarrinho($id_usuario);
+
 echo '<pre>';
 var_dump($payments_info);
 ?>
