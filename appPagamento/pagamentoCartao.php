@@ -43,7 +43,7 @@
         "pending" => 'https://app.unimidias.com.br/'
     ); //links para cada situação
 
-    $preference->notification_url = 'https://app.unimidias.com.br/'; //link para receber que o pagamento foi aprovado
+    $preference->notification_url = 'https://app.unimidias.com.br/appPagamento/notificacao.php'; //link para receber que o pagamento foi aprovado
     $preference->external_reference = 0; //id da compra para mandar pro mercado pago
     $preference->save();
 
