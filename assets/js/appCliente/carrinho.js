@@ -57,7 +57,7 @@ $(document).ready(function() {
             , data: {id_usuario: id_usuario}
             , type: 'post'
             , success: function(html) {
-                console.log(html);
+                window.open(html);
                 // redirectTo(html);
             }
             , error: function (data) {
