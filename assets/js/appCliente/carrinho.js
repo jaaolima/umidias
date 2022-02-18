@@ -57,7 +57,8 @@ $(document).ready(function() {
             , data: {id_usuario: id_usuario}
             , type: 'post'
             , success: function(html) {
-                redirectTo(html);
+                console.log(html);
+                // redirectTo(html);
             }
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");
