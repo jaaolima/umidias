@@ -11,7 +11,7 @@ $(document).ready(function() {
 		{ 
 			$.ajax({
 		        url: 'appCliente/gravar_cliente.php'
-				, data: $("#form_usuario").serialize()
+				, data: $("#form_usuario").serialize() 
 		        , type: 'post'
 		        , success: function(html) {
 		        	swal.fire({

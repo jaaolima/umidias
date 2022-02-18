@@ -10,7 +10,7 @@
 	$cliente = new Cliente();
 
 	$retorno = $cliente->BuscarCarrinho($id_usuario);
-    $totalCarrinho = $cliente->BuscarCarrinho($id_usuario);
+    $totalCarrinho = $cliente->BuscarCarrinho($id_usuario); 
 
 ?>
 <!DOCTYPE html>

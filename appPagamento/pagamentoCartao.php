@@ -1,18 +1,38 @@
 <?php
+
+
     ini_set('display_errors',1);
     ini_set('display_startup_erros',1);
     error_reporting(E_ALL);
+
+    session_start();
+    require_once("../Classes/Cliente.php");
+
+    $id_usuario = $_SESSION["id_usuario"];
+
+	$cliente = new Cliente();
+
+	$retorno = $cliente->BuscarCarrinho($id_usuario);
     require_once '../vendor/autoload.php';
 
     MercadoPago\SDK::setAccessToken("TEST-7295345192603478-021818-84abf249ade799c52fe9448499b4d47f-220722926");
 
     $preference = new MercadoPago\Preference();
 
-    $item = new MercadoPago\Item();
-    $item->title = 'Titulo do item'; //titulo
-    $item->quantity = 1; //quantidade
-    $item->unit_price = (double)75.00; //preço
-    $preference->items = array($item);
+   
+
+    while($dados = $retorno->fetch()){
+        $item = new MercadoPago\Item();
+        $item->title = $dados["ds_bairro"]; //titulo
+        $item->quantity = 1; //quantidade
+        $Rvirgula = str_replace(".", "", $dados["nu_valor_alugado"]); 
+        $Rzero = str_replace(",00", "", $Rvirgula); 
+        $Rrs = str_replace("R$ ", "", $Rzero);
+        $valor = $Rrs; 
+        $item->unit_price = (double)$valor; //preço
+        $preference->items = array($item);
+    }
+    
 
     $preference->back_urls = array(
         "success" => 'https://app.unimidias.com.br/',

@@ -14,7 +14,7 @@ $(document).ready(function() {
 		$('#card_credito').show();
         
     });
-    $("#boleto_parcelado").on("click", function(e){
+    $("#boleto_parcelado").on("click", function(e){ 
 
         $('.card-metodo').hide();
 		$('#card_boleto_parcelado').show();
@@ -42,6 +42,22 @@ $(document).ready(function() {
                 });
                 
                 redirectTo("appCliente/carrinho.php");
+            }
+            , error: function (data) {
+                swal.fire("Erro", data.responseText, "error");
+            }
+        });	
+        
+    });
+
+    $("#pagamento").on("click", function(e){
+        id_usuario = $("#id_usuario").val();
+        $.ajax({
+            url: 'appPagamento/pagamentoCartao.php'
+            , data: {id_usuario: id_usuario}
+            , type: 'post'
+            , success: function(html) {
+                redirectTo(html);
             }
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");

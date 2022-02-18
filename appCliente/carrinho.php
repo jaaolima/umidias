@@ -71,7 +71,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 <h4>".$dados["nu_valor_alugado"]."</h4>
                                                             </div>
                                                         </div>
-                                                        <!--end::User-->
+                                                        <!--end::User--> 
                                                         <!--begin::Name-->
                                                         <div class='my-8 mx-15 text-left'> 
                                                             <div class='d-flex ml-n8'>
@@ -147,7 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         if($total > 0) :
                                     ?>
                                     <div class="mb-12">
-                                        <a class="btn btn-primary w-100" href="appCliente/pagamento_carrinho.php">Ir para método de pagamento</a>
+                                        <a class="btn btn-primary w-100" id="pagamento">Ir para método de pagamento</a>
                                     </div>
                                     <div class="mb-12">
                                         <button class="btn btn-outline-primary w-100 mr-4" type="button" id="esvaziar">Esvaziar carrinho</button>
