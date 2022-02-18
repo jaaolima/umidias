@@ -2,7 +2,7 @@
 
 $colletion_id = $_REQUEST["collection_id"];
 
-$access_token = "";
+$access_token = "TEST-7295345192603478-021818-84abf249ade799c52fe9448499b4d47f-220722926";
 
 $curl = curl_init();
 
