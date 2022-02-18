@@ -18,19 +18,18 @@
     MercadoPago\SDK::setAccessToken("TEST-7295345192603478-021818-84abf249ade799c52fe9448499b4d47f-220722926");
 
     $preference = new MercadoPago\Preference();
-
    
 
     while($dados = $retorno->fetch()){
-        $item = new MercadoPago\Item();
-        $item->title = $dados["ds_bairro"]; //titulo
-        $item->quantity = 1; //quantidade
+        "\$item".$dados["id_carrinho"] = new MercadoPago\Item(); 
+        "\$item".$dados["id_carrinho"]->title = $dados["ds_bairro"]; //titulo
+        "\$item".$dados["id_carrinho"]->quantity = 1; //quantidade
         $Rvirgula = str_replace(".", "", $dados["nu_valor_alugado"]); 
         $Rzero = str_replace(",00", "", $Rvirgula); 
         $Rrs = str_replace("R$ ", "", $Rzero);
         $valor = $Rrs; 
-        $item->unit_price = (double)$valor; //preço
-        $preference->items = array($item);
+        "\$item".$dados["id_carrinho"]->unit_price = (double)$valor; //preço
+        $preference->items = array("\$item".$dados["id_carrinho"]);
     }
     
 
