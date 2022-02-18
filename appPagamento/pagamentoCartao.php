@@ -31,7 +31,7 @@
         $valor = $Rrs; 
         $$items->unit_price = (double)$valor; //preço
         $preference->items = array($$items);
-        $total++;
+        $total = $total + 1;
     }
     
 
