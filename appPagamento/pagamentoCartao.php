@@ -21,15 +21,16 @@
    
     $total = 1;
     while($dados = $retorno->fetch()){
-        ${$item . $total} = new MercadoPago\Item(); 
-        ${$item . $total}->title = $dados["ds_bairro"]; //titulo
-        ${$item . $total}->quantity = 1; //quantidade
+        $items = $total;
+        $$items = new MercadoPago\Item(); 
+        $$items->title = $dados["ds_bairro"]; //titulo
+        $$items->quantity = 1; //quantidade
         $Rvirgula = str_replace(".", "", $dados["nu_valor_alugado"]); 
         $Rzero = str_replace(",00", "", $Rvirgula); 
         $Rrs = str_replace("R$ ", "", $Rzero);
         $valor = $Rrs; 
-        ${$item . $total}->unit_price = (double)$valor; //preço
-        $preference->items = array(${$item . $total});
+        $$items->unit_price = (double)$valor; //preço
+        $preference->items = array($$items);
         $total++;
     }
     
