@@ -19,17 +19,18 @@
 
     $preference = new MercadoPago\Preference();
    
-
+    $total = 1;
     while($dados = $retorno->fetch()){
-        "\$item".$dados["id_carrinho"] = new MercadoPago\Item(); 
-        "\$item".$dados["id_carrinho"]->title = $dados["ds_bairro"]; //titulo
-        "\$item".$dados["id_carrinho"]->quantity = 1; //quantidade
+        ${$item . $total} = new MercadoPago\Item(); 
+        ${$item . $total}->title = $dados["ds_bairro"]; //titulo
+        ${$item . $total}->quantity = 1; //quantidade
         $Rvirgula = str_replace(".", "", $dados["nu_valor_alugado"]); 
         $Rzero = str_replace(",00", "", $Rvirgula); 
         $Rrs = str_replace("R$ ", "", $Rzero);
         $valor = $Rrs; 
-        "\$item".$dados["id_carrinho"]->unit_price = (double)$valor; //preço
-        $preference->items = array("\$item".$dados["id_carrinho"]);
+        ${$item . $total}->unit_price = (double)$valor; //preço
+        $preference->items = array(${$item . $total});
+        $total++;
     }
     
 
