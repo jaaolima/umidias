@@ -4,7 +4,7 @@
     error_reporting(E_ALL);
     require_once '../vendor/autoload.php';
 
-    MercadoPago\SDK::setAccessToken("YOUR_ACCESS_TOKEN");
+    MercadoPago\SDK::setAccessToken("TEST-c0243d75-0f12-467e-a415-722af22246b9");
 
     $preference = new MercadoPago\Preference();
 
