@@ -19,6 +19,7 @@
 
     $preference = new MercadoPago\Preference();
    
+    $array = array();
     while($dados = $retorno->fetch()){
         $$dados["id_carrinho"] = new MercadoPago\Item(); 
         $$dados["id_carrinho"]->title = $dados["ds_bairro"]; //titulo
@@ -28,8 +29,10 @@
         $Rrs = str_replace("R$ ", "", $Rzero);
         $valor = $Rrs; 
         $$dados["id_carrinho"]->unit_price = (double)$valor; //preço
-        $preference->items = array($$dados["id_carrinho"]);
+        array_push($array, $$dados["id_carrinho"]);
     }
+
+    $preference->items = $array;
     
 
     $preference->back_urls = array(
