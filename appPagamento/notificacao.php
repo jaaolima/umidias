@@ -32,8 +32,7 @@ require_once("../Classes/Cliente.php");
 $id_usuario = $_SESSION["id_usuario"];
 $cliente = new Cliente();
 $cliente->AlugarCarrinho($id_usuario);
-var_dump($_REQUEST);
 $cliente->GravarPagamento($_REQUEST, $id_usuario);
-// header("index.php");
+header("index.php");
 
 ?>
