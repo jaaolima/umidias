@@ -561,9 +561,8 @@
     			print "ERRO:".$e->getMessage();	
 			}	
 		}
-		public function alugarCarrinho(array $dados)
+		public function alugarCarrinho($id_usuario)
 		{
-			$id_usuario = $dados["id_usuario"];
 
 			try{
 				$con = Conecta::criarConexao();
