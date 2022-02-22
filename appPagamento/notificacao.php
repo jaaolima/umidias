@@ -33,6 +33,6 @@ $id_usuario = $_SESSION["id_usuario"];
 $cliente = new Cliente();
 $cliente->AlugarCarrinho($id_usuario);
 $cliente->GravarPagamento($_REQUEST, $id_usuario);
-header("index.php");
+header("location: index.php");
 
 ?>
