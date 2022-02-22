@@ -25,7 +25,7 @@
 		header("location: principal.php");
 		exit();
 	}
-	$id_usuario = $_SESSION["id_usuario"];
+	$id_usuario = $_SESSION["id_usuario"]; 
 
 	if($_SESSION["id_perfil"] != 2){
 		$id_parceiro = NULL;
