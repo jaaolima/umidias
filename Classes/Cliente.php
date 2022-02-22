@@ -650,7 +650,7 @@
 					$paramsDelete = array(':id_usuario' => $id_usuario); 
 					$stmtDelete->execute($paramsDelete);
 
-					header("../index.php");
+					header("index.php");
 					
 						
 				}
