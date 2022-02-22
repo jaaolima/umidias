@@ -1,4 +1,8 @@
 <?php 
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
+
 
 $colletion_id = $_REQUEST["collection_id"];
 
@@ -29,6 +33,4 @@ $id_usuario = $_SESSION["id_usuario"];
 $cliente = new Cliente();
 $cliente->AlugarCarrinho($id_usuario);
 
-echo '<pre>';
-var_dump($payments_info);
 ?>

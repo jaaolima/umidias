@@ -606,7 +606,7 @@
 											':nu_valor_alugado' => $nu_valor_alugado);
 											
 							$stmt->execute($params);
-
+							redirectTo("../index.php");
 							
 							
 						}
@@ -633,6 +633,7 @@
 											':nu_valor_alugado' => $nu_valor_alugado);
 											
 							$stmt->execute($params);
+							redirectTo("../index.php");
 							
 						}
 						catch(exception $e)
