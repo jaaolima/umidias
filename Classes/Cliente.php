@@ -605,7 +605,6 @@
 											':nu_valor_alugado' => $nu_valor_alugado);
 											
 							$stmt->execute($params);
-							redirectTo("../index.php");
 							
 							
 						}
@@ -632,7 +631,6 @@
 											':nu_valor_alugado' => $nu_valor_alugado);
 											
 							$stmt->execute($params);
-							redirectTo("../index.php");
 							
 						}
 						catch(exception $e)
@@ -651,8 +649,8 @@
 					$stmtDelete = $con->prepare($delete); 
 					$paramsDelete = array(':id_usuario' => $id_usuario); 
 					$stmtDelete->execute($paramsDelete);
-	
-					echo "Carrinho esvaziado";
+
+					header("../index.php");
 					
 						
 				}
