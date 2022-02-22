@@ -671,8 +671,8 @@
 
 		public function GravarPagamento(array $dados, $id_usuario)
 		{
-			$colletion_id 			= $dados["colletion_id"];
-			$colletion_status 		= $dados["colletion_status"];
+			$collection_id 			= $dados["collection_id"];
+			$collection_status 		= $dados["collection_status"];
 			$payment_id 			= $dados["payment_id"];
 			$status 				= $dados["status"];
 			$external_reference 	= $dados["external_reference"];
@@ -686,14 +686,14 @@
 
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into rl_pagamento (id_usuario, colletion_id, colletion_status, payment_id, status, external_reference, payment_type, merchant_order_id, preference_id, site_id, processing_mode, merchant_account_id )
-							VALUES (:id_usuario, :colletion_id, :colletion_status, :payment_id, :status, :external_reference, :payment_type, :merchant_order_id, :preference_id, :site_id, :processing_mode, :merchant_account_id)";
+				$insert = "INSERT into rl_pagamento (id_usuario, collection_id, collection_status, payment_id, status, external_reference, payment_type, merchant_order_id, preference_id, site_id, processing_mode, merchant_account_id )
+							VALUES (:id_usuario, :collection_id, :collection_status, :payment_id, :status, :external_reference, :payment_type, :merchant_order_id, :preference_id, :site_id, :processing_mode, :merchant_account_id)";
 				
 				$stmt = $con->prepare($insert);
 				 
 				$params = array(':id_usuario' => $id_usuario,
-								':colletion_id' => $colletion_id,
-								':colletion_status' => $colletion_status,
+								':collection_id' => $collection_id,
+								':collection_status' => $collection_status,
 								':payment_id' => $payment_id,
 								':status' => $status,
 								':external_reference' => $external_reference,
