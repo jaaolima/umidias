@@ -117,7 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <div class='my-4 mx-15 text-left'>
                                                             <div class='d-flex ml-n8'>
                                                                 <div class='mt-1'>
-                                                                    <i class='flaticon-calendar-1'></i>
+                                                                    <i class='flaticon-calendar-1 icon-xl' style='color:black;'></i>
                                                                 </div>
                                                                 <div class='ml-2'>
                                                                     <span class='text-dark font-weight-bold text-dark font-size-h4'>Data</span><br>
