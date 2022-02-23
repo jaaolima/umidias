@@ -29,7 +29,7 @@ $(document).ready(function() {
 					}
 				});		
 			}	
-		}); 
+		});  
 		$("#cancelar").on("click", function(){
 			$('#form_usuario').trigger("reset");
 			redirectTo("appPonto/listar_ponto.php");
@@ -100,11 +100,16 @@ $(document).ready(function() {
 		"mask": "9,99 x 9,99", 
 		numericInput: true,
 	});
-	$("#nu_valor").inputmask({ 
-		'alias': 'numeric',
+	$("#nu_valor").inputmask({  
+		'alias': 'numeric', 
 		'groupSeparator': '.',
 		'autoGroup': true,
+		'digits': 2,
+		'radixPoint': ",",
+		'digitsOptional': false,
+		'allowMinus': false,
 		'prefix': 'R$ ',
+		'placeholder': ''
 	});
 	
 });

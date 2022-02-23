@@ -114,7 +114,7 @@ $(document).ready(function() {
 		numericInput: true,
 	});
 	$("#nu_valor").inputmask({  
-		'alias': 'numeric',
+		'alias': 'numeric', 
 		'groupSeparator': '.',
 		'autoGroup': true,
 		'digits': 2,
