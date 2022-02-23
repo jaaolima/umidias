@@ -589,7 +589,7 @@
 					$id_status_midia = 1;
 					switch ($status) {
 						case "approved":
-							$id_status_midia = 2;
+							$id_status_midia = 3;
 							break;
 						
 						case "pending":
