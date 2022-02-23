@@ -561,7 +561,7 @@
     			print "ERRO:".$e->getMessage();	
 			}	
 		}
-		public function alugarCarrinho($id_usuario)
+		public function alugarCarrinho($id_usuario, $status)
 		{
 
 			try{
@@ -586,14 +586,22 @@
 					$id_material	= $dadosCarrinho['id_material'];
 					$nu_valor_alugado	= $dadosCarrinho['nu_valor_alugado'];
 
-					
-					
+					$id_status_midia = 1;
+					switch ($status) {
+						case "approved":
+							$id_status_midia = 2;
+							break;
+						
+						case "pending":
+							$id_status_midia = 1;
+							break;
+					}
 					if($id_midia == 2){
 		
 						try{
 							$con = Conecta::criarConexao();
-							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
-										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1, :nu_valor_alugado)";
+							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado, id_status_midia)
+										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1, :nu_valor_alugado, :id_status_midia)";
 							
 							$stmt = $con->prepare($insert);
 							 
@@ -602,7 +610,8 @@
 											':dt_inicial' => $dt_inicial,
 											':dt_final' => $dt_final,
 											':ds_arte' => $ds_arte,
-											':nu_valor_alugado' => $nu_valor_alugado);
+											':nu_valor_alugado' => $nu_valor_alugado,
+											':id_status_midia' => $id_status_midia);
 											
 							$stmt->execute($params);
 							
@@ -617,8 +626,8 @@
 					if($id_midia == 1){
 						try{
 							$con = Conecta::criarConexao();
-							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final,  id_material, ds_arte, nu_valor_alugado)
-										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final,  :id_material, :ds_arte, :nu_valor_alugado)";
+							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final,  id_material, ds_arte, nu_valor_alugado, id_status_midia)
+										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final,  :id_material, :ds_arte, :nu_valor_alugado, :id_status_midia)";
 							
 							$stmt = $con->prepare($insert);
 							
@@ -628,7 +637,8 @@
 											':dt_final' => $dt_final,
 											':id_material' => $id_material,
 											':ds_arte' => $ds_arte,
-											':nu_valor_alugado' => $nu_valor_alugado);
+											':nu_valor_alugado' => $nu_valor_alugado,
+											':id_status_midia' => $id_status_midia);
 											
 							$stmt->execute($params);
 							
