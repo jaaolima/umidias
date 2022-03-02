@@ -129,7 +129,7 @@ $(document).ready(function() {
 $('[name="id_midia"]').change(function(){ 
 	if($(this).val() == 1){
 		$('#material').show();
-		$('#meses_indisponiveis').show();
+		$('#meses_indisponiveis').hide();
 		return;
 	}
 	if($(this).val() == 2){
