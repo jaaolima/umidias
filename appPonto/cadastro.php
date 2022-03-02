@@ -204,83 +204,45 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                     <label>Observações <span class="text-danger">*</span></label>
                     <textarea type="text" class="form-control" id="ds_observacao" name="ds_observacao"></textarea>
                 </div> -->
-            </div>   
-            <?php if($id_midia == 1) : ?>
-            <div class="form-group row" id="bisemanas_indisponiveis" style="display:none;">
-                <div class="col-6">
-                    <label>Bisemanas Indiponíveis (Opcional)</label>
-                    <table  class="table table-hover" id="table_bisemana">
-                        <thead>
-                            <tr>
-                                <th>ID bisemanas</th>
-                                <th>Data Inicial</th>
-                                <th>Data Final</th>
-                                <th>Bisemanas Disponiveis</th>
-                                <th>Selecione</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                while ($dadosBisemana = $optionsbisemana->fetch())
-                                {
+            </div> 
+            <?php if($id_perfil == 3) : ?>
+                <div class="form-group row" id="bisemanas_indisponiveis" style="display:none;">
+                    <div class="col-6">
+                        <label>Bisemanas Indiponíveis (Opcional)</label>
+                        <table  class="table table-hover" id="table_bisemana">
+                            <thead>
+                                <tr>
+                                    <th>ID bisemanas</th>
+                                    <th>Data Inicial</th>
+                                    <th>Data Final</th>
+                                    <th>Bisemanas Disponiveis</th>
+                                    <th>Selecione</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    while ($dadosBisemana = $optionsbisemana->fetch())
+                                    {
 
-                                    $dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
-                                    $dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
+                                        $dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
+                                        $dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
 
 
-                                    echo "<tr>
-                                            <td>".$dadosBisemana['id_bisemana']."</td>
-                                            <td>".$dt_inicial."</td>
-                                            <td>".$dt_final."</td>
-                                            <td>".$dadosBisemana['ds_bisemana']."</td>
-                                            <td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox'></td>
-                                        </tr>";
-                                }
-                            ?>
-                        </tbody>
-                    </table>
+                                        echo "<tr>
+                                                <td>".$dadosBisemana['id_bisemana']."</td>
+                                                <td>".$dt_inicial."</td>
+                                                <td>".$dt_final."</td>
+                                                <td>".$dadosBisemana['ds_bisemana']."</td>
+                                                <td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox'></td>
+                                            </tr>";
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    
                 </div>
-                
-            </div>
-            <div class="form-group row" id="meses_indisponiveis" style="display:none;">
-                <div class="col-6">
-                    <label>Meses Indiponíveis (Opcional)</label>
-                    <table  class="table table-hover" id="table_mes">
-                        <thead>
-                            <tr>
-                                <th>ID mes</th>
-                                <th>Data Inicial</th>
-                                <th>Data Final</th>
-                                <th>Meses Disponiveis</th>
-                                <th>Selecione</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                while ($dadosMes = $optionsMes->fetch())
-                                {
-
-                                    $dt_inicial = date('d/m/Y', strtotime($dadosMes["dt_inicial"]));
-                                    $dt_final = date('d/m/Y', strtotime($dadosMes["dt_final"]));
-
-
-                                    echo "<tr>
-                                            <td>".$dadosMes['id_mes']."</td>
-                                            <td>".$dt_inicial."</td>
-                                            <td>".$dt_final."</td>
-                                            <td>".$dadosMes['ds_mes']."</td>
-                                            <td><input name='mes[]' id='".$dadosMes["id_mes"]."' value='".$dadosMes['id_mes']."' type='checkbox'></td>
-                                        </tr>";
-                                }
-                            ?>
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
-            <?php endif; ?>
-            <?php if($id_midia == 2) : ?>
-                <div class="form-group row" id="meses_indisponiveis">
+                <div class="form-group row" id="meses_indisponiveis" style="display:none;">
                     <div class="col-6">
                         <label>Meses Indiponíveis (Opcional)</label>
                         <table  class="table table-hover" id="table_mes">
@@ -316,6 +278,120 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                     </div>
                     
                 </div>
+            <?php endif; ?>
+            <?php if($id_perfil == 2) : ?>
+                <?php if($id_midia == 1) : ?>
+                    <div class="form-group row" id="bisemanas_indisponiveis" style="display:none;">
+                        <div class="col-6">
+                            <label>Bisemanas Indiponíveis (Opcional)</label>
+                            <table  class="table table-hover" id="table_bisemana">
+                                <thead>
+                                    <tr>
+                                        <th>ID bisemanas</th>
+                                        <th>Data Inicial</th>
+                                        <th>Data Final</th>
+                                        <th>Bisemanas Disponiveis</th>
+                                        <th>Selecione</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        while ($dadosBisemana = $optionsbisemana->fetch())
+                                        {
+
+                                            $dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
+                                            $dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
+
+
+                                            echo "<tr>
+                                                    <td>".$dadosBisemana['id_bisemana']."</td>
+                                                    <td>".$dt_inicial."</td>
+                                                    <td>".$dt_final."</td>
+                                                    <td>".$dadosBisemana['ds_bisemana']."</td>
+                                                    <td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox'></td>
+                                                </tr>";
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group row" id="meses_indisponiveis" style="display:none;">
+                        <div class="col-6">
+                            <label>Meses Indiponíveis (Opcional)</label>
+                            <table  class="table table-hover" id="table_mes">
+                                <thead>
+                                    <tr>
+                                        <th>ID mes</th>
+                                        <th>Data Inicial</th>
+                                        <th>Data Final</th>
+                                        <th>Meses Disponiveis</th>
+                                        <th>Selecione</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        while ($dadosMes = $optionsMes->fetch())
+                                        {
+
+                                            $dt_inicial = date('d/m/Y', strtotime($dadosMes["dt_inicial"]));
+                                            $dt_final = date('d/m/Y', strtotime($dadosMes["dt_final"]));
+
+
+                                            echo "<tr>
+                                                    <td>".$dadosMes['id_mes']."</td>
+                                                    <td>".$dt_inicial."</td>
+                                                    <td>".$dt_final."</td>
+                                                    <td>".$dadosMes['ds_mes']."</td>
+                                                    <td><input name='mes[]' id='".$dadosMes["id_mes"]."' value='".$dadosMes['id_mes']."' type='checkbox'></td>
+                                                </tr>";
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                <?php endif; ?>
+                <?php if($id_midia == 2) : ?>
+                    <div class="form-group row" id="meses_indisponiveis">
+                        <div class="col-6">
+                            <label>Meses Indiponíveis (Opcional)</label>
+                            <table  class="table table-hover" id="table_mes">
+                                <thead>
+                                    <tr>
+                                        <th>ID mes</th>
+                                        <th>Data Inicial</th>
+                                        <th>Data Final</th>
+                                        <th>Meses Disponiveis</th>
+                                        <th>Selecione</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        while ($dadosMes = $optionsMes->fetch())
+                                        {
+
+                                            $dt_inicial = date('d/m/Y', strtotime($dadosMes["dt_inicial"]));
+                                            $dt_final = date('d/m/Y', strtotime($dadosMes["dt_final"]));
+
+
+                                            echo "<tr>
+                                                    <td>".$dadosMes['id_mes']."</td>
+                                                    <td>".$dt_inicial."</td>
+                                                    <td>".$dt_final."</td>
+                                                    <td>".$dadosMes['ds_mes']."</td>
+                                                    <td><input name='mes[]' id='".$dadosMes["id_mes"]."' value='".$dadosMes['id_mes']."' type='checkbox'></td>
+                                                </tr>";
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                <?php endif; ?>
             <?php endif; ?>
         </div>
         <div class="card-footer">

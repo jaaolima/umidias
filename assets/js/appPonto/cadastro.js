@@ -129,11 +129,32 @@ $(document).ready(function() {
 $('[name="id_midia"]').change(function(){ 
 	if($(this).val() == 1){
 		$('#material').show();
+		$('#meses_indisponiveis').show();
+		return;
+	}
+	if($(this).val() == 2){
+		$('#bisemanas_indisponiveis').hide();
+		$('#meses_indisponiveis').show();
 		return;
 	}
 
 	$('#material').hide();
 	$('[name="id_material"]').prop('checked', false);
+
+
+	
+});
+$('[name="id_periodo"]').change(function(){ 
+	if($(this).val() == 1){
+		$('#bisemanas_indisponiveis').show();
+		$('#meses_indisponiveis').hide();
+		return;
+	}
+	if($(this).val() == 2){
+		$('#meses_indisponiveis').show();
+		$('#bisemanas_indisponiveis').hide();
+		return;
+	}
 
 
 	
