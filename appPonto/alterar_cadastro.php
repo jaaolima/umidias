@@ -311,6 +311,7 @@ var demo3 = function() {
 					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
 				}
 			});	
+            Geocoding(e.latLng.lat(), e.latLng.lng());
 			map.setZoom(5);
 			$("#ds_latitude").val(e.latLng.lat());
 			$("#ds_longitude").val(e.latLng.lng());
@@ -333,7 +334,19 @@ var demo3 = function() {
 
 
 }
-
+function Geocoding(lat, long){
+    latlgn = lat + "," + long;
+    console.log(latlgn);
+    $.ajax({
+        url: 'https://maps.googleapis.com/maps/api/geocode/json'
+        , type: 'get'
+        , data: {latlng : latlgn, key: 'AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM'}
+        , success: function(data) {
+            $("#ds_descricao").val(data['results'][0]['formatted_address']);
+        }
+    });
+    
+}
 
 
 //let marcas = [];
