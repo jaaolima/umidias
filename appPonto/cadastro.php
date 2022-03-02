@@ -333,7 +333,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
 jQuery(document).ready(function() {
     demo3(-15.7750656, -48.0773014);
 });
-var demo3 = function(latitude, longitude) {
+var demo3 = function(latitude, longitude) { 
 	var map = new GMaps({
 		div: '#map',
         lat: latitude,
@@ -349,13 +349,29 @@ var demo3 = function(latitude, longitude) {
 				infoWindow: {
 					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
 				}
+
 			});	
+
+            Geocoding(e.latLng.lat(), e.latLng.lng());
 			map.setZoom(5);
 			$("#ds_latitude").val(e.latLng.lat());
 			$("#ds_longitude").val(e.latLng.lng());
 		},
 	}); 
 
+}
+Geocoding(lat, long){
+    latlgn = lat + "," + long;
+    console.log(latlgn);
+    $.ajax({
+        url: 'https://maps.googleapis.com/maps/api/geocode/json'
+        , type: 'get'
+        , data: {latlng : latlgn, key: 'AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM'}
+        , success: function(html) {
+            $("#ds_descricao").val(html);      
+        }
+    });
+    
 }
 
 
