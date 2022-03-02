@@ -448,7 +448,7 @@ function Geocoding(lat, long){
         , type: 'get'
         , data: {latlng : latlgn, key: 'AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM'}
         , success: function(data) {
-            console.log(data['results'][0]['formatted_address'])
+            $("#ds_descricao").val(data['results'][0]['formatted_address']);
         }
     });
     
