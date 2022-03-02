@@ -172,6 +172,10 @@ $optionsSentido = $Bairro->listaroptionsBairro($ds_sentido);
                             <label >Longitude<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" value="<?php echo $dados['ds_longitude']?>" readonly/>
                         </div> 
+                        <div class="form-group col-12">
+                            <label>Descrição <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_descricao']?>" readonly/>
+                        </div> 
                     </div>
                 </div>
             </div>
