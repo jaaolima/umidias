@@ -436,7 +436,7 @@ var demo3 = function(latitude, longitude) {
 	}); 
 
 }
-Geocoding(lat, long){
+function Geocoding(lat, long){
     latlgn = lat + "," + long;
     console.log(latlgn);
     $.ajax({
