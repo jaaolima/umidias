@@ -228,17 +228,17 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Material</h3> 
                                                     </div>
                                                     <div class="my-6 mx-6">
-														<div class="form-group">
-															<label>Apenas um material para todas as bisemanas?</label>
+														<div class="form-group" id="material_para_todos" style="display:none;">
+															<label>Apenas um material para todas as bisemanas?</label><br>
 															<div class="form-check form-check form-check-inline">
-																<input class="form-check-input" type="radio" name="id_material_total" id="id_material_total_sim" value="sim" checked>
-																<label class="form-check-label" for="id_material_total_sim">
+																<input class="form-check-input" type="radio" name="st_material_para_todos" id="st_material_para_todos_sim" value="sim" checked>
+																<label class="form-check-label" for="st_material_para_todos_sim">
 																	Sim
 																</label>
 															</div>
 															<div class="form-check form-check form-check-inline">
-																<input class="form-check-input" type="radio" name="id_material_total" id="id_material_total_nao" value="nao">
-																<label class="form-check-label" for="id_material_total_nao">
+																<input class="form-check-input" type="radio" name="st_material_para_todos" id="st_material_para_todos_nao" value="nao">
+																<label class="form-check-label" for="st_material_para_todos_nao">
 																	Não
 																</label>
 															</div>	
@@ -583,6 +583,11 @@ License: You must have a valid license purchased only from themeforest(the above
 
 				$("#id_material").val('').change();
 				
+				if($("input[name='bisemana[]']:checked").length > 1){
+					$("#material_para_todos").show();
+				}else{
+					$("#material_para_todos").hide();
+				}
 			});
 			<?php endif; ?>
 			//calculo front
