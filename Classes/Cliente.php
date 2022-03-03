@@ -327,7 +327,7 @@
 				$id_bisemana= '';
 				for ($i=0; $i < count($bisemanas); $i++) { 
 					if($dados['st_material_para_todos'] === "sim"){
-						if($i = 0){
+						if($i == 0){
 							$id_bisemana = $bisemanas[$i];
 							$con = Conecta::criarConexao();
 							$selectBisemana = "SELECT dt_inicial, dt_final 
@@ -500,7 +500,7 @@
 				$id_mes= '';
 				for ($i=0; $i < count($meses); $i++) { 
 					if($dados['st_material_para_todos'] === "sim"){
-						if($i = 0){
+						if($i == 0){
 							$id_mes = $meses[$i];
 							$con = Conecta::criarConexao();
 							$selectmes = "SELECT dt_inicial, dt_final 
