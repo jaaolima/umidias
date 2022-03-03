@@ -493,7 +493,7 @@
 			}
 			if($id_midia == 2){
 				$id_material    = $dados['id_material'];
-				$meses 			= $dados["mes"];
+				$meses 			= $dados["mes"]; 
 
 				
 

@@ -16,7 +16,7 @@ $mail = new PHPMailer();
 // Método de envio 
 $mail->IsSMTP(); 
 
-// // Enviar por SMTP 
+// // Enviar por SMTP  
 $mail->Host = "smtp-relay.sendinblue.com"; 
 $mail->SMTPAuth = true;
 $mail->SMTPAutoTLS = false ; 
