@@ -235,11 +235,13 @@ License: You must have a valid license purchased only from themeforest(the above
 																<label class="form-check-label" for="id_material_total_sim">
 																	Sim
 																</label>
+															</div>
+															<div class="form-check form-check form-check-inline">
 																<input class="form-check-input" type="radio" name="id_material_total" id="id_material_total_nao" value="nao">
 																<label class="form-check-label" for="id_material_total_nao">
 																	Não
 																</label>
-															</div>
+															</div>	
 														</div>
 														<div class="form-group">
                                                             <label>Tipo de material</label>
