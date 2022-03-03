@@ -695,7 +695,7 @@
 							inner join tb_tipo_midia t on p.id_midia=t.id_midia
 							where id_usuario=:id_usuario
 							and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto)
-							order by p.id_midia";
+							order by a.id_status_midia";
 				
 				$stmt = $con->prepare($select); 
 				$params = array(':id_usuario' => $id_usuario);
