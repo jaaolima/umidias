@@ -630,45 +630,148 @@ License: You must have a valid license purchased only from themeforest(the above
 			//calculo material
 			var Totalmaterial = document.getElementById("valor_material");
 			$("#id_material").on("change", function(){
-				//adicionar na div material
-				let valorMaterial = $(this).find(':selected').attr('valor')
-				let valorTotalMaterial =  parseInt(valorMaterial, 10);
-				Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-
-
-				//adicionar na div total
 				<?php if($id_midia == 1) : ?>
-					<?php
-						$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
-						$Rzero = str_replace(",00", "", $Rvirgula); 
-						$Rrs = str_replace("R$ ", "", $Rzero);;
-						$valor = $Rrs;  
-					?>
-					var totalBisemana = $("input[name='bisemana[]']:checked").length;
-					let valor = <?php echo $valor; ?> * totalBisemana;
-					let total = parseInt(valor, 10);
-					valor_alugado = total + valorTotalMaterial
+					if($("input[name='bisemana[]']:checked").length > 1){
+						if($("#material_para_todos").val() === "sim"){
+							//adicionar na div material
+							let valorMaterial = $(this).find(':selected').attr('valor')
+							let valorTotalMaterial =  parseInt(valorMaterial, 10);
+							Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-					var local = document.getElementById("valor_alugado");
-					local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
-				<?php endif;?>
 
+							//adicionar na div total
+							
+							<?php
+								$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
+								$Rzero = str_replace(",00", "", $Rvirgula); 
+								$Rrs = str_replace("R$ ", "", $Rzero);;
+								$valor = $Rrs;  
+							?>
+							var totalBisemana = $("input[name='bisemana[]']:checked").length;
+							let valor = <?php echo $valor; ?> * totalBisemana;
+							let total = parseInt(valor, 10);
+							valor_alugado = total + valorTotalMaterial
+
+							var local = document.getElementById("valor_alugado");
+							local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+
+						}else{
+							//adicionar na div material
+							let valorMaterial = $(this).find(':selected').attr('valor')
+							let valorTotalMaterial =  parseInt(valorMaterial, 10);
+							valorTotalMaterial = valorTotalMaterial * parseInt($("input[name='bisemana[]']:checked").length, 10);
+							Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+
+							//adicionar na div total
+							<?php
+								$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
+								$Rzero = str_replace(",00", "", $Rvirgula); 
+								$Rrs = str_replace("R$ ", "", $Rzero);;
+								$valor = $Rrs;  
+							?>
+							var totalBisemana = $("input[name='bisemana[]']:checked").length;
+							let valor = <?php echo $valor; ?> * totalBisemana;
+							let total = parseInt(valor, 10);
+							valor_alugado = total + valorTotalMaterial
+
+							var local = document.getElementById("valor_alugado");
+							local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+						}
+					}else{
+						//adicionar na div material
+						let valorMaterial = $(this).find(':selected').attr('valor')
+						let valorTotalMaterial =  parseInt(valorMaterial, 10);
+						Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+
+						//adicionar na div total
+						<?php
+							$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
+							$Rzero = str_replace(",00", "", $Rvirgula); 
+							$Rrs = str_replace("R$ ", "", $Rzero);;
+							$valor = $Rrs;  
+						?>
+						var totalBisemana = $("input[name='bisemana[]']:checked").length;
+						let valor = <?php echo $valor; ?> * totalBisemana;
+						let total = parseInt(valor, 10);
+						valor_alugado = total + valorTotalMaterial
+
+						var local = document.getElementById("valor_alugado");
+						local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+
+					}
+				<?php endif; ?>
 				<?php if($id_midia == 2) : ?>
-					<?php
-						$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
-						$Rzero = str_replace(",00", "", $Rvirgula); 
-						$Rrs = str_replace("R$ ", "", $Rzero);;
-						$valor = $Rrs;  
-					?>
-					var totalmes = $("input[name='mes[]']:checked").length;
-					let valor = <?php echo $valor; ?> * totalmes;
-					let total = parseInt(valor, 10);
-					valor_alugado = total + valorTotalMaterial
+					if($("input[name='mes[]']:checked").length > 1){
+						if($("#material_para_todos").val() === "sim"){
+							//adicionar na div material
+							let valorMaterial = $(this).find(':selected').attr('valor')
+							let valorTotalMaterial =  parseInt(valorMaterial, 10);
+							Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-					var local = document.getElementById("valor_alugado");
-					local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
-				<?php endif;?>
+							<?php
+								$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
+								$Rzero = str_replace(",00", "", $Rvirgula); 
+								$Rrs = str_replace("R$ ", "", $Rzero);;
+								$valor = $Rrs;  
+							?>
+							var totalmes = $("input[name='mes[]']:checked").length;
+							let valor = <?php echo $valor; ?> * totalmes;
+							let total = parseInt(valor, 10);
+							valor_alugado = total + valorTotalMaterial
 
+							var local = document.getElementById("valor_alugado");
+							local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+						}else{
+							//adicionar na div material
+							let valorMaterial = $(this).find(':selected').attr('valor')
+							let valorTotalMaterial =  parseInt(valorMaterial, 10);
+							valorTotalMaterial = valorTotalMaterial * parseInt($("input[name='mes[]']:checked").length, 10);
+							Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+
+							//adicionar na div total
+
+							<?php
+								$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
+								$Rzero = str_replace(",00", "", $Rvirgula); 
+								$Rrs = str_replace("R$ ", "", $Rzero);;
+								$valor = $Rrs;  
+							?>
+							var totalmes = $("input[name='mes[]']:checked").length;
+							let valor = <?php echo $valor; ?> * totalmes;
+							let total = parseInt(valor, 10);
+							valor_alugado = total + valorTotalMaterial
+
+							var local = document.getElementById("valor_alugado");
+							local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+						}
+					}else{
+						//adicionar na div material
+						let valorMaterial = $(this).find(':selected').attr('valor')
+						let valorTotalMaterial =  parseInt(valorMaterial, 10);
+						Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+
+						//adicionar na div total
+						<?php
+							$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
+							$Rzero = str_replace(",00", "", $Rvirgula); 
+							$Rrs = str_replace("R$ ", "", $Rzero);;
+							$valor = $Rrs;  
+						?>
+						var totalmes = $("input[name='mes[]']:checked").length;
+						let valor = <?php echo $valor; ?> * totalmes;
+						let total = parseInt(valor, 10);
+						valor_alugado = total + valorTotalMaterial
+
+						var local = document.getElementById("valor_alugado");
+						local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+
+					}
+				<?php endif; ?>
+				
 				
 
 				
