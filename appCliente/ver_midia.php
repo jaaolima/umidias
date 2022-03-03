@@ -551,6 +551,12 @@ License: You must have a valid license purchased only from themeforest(the above
 				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 
 				$("#id_material").val('').change();
+
+				if($("input[name='bisemana[]']:checked").length > 1){
+					$("#material_para_todos").show();
+				}else{
+					$("#material_para_todos").hide();
+				}
 				
 			});
 
