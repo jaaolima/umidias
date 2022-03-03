@@ -508,18 +508,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		// to the base of the flagpole.
 		jQuery(document).ready(function() {
 			demo3();
-			chaves = <?php
-				$dateRange = array();
-				while($dadosProximo = $ProximosAlugados->fetch()){
-					$dateStart = new DateTime($dadosProximo['dt_inicial']);
-					$dateEnd =  new DateTime($dadosProximo['dt_final']);
-					while($dateStart <= $dateEnd){
-						$dateRange[] = $dateStart->format('Y-m-d');
-						$dateStart = $dateStart->modify('+1day'); 
-					}
-				}
-				echo json_encode($dateRange); 
-			?>
 
 			//calculo outdoor
 			<?php if($id_midia == 1) : ?>
@@ -565,8 +553,14 @@ License: You must have a valid license purchased only from themeforest(the above
 				$("#id_material").val('').change();
 				
 			});
-			<?php endif; ?>
 
+			
+			<?php endif; ?>
+			
+			$("input[name='st_material_para_todos']").on("click", function(){
+				$("#id_material").val('').change();
+				
+			});
 
 			//calculo material
 			var Totalmaterial = document.getElementById("valor_material");
