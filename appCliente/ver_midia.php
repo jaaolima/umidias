@@ -552,7 +552,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 				$("#id_material").val('').change();
 
-				if($("input[name='bisemana[]']:checked").length > 1){
+				if($("input[name='mes[]']:checked").length > 1){
 					$("#material_para_todos").show();
 				}else{
 					$("#material_para_todos").hide();
