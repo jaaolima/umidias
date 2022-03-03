@@ -632,7 +632,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			$("#id_material").on("change", function(){
 				<?php if($id_midia == 1) : ?>
 					if($("input[name='bisemana[]']:checked").length > 1){
-						if($("#material_para_todos").val() == "sim"){
+						if($("nput[name='st_material_para_todos']:checked").val() === "sim"){
 							//adicionar na div material
 							let valorMaterial = $(this).find(':selected').attr('valor')
 							let valorTotalMaterial =  parseInt(valorMaterial, 10);
@@ -704,7 +704,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<?php endif; ?>
 				<?php if($id_midia == 2) : ?>
 					if($("input[name='mes[]']:checked").length > 1){
-						if($("#material_para_todos").val() === "sim"){
+						if($("nput[name='st_material_para_todos']:checked").val() === "sim"){
 							//adicionar na div material
 							let valorMaterial = $(this).find(':selected').attr('valor')
 							let valorTotalMaterial =  parseInt(valorMaterial, 10);
