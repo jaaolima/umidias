@@ -228,15 +228,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Material</h3> 
                                                     </div>
                                                     <div class="my-6 mx-6">
-														<div class="form-group">
-                                                            <label>Tipo de material</label>
-                                                            <select name="id_material" id="id_material" class="form-control">
-                                                                <option valor="0" value="">Selecione...</option>
-                                                                <?php 
-                                                                    echo $optionsMaterial;
-                                                                ?>
-                                                            </select>
-                                                        </div>
 														<div class="form-group" id="material_para_todos" style="display:none;">
 															<label>Apenas um material para todas as bisemanas?</label><br>
 															<div class="form-check form-check form-check-inline">
@@ -252,6 +243,15 @@ License: You must have a valid license purchased only from themeforest(the above
 																</label>
 															</div>	
 														</div>
+														<div class="form-group">
+                                                            <label>Tipo de material</label>
+                                                            <select name="id_material" id="id_material" class="form-control">
+                                                                <option valor="0" value="">Selecione...</option>
+                                                                <?php 
+                                                                    echo $optionsMaterial;
+                                                                ?>
+                                                            </select>
+                                                        </div>
                                                     </div>
                                                     <div class="separator separator-solid"></div>
                                                     <div class="my-6 mx-6">
@@ -370,15 +370,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Material</h3>
                                                     </div>
                                                     <div class="my-6 mx-6" >
-														<div class="form-group">
-                                                            <label>Tipo de material</label>
-                                                            <select name="id_material" id="id_material" class="form-control">
-                                                                <option valor="0" value="">Selecione...</option>
-                                                                <?php 
-                                                                    echo $optionsMaterial;
-                                                                ?>
-                                                            </select>
-                                                        </div>
 														<div class="form-group" id="material_para_todos" style="display:none;">
 															<label>Apenas um material para todas as bisemanas?</label><br>
 															<div class="form-check form-check form-check-inline">
@@ -394,6 +385,15 @@ License: You must have a valid license purchased only from themeforest(the above
 																</label>
 															</div>	
 														</div>
+														<div class="form-group">
+                                                            <label>Tipo de material</label>
+                                                            <select name="id_material" id="id_material" class="form-control">
+                                                                <option valor="0" value="">Selecione...</option>
+                                                                <?php 
+                                                                    echo $optionsMaterial;
+                                                                ?>
+                                                            </select>
+                                                        </div>
                                                     </div>
                                                     <div class="separator separator-solid"></div>
                                                     <div class="my-6 mx-6">
