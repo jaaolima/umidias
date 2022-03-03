@@ -329,7 +329,12 @@
 				$Rrs = str_replace("R$ ", "", $Rzero);
 				$valor = $Rrs; 
 
-				$nu_valor_alugado = $valor + $dadosMaterial["nu_valor"];
+				if($dados['st_material_para_todos'] === "sim"){
+					$nu_valor_alugado = $valor + $dadosMaterial["nu_valor"];
+				}else{
+					$nu_valor_alugado = $valor + ($dadosMaterial["nu_valor"] * count($bisemanas));
+				}
+				
 
 				$nu_valor_alugado = "R$ " . number_format($nu_valor_alugado,2,",",".");
 
@@ -388,7 +393,12 @@
 				$Rzero = str_replace(",00", "", $Rvirgula); 
 				$Rrs = str_replace("R$ ", "", $Rzero);
 				$valor = $Rrs; 
-				$nu_valor_alugado = $valor + $dadosMaterial["nu_valor"];
+				
+				if($dados['st_material_para_todos'] === "sim"){
+					$nu_valor_alugado = $valor + $dadosMaterial["nu_valor"];
+				}else{
+					$nu_valor_alugado = $valor + ($dadosMaterial["nu_valor"] * count($bisemanas));
+				}
 
 				$nu_valor_alugado = "R$ " . number_format($nu_valor_alugado,2,",",".");
 
