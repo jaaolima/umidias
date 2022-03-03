@@ -521,65 +521,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				echo json_encode($dateRange); 
 			?>
 
-			//datapicker
-			$('#dt_inicial_final').daterangepicker({
-				autoUpdateInput: false,
-				isInvalidDate: function(date){ 
-					if(chaves.indexOf(date.format('YYYY-MM-DD')) > -1){ 
-						return true;
-					}
-				},
-				
-				minDate: new Date(), 
-				// ranges: {
-				// 	'1 mês': [moment(), moment()],
-				// 	'2 meses': [moment().add(), moment()],
-				// 	'3 meses': [moment(), moment()],
-				// },
-				"locale": {
-					"format": "DD/MM/YYYY",
-					"separator": " - ",
-					"applyLabel": "Aplicar", 
-					"cancelLabel": "Cancelar",
-					"fromLabel": "De",
-					"toLabel": "Para",
-					"customRangeLabel": "Custumizar",
-					"weekLabel": "S",
-					"daysOfWeek": [
-						"Dom",
-						"Seg",
-						"Ter",
-						"Qua",
-						"Qui",
-						"Sex",
-						"Sab"
-					],
-					"monthNames": [
-						"Janeiro",
-						"Fervereiro",
-						"Março",
-						"Abril",
-						"Maio",
-						"Junho",
-						"Julho",
-						"Agosto",
-						"Setembro",
-						"Outubro",
-						"Novembro",
-						"Dezembro"
-					],
-					"firstDay": 1
-				},
-			});
-		
-			$('#dt_inicial_final').on('apply.daterangepicker', function(ev, picker) {
-				$(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
-			});
-		
-			$('#dt_inicial_final').on('cancel.daterangepicker', function(ev, picker) {
-				$(this).val('');
-			});
-
 			//calculo outdoor
 			<?php if($id_midia == 1) : ?>
 				
