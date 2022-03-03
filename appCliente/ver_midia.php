@@ -228,7 +228,17 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Material</h3> 
                                                     </div>
                                                     <div class="my-6 mx-6">
-
+														<div class="form-check">
+															<label>Apenas um material para todas as bisemanas?</label>
+															<input class="form-check-input" type="radio" name="id_material_total" id="id_material_total_sim" value="sim" checked>
+															<label class="form-check-label" for="id_material_total_sim">
+																Sim
+															</label>
+															<input class="form-check-input" type="radio" name="id_material_total" id="id_material_total_nao" value="nao">
+															<label class="form-check-label" for="id_material_total_nao">
+																Não
+															</label>
+														</div>
 														<div class="form-group">
                                                             <label>Tipo de material</label>
                                                             <select name="id_material" id="id_material" class="form-control">
