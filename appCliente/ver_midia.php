@@ -332,7 +332,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="my-6 mx-6">
                                                         <h3 class="font-weight-bolder">Datas Disponíveis</h3>
                                                     </div>
-                                                    <div class="d-flex my-6 mx-6" >
+                                                    <div class="my-6 mx-6" >
 														<table  class="table table-hover w-100" id="table_mes">
                                                             <thead>
                                                                 <tr>
