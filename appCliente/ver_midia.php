@@ -594,11 +594,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							//adicionar na div material
 							let valorMaterial = $(this).find(':selected').attr('valor')
 							let valorTotalMaterial =  parseInt(valorMaterial, 10);
-							valorTotalMaterial = valorTotalMaterial * parseInt($("input[name='bisemana[]']:checked").length, 10);
 							Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
 
 							//adicionar na div total
+							//mutiplicando o valor material pela quantidade de bisemanas
+							valorTotalMaterial = valorTotalMaterial * parseInt($("input[name='bisemana[]']:checked").length, 10);
 							<?php
 								$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
 								$Rzero = str_replace(",00", "", $Rvirgula); 
@@ -662,12 +663,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							//adicionar na div material
 							let valorMaterial = $(this).find(':selected').attr('valor')
 							let valorTotalMaterial =  parseInt(valorMaterial, 10);
-							valorTotalMaterial = valorTotalMaterial * parseInt($("input[name='mes[]']:checked").length, 10);
 							Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
 
 							//adicionar na div total
-
+							//mutiplicando o valor material pela quantidade de mes
+							valorTotalMaterial = valorTotalMaterial * parseInt($("input[name='mes[]']:checked").length, 10);
 							<?php
 								$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
 								$Rzero = str_replace(",00", "", $Rvirgula); 
