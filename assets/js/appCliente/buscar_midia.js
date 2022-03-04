@@ -142,34 +142,13 @@ function dateToEN(date)
 
 function validarAplicarBisemana()
 {
-	var bisemana = $("input[name='bisemana']:checked").val();
- 
-    if(!bisemana) 
+
+    if($("input[name='bisemana']:checked").length == 0) 
     {
         swal.fire("Erro", "Escolha uma Bisemana", "error");
         return false;	
     }
 
-	
-	
-	
-
-	return true;
-}
-
-function validarAplicarBisemana()
-{
-	var bisemana = $("input[name='bisemana']:checked").val();
- 
-    if(!bisemana) 
-    {
-        swal.fire("Erro", "Escolha uma Bisemana", "error");
-        return false;	
-    }
-
-	
-	
-	
 
 	return true;
 }
