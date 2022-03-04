@@ -538,6 +538,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							if(anterior + 1 != $(this).val()){
 								qtdMaterial++;
 							}
+							anterior = $(this).val();
 						}
 						
 					});
