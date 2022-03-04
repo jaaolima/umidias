@@ -535,9 +535,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						if(i == 0){
 							anterior = $(this).val();
 						}else{
-							if(anterior + 1 !== $(this).val()){
-								console.log(anterior + 1);
-								console.log($(this).val());
+							if(parseInt(anterior) + parseInt(1) != $(this).val()){
 								qtdMaterial++;
 							}
 							anterior = $(this).val();
