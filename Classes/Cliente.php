@@ -347,10 +347,12 @@
 						$anterior = $id_bisemana;
 					}
 				}
+				var_dump($qtdMaterial);
 				
 				$valorMaterial = $dadosMaterial["nu_valor"] * $qtdMaterial;
 
-
+				var_dump($valorMaterial);
+				var_dump(count($bisemanas));
 				$nu_valor_alugado = $valor + ($valorMaterial / count($bisemanas));
 
 				$nu_valor_alugado = "R$ " . number_format($nu_valor_alugado,2,",",".");
