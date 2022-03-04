@@ -380,12 +380,14 @@ License: You must have a valid license purchased only from themeforest(the above
 																<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Valor da unidade do mês"><i class="flaticon-questions-circular-button"></i></a>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><?php echo $dados["nu_valor"];?>
-																<div class="w-100 float-right">
-																	<div id="qtdMes">(x0)</div>
-																	<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Quantidade de materiais necessários"><i class="flaticon-questions-circular-button"></i></a>
-																</div>
-															</span>
+                                                                <span class="font-weight-bolder text-right">
+																	<?php echo $dados["nu_valor"];?>
+																	<div class="w-100 float-right">
+																		<div id="qtdMes">(x0)</div>
+																		<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Quantidade de materiais necessários"><i class="flaticon-questions-circular-button"></i></a>
+																	</div>
+																</span>
+																
                                                             </div>
                                                         </div>	
                                                         <div class="d-flex">
@@ -396,12 +398,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             <div class="text-right w-100">
 																<span class="font-weight-bolder text-right">
 																	<div id="valor_material">R$ 0,00</div>
-																	<div class="w-100 float-right">
-																		<div id="qtdMaterial">(x0)</div>
-																		<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Quantidade de materiais necessários"><i class="flaticon-questions-circular-button"></i></a>
-																	</div>
 																	
+															
 																</span>
+																<div class="w-100 float-right">
+																	<div id="qtdMaterial">(x0)</div>
+																	<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Quantidade de materiais necessários"><i class="flaticon-questions-circular-button"></i></a>
+																</div>
                                                             </div>
                                                         </div>										
                                                     </div>
