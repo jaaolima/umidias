@@ -157,7 +157,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     ?>
                                     <div class="d-flex">
                                         <h3>Total:</h3> 
-                                        <div id="valor_alugado"><h2><?php echo 'R$ '. number_format($total,2,",","."); ?></h2></div>
+                                        <div id="valor_alugado"><h3><?php echo 'R$ '. number_format($total,2,",","."); ?></h3></div>
                                     </div>
                                     
                                 </div>
