@@ -338,6 +338,7 @@
 				$anterior = 0;
 				$qtdMaterial = 1;
 				for ($i=0; $i < count($bisemanas); $i++) { 
+					$id_bisemana = $bisemanas[$i];
 					if($i == 0){
 						$anterior = $id_bisemana;
 					}else{
