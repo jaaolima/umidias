@@ -530,7 +530,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<?php if($id_midia == 1) : ?>
 
 					$.each(("input[name='bisemana[]']:checked"), function(){
-						console.log($(this).attr('id'));
+						console.log($(this).val());
 					});
 
 
