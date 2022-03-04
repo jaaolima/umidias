@@ -529,7 +529,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			$("#id_material").on("change", function(){
 				<?php if($id_midia == 1) : ?>
 
-					$.each(("input[name='bisemana[]']:checked"), function(){
+					$.each($("input[name='bisemana[]']:checked"), function(){
 						console.log($(this).val());
 					});
 
