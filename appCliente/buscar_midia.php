@@ -95,7 +95,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<h4 class="texto-negrito mb-4">Selecione a data inicial</h4>
 											</div>
 											<div class="row">
-												<div id="calendario"></div>
+												<div id="calendarioMapa"></div>
 											</div>
 											<div class="row float-right mt-4">
 												<button id="aplicar" class="btn btn-primary">Aplicar</button>
@@ -199,7 +199,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		});
 
 		
-		$( "#calendario" ).datepicker({
+		$("#calendarioMapa").datepicker({
 			numberOfMonths: 2,
 			dateFormat: 'dd/mm/yy',
 			dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
