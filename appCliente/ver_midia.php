@@ -398,8 +398,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             <div class="text-right w-100">
 																<span class="font-weight-bolder text-right">
 																	<div id="valor_material">R$ 0,00</div>
-																	
-															
 																</span>
 																<div class="w-100 float-right">
 																	<div id="qtdMaterial">(x0)</div>
