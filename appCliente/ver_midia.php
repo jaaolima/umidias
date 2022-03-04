@@ -536,11 +536,13 @@ License: You must have a valid license purchased only from themeforest(the above
 							anterior = $(this).val();
 						}else{
 							if(anterior + 1 != $(this).val()){
+								console.log(anterior);
+								console.log($(this).val());
 								qtdMaterial++;
 							}
 							anterior = $(this).val();
 						}
-						console.log(anterior);
+						
 						
 					});
 
