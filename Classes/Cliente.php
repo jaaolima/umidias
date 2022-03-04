@@ -323,171 +323,81 @@
 				$id_material    = $dados['id_material'];
 				$bisemanas 		= $dados["bisemana"];
 
+				
+
+				//total alugado
+
+				//calculo ponto
+				$Rvirgula = str_replace(".", "", $dadosPonto["nu_valor"]); 
+				$Rzero = str_replace(",00", "", $Rvirgula); 
+				$Rrs = str_replace("R$ ", "", $Rzero);
+				$valor = $Rrs; 
+
+
+				//calculo material
+				$anterior = 0;
+				$qtdMaterial = 1;
+				for ($i=0; $i < count($bisemanas); $i++) { 
+					if($i == 0){
+						$anterior = $id_bisemana;
+					}else{
+						if($anterior + 1 != $id_bisemana){
+							$qtdMaterial++;
+						}
+						$anterior = $id_bisemana;
+					}
+				}
+				
+				$valorMaterial = $dadosMaterial["nu_valor"] * $qtdMaterial;
+
+
+				$nu_valor_alugado = $valor + ($valorMaterial / count($bisemanas));
+
+				$nu_valor_alugado = "R$ " . number_format($nu_valor_alugado,2,",",".");
+
 
 				$id_bisemana= '';
 				for ($i=0; $i < count($bisemanas); $i++) { 
-					if($dados['st_material_para_todos'] === "sim"){
-						if($i == 0){
-							$id_bisemana = $bisemanas[$i];
-							$con = Conecta::criarConexao();
-							$selectBisemana = "SELECT dt_inicial, dt_final 
-										from tb_bisemana 
-										where id_bisemana = :id_bisemana";
-							
-							$stmtBisemana = $con->prepare($selectBisemana);
-							
-							$params = array(':id_bisemana' => $id_bisemana); 
-											
-							$stmtBisemana->execute($params);
-							$dadosBisemana = $stmtBisemana->fetch();
-							$dt_inicial = $dadosBisemana["dt_inicial"];
-							$dt_final = $dadosBisemana["dt_final"];
+					$id_bisemana = $bisemanas[$i];
+					$con = Conecta::criarConexao();
+					$selectBisemana = "SELECT dt_inicial, dt_final 
+								from tb_bisemana 
+								where id_bisemana = :id_bisemana";
+					
+					$stmtBisemana = $con->prepare($selectBisemana);
+					
+					$params = array(':id_bisemana' => $id_bisemana); 
+									
+					$stmtBisemana->execute($params);
+					$dadosBisemana = $stmtBisemana->fetch();
+					$dt_inicial = $dadosBisemana["dt_inicial"];
+					$dt_final = $dadosBisemana["dt_final"];
 
-							//total alugado
-							$Rvirgula = str_replace(".", "", $dadosPonto["nu_valor"]); 
-							$Rzero = str_replace(",00", "", $Rvirgula); 
-							$Rrs = str_replace("R$ ", "", $Rzero);
-							$valor = $Rrs; 
-
-							$nu_valor_alugado = $valor + $dadosMaterial["nu_valor"];
-
-							$nu_valor_alugado = "R$ " . number_format($nu_valor_alugado,2,",",".");
-	
-	
-	
-							try{
-								$con = Conecta::criarConexao();
-								$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
-											VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material, :nu_valor_alugado)";
-								
-								$stmt = $con->prepare($insert);
-								
-								$params = array(':id_usuario' => $id_usuario,
-												':id_ponto' => $id_ponto,
-												':dt_inicial' => $dt_inicial,
-												':dt_final' => $dt_final,
-												':ds_arte' => $gravar_caminho_arquivo,
-												':id_material' => $id_material,
-												':nu_valor_alugado' => $nu_valor_alugado);
-												
-								$stmt->execute($params);
-	
-								
-	
-							}
-							catch(exception $e) 
-							{
-								header('HTTP/1.1 500 Internal Server Error');
-								print "ERRO:".$e->getMessage();		
-							} 
-						}else{
-							$id_bisemana = $bisemanas[$i];
-							$con = Conecta::criarConexao();
-							$selectBisemana = "SELECT dt_inicial, dt_final 
-										from tb_bisemana 
-										where id_bisemana = :id_bisemana";
-							
-							$stmtBisemana = $con->prepare($selectBisemana);
-							
-							$params = array(':id_bisemana' => $id_bisemana); 
-											
-							$stmtBisemana->execute($params);
-							$dadosBisemana = $stmtBisemana->fetch();
-							$dt_inicial = $dadosBisemana["dt_inicial"];
-							$dt_final = $dadosBisemana["dt_final"];
-
-							//total alugado
-							$Rvirgula = str_replace(".", "", $dadosPonto["nu_valor"]); 
-							$Rzero = str_replace(",00", "", $Rvirgula); 
-							$Rrs = str_replace("R$ ", "", $Rzero);
-							$valor = $Rrs; 
-
-							$nu_valor_alugado = $valor;
-
-							$nu_valor_alugado = "R$ " . number_format($nu_valor_alugado,2,",",".");
-	
-	
-	
-							try{
-								$con = Conecta::criarConexao();
-								$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
-											VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material, :nu_valor_alugado)";
-								
-								$stmt = $con->prepare($insert);
-								
-								$params = array(':id_usuario' => $id_usuario,
-												':id_ponto' => $id_ponto,
-												':dt_inicial' => $dt_inicial,
-												':dt_final' => $dt_final,
-												':ds_arte' => $gravar_caminho_arquivo,
-												':id_material' => $id_material,
-												':nu_valor_alugado' => $nu_valor_alugado);
-												
-								$stmt->execute($params);
-	
-								
-	
-							}
-							catch(exception $e) 
-							{
-								header('HTTP/1.1 500 Internal Server Error');
-								print "ERRO:".$e->getMessage();		
-							}
-						}
-					}else{
-						$id_bisemana = $bisemanas[$i];
+					try{
 						$con = Conecta::criarConexao();
-						$selectBisemana = "SELECT dt_inicial, dt_final 
-									from tb_bisemana 
-									where id_bisemana = :id_bisemana";
+						$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
+									VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material, :nu_valor_alugado)";
 						
-						$stmtBisemana = $con->prepare($selectBisemana);
+						$stmt = $con->prepare($insert);
 						
-						$params = array(':id_bisemana' => $id_bisemana); 
+						$params = array(':id_usuario' => $id_usuario,
+										':id_ponto' => $id_ponto,
+										':dt_inicial' => $dt_inicial,
+										':dt_final' => $dt_final,
+										':ds_arte' => $gravar_caminho_arquivo,
+										':id_material' => $id_material,
+										':nu_valor_alugado' => $nu_valor_alugado);
 										
-						$stmtBisemana->execute($params);
-						$dadosBisemana = $stmtBisemana->fetch();
-						$dt_inicial = $dadosBisemana["dt_inicial"];
-						$dt_final = $dadosBisemana["dt_final"];
+						$stmt->execute($params);
 
-						//total alugado
-						$Rvirgula = str_replace(".", "", $dadosPonto["nu_valor"]); 
-						$Rzero = str_replace(",00", "", $Rvirgula); 
-						$Rrs = str_replace("R$ ", "", $Rzero);
-						$valor = $Rrs; 
+						
 
-						$nu_valor_alugado = $valor + $dadosMaterial["nu_valor"];
-
-						$nu_valor_alugado = "R$ " . number_format($nu_valor_alugado,2,",",".");
-
-
-
-						try{
-							$con = Conecta::criarConexao();
-							$insert = "INSERT into rl_carrinho (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado)
-										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, :id_material, :nu_valor_alugado)";
-							
-							$stmt = $con->prepare($insert);
-							
-							$params = array(':id_usuario' => $id_usuario,
-											':id_ponto' => $id_ponto,
-											':dt_inicial' => $dt_inicial,
-											':dt_final' => $dt_final,
-											':ds_arte' => $gravar_caminho_arquivo,
-											':id_material' => $id_material,
-											':nu_valor_alugado' => $nu_valor_alugado);
-											
-							$stmt->execute($params);
-
-							
-
-						}
-						catch(exception $e) 
-						{
-							header('HTTP/1.1 500 Internal Server Error');
-							print "ERRO:".$e->getMessage();		
-						}
 					}
+					catch(exception $e) 
+					{
+						header('HTTP/1.1 500 Internal Server Error');
+						print "ERRO:".$e->getMessage();		
+					} 
 							
 				}
 			}
