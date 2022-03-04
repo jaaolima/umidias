@@ -535,77 +535,77 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 
-					if($("input[name='bisemana[]']:checked").length > 1){
-						if($("input[name='st_material_para_todos']:checked").val() === "sim"){
-							//adicionar na div material
-							let valorMaterial = $(this).find(':selected').attr('valor')
-							let valorTotalMaterial =  parseInt(valorMaterial, 10);
-							Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+					// if($("input[name='bisemana[]']:checked").length > 1){
+					// 	if($("input[name='st_material_para_todos']:checked").val() === "sim"){
+					// 		//adicionar na div material
+					// 		let valorMaterial = $(this).find(':selected').attr('valor')
+					// 		let valorTotalMaterial =  parseInt(valorMaterial, 10);
+					// 		Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
 
-							//adicionar na div total
+					// 		//adicionar na div total
 							
-							<?php
-								$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
-								$Rzero = str_replace(",00", "", $Rvirgula); 
-								$Rrs = str_replace("R$ ", "", $Rzero);;
-								$valor = $Rrs;  
-							?>
-							var totalBisemana = $("input[name='bisemana[]']:checked").length;
-							let valor = <?php echo $valor; ?> * totalBisemana;
-							let total = parseInt(valor, 10);
-							valor_alugado = total + valorTotalMaterial
+					// 		<?php
+					// 			$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
+					// 			$Rzero = str_replace(",00", "", $Rvirgula); 
+					// 			$Rrs = str_replace("R$ ", "", $Rzero);;
+					// 			$valor = $Rrs;  
+					// 		?>
+					// 		var totalBisemana = $("input[name='bisemana[]']:checked").length;
+					// 		let valor = <?php echo $valor; ?> * totalBisemana;
+					// 		let total = parseInt(valor, 10);
+					// 		valor_alugado = total + valorTotalMaterial
 
-							var local = document.getElementById("valor_alugado");
-							local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+					// 		var local = document.getElementById("valor_alugado");
+					// 		local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 
-						}else{
-							//adicionar na div material
-							let valorMaterial = $(this).find(':selected').attr('valor')
-							let valorTotalMaterial =  parseInt(valorMaterial, 10);
-							Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-
-
-							//adicionar na div total
-							//mutiplicando o valor material pela quantidade de bisemanas
-							valorTotalMaterial = valorTotalMaterial * parseInt($("input[name='bisemana[]']:checked").length, 10);
-							<?php
-								$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
-								$Rzero = str_replace(",00", "", $Rvirgula); 
-								$Rrs = str_replace("R$ ", "", $Rzero);;
-								$valor = $Rrs;  
-							?>
-							var totalBisemana = $("input[name='bisemana[]']:checked").length;
-							let valor = <?php echo $valor; ?> * totalBisemana;
-							let total = parseInt(valor, 10);
-							valor_alugado = total + valorTotalMaterial
-
-							var local = document.getElementById("valor_alugado");
-							local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
-						}
-					}else{
-						//adicionar na div material
-						let valorMaterial = $(this).find(':selected').attr('valor')
-						let valorTotalMaterial =  parseInt(valorMaterial, 10);
-						Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+					// 	}else{
+					// 		//adicionar na div material
+					// 		let valorMaterial = $(this).find(':selected').attr('valor')
+					// 		let valorTotalMaterial =  parseInt(valorMaterial, 10);
+					// 		Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
 
-						//adicionar na div total
-						<?php
-							$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
-							$Rzero = str_replace(",00", "", $Rvirgula); 
-							$Rrs = str_replace("R$ ", "", $Rzero);;
-							$valor = $Rrs;  
-						?>
-						var totalBisemana = $("input[name='bisemana[]']:checked").length;
-						let valor = <?php echo $valor; ?> * totalBisemana;
-						let total = parseInt(valor, 10);
-						valor_alugado = total + valorTotalMaterial
+					// 		//adicionar na div total
+					// 		//mutiplicando o valor material pela quantidade de bisemanas
+					// 		valorTotalMaterial = valorTotalMaterial * parseInt($("input[name='bisemana[]']:checked").length, 10);
+					// 		<?php
+					// 			$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
+					// 			$Rzero = str_replace(",00", "", $Rvirgula); 
+					// 			$Rrs = str_replace("R$ ", "", $Rzero);;
+					// 			$valor = $Rrs;  
+					// 		?>
+					// 		var totalBisemana = $("input[name='bisemana[]']:checked").length;
+					// 		let valor = <?php echo $valor; ?> * totalBisemana;
+					// 		let total = parseInt(valor, 10);
+					// 		valor_alugado = total + valorTotalMaterial
 
-						var local = document.getElementById("valor_alugado");
-						local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+					// 		var local = document.getElementById("valor_alugado");
+					// 		local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+					// 	}
+					// }else{
+					// 	//adicionar na div material
+					// 	let valorMaterial = $(this).find(':selected').attr('valor')
+					// 	let valorTotalMaterial =  parseInt(valorMaterial, 10);
+					// 	Totalmaterial.innerHTML = valorTotalMaterial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-					}
+
+					// 	//adicionar na div total
+					// 	<?php
+					// 		$Rvirgula = str_replace(".", "", $dados["nu_valor"]); 
+					// 		$Rzero = str_replace(",00", "", $Rvirgula); 
+					// 		$Rrs = str_replace("R$ ", "", $Rzero);;
+					// 		$valor = $Rrs;  
+					// 	?>
+					// 	var totalBisemana = $("input[name='bisemana[]']:checked").length;
+					// 	let valor = <?php echo $valor; ?> * totalBisemana;
+					// 	let total = parseInt(valor, 10);
+					// 	valor_alugado = total + valorTotalMaterial
+
+					// 	var local = document.getElementById("valor_alugado");
+					// 	local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
+
+					// }
 				<?php endif; ?>
 				<?php if($id_midia == 2) : ?>
 					if($("input[name='mes[]']:checked").length > 1){
