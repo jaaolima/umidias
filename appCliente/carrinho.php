@@ -19,6 +19,7 @@
         $dt_inicial = $_GET["dt_inicial"];
         $mes = $_GET["mes"]; 
     }*/
+    $totalCarrinho = $cliente->BuscarCarrinho($id_usuario); 
 ?>
 <!DOCTYPE html>
 <!--
@@ -144,7 +145,19 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="col-4">
                             <div class="card card-custom card-stretch gutter-b box-shadow">
                                 <div class="my-6 mx-6">
-                                    <h3>Ações:</h3> 
+                                    <?php 
+                                        $total = 0;
+                                        while($dados = $totalCarrinho->fetch()){
+                                            $Rvirgula = str_replace(".", "", $dados["nu_valor_alugado"]); 
+                                            $Rzero = str_replace(",00", "", $Rvirgula); 
+                                            $Rrs = str_replace("R$ ", "", $Rzero);
+                                            $valor = $Rrs; 
+                                            $total += $valor;
+                                        }
+                                    ?>
+
+                                    <h3>Total:</h3> 
+                                    <div id="valor_alugado"><h2><?php echo 'R$ '. number_format($total,2,",","."); ?></h2></div>
                                 </div>
                                 <div class="separator separator-solid"></div>
                                 <div class="my-6 mx-6 ">
