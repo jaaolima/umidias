@@ -248,7 +248,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             </div>													
                                                             <div class="text-right w-100">
                                                                 <span class="font-weight-bolder text-right">
-																	<?php echo $dados["nu_valor"]; ?>
+																	<?php echo $dados["nu_valor"]; ?><br>
 																</span>
 																<div class="d-flex float-right">
 																	<div id="qtdBisemana">(x0)</div>
@@ -379,12 +379,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             </div>													
                                                             <div class="text-right w-100">
                                                                 <span class="font-weight-bolder text-right">
-																	<?php echo $dados["nu_valor"];?>
+																	<?php echo $dados["nu_valor"];?><br>
 																	
 																</span>
 																<div class="d-flex float-right">
 																	<div id="qtdMes">(x0)</div>
-																	<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Quantidade de materiais necessários"><i class="flaticon-questions-circular-button"></i></a>
+																	<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Quantidade de mês"><i class="flaticon-questions-circular-button"></i></a>
 																</div>
 																
                                                             </div>
