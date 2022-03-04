@@ -532,6 +532,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					let anterior = 0;
 					let qtdMaterial = 1;
 					$.each($("input[name='bisemana[]']:checked"), function(i){
+						console.log(i);
 						if(i == 0){
 							anterior = $(this).val();
 						}else{
