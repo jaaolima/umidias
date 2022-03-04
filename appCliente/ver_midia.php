@@ -251,7 +251,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg> 
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><?php echo $dados["nu_valor"]; ?></span>
+                                                                <span class="font-weight-bolder text-right"><?php echo $dados["nu_valor"]; ?><div id="qtdBisemana"></div></span>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex">
@@ -378,7 +378,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><?php echo $dados["nu_valor"];?></span>
+                                                                <span class="font-weight-bolder text-right"><?php echo $dados["nu_valor"];?><div id="qtdMes"></div></span>
                                                             </div>
                                                         </div>	
                                                         <div class="d-flex">
@@ -391,7 +391,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-																<span class="font-weight-bolder text-right"><div id="valor_material">R$ 0,00</div></span>
+																<span class="font-weight-bolder text-right"><div id="valor_material">R$ 0,00</div><div id="qtdMaterial"></div></span>
                                                             </div>
                                                         </div>										
                                                     </div>
@@ -497,6 +497,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 
 				$("#id_material").val('').change();
+				$("#qtdBisemana").html("(x"+totalBisemana+")");
 			});
 			<?php endif; ?>
 			//calculo front
@@ -516,7 +517,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 
 				$("#id_material").val('').change();
-
+				$("#qtdMes").html("(x"+totalmes+")");
 				
 			});
 
