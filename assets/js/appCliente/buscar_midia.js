@@ -143,7 +143,7 @@ function dateToEN(date)
 function validarAplicarBisemana()
 {
 
-    if($("input[name='bisemana']:checked").length == 0) 
+    if($("input[name='bisemana[]']:checked").length == 0) 
     {
         swal.fire("Erro", "Escolha uma Bisemana", "error");
         return false;	
