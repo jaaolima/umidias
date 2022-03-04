@@ -374,7 +374,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             </div>													
                                                             <div class="text-right w-100">
                                                                 <span class="font-weight-bolder text-right"><?php echo $dados["nu_valor"];?>
-																<div class="d-flex">
+																<div class="row">
 																	<div id="qtdMes">(x0)</div>
 																	<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Quantidade de materiais necessários"><i class="flaticon-questions-circular-button"></i></a>
 																</div>
@@ -389,7 +389,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             <div class="text-right w-100">
 																<span class="font-weight-bolder text-right">
 																	<div id="valor_material">R$ 0,00</div>
-																	<div class="d-flex">
+																	<div class="row">
 																		<div id="qtdMaterial">(x0)</div>
 																		<a href="javascript:;" data-toggle="tooltip" data-placement="right" title="Quantidade de materiais necessários"><i class="flaticon-questions-circular-button"></i></a>
 																	</div>
