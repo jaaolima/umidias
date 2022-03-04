@@ -264,7 +264,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </svg>
                                                             </div>													
                                                             <div class="text-right w-100">
-                                                                <span class="font-weight-bolder text-right"><div id="valor_material">R$ 0,00</div></span>
+                                                                <span class="font-weight-bolder text-right"><div id="valor_material">R$ 0,00</div><div id="qtdMaterial"></div></span>
                                                             </div>
                                                         </div>										
                                                     </div>
@@ -529,9 +529,22 @@ License: You must have a valid license purchased only from themeforest(the above
 			$("#id_material").on("change", function(){
 				<?php if($id_midia == 1) : ?>
 
-					$.each($("input[name='bisemana[]']:checked"), function(){
-						console.log($(this).val());
+					let anterior = 0;
+					let qtdMaterial = 1;
+					$.each($("input[name='bisemana[]']:checked"), function(i){
+						if(i == 0){
+							anterior = $(this).val();
+						}else{
+							if(anterior + 1 != $(this).val()){
+								qtdMaterial++;
+							}
+						}
+						
 					});
+
+					$("#qtdMaterial").innerHTML("(x"+qtdMaterial+")");
+
+
 
 
 
