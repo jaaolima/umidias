@@ -43,7 +43,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--begin::Wrapper-->
 				<div class="d-flex flex-column flex-row-fluid wrapper " id="kt_wrapper">
 					<div class="row">
-                        <div class="col-8">
+                        <div class="col-9">
                             <div class="card card-custom card-stretch gutter-b box-shadow h-auto">
                                 <div class="my-6 mx-6 d-flex">
                                     <div class="col-6">
@@ -142,7 +142,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <div class="card card-custom card-stretch gutter-b box-shadow">
                                 <div class="my-6 mx-6">
                                     <?php 
@@ -155,9 +155,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                             $total += $valor;
                                         }
                                     ?>
-
-                                    <h3>Total:</h3> 
-                                    <div id="valor_alugado"><h2><?php echo 'R$ '. number_format($total,2,",","."); ?></h2></div>
+                                    <div class="d-flex">
+                                        <h3>Total:</h3> 
+                                        <div id="valor_alugado"><h2><?php echo 'R$ '. number_format($total,2,",","."); ?></h2></div>
+                                    </div>
+                                    
                                 </div>
                                 <div class="separator separator-solid"></div>
                                 <div class="my-6 mx-6 ">
