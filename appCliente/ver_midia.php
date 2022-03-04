@@ -567,7 +567,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					var totalBisemana = $("input[name='bisemana[]']:checked").length;
 					let valor = <?php echo $valor; ?> * totalBisemana;
 					let total = parseInt(valor, 10);
-					valor_alugado = total + valorTotalMaterial
+					valor_alugado = total +  (valorTotalMaterial * qtdMaterial)
 
 					var local = document.getElementById("valor_alugado");
 					local.innerHTML = "<h2>"+ valor_alugado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
