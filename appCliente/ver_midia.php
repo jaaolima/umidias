@@ -228,21 +228,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Material</h3> 
                                                     </div>
                                                     <div class="my-6 mx-6">
-														<div class="form-group" id="material_para_todos" style="display:none;">
-															<label>Apenas um material para todas as bisemanas?</label><br>
-															<div class="form-check form-check form-check-inline">
-																<input class="form-check-input" type="radio" name="st_material_para_todos" id="st_material_para_todos_sim" value="sim" checked>
-																<label class="form-check-label" for="st_material_para_todos_sim">
-																	Sim
-																</label>
-															</div>
-															<div class="form-check form-check form-check-inline">
-																<input class="form-check-input" type="radio" name="st_material_para_todos" id="st_material_para_todos_nao" value="nao">
-																<label class="form-check-label" for="st_material_para_todos_nao">
-																	Não
-																</label>
-															</div>	
-														</div>
+														
 														<div class="form-group">
                                                             <label>Tipo de material</label>
                                                             <select name="id_material" id="id_material" class="form-control">
@@ -370,21 +356,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <h3 class="font-weight-bolder">Material</h3>
                                                     </div>
                                                     <div class="my-6 mx-6" >
-														<div class="form-group" id="material_para_todos" style="display:none;">
-															<label>Apenas um material para todas as bisemanas?</label><br>
-															<div class="form-check form-check form-check-inline">
-																<input class="form-check-input" type="radio" name="st_material_para_todos" id="st_material_para_todos_sim" value="sim" checked>
-																<label class="form-check-label" for="st_material_para_todos_sim">
-																	Sim
-																</label>
-															</div>
-															<div class="form-check form-check form-check-inline">
-																<input class="form-check-input" type="radio" name="st_material_para_todos" id="st_material_para_todos_nao" value="nao">
-																<label class="form-check-label" for="st_material_para_todos_nao">
-																	Não
-																</label>
-															</div>	
-														</div>
 														<div class="form-group">
                                                             <label>Tipo de material</label>
                                                             <select name="id_material" id="id_material" class="form-control">
@@ -526,12 +497,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				local.innerHTML = "<h2>"+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) +"</h2>";
 
 				$("#id_material").val('').change();
-				
-				if($("input[name='bisemana[]']:checked").length > 1){
-					$("#material_para_todos").show();
-				}else{
-					$("#material_para_todos").hide();
-				}
 			});
 			<?php endif; ?>
 			//calculo front
@@ -552,26 +517,24 @@ License: You must have a valid license purchased only from themeforest(the above
 
 				$("#id_material").val('').change();
 
-				if($("input[name='mes[]']:checked").length > 1){
-					$("#material_para_todos").show();
-				}else{
-					$("#material_para_todos").hide();
-				}
 				
 			});
 
 			
 			<?php endif; ?>
 			
-			$("input[name='st_material_para_todos']").on("click", function(){
-				$("#id_material").val('').change();
-				
-			});
 
 			//calculo material
 			var Totalmaterial = document.getElementById("valor_material");
 			$("#id_material").on("change", function(){
 				<?php if($id_midia == 1) : ?>
+
+					$.each(("input[name='bisemana[]']:checked"), function(){
+						console.log($(this).attr('id'));
+					});
+
+
+
 					if($("input[name='bisemana[]']:checked").length > 1){
 						if($("input[name='st_material_para_todos']:checked").val() === "sim"){
 							//adicionar na div material
