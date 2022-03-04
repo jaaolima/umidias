@@ -103,7 +103,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<?php endif;?>
 										
 									</div>
-								<?php endif;?> 
+								<?php endif;?>  
 								<?php if($id_midia == 1) :  ?> 
 									<button data-toggle="dropdown" aria-expanded="false" class="btn btn-mapa " id="filtro_mapa">Buscar por Bisemanas </button>
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="filtro_mapa" style="padding:30px;"> 
@@ -198,17 +198,17 @@ License: You must have a valid license purchased only from themeforest(the above
 			
 		});
 
-		$(function() {
-			$( "#calendario" ).datepicker({
-				numberOfMonths: 2,
-				dateFormat: 'dd/mm/yy',
-				dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
-				dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
-				dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
-				monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-				monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
-			});
+		
+		$( "#calendario" ).datepicker({
+			numberOfMonths: 2,
+			dateFormat: 'dd/mm/yy',
+			dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
+			dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+			dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+			monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+			monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
 		});
+		
 
 		var demo3 = function(latitude, longitude, zoom = 14) {
 			var map = new GMaps({
