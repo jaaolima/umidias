@@ -196,4 +196,4 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
-</html> 
+</html>  

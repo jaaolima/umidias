@@ -53,7 +53,7 @@ $(document).ready(function() {
     $("#pagamento").on("click", function(e){
         id_usuario = $("#id_usuario").val();
         $.ajax({
-            url: 'appPagamento/pagamentoCartao.php'
+            url: 'appPagamento/pagamento.php'
             , data: {id_usuario: id_usuario}
             , type: 'post'
             , success: function(html) {
