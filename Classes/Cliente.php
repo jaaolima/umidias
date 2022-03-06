@@ -844,7 +844,7 @@
 				return $response;
 			}
 			// Opcional: Anexos 
-			$mail->AddAttachment('/../appCliente/contrato_locacao.docx', "contrato.docx"); 
+			$mail->AddAttachment('../appCliente/contrato_locacao.docx', "contrato.docx"); 
 
 			// Envia o e-mail 
 			$enviado = $mail->Send(); 
