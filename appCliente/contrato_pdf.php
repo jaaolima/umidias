@@ -37,7 +37,7 @@ $pagina = '
     </head>
     <style>
         body{
-            font-size: 8px;
+            font-size: 12px;
             font-family:Verdana, Arial, Helvetica, sans-serif;
         }
         table, td, th {
