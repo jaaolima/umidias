@@ -781,6 +781,9 @@
 		}
 		
 		public function EmailPagamento($id_usuario){
+			header("HTTP/1.1 302 Moved Temporarily");
+			header("Location: contrato_pdf.php");
+
 			try{
 				$con = Conecta::criarConexao();
 				
