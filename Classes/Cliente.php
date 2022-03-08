@@ -781,7 +781,7 @@
 		}
 		
 		public function EmailPagamento($id_usuario){
-			$code = include("contrato_pdf.php");
+			$code = include("../appCliente/contrato_pdf.php");
 			var_dump($code);
 			// try{
 			// 	$con = Conecta::criarConexao();
