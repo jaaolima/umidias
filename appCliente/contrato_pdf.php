@@ -277,14 +277,7 @@ $dompdf->loadHtml($pagina);
 $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
 
-$caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-$max = strlen($caracteres) - 1;
-$code = "";
-while (testarcode($code) == false){
-    for($i=0; $i < 5; $i++) {
-        $code .= $caracteres[mt_rand(0, $max)];
-    }
-}
+$code = uniqid();
 
 file_put_contents(("/var/www/app.unimidias.com.br/docs_contrato/contrato" . $code . ".pdf"), $dompdf->output());
 
