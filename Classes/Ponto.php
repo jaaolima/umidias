@@ -1893,7 +1893,7 @@
 							// Caminho de onde ficará o arquivo
 							$caminho_arquivo = "/var/www/app.unimidias.com.br/docs_pontos/" . $nome_arquivo;
 			
-							$gravar_caminho_arquivo = "docs_pontos/" . $nome_arquivo;
+							$gravar_caminho_arquivo = "docs_pontos/" . $nome_arquivo; 
 			
 						
 							
