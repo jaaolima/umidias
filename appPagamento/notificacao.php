@@ -27,7 +27,7 @@ error_reporting(E_ALL);
 // $payments_info = json_decode(curl_exec($curl), true);
 // curl_close($curl);
 
-// session_start();
+session_start();
 // require_once("../Classes/Cliente.php");
 $id_usuario = $_SESSION["id_usuario"];
 // $cliente = new Cliente();
