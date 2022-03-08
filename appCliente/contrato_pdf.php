@@ -279,6 +279,6 @@ $dompdf->render();
 
 $code = uniqid();
 
-file_put_contents(("/var/www/app.unimidias.com.br/docs_contrato/contrato" . $code . ".pdf"), $dompdf->output());
+file_put_contents("/var/www/app.unimidias.com.br/docs_contrato/contrato" . $code . ".pdf", $dompdf->output());
 
 ?>
