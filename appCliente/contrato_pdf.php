@@ -182,90 +182,81 @@ $pagina = '
     <body>
         <div style="display:flex; align-items: center; margin-bottom: 10px;">
             <div style=" text-align: center;margin-bottom: -40px;">
-                <h1>Contrato</h1>
+                <h1>CONTRATO PARTICULAR DE PRESTAÇÃO DE SERVIÇOS PUBLICIDADE E PROPAGANDA</h1>
             </div>
             <div style="text-align: right; ">
                 <img src="https://app.unimidias.com.br/assets/media/Uni_midia_logo.png" width="70px">
             </div>
         </div>
         <div>
-            <p>
-                CONTRATO PARTICULAR DE PRESTAÇÃO DE SERVIÇOS PUBLICIDADE E PROPAGANDA
-
-                CONTRATADA: UNIMÍDIA: UNIMÍDIA XXXXX Pessoa Jurídica de Direito Privado, Inscrita no CNPJ sob o nº XXXXXXXX, Instalada sito à: XXXXXX, que tem como Sócio Administrador XXXXXXX, brasileiro, empresário do ramo de publicidade, residente e domiciliado nesta capital, portador do R.G. nº XXXXXX e do CPF/MF nº XXXXXXXXXXX.
-                CONTRATANTE: XXXXXXXX Pessoa Jurídica de Direito Privado, Inscrita no CNPJ sob o nº XXXXXXXX, Instalada sito à: XXXXXX, que tem como Sócio Administrador XXXXXXX, brasileiro, empresário do ramo de publicidade, residente e domiciliado nesta capital, portador do R.G. nº XXXXXX e do CPF/MF nº '.$dadosUsuario["nu_cpf"].'.
+                <p>CONTRATADA: UNIMÍDIA: UNIMÍDIA XXXXX Pessoa Jurídica de Direito Privado, Inscrita no CNPJ sob o nº XXXXXXXX, Instalada sito à: XXXXXX, que tem como Sócio Administrador XXXXXXX, brasileiro, empresário do ramo de publicidade, residente e domiciliado nesta capital, portador do R.G. nº XXXXXX e do CPF/MF nº XXXXXXXXXXX.</p>
+                <p>CONTRATANTE: XXXXXXXX Pessoa Jurídica de Direito Privado, Inscrita no CNPJ sob o nº XXXXXXXX, Instalada sito à: XXXXXX, que tem como Sócio Administrador XXXXXXX, brasileiro, empresário do ramo de publicidade, residente e domiciliado nesta capital, portador do R.G. nº XXXXXX e do CPF/MF nº '.$dadosUsuario["nu_cpf"].'.</p>
                 
-                PREÂMBULO:
+                <h5>PREÂMBULO:</h5>
                 
-                O presente contrato foi gerado por meio eletrônico, mediante acesso e comunicação no ambiente virtual, que pode ser encontrado no seguinte endereço: www.unimidia XXXXXXX.com.br, cujas disposições refletem a vontade das partes contratantes com as devidas autorizações e aceites inseridas em campos específicos e todas as demais exigências necessárias à existência e validade deste CONTRATO DE PRESTAÇÃO DE SERVIÇOS, conforme a seguir convencionado.
+                <p>O presente contrato foi gerado por meio eletrônico, mediante acesso e comunicação no ambiente virtual, que pode ser encontrado no seguinte endereço: www.unimidia XXXXXXX.com.br, cujas disposições refletem a vontade das partes contratantes com as devidas autorizações e aceites inseridas em campos específicos e todas as demais exigências necessárias à existência e validade deste CONTRATO DE PRESTAÇÃO DE SERVIÇOS, conforme a seguir convencionado.</p>
                 
-                Pelo presente instrumento particular as partes acima mencionadas e qualificadas como CONTRATANTE e CONTRATADA, têm entre si justo e acertada a Prestação de Serviços de Publicidade e Propaganda – por intermédio de Engenhos Publicitários, nos termos e cláusulas a seguir elencadas.
+                <p>Pelo presente instrumento particular as partes acima mencionadas e qualificadas como CONTRATANTE e CONTRATADA, têm entre si justo e acertada a Prestação de Serviços de Publicidade e Propaganda – por intermédio de Engenhos Publicitários, nos termos e cláusulas a seguir elencadas.</p>
                 
-                CLÁUSULA 1ª - OBJETO DO CONTRATO
+                <h5>CLÁUSULA 1ª - OBJETO DO CONTRATO</h5>
                 
-                1.1 - O objeto deste contrato refere-se a Prestação de Serviços de Publicidade e Propaganda – por intermédio de Engenhos Publicitários, no qual a CONTRATADA disponibilizará, em seu site, engenhos publicitários para locação, em local, valores e período que ficarão a escolha da CONTRATANTE, conforme as demais especificações contidas no presente contrato.
+                <p>1.1 - O objeto deste contrato refere-se a Prestação de Serviços de Publicidade e Propaganda – por intermédio de Engenhos Publicitários, no qual a CONTRATADA disponibilizará, em seu site, engenhos publicitários para locação, em local, valores e período que ficarão a escolha da CONTRATANTE, conforme as demais especificações contidas no presente contrato.</p>
                 
-                CLÁUSULA 2ª – DAS OBRIGAÇÕES DA CONTRATANTE
+                <h5>CLÁUSULA 2ª – DAS OBRIGAÇÕES DA CONTRATANTE</h5>
                 
-                2.1 - Cabe a CONTRATANTE, fornecer a CONTRATADA, as informações precisas sobre o material que deseja ver divulgado, escolher o local, informar a data de início e fim da divulgação, o tipo de material que deseja utilizar, dentre os que estarão disponibilizados no site, quais sejam, lona, papel ou adesivo, contendo todos os detalhes indispensáveis à perfeita consecução do serviço contratado, devendo ainda, juntar a mídia contendo o design e demais especificações do que deverá ser impresso, em formato PDF, para que o material confeccionado possa ser entregue dentro do prazo acordado.
+                <p>2.1 - Cabe a CONTRATANTE, fornecer a CONTRATADA, as informações precisas sobre o material que deseja ver divulgado, escolher o local, informar a data de início e fim da divulgação, o tipo de material que deseja utilizar, dentre os que estarão disponibilizados no site, quais sejam, lona, papel ou adesivo, contendo todos os detalhes indispensáveis à perfeita consecução do serviço contratado, devendo ainda, juntar a mídia contendo o design e demais especificações do que deverá ser impresso, em formato PDF, para que o material confeccionado possa ser entregue dentro do prazo acordado.</p>
                 
-                2.2 - Cabe ainda a CONTRATANTE, a obrigação de efetuar o pagamento dos serviços contratados, no ato da contratação, cujas condições estão descritas no campo próprio desde contrato.
+                <p>2.2 - Cabe ainda a CONTRATANTE, a obrigação de efetuar o pagamento dos serviços contratados, no ato da contratação, cujas condições estão descritas no campo próprio desde contrato.</p>
                 
-                CLÁUSULA 3ª – DAS OBRIGAÇÕES DA CONTRATADA
+                <h5>CLÁUSULA 3ª – DAS OBRIGAÇÕES DA CONTRATADA</h5>
                 
-                3.1 - A CONTRATADA, oferecerá à CONTRATANTE, informações sobre a data de entrega do serviço, que poderá incluir, a montagem e instalação, ou apenas a confecção.
+                <p>3.1 - A CONTRATADA, oferecerá à CONTRATANTE, informações sobre a data de entrega do serviço, que poderá incluir, a montagem e instalação, ou apenas a confecção.</p>
                 
-                3.2 - A CONTRATADA deverá fornecer Nota Fiscal ou recibo de prestação de serviço, referente ao pagamento efetuado pela CONTRATANTE.
+                <p>3.2 - A CONTRATADA deverá fornecer Nota Fiscal ou recibo de prestação de serviço, referente ao pagamento efetuado pela CONTRATANTE.</p>
                 
-                CLÁUSULA 4ª – DAS CONDIÇÕES DE PAGAMENTO E PREÇO
+                <h5>CLÁUSULA 4ª – DAS CONDIÇÕES DE PAGAMENTO E PREÇO</h5>
                 
-                4.1 – O serviço contratado será cobrado por m² e o seu pagamento será feito no ato da contratação, podendo a CONTRATANTE utilizar as seguintes formas: Poderá o pagamento ser feito via boleto bancário, pix ou cartão, nas formas de débito ou de crédito. 
+                <p>4.1 – O serviço contratado será cobrado por m² e o seu pagamento será feito no ato da contratação, podendo a CONTRATANTE utilizar as seguintes formas: Poderá o pagamento ser feito via boleto bancário, pix ou cartão, nas formas de débito ou de crédito. <p>
                 
-                PARÁGRAFO ÚNICO: DO VALOR DO M²
+                <h5>PARÁGRAFO ÚNICO: DO VALOR DO M²</h5>
                 
-                4.2 – O m² do serviço executado em lona terá o valor de R$ XXXXXX
+                <p>4.2 – O m² do serviço executado em lona terá o valor de R$ XXXXXX</p>
                 
-                4.3 - O m² do serviço executado em papel terá o valor de R$ XXXXXX
+                <p>4.3 - O m² do serviço executado em papel terá o valor de R$ XXXXXX</p>
                 
-                4.4 - O m² do serviço executado em adesivo terá o valor de R$ XXXXX
+                <p>4.4 - O m² do serviço executado em adesivo terá o valor de R$ XXXXX</p>
                 
-                CLÁUSULA 5ª - DO PRAZO PARA ENTREGA DO SERVIÇO
+                <h5>CLÁUSULA 5ª - DO PRAZO PARA ENTREGA DO SERVIÇO</h5>
                 
-                5.1 - A CONTRATADA deverá entregar o serviço, pronto, em até 05 (cinco) dias úteis. A contagem do prazo para a entrega retro mencionada iniciará no primeiro dia útil subsequente ao dia da conclusão da contratação, que somente ocorrerá, com a comprovação do pagamento e do envio da mídia contendo as informações que serão impressas no material;
+                <p>5.1 - A CONTRATADA deverá entregar o serviço, pronto, em até 05 (cinco) dias úteis. A contagem do prazo para a entrega retro mencionada iniciará no primeiro dia útil subsequente ao dia da conclusão da contratação, que somente ocorrerá, com a comprovação do pagamento e do envio da mídia contendo as informações que serão impressas no material;</p>
                 
-                CLÁUSULA 6ª - DA POSSIBILIDADE DE RESCISÃO
+                <h5>CLÁUSULA 6ª - DA POSSIBILIDADE DE RESCISÃO</h5>
                 
-                6.1 - A rescisão do presente contrato poderá ocorrer por iniciativa de qualquer uma das partes, com devolução do  valor pago ao CONTRATANTE, com retenção de 5% deste, para cobertura de taxas administrativas, devendo a comunicação ser previamente feita, com a observação do prazo 01 (um) dia útil, a contar do primeiro dia útil a partir da contratação. (o prazo de apenas 01 (um) dia, se justifica, considerando que o prazo total para a confecção e entrega do material, é de 05 (cinco) dias).
+                <p>6.1 - A rescisão do presente contrato poderá ocorrer por iniciativa de qualquer uma das partes, com devolução do  valor pago ao CONTRATANTE, com retenção de 5% deste, para cobertura de taxas administrativas, devendo a comunicação ser previamente feita, com a observação do prazo 01 (um) dia útil, a contar do primeiro dia útil a partir da contratação. (o prazo de apenas 01 (um) dia, se justifica, considerando que o prazo total para a confecção e entrega do material, é de 05 (cinco) dias).</p>
                 
-                CLÁUSULA 7ª - DA LEI GERAL DE PROTEÇÃO DE DADOS - LGPD
+                <h5>CLÁUSULA 7ª - DA LEI GERAL DE PROTEÇÃO DE DADOS - LGPD</h5>
                 
-                7.1 - A CONTRATANTE declara estar ciente de que seus dados serão utilizados dentro da estrita necessidade do presente contrato, sendo certo que autoriza e manifesta o seu consentimento de forma expressa, no que se refere ao tratamento dos seus dados pessoais sendo estes sensíveis ou não, obedecendo o que determina a Lei 13.709/2018, e as alterações trazidas pela Lei 13.853/2019. 
+                <p>7.1 - A CONTRATANTE declara estar ciente de que seus dados serão utilizados dentro da estrita necessidade do presente contrato, sendo certo que autoriza e manifesta o seu consentimento de forma expressa, no que se refere ao tratamento dos seus dados pessoais sendo estes sensíveis ou não, obedecendo o que determina a Lei 13.709/2018, e as alterações trazidas pela Lei 13.853/2019. </p>
                 
-                7.2 – O dados que serão coletados neste contrato, sua necessidade, prazo, uso legal, são de conhecimento da CONTRATANTE, os quais serão conservados pela CONTRATADA pelos período necessários para dar cumprimento a este contrato e a obrigações assumidas pelas partes, podendo se estender a depender da necessidade, como caso de proteção ao crédito ou para exercer direitos em processo judicial, administrativo ou arbitral, ou, ainda, para atender interesse legítimo da CONTRATADA.
+                <p>7.2 – O dados que serão coletados neste contrato, sua necessidade, prazo, uso legal, são de conhecimento da CONTRATANTE, os quais serão conservados pela CONTRATADA pelos período necessários para dar cumprimento a este contrato e a obrigações assumidas pelas partes, podendo se estender a depender da necessidade, como caso de proteção ao crédito ou para exercer direitos em processo judicial, administrativo ou arbitral, ou, ainda, para atender interesse legítimo da CONTRATADA.</p>
                 
-                7.3 – Poderá a CONTRATANTE autorizar, o CONTRATADA, a divulgar o seu nome e logotipo, juntamente com as empresas parceiras, para utilização exclusiva em serviços vinculados ao objeto do presente contrato.
+                <p>7.3 – Poderá a CONTRATANTE autorizar, o CONTRATADA, a divulgar o seu nome e logotipo, juntamente com as empresas parceiras, para utilização exclusiva em serviços vinculados ao objeto do presente contrato.</p>
                 
-                CLÁUSULA 8ª - DO FORO
+                <h5>CLÁUSULA 8ª - DO FORO</h5>
                 
-                8.1 - Caso surjam questões controvertidas no presente CONTRATO, estas, primeiramente devem passar por uma tentativa de solução amigável entre as partes, e, caso não alcancem a solução, ficará eleito, como competente, para dirimir quaisquer controvérsias, o Fórum da Circunscrição Judiciária de Águas Claras-DF, com renúncia de qualquer outro por mais privilegiado possa ser.
+                <p>8.1 - Caso surjam questões controvertidas no presente CONTRATO, estas, primeiramente devem passar por uma tentativa de solução amigável entre as partes, e, caso não alcancem a solução, ficará eleito, como competente, para dirimir quaisquer controvérsias, o Fórum da Circunscrição Judiciária de Águas Claras-DF, com renúncia de qualquer outro por mais privilegiado possa ser.</p>
                 
-                CLÁUSULA 9ª - ASSUNTOS GERAIS
+                <h5>CLÁUSULA 9ª - ASSUNTOS GERAIS</h5>
                 
-                9.2 - Está vedado a CONTRATADA a transferência ou a subcontratação dos serviços previstos neste instrumento, sob o risco de ocorrer a rescisão imediata, salvo se houver autorização expressa da CONTRATANTE.
+                <p>9.2 - Está vedado a CONTRATADA a transferência ou a subcontratação dos serviços previstos neste instrumento, sob o risco de ocorrer a rescisão imediata, salvo se houver autorização expressa da CONTRATANTE.</p>
                 
-                9.3 - Este contrato ficará disponível em plataforma virtual, e suas regras obedecerão a legislação civil e a específica.
+                <p>9.3 - Este contrato ficará disponível em plataforma virtual, e suas regras obedecerão a legislação civil e a específica.</p>
                 
-                E, por estarem assim justos e contratados, ao finalizar a contratação em ambiente virtual, terão aceito todas as condições ora apresentadas.
+                <p>E, por estarem assim justos e contratados, ao finalizar a contratação em ambiente virtual, terão aceito todas as condições ora apresentadas.</p>
                 
                 
                 
-                Brasília-DF., XXXX , XXXXXX de 2022
-                
-                
-                CONTRATADA ______________________________________________________
-                
-                
-                CONTRATANTE _____________________________________________________
+                <h5>Brasília-DF., XXXX , XXXXXX de 2022</h5>
             
             </p>
         </div>
