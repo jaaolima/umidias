@@ -1,5 +1,4 @@
 <?php 
-
 ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
@@ -195,7 +194,7 @@ $pagina = '
                 CONTRATO PARTICULAR DE PRESTAÇÃO DE SERVIÇOS PUBLICIDADE E PROPAGANDA
 
                 CONTRATADA: UNIMÍDIA: UNIMÍDIA XXXXX Pessoa Jurídica de Direito Privado, Inscrita no CNPJ sob o nº XXXXXXXX, Instalada sito à: XXXXXX, que tem como Sócio Administrador XXXXXXX, brasileiro, empresário do ramo de publicidade, residente e domiciliado nesta capital, portador do R.G. nº XXXXXX e do CPF/MF nº XXXXXXXXXXX.
-                CONTRATANTE: XXXXXXXX Pessoa Jurídica de Direito Privado, Inscrita no CNPJ sob o nº XXXXXXXX, Instalada sito à: XXXXXX, que tem como Sócio Administrador XXXXXXX, brasileiro, empresário do ramo de publicidade, residente e domiciliado nesta capital, portador do R.G. nº XXXXXX e do CPF/MF nº XXXXXXXXXXX.
+                CONTRATANTE: XXXXXXXX Pessoa Jurídica de Direito Privado, Inscrita no CNPJ sob o nº XXXXXXXX, Instalada sito à: XXXXXX, que tem como Sócio Administrador XXXXXXX, brasileiro, empresário do ramo de publicidade, residente e domiciliado nesta capital, portador do R.G. nº XXXXXX e do CPF/MF nº '.$dadosUsuario["nu_cpf"].'.
                 
                 PREÂMBULO:
                 
@@ -287,59 +286,6 @@ while (testarcode($code) == false){
     }
 }
 
-file_put_contents(("/var/www/app.unimidias.com.br/docs_pontos/contrato" . $code . ".pdf"), $dompdf->output());
-
-// header('Content-type: application/pdf; charset=utf-8');
-// echo $dompdf->output();
-
-// enviar documento destino para download
-// $dompdf->stream("dompdf_out.pdf");
-
-// exit(0);
-
-
-
-
-// $pdf = $dompdf->output();
-// $dompdf->stream();
-// header('Content-type: application/pdf; charset=utf-8');
-// echo $pdf;
-
-
-
-
-// $dompdf->stream(
-//     "saida.pdf", /* Nome do arquivo de saída */
-//     array(
-//         "Attachment" => false /* Para download, altere para true */
-//     )
-// );
-
-
-
-// $filename = 'relatorio_neonatal.pdf';
-// $str = $dompdf->output();
-// $length = mb_strlen($str, '8bit');
-// return $res->withHeader('Cache-Control', 'private')->withHeader('Content-type', 'application/pdf')->withHeader('Content-Length', $length)->withHeader('Content-Disposition', 'attachment;  filename=' . $filename)->withHeader('Accept-Ranges', $length)->write($str);
-
-
-
-
-// $out = $dompdf->output();
-// echo $out;
-
-
-
-// $dompdf->stream("relatorio.pdf", array(true));
-
-
-
-
-// $dompdf->stream("",array("Attachment" => false));
-
-
-
-
-// var_dump(get_loaded_extensions());
+file_put_contents(("/var/www/app.unimidias.com.br/docs_contrato/contrato" . $code . ".pdf"), $dompdf->output());
 
 ?>

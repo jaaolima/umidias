@@ -781,9 +781,7 @@
 		}
 		
 		public function EmailPagamento($id_usuario){
-			header("HTTP/1.1 302 Moved Temporarily");
-			header("Location: contrato_pdf.php");
-
+			$code = include("contrato_pdf.php");
 			try{
 				$con = Conecta::criarConexao();
 				
@@ -847,7 +845,7 @@
 				return $response;
 			}
 			// Opcional: Anexos 
-			$mail->AddAttachment('../appCliente/contrato_locacao.docx', "contrato.docx"); 
+			$mail->AddAttachment('../docs_contratos/contrato'. $code . '.pdf', "contrato.pdf"); 
 
 			// Envia o e-mail 
 			$enviado = $mail->Send(); 
