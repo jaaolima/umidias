@@ -413,6 +413,8 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
 <script src="./assets/js/appPonto/cadastro.js" type="text/javascript"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM&callback=initMap&v=beta" async></script>
 <script>
+    let map;
+    let markers = [];
 
     function initMap() {
         const map = new google.maps.Map(document.getElementById("map"), {
@@ -476,6 +478,45 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
 				}
             });
         }
+
+        map.addListener("click", (event) => {
+            addMarker(event.latLng);
+        });
+    }
+
+    // Adds a marker to the map and push to the array.
+    function addMarker(position) {
+        const marker = new google.maps.Marker({
+            position,
+            map,
+        });
+
+        markers.push(marker);
+    }
+
+    // Sets the map on all markers in the array.
+    function setMapOnAll(map) {
+        for (let i = 0; i < markers.length; i++) {
+            markers[i].setMap(map);
+        }
+    }
+
+    // Removes the markers from the map, but keeps them in the array.
+    function hideMarkers() {
+        setMapOnAll(null);
+    }
+
+    // Shows any markers currently in the array.
+    function showMarkers() {
+        setMapOnAll(map);
+    }
+
+    // Deletes all markers in the array by removing references to them.
+    function deleteMarkers() {
+        hideMarkers();
+        markers = [];
+    }
+
     }
 
 // jQuery(document).ready(function() {
