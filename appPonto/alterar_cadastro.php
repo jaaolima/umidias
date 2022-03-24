@@ -169,11 +169,11 @@ $optionsSentido = $Bairro->listaroptionsBairro($ds_sentido);
                     <div class="row">
                         <div class="form-group col-6">
                             <label >Latitude<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" value="<?php echo $dados['ds_latitude']?> " readonly/>
+                            <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" value="<?php echo $dados['ds_latitude']?> "/>
                         </div> 
                         <div class="form-group col-6">
                             <label >Longitude<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" value="<?php echo $dados['ds_longitude']?>" readonly/>
+                            <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" value="<?php echo $dados['ds_longitude']?>"/>
                         </div> 
                          
                     </div>
@@ -321,7 +321,7 @@ var demo3 = function() {
 					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
 				}
 			});	
-            Geocoding(e.latLng.lat(), e.latLng.lng());
+            // Geocoding(e.latLng.lat(), e.latLng.lng());
 			map.setZoom(5);
 			$("#ds_latitude").val(e.latLng.lat());
 			$("#ds_longitude").val(e.latLng.lng());
@@ -344,19 +344,19 @@ var demo3 = function() {
 
 
 }
-function Geocoding(lat, long){
-    latlgn = lat + "," + long;
-    console.log(latlgn);
-    $.ajax({
-        url: 'https://maps.googleapis.com/maps/api/geocode/json'
-        , type: 'get'
-        , data: {latlng : latlgn, key: 'AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM'}
-        , success: function(data) {
-            $("#ds_descricao").val(data['results'][0]['formatted_address']);
-        }
-    });
+// function Geocoding(lat, long){
+//     latlgn = lat + "," + long;
+//     console.log(latlgn);
+//     $.ajax({
+//         url: 'https://maps.googleapis.com/maps/api/geocode/json'
+//         , type: 'get'
+//         , data: {latlng : latlgn, key: 'AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM'}
+//         , success: function(data) {
+//             $("#ds_descricao").val(data['results'][0]['formatted_address']);
+//         }
+//     });
     
-}
+// }
 
 
 //let marcas = [];
