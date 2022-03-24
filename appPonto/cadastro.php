@@ -432,7 +432,10 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
             $("#ds_longitude").val(event.latLng.lng());
         });
 
-        function RemoveMarkers(map) {
+        function RemoveMarkers() {
+            for (let i = 0; i < markers.length; i++) {
+                markers[i].setMap(null);
+            }
             markers = [];
         }
 
