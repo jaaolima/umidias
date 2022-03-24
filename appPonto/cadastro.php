@@ -420,7 +420,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
             lat: -15.7750656,
             lng: -48.0773014,
             },
-            zoom: 16,
+            zoom: 12,
             heading: 320,
             tilt: 47.5,
             mapId: "90f87356969d889c",
