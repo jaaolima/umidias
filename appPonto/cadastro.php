@@ -458,7 +458,7 @@ function initMap() {
     }
   };
   map.addListener("dblclick", (e) => {
-    placeMarkerAndPanTo(e.latLng, map);
+    addMarker(e.latLng, map);
   });
 }
 
