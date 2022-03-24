@@ -458,8 +458,9 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
             }
         };
         google.maps.event.addListener(map, "click", (event) => {
-            setMapOnAll(null);
             addMarker(event.latLng, map);
+            $("#ds_latitude").val(event.latLng.lat());
+            $("#ds_longitude").val(event.latLng.lng());
         });
 
         // Adds a marker to the map.
@@ -473,12 +474,6 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 icon: '../assets/media/localizacao.png'
             });
         }
-
-        map.addListener("click", (event) => {
-            addMarker(event.latLng);
-            $("#ds_latitude").val(event.latLng.lat());
-            $("#ds_longitude").val(event.latLng.lng());
-        });
 
     }
 
