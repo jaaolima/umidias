@@ -442,8 +442,10 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
         function addMarker(position) {
             const marker = new google.maps.Marker({
                 position: position,
-                label: "Seu ponto está aqui",
                 map: map,
+                infoWindow: {
+					content: '<span style="color:#000">Aqui está o seu ponto!</span>';
+				},
                 icon: '../assets/media/localizacao.png'
             });
 
