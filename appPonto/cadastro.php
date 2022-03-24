@@ -413,108 +413,73 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
 <script src="./assets/js/appPonto/cadastro.js" type="text/javascript"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM&callback=initMap&v=beta" async></script>
 <script>
-    let map;
-    let markers = [];
 
-    function initMap() {
-        const map = new google.maps.Map(document.getElementById("map"), {
-            center: {
-            lat: -15.7750656,
-            lng: -48.0773014,
-            },
-            zoom: 16,
-            heading: 320,
-            tilt: 47.5,
-            mapId: "90f87356969d889c",
-        });
-        google.maps.event.addListener(map, "click", (event) => {
-            setMapOnAll(null);
-            addMarker(event.latLng, map);
-        });
+let map;
+let markers = [];
 
-        // Adds a marker to the map.
-        function addMarker(location, map) {
-            // Add the marker at the clicked location, and add the next-available label
-            // from the array of alphabetical characters.
-            new google.maps.Marker({
-                position: location,
-                label: "Seu ponto está aqui",
-                map: map,
-                icon: '../assets/media/localizacao.png',
-				infoWindow: {
-					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
-				}
-            });
-        }
+function initMap() {
+  const haightAshbury = { lat: 37.769, lng: -122.446 };
 
-        map.addListener("click", (event) => {
-            addMarker(event.latLng);
-        });
-    }
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {
+        lat: -15.7750656,
+        lng: -48.0773014,
+        },
+        zoom: 16,
+        heading: 320,
+        tilt: 47.5,
+        mapId: "90f87356969d889c",
+  });
+  // This event listener will call addMarker() when the map is clicked.
+  map.addListener("click", (event) => {
+    addMarker(event.latLng);
+  });
+  // add event listeners for the buttons
+  document
+    .getElementById("show-markers")
+    .addEventListener("click", showMarkers);
+  document
+    .getElementById("hide-markers")
+    .addEventListener("click", hideMarkers);
+  document
+    .getElementById("delete-markers")
+    .addEventListener("click", deleteMarkers);
+  // Adds a marker at the center of the map.
+  addMarker(haightAshbury);
+}
 
-    // Adds a marker to the map and push to the array.
-    function addMarker(position) {
-        const marker = new google.maps.Marker({
-            position,
-            map,
-        });
+// Adds a marker to the map and push to the array.
+function addMarker(position) {
+  const marker = new google.maps.Marker({
+    position,
+    map,
+  });
 
-        markers.push(marker);
-    }
+  markers.push(marker);
+}
 
-    // Sets the map on all markers in the array.
-    function setMapOnAll(map) {
-        for (let i = 0; i < markers.length; i++) {
-            markers[i].setMap(map);
-        }
-    }
+// Sets the map on all markers in the array.
+function setMapOnAll(map) {
+  for (let i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+  }
+}
 
-    // Removes the markers from the map, but keeps them in the array.
-    function hideMarkers() {
-        setMapOnAll(null);
-    }
+// Removes the markers from the map, but keeps them in the array.
+function hideMarkers() {
+  setMapOnAll(null);
+}
 
-    // Shows any markers currently in the array.
-    function showMarkers() {
-        setMapOnAll(map);
-    }
+// Shows any markers currently in the array.
+function showMarkers() {
+  setMapOnAll(map);
+}
 
-    // Deletes all markers in the array by removing references to them.
-    function deleteMarkers() {
-        hideMarkers();
-        markers = [];
-    }
-
-// jQuery(document).ready(function() {
-//     demo3(-15.7750656, -48.0773014);
-// });
-// var demo3 = function(latitude, longitude) { 
-// 	var map = new GMaps({
-// 		div: '#map',
-//         lat: latitude,
-//         lng: longitude,
-//         zoom: 12,
-// 		dblclick: function(e) {
-// 			map.removeMarkers();
-// 			map.addMarker({
-// 				lat: e.latLng.lat(),
-// 				lng: e.latLng.lng(),
-// 				title: 'Seu ponto',
-//                 icon: '../assets/media/localizacao.png',
-// 				infoWindow: {
-// 					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
-// 				}
-
-// 			});	
-
-//             // Geocoding(e.latLng.lat(), e.latLng.lng());
-// 			map.setZoom(5);
-// 			$("#ds_latitude").val(e.latLng.lat());
-// 			$("#ds_longitude").val(e.latLng.lng());
-// 		},
-// 	}); 
-
-// }
+// Deletes all markers in the array by removing references to them.
+function deleteMarkers() {
+  hideMarkers();
+  markers = [];
+}
 
 
 </script>
