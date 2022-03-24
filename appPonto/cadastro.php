@@ -413,7 +413,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
 <script src="./assets/js/appPonto/cadastro.js" type="text/javascript"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM&callback=initMap&v=beta" async></script>
 <script>
-
+    markers = [];
     function initMap() {
         const map = new google.maps.Map(document.getElementById("map"), {
             center: {
@@ -457,23 +457,26 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 break;
             }
         };
-        google.maps.event.addListener(map, "click", (event) => {
-            setMap(map);
+        google.maps.event.addListener(map, "dblclick", (event) => {
+            RemoveMarkers();
             addMarker(event.latLng, map);
             $("#ds_latitude").val(event.latLng.lat());
             $("#ds_longitude").val(event.latLng.lng());
         });
 
-        // Adds a marker to the map.
-        function addMarker(location, map) {
-            // Add the marker at the clicked location, and add the next-available label
-            // from the array of alphabetical characters.
-            new google.maps.Marker({
-                position: location,
+        function RemoveMarkers(map) {
+            markers = [];
+        }
+
+        function addMarker(position) {
+            const marker = new google.maps.Marker({
+                position: position,
                 label: "Seu ponto está aqui",
                 map: map,
                 icon: '../assets/media/localizacao.png'
             });
+
+            markers.push(marker);
         }
 
     }
