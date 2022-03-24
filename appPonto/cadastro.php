@@ -444,7 +444,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 position: position,
                 map: map,
                 infoWindow: {
-					content: '<span style="color:#000">Aqui está o seu ponto!</span>';
+					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
 				},
                 icon: '../assets/media/localizacao.png'
             });
