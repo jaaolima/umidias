@@ -467,7 +467,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
             // from the array of alphabetical characters.
             new google.maps.Marker({
                 position: location,
-                label: labels[labelIndex++ % labels.length],
+                label: "Seu ponto está aqui",
                 map: map,
             });
         }
