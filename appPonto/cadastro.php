@@ -414,8 +414,10 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM&v=beta&callback=initMap"></script>
 <script>
 map = new google.maps.Map(document.getElementById('map'), {
-  center: {lat: -34.397, lng: 150.644},
-  zoom: 8,
+  center: {lat: -15.7750656, lng: -48.0773014},
+  zoom: 16,
+  heading: 320,
+  tilt: 47.5
   mapId: 'MAP_ID'
 });
 // jQuery(document).ready(function() {
