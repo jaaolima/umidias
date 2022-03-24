@@ -457,8 +457,8 @@ function initMap() {
         break;
     }
   };
-  map.addListener("dblclick", (e) => {
-    addMarker(e.latLng, map);
+  google.maps.event.addListener(map, "click", (event) => {
+    addMarker(event.latLng, map);
   });
 }
 
