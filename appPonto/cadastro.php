@@ -460,6 +460,17 @@ function initMap() {
   google.maps.event.addListener(map, "click", (event) => {
     addMarker(event.latLng, map);
   });
+
+    // Adds a marker to the map.
+    function addMarker(location: google.maps.LatLngLiteral, map: google.maps.Map) {
+        // Add the marker at the clicked location, and add the next-available label
+        // from the array of alphabetical characters.
+        new google.maps.Marker({
+            position: location,
+            label: labels[labelIndex++ % labels.length],
+            map: map,
+        })
+    }
 }
 
 // jQuery(document).ready(function() {
