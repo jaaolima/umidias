@@ -106,21 +106,24 @@ $optionsSentido = $Bairro->listaroptionsBairro($ds_sentido);
                 </div>
                 <div class="form-group col-3">
                     <label>Bairro <span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_bairro" name="ds_bairro">
+                    <input type="text" class="form-control" id="ds_bairro" name="ds_bairro" />
+                    <!-- <select class="form-control" id="ds_bairro" name="ds_bairro">
+                        
                         <option value="">Selecione...</option>
                         <?php
                             echo $optionsBairro; 
                         ?>
-                    </select>
+                    </select> -->
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_sentido" name="ds_sentido">
+                    <input type="text" class="form-control" id="ds_sentido" name="ds_sentido" />
+                    <!-- <select class="form-control" id="ds_sentido" name="ds_sentido">
                         <option value="">Selecione...</option>
                         <?php
                             echo $optionsSentido; 
                         ?>
-                    </select>
+                    </select> -->
                 </div>
             </div>
             <div class="form-group row">
@@ -172,10 +175,13 @@ $optionsSentido = $Bairro->listaroptionsBairro($ds_sentido);
                             <label >Longitude<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" value="<?php echo $dados['ds_longitude']?>" readonly/>
                         </div> 
+                         
+                    </div>
+                    <div class="row">
                         <div class="form-group col-12">
                             <label>Descrição <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_descricao']?>" readonly/>
-                        </div> 
+                            <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" value="<?php echo $dados['ds_descricao']?>"/>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -133,18 +133,18 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                         <div id="map"></div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-4">
+                        <div class="form-group col-6">
                             <label >Latitude<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ds_latitude" name="ds_latitude" />
                         </div> 
-                        <div class="form-group col-4">
+                        <div class="form-group col-6">
                             <label >Longitude<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" />
                         </div>
                         
                     </div>
                     <div class="row">
-                        <div class="form-group col-4">
+                        <div class="form-group col-12">
                             <label>Descrição <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
                         </div> 
