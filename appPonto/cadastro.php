@@ -458,6 +458,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
             }
         };
         google.maps.event.addListener(map, "click", (event) => {
+            removeMarkers();
             addMarker(event.latLng, map);
         });
 
@@ -469,6 +470,10 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 position: location,
                 label: "Seu ponto está aqui",
                 map: map,
+                icon: '../assets/media/localizacao.png',
+				infoWindow: {
+					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
+				}
             });
         }
     }
