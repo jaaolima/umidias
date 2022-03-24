@@ -458,6 +458,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
             }
         };
         google.maps.event.addListener(map, "click", (event) => {
+            setMap(map);
             addMarker(event.latLng, map);
             $("#ds_latitude").val(event.latLng.lat());
             $("#ds_longitude").val(event.latLng.lng());
