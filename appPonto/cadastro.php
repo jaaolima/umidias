@@ -458,7 +458,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
             }
         };
         google.maps.event.addListener(map, "click", (event) => {
-            removeMarkers();
+            setMapOnAll(null);
             addMarker(event.latLng, map);
         });
 
