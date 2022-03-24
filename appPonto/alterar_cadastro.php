@@ -298,9 +298,8 @@ $(document).ready(function() {
         ?>
         
     });
-    // The following example creates complex markers to indicate beaches near
-// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
-// to the base of the flagpole.
+
+
 jQuery(document).ready(function() {
 	demo3();
 });
@@ -433,26 +432,115 @@ function setMarkers(map) {
   }*/
 }
 
-function addMarker(location) {
-    const marker = new google.maps.Marker({
-        position: location,
-        map: map,
-    });
-    marcas.push(marker);
-}
-function placeMarker(location, map) {
+// function addMarker(location) {
+//     const marker = new google.maps.Marker({
+//         position: location,
+//         map: map,
+//     });
+//     marcas.push(marker);
+// }
+// function placeMarker(location, map) {
 	
-	var marker = new google.maps.Marker({
-		position: location, 
-		map: map,
-		title: 'Aqui está localizado o seu ponto :'+location.lat()+' '+location.lng()
-	});
-	marker.setMap(map);
-  	map.setCenter(location);
-	$("#ds_latitude").val(location.lat());
-	$("#ds_longitude").val(location.lng());
-	console.log('Latitude: '+location.lat()+' Longitude: '+location.lng());
-}
+// 	var marker = new google.maps.Marker({
+// 		position: location, 
+// 		map: map,
+// 		title: 'Aqui está localizado o seu ponto :'+location.lat()+' '+location.lng()
+// 	});
+// 	marker.setMap(map);
+//   	map.setCenter(location);
+// 	$("#ds_latitude").val(location.lat());
+// 	$("#ds_longitude").val(location.lng());
+// 	console.log('Latitude: '+location.lat()+' Longitude: '+location.lng());
+// }
+
+
+</script>
+<script>
+    markers = [];
+    function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: {
+            lat: -15.7750656,
+            lng: -48.0773014,
+            },
+            zoom: 16,
+            heading: 320,
+            tilt: 47.5,
+            mapId: "90f87356969d889c",
+        });
+        map.addMarker({
+            lat: <?php echo $dados["ds_latitude"]; ?>,
+            lng: <?php echo $dados["ds_longitude"]; ?>,
+            title: '<?php echo $dados["ds_bairro"]; ?>',
+            icon: '../assets/media/localizacao.png',
+            details: {
+                database_id: 42,
+                author: 'HPNeo'
+            },
+            infoWindow: {
+                content: '<span style="color:#000"><?php echo $dados["ds_bairro"]; ?></span>'
+            }
+        });
+        google.maps.event.addListener(map, "dblclick", (event) => {
+            RemoveMarkers();
+            addMarker(event.latLng, map);
+            $("#ds_latitude").val(event.latLng.lat());
+            $("#ds_longitude").val(event.latLng.lng());
+        });
+
+        function RemoveMarkers() {
+            for (let i = 0; i < markers.length; i++) {
+                markers[i].setMap(null);
+            }
+            markers = [];
+        }
+
+        function addMarker(position) {
+            const marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                infoWindow: {
+					content: '<span style="color:#000">Aqui está o seu ponto!</span>';
+				},
+                icon: '../assets/media/localizacao.png'
+            });
+
+            markers.push(marker);
+        }
+
+    }
+
+
+// jQuery(document).ready(function() {
+//     demo3(-15.7750656, -48.0773014);
+// });
+// var demo3 = function(latitude, longitude) { 
+// 	var map = new GMaps({
+// 		div: '#map',
+//         lat: latitude,
+//         lng: longitude,
+//         zoom: 12,
+// 		dblclick: function(e) {
+// 			map.removeMarkers();
+// 			map.addMarker({
+// 				lat: e.latLng.lat(),
+// 				lng: e.latLng.lng(),
+// 				title: 'Seu ponto',
+//                 icon: '../assets/media/localizacao.png',
+// 				infoWindow: {
+// 					content: '<span style="color:#000">Aqui está o seu ponto!</span>'
+// 				}
+
+// 			});	
+
+//             // Geocoding(e.latLng.lat(), e.latLng.lng());
+// 			map.setZoom(5);
+// 			$("#ds_latitude").val(e.latLng.lat());
+// 			$("#ds_longitude").val(e.latLng.lng());
+// 		},
+// 	}); 
+
+// }
 
 
 </script>
