@@ -411,7 +411,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
     <!--end::Form-->
 </div>
 <script src="./assets/js/appPonto/cadastro.js" type="text/javascript"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM&v=beta&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM&callback=initMap&v=beta" async></script>
 <script>
 
 function initMap() {
@@ -459,9 +459,9 @@ function initMap() {
   };
 }
 
-$(document).ready(function(){
-    initMap();
-});
+// $(document).ready(function(){
+//     initMap();
+// });
 // jQuery(document).ready(function() {
 //     demo3(-15.7750656, -48.0773014);
 // });
