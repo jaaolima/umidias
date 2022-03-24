@@ -89,21 +89,23 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 </div>
                 <div class="form-group col-3">
                     <label>Bairro <span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_bairro" name="ds_bairro"> 
+                    <input type="text" class="form-control" id="ds_bairro" name="ds_bairro" />
+                    <!-- <select class="form-control" id="ds_bairro" name="ds_bairro"> 
                         <option value="">Selecione...</option>
                         <?php
                             echo $optionsBairro; 
                         ?>
-                    </select>
+                    </select> -->
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
-                    <select class="form-control" id="ds_sentido" name="ds_sentido">
+                    <input type="text" class="form-control" id="ds_sentido" name="ds_sentido" />
+                    <!-- <select class="form-control" id="ds_sentido" name="ds_sentido">
                         <option value="">Selecione...</option>
                         <?php
                             echo $optionsBairro; 
                         ?>
-                    </select>
+                    </select> -->
                 </div>
             </div>
             <div class="form-group row">
@@ -126,7 +128,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                     </div>
                 </div>-->
                 <div class="form-group col-6"> 
-                    <div class="form-group ">
+                    <div class="form-group">
                         <p>Clique duas vezes no mapa para marcar a localização do ponto<span class="text-danger">*</span></p>
                         <div id="map"></div>
                     </div>
@@ -139,9 +141,12 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                             <label >Longitude<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ds_longitude" name="ds_longitude" />
                         </div>
+                        
+                    </div>
+                    <div class="row">
                         <div class="form-group col-4">
                             <label>Descrição <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="ds_descricao" name="ds_descricao" readonly/>
+                            <input type="text" class="form-control" id="ds_descricao" name="ds_descricao"/>
                         </div> 
                     </div>
                 </div>
