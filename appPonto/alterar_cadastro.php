@@ -106,7 +106,7 @@ $optionsSentido = $Bairro->listaroptionsBairro($ds_sentido);
                 </div>
                 <div class="form-group col-3">
                     <label>Bairro <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_bairro" name="ds_bairro" />
+                    <input type="text" class="form-control" id="ds_bairro" name="ds_bairro" value="<?php echo $dados['ds_bairro'];?>" />
                     <!-- <select class="form-control" id="ds_bairro" name="ds_bairro">
                         
                         <option value="">Selecione...</option>
@@ -117,7 +117,7 @@ $optionsSentido = $Bairro->listaroptionsBairro($ds_sentido);
                 </div>
                 <div class="form-group col-3">
                     <label>Sentido <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_sentido" name="ds_sentido" />
+                    <input type="text" class="form-control" id="ds_sentido" name="ds_sentido" value="<?php echo $dados['ds_sentido'];?>"/>
                     <!-- <select class="form-control" id="ds_sentido" name="ds_sentido">
                         <option value="">Selecione...</option>
                         <?php
