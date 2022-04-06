@@ -48,9 +48,8 @@
 	$meusPontosAlugadosParceiro = $ponto->listarMeusPontosAlugadosParceiro($id_parceiro);
 
 
-	$dadosTotalContratadas = $ponto->dadosTotalContratadas();
-	$dadosTotalPendentes = $ponto->dadosTotalPendentes();
-	$dadosTotalReservadas = $ponto->dadosTotalReservadas();
+	$dadosTotalInativos = $ponto->dadosTotalInativos();
+	$dadosTotalAtivos = $ponto->dadosTotalAtivos();
 	$dadosTotalParceiros = $parceiro->dadosTotalParceiros();
 	$dadosTotalCliente = $cliente->dadosTotalCliente();
 	$dadosTodasMidias = $ponto->listarTodasMidias();
@@ -820,16 +819,13 @@
 				var midia = function () {
 					const apexChart = "#grafico_midia";
 					var options = {
-						series: [{
-							name: 'Livres',
-							data: [<?php echo $dadosTotalContratadas[0]["id_ponto"]; ?>,<?php echo $dadosTotalContratadas[1]["id_ponto"]; ?>, <?php echo $dadosTotalContratadas[2]["id_ponto"]; ?>]
-						}, {
+						series: [ {
 							name: 'Pendentes',
-							data: [<?php echo $dadosTotalPendentes[0]["id_ponto"]; ?>,<?php echo $dadosTotalPendentes[1]["id_ponto"]; ?>, <?php echo $dadosTotalPendentes[2]["id_ponto"]; ?>]
+							data: [<?php echo $dadosTotalInativos[0]["id_ponto"]; ?>,<?php echo $dadosTotalInativos[1]["id_ponto"]; ?>, <?php echo $dadosTotalInativos[2]["id_ponto"]; ?>]
 						},
 						{
 							name: 'Ativos',
-							data: [<?php echo $dadosTotalReservadas[0]["id_ponto"]; ?>,<?php echo $dadosTotalReservadas[1]["id_ponto"]; ?>, <?php echo $dadosTotalReservadas[2]["id_ponto"]; ?>]
+							data: [<?php echo $dadosTotalAtivos[0]["id_ponto"]; ?>,<?php echo $dadosTotalAtivos[1]["id_ponto"]; ?>, <?php echo $dadosTotalAtivos[2]["id_ponto"]; ?>]
 						}],
 						chart: {
 							height: 350,

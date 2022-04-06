@@ -938,10 +938,10 @@
 			return array(mes(), semana(), atual());
 		}
 		
-		public function dadosTotalPendentes()
+		public function dadosTotalInativos()
 		{
 			
-			function mesPendentes(){	
+			function mesInativos(){	
 				$mes = date('Y-m-d', strtotime('-1 month'));
 				
 				try{
@@ -949,7 +949,8 @@
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto 
-								where dt_ponto <= :mes and id_ponto in (select id_ponto from rl_alugado)";
+								where dt_ponto <= :mes
+								and st_status <> 'A'";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':mes' => $mes);
@@ -966,7 +967,7 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function semanaPendentes(){	
+			function semanaInativos(){	
 				$semana = date('Y-m-d', strtotime('-7 days'));
 				
 				try{
@@ -974,7 +975,8 @@
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto 
-								where dt_ponto <= :semana and id_ponto in (select id_ponto from rl_alugado)";
+								where dt_ponto <= :semana 
+								and st_status <> 'A'";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':semana' => $semana);
@@ -992,14 +994,14 @@
 				}
 			}
 
-			function atualPendentes(){	
+			function atualInativos(){	
 				
 				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto 
-								where id_ponto in (select id_ponto from rl_alugado)";
+								where st_status <> 'A'";
 					
 					$stmt = $con->prepare($select); 
 					$stmt->execute();
@@ -1015,12 +1017,12 @@
 				}
 			}
 
-			return array(mesPendentes(), semanaPendentes(), atualPendentes());
+			return array(mesInativos(), semanaInativos(), atualInativos());
 		}
-		public function dadosTotalReservadas()
+		public function dadosTotalAtivos()
 		{
 			
-			function mesReservados(){	
+			function mesAtivos(){	
 				$mes = date('Y-m-d', strtotime('-1 month'));
 				$data = date('Y-m-d');
 				try{
@@ -1028,7 +1030,8 @@
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto 
-								where dt_ponto <= :mes and id_ponto in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
+								where dt_ponto <= :mes
+								and st_status = 'A'";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':mes' => $mes,
@@ -1046,7 +1049,7 @@
 					print "ERRO:".$e->getMessage();		
 				}
 			}
-			function semanaReservados(){	
+			function semanaAtivos(){	
 				$semana = date('Y-m-d', strtotime('-7 days'));
 				$data = date('Y-m-d');
 				try{
@@ -1054,7 +1057,8 @@
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto 
-								where dt_ponto <= :semana and id_ponto in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
+								where dt_ponto <= :semana 
+								and st_status = 'A'";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':semana' => $semana,
@@ -1073,14 +1077,14 @@
 				}
 			}
 
-			function atualReservados(){	
+			function atualAtivos(){	
 				$data = date('Y-m-d');
 				try{
 					$con = Conecta::criarConexao();
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto 
-								where id_ponto in (select id_ponto from rl_alugado where :dt_hoje > dt_final)";
+								where st_status = A";
 					
 					$stmt = $con->prepare($select); 
 					$params = array(':dt_hoje' => $data);
@@ -1097,7 +1101,7 @@
 				}
 			}
 
-			return array(mesReservados(), semanaReservados(), atualReservados());
+			return array(mesAtivos(), semanaAtivos(), atualAtivos());
 		}
 		public function graficoPontoParceiroAlugados($id_parceiro)
 		{
