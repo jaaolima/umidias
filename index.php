@@ -820,7 +820,7 @@
 					const apexChart = "#grafico_midia";
 					var options = {
 						series: [ {
-							name: 'Pendentes',
+							name: 'Inativos',
 							data: [<?php echo $dadosTotalInativos[0]["id_ponto"]; ?>,<?php echo $dadosTotalInativos[1]["id_ponto"]; ?>, <?php echo $dadosTotalInativos[2]["id_ponto"]; ?>]
 						},
 						{

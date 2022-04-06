@@ -1082,7 +1082,7 @@
 					
 					$select = "SELECT count(id_ponto) as id_ponto
 								FROM tb_ponto 
-								where st_status = A";
+								where st_status = 'A'";
 					
 					$stmt = $con->prepare($select); 
 					$stmt->execute();
