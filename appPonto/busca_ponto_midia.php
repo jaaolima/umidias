@@ -41,7 +41,7 @@
         
 		<!--begin: Datatable -->
 		
-		<!--end: Datatable -->
+		<!--end: Datatable --> 
 	</div>
 </div>
 <div id="lista"></div> 
