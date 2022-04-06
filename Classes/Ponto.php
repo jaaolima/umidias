@@ -1034,8 +1034,7 @@
 								and st_status = 'A'";
 					
 					$stmt = $con->prepare($select); 
-					$params = array(':mes' => $mes,
-									':dt_hoje' => $data);
+					$params = array(':mes' => $mes);
 
 					$stmt->execute($params);
 
@@ -1061,8 +1060,7 @@
 								and st_status = 'A'";
 					
 					$stmt = $con->prepare($select); 
-					$params = array(':semana' => $semana,
-									':dt_hoje' => $data);
+					$params = array(':semana' => $semana);
 					
 					$stmt->execute($params);
 
@@ -1087,8 +1085,7 @@
 								where st_status = A";
 					
 					$stmt = $con->prepare($select); 
-					$params = array(':dt_hoje' => $data);
-					$stmt->execute($params);
+					$stmt->execute();
 
 					return $stmt->fetch();
 					
