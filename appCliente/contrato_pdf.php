@@ -191,7 +191,7 @@ $pagina = '
         </div>
         <div>
                 <p>CONTRATADA: UNIMÍDIA: UNIMÍDIA XXXXX Pessoa Jurídica de Direito Privado, Inscrita no CNPJ sob o nº XXXXXXXX, Instalada sito à: XXXXXX, que tem como Sócio Administrador XXXXXXX, brasileiro, empresário do ramo de publicidade, residente e domiciliado nesta capital, portador do R.G. nº XXXXXX e do CPF/MF nº XXXXXXXXXXX.</p>
-                <p>CONTRATANTE: XXXXXXXX Pessoa Jurídica de Direito Privado, Inscrita no CNPJ sob o nº XXXXXXXX, Instalada sito à: XXXXXX, que tem como Sócio Administrador XXXXXXX, brasileiro, empresário do ramo de publicidade, residente e domiciliado nesta capital, portador do R.G. nº XXXXXX e do CPF/MF nº '.$dadosUsuario["nu_cpf"].'.</p>
+                <p>CONTRATANTE: '.$dadosUsuario['ds_nome'].' Pessoa Jurídica de Direito Privado,  Instalada sito à: '.$dadosUsuario['ds_endereco'].', brasileiro, empresário do ramo de publicidade, residente e domiciliado nesta capital, portador do CPF/MF nº '.$dadosUsuario["nu_cpf"].'.</p>
                 
                 <h5>PREÂMBULO:</h5>
                 
