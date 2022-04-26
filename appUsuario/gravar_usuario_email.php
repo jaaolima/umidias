@@ -6,7 +6,7 @@
 	$usuario = new Usuario();
 	$gravar = $usuario->gravarUsuarioEmail($_REQUEST);
     if($gravar){
-        header("Location: ../index.php");
+        header("Location: ../login.php");
     }
     
 ?> 
