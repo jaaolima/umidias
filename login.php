@@ -142,6 +142,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="form-group">
 										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
+											<legend class="legend-border mb-0">Endereço</legend>
+											<input class="border-0 w-100 form-control rounded-0" type="text" style="height: 27px;" name="ds_endereco" id="ds_endereco" autocomplete="off">
+										</fieldset> 
+									</div>
+									<div class="form-group">
+										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 											<legend class="legend-border mb-0">Senha</legend>
 											<input class="border-0 w-100 form-control rounded-0" type="password" style="height: 27px;" name="nu_senha" id="nu_senha" autocomplete="off">
 										</fieldset> 

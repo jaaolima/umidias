@@ -200,6 +200,12 @@ function validarUsuario()
 		swal.fire("Erro", "Preencha o Email", "error");
 		return false;	
 	}
+	if ($("#ds_endereco").val() == "")
+	{
+		$("#ds_endereco").focus();
+		swal.fire("Erro", "Preencha o Endereço", "error");
+		return false;	
+	}
 
 	if ($("#nu_cpf").val() == "")
 	{
