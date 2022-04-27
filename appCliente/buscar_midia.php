@@ -127,7 +127,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													{
 
 														$dt_inicial = date('d/m/Y', strtotime($dadosBisemana["dt_inicial"]));
-														$dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"]));
+														$dt_final = date('d/m/Y', strtotime($dadosBisemana["dt_final"])); 
 
 
 														echo "<tr>
