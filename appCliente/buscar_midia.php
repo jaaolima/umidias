@@ -279,7 +279,6 @@ License: You must have a valid license purchased only from themeforest(the above
 					maxWidth: 200,
 				},
 				id: <?php echo $dados["id_ponto"]; ?>,
-				collisionBehavior: google.maps.CollisionBehavior.OPTIONAL_AND_HIDES_LOWER_PRIORITY
 			});
 			<?php } ?>
 		} 
