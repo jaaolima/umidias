@@ -763,7 +763,7 @@
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/widgets.js"></script>
 		<script src="assets/js/custom.js"></script>
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM&callback=initMap&v=beta"></script>
+		<script src="//maps.google.com/maps/api/js?key=AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM&callback=initMap"></script>
 		<script src="assets/plugins/custom/gmaps/gmaps.js"></script>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		
