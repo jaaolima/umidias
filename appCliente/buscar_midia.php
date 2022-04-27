@@ -215,7 +215,8 @@ License: You must have a valid license purchased only from themeforest(the above
 				div: '#map',
 				lat: latitude,
 				lng: longitude,
-				zoom: zoom
+				zoom: zoom,
+				collisionBehavior: google.maps.CollisionBehavior.OPTIONAL_AND_HIDES_LOWER_PRIORITY
 			});
 
 			/*google.maps.event.addListener(map, 'dblclick', function(event) {
