@@ -48,6 +48,10 @@ $(document).ready(function() {
 			$("#cliente").hide();
 		}
 	});
+	$("#nu_cpf").inputmask({
+		"mask": "999.999.999-99",
+		autoUnmask: true,
+	});
 });
 
 function validar()

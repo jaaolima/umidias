@@ -55,11 +55,11 @@
                 <div class="form-group row">
                     <div class="form-group col-md-3">
                         <label >Senha<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="nu_senha" name="nu_senha" />
+                        <input type="password" class="form-control" id="nu_senha" name="nu_senha" />
                     </div>  
                     <div class="form-group col-md-3">
                         <label >Confirmar senha<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="nu_senhaconfirmada" name="nu_senhaconfirmada" />
+                        <input type="password" class="form-control" id="nu_senhaconfirmada" name="nu_senhaconfirmada" />
                     </div>  
                 </div>
             </div>
