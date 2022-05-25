@@ -291,17 +291,30 @@
 
 			$ds_nome		= $dados['ds_nome'];
 			$ds_email    	= $dados['ds_email'];
+			$ds_usuario    	= $dados['ds_usuario'];
+			$id_perfil    	= $dados['id_perfil'];
 			$id_usuario    	= $dados['id_usuario'];
+			if($id_perfil == 1){
+				$ds_endereco    = $dados['ds_endereco'];
+				$nu_cpf    		= $dados['nu_cpf'];
+			}else{
+				$ds_endereco = "";
+				$nu_cpf = "";
+			}
 			
 			try{
 				$con = Conecta::criarConexao();
-				$update = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email
+				$update = "UPDATE tb_usuario set ds_nome = :ds_nome, ds_email = :ds_email, ds_usuario = :ds_usuario, id_perfil = :id_perfil, ds_endereco = :ds_endereco, nu_cpf = :nu_cpf
 						WHERE id_usuario = :id_usuario";
 				
 				$stmt = $con->prepare($update);
 				
 				$params = array(':ds_nome' => $ds_nome, 
 								':ds_email' => $ds_email,
+								':ds_usuario' => $ds_usuario,
+								':id_perfil' => $id_perfil,
+								':ds_endereco' => $ds_endereco,
+								':nu_cpf' => $nu_cpf,
 								':id_usuario'=>$id_usuario);
 				$stmt->execute($params);
 

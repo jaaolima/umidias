@@ -64,16 +64,6 @@ $dados = $usuario->buscarDadosUsuario($id_usuario);
                         <input type="text" class="form-control" id="ds_endereco" name="ds_endereco" value="<?php echo $dados['ds_endereco']?>"/>
                     </div>  
                 </div>
-                <div class="form-group row">
-                    <div class="form-group col-md-3">
-                        <label >Senha<span class="text-danger">*</span></label>
-                        <input type="password" class="form-control" id="nu_senha" name="nu_senha" value="<?php echo $dados['ds_senha']?>"/>
-                    </div>  
-                    <div class="form-group col-md-3">
-                        <label >Confirmar senha<span class="text-danger">*</span></label>
-                        <input type="password" class="form-control" id="nu_senhaconfirmada" name="nu_senhaconfirmada"  value="<?php echo $dados['ds_senha']?>"/>
-                    </div>  
-                </div>
             </div>
         </div>
         <div class="card-footer">
