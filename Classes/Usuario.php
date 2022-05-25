@@ -63,10 +63,14 @@
 		
 			$ds_nome		= $dados['ds_nome'];
 			$ds_email    	= $dados['ds_email'];
-			$ds_endereco    	= $dados['ds_endereco'];
 			$ds_usuario 	= $dados['ds_usuario'];
 			$id_perfil 		= $dados['id_perfil'];
-			$ds_senha       =  '123456';
+			if($id_perfil == 1){
+				$ds_senha       =  '123456';
+				$ds_endereco    = $dados['ds_endereco'];
+				$nu_cpf    		= $dados['nu_cpf'];
+			}
+			
 		
 			try{
 				$con = Conecta::criarConexao();
@@ -223,7 +227,7 @@
 
 		
 
-		function buscarDadosUsuario($id_usuario)
+		function buscarDadosUsuario($id_usuario) 
 		{
 			try{
 				$con = Conecta::criarConexao();

@@ -138,7 +138,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">
 											<legend class="legend-border mb-0">CPF</legend>
 											<input class="border-0 w-100 form-control rounded-0" type="text" style="height: 27px;" name="nu_cpf" id="nu_cpf" autocomplete="off">
-										</fieldset> 
+										</fieldset>  
 									</div>
 									<div class="form-group">
 										<fieldset class="fieldset-border w-100" style=" padding-bottom: 8px !important;">

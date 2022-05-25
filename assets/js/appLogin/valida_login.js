@@ -135,7 +135,7 @@ $('#kt_login_signup_submit').on('click', function (e) {
 			}
 			, error: function (data) {
 				swal.fire("Erro", data.responseText, "error"); 
-			}
+			} 
 		});	
 		
 	}
