@@ -160,7 +160,9 @@ function validar()
 }
 
 function validarCPF(cpf) {	
-
+	if($("id_perfil").val() != "1"){
+		return true;
+	}
 	cpf = cpf.replace(/[^\d]+/g,'');
 	// Elimina CPFs invalidos conhecidos	
 	if (cpf.length != 11 || 
