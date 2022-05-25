@@ -66,7 +66,7 @@
 			$ds_usuario 	= $dados['ds_usuario'];
 			$id_perfil 		= $dados['id_perfil'];
 			if($id_perfil == 1){
-				$ds_senha       = $dados['ds_senha'];
+				$ds_senha       = $dados['nu_senha'];
 				$ds_endereco    = $dados['ds_endereco'];
 				$nu_cpf    		= $dados['nu_cpf'];
 			}else{
