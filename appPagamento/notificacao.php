@@ -12,7 +12,7 @@ $curl = curl_init();
 
 curl_setopt_array($curl, array(
     CURLOPT_URL => "https://api.mercadopago.com/v1/payments/".$colletion_id,
-    CURLOPT_RETURNTRANSFER => true, 
+    CURLOPT_RETURNTRANSFER => true,  
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
     CURLOPT_TIMEOUT => 0,
