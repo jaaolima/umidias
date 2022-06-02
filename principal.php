@@ -111,7 +111,7 @@
                                                 </div>
 												<div class="position-absolute text-center"  style="top:15px;">
 													<img src="assets/media/imgs/texto.png" alt=""  style="width:500px">
-													<button class="btn" style="background-color: Transparent; border:1px solid;">
+													<button class="btn" style="background-color: Transparent; border:1px solid;border-color:  -moz-linear-gradient( -180deg, rgb(220,129,223) 0%, rgb(232,161,212) 74%, rgb(244,192,201) 100%);">
 														Alugue com a Unimídias
 													</button>
 												</div>
