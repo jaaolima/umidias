@@ -112,7 +112,7 @@
 												<div class="position-absolute text-center"  style="top: 150px;bottom: 0;left: 0;right: 0;">
 													<img src="assets/media/imgs/texto.png" alt=""  style="width:500px">
 													<br>
-													<button class="btn" style="background-color: Transparent; border:1px solid;color:#ffffff;">
+													<button class="btn mt-20" style="background-color: Transparent; border:1px solid;color:#ffffff;">
 														Alugue com a Unimídias
 													</button>
 												</div>
