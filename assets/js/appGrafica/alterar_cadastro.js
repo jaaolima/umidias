@@ -3,14 +3,14 @@ $(document).ready(function() {
 
     $("#cancelar").on("click", function(){
 		$('#form_usuario').trigger("reset");
-        redirectTo("appMaterial/listar_material.php");
+        redirectTo("appGrafica/listar_grafica.php");
     }); 
 
 	$("#salvar").on("click", function(e){ 
 		if(validar())
 		{ 
 			$.ajax({
-		        url: 'appMaterial/gravar_alterar_material.php'
+		        url: 'appGrafica/gravar_alterar_grafica.php'
 				, data: $("#form_usuario").serialize()
 		        , type: 'post'
 		        , success: function(html) {
@@ -21,7 +21,7 @@ $(document).ready(function() {
 		                showConfirmButton: true
 		            });
 		            
-					redirectTo("appMaterial/listar_material.php");
+					redirectTo("appGrafica/listar_grafica.php");
 		        }
 				, error: function (data) {
 					swal.fire("Erro", data.responseText, "error");
@@ -29,37 +29,33 @@ $(document).ready(function() {
 		    });		
 		}	
 	});
-	$("#nu_valor").inputmask({
-		"mask": "999",
-		numericInput: true,
-	});
 });
 
 function validar()
 {
-	if($("#ds_material").val() == "")
+	if($("#ds_grafica").val() == "")
 	{
-		$("#ds_material").focus();
-		swal.fire("Erro", "Preencha o Material", "error");
-		$("#ds_material").addClass("is-invalid");
+		$("#ds_grafica").focus();
+		swal.fire("Erro", "Preencha a Gráfica", "error");
+		$("#ds_grafica").addClass("is-invalid");
 		return false;	
 	}
 	else
 	{
-		$("#ds_material").removeClass("is-invalid");	
-		$("#ds_material").addClass("is-valid");
+		$("#ds_grafica").removeClass("is-invalid");	
+		$("#ds_grafica").addClass("is-valid");
 	}
-    if($("#nu_valor").val() == "")
+    if($("#ds_email").val() == "")
 	{
-		$("#nu_valor").focus();
-		swal.fire("Erro", "Preencha o valor", "error");
-		$("#nu_valor").addClass("is-invalid");
+		$("#ds_email").focus();
+		swal.fire("Erro", "Preencha o Email", "error");
+		$("#ds_email").addClass("is-invalid");
 		return false;	
 	}
 	else
 	{
-		$("#nu_valor").removeClass("is-invalid");	
-		$("#nu_valor").addClass("is-valid");
+		$("#ds_email").removeClass("is-invalid");	
+		$("#ds_email").addClass("is-valid");
 	}
 
 

@@ -2,18 +2,18 @@
 ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
-require_once("../Classes/Material.php");
+require_once("../Classes/Grafica.php");
 
-$id_material = $_REQUEST['id_material'];
+$id_grafica = $_REQUEST['id_grafica'];
 
-$material = new Material();
-$dados = $material->buscarDadosMaterial($id_material);
+$grafica = new Grafica();
+$dados = $grafica->buscarDadosGrafica($id_grafica);
 
 ?>
 <div class="card card-custom">
     <div class="card-header">
         <h3 class="card-title">
-            Alterar Cadastro de Materiais
+            Alterar Cadastro de Gráficas
         </h3>
         <div class="card-toolbar">
             <div class="example-tools justify-content-center">
@@ -28,18 +28,12 @@ $dados = $material->buscarDadosMaterial($id_material);
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-6">
-                        <label>Material<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="ds_material" name="ds_material" value="<?php echo $dados['ds_material']?>"/>
+                        <label>Gráfica<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="ds_grafica" name="ds_grafica" value="<?php echo $dados['ds_grafica']?>"/>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>Especificações técnicas<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="ds_especificacao" name="ds_especificacao" value="<?php echo $dados['ds_especificacao']?>" />
-                    </div>
-                    <div class="col-md-3">
-                        <label>Valor<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="nu_valor" name="nu_valor" value="<?php echo $dados['nu_valor']?>" />
+                    <div class="col-md-6">
+                        <label>Email<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="ds_email" name="ds_email" value="<?php echo $dados['ds_email']?>"/>
                     </div>
                 </div>
             </div>       
@@ -48,9 +42,9 @@ $dados = $material->buscarDadosMaterial($id_material);
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
             <button type="reset" class="btn btn-secondary" id="cancelar">Cancelar</button>
         </div>
-        <input type="hidden" class="form-control" id="id_material" name="id_material" value="<?php echo $id_material?>"/>
+        <input type="hidden" class="form-control" id="id_grafica" name="id_grafica" value="<?php echo $id_grafica?>"/>
     </form>
     <!--end::Form-->
 </div>
-<script src="./assets/js/appMaterial/alterar_cadastro.js" type="text/javascript"></script>
+<script src="./assets/js/appGrafica/alterar_cadastro.js" type="text/javascript"></script>
 

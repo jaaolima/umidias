@@ -59,7 +59,7 @@
 				
 				
 				$select = "SELECT 
-							id_grafica, ds_grafica, nu_valor, ds_especificacao
+							id_grafica, ds_grafica, ds_email
 						FROM tb_grafica  
 						WHERE id_grafica = :id_grafica";
 
@@ -81,20 +81,18 @@
 		{
             $id_grafica	    = $dados['id_grafica'];
 			$ds_grafica	    = $dados['ds_grafica'];
-			$ds_especificacao	= $dados['ds_especificacao'];
-            $nu_valor	        = $dados['nu_valor'];
+            $ds_email	        = $dados['ds_email'];
 
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "UPDATE tb_grafica SET ds_grafica = :ds_grafica, nu_valor = :nu_valor, ds_especificacao = :ds_especificacao
+				$insert = "UPDATE tb_grafica SET ds_grafica = :ds_grafica, ds_email = :ds_email
 							WHERE id_grafica=:id_grafica";
 				
 				$stmt = $con->prepare($insert);
 				
                 $params = array(':ds_grafica' => $ds_grafica,
-                                ':nu_valor' => $nu_valor,
-								':ds_especificacao' => $ds_especificacao,
+                                ':ds_email' => $ds_email,
                                 ':id_grafica' => $id_grafica);
                                 
 				$stmt->execute($params);
@@ -107,76 +105,6 @@
 				header('HTTP/1.1 500 Internal Server Error');
     			print "ERRO:".$e->getMessage();		
 			} 
-		}
-		public function listarOptionsGrafica($id_grafica)
-		{
-			try{
-				$con = Conecta::criarConexao();
-				$select = "SELECT id_grafica, ds_grafica, nu_valor
-							FROM tb_grafica ";
-				$stmt = $con->prepare($select);
-				$stmt->execute();
-
-				$options = "";
-
-				while($dados = $stmt->fetch())
-				{
-					$valores = explode(",", $id_grafica);
-					if(in_array($dados['id_grafica'], $valores)){
-						$options.= "<input type='checkbox' id='".$dados['id_grafica']."' name='id_grafica[]' value='".$dados['id_grafica']."' checked>
-							<label for='".$dados['id_grafica']."'>".$dados['ds_grafica']."</label></br>"; 
-					}
-					else{
-						$options.= "<input type='checkbox' id='".$dados['id_grafica']."' name='id_grafica[]' value='".$dados['id_grafica']."'>
-							<label for='".$dados['id_grafica']."'>".$dados['ds_grafica']."</label></br>"; 
-					} 
-				
-					
-
-					
-				}
-				return $options;
-
-			}
-			catch(exception $e)
-			{
-			header('HTTP/1.1 500 Internal Server Error');
-			print $e->getMessage();
-			}
-		}
-
-		public function listarOptionsGraficaMidia($id_grafica)
-		{
-			try{
-				$con = Conecta::criarConexao();
-				$select = "SELECT id_grafica, ds_grafica, nu_valor
-							FROM tb_grafica ";
-				$stmt = $con->prepare($select);
-				$stmt->execute();
-
-				$options = "";
-
-				while($dados = $stmt->fetch())
-				{
-					$valores = explode(",", $id_grafica);
-					if(in_array($dados['id_grafica'], $valores)){
-						$options.= "<option valor='".$dados["nu_valor"]."' value='".$dados['id_grafica']."'>".$dados['ds_grafica']." - R$ ".$dados["nu_valor"]."</option>";
-						// $options.= "<input type='checkbox' id='".$dados['id_grafica']."' name='id_grafica[]' value='".$dados['id_grafica']."' checked>
-						// 	<label for='".$dados['id_grafica']."'>".$dados['ds_grafica']."</label></br>"; 
-					}
-				
-					
-
-					
-				}
-				return $options;
-
-			}
-			catch(exception $e)
-			{
-			header('HTTP/1.1 500 Internal Server Error');
-			print $e->getMessage();
-			}
 		}
 
 		public function excluirGrafica(array $dados) 
