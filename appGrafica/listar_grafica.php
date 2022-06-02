@@ -78,8 +78,7 @@
 				<tr>
 					<th>Id</th>
 					<th>Nome</th>
-					<th>Especificação</th>
-                    <th>Valor</th>
+					<th>Email</th>
 					<th>Ações</th>
 				</tr>
 			</thead>
@@ -90,8 +89,7 @@
 						echo "<tr>
 								<td>".$dados['id_grafica']."</td>
 								<td>".$dados['ds_grafica']."</td>
-								<td>".$dados['ds_especificacao']."</td>
-                                <td>".$dados['nu_valor']."</td>
+								<td>".$dados['ds_email']."</td>
 								<td nowrap></td>
 							</tr>";
 					}
