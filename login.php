@@ -49,8 +49,8 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Body-->
 	<body id="kt_body" class="header-fixed subheader-enabled page-loading" >
 		<!--begin::Main-->
-		<header class="position-fixed w-100 bg-white" style="z-index:2;">
-			<div class="navbar py-3 border-bottom">
+		<header class="position-fixed w-100" style="background-color:transparent;">
+			<div class="navbar py-3">
 				<!--begin::Logo-->
 				<a href="index.php" class="brand-logo ml-8">
 					<img alt="Logo" src="assets/media/Uni_midia_logo.png" class="logo-default max-h-35px"  /> 
