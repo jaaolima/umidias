@@ -61,7 +61,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
 						<div style="max-width: 400px;left:300px;">
-							<div class="mb-20">
+							<div class="mb-10">
 								<img alt="Logo" src="assets/media/imgs/uni_branco.png" class="logo-default max-h-25px"  /> 
 							</div>
 							<div class="mb-20">
