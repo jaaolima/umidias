@@ -109,9 +109,12 @@
                                                 <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
 													<img src="assets/media/imgs/BG_bsb.jpg" alt="" class="d-block w-100 img-fluid rounded" style="height:400px;">
                                                 </div>
-												<img src="assets/media/imgs/texto.png" alt="" class="position-absolute">
-												<button class="position-absolute" style="background-color: Transparent;">
-												</button>
+												<div class="position-absolute text-center"  style="top:15px;">
+													<img src="assets/media/imgs/texto.png" alt="" class="position-absolute">
+													<button class="position-absolute" style="background-color: Transparent;">
+													</button>
+												</div>
+												
                                                 <!--end::Tiles Widget 25-->
                                             </div>
                                             <div class="col-xl-12">
