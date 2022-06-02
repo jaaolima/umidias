@@ -112,7 +112,7 @@
 												<div class="position-absolute text-center"  style="top: 150px;bottom: 0;left: 0;right: 0;">
 													<img src="assets/media/imgs/texto.png" alt=""  style="width:500px">
 													<br>
-													<button class="btn mt-20" style="background-color: Transparent; border:1px solid;color:#ffffff;">
+													<button class="btn mt-20 rounded" style="background-color: Transparent; border:1px solid;color:#ffffff;border-image: linear-gradient(90deg, rgba(184,36,254,1) 0%, rgba(245,196,200,1) 100%);border-image-slice: 1;">
 														Alugue com a Unimídias
 													</button>
 												</div>
