@@ -106,14 +106,15 @@
 										<div class="row">
                                             <div class="col-xl-12">
                                                 <!--begin::Tiles Widget 25-->
-                                                <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
+                                                <!-- <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
                                                     <div class="card-body">
                                                         <div class="justify_content-center text-center">
                                                             <h1 class="font-weight-bolder m-0" style="font-size:35px;font-weight:700 !important;margin-bottom:-15px !important;">Alugue com a Unimídias</h1><br>
                                                             <h5 class="font-weight-bold">Todas as mídias de Brasília em um só lugar</h5>
-                                                        </div>
+                                                        </div> 
                                                     </div>
-                                                </div>
+                                                </div> -->
+												<img src="assets/media/imgs/BG_bsb.jpg" alt="" class="w-100">
                                                 <!--end::Tiles Widget 25-->
                                             </div>
                                             <div class="col-xl-12">
