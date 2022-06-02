@@ -110,8 +110,9 @@
 													<img src="assets/media/imgs/BG_home.jpg" alt="" class="d-block w-100 img-fluid rounded" style="height:400px;">
                                                 </div>
 												<div class="position-absolute text-center"  style="top:15px;">
-													<img src="assets/media/imgs/texto.png" alt=""  style="500px">
+													<img src="assets/media/imgs/texto.png" alt=""  style="width:500px">
 													<button class="btn" style="background-color: Transparent; border:1px solid;">
+														Alugue com a Unimídias
 													</button>
 												</div>
 												
