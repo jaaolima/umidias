@@ -53,7 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="navbar py-3">
 				<!--begin::Logo-->
 				<a href="index.php" class="brand-logo ml-8">
-					<img alt="Logo" src="assets/media/Uni_midia_logo.png" class="logo-default max-h-35px"  /> 
+					<img alt="Logo" src="assets/media/imgs/uni_branco.png" class="logo-default max-h-35px"  /> 
 				</a>
 				<!--end::Logo-->
 			</div>	
