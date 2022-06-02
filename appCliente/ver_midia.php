@@ -114,7 +114,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<span class="carousel-control-next-icon" aria-hidden="true"></span>
 									<span class="sr-only">Próximo</span>
 								</a>
-							</div> 
+							</div>  
 							<button class="btn btn-mapa position-absolute" style="top: 10px;right: 220px;" id="ver_foto">ver fotos</button>
 							<button class="btn btn-mapa-active position-absolute" style="top: 10px;right: 80px;" id="ver_mapa">ver localização</button>
 						</div>
