@@ -230,6 +230,17 @@ $('.botao-menu').click(function (e)
 
 	});
 
+   
+  $('.botao-menu-grafica').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-grafica').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-grafica').addClass('texto-menu-active');
+    
+
+	});
+
 
   $('#nav_toggle').click(function(e){
     $(this).addClass("d-none")

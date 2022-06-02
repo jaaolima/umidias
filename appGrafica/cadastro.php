@@ -21,7 +21,7 @@
                         <input type="text" class="form-control" id="ds_grafica" name="ds_grafica" />
                     </div>
                     <div class="col-md-6">
-                        <label>Gráfica<span class="text-danger">*</span></label>
+                        <label>Email<span class="text-danger">*</span></label>
                         <input type="email" class="form-control" id="ds_email" name="ds_email" />
                     </div>
                 </div>
