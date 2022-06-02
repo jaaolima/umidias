@@ -107,11 +107,11 @@
                                             <div class="col-xl-12">
                                                 <!--begin::Tiles Widget 25-->
                                                 <div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white text-center"  >
-													<img src="assets/media/imgs/BG_bsb.jpg" alt="" class="d-block w-100 img-fluid rounded" style="height:400px;">
+													<img src="assets/media/imgs/BG_home.jpg" alt="" class="d-block w-100 img-fluid rounded" style="height:400px;">
                                                 </div>
 												<div class="position-absolute text-center"  style="top:15px;">
-													<img src="assets/media/imgs/texto.png" alt="" class="position-absolute">
-													<button class="position-absolute" style="background-color: Transparent;">
+													<img src="assets/media/imgs/texto.png" alt=""  style="500px">
+													<button class="btn" style="background-color: Transparent; border:1px solid;">
 													</button>
 												</div>
 												
