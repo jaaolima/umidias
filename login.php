@@ -53,12 +53,13 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--begin::Login-->
 			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login" style="background-image: url(assets/media/imgs/BG_bsb.jpg);background-size: 100%;background-size: cover;">
 				<!--begin::Content-->
+				<div style="left:300px;" class="mb-20">
+					<img src="assets/media/imgs/texto.png" alt=""  style="width:500px">
+				</div>
 				<div class="d-flex flex-column flex-row-fluid position-relative p-7 overflow-hidden">
 					<!--begin::Content body-->
 					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
-						<div style="left:300px;" class="mb-20">
-							<img src="assets/media/imgs/texto.png" alt=""  style="width:500px">
-						</div>
+						
 						<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white w-100 box-shadow"  style="max-width: 400px;left:300px;">
 							<!--begin::Signin-->
 							<div class=" login-signin">
