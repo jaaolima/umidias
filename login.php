@@ -49,18 +49,29 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Body-->
 	<body id="kt_body" class="header-fixed subheader-enabled page-loading" >
 		<!--begin::Main-->
+		<header class="position-fixed w-100 bg-white" style="z-index:2;">
+			<div class="navbar py-3 border-bottom">
+				<!--begin::Logo-->
+				<a href="index.php" class="brand-logo ml-8">
+					<img alt="Logo" src="assets/media/Uni_midia_logo.png" class="logo-default max-h-35px"  /> 
+				</a>
+				<!--end::Logo-->
+			</div>	
+		</header>
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Login-->
 			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid main" id="kt_login" style="background-image: url(assets/media/imgs/BG_bsb.jpg);background-size: 100%;background-size: cover;">
 				<!--begin::Content-->
+				<div>
 
+				</div>
 				<div class="d-flex flex-column flex-row-fluid position-relative p-7 overflow-hidden">
 					<!--begin::Content body-->
 
 					<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
 						<div style="max-width: 400px;left:300px;">
 							<div class="mb-20">
-								<img src="assets/media/imgs/texto.png" alt=""  style="width:500px">
+								<img src="assets/media/imgs/texto.png" alt=""  style="width:400px">
 							</div>
 							<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white w-100 box-shadow"  >
 								<!--begin::Signin-->
