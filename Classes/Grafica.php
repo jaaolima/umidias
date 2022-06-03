@@ -139,7 +139,7 @@
 				
 				$select = "SELECT ds_email, ds_grafica
 						FROM tb_grafica
-						WHERE id_grafica = 1"; 
+						WHERE id_grafica = 2"; 
 	
 				$stmt = $con->prepare($select);
 				
