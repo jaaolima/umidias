@@ -34,7 +34,7 @@
         $quantidade++;
     }
 
-    $preference->items = $array;
+    $preference->items = $array; 
     
 
     $preference->back_urls = array(

@@ -617,7 +617,7 @@
 				$stmtCarrinho = $con->prepare($selectCarrinho); 
 				$paramsCarrinho = array(':id_usuario' => $id_usuario);
 				$stmtCarrinho->execute($paramsCarrinho);
-
+				$array_id = array();
 				while($dadosCarrinho = $stmtCarrinho->fetch()){
 					$id_usuario	    = $dadosCarrinho['id_usuario'];
 					$id_ponto	    = $dadosCarrinho['id_ponto'];
@@ -638,6 +638,7 @@
 							$id_status_midia = 1;
 							break;
 					}
+
 					if($id_midia == 2){
 		
 						try{
@@ -656,6 +657,8 @@
 											':id_status_midia' => $id_status_midia);
 											
 							$stmt->execute($params);
+
+							array_push($array_id ,$con->lastInsertId());
 							
 							
 						}
@@ -683,6 +686,8 @@
 											':id_status_midia' => $id_status_midia);
 											
 							$stmt->execute($params);
+
+							array_push($array_id ,$con->lastInsertId());
 							
 						}
 						catch(exception $e)
@@ -715,6 +720,8 @@
 				header('HTTP/1.1 500 Internal Server Error');
     			print "ERRO:".$e->getMessage();		 
 			}
+
+			return $array_id;
 
 			
 

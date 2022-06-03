@@ -31,9 +31,11 @@ session_start();
 require_once("../Classes/Cliente.php");
 $id_usuario = $_SESSION["id_usuario"];
 $cliente = new Cliente();
-$cliente->AlugarCarrinho($id_usuario, $_REQUEST["status"]);
+$grafica = new Grafica();
+$array_id = $cliente->AlugarCarrinho($id_usuario, $_REQUEST["status"]);
 $cliente->GravarPagamento($_REQUEST, $id_usuario);
-$cliente->EmailPagamento($id_usuario);
-header("location: ../index.php");
+$cliente->EmailPagamento($id_usuario); 
+$grafica->EmailGrafica($array_id); 
+// header("location: ../index.php");
 
 ?>
