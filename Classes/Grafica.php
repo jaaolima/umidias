@@ -186,14 +186,14 @@
 			$mail->Body = "<h1>Temos um metrial pendente</h1> 
 			<p>Segue:<br>";
 
-			function renderView($path, array $data = []){
-				ob_start();
-				include $path;
-				$response = ob_get_contents();
-				ob_end_clean();
+			// function renderView($path, array $data = []){
+			// 	ob_start();
+			// 	include $path;
+			// 	$response = ob_get_contents();
+			// 	ob_end_clean();
 
-				return $response;
-			}
+			// 	return $response;
+			// }
 
 			// Opcional: Anexos 
 			foreach ($array_id as $id) {
