@@ -199,7 +199,7 @@
 			foreach ($array_id as $id) {
 				try{
 					$con = Conecta::criarConexao();
-					
+					echo $id;
 					
 					$select = "SELECT id_alugado, ds_arte
 							FROM rl_alugado
