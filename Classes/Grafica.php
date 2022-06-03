@@ -210,8 +210,8 @@
 					$stmt->execute($params);
 		
 					$dados = $stmt->fetch();
-
-					$mail->AddAttachment("../" . $dados["ds_arte"]); 
+					echo $dados["ds_arte"];
+					// $mail->AddAttachment("../" . $dados["ds_arte"]); 
 				}
 				catch(exception $e)
 				{
