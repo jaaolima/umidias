@@ -29,6 +29,7 @@ curl_close($curl);
 
 session_start();
 require_once("../Classes/Cliente.php");
+require_once("../Classes/Grafica.php");
 $id_usuario = $_SESSION["id_usuario"];
 $cliente = new Cliente();
 $grafica = new Grafica();
