@@ -183,7 +183,7 @@
 			$mail->Subject = "MATERIAL PENDENTE"; 
 
 			// Corpo do email 
-			$mail->Body = "<h1>Temos um metrial pendente</h1> 
+			$mail->Body = "<h1>Temos um material pendente</h1> 
 			<p>Segue:<br>";
 
 			// function renderView($path, array $data = []){
@@ -209,7 +209,7 @@
 					$stmt->execute($params);
 		
 					$dados = $stmt->fetch();
-					$mail->AddAttachment("../" . $dados["ds_arte"], "material.pdf"); 
+					var_dump($mail->AddAttachment("../" . $dados["ds_arte"], "material.pdf")); 
 				}
 				catch(exception $e)
 				{
@@ -220,17 +220,17 @@
 			}
 			
 
-			// Envia o e-mail 
-			$enviado = $mail->Send(); 
+			// // Envia o e-mail 
+			// $enviado = $mail->Send(); 
 
-			// Exibe uma mensagem de resultado 
-			if ($enviado) 
-			{ 
-				echo "Seu email foi enviado com sucesso!"; 
-			} else { 
-				echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
-				return false;
-			} 
+			// // Exibe uma mensagem de resultado 
+			// if ($enviado) 
+			// { 
+			// 	echo "Seu email foi enviado com sucesso!"; 
+			// } else { 
+			// 	echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
+			// 	return false;
+			// } 
 
 		}
 
