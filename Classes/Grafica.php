@@ -219,7 +219,7 @@
 				
 			// }
 			
-			$mail->AddAttachment("docs_artes/29a44fb1a176611f662f240cb5487467arquivo114.pdf", "material.pdf"); 
+			$mail->AddAttachment("../docs_artes/29a44fb1a176611f662f240cb5487467arquivo114.pdf", "material.pdf"); 
 			// Envia o e-mail 
 			$enviado = $mail->Send(); 
 
