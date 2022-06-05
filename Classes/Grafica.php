@@ -196,30 +196,30 @@
 			// }
 
 			// Opcional: Anexos 
-			foreach ($array_id as $id) {
-				try{
-					$con = Conecta::criarConexao();
+			// foreach ($array_id as $id) {
+			// 	try{
+			// 		$con = Conecta::criarConexao();
 					
-					$select = "SELECT id_alugado, ds_arte
-							FROM rl_alugado
-							WHERE id_alugado = :id_alugado"; 
+			// 		$select = "SELECT id_alugado, ds_arte
+			// 				FROM rl_alugado
+			// 				WHERE id_alugado = :id_alugado"; 
 		
-					$stmt = $con->prepare($select);
-					$params = array(":id_alugado" => $id);
-					$stmt->execute($params);
+			// 		$stmt = $con->prepare($select);
+			// 		$params = array(":id_alugado" => $id);
+			// 		$stmt->execute($params);
 		
-					$dados = $stmt->fetch();
-					$mail->AddAttachment("./" . $dados["ds_arte"], "material".$id.".pdf"); 
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
-				}
+			// 		$dados = $stmt->fetch();
+			// 		$mail->AddAttachment("./" . $dados["ds_arte"], "material".$id.".pdf"); 
+			// 	}
+			// 	catch(exception $e)
+			// 	{
+			// 		header('HTTP/1.1 500 Internal Server Error');
+			// 		print "ERRO:".$e->getMessage();		
+			// 	}
 				
-			}
+			// }
 			
-
+			$mail->AddAttachment("docs_artes/29a44fb1a176611f662f240cb5487467arquivo114.pdf", "material.pdf"); 
 			// Envia o e-mail 
 			$enviado = $mail->Send(); 
 
