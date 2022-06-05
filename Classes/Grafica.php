@@ -209,8 +209,9 @@
 					$stmt->execute($params);
 		
 					$dados = $stmt->fetch();
-					echo "../" . $dados["ds_arte"];
-					$mail->AddAttachment("../" . $dados["ds_arte"], "material".$id.".pdf"); 
+					$arquivo =  "../" . $dados["ds_arte"];
+					echo $arquivo;
+					$mail->AddAttachment($arquivo, "material".$id.".pdf"); 
 				}
 				catch(exception $e)
 				{
