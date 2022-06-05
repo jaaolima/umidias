@@ -199,7 +199,6 @@
 			foreach ($array_id as $id) {
 				try{
 					$con = Conecta::criarConexao();
-					echo $id;
 					
 					$select = "SELECT id_alugado, ds_arte
 							FROM rl_alugado
@@ -210,8 +209,7 @@
 					$stmt->execute($params);
 		
 					$dados = $stmt->fetch();
-					echo $dados["ds_arte"];
-					// $mail->AddAttachment("../" . $dados["ds_arte"]); 
+					$mail->AddAttachment("../" . $dados["ds_arte"]); 
 				}
 				catch(exception $e)
 				{
@@ -222,17 +220,17 @@
 			}
 			
 
-			// // Envia o e-mail 
-			// $enviado = $mail->Send(); 
+			// Envia o e-mail 
+			$enviado = $mail->Send(); 
 
-			// // Exibe uma mensagem de resultado 
-			// if ($enviado) 
-			// { 
-			// 	echo "Seu email foi enviado com sucesso!"; 
-			// } else { 
-			// 	echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
-			// 	return false;
-			// } 
+			// Exibe uma mensagem de resultado 
+			if ($enviado) 
+			{ 
+				echo "Seu email foi enviado com sucesso!"; 
+			} else { 
+				echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
+				return false;
+			} 
 
 		}
 
