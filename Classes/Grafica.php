@@ -156,35 +156,7 @@
 			$email = $dados['ds_email'];
 			$nome = $dados['ds_grafica'];
 
-			// Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
-			require_once('../assets/media/PHPMailer-master/PHPMailerAutoload.php');
-
-			// Inicia a classe PHPMailer 
-			$mail = new PHPMailer(); 
-
-			// Método de envio 
-			$mail->IsSMTP(); 
-
-			// // Enviar por SMTP  
-			$mail->Host = "smtp-relay.sendinblue.com"; 
-			$mail->SMTPAuth = true;
-			$mail->SMTPAutoTLS = false ; 
-			$mail->Username = 'renato.lima@outlook.com'; 
-			$mail->Password = 'RZw0z8AXIfvHc73M';
-			$mail->Port = 587;
-			$mail->IsHTML(true); 
-			$mail->CharSet = 'UTF-8'; 
-			$mail->setFrom("no-reply@ibranutro.com.br", "Unimídias");
-
-			// Define o(s) destinatário(s) 
-			$mail->AddAddress($email, $nome);  
-
-			// Assunto da mensagem 
-			$mail->Subject = "MATERIAL PENDENTE"; 
-
-			// Corpo do email 
-			$mail->Body = "<h1>Temos um material pendente</h1> 
-			<p>Segue:<br>";
+			
 
 			// function renderView($path, array $data = []){
 			// 	ob_start();
@@ -197,6 +169,36 @@
 
 			// Opcional: Anexos 
 			foreach ($array_id as $id) {
+				// Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
+				require_once('../assets/media/PHPMailer-master/PHPMailerAutoload.php');
+
+				// Inicia a classe PHPMailer 
+				$mail = new PHPMailer(); 
+
+				// Método de envio 
+				$mail->IsSMTP(); 
+
+				// // Enviar por SMTP  
+				$mail->Host = "smtp-relay.sendinblue.com"; 
+				$mail->SMTPAuth = true;
+				$mail->SMTPAutoTLS = false ; 
+				$mail->Username = 'renato.lima@outlook.com'; 
+				$mail->Password = 'RZw0z8AXIfvHc73M';
+				$mail->Port = 587;
+				$mail->IsHTML(true); 
+				$mail->CharSet = 'UTF-8'; 
+				$mail->setFrom("no-reply@ibranutro.com.br", "Unimídias");
+
+				// Define o(s) destinatário(s) 
+				$mail->AddAddress($email, $nome);  
+
+				// Assunto da mensagem 
+				$mail->Subject = "MATERIAL PENDENTE"; 
+
+				// Corpo do email 
+				$mail->Body = "<h1>Temos um material pendente</h1> 
+				<p>Segue:<br>";
+				
 				try{
 					$con = Conecta::criarConexao();
 					
@@ -210,6 +212,7 @@
 		
 					$dados = $stmt->fetch();
 					$arquivo =  "../" . $dados["ds_arte"];
+					$mail->AddAttachment($arquivo, "material.pdf");
 					
 				}
 				catch(exception $e)
@@ -217,21 +220,23 @@
 					header('HTTP/1.1 500 Internal Server Error');
 					print "ERRO:".$e->getMessage();		
 				}
+
+				// Envia o e-mail 
+				$enviado = $mail->Send(); 
+
+				// Exibe uma mensagem de resultado 
+				if ($enviado) 
+				{ 
+					echo "Seu email foi enviado com sucesso!"; 
+				} else { 
+					echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
+					return false;
+				} 
 				
 			}
-			$mail->AddAttachment("../docs_artes/fc9907f66d5c7befaea3da06798b3549arquivo114.pdf", "material.pdf"); 
+			 
 			
-			// Envia o e-mail 
-			$enviado = $mail->Send(); 
-
-			// Exibe uma mensagem de resultado 
-			if ($enviado) 
-			{ 
-				echo "Seu email foi enviado com sucesso!"; 
-			} else { 
-				echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
-				return false;
-			} 
+			
 
 		}
 
