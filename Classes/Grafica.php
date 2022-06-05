@@ -198,28 +198,20 @@
 				// Corpo do email 
 				$mail->Body = "<h1>Temos um material pendente</h1> 
 				<p>Segue:<br>";
-				
-				try{
-					$con = Conecta::criarConexao();
+
+				$con = Conecta::criarConexao();
 					
-					$select = "SELECT id_alugado, ds_arte
-							FROM rl_alugado
-							WHERE id_alugado = :id_alugado"; 
-		
-					$stmt = $con->prepare($select);
-					$params = array(":id_alugado" => $id);
-					$stmt->execute($params);
-		
-					$dados = $stmt->fetch();
-					$arquivo =  "../" . $dados["ds_arte"];
-					$mail->AddAttachment($arquivo, "material.pdf");
-					
-				}
-				catch(exception $e)
-				{
-					header('HTTP/1.1 500 Internal Server Error');
-					print "ERRO:".$e->getMessage();		
-				}
+				$select = "SELECT id_alugado, ds_arte
+						FROM rl_alugado
+						WHERE id_alugado = :id_alugado"; 
+	
+				$stmt = $con->prepare($select);
+				$params = array(":id_alugado" => $id);
+				$stmt->execute($params);
+	
+				$dados = $stmt->fetch();
+				$arquivo =  "../" . $dados["ds_arte"];
+				$mail->AddAttachment($arquivo, "material.pdf");
 
 				// Envia o e-mail 
 				$enviado = $mail->Send(); 
