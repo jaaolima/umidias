@@ -210,7 +210,7 @@
 		
 					$dados = $stmt->fetch();
 					$arquivo =  "../" . $dados["ds_arte"];
-					echo $arquivo;
+					var_dump($arquivo);
 					// $mail->AddAttachment($arquivo, "material".$id.".pdf"); 
 				}
 				catch(exception $e)
@@ -221,17 +221,17 @@
 				
 			}
 			
-			// Envia o e-mail 
-			$enviado = $mail->Send(); 
+			// // Envia o e-mail 
+			// $enviado = $mail->Send(); 
 
-			// Exibe uma mensagem de resultado 
-			if ($enviado) 
-			{ 
-				echo "Seu email foi enviado com sucesso!"; 
-			} else { 
-				echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
-				return false;
-			} 
+			// // Exibe uma mensagem de resultado 
+			// if ($enviado) 
+			// { 
+			// 	echo "Seu email foi enviado com sucesso!"; 
+			// } else { 
+			// 	echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
+			// 	return false;
+			// } 
 
 		}
 
