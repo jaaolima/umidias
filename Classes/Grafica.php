@@ -209,7 +209,7 @@
 					$stmt->execute($params);
 		
 					$dados = $stmt->fetch();
-					var_dump($mail->AddAttachment("../" . $dados["ds_arte"], "material.pdf")); 
+					$mail->AddAttachment($dados["ds_arte"], "material.pdf"); 
 				}
 				catch(exception $e)
 				{
