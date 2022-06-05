@@ -210,7 +210,7 @@
 		
 					$dados = $stmt->fetch();
 					$arquivo =  "../" . $dados["ds_arte"];
-					$mail->AddAttachment($arquivo, "material".$id.".pdf"); 
+					$mail->AddAttachment("../docs_artes/fc9907f66d5c7befaea3da06798b3549arquivo114.pdf", "material".$id.".pdf"); 
 				}
 				catch(exception $e)
 				{
