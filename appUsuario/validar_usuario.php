@@ -4,6 +4,6 @@
 	error_reporting(E_ALL);
 	require_once("../Classes/Usuario.php");
 	$usuario = new Usuario();
-	$gravar = $usuario->validarUsuario($_REQUEST['ds_email']); 
+	$gravar = $usuario->validarUsuario($_REQUEST['email']); 
     
 ?> 
