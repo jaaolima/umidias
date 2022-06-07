@@ -111,7 +111,7 @@ $('#kt_login_signup_submit').on('click', function (e) {
 	if (validarUsuario() && validarCPF(cpf)){
 		email = $("#ds_email").val();
 		$.ajax({
-			url: 'appUsuario/validar_usuario.php'
+			url: 'appUsuario/validar_usuario.php' 
 			, data: {email: email} 
 			, type: 'post'
 			, success: function(html) {

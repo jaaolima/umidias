@@ -172,18 +172,18 @@
 		{
 		
 			try{
-				$con = Conecta::criarConexao();
+				$con = Conecta::criarConexao(); 
 				$insert = "select count(ds_usuario) as ds_usuario from tb_usuario where ds_usuario=:ds_usuario";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array( 
-								':ds_usuario' => $ds_email);
+				$params = array(':ds_usuario' => $ds_email);
 
 				
 				$stmt->execute($params);
-				$dados = $stmt->fetch();
-				if($dados["ds_usuario"] > 0){
+
+				$qtd = $stmt->fetch();
+				if($qtd["ds_usuario"] > 0){
 					header('HTTP/1.1 500 Internal Server Error');
 					echo "E-mail já cadastrado";
 				}else{
