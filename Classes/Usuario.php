@@ -179,7 +179,7 @@
 				
 				$params = array(':ds_usuario' => $ds_email);
 
-				
+				var_dump($params);
 				$stmt->execute($params);
 
 				$qtd = $stmt->fetch();
