@@ -132,7 +132,7 @@
 			} 
 		}
 
-		public function EmailGrafica(array $array_id){
+		public function EmailGrafica($id){
 			try{
 				$con = Conecta::criarConexao();
 				
@@ -196,22 +196,21 @@
 			// }
 
 			// Opcional: Anexos 
-			foreach ($array_id as $id) {
-				$con = Conecta::criarConexao();
+			$con = Conecta::criarConexao();
 					
-				$select = "SELECT id_alugado, ds_arte
-						FROM rl_alugado
-						WHERE id_alugado = :id_alugado"; 
-	
-				$stmt = $con->prepare($select);
-				$params = array(":id_alugado" => $id);
-				$stmt->execute($params);
-	
-				$dados = $stmt->fetch();
-				$arquivo =  "../" . $dados["ds_arte"];
-				$mail->AddAttachment($arquivo, "material".$id.".pdf"); 
-				
-			}
+			$select = "SELECT id_alugado, ds_arte
+					FROM rl_alugado
+					WHERE id_alugado = :id_alugado"; 
+
+			$stmt = $con->prepare($select);
+			$params = array(":id_alugado" => $id);
+			$stmt->execute($params);
+
+			$dados = $stmt->fetch();
+			$arquivo =  "../" . $dados["ds_arte"];
+
+			
+			$mail->AddAttachment($arquivo, "material".$id.".pdf"); 
 			
 			
 			// Envia o e-mail 
