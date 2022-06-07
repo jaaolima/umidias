@@ -35,12 +35,16 @@ $cliente = new Cliente();
 $grafica = new Grafica();
 $array_id = $cliente->AlugarCarrinho($id_usuario, $_REQUEST["status"]);
 $cliente->GravarPagamento($_REQUEST, $id_usuario);
-$cliente->EmailPagamento($id_usuario); //email para o cliente
+
 
 foreach($array_id as $id){
-    $grafica->EmailGrafica($id); 
+    $cliente->EmailPagamento($id_usuario); //email para o cliente
 }
 
-// header("location: ../index.php");
+
+foreach($array_id as $id){
+    $grafica->EmailGrafica($id); //email para a gráfica
+}
+header("location: ../index.php");
 
 ?>

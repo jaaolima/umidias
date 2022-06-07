@@ -5,8 +5,8 @@
 	require_once("../Classes/Usuario.php");
 	$usuario = new Usuario();
 	$gravar = $usuario->gravarUsuarioEmail($_REQUEST);
-    if($gravar){
-        header("Location: ../login.php"); 
+    if($gravar){ 
+        header("Location: usuario_gravado.php"); 
     }
     
 ?> 
