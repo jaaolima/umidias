@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 $colletion_id = $_REQUEST["collection_id"];
 
-$access_token = "7295345192603478-021818-84abf249ade799c52fe9448499b4d47f-220722926";
+$access_token = "APP_USR-7295345192603478-021818-e4b4e3e21521fe4fae9448f266a12d77-220722926";
 
 $curl = curl_init();
 
@@ -20,7 +20,7 @@ curl_setopt_array($curl, array(
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_HTTPHEADER => array(
-        "Authorization: Bearer 7295345192603478-021818-84abf249ade799c52fe9448499b4d47f-220722926"
+        "Authorization: Bearer APP_USR-7295345192603478-021818-e4b4e3e21521fe4fae9448f266a12d77-220722926"
     ),
 ));
 
