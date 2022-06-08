@@ -120,7 +120,7 @@
 
 						try{
 							$con = Conecta::criarConexao();
-							$insertUsuario = "INSERT into tb_usuario (ds_nome, :ds_usuario, ds_email, ds_senha, id_perfil, id_parceiro)
+							$insertUsuario = "INSERT into tb_usuario (ds_nome, ds_usuario, ds_email, ds_senha, id_perfil, id_parceiro)
 										VALUES (:ds_nome, :ds_usuario, :ds_email, :ds_senha, :id_perfil, :id_parceiro)";
 							
 							$stmtUsuario = $con->prepare($insertUsuario);
