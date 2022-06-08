@@ -19,7 +19,7 @@
 			$id_regime			= $dados['id_regime'];
 			$nu_aliquota 		= $dados['nu_aliquota'];
 			$nu_cpf 	    	= $dados['nu_cpf'];
-			$dt_parceiro 		= date("Y-m-d");
+			$dt_parceiro 		= date("Y-m-d"); 
 			$ds_senha       =  '123456';
 
 			if($id_regime === "CPF"){
@@ -120,7 +120,7 @@
 
 						try{
 							$con = Conecta::criarConexao();
-							$insertUsuario = "INSERT into tb_usuario (ds_nome, :ds_usuario ds_email, ds_senha, id_perfil, id_parceiro)
+							$insertUsuario = "INSERT into tb_usuario (ds_nome, :ds_usuario, ds_email, ds_senha, id_perfil, id_parceiro)
 										VALUES (:ds_nome, :ds_usuario, :ds_email, :ds_senha, :id_perfil, :id_parceiro)";
 							
 							$stmtUsuario = $con->prepare($insertUsuario);
