@@ -62,7 +62,7 @@
 											':ds_usuario' => $ds_usuario,
 											':ds_email' => $ds_email,
 											':id_perfil' => 2,
-											':ds_senha' =>$ds_senha,
+											':ds_senha' => hash("SHA512",$ds_senha),
 											':id_parceiro' =>$id_parceiro);
 			
 							$stmtUsuario->execute($paramsUsuario);
@@ -129,7 +129,7 @@
 											':ds_usuario' => $ds_usuario,
 											':ds_email' => $ds_email,
 											':id_perfil' => 2,
-											':ds_senha' =>$ds_senha,
+											':ds_senha' => hash("SHA512",$ds_senha),
 											':id_parceiro' =>$id_parceiro);
 			
 							$stmtUsuario->execute($paramsUsuario);
