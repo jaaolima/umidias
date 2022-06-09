@@ -993,10 +993,11 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_pendente, u.ds_usuario, p.ds_foto, p.ds_tipo, p.ds_bairro, nu_valor_alugado, dt_final, dt_inicial
+				$select = "SELECT id_pendente, u.ds_usuario, p.ds_foto, t.ds_tipo, p.ds_bairro, nu_valor_alugado, dt_final, dt_inicial
 							FROM rl_pendente pen
 							inner join tb_usuario u on pen.id_usuario=u.id_usuario
-							inner join tb_ponto p on pen.id_ponto=p.id_ponto";
+							inner join tb_ponto p on pen.id_ponto=p.id_ponto
+							inner join tb_tipo_midia t on p.id_midia=t.id_midia";
 				
 				$stmt = $con->prepare($select); 
 				
