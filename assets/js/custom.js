@@ -241,6 +241,16 @@ $('.botao-menu').click(function (e)
 
 	});
 
+  $('.botao-menu-pendente').click(function (e)
+	{
+    $('.svg-hover').removeClass('svg-active');
+    $('.svg-pendente').addClass('svg-active');
+    $('.texto-menu').removeClass('texto-menu-active');
+    $('.texto-menu-pendente').addClass('texto-menu-active');
+    
+
+	});
+
 
   $('#nav_toggle').click(function(e){
     $(this).addClass("d-none")
