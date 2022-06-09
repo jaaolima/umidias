@@ -109,7 +109,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</div>
 																					</div>
 																				</td> 
-																				<td class='py-8'>".$dados["ds_usuario"]."</td>
+																				<td class='py-8'>".$dados["ds_nome"]."</td>
 																				<td class='py-8'>".$dataInicial."</td> 
 																				<td class='py-8'>".$dataFinal."</td> 
 																				<td class='py-8'>".$dados["nu_valor_alugado"]."</td> 

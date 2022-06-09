@@ -993,7 +993,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_pendente, u.ds_usuario,(select min(ds_foto) from rl_ponto_foto f where p.id_ponto=f.id_ponto) as ds_foto, t.ds_tipo, p.ds_bairro, nu_valor_alugado, dt_final, dt_inicial
+				$select = "SELECT id_pendente, u.ds_nome,(select min(ds_foto) from rl_ponto_foto f where p.id_ponto=f.id_ponto) as ds_foto, t.ds_tipo, p.ds_bairro, nu_valor_alugado, dt_final, dt_inicial
 							FROM rl_pendente pen
 							inner join tb_usuario u on pen.id_usuario=u.id_usuario
 							inner join tb_ponto p on pen.id_ponto=p.id_ponto
