@@ -13,14 +13,14 @@ $array_id = $cliente->AlugarPendente($id_usuario, $id_pendente);
 // $cliente->GravarPagamento($_REQUEST, $id_usuario);
 
 
-foreach($array_id as $id){
-    $cliente->EmailPagamento($id_usuario); //email para o cliente
-}
+// foreach($array_id as $id){
+//     $cliente->EmailPagamentoPendente($id_usuario); //email para o cliente
+// }
 
 
 foreach($array_id as $id){
     $grafica->EmailGrafica($id); //email para a gráfica
 }
-// header("location: " . $_SERVER['HTTP_REFERER']);
+header("location: " . $_SERVER['HTTP_REFERER']);
 
 ?>
