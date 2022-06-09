@@ -727,6 +727,122 @@
 
 			
         }
+		public function alugarPendente($id_usuario, $id_pendente)
+		{
+
+			try{
+				$con = Conecta::criarConexao();
+				
+				$selectPendente = "SELECT c.id_ponto, id_usuario, dt_inicial, dt_final, c.ds_arte, id_midia, c.id_material, c.nu_valor_alugado
+							FROM rl_pendente c
+							inner join tb_ponto p on c.id_ponto=p.id_ponto
+							where id_pendente = :id_pendente ";
+				
+				$stmtPendente = $con->prepare($selectPendente); 
+				$paramsPendente = array(':id_pendente' => $id_pendente);
+				$stmtPendente->execute($paramsPendente);
+				$array_id = array();
+				while($dadosPendente = $stmtPendente->fetch()){
+					$id_usuario	    = $dadosPendente['id_usuario'];
+					$id_ponto	    = $dadosPendente['id_ponto'];
+					$ds_arte	    = $dadosPendente['ds_arte'];
+					$id_midia	    = $dadosPendente['id_midia'];
+					$dt_inicial	    = $dadosPendente['dt_inicial'];
+					$dt_final	    = $dadosPendente['dt_final'];
+					$id_material	= $dadosPendente['id_material'];
+					$nu_valor_alugado	= $dadosPendente['nu_valor_alugado'];
+
+					$id_status_midia = 1;
+					$status = "approved";
+
+					if($id_midia == 2){
+		
+						try{
+							$con = Conecta::criarConexao();
+							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final, ds_arte, id_material, nu_valor_alugado, id_status_midia)
+										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final, :ds_arte, 1, :nu_valor_alugado, :id_status_midia)";
+							
+							$stmt = $con->prepare($insert);
+							 
+							$params = array(':id_usuario' => $id_usuario,
+											':id_ponto' => $id_ponto,
+											':dt_inicial' => $dt_inicial,
+											':dt_final' => $dt_final,
+											':ds_arte' => $ds_arte,
+											':nu_valor_alugado' => $nu_valor_alugado,
+											':id_status_midia' => $id_status_midia);
+											
+							$stmt->execute($params);
+
+							array_push($array_id ,$con->lastInsertId());
+							
+							
+						}
+						catch(exception $e)
+						{
+							header('HTTP/1.1 500 Internal Server Error');
+							print "ERRO:".$e->getMessage();		
+						}
+					}
+					if($id_midia == 1){
+						try{
+							$con = Conecta::criarConexao();
+							$insert = "INSERT into rl_alugado (id_usuario, id_ponto, dt_inicial, dt_final,  id_material, ds_arte, nu_valor_alugado, id_status_midia)
+										VALUES (:id_usuario, :id_ponto, :dt_inicial, :dt_final,  :id_material, :ds_arte, :nu_valor_alugado, :id_status_midia)";
+							
+							$stmt = $con->prepare($insert);
+							
+							$params = array(':id_usuario' => $id_usuario,
+											':id_ponto' => $id_ponto,
+											':dt_inicial' => $dt_inicial,
+											':dt_final' => $dt_final,
+											':id_material' => $id_material,
+											':ds_arte' => $ds_arte,
+											':nu_valor_alugado' => $nu_valor_alugado,
+											':id_status_midia' => $id_status_midia);
+											
+							$stmt->execute($params);
+
+							array_push($array_id ,$con->lastInsertId());
+							
+						}
+						catch(exception $e)
+						{
+							header('HTTP/1.1 500 Internal Server Error');
+							print "ERRO:".$e->getMessage();		
+						}
+					}
+				}
+				
+				try{
+					$con = Conecta::criarConexao(); 
+					
+					$delete = "delete from rl_pendente where id_pendente=:id_pendente";
+					
+					$stmtDelete = $con->prepare($delete); 
+					$paramsDelete = array(':id_pendente' => $id_pendente); 
+					$stmtDelete->execute($paramsDelete);
+					
+						
+				}
+				catch(exception $e)
+				{
+					header('HTTP/1.1 500 Internal Server Error');
+					print "ERRO:".$e->getMessage();		 
+				}
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		 
+			}
+
+			return $array_id;
+
+			
+
+			
+        }
 
 		public function GravarPagamento(array $dados, $id_usuario)
 		{
@@ -993,7 +1109,7 @@
 			try{
 				$con = Conecta::criarConexao();
 				
-				$select = "SELECT id_pendente, u.ds_nome,(select min(ds_foto) from rl_ponto_foto f where p.id_ponto=f.id_ponto) as ds_foto, t.ds_tipo, p.ds_bairro, nu_valor_alugado, dt_final, dt_inicial
+				$select = "SELECT id_pendente, u.ds_nome,(select min(ds_foto) from rl_ponto_foto f where p.id_ponto=f.id_ponto) as ds_foto, t.ds_tipo, p.ds_bairro, nu_valor_alugado, dt_final, dt_inicial, pen.id_usuario
 							FROM rl_pendente pen
 							inner join tb_usuario u on pen.id_usuario=u.id_usuario
 							inner join tb_ponto p on pen.id_ponto=p.id_ponto
