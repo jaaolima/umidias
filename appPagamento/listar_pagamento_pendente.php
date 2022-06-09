@@ -113,7 +113,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																				<td class='py-8'>".$dataInicial."</td> 
 																				<td class='py-8'>".$dataFinal."</td> 
 																				<td class='py-8'>".$dados["nu_valor_alugado"]."</td> 
-																				<td class='py-8'><a class='btn btn-primary' href='../appPagamento/gravar_pagamento_pendente.php?id_usuario=".$dados["id_usuario"]."&id_pendente=".$dados["id_pendente"]."'></a></td>
+																				<td class='py-8'><a class='btn btn-primary' href='../appPagamento/gravar_pagamento_pendente.php?id_usuario=".$dados["id_usuario"]."&id_pendente=".$dados["id_pendente"]."'>Validar Pagamento</a></td>
 																			</tr>";
 																}
 																
