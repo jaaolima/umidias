@@ -1,0 +1,17 @@
+<?php 
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
+
+session_start();
+require_once("../Classes/Cliente.php");
+$id_usuario = $_SESSION["id_usuario"];
+$cliente = new Cliente();
+$array_id = $cliente->PedidoPendente($id_usuario, $_REQUEST["status"]);
+
+foreach($array_id as $id){
+    $cliente->EmailPendente($id_usuario); //email para o cliente
+}
+header("location: ../index.php");
+
+?>
