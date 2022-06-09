@@ -281,6 +281,12 @@
 										<span class="menu-text texto-menu texto-menu-grafica"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gráficas</font></font></span>
 									</a>
 								</li>
+								<li class="menu-item my-4 botao-menu botao-menu-pendente btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+									<a href="/appPagamento/listar_pagamento_pendente.php" class="btn rounded mx-2 text-left ">
+										<i class="flaticon-users icon-xl svg-hover svg-pendente"></i>
+										<span class="menu-text texto-menu texto-menu-pendente"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pendentes</font></font></span>
+									</a>
+								</li>
 								
 								<?php endif ;?> 
 							</ul>

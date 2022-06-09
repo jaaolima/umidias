@@ -988,6 +988,32 @@
 			
         }
 
+		public function listarPagamentoPendente()
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				$select = "SELECT id_pendente, u.ds_usuario, p.ds_foto, p.ds_tipo, p.ds_bairro, nu_valor_alugado, dt_final, dt_inicial
+							FROM rl_pendente pen
+							inner join tb_usuario u on pen.id_usuario=u.id_usuario
+							inner join tb_ponto p on pen.id_ponto=p.id_ponto";
+				
+				$stmt = $con->prepare($select); 
+				
+				
+				$stmt->execute();
+
+				return $stmt;
+				
+					
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			}
+        }
+
 
     }
 ?>        
