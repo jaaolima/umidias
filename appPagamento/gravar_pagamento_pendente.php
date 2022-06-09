@@ -3,10 +3,6 @@ ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 
-$payments_info = json_decode(curl_exec($curl), true);
-curl_close($curl);
-
-session_start();
 require_once("../Classes/Cliente.php");
 require_once("../Classes/Grafica.php");
 $id_usuario = $_REQUEST["id_usuario"];
