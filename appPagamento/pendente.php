@@ -7,7 +7,7 @@ session_start();
 require_once("../Classes/Cliente.php");
 $id_usuario = $_SESSION["id_usuario"];
 $cliente = new Cliente();
-$array_id = $cliente->PedidoPendente($id_usuario, $_REQUEST["status"]);
+$array_id = $cliente->PagamentoPendente($id_usuario, $_REQUEST["status"]);
 
 foreach($array_id as $id){
     $cliente->EmailPendente($id_usuario); //email para o cliente
