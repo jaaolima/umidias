@@ -41,7 +41,7 @@
     $preference->back_urls = array(
         "success" => 'https://app.unimidias.com.br/appPagamento/notificacao.php',
         "faiture" => 'https://app.unimidias.com.br/',
-        "pending" => 'https://app.unimidias.com.br/' 
+        "pending" => 'https://app.unimidias.com.br/appPagamento/pendente.php' 
     ); //links para cada situação
 
     $preference->auto_return = "approved";
