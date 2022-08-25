@@ -6,5 +6,10 @@
 	$cliente = new Cliente();
 	$cupom = $cliente->buscarCupom($_POST["ds_codigo"]);
     var_dump($cupom);
-    // echo $cupom["nu_porcentagem"];
+    if($cupom){
+        echo $cupom["nu_porcentagem"];
+    }else{
+        echo null;
+    }
+    
 ?> 
