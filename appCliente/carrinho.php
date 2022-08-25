@@ -161,8 +161,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                     <div>
                                         <label>Cupom de desconto?</label>
-                                        <div class="d-block">
-                                            <input type="text" class="form-control" id="ds_codigo" name="ds_codigo" />
+                                        <div class="d-flex">
+                                            <input type="text" class="form-control mr-2" id="ds_codigo" name="ds_codigo" />
                                             <button class="btn btn-primary" id="aplicar_cupom">Aplicar</button>
                                         </div>
                                        
