@@ -578,6 +578,31 @@
 			}	
 		}
 
+		function buscarCupom($ds_codigo)
+		{
+			try{
+				$con = Conecta::criarConexao();
+				
+				
+				$select = "SELECT  nu_porcentagem
+						FROM tb_cupom
+						WHERE ds_codigo = :ds_codigo"; 
+
+				$stmt = $con->prepare($select);
+			   	$params = array(':ds_codigo' => $ds_codigo); 
+			   
+			    $stmt->execute($params);
+
+			    return $stmt;
+				
+			}	
+			catch(Exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();	
+			}	
+		}
+
 		function buscarQuantidadeCarrinho($id_usuario)
 		{
 			try{

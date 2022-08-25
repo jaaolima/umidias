@@ -22,7 +22,7 @@ $(document).ready(function() {
     });
     $("#pix").on("click", function(e){ 
 
-        $('.card-metodo').hide(); 
+        $('.card-metodo').hide();  
 		$('#card_pix').show();
         
     });
@@ -81,6 +81,22 @@ $(document).ready(function() {
                 });
                 
                 redirectTo("appCliente/listar_minhas_midias.php");
+            }
+            , error: function (data) {
+                swal.fire("Erro", data.responseText, "error");
+            }
+        });	
+        
+    });
+
+    $("#ds_codigo").on("change", function(e){
+        ds_codigo = $("#ds_codigo").val(); 
+        $.ajax({
+            url: 'appCliente/buscar_cupom.php'
+            , data: {ds_codigo: ds_codigo}
+            , type: 'post'
+            , success: function(html) {
+                console.log(html);
             }
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");
