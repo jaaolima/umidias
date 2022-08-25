@@ -592,8 +592,9 @@
 			   	$params = array(':ds_codigo' => $ds_codigo); 
 			   
 			    $stmt->execute($params);
+				$dados = $stmt->fetch();
 
-			    return $stmt;
+			    return $dados;
 				
 			}	
 			catch(Exception $e)
