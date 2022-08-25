@@ -89,7 +89,7 @@ $(document).ready(function() {
         
     });
 
-    $("#ds_codigo").on("change", function(e){
+    $("#aplicar_cupom").on("click", function(e){
         ds_codigo = $("#ds_codigo").val(); 
         $.ajax({
             url: 'appCliente/buscar_cupom.php'
