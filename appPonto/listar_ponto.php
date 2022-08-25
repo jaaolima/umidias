@@ -17,7 +17,7 @@
 		</div>
 		<div class="kt-portlet__head-toolbar">
 			<div class="kt-portlet__head-wrapper">
-				<div class="kt-portlet__head-actions">
+				<div class="kt-portlet__head-actions"> 
 					&nbsp;
 					<a href="appPonto/cadastro.php" class="btn btn-light-primary font-weight-bolder">
 						<i class="la la-plus"></i>

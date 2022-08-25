@@ -13,7 +13,7 @@
 <div class="d-flex flex-row flex-column-fluid" style="margin:0 !important;">
     <!--begin::Content Wrapper-->
     <div class="main d-flex flex-column flex-row-fluid">
-        <div class="font-weight-bold p-0 my-2 font-size-sm pl-13">								
+        <div class="font-weight-bold p-0 my-2 font-size-sm pl-13">			 					
             <a href="appCliente/listar_tipo.php" class="texto-chumbo">Alugar mídia</a>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 18L15 12L9 6" stroke="#57616A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

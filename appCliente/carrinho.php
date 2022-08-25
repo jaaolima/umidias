@@ -159,7 +159,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <h3>Total:</h3> 
                                         <div id="valor_alugado"><h3><?php echo 'R$ '. number_format($total,2,",","."); ?></h3></div>
                                     </div>
-                                    
+                                    <div>
+                                        <label>Cupom de desconto?</label>
+                                        <input type="text" class="form-control" id="ds_codigo" name="ds_codigo" />
+                                    </div>
                                 </div>
                                 <div class="separator separator-solid"></div>
                                 <div class="my-6 mx-6 ">

@@ -75,7 +75,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                 <div class="form-group col-3">
                     <label>UF<span class="text-danger">*</span></label>
                     <select class="form-control" id="id_estado" name="id_estado">
-                        <option value="">Selecione...</option>
+                        <option value="">Selecione...</option> 
                         <?php 
                             echo $optionsUF; 
                         ?>
@@ -411,7 +411,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
     <!--end::Form-->
 </div>
 <script src="./assets/js/appPonto/cadastro.js" type="text/javascript"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0sGOoifQgDLzR_xYQbaGiiqXRHaJN2tM&callback=initMap&v=beta" async></script>
+
 <script>
     markers = [];
     function initMap() {
