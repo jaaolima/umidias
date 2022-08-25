@@ -4,6 +4,6 @@
 	error_reporting(E_ALL);
 	require_once("../Classes/Cliente.php");
 	$cliente = new Cliente();
-	$cupom = $cliente->buscarCupom($_POST);
+	$cupom = $cliente->buscarCupom($_POST["ds_codigo"]);
     return $cupom;
 ?> 
