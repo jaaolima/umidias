@@ -95,8 +95,8 @@ $(document).ready(function() {
             url: 'appCliente/buscar_cupom.php'
             , data: {ds_codigo: ds_codigo}
             , type: 'post'
-            , success: function(data) {
-                console.log(data);
+            , success: function(html) {
+                console.log(html);
             }
             , error: function (data) {
                 swal.fire("Erro", data.responseText, "error");
