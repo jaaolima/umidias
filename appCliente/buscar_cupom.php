@@ -5,5 +5,6 @@
 	require_once("../Classes/Cliente.php");
 	$cliente = new Cliente();
 	$cupom = $cliente->buscarCupom($_POST["ds_codigo"]);
-    echo $cupom["nu_porcentagem"];
+    var_dump($cupom["nu_porcentagem"]);
+    // echo $cupom["nu_porcentagem"];
 ?> 
