@@ -99,12 +99,11 @@ $(document).ready(function() {
                 if(!isNaN(html)){
                     $("#porcentagem_cupom").val(html);
                     valor_alugado = $("#valor_alugado").val();
-                    console.log(valor_alugado);
                     valor_cupom = html;
                     valor_retirado = parseInt(valor_alugado) / valor_cupom;
-                    console.log(valor_retirado);
                     valor_final = parseInt(valor_alugado) - valor_retirado;
-                    $("#local_valor").html("<h3 style='color:green;'>"+valor_final+"</h3>")
+                    $("#local_valor").html("<h3 style='color:green;'>"+valor_final+"</h3>");
+                    $("#texto_cupom").html("<p style='color:green;'>Cupom adicionado com sucesso!</p>")
                 }else{
 
                 }
