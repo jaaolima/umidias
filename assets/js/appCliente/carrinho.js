@@ -96,12 +96,12 @@ $(document).ready(function() {
             , data: {ds_codigo: ds_codigo}
             , type: 'post'
             , success: function(html) {
-                console.log(html);
                 if(!isNaN(html)){
                     $("#porcentagem_cupom").val(html);
                     valor_alugado = $("#valor_alugado").val();
+                    console.log(valor_alugado);
                     valor_cupom = html;
-                    valor_retirado = parseInt(valor_alugado) / parseInt(valor_cupom);
+                    valor_retirado = parseInt(valor_alugado) / valor_cupom;
                     console.log(valor_retirado);
                     valor_final = parseInt(valor_alugado) - valor_retirado;
                     $("#local_valor").html("<h3 style='color:green;'>"+valor_final+"</h3>")
