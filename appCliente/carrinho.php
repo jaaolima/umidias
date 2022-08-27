@@ -157,7 +157,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                     ?>
                                     <div class="d-flex">
                                         <h3>Total:</h3> 
-                                        <div id="valor_alugado"><h3><?php echo 'R$ '. number_format($total,2,",","."); ?></h3></div>
+                                        <div id="local_valor"><h3><?php echo 'R$ '. number_format($total,2,",","."); ?></h3></div>
+
                                     </div>
                                     <div>
                                         <label>Cupom de desconto?</label>
@@ -165,7 +166,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <input type="text" class="form-control mr-2" id="ds_codigo" name="ds_codigo" />
                                             <button class="btn btn-primary" id="aplicar_cupom">Aplicar</button>
                                         </div>
-                                       
+                                       <input type="hidden" name="valor_alugado" id="valor_alugado" value="<?php echo $dados["nu_valor_alugado"]; ?>">
+                                       <input type="hidden" name="porcentagem_cupom">
                                     </div>
                                 </div>
                                 <div class="separator separator-solid"></div>
