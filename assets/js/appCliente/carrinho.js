@@ -102,6 +102,7 @@ $(document).ready(function() {
                     valor_alugado = $("#valor_alugado").val();
                     valor_cupom = html;
                     valor_retirado = parseInt(valor_alugado) / parseInt(valor_cupom);
+                    console.log(valor_retirado);
                     valor_final = parseInt(valor_alugado) - valor_retirado;
                     $("#local_valor").html("<h3 style='color:green;'>"+valor_final+"</h3>")
                 }else{
