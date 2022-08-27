@@ -97,7 +97,7 @@ $(document).ready(function() {
             , type: 'post'
             , success: function(html) {
                 console.log(html);
-                if(isNaN(html)){
+                if(!isNaN(html)){
                     $("#porcentagem_cupom").val(html);
                     valor_alugado = $("#valor_alugado").val();
                     valor_cupom = html;
