@@ -166,7 +166,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <input type="text" class="form-control mr-2" id="ds_codigo" name="ds_codigo" />
                                             <button class="btn btn-primary" id="aplicar_cupom">Aplicar</button>
                                         </div>
-                                       <input type="hidden" name="valor_alugado" id="valor_alugado" value="<?php echo $dados["nu_valor_alugado"]; ?>">
+                                       <input type="hidden" name="valor_alugado" id="valor_alugado" value="<?php echo $total; ?>">
                                        <input type="hidden" name="porcentagem_cupom">
                                     </div>
                                 </div>
