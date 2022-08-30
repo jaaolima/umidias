@@ -8,7 +8,7 @@
     if($cupom){
         echo $cupom["nu_porcentagem"];
     }else{
-        echo "Cupom não validado";
+        echo "Cupom não validado!";
     }
     
 ?> 

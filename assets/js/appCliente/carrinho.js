@@ -102,11 +102,13 @@ $(document).ready(function() {
                     valor_cupom = html;
                     valor_retirado = parseInt(valor_alugado) / valor_cupom;
                     valor_final = parseInt(valor_alugado) - valor_retirado;
-                    $("#local_valor").html("<h3 style='color:green;'>"+valor_final+"</h3>");
+
+                    $("#local_valor").html("<h3 style='color:green;'>R$ "+valor_final+",00</h3>");
                     $("#texto_cupom").html("<p style='color:green;'>Cupom adicionado com sucesso!</p>");
                     $("#ds_codigo").val("");
+                    
                 }else{
-                    $("#texto_cupom").html("<p style='color:green;'>"+html+"</p>");
+                    $("#texto_cupom").html("<p style='color:red;'>"+html+"</p>");
                     $("#ds_codigo").val("");
                 }
                 
