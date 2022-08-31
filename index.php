@@ -262,7 +262,7 @@
 										<i class="flaticon-users icon-xl svg-hover svg-usuario"></i>
 										<span class="menu-text texto-menu texto-menu-usuario"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuários</font></font></span>
 									</a>
-								</li>
+								</li> 
 								<li class="menu-item my-4 botao-menu botao-menu-material btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
 									<a href="/appMaterial/listar_material.php" class="btn rounded mx-2 text-left ">
 										<i class="flaticon-folder icon-xl svg-hover svg-material"></i>
@@ -285,6 +285,12 @@
 									<a href="/appPagamento/listar_pagamento_pendente.php" class="btn rounded mx-2 text-left ">
 										<i class="flaticon-time-1 icon-xl svg-hover svg-pendente"></i>
 										<span class="menu-text texto-menu texto-menu-pendente"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pendentes</font></font></span>
+									</a>
+								</li>
+								<li class="menu-item my-4 botao-menu botao-menu-pendente btn ml-5" aria-haspopup="true" style="width:max-content;" data-menu-toggle="hover">
+									<a href="/appCupom/listar_cupom.php" class="btn rounded mx-2 text-left ">
+										<i class="flaticon-time-1 icon-xl svg-hover svg-pendente"></i>
+										<span class="menu-text texto-menu texto-menu-pendente"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cupom</font></font></span>
 									</a>
 								</li>
 								

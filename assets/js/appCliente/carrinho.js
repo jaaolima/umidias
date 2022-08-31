@@ -92,7 +92,7 @@ $(document).ready(function() {
     $("#aplicar_cupom").on("click", function(e){
         ds_codigo = $("#ds_codigo").val(); 
         $.ajax({
-            url: 'appCliente/buscar_cupom.php'
+            url: 'appCupom/buscar_cupom.php'
             , data: {ds_codigo: ds_codigo}
             , type: 'post'
             , success: function(html) {
