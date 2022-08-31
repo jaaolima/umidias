@@ -86,8 +86,6 @@
 				<?php
 					while ($dados = $retorno->fetch())
 					{
-                        $dt_inicial = date('d/m/Y', strtotime($dados["dt_inicial"]));
-                        $dt_final = date('d/m/Y', strtotime($dados["dt_final"]));
 
 						echo "<tr>
 								<td>".$dados['id_cupom']."</td>

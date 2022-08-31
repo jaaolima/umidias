@@ -3,14 +3,14 @@ $(document).ready(function() {
 
     $("#cancelar").on("click", function(){
 		$('#form_usuario').trigger("reset");
-        redirectTo("appBisemana/listar_bisemana.php");
+        redirectTo("appCupom/listar_cupom.php");
     }); 
 
 	$("#salvar").on("click", function(e){ 
 		if(validar())
 		{ 
 			$.ajax({
-		        url: 'appBisemana/gravar_bisemana.php'
+		        url: 'appCupom/gravar_cupom.php'
 				, data: $("#form_usuario").serialize()
 		        , type: 'post'
 		        , success: function(html) {
@@ -21,7 +21,7 @@ $(document).ready(function() {
 		                showConfirmButton: true
 		            });
 		            
-					redirectTo("appBisemana/listar_bisemana.php");
+					redirectTo("appCupom/listar_cupom.php");
 		        }
 				, error: function (data) {
 					swal.fire("Erro", data.responseText, "error");
@@ -33,43 +33,30 @@ $(document).ready(function() {
 
 function validar()
 {
-	if($("#ds_bisemana").val() == "")
+	if($("#ds_codigo").val() == "")
 	{
-		$("#ds_bisemana").focus();
-		swal.fire("Erro", "Preencha a bisemana", "error");
-		$("#ds_bisemana").addClass("is-invalid");
+		$("#ds_codigo").focus();
+		swal.fire("Erro", "Preencha o código", "error");
+		$("#ds_codigo").addClass("is-invalid");
 		return false;	
 	}
 	else
 	{
-		$("#ds_bisemana").removeClass("is-invalid");	
-		$("#ds_bisemana").addClass("is-valid");
+		$("#ds_codigo").removeClass("is-invalid");	
+		$("#ds_codigo").addClass("is-valid");
 	}
-    if($("#dt_inicial").val() == "")
+    if($("#nu_porcentagem").val() == "")
 	{
-		$("#dt_inicial").focus();
-		swal.fire("Erro", "Preencha a Data Inicial", "error");
-		$("#dt_inicial").addClass("is-invalid");
+		$("#nu_porcentagem").focus();
+		swal.fire("Erro", "Preencha a porcentagem", "error");
+		$("#nu_porcentagem").addClass("is-invalid");
 		return false;	
 	}
 	else
 	{
-		$("#dt_inicial").removeClass("is-invalid");	
-		$("#dt_inicial").addClass("is-valid");
+		$("#nu_porcentagem").removeClass("is-invalid");	
+		$("#nu_porcentagem").addClass("is-valid");
 	}
-    if($("#dt_final").val() == "")
-	{
-		$("#dt_final").focus();
-		swal.fire("Erro", "Preencha a Data Final", "error");
-		$("#dt_final").addClass("is-invalid");
-		return false;	
-	}
-	else
-	{
-		$("#dt_final").removeClass("is-invalid");	
-		$("#dt_final").addClass("is-valid");
-	}
-
 	
 	
 	

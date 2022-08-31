@@ -25,48 +25,21 @@
     			print "ERRO:".$e->getMessage();		
 			}
         }
-		public function listarCupomPonto($id_cupom)
-		{
-			try{
-				$con = Conecta::criarConexao();
-				
-				$select = "SELECT id_cupom, ds_cupom, dt_inicial, dt_final
-							FROM tb_cupom";
-				
-				$stmt = $con->prepare($select); 
-				
-				
-				$stmt->execute(); 
-
-				return $stmt;
-				
-					
-			}
-			catch(exception $e)
-			{
-				header('HTTP/1.1 500 Internal Server Error');
-    			print "ERRO:".$e->getMessage();		
-			}
-        }
         public function gravarCupom(array $dados)
 		{
 
-			$ds_cupom	    = $dados['ds_cupom'];
-
-            $dt_inicial = date('Y-m-d', strtotime($dados["dt_inicial"]));
-            $dt_final = date('Y-m-d', strtotime($dados["dt_final"]));
-
+			$ds_codigo	    = $dados['ds_codigo'];
+			$nu_porcentagem	    = $dados['nu_porcentagem'];
 			
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_cupom (ds_cupom, dt_inicial, dt_final)
-							VALUES (:ds_cupom, :dt_inicial, :dt_final)";
+				$insert = "INSERT into tb_cupom (ds_codigo, nu_porcentagem)
+							VALUES (:ds_codigo, :nu_porcentagem)";
 				
 				$stmt = $con->prepare($insert);
 				
-				$params = array(':ds_cupom' => $ds_cupom,
-                                ':dt_inicial' => $dt_inicial,
-                                ':dt_final' => $dt_final);
+				$params = array(':ds_codigo' => $ds_codigo,
+                                ':nu_porcentagem' => $nu_porcentagem);
                                 
 				$stmt->execute($params);
 				

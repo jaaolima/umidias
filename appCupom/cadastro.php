@@ -2,7 +2,7 @@
 <div class="card card-custom">
     <div class="card-header">
         <h3 class="card-title">
-            Cadastro de Bisemanas
+            Cadastro de Cupons
         </h3>
         <div class="card-toolbar">
             <div class="example-tools justify-content-center">
@@ -16,21 +16,15 @@
         <div class="card-body">
             <div class="form-group row">
                 <div class="form-group col-md-6">
-                    <label>Bisemana<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="ds_bisemana" name="ds_bisemana" />
+                    <label>Código<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ds_codigo" name="ds_codigo" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Porcentagem<span class="text-danger">*</span></label>
+                    <input type="number" min="1" max="100" class="form-control" id="nu_porcentagem" name="nu_porcentagem" />
                 </div>
                 
-            </div> 
-            <div class="form-group row">
-                <div class="form-group col-md-6">
-                    <label>Data Inicial<span class="text-danger">*</span></label>
-                    <input type="date" class="form-control" id="dt_inicial" name="dt_inicial" />
-                </div>  
-                <div class="form-group col-md-6">
-                    <label>Data Final<span class="text-danger">*</span></label>
-                    <input type="date" class="form-control" id="dt_final" name="dt_final" />
-                </div>  
-            </div>    
+            </div>  
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-primary mr-2" id="salvar">Enviar</button>
@@ -39,5 +33,5 @@
     </form>
     <!--end::Form-->
 </div>
-<script src="./assets/js/appBisemana/cadastro.js" type="text/javascript"></script>
+<script src="./assets/js/appCupom/cadastro.js" type="text/javascript"></script>
 
