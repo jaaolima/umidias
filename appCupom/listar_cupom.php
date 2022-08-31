@@ -13,7 +13,7 @@
 		<div class="card-title">
 		<i class="flaticon-notes icon-xl mr-2"></i>
 			<h3 class="card-label">
-				Cupoms Cadastradas
+				Cupons Cadastradas
 			</h3>
 		</div>
 		<div class="kt-portlet__head-toolbar">
