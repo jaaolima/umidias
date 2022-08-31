@@ -11,7 +11,7 @@
 <div class="card card-custom gutter-b">
 	<div class="card-header flex-wrap py-3">
 		<div class="card-title">
-		<i class="flaticon-folder icon-xl mr-2"></i>
+		<i class="flaticon-users icon-xl mr-2"></i>
 			<h3 class="card-label">
 				Gráficas Cadastrados
 			</h3>
