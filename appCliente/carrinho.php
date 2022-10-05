@@ -65,7 +65,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             <img class='img-fluid w-100 rounded-top' src='".$dados["ds_foto"]."' alt='image' style='height:200px;' />
                                                             <div class='position-absolute'  style='top: -14px; right: -14px;'>
                                                                 <a id='".$dados["id_carrinho"]."' class='excluir btn btn-md btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow' data-action='change' data-toggle='tooltip' title='' data-original-title='excluir'>
-                                                                    <i class='far fa-trash-alt icon-md texto-vermelho'></i>
+                                                                    <i class='far fa-trash-alt icon-md texto-vermelho'></i> 
                                                                 </a>
                                                             </div>
                                                             <div class='position-absolute p-1 bg-white rounded-bottom-right'  style='top: 0px; left: 0px;'>
@@ -168,7 +168,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                         <div id="texto_cupom"></div>
                                        <input type="hidden" name="valor_alugado" id="valor_alugado" value="<?php echo $total; ?>">
-                                       <input type="hidden" name="porcentagem_cupom">
+                                       <input type="hidden" name="porcentagem_cupom" value="" id="porcentagem_cupom">
                                     </div>
                                 </div>
                                 <div class="separator separator-solid"></div>
