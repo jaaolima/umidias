@@ -16,7 +16,7 @@ $(document).ready(function() {
 		                showConfirmButton: true 
 		            });
 		            
-					redirectTo("index.php");
+					window.location.href = "index.php";
 		        }
 				, error: function (data) {
 					swal.fire("Erro", data.responseText, "error");
