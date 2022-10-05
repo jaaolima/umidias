@@ -16,7 +16,7 @@ $(document).ready(function() {
 		                showConfirmButton: true 
 		            });
 		            
-					redirectTo("../principal.php");
+					redirectTo("index.php");
 		        }
 				, error: function (data) {
 					swal.fire("Erro", data.responseText, "error");
