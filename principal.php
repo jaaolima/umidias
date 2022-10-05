@@ -24,7 +24,7 @@
 	$cliente = new Cliente();
     $_SESSION["deslogado"] = 'sim';  
 
-    $retorno = $midia->listarTipoMidia($_POST);
+    $retorno = $midia->listarTipoMidia($_POST); 
 ?>
 <!DOCTYPE html> 
 

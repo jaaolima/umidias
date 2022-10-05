@@ -25,6 +25,7 @@
 		header("location: principal.php");
 		exit();
 	}
+	
 	$id_usuario = $_SESSION["id_usuario"]; 
 
 	if($_SESSION["id_perfil"] != 2){
@@ -56,6 +57,11 @@
 	$totalCarrinho = $cliente->BuscarQuantidadeCarrinho($id_usuario);
 
 	$graficoPontoParceiroAlugados= $ponto->graficoPontoParceiroAlugados($id_parceiro);
+
+	if($dadosUsuario["nu_cpf"] == "" && $dadosUsuario["ds_endereco"] == "" && $dadosUsuario["id_perfil"] == 1){
+		header("location: appCliente/cadastro_pessoal.php");
+		exit();
+	}
 ?>
 <!DOCTYPE html> 
 
@@ -292,7 +298,7 @@
 										<i class="flaticon-notes icon-xl svg-hover svg-cupom"></i>
 										<span class="menu-text texto-menu texto-menu-cupom"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cupom</font></font></span>
 									</a>
-								</li>
+								</li> 
 								
 								<?php endif ;?> 
 							</ul>

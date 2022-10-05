@@ -50,6 +50,37 @@
     			print "ERRO:".$e->getMessage();		
 			} 
         }
+
+		public function gravarDadosPessoaisCliente(array $dados) 
+		{
+			$id_usuario	    = $dados['id_usuario'];
+			$nu_cpf	    = $dados['nu_cpf'];
+			$ds_endereco	    = $dados['ds_endereco'];
+
+			
+			try{
+				$con = Conecta::criarConexao();
+				$insert = "UPDATE tb_usuario SET nu_cpf = :nu_cpf, ds_endereco = :ds_endereco
+							WHERE id_usuario=:id_usuario";
+				
+				$stmt = $con->prepare($insert);
+				
+				$params = array(':nu_cpf' => $nu_cpf,
+								':ds_endereco' => $ds_endereco,
+								':id_usuario' => $id_usuario);
+                                
+				$stmt->execute($params);
+				
+				echo "Dados gravados com sucesso!"; 
+				
+			}
+			catch(exception $e)
+			{
+				header('HTTP/1.1 500 Internal Server Error');
+    			print "ERRO:".$e->getMessage();		
+			} 
+        }
+
         function buscarDadosCliente($id_cliente)
 		{
 			try{
