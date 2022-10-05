@@ -67,8 +67,6 @@
 			$id_perfil 		= $dados['id_perfil'];
 			if($id_perfil == 1){
 				$ds_senha       = $dados['nu_senha'];
-				$ds_endereco    = $dados['ds_endereco'];
-				$nu_cpf    		= $dados['nu_cpf'];
 			}else{
 				$ds_senha = 123456;
 				$ds_endereco = "";
@@ -78,18 +76,16 @@
 		
 			try{
 				$con = Conecta::criarConexao();
-				$insert = "INSERT into tb_usuario (ds_nome, ds_usuario, ds_email, ds_endereco, ds_senha, id_perfil, nu_cpf)
-							VALUES (:ds_nome, :ds_usuario, :ds_email, :ds_endereco, :ds_senha, :id_perfil, :nu_cpf)";
+				$insert = "INSERT into tb_usuario (ds_nome, ds_usuario, ds_email, ds_senha, id_perfil)
+							VALUES (:ds_nome, :ds_usuario, :ds_email,  :ds_senha, :id_perfil)";
 				
 				$stmt = $con->prepare($insert);
 				
 				$params = array(':ds_nome' => $ds_nome, 
 								':ds_usuario' => $ds_usuario,
 								':ds_email' => $ds_email,
-								':ds_endereco' => $ds_endereco,
 								':id_perfil' => $id_perfil,
-								':ds_senha' =>hash("SHA512",$ds_senha),
-								':nu_cpf' => $nu_cpf
+								':ds_senha' =>hash("SHA512",$ds_senha)
 							);
 
 				$stmt->execute($params);

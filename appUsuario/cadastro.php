@@ -44,16 +44,6 @@
             <div id="cliente" style="display:none;">
                 <div class="form-group row">
                     <div class="form-group col-md-3">
-                        <label >CPF<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="nu_cpf" name="nu_cpf" />
-                    </div> 
-                    <div class="form-group col-md-3">
-                        <label >Endereço<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="ds_endereco" name="ds_endereco" />
-                    </div>  
-                </div>
-                <div class="form-group row">
-                    <div class="form-group col-md-3">
                         <label >Senha<span class="text-danger">*</span></label>
                         <input type="password" class="form-control" id="nu_senha" name="nu_senha" />
                     </div>  
