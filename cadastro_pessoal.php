@@ -89,7 +89,8 @@ License: You must have a valid license purchased only from themeforest(the above
 														<legend class="legend-border mb-0">Endereço</legend>
 														<input class="border-0 w-100 form-control rounded-0" style="height: 27px;"  name="ds_endereco" id="ds_endereco" >
 													</fieldset> 
-												</div>	
+												</div>
+												<input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario;?>">	
 												<div class="form-group d-flex flex-wrap justify-content-center align-items-center">	
 													<button type="button" id="adicionar" class="btn btn-primary disable font-weight-bold px-30 py-4 text-white" >Adicionar e seguir</button>
 												</div>							
