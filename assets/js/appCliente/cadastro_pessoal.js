@@ -24,6 +24,9 @@ $(document).ready(function() {
 		    });		 
 		}	
 	});
+    $("#cancelar").on("click", function(){
+        redirectTo("principal.php");
+    });
     $("#nu_cpf").inputmask({
 		"mask": "999.999.999-99",
 		autoUnmask: true,
