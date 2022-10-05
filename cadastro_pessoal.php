@@ -93,10 +93,10 @@ License: You must have a valid license purchased only from themeforest(the above
 												<input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id_usuario;?>">	
 												<div class="form-group d-flex flex-wrap justify-content-center align-items-center">	
 													<button type="button" id="adicionar" class="btn btn-primary font-weight-bold px-30 py-4 text-white" >Adicionar e seguir</button>
+													<div class="mt-4">
+														<a href="principal.php" id="cancelar" class="font-weight-bold text-primary">Voltar</a>
+													</div>
 												</div>	
-												<div class="mt-4">
-													<a href="principal.php" id="cancelar" class="font-weight-bold text-primary">Voltar</a>
-												</div>						
 											</form>
 										</div>
 									</div>							
