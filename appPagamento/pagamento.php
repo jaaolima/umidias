@@ -18,10 +18,10 @@
 	$retorno = $cliente->BuscarCarrinho($id_usuario);
     require_once '../vendor/autoload.php';
 
-    // MercadoPago\SDK::setAccessToken("APP_USR-5721848615320701-071216-416b0bfa5065f0c6e58905f287f862d7-1158768746");
-    // // MercadoPago\SDK::setAccessToken("APP_USR-7295345192603478-021818-e4b4e3e21521fe4fae9448f266a12d77-220722926");
+    MercadoPago\SDK::setAccessToken("APP_USR-5721848615320701-071216-416b0bfa5065f0c6e58905f287f862d7-1158768746");
+    // MercadoPago\SDK::setAccessToken("APP_USR-7295345192603478-021818-e4b4e3e21521fe4fae9448f266a12d77-220722926");
 
-    // $preference = new MercadoPago\Preference();
+    $preference = new MercadoPago\Preference();
    
     $array = array();
     $quantidade = 1;
@@ -39,23 +39,23 @@
         $quantidade++;
     }
 
-    // $preference->items = $array; 
+    $preference->items = $array; 
     
 
-    // $preference->back_urls = array(
-    //     "success" => 'https://app.unimidias.com.br/appPagamento/notificacao.php',
-    //     "faiture" => 'https://app.unimidias.com.br/',
-    //     "pending" => 'https://app.unimidias.com.br/appPagamento/pendente.php' 
-    // ); //links para cada situação
+    $preference->back_urls = array(
+        "success" => 'https://app.unimidias.com.br/appPagamento/notificacao.php',
+        "faiture" => 'https://app.unimidias.com.br/',
+        "pending" => 'https://app.unimidias.com.br/appPagamento/pendente.php' 
+    ); //links para cada situação
 
-    // $preference->auto_return = "approved";
-    // $preference->notification_url = 'https://app.unimidias.com.br/appPagamento/notificacao.php'; //link para receber que o pagamento foi aprovado
-    // $preference->external_reference = 0; //id da compra para mandar pro mercado pago
-    // $preference->save();
+    $preference->auto_return = "approved";
+    $preference->notification_url = 'https://app.unimidias.com.br/appPagamento/notificacao.php'; //link para receber que o pagamento foi aprovado
+    $preference->external_reference = 0; //id da compra para mandar pro mercado pago
+    $preference->save();
 
-    // $link = $preference->init_point;
+    $link = $preference->init_point;
 
-    // echo $link;
+    echo $link;
 
     // $payment = new MercadoPago\Payment();
     // $payment->transaction_amount = (float)$_POST['transactionAmount'];
