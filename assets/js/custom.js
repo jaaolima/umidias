@@ -21,6 +21,13 @@ $("body").on('click', 'a', function(event){
     return false;
   }
 
+  if ($(this).attr('href').startsWith('cadastro_pessoal.php'))
+  {
+    var url = new URL($(this).attr('href').val());
+    location.href='cadastro_pessoal.php';
+    return false;
+  }
+
   if ($(this).attr('href').startsWith('#kt_portlet_base_demo') )
   {
     return true;
