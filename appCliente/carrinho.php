@@ -168,7 +168,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                         <div id="texto_cupom"></div>
                                        <input type="hidden" name="valor_alugado" id="valor_alugado" value="<?php echo $total; ?>">
-                                       <input type="hidden" name="porcentagem_cupom" value="" id="porcentagem_cupom">
                                     </div>
                                 </div>
                                 <div class="separator separator-solid"></div>

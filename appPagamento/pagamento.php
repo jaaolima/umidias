@@ -10,6 +10,9 @@
 
     $id_usuario = $_SESSION["id_usuario"];
 
+    $valor_cupom = $_SESSION["valor_cupom"];
+
+
 	$cliente = new Cliente();
 
 	$retorno = $cliente->BuscarCarrinho($id_usuario);
@@ -29,8 +32,9 @@
         $Rvirgula = str_replace(".", "", $dados["nu_valor_alugado"]); 
         $Rzero = str_replace(",00", "", $Rvirgula); 
         $Rrs = str_replace("R$ ", "", $Rzero);
-        $valor = $Rrs; 
-        $$quantidade->unit_price = (double)$valor; //preço
+        $valor_retirado = $Rrs / $valor_cupom; 
+        $valor_final = $Rrs - $valor_retirado;
+        $$quantidade->unit_price = (double)$valor_final; //preço
         array_push($array, $$quantidade);
         $quantidade++;
     }

@@ -54,7 +54,7 @@ $(document).ready(function() {
         id_usuario = $("#id_usuario").val();
         $.ajax({
             url: 'appPagamento/pagamento.php'
-            , data: {id_usuario: id_usuario}
+            , data: {id_usuario: id_usuario, valor_cupom: valor_cupom}
             , type: 'post'
             , success: function(html) {
                 window.open(html);
@@ -67,7 +67,7 @@ $(document).ready(function() {
         
     });
     $("#gravar").on("click", function(e){
-        id_usuario = $("#id_usuario").val(); 
+        id_usuario = $("#id_usuario").val();
         $.ajax({
             url: 'appCliente/gravar_carrinho.php'
             , data: {id_usuario: id_usuario}
@@ -110,7 +110,6 @@ $(document).ready(function() {
                 }else{
                     $("#texto_cupom").html("<p style='color:red;'>"+html+"</p>");
                     $("#ds_codigo").val("");
-                    $("#porcentagem_cupom").val("");
                 }
                 
                
