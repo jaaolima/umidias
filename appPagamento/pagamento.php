@@ -39,23 +39,23 @@
         $quantidade++;
     }
 
-    $preference->items = $array; 
+    // $preference->items = $array; 
     
 
-    $preference->back_urls = array(
-        "success" => 'https://app.unimidias.com.br/appPagamento/notificacao.php',
-        "faiture" => 'https://app.unimidias.com.br/',
-        "pending" => 'https://app.unimidias.com.br/appPagamento/pendente.php' 
-    ); //links para cada situação
+    // $preference->back_urls = array(
+    //     "success" => 'https://app.unimidias.com.br/appPagamento/notificacao.php',
+    //     "faiture" => 'https://app.unimidias.com.br/',
+    //     "pending" => 'https://app.unimidias.com.br/appPagamento/pendente.php' 
+    // ); //links para cada situação
 
-    $preference->auto_return = "approved";
-    $preference->notification_url = 'https://app.unimidias.com.br/appPagamento/notificacao.php'; //link para receber que o pagamento foi aprovado
-    $preference->external_reference = 0; //id da compra para mandar pro mercado pago
-    $preference->save();
+    // $preference->auto_return = "approved";
+    // $preference->notification_url = 'https://app.unimidias.com.br/appPagamento/notificacao.php'; //link para receber que o pagamento foi aprovado
+    // $preference->external_reference = 0; //id da compra para mandar pro mercado pago
+    // $preference->save();
 
-    $link = $preference->init_point;
+    // $link = $preference->init_point;
 
-    echo $link;
+    // echo $link;
 
     // $payment = new MercadoPago\Payment();
     // $payment->transaction_amount = (float)$_POST['transactionAmount'];
