@@ -94,7 +94,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="form-group d-flex flex-wrap justify-content-center align-items-center">	
 													<button type="button" id="adicionar" class="btn btn-primary font-weight-bold px-30 py-4 text-white" >Adicionar e seguir</button>
 													<div class="mt-4">
-														<a href="principal.php" class="font-weight-bold text-primary">Voltar</a>
+														<a href="javascript:;" id="cancelar" class="font-weight-bold text-primary">Voltar</a>
 													</div>
 												</div>	
 											</form>
