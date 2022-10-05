@@ -59,7 +59,7 @@
 	$graficoPontoParceiroAlugados= $ponto->graficoPontoParceiroAlugados($id_parceiro);
 
 	if($dadosUsuario["nu_cpf"] == "" && $dadosUsuario["ds_endereco"] == "" && $dadosUsuario["id_perfil"] == 1){
-		header("location: cadastro_pessoal.php");
+		header("location: cadastro_pessoal.php?id_usuario=".$id_usuario);
 		exit();
 	}
 ?>

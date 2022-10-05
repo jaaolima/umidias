@@ -1,13 +1,8 @@
 <?php
 
 session_start();
-if ( $_SESSION['autenticado'] ==='validado') {
-	header("location: index.php");
-	exit(); 
-}
 
-$id_ponto = $_REQUEST["id_ponto"];
-$id_midia = $_REQUEST["id_midia"];
+$id_usuario = $_REQUEST["id_usuario"];
 ?>
 <!DOCTYPE html>
 <!--
