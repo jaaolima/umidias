@@ -7,6 +7,8 @@ require_once("../Classes/Material.php");
 require_once("../Classes/Parceiro.php");
 require_once("../Classes/Bairro.php");
 require_once("../Classes/Ponto.php");
+require_once("../Classes/Bisemana.php");
+
 session_start();
 $id_ponto = $_REQUEST['id_ponto'];
 $id_perfil = $_SESSION['id_perfil'];
@@ -18,6 +20,8 @@ $Material = new Material();
 $Categoria = new Categoria(); 
 $Bairro = new Bairro(); 
 $ponto = new Ponto();
+$Bisemana = new Bisemana();
+
 
 $dados = $ponto->buscarDadosPonto($id_ponto);
 $dadosFoto = $ponto->BuscarFotoPonto($id_ponto); 
