@@ -29,6 +29,7 @@ $dadosFotoExcluir = $ponto->BuscarFotoPonto($id_ponto);
 $id_categoria = $dados["id_midia"];
 $id_material = $dados["id_material"]; 
 $id_parceiro = $dados["id_parceiro"];
+$id_midia = $dados["id_midia"];
 $ds_bairro = $dados["ds_bairro"];
 $ds_sentido = $dados["ds_sentido"];
 
