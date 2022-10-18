@@ -46,7 +46,7 @@ $(document).ready(function() {
 	        , type: 'post'
 	        , data: {id_estado : id_estado}
 	        , success: function(html) {
-	        	$("#id_cidade").empty();
+	        	$("#id_cidade").empty(); 
 	        	$("#id_cidade").append(html);      
 	        }
 	    }); 

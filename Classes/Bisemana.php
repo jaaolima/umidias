@@ -259,7 +259,7 @@
     			print "ERRO:".$e->getMessage();		
 			}
 		}
-		public function listarTodasBisemanaPonto()
+		public function listarTodasBisemanaPonto($id_bisemana = null)
 		{
 			try{
 				$con = Conecta::criarConexao();

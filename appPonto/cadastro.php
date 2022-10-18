@@ -240,7 +240,7 @@ $optionsMes = $Bisemana->listarTodosMesPonto();
                                         echo "<tr>
                                                 <td>".$dadosBisemana['id_bisemana']."</td>
                                                 <td>".$dt_inicial."</td>
-                                                <td>".$dt_final."</td>
+                                                <td>".$dt_final."</td> 
                                                 <td>".$dadosBisemana['ds_bisemana']."</td>
                                                 <td><input name='bisemana[]' id='".$dadosBisemana["id_bisemana"]."' value='".$dadosBisemana['id_bisemana']."' type='checkbox'></td>
                                             </tr>";

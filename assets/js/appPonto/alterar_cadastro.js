@@ -19,7 +19,7 @@ $(document).ready(function() {
 							position: 'top-right', 
 							type: 'success',
 							title: html,
-							showConfirmButton: true
+							showConfirmButton: true 
 						});
 						
 						redirectTo("appPonto/listar_ponto.php");
@@ -35,6 +35,26 @@ $(document).ready(function() {
 			redirectTo("appPonto/listar_ponto.php");
 		});
 	}
+	if($("#id_periodo").val() == 1){
+		$("#bisemanas_indisponiveis").show();
+		$("#meses_indisponiveis").hide();
+	}
+	if($("#id_periodo").val() == 2){
+		$("#bisemanas_indisponiveis").hide();
+		$("#meses_indisponiveis").show();
+	}
+
+	$("#id_periodo").on("change", function() {
+		if($(this).val() == 1){
+			$("#bisemanas_indisponiveis").show();
+			$("#meses_indisponiveis").hide();
+		}
+		if($(this).val() == 2){
+			$("#bisemanas_indisponiveis").hide();
+			$("#meses_indisponiveis").show();
+		}
+		
+	});
 
 	$("#id_estado").on("change", function() {
 		var id_estado = $("#id_estado option:selected").val();
