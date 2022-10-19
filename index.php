@@ -167,7 +167,7 @@
 						<div id="kt_aside_menu" class="aside-menu mb-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 825px; overflow: hidden;">
 							<!--begin::Menu Nav-->	
 							
-							<ul class="menu-nav nav-pills">
+							<ul class="menu-nav nav-pills" style="overflow: auto;">
 								<li class="menu-item my-4 botao-menu botao-menu-dashboard botao-menu-active btn ml-5" style="width:max-content;"  aria-haspopup="true">
 									<a href="index.php" class="btn rounded mx-2 text-left  ">
 										<i class="flaticon-home-2 icon-xl svg-hover svg-painel svg-active"></i>
