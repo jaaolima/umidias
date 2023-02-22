@@ -609,7 +609,7 @@
 								and f.ds_foto = (select min(ds_foto) from rl_ponto_foto pf where a.id_ponto = pf.id_ponto) and ds_bairro like '%".$busca."%'";
 					
 					$stmt = $con->prepare($select); 
-					$params = array(':id_midia' => $id_midia);
+					$params = array(':id_midia' => $id_midia); 
 					
 					$stmt->execute($params);
 	
